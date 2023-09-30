@@ -1040,7 +1040,7 @@ guiTypes = {
 
 		iconType = {
 			name = "message_response"
-			position = { x = 8 y = 52 }
+			position = { x = 41 y = 52 }
 			spriteType = "GFX_alliance_vote_status"
 			scale = 0.7
 			alwaysTransparent = yes

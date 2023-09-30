@@ -1,0 +1,1419 @@
+guiTypes = {
+	positionType = {
+		name = "standard_dialog_button_center_position"
+		position = { x = -116 y = -80 }
+	}
+
+	containerWindowType = {
+		name = "standard_dialog"
+		orientation = center
+		origo = center
+		moveable = yes
+		position = { x = 0 y = -13 }
+		size = { width = 640 height = 283 }
+
+		background = {
+			name = "background"
+			quadTextureSprite ="GFX_tile_outliner_bg"
+		}
+
+		iconType = {
+			name = "hex_bg"
+			spriteType = "GFX_hex_center_bg"
+			position = { x = -367 y = 0 }
+			alwaysTransparent = yes
+			Orientation = "CENTER_UP"
+		}
+
+		iconType = {
+			name = "empire_header_line"
+			quadTextureSprite = "GFX_line_center"
+			position = { x = -16 y = 51 }
+			alwaysTransparent = yes
+		}
+
+		buttonType = {
+			name = "DeclineButton"
+			quadTextureSprite = "GFX_standard_button_142_34_button"
+			orientation = center_down
+			position = { x = -260 y = -80 }
+			buttonText = "DIALOG_DECLINE"
+			buttonFont = "malgun_goth_24"
+			shortcut = "ESCAPE"
+			actionShortCut = "cancel"
+			clicksound = back_click
+		}
+
+		buttonType = {
+			name = "AgreeButton"
+			quadTextureSprite = "GFX_standard_button_142_34_button"
+			orientation = center_down
+			position = { x = 27 y = -80 }
+			buttonText = "DIALOG_AGREE"
+			buttonFont = "malgun_goth_24"
+			clicksound = "confirmation"
+			shortcut = "RETURN"
+			actionShortcut = "accept"
+		}
+
+		instantTextBoxType = {
+			position = { x = 53 y = 27 }
+			name = "title"
+			font = "malgun_goth_24"
+			borderSize = {x = 0 y = 0 }
+			maxWidth = 533
+			maxHeight = 27
+			text = ""
+			orientation = "UPPER_LEFT"
+			format = center
+		}
+
+		instantTextBoxType = {
+			position = { x = 33 y = 93 }
+			name = "description"
+			font = "cg_16b"
+			borderSize = {x = 7 y = 7 }
+			maxWidth = 560
+			maxHeight = 27
+			text = ""
+			orientation = "UPPER_LEFT"
+			format = centre
+			text_color_code = "E"
+		}
+	}
+
+	containerWindowType = {
+		name = "standard_dialog_ok"
+		position = { x=-320 y=-155 }
+		size = { width = 640 height = 283 }
+		moveable = yes
+		Orientation = center
+
+		background = {
+			name = "background"
+			quadTextureSprite ="GFX_standard_dialog_bg"
+			tooltip = ""
+			tooltipText =""
+			delayedTooltipText = ""
+		}
+
+		buttonType = {
+			name = "AgreeButton"
+			quadTextureSprite = "GFX_standard_button_142_34_button"
+			position = { x= 207 y = 171  }
+			Orientation = "UPPER_LEFT"
+			buttonText = "DIALOG_AGREE"
+			buttonFont = "malgun_goth_24"
+			shortcut = "RETURN"
+			actionShortcut = "accept"
+			clicksound = "confirm_click"
+		}
+
+		buttonType = {
+			name = "DeclineButton"
+			quadTextureSprite = "GFX_standard_button_142_34_button"
+			position = { x= 13332 y = 240  }
+			Orientation = "UPPER_LEFT"
+			buttonText = "DIALOG_DECLINE"
+			buttonFont = "cg_16b"
+			shortcut = "ESCAPE"
+			actionShortcut = "cancel"
+			clicksound = "back_click"
+		}
+
+		instantTextBoxType = {
+			position = { x = 53 y = 53 }
+			name = "title"
+			font = "malgun_goth_24"
+			borderSize = {x = 0 y = 0 }
+			maxWidth = 533
+			maxHeight = 27
+			text = ""
+			orientation = "UPPER_LEFT"
+			format = centre
+		}
+
+		instantTextBoxType = {
+			position = { x = 33 y = 107 }
+			name = "description"
+			font = "cg_16b"
+			borderSize = {x = 7 y = 7 }
+			maxWidth = 560
+			maxHeight = 27
+			text = ""
+			orientation = "UPPER_LEFT"
+			format = centre
+			text_color_code = "E"
+		}
+	}
+
+	containerWindowType = {
+		name = "reload_interface_dialog"
+		size = { width = 640 height = 283 }
+		moveable = yes
+		origo = center
+		orientation = center
+
+		background = {
+			name = "background"
+			quadTextureSprite ="GFX_standard_dialog_bg"
+		}
+
+		buttonType = {
+			name = "DeclineButton"
+			quadTextureSprite = "GFX_standard_button_142_34_button"
+			position = { x= 87 y = 171  }
+			Orientation = "UPPER_LEFT"
+			buttonText = "CANCEL"
+			buttonFont = "malgun_goth_24"
+			shortcut = "ESCAPE"
+			actionShortcut = "cancel"
+			clicksound = "back_click"
+		}
+
+		buttonType = {
+			name = "AgreeButton"
+			quadTextureSprite = "GFX_standard_button_142_34_button"
+			position = { x= 332 y = 171  }
+			Orientation = "UPPER_LEFT"
+			buttonText = "RELOAD"
+			buttonFont = "malgun_goth_24"
+			shortcut = "RETURN"
+			actionShortcut = "accept"
+			clicksound = "confirm_click"
+		}
+
+		buttonType = {
+			name = "OpenButton"
+			quadTextureSprite = "GFX_standard_button_142_34_button"
+			position = { x= 207 y = 100  }
+			Orientation = "UPPER_LEFT"
+			buttonText = "OPEN"
+			buttonFont = "malgun_goth_24"
+		}
+
+		instantTextBoxType = {
+			position = { x = 53 y = 40 }
+			name = "title"
+			font = "malgun_goth_24"
+			borderSize = {x = 0 y = 0 }
+			maxWidth = 533
+			maxHeight = 27
+			text = ""
+			orientation = "UPPER_LEFT"
+			format = centre
+		}
+
+		instantTextBoxType = {
+			position = { x = 53 y = 73 }
+			name = "description"
+			font = "cg_16b"
+			borderSize = {x = 7 y = 7 }
+			maxWidth = 533
+			maxHeight = 27
+			text = ""
+			orientation = "UPPER_CENTER"
+			format = centre
+			text_color_code = "E"
+		}
+	}
+
+	containerWindowType = {
+		name = "message_window_dialog"
+		size = { width = 640 height = 283 }
+		moveable = yes
+		origo = center
+		orientation = center
+
+		background = {
+			name = "background"
+			quadTextureSprite ="GFX_tile_outliner_bg"
+		}
+
+		buttonType = {
+			name = "focus_on"
+			orientation = upper_right
+			position = { x = -53 y = 13 }
+			quadTextureSprite = "GFX_fleetview_lock_focus"
+			pdx_tooltip = "FOCUS_ON_TARGET_NOTIFICATION"
+			shortcut = "q"
+			actionShortcut = "focus_camera"
+		}
+
+		iconType = {
+			name = "hex_bg"
+			spriteType = "GFX_hex_center_bg"
+			position = { x = -373 y = -4 }
+			alwaysTransparent = yes
+			Orientation = "CENTER_UP"
+		}
+
+		iconType = {
+			name = "empire_header_line"
+			quadTextureSprite = "GFX_line_center"
+			position = { x = -21 y = 56 }
+		}
+
+		buttonType = {
+			name = "AgreeButton"
+			quadTextureSprite = "GFX_standard_button_142_34_button"
+			orientation = center_down
+			position = { x = -111 y = -80 }
+			buttonText = "MESSAGE_OK"
+			buttonFont = "malgun_goth_24"
+			clicksound = "confirmation"
+			shortcut = "RETURN"
+			actionShortcut = "accept"
+		}
+
+		instantTextBoxType = {
+			name = "title"
+			orientation = center_up
+			position = { x = -267 y = 19 }
+			font = "malgun_goth_24"
+			text = ""
+			format = center
+			maxWidth = 533
+			maxHeight = 27
+			fixedSize = yes
+		}
+
+		instantTextBoxType = {
+			name = "description"
+			format = center
+			orientation = center_up
+			maxWidth = 560
+			maxHeight = 27
+			position = { x = -280 y = 87 }
+			font = "cg_16b"
+			text = ""
+			text_color_code = "E"
+		}
+	}
+
+	containerWindowType = {
+		name = "diplo_message_dialog"
+		size = { width = 640 height = 320 }
+		moveable = yes
+		origo = center
+		orientation = center
+
+		### header gfx ###
+
+		background = {
+			name = "background"
+			#spriteType = "GFX_standard_dialog_bg"
+			spriteType = "GFX_tile_outliner_bg"
+		}
+
+		iconType = {
+			name = "hex_bg"
+			spriteType = "GFX_hex_center_bg"
+			position = { x = -373 y = 0 }
+			alwaysTransparent = yes
+			Orientation = "CENTER_UP"
+		}
+
+		iconType = {
+			name = "empire_header_line"
+			quadTextureSprite = "GFX_line_center"
+			position = { x = -21 y = 56 }
+		}
+
+		### actor ###
+
+		buttonType = {
+			name = "actor_flag"
+			quadTextureSprite = "GFX_empire_flag_64"
+			position = { x = -317 y = 11 }
+			orientation = center_up
+		}
+
+		instantTextBoxType = {
+			name = "actor_name"
+			maxWidth = 267
+			fixedSize = yes
+			maxHeight = 27
+			position = { x = 13 y = 107 }
+			font = "cg_16b"
+			text = "empire name"
+			text_color_code = "H"
+		}
+
+		instantTextBoxType = {
+			name = "actor_type"
+			maxWidth = 267
+			maxHeight = 27
+			position = { x = 13 y = 127 }
+			font = "cg_16b"
+			text = "empire type"
+		}
+
+		### recipient ###
+
+		buttonType = {
+			name = "recipient_flag"
+			quadTextureSprite = "GFX_empire_flag_64"
+			position = { x = 224 y = 11 }
+			orientation = center_up
+		}
+
+		instantTextBoxType = {
+			name = "recipient_name"
+			format = right
+			orientation = upper_right
+			maxWidth = 267
+			maxHeight = 27
+			position = { x = -280 y = 107 }
+			font = "cg_16b"
+			text = "empire name"
+			text_color_code = "H"
+		}
+
+		instantTextBoxType = {
+			name = "recipient_type"
+			format = right
+			orientation = upper_right
+			maxWidth = 267
+			maxHeight = 27
+			position = { x = -280 y = 127 }
+			font = "cg_16b"
+			text = "empire type"
+		}
+
+
+		iconType ={
+			name ="diplomacy_icon_bg"
+			quadTextureSprite = "GFX_diplomacy_icon_bg_ring" # Changed in code
+			position = { x = 285 y = 85 }
+			orientation = upper_left
+			#scale = 0.9
+		}
+
+		iconType ={
+			name ="diplomacy_icon"
+			quadTextureSprite = "GFX_diplo_type_icon" # Changed in code
+			position = { x = 296 y = 96 }
+			orientation = upper_left
+			#scale = 0.9
+		}
+
+		###
+
+		buttonType = {
+			name = "AgreeButton"
+			quadTextureSprite = "GFX_standard_button_142_34_button"
+			orientation = center_down
+			position = { x = -111 y = -80 }
+			buttonText = "MESSAGE_OK"
+			buttonFont = "malgun_goth_24"
+			clicksound = "confirmation"
+			shortcut = "RETURN"
+			actionShortcut = "accept"
+		}
+
+		instantTextBoxType = {
+			name = "title"
+			format = center
+			orientation = center_up
+			maxWidth = 533
+			maxHeight = 27
+			position = { x = -267 y = 27 }
+			font = "malgun_goth_24"
+			text = ""
+		}
+
+		instantTextBoxType = {
+			name = "description"
+			format = center
+			orientation = center_up
+			maxWidth = 560
+			maxHeight = 27
+			position = { x = -280 y = 173 }
+			font = "cg_16b"
+			text = ""
+			text_color_code = "E"
+		}
+	}
+
+	containerWindowType = {
+		name = "diplo_voted_message_dialog_entry"
+		size = { width = 533 height = 67 }
+
+		backGround = {
+			name = "background"
+			quadTextureSprite = "GFX_advisor_frame"
+		}
+
+		iconType = {
+			name = "icon"
+			spriteType = "GFX_empire_flag_32"
+			position = { x = 13 y = 13 }
+		}
+
+		instantTextBoxType={
+			name = "name"
+			font = "cg_16b"
+			text = "NAME"
+			position = { x = 67 y = 20 }
+			maxWidth = 507
+			maxHeight = 53
+			fixedSize = yes
+			format = left
+			alwaysTransparent = yes
+		}
+
+		iconType = {
+			name = "status"
+			position = { x = -60 y = 7 }
+			orientation = UPPER_RIGHT
+			spriteType = "GFX_alliance_vote_status"
+		}
+	}
+
+	containerWindowType = {
+		name = "diplo_voted_message_dialog"
+		size = { width = 640 height = 587 }
+		moveable = yes
+		origo = center
+		orientation = center
+
+		### header gfx ###
+
+		background = {
+			name = "background"
+			#spriteType = "GFX_standard_dialog_bg"
+			spriteType = "GFX_tile_outliner_bg"
+		}
+
+		iconType = {
+			name = "hex_bg"
+			spriteType = "GFX_hex_center_bg"
+			position = { x = -373 y = 0 }
+			alwaysTransparent = yes
+			Orientation = "CENTER_UP"
+		}
+
+		iconType = {
+			name = "empire_header_line"
+			quadTextureSprite = "GFX_line_center"
+			position = { x = -21 y = 56 }
+		}
+
+		### federation ###
+
+		iconType = {
+			name = "federation_flag"
+			quadTextureSprite = "GFX_federation_flag_bg"
+			position = { x = -311 y = 9 }
+			orientation = center_up
+			scale = 1
+		}
+
+		iconType = {
+			name = "type_icon"
+			quadTextureSprite = "GFX_default_federation"
+			position = { x = -313 y = 16 }
+			orientation = center_up
+			scale = 1
+		}
+
+		instantTextBoxType = {
+			name = "federation_name"
+			maxWidth = 267
+			fixedSize = yes
+			maxHeight = 27
+			position = { x = 13 y = 107 }
+			font = "cg_16b"
+			text = "empire name"
+			text_color_code = "H"
+		}
+
+		instantTextBoxType = {
+			name = "federation_type"
+			maxWidth = 267
+			maxHeight = 27
+			position = { x = 13 y = 127 }
+			font = "cg_16b"
+			text = "empire type"
+		}
+
+		### actor ###
+
+		buttonType = {
+			name = "actor_flag"
+			quadTextureSprite = "GFX_empire_flag_64"
+			position = { x = 224 y = 11 }
+			orientation = center_up
+		}
+
+		instantTextBoxType = {
+			name = "actor_name"
+			format = right
+			orientation = upper_right
+			maxWidth = 267
+			maxHeight = 27
+			position = { x = -280 y = 107 }
+			font = "cg_16b"
+			text = "empire name"
+			text_color_code = "H"
+		}
+
+		instantTextBoxType = {
+			name = "actor_type"
+			format = right
+			orientation = upper_right
+			maxWidth = 267
+			maxHeight = 27
+			position = { x = -280 y = 127 }
+			font = "cg_16b"
+			text = "empire type"
+		}
+
+
+		iconType ={
+			name ="diplomacy_icon_bg"
+			quadTextureSprite = "GFX_diplomacy_icon_bg_ring" # Changed in code
+			position = { x = 285 y = 85 }
+			orientation = upper_left
+			#scale = 0.9
+		}
+
+		iconType ={
+			name ="diplomacy_icon"
+			quadTextureSprite = "GFX_diplo_type_icon" # Changed in code
+			position = { x = 296 y = 96 }
+			orientation = upper_left
+			#scale = 0.9
+		}
+
+		###
+
+		buttonType = {
+			name = "AgreeButton"
+			quadTextureSprite = "GFX_standard_button_142_34_button"
+			orientation = center_down
+			position = { x = -111 y = -80 }
+			buttonText = "MESSAGE_OK"
+			buttonFont = "malgun_goth_24"
+			clicksound = "confirmation"
+			shortcut = "RETURN"
+			actionShortcut = "accept"
+		}
+
+		instantTextBoxType = {
+			name = "title"
+			format = center
+			orientation = center_up
+			maxWidth = 533
+			maxHeight = 27
+			position = { x = -267 y = 27 }
+			font = "malgun_goth_24"
+			text = ""
+		}
+
+		instantTextBoxType = {
+			name = "description"
+			format = center
+			orientation = center_up
+			maxWidth = 560
+			maxHeight = 27
+			position = { x = -280 y = 173 }
+			font = "cg_16b"
+			text = ""
+			text_color_code = "E"
+		}
+
+		containerWindowType = {
+			name = "votes"
+			size = { width = 587 height = 227 }
+			position = { x = 27 y = 280 }
+			verticalScrollbar = "right_vertical_slider"
+
+			background = {
+				name = "votes_bg"
+				quadTextureSprite = "GFX_dark_area_cut"
+			}
+
+			gridBoxType = {
+				name = "votes_grid"
+				position = { x = 11 y = 7 }
+				size = { width = 547 height = 213 }
+				format = "UPPER_LEFT"
+				slotsize = {
+					width = 533
+					height = 56
+				}
+				max_slots_horizontal = 1
+			}
+		}
+	}
+
+	positionType = {
+		name = "quit_description_offset"
+		position = { x = 0 y = -113 }
+	}
+
+	containerWindowType = {
+		name = "standard_dialog_quit"
+		orientation = center
+		origo = center
+		moveable = no
+		size = { width = 100% height = 100% }
+
+		background = {
+			name = "background"
+			spriteType = "GFX_invisible"
+		}
+
+		buttonType = {
+			name = "background"
+			spriteType ="GFX_tile_outliner_bg"
+			orientation = center
+			size = { x = 640 y = 360 }
+			position = { x = -320 y = -153 }
+		}
+
+		iconType = {
+			name = "hex_bg"
+			spriteType = "GFX_hex_center_bg"
+			orientation = center
+			centerPosition = yes
+			position = { x = 0 y = -108 }
+			alwaysTransparent = yes
+		}
+
+		iconType = {
+			name = "empire_header_line"
+			spriteType = "GFX_line_center"
+			orientation = center
+			centerPosition = yes
+			position = { x = 0 y = -93 }
+		}
+
+		instantTextBoxType = {
+			name = "info_rating"
+			format = center
+			orientation = center
+			maxWidth = 560
+			maxHeight = 27
+			position = { x = -280 y = -67 }
+			font = "cg_16b"
+			text = "QUIT_INFO_RATING"
+			text_color_code = "E"
+		}
+
+		instantTextBoxType = {
+			name = "thank_you_for_rating"
+			format = center
+			orientation = center
+			maxWidth = 560
+			maxHeight = 27
+			position = { x = -280 y = -13 }
+			font = "cg_16b"
+			text = ""
+			text_color_code = "E"
+		}
+
+		buttonType = {
+			name = "rating0"
+			quadTextureSprite = "GFX_icon_rating"
+			orientation = center
+			position = { x = -211 y = -27 }
+			buttonFont = "malgun_goth_24"
+			frame = 4
+		}
+
+		buttonType = {
+			name = "rating1"
+			quadTextureSprite = "GFX_icon_rating"
+			orientation = center
+			position = { x = -99 y = -27 }
+			buttonFont = "malgun_goth_24"
+			frame = 3
+		}
+
+		buttonType = {
+			name = "rating2"
+			quadTextureSprite = "GFX_icon_rating"
+			orientation = center
+			position = { x = 13 y = -27 }
+			buttonFont = "malgun_goth_24"
+			frame = 2
+		}
+
+		buttonType = {
+			name = "rating3"
+			quadTextureSprite = "GFX_icon_rating"
+			orientation = center
+			position = { x = 125 y = -27 }
+			buttonFont = "malgun_goth_24"
+			frame = 1
+		}
+
+		buttonType = {
+			name = "DeclineButton"
+			quadTextureSprite = "GFX_standard_button_142_34_button"
+			orientation = center
+			position = { x = -233 y = 113 }
+			buttonText = "CANCEL"
+			buttonFont = "malgun_goth_24"
+			shortcut = "ESCAPE"
+			actionShortCut = "cancel"
+		}
+
+		buttonType = {
+			name = "AgreeButton"
+			quadTextureSprite = "GFX_standard_button_142_34_button"
+			orientation = center
+			position = { x = 12 y = 113 }
+			buttonText = "QUIT_TITLE"
+			buttonFont = "malgun_goth_24"
+			clicksound = "confirmation"
+			shortcut = "RETURN"
+			actionShortcut = "accept"
+		}
+
+		instantTextBoxType = {
+			name = "title"
+			format = center
+			orientation = center
+			maxWidth = 533
+			maxHeight = 27
+			position = { x = -267 y = -128 }
+			font = "malgun_goth_24"
+			text = ""
+		}
+
+		instantTextBoxType = {
+			name = "description"
+			format = center
+			orientation = center
+			maxWidth = 560
+			maxHeight = 27
+			position = { x = -280 y = 77 }
+			font = "cg_16b"
+			text = ""
+			text_color_code = "E"
+		}
+	}
+
+	containerWindowType = {
+		name = "standard_dialog_quit_to_menu"
+		orientation = center
+		origo = center
+		moveable = no
+		size = { width = 100% height = 100% }
+
+		background = {
+			name = "background"
+			spriteType = "GFX_invisible"
+		}
+
+		buttonType = {
+			name = "background"
+			spriteType ="GFX_tile_outliner_bg"
+			orientation = center
+			size = { x = 640 y = 283 }
+			position = { x = -320 y = -153 }
+		}
+
+		iconType = {
+			name = "hex_bg"
+			spriteType = "GFX_hex_center_bg"
+			orientation = center
+			centerPosition = yes
+			position = { x = 0 y = -108 }
+			alwaysTransparent = yes
+		}
+
+		iconType = {
+			name = "empire_header_line"
+			spriteType = "GFX_line_center"
+			orientation = center
+			centerPosition = yes
+			position = { x = 0 y = -93 }
+		}
+
+		buttonType = {
+			name = "DeclineButton"
+			quadTextureSprite = "GFX_standard_button_142_34_button"
+			orientation = center
+			position = { x = -233 y = 40 }
+			buttonText = "CANCEL"
+			buttonFont = "malgun_goth_24"
+			shortcut = "ESCAPE"
+			actionShortcut = "cancel"
+		}
+
+		buttonType = {
+			name = "AgreeButton"
+			quadTextureSprite = "GFX_standard_button_142_34_button"
+			orientation = center
+			position = { x = 12 y = 40 }
+			buttonText = "MAIN_RESIGN"
+			buttonFont = "malgun_goth_24"
+			clicksound = "confirmation"
+			shortcut = "RETURN"
+			actionShortcut = "accept"
+		}
+
+		instantTextBoxType = {
+			name = "title"
+			format = center
+			orientation = center
+			maxWidth = 533
+			maxHeight = 27
+			position = { x = -267 y = -128 }
+			font = "malgun_goth_24"
+			text = ""
+		}
+
+		instantTextBoxType = {
+			name = "description"
+			format = center
+			orientation = center
+			maxWidth = 560
+			maxHeight = 27
+			position = { x = -280 y = -53 }
+			font = "cg_16b"
+			text = ""
+			text_color_code = "E"
+		}
+	}
+
+	###################
+	# LEADER LEVEL UP #
+	###################
+
+	containerWindowType = {
+		name = "message_window_dialog_leader_level_up"
+		size = { width = 640 height = 327 }
+		moveable = yes
+		origo = center
+		orientation = center
+
+		background = {
+			name = "background"
+			quadTextureSprite ="GFX_tile_outliner_bg"
+		}
+
+		# title
+
+		iconType = {
+			name = "hex_bg"
+			spriteType = "GFX_hex_bg"
+			position = { x = -133 y = 0 }
+			alwaysTransparent = yes
+			Orientation = "CENTER_UP"
+		}
+
+		iconType = {
+			name = "empire_header_line"
+			quadTextureSprite = "GFX_line_center"
+			position = { x = -21 y = 57 }
+		}
+
+		instantTextBoxType = {
+			name = "title"
+			format = center
+			orientation = center_up
+			maxWidth = 533
+			maxHeight = 27
+			position = { x = -267 y = 27 }
+			font = "malgun_goth_24"
+			text = ""
+		}
+
+		#instantTextBoxType = {
+		#	name = "description"
+		#	format = center
+		#	orientation = center_up
+		#	maxWidth = 560
+		#	maxHeight = 27
+		#	position = { x = -280 y = 87 }
+		#	font = "cg_16b"
+		#	text = ""
+		#	text_color_code = "E"
+		#}
+
+		buttonType = {
+			name = "focus_on"
+			orientation = upper_right
+			position = { x = -53 y = 13 }
+			quadTextureSprite = "GFX_fleetview_lock_focus"
+			pdx_tooltip = "FOCUS_ON_LEADER"
+			shortCut = "q"
+			actionShortcut = "focus_camera"
+		}
+
+		# description
+
+		containerWindowType = {
+			name = "portrait_window"
+			size = { width = 127 height = 148 }
+			position = { x = 11 y = 92 }
+			orientation = upper_left
+			moveable = no
+			clipping = yes
+
+			background = {
+				name = "portrait_frame"
+				spriteType = "GFX_empty_green_frame"
+			}
+
+			buttonType = {
+				name = "leader_type_bg"
+				quadTextureSprite = "GFX_leader_bg_admiral"
+				position = { x = 8 y = 9 }
+				scale = 0.26
+				alwaystransparent = yes
+			}
+
+			iconType = {
+				name = "portrait"
+				position = { x = -33 y = 9 }
+				spriteType = "GFX_portrait_character"
+				scale = 0.26
+				alwaystransparent = yes
+			}
+		}
+
+		instantTextBoxType = {
+			name = "leader_title"
+			font = "cg_16b"
+			text = "LEADER_TITLE"
+			position = { x = 147 y = 96 }
+			maxWidth = 240
+			maxHeight = 27
+			format = left
+			alwaysTransparent = yes
+		}
+
+		instantTextBoxType = {
+			name = "leader_name"
+			font = "cg_16b"
+			text = "LEADER_NAME"
+			position = { x = 147 y = 120 }
+			maxWidth = 240
+			maxHeight = 53
+			format = left
+			alwaysTransparent = yes
+			text_color_code = "E"
+		}
+
+		iconType = {
+			name = "leader_skill"
+			spriteType = "GFX_leader_skill"
+			frame = 3
+			position = { x = 141 y = 149 }
+		}
+
+		OverlappingElementsBoxType = {
+			name = "traits"
+			position = { x = 144 y = 192 }
+			size = { x = 208 y = 21 }
+			format = left
+		}
+
+		instantTextBoxType = {
+			name = "leader_status"
+			font = "cg_16b"
+			text = "LEADER_STATUS"
+			position = { x = 384 y = 96 }
+			maxWidth = 237
+			maxHeight = 53
+			format = right
+			alwaysTransparent = yes
+		}
+
+		# agree button
+
+		buttonType = {
+			name = "AgreeButton"
+			quadTextureSprite = "GFX_standard_button_142_34_button"
+			position = { x= -111 y = -80 }
+			orientation = center_down
+			buttonText = "MESSAGE_OK"
+			buttonFont = "malgun_goth_24"
+			clicksound = "confirmation"
+			shortcut = "RETURN"
+			actionShortcut = "accept"
+		}
+	}
+
+	################
+	# COMBAT STATS #
+	################
+
+	containerWindowType = {
+		name = "message_window_dialog_combat_stats"
+		size = { width = 640 height = 433 }
+		moveable = yes
+		origo = center
+		orientation = center
+
+		background = {
+			name = "background"
+			quadTextureSprite ="GFX_tile_outliner_bg"
+		}
+
+		# title
+
+		iconType = {
+			name = "hex_bg"
+			spriteType = "GFX_hex_bg"
+			position = { x = -133 y = 0 }
+			alwaysTransparent = yes
+			Orientation = "CENTER_UP"
+		}
+
+		iconType = {
+			name = "empire_header_line"
+			quadTextureSprite = "GFX_line_center"
+			position = { x = -21 y = 57 }
+		}
+
+		instantTextBoxType = {
+			name = "title"
+			format = center
+			orientation = center_up
+			maxWidth = 533
+			maxHeight = 27
+			position = { x = -267 y = 27 }
+			font = "malgun_goth_24"
+			text = ""
+		}
+
+		#buttonType = {
+		#	name = "focus_on"
+		#	orientation = upper_right
+		#	position = { x = -53 y = 13 }
+		#	quadTextureSprite = "GFX_fleetview_lock_focus"
+		#	pdx_tooltip = "FOCUS_ON_TARGET_NOTIFICATION"
+		#	shortCut = "q"
+		#}
+
+		# description
+
+		instantTextBoxType = {
+			name = "fleet_owner_name"
+			font = "cg_16b"
+			text = "UIUIUI"
+			format = center
+			orientation = center_up
+			maxWidth = 533
+			maxHeight = 27
+			position = { x = -267 y = 93 }
+			alwaysTransparent = yes
+		}
+
+		instantTextBoxType = {
+			name = "fleet_name"
+			font = "cg_16b"
+			text = "UIUIUI"
+			format = center
+			orientation = center_up
+			maxWidth = 533
+			maxHeight = 27
+			position = { x = -267 y = 120 }
+			alwaysTransparent = yes
+		}
+
+		@combat_stat_w = 85
+		@combat_stat_h = 85
+
+		containerWindowType = {
+			name = "fleet_stats"
+			size = { width = 341 height = 171 }
+			position = { x = 0 y = 160 }
+			orientation = center_up
+			origo = center_up
+
+			background = {
+				name = "background"
+				spriteType = "GFX_tiles_frame_extra_light"
+				size = { x = 352 y = 181 }
+			}
+
+			# kinetic damage
+
+			containerWindowType = {
+				name = "combat_stat_damage_kinetic"
+				size = { width = @combat_stat_w height = @combat_stat_h }
+				position = { x = 0 y = 0 }
+
+				background = {
+					name = "stat_hitbox"
+					spriteType = "GFX_invisible"
+				}
+
+				iconType = {
+					name = "stat_icon"
+					spriteType = "GFX_combat_stat_damage_kinetic"
+					orientation = center_up
+					centerPosition = yes
+					position = { x = 0 y = 32 }
+					alwaysTransparent = yes
+				}
+
+				instantTextBoxType = {
+					name = "stat_value"
+					font = "cg_16b"
+					text = "000"
+					format = center
+					maxWidth = 85
+					maxHeight = 27
+					position = { x = 0 y = 67 }
+					alwaysTransparent = yes
+				}
+			}
+
+			# energy damage
+
+			containerWindowType = {
+				name = "combat_stat_damage_energy"
+				size = { width = @combat_stat_w height = @combat_stat_h }
+				position = { x = 85 y = 0 }
+
+				background = {
+					name = "stat_hitbox"
+					spriteType = "GFX_invisible"
+				}
+
+				iconType = {
+					name = "stat_icon"
+					spriteType = "GFX_combat_stat_damage_energy"
+					orientation = center_up
+					centerPosition = yes
+					position = { x = 0 y = 32 }
+					alwaysTransparent = yes
+				}
+
+				instantTextBoxType = {
+					name = "stat_value"
+					font = "cg_16b"
+					text = "000"
+					format = center
+					maxWidth = 85
+					maxHeight = 27
+					position = { x = 0 y = 67 }
+					alwaysTransparent = yes
+				}
+			}
+
+			# explosive damage
+
+			containerWindowType = {
+				name = "combat_stat_damage_explosive"
+				size = { width = @combat_stat_w height = @combat_stat_h }
+				position = { x = 171 y = 0 }
+
+				background = {
+					name = "stat_hitbox"
+					spriteType = "GFX_invisible"
+				}
+
+				iconType = {
+					name = "stat_icon"
+					spriteType = "GFX_combat_stat_damage_explosive"
+					orientation = center_up
+					centerPosition = yes
+					position = { x = 0 y = 32 }
+					alwaysTransparent = yes
+				}
+
+				instantTextBoxType = {
+					name = "stat_value"
+					font = "cg_16b"
+					text = "000"
+					format = center
+					maxWidth = 85
+					maxHeight = 27
+					position = { x = 0 y = 67 }
+					alwaysTransparent = yes
+				}
+			}
+
+			# hit ratio
+
+			containerWindowType = {
+				name = "combat_stat_projectiles_hit"
+				size = { width = @combat_stat_w height = @combat_stat_h }
+				position = { x = 256 y = 0 }
+
+				background = {
+					name = "stat_hitbox"
+					spriteType = "GFX_invisible"
+				}
+
+				iconType = {
+					name = "stat_icon"
+					spriteType = "GFX_combat_stat_projectiles_hit"
+					orientation = center_up
+					centerPosition = yes
+					position = { x = 0 y = 32 }
+					alwaysTransparent = yes
+				}
+
+				instantTextBoxType = {
+					name = "stat_value"
+					font = "cg_16b"
+					text = "000"
+					format = center
+					maxWidth = 85
+					maxHeight = 27
+					position = { x = 0 y = 67 }
+					alwaysTransparent = yes
+				}
+			}
+
+			# missiles and strikecrafts shot down
+
+			containerWindowType = {
+				name = "combat_stat_damage_hitpoints"
+				#name = "combat_stat_targetables_killed"
+				size = { width = @combat_stat_w height = @combat_stat_h }
+				position = { x = 0 y = 85 }
+
+				background = {
+					name = "stat_hitbox"
+					spriteType = "GFX_invisible"
+				}
+
+				iconType = {
+					name = "stat_icon"
+					spriteType = "GFX_combat_stat_targetables_killed"
+					orientation = center_up
+					centerPosition = yes
+					position = { x = 0 y = 32 }
+					alwaysTransparent = yes
+				}
+
+				instantTextBoxType = {
+					name = "stat_value"
+					font = "cg_16b"
+					text = "000"
+					format = center
+					maxWidth = 85
+					maxHeight = 27
+					position = { x = 0 y = 67 }
+					alwaysTransparent = yes
+				}
+			}
+
+			# damage to armor
+
+			containerWindowType = {
+				name = "combat_stat_damage_armor"
+				size = { width = @combat_stat_w height = @combat_stat_h }
+				position = { x = 85 y = 85 }
+
+				background = {
+					name = "stat_hitbox"
+					spriteType = "GFX_invisible"
+				}
+
+				iconType = {
+					name = "stat_icon"
+					spriteType = "GFX_combat_stat_damage_armor"
+					orientation = center_up
+					centerPosition = yes
+					position = { x = 0 y = 32 }
+					alwaysTransparent = yes
+				}
+
+				instantTextBoxType = {
+					name = "stat_value"
+					font = "cg_16b"
+					text = "000"
+					format = center
+					maxWidth = 85
+					maxHeight = 27
+					position = { x = 0 y = 67 }
+					alwaysTransparent = yes
+				}
+			}
+
+			# damage to shields
+
+			containerWindowType = {
+				name = "combat_stat_damage_shields"
+				size = { width = @combat_stat_w height = @combat_stat_h }
+				position = { x = 171 y = 85 }
+
+				background = {
+					name = "stat_hitbox"
+					spriteType = "GFX_invisible"
+				}
+
+				iconType = {
+					name = "stat_icon"
+					spriteType = "GFX_combat_stat_damage_shields"
+					orientation = center_up
+					centerPosition = yes
+					position = { x = 0 y = 32 }
+					alwaysTransparent = yes
+				}
+
+				instantTextBoxType = {
+					name = "stat_value"
+					font = "cg_16b"
+					text = "000"
+					format = center
+					maxWidth = 85
+					maxHeight = 27
+					position = { x = 0 y = 67 }
+					alwaysTransparent = yes
+				}
+			}
+
+			# evasion ratio
+
+			containerWindowType = {
+				name = "combat_stat_projectiles_evaded"
+				size = { width = @combat_stat_w height = @combat_stat_h }
+				position = { x = 256 y = 85 }
+
+				background = {
+					name = "stat_hitbox"
+					spriteType = "GFX_invisible"
+				}
+
+				iconType = {
+					name = "stat_icon"
+					spriteType = "GFX_combat_stat_projectiles_evaded"
+					orientation = center_up
+					centerPosition = yes
+					position = { x = 0 y = 32 }
+					alwaysTransparent = yes
+				}
+
+				instantTextBoxType = {
+					name = "stat_value"
+					font = "cg_16b"
+					text = "000"
+					format = center
+					maxWidth = 85
+					maxHeight = 27
+					position = { x = 0 y = 67 }
+					alwaysTransparent = yes
+				}
+			}
+		}
+
+		# agree button
+
+		buttonType = {
+			name = "AgreeButton"
+			quadTextureSprite = "GFX_standard_button_142_34_button"
+			position = { x= -111 y = -85 }
+			orientation = center_down
+			buttonText = "MESSAGE_OK"
+			buttonFont = "malgun_goth_24"
+			clicksound = "confirmation"
+			shortcut = "RETURN"
+			actionShortcut = "accept"
+		}
+	}
+}

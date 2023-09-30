@@ -1,0 +1,129 @@
+guiTypes = {
+	containerWindowType = {
+		name = "gotobox"
+		position = { x = -800 y = 133 }
+		size = { width = 400 height = 489 }
+		orientation = upper_right
+		moveable = yes
+		
+		background = {
+			name = "background"
+			quadTextureSprite = "GFX_tile_outliner_bg"
+			
+		}
+			
+			containerWindowType = {
+				name = "start_screen_frame_bg"
+				position = { x=-192 y=-173 }
+				size = { width = 384 height = 405 }
+				orientation = center
+				
+				
+				background = {
+					name = "start_screen_frame"
+					quadTextureSprite = "GFX_set_focus_frame"
+					position = { x = 0 y = 5 }
+					alwaysTransparent = yes
+				}
+			}
+			
+		
+		iconType = {
+			name = "title_hex"
+			quadTextureSprite = "GFX_hex_bg"
+			position = { x = -23 y = -19 }
+		}
+			
+		instantTextBoxType={
+			name = "header"
+			font = "malgun_goth_24"
+			text = "GOTOBOX_HEADER"
+			#text_color_code = "H"
+			position = { x= 20 y= 7 }
+			maxWidth = 400
+			maxHeight = 53
+			fixedsize = yes
+			format = left
+		}	
+				
+		iconType = {
+			name = "title_line"
+			quadTextureSprite = "GFX_line_short"
+			position = { x = 8 y = 28 }
+		}
+		instantTextBoxType={
+			name = "desc"
+			font = "cg_16b"
+			text = "GOTOBOX_DESC"
+			#text_color_code = "H"
+			position = { x= 20 y= 48 }
+			maxWidth = 400
+			maxHeight = 53
+			fixedsize = yes
+			format = left
+			text_color_code = "E"
+		}
+
+		editBoxType = {
+			position = { x = 27 y = 95  }
+			name = "edit"
+			instantTextBoxType = no
+			textureFile = "gfx/interface/tiles/small_tiles_dialog.dds"
+			font = "cg_16b"
+			borderSize = { x=5 y=5 }
+			size = { x=353 y=53 }
+			orientation = "UPPER_LEFT"
+			cursor = { x=0 y= 4}	
+			#text_color_code = "H"
+			
+		}
+		
+		listBoxType = 
+		{
+			name ="list"
+			position = { x=20 y=147 }
+			orientation = "UPPER_LEFT"
+			priority = 100
+			size = { x=333 y=320 }
+			borderSize = { x=0 y=0 }
+			scrollbartype = "standardlistbox_slider"
+			alwaystransparent = no
+		}
+		
+		buttonType = {
+			name = "close"
+			quadTextureSprite = "GFX_close"
+			position = { x= -60 y = 21  }
+			Orientation = "UPPER_RIGHT"
+			shortcut = "ESCAPE"
+			clicksound = "back_click"
+		}		
+	}
+	
+	containerWindowType = {
+		name = "gotobox_entry"
+		position = { x = 0 y = 0 }	
+		size = { width = 333 height = 40 }
+		
+		buttonType = {
+			name = "button"
+			quadTextureSprite = "GFX_black_box"
+			position = { x= 7 y = 0 }
+			size = { x=320 y= 35 }
+		}
+		
+		instantTextBoxType = {
+			name = "name"
+			position = { x = 13 y = 5 }
+			textureFile = ""
+			font = "cg_16b"
+			borderSize = {x = 0 y = 0}
+			text = "Test"	
+			maxWidth = 267
+			maxHeight = 24	
+			fixedsize = yes
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+	}
+}

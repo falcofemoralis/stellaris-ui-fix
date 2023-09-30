@@ -1,0 +1,457 @@
+guiTypes = {
+	containerWindowType = {
+		name = "endscreen_view_gamepad"
+		position = { x = 0 y = 13 }
+		size = { width = 1333 height = 880 }
+		orientation = center
+		origo = center
+		moveable = yes
+		
+		background = {
+			name = "army_view_background"
+			quadTextureSprite = "GFX_tile_large_bg_plain"
+		}
+		
+		iconType = {
+			name = "title_line"
+			spriteType = "GFX_line_center"
+			position = { x = 333 y = 51 }
+			alwaysTransparent = yes
+		}
+		
+		iconType = {
+			name = "hex_bg"
+			spriteType = "GFX_hex_center_bg"
+			position = { x = 333 y = -13 }
+			alwaysTransparent = yes
+		}
+		
+		instantTextBoxType = {
+			name = "name"
+			font = "large_title_font"
+			position = { x = 0 y = 9 }
+			maxWidth = 1333
+			maxHeight = 27
+			fixedSize = yes
+			format = center
+			orientation = "UPPER_LEFT"
+			alwaysTransparent = yes
+			text_color_code = "H"
+		}
+		
+		instantTextBoxType = {
+			name = "game_over_desc"
+			font = "malgun_goth_24"
+			position = { x = 0 y = 80 }
+			maxWidth = 1333
+			maxHeight = 27
+			Orientation = "UPPER_LEFT"
+			format = center
+		}
+		
+		#REMOVE THIS BUTTON
+		buttonType = {
+			name = "close"
+			quadTextureSprite = "GFX_close"
+			position = { x = -60 y = 13221 }
+			Orientation = "UPPER_RIGHT"
+			shortCut = "ESCAPE"
+			clicksound = "back_click"
+			pdx_tooltip = "CLOSE_TITLE"
+		}
+		
+		containerWindowType = {
+			name = "country_list_bg_box"
+			position = { x = 16 y = 440 }
+			size = { width = 1284 height = 377 }
+
+			background = {
+				name = "country_list_bg"
+				spriteType = "GFX_tiles_dark_area_cut_8"
+				alwaysTransparent = yes
+			}
+			
+		}
+		
+		
+		
+		containerWindowType = {
+			name = "portrait_window"
+			position = { x = 13 y = 128 }
+			size = { width = 728 height = 260 }
+			moveable = no
+			clipping = yes
+			
+			iconType = {
+				name = "portrait"
+				position = { x = 5 y = 3 }
+				quadTextureSprite = "GFX_portrait_gamesetup_mask"
+				alwaysTransparent = yes
+				scale = 0.566
+			}			
+					
+			iconType = {
+				name = "black_frame"
+				spriteType = "GFX_diplomacy_portrait_shadow_frame"
+				position = { x = 0 y = 0}
+				alwaysTransparent = yes
+				scale = 0.566
+			}
+			
+			iconType = {
+				name = "stripes_1"
+				spriteType = "GFX_diplomacy_stripes_2"
+				position = { x = 5 y = 3 }
+				orientation = upper_left
+				alwaysTransparent = yes
+				scale = 0.566
+			}
+				
+			iconType = {
+				name = "city_frame"
+				spriteType = "GFX_diplomacy_portrait_frame"
+				position = { x = 0 y = 0}
+				alwaysTransparent = yes
+				scale = 0.566
+			}
+		}
+		
+		containerWindowType = {
+			name = "empire_window"
+			position = { x = 760 y = 133 }
+			size = { width = 540 height = 120 }
+
+			background = {
+				name = "info_bg_1"
+				spriteType = "GFX_tiles_dark_area_cut_8"
+				alwaysTransparent = yes
+			}
+			
+			iconType = {
+				name = "flag"
+				spriteType = "GFX_empire_flag_64"
+				position = { x= 7 	y = 13  }
+				orientation = UPPER_LEFT
+			}
+			
+			instantTextBoxType = {
+				name = "name"
+				font = "cg_16b"
+				text = ""
+				position = { x = 107 y = 13 }
+				maxWidth = 253
+				maxHeight = 27
+				fixedSize = yes
+				format = left
+				orientation = "UPPER_LEFT"
+				alwaysTransparent = yes
+				text_color_code = "E"
+			}
+			
+			instantTextBoxType = {
+				name = "goverment_type"
+				font = "cg_16b"
+				text = ""
+				position = { x = 107 y = 36 }
+				maxWidth = 253
+				maxHeight = 27
+				fixedSize = yes
+				format = left
+				orientation = "UPPER_LEFT"
+				#text_color_code = "E"
+			}
+			
+			iconType = {
+				name = "government"
+				spriteType = "GFX_government_authority"
+				position = { x = -80 y = 16  }
+				orientation = "UPPER_RIGHT"
+			}
+
+			overlappingElementsBoxType = {
+				name = "ethics"
+				position = { x = 107 y = 67 }
+				size = { x = 240 y = 80 }
+				spacing = 0
+				format = left
+				orientation = "UPPER_LEFT"
+			}
+		}	
+		
+		containerWindowType = {
+			name = "species_window"
+			position = { x = 760 y = 260 }
+			size = { width = 293 height = 120 }
+
+			background = {
+				name = "info_bg_2"
+				spriteType = "GFX_tiles_dark_area_cut_8"
+				alwaysTransparent = yes
+			}
+			
+			iconType = {
+				name = "species"
+				quadTextureSprite = "GFX_portrait_character"
+				position = { x = -40 y = -13 }
+				scale = 0.25
+			}
+			
+			instantTextBoxType = {
+				name = "name"
+				font = "cg_16b"
+				text = ""
+				position = { x = 107 y = 13 }
+				maxWidth = 253
+				maxHeight = 27
+				fixedSize = yes
+				format = left
+				orientation = "UPPER_LEFT"
+				alwaysTransparent = yes
+				text_color_code = "E"
+			}
+			
+			instantTextBoxType = {
+				name = "class"
+				font = "cg_16b"
+				text = ""
+				position = { x = 107 y = 36 }
+				maxWidth = 253
+				maxHeight = 27
+				fixedSize = yes
+				format = left
+				orientation = "UPPER_LEFT"
+				alwaysTransparent = yes
+				#text_color_code = "E"
+			}
+			
+			overlappingElementsBoxType = {
+				name = "traits"
+				position = { x = 107 y = 69 }
+				size = { x = 173 y = 80 }
+				spacing = 0
+				format = left
+				orientation = "UPPER_LEFT"
+			}
+		}	
+		
+		containerWindowType = {
+			name = "planet_window"
+			position = { x = 1060 y = 260 }
+			size = { width = 240 height = 120 }
+			
+			background = {
+				name = "info_bg_1"
+				spriteType = "GFX_tiles_dark_area_cut_8"
+				alwaysTransparent = yes
+			}
+			
+			buttonType = {
+				name = "planetoid_render_target"
+				quadTextureSprite = "GFX_dummy_3d_home_world"
+				position = { x = 9 y = 9 }
+				size = { x = 72 y = 72 }
+			}
+		
+			instantTextBoxType = {
+				name = "planet_name"
+				font = "cg_16b"
+				text = ""
+				position = { x = 85 y = 13 }
+				maxWidth = 253
+				maxHeight = 27
+				fixedSize = yes
+				format = left
+				orientation = "UPPER_LEFT"
+				text_color_code = "E"
+			}
+			
+			instantTextBoxType = {
+				name = "planet_type"
+				font = "cg_16b"
+				text = ""
+				position = { x = 85 y = 36 }
+				maxWidth = 187
+				maxHeight = 27
+				fixedSize = yes
+				format = left
+				orientation = "UPPER_LEFT"
+				#text_color_code = "E"
+			}
+		}
+		
+		containerWindowType = {
+			name = "sort"
+			position = { x = 0 y = 380 }
+			size = { width = 1200 height = 533 }
+				
+			@sort_button_height = 4
+			
+			buttonType={
+				name = "sort_name"
+				font = "cg_16b"
+				spriteType = "GFX_galactic_object_button"
+				buttonText = "GALAXY_VIEW_EMPIRE_NAME"
+				position = { x = 7 y = 13 }
+				Orientation = UPPER_LEFT
+				pdx_tooltip = "GALAXY_VIEW_SORT_NAME"
+			}
+			
+			buttonType={
+				name = "sort_planets"
+				font = "cg_16b"
+				spriteType = "GFX_button_95_24"
+				buttonText = "PLANETS"
+				position = { x = 369 y = @sort_button_height }
+				orientation = UPPER_LEFT
+				pdx_tooltip = "SORT_BY_PLANETS"
+			}
+
+			buttonType={
+				name = "sort_pops"
+				font = "cg_16b"
+				spriteType = "GFX_button_95_24"
+				buttonText = "POPS"
+				position = { x = 501 y = @sort_button_height }
+				orientation = UPPER_LEFT
+				pdx_tooltip = "SORT_BY_POP"
+			}
+			
+			buttonType={
+				name = "sort_fleets"
+				font = "cg_16b"
+				spriteType = "GFX_button_116_24"
+				buttonText = "OUTLINER_FLEETS"
+				position = { x = 633 y = @sort_button_height }
+				orientation = UPPER_LEFT
+				pdx_tooltip = "SORT_BY_MILITARY_FLEETS"
+			}
+			
+			buttonType={
+				name = "sort_research"
+				font = "cg_16b"
+				spriteType = "GFX_button_95_24"
+				buttonText = "RESEARCH"
+				position = { x = 793 y = @sort_button_height }
+				orientation = UPPER_LEFT
+				pdx_tooltip = "SORT_BY_RESEARCH"
+			}	
+		}
+
+		buttonType = {
+			id = "observe"
+			name = "observe"
+			quadTextureSprite = "GFX_standard_button_142_34_button"
+			position = { x = 440 y = 808 }
+			buttonFont = "cg_16b"
+			text = "CONTINUE"
+			font = "cg_16b"
+			defaultSelection = yes
+			navRight = "resign"
+			navUp = "list"
+		}
+		
+		buttonType = {
+			id = "resign"
+			name = "resign"
+			quadTextureSprite = "GFX_standard_button_142_34_button"
+			position = { x = 640 y = 808 }
+			buttonFont = "cg_16b"
+			text = "ABANDON_GAME"
+			font = "cg_16b"
+			navLeft = "observe"
+			navUp = "list"
+		}
+
+		smoothListboxType = {
+			id = "list"
+			name = "list"
+			position = { x = 23 y = 448 }
+			size = { x=1257 y=360 }
+			scrollbartype = "standardlistbox_slider"
+			borderSize = { x = 0 y = 0 }
+			orientation = "UPPER_LEFT"
+			navDown = "observe"
+			single_choice = yes
+			
+		}		
+	}
+
+	containerWindowType = {
+		name = "endscreen_empire_entry_gamepad"
+		position = { x=0 y=0 }
+		size = { width=1011 height=64 }
+		
+		buttonType = {
+			name = "background"
+			spriteType = "GFX_tiles_frame_light"
+			size = { x = 1271 y = 72 }
+			position = { x= -7 y = -7 }
+		}
+		
+		iconType = {
+			name = "flag"
+			spriteType = "GFX_empire_flag_32"
+			position = { x= 7 y = 9  }
+		}
+
+		instantTextBoxType = {
+			name = "name"
+			font = "cg_16b"
+			text = ""
+			position = { x = 60 y = 1 }
+			maxWidth = 320
+			maxHeight = 53
+			fixedSize = yes
+			vertical_alignment = center
+			format = left
+			orientation = "UPPER_LEFT"
+			alwaysTransparent = yes
+			#text_color_code = "E"
+		}
+		
+		
+		instantTextBoxType = {
+			name = "planets"
+			font = "cg_16b"
+			text = "26"
+			position = { x = 293 y = 16 }
+			fixedSize = yes
+			format = center
+			alwaysTransparent = yes
+			#text_color_code = "E"
+		}
+						
+		instantTextBoxType = {
+			name = "pops"
+			font = "cg_16b"
+			text = "86"
+			position = { x = 423 y = 16 }
+			fixedSize = yes
+			format = center
+			alwaysTransparent = yes
+			#text_color_code = "E"
+		}		
+		
+		instantTextBoxType = {
+			name = "ships"
+			font = "cg_16b"
+			text = "182"
+			position = { x = 569 y = 16 }
+			fixedSize = yes
+			format = center
+			alwaysTransparent = yes
+			#text_color_code = "E"
+		}		
+		
+		instantTextBoxType = {
+			name = "research"
+			font = "cg_16b"
+			text = "96"
+			position = { x = 717 y = 16 }
+			fixedSize = yes
+			format = center
+			alwaysTransparent = yes
+			#text_color_code = "E"
+		}
+	}		
+}

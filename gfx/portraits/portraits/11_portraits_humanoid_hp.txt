@@ -1,0 +1,2061 @@
+##############################################################
+###	PORTRAITS SETTINGS
+###
+### Which portraits are used is set in
+### common\species_classes\00_species_classes.txt
+###
+###	This file configures how portraits and planet backgrounds are built.
+###	Default position orientation is lower left.
+##############################################################
+
+portraits = {
+
+	humanoid_hp_01 	= {	entity = "humanoid_hp_01_entity"	clothes_selector = "mammalian_slender_01_clothes_01" attachment_selector = "no_texture"	greeting_sound = "humanoid_portrait_a_male"
+		character_textures = {
+			"gfx/models/portraits/humanoid/humanoid_hp_01.dds"
+			"gfx/models/portraits/humanoid/humanoid_hp_01_yellow.dds"
+			"gfx/models/portraits/humanoid/humanoid_hp_01_red.dds"
+			"gfx/models/portraits/humanoid/humanoid_hp_01_brown.dds"
+		}
+	}
+
+	humanoid_hp_01_female 	= {	entity = "humanoid_hp_01_entity"	clothes_selector = "mammalian_slender_01_clothes_01" attachment_selector = "no_texture"	greeting_sound = "humanoid_portrait_a_female"
+		character_textures = {
+			"gfx/models/portraits/humanoid/humanoid_hp_01_female.dds"
+			"gfx/models/portraits/humanoid/humanoid_hp_01_female_yellow.dds"
+			"gfx/models/portraits/humanoid/humanoid_hp_01_female_red.dds"
+			"gfx/models/portraits/humanoid/humanoid_hp_01_female_brown.dds"
+		}
+	}
+
+
+	#GNOME PORTRAIT
+	humanoid_hp_02 	= {	entity = "humanoid_hp_02_entity"	clothes_selector = "humanoid_hp_02_clothes" attachment_selector = "humanoid_hp_02_male_beard"	greeting_sound = "humanoid_portrait_b_male"
+		character_textures = {
+			"gfx/models/portraits/humanoid/humanoid_hp_02.dds"
+		}
+		custom_attachment_label = "HAIR_STYLE"
+	}
+
+	humanoid_hp_02_female 	= {	entity = "humanoid_hp_02_entity"	clothes_selector = "humanoid_hp_02_clothes" attachment_selector = "humanoid_hp_02_female_hair"	greeting_sound = "humanoid_portrait_b_female"
+		character_textures = {
+			"gfx/models/portraits/humanoid/humanoid_hp_02_female.dds"
+		}
+		custom_attachment_label = "HAIR_STYLE"
+	}
+
+	humanoid_hp_06 	= {	entity = "humanoid_hp_06_entity"	clothes_selector = "mammalian_normal_clothes_01" attachment_selector = "no_texture"	greeting_sound = "humanoid_portrait_c_male"
+		character_textures = {
+			"gfx/models/portraits/humanoid/humanoid_hp_06.dds"
+			"gfx/models/portraits/humanoid/humanoid_hp_06_orange.dds"
+			"gfx/models/portraits/humanoid/humanoid_hp_06_red.dds"
+			"gfx/models/portraits/humanoid/humanoid_hp_06_pink.dds"
+		}
+	}
+
+	humanoid_hp_06_female 	= {	entity = "humanoid_hp_06_entity"	clothes_selector = "mammalian_normal_clothes_01" attachment_selector = "no_texture"	greeting_sound = "humanoid_portrait_c_female"
+		character_textures = {
+			"gfx/models/portraits/humanoid/humanoid_hp_06_female.dds"
+			"gfx/models/portraits/humanoid/humanoid_hp_06_female_orange.dds"
+			"gfx/models/portraits/humanoid/humanoid_hp_06_female_red.dds"
+			"gfx/models/portraits/humanoid/humanoid_hp_06_female_pink.dds"
+		}
+	}
+
+	humanoid_hp_07 	= {	entity = "humanoid_hp_07_entity"	clothes_selector = "humanoid_hp_07_clothes" attachment_selector = "no_texture"	greeting_sound = "humanoid_portrait_d_male"
+		character_textures = {
+			"gfx/models/portraits/humanoid/humanoid_hp_07.dds"
+		}
+	}
+
+	humanoid_hp_07_female 	= {	entity = "humanoid_hp_07_entity"	clothes_selector = "humanoid_hp_07_clothes" attachment_selector = "no_texture"	greeting_sound = "humanoid_portrait_d_female"
+		character_textures = {
+			"gfx/models/portraits/humanoid/humanoid_hp_07_female.dds"
+		}
+	}
+
+	humanoid_hp_08 	= {	entity = "humanoid_hp_08_entity"	clothes_selector = "humanoid_hp_08_clothes" attachment_selector = "no_texture"	greeting_sound = "humanoid_male_greeting_d"
+		character_textures = {
+			"gfx/models/portraits/humanoid/humanoid_hp_08.dds"
+			"gfx/models/portraits/humanoid/humanoid_hp_08_orange.dds"
+			"gfx/models/portraits/humanoid/humanoid_hp_08_yellow.dds"
+			"gfx/models/portraits/humanoid/humanoid_hp_08_purple.dds"
+		}
+	}
+
+
+	humanoid_hp_08_female 	= {	entity = "humanoid_hp_08_entity"	clothes_selector = "humanoid_hp_08_clothes" attachment_selector = "no_texture"	greeting_sound = "humanoid_female_greeting_d"
+		character_textures = {
+			"gfx/models/portraits/humanoid/humanoid_hp_08_female.dds"
+			"gfx/models/portraits/humanoid/humanoid_hp_08_female_orange.dds"
+			"gfx/models/portraits/humanoid/humanoid_hp_08_female_yellow.dds"
+			"gfx/models/portraits/humanoid/humanoid_hp_08_female_purple.dds"
+		}
+	}
+
+	humanoid_hp_09 	= {	entity = "humanoid_hp_09_entity"	clothes_selector = "humanoid_hp_09_male_clothes" attachment_selector = "no_texture"	greeting_sound = "humanoid_portrait_f_male"
+		character_textures = {
+			"gfx/models/portraits/humanoid/humanoid_hp_09.dds"
+			"gfx/models/portraits/humanoid/humanoid_hp_09v2.dds"
+			"gfx/models/portraits/humanoid/humanoid_hp_09v3.dds"
+			"gfx/models/portraits/humanoid/humanoid_hp_09v4.dds"
+		}
+	}
+
+	humanoid_hp_09_female 	= {	entity = "humanoid_hp_09_entity"	clothes_selector = "humanoid_hp_09_female_clothes.txt" attachment_selector = "no_texture"	greeting_sound = "humanoid_portrait_f_female"
+		character_textures = {
+			"gfx/models/portraits/humanoid/humanoid_hp_09_female.dds"
+			"gfx/models/portraits/humanoid/humanoid_hp_09_femalev2.dds"
+			"gfx/models/portraits/humanoid/humanoid_hp_09_femalev3.dds"
+			"gfx/models/portraits/humanoid/humanoid_hp_09_femalev4.dds"
+		}
+	}
+
+	humanoid_hp_10 	= {	entity = "humanoid_hp_10_entity"	clothes_selector = "mammalian_normal_clothes_01" attachment_selector = "no_texture"	greeting_sound = "humanoid_portrait_g_male"
+		character_textures = {
+			"gfx/models/portraits/humanoid/humanoid_hp_10.dds"
+			"gfx/models/portraits/humanoid/humanoid_hp_10v2.dds"
+			"gfx/models/portraits/humanoid/humanoid_hp_10v3.dds"
+			"gfx/models/portraits/humanoid/humanoid_hp_10v4.dds"
+		}
+	}
+
+
+	humanoid_hp_10_female 	= {	entity = "humanoid_hp_10_entity"	clothes_selector = "mammalian_normal_clothes_01" attachment_selector = "no_texture"	greeting_sound = "humanoid_portrait_g_female"
+		character_textures = {
+			"gfx/models/portraits/humanoid/humanoid_hp_10_female.dds"
+			"gfx/models/portraits/humanoid/humanoid_hp_10_femalev2.dds"
+			"gfx/models/portraits/humanoid/humanoid_hp_10_femalev3.dds"
+			"gfx/models/portraits/humanoid/humanoid_hp_10_femalev4.dds"
+		}
+	}
+
+	#DWARF PORTRAIT
+	humanoid_hp_11 	= {	entity = "humanoid_hp_11_entity"	clothes_selector = "mammalian_massive_clothes_01" attachment_selector = "humanoid_hp_11_hair"	greeting_sound = "humanoid_portrait_h_male"
+		character_textures = {
+			"gfx/models/portraits/humanoid/humanoid_hp_11.dds"
+		}
+		custom_attachment_label = "HAIR_STYLE"
+	}
+
+	humanoid_hp_11_female 	= {	entity = "humanoid_hp_11_entity"	clothes_selector = "mammalian_massive_clothes_01" attachment_selector = "humanoid_hp_11_female_hair"	greeting_sound = "humanoid_portrait_h_female"
+		character_textures = {
+			"gfx/models/portraits/humanoid/humanoid_hp_11_female.dds"
+		}
+		custom_attachment_label = "HAIR_STYLE"
+	}
+
+	humanoid_hp_12 	= {	entity = "humanoid_hp_12_entity"	clothes_selector = "humanoid_hp_12_clothes" attachment_selector = "no_texture"	greeting_sound = "humanoid_portrait_i_male"
+		character_textures = {
+			"gfx/models/portraits/humanoid/humanoid_hp_12.dds"
+			"gfx/models/portraits/humanoid/humanoid_hp_12_teal.dds"
+			"gfx/models/portraits/humanoid/humanoid_hp_12_brown.dds"
+			"gfx/models/portraits/humanoid/humanoid_hp_12_pale.dds"
+			"gfx/models/portraits/humanoid/humanoid_hp_12_male_hair_update/humanoid_hp_12_b.dds"
+			"gfx/models/portraits/humanoid/humanoid_hp_12_male_hair_update/humanoid_hp_12_c.dds"
+			"gfx/models/portraits/humanoid/humanoid_hp_12_male_hair_update/humanoid_hp_12_d.dds"
+			"gfx/models/portraits/humanoid/humanoid_hp_12_male_hair_update/humanoid_hp_12_e.dds"
+			"gfx/models/portraits/humanoid/humanoid_hp_12_male_hair_update/humanoid_hp_12_brown_b.dds"
+			"gfx/models/portraits/humanoid/humanoid_hp_12_male_hair_update/humanoid_hp_12_brown_c.dds"
+			"gfx/models/portraits/humanoid/humanoid_hp_12_male_hair_update/humanoid_hp_12_brown_d.dds"
+			"gfx/models/portraits/humanoid/humanoid_hp_12_male_hair_update/humanoid_hp_12_brown_e.dds"
+			"gfx/models/portraits/humanoid/humanoid_hp_12_male_hair_update/humanoid_hp_12_pale_b.dds"
+			"gfx/models/portraits/humanoid/humanoid_hp_12_male_hair_update/humanoid_hp_12_pale_c.dds"
+			"gfx/models/portraits/humanoid/humanoid_hp_12_male_hair_update/humanoid_hp_12_pale_d.dds"
+			"gfx/models/portraits/humanoid/humanoid_hp_12_male_hair_update/humanoid_hp_12_pale_e.dds"
+			"gfx/models/portraits/humanoid/humanoid_hp_12_male_hair_update/humanoid_hp_12_teal_b.dds"
+			"gfx/models/portraits/humanoid/humanoid_hp_12_male_hair_update/humanoid_hp_12_teal_c.dds"
+			"gfx/models/portraits/humanoid/humanoid_hp_12_male_hair_update/humanoid_hp_12_teal_d.dds"
+			"gfx/models/portraits/humanoid/humanoid_hp_12_male_hair_update/humanoid_hp_12_teal_e.dds"
+		}
+	}
+
+	humanoid_hp_12_female 	= {	entity = "humanoid_hp_12_entity"	clothes_selector = "humanoid_hp_12_clothes" attachment_selector = "no_texture"	greeting_sound = "humanoid_portrait_i_female"
+		character_textures = {
+			"gfx/models/portraits/humanoid/humanoid_hp_12_female.dds"
+			"gfx/models/portraits/humanoid/humanoid_hp_12_female_teal.dds"
+			"gfx/models/portraits/humanoid/humanoid_hp_12_female_brown.dds"
+			"gfx/models/portraits/humanoid/humanoid_hp_12_female_pale.dds"
+			"gfx/models/portraits/humanoid/humanoid_hp_12_female_hair_update/humanoid_hp_12_female_b.dds"
+			"gfx/models/portraits/humanoid/humanoid_hp_12_female_hair_update/humanoid_hp_12_female_c.dds"
+			"gfx/models/portraits/humanoid/humanoid_hp_12_female_hair_update/humanoid_hp_12_female_d.dds"
+			"gfx/models/portraits/humanoid/humanoid_hp_12_female_hair_update/humanoid_hp_12_female_e.dds"
+			"gfx/models/portraits/humanoid/humanoid_hp_12_female_hair_update/humanoid_hp_12_female_brown_b.dds"
+			"gfx/models/portraits/humanoid/humanoid_hp_12_female_hair_update/humanoid_hp_12_female_brown_c.dds"
+			"gfx/models/portraits/humanoid/humanoid_hp_12_female_hair_update/humanoid_hp_12_female_brown_d.dds"
+			"gfx/models/portraits/humanoid/humanoid_hp_12_female_hair_update/humanoid_hp_12_female_brown_e.dds"
+			"gfx/models/portraits/humanoid/humanoid_hp_12_female_hair_update/humanoid_hp_12_female_pale_b.dds"
+			"gfx/models/portraits/humanoid/humanoid_hp_12_female_hair_update/humanoid_hp_12_female_pale_c.dds"
+			"gfx/models/portraits/humanoid/humanoid_hp_12_female_hair_update/humanoid_hp_12_female_pale_d.dds"
+			"gfx/models/portraits/humanoid/humanoid_hp_12_female_hair_update/humanoid_hp_12_female_pale_e.dds"
+			"gfx/models/portraits/humanoid/humanoid_hp_12_female_hair_update/humanoid_hp_12_female_teal_b.dds"
+			"gfx/models/portraits/humanoid/humanoid_hp_12_female_hair_update/humanoid_hp_12_female_teal_c.dds"
+			"gfx/models/portraits/humanoid/humanoid_hp_12_female_hair_update/humanoid_hp_12_female_teal_d.dds"
+			"gfx/models/portraits/humanoid/humanoid_hp_12_female_hair_update/humanoid_hp_12_female_teal_e.dds"
+		}
+	}
+
+	humanoid_hp_13 	= {	entity = "humanoid_hp_13_entity"	clothes_selector = "humanoid_hp_13_clothes" attachment_selector = "no_texture"	greeting_sound = "humanoid_portrait_j_male"
+		character_textures = {
+			"gfx/models/portraits/humanoid/humanoid_hp_13_purple.dds"
+			"gfx/models/portraits/humanoid/humanoid_hp_13.dds"
+			"gfx/models/portraits/humanoid/humanoid_hp_13_yellow.dds"
+			"gfx/models/portraits/humanoid/humanoid_hp_13_green.dds"
+		}
+	}
+
+	humanoid_hp_13_female 	= {	entity = "humanoid_hp_13_entity"	clothes_selector = "humanoid_hp_13_clothes" attachment_selector = "no_texture"	greeting_sound = "humanoid_portrait_j_female"
+		character_textures = {
+			"gfx/models/portraits/humanoid/humanoid_hp_13_female_purple.dds"
+			"gfx/models/portraits/humanoid/humanoid_hp_13_female.dds"
+			"gfx/models/portraits/humanoid/humanoid_hp_13_female_yellow.dds"
+			"gfx/models/portraits/humanoid/humanoid_hp_13_female_green.dds"
+		}
+	}
+
+	humanoid_hp_14_male 	= {	entity = "humanoid_hp_14_entity"	clothes_selector = "humanoid_hp_14_clothes" attachment_selector = "humanoid_hp_14_hair"	greeting_sound = "humanoid_portrait_j_male"
+		character_textures = {
+			"gfx/models/portraits/humanoid/humanoid_hp_14_yellow.dds"
+			"gfx/models/portraits/humanoid/humanoid_hp_14_red.dds"
+			"gfx/models/portraits/humanoid/humanoid_hp_14_blue.dds"
+		}
+		custom_attachment_label = "HAIR_STYLE"
+
+		custom_close_up_position_offset = { x = 13 y = 80 }
+		custom_close_up_scale = 1.30
+		#custom_mid_close_up_position_offset = { x = 0 y = -133 }
+		#custom_mid_close_up_scale = 0.75
+	}
+
+	humanoid_hp_14_female	= {	entity = "humanoid_hp_15_entity"	clothes_selector = "humanoid_hp_14_clothes" attachment_selector = "humanoid_hp_15_hair"	greeting_sound = "humanoid_portrait_j_male"
+		character_textures = {
+			"gfx/models/portraits/humanoid/humanoid_hp_15_green.dds"
+			"gfx/models/portraits/humanoid/humanoid_hp_15_purple.dds"
+			"gfx/models/portraits/humanoid/humanoid_hp_15_white.dds"
+		}
+		custom_attachment_label = "HAIR_STYLE"
+
+		custom_close_up_position_offset = { x = 13 y = 80 }
+		custom_close_up_scale = 1.30
+		#custom_mid_close_up_position_offset = { x = 0 y = -133 }
+		#custom_mid_close_up_scale = 0.75
+	}
+
+	humanoid_elf_male = {	entity = "humanoid_elf_02_entity"	clothes_selector = "humanoid_elf_02_clothes" attachment_selector = "no_texture"	greeting_sound = "humanoid_portrait_j_male"
+		character_textures = {
+			"gfx/models/portraits/humanoid/humanoid_elf_02_portrait_blue.dds"
+			"gfx/models/portraits/humanoid/humanoid_elf_02_portrait_brown_01.dds"
+			"gfx/models/portraits/humanoid/humanoid_elf_02_portrait_brown_02.dds"
+			"gfx/models/portraits/humanoid/humanoid_elf_02_portrait_brown_03.dds"
+			"gfx/models/portraits/humanoid/humanoid_elf_02_portrait_pale_01.dds"
+			"gfx/models/portraits/humanoid/humanoid_elf_02_portrait_pale_02.dds"
+			"gfx/models/portraits/humanoid/humanoid_elf_02_portrait_purple.dds"
+		}
+		#custom_attachment_label = "HAIR_STYLE"
+
+		custom_close_up_position_offset = { x = -40 y = 80 }
+		custom_close_up_scale = 1.3
+		custom_mid_close_up_position_offset = { x = 0 y = -167 }
+		custom_mid_close_up_scale = 0.75
+	}
+
+	humanoid_elf_female = {	entity = "humanoid_elf_01_entity"	clothes_selector = "humanoid_elf_01_clothes" attachment_selector = "no_texture"	greeting_sound = "humanoid_portrait_j_female"
+		character_textures = {
+			"gfx/models/portraits/humanoid/humanoid_elf_01_portrait_blue.dds"
+			"gfx/models/portraits/humanoid/humanoid_elf_01_portrait_brown_01.dds"
+			"gfx/models/portraits/humanoid/humanoid_elf_01_portrait_brown_02.dds"
+			"gfx/models/portraits/humanoid/humanoid_elf_01_portrait_brown_03.dds"
+			"gfx/models/portraits/humanoid/humanoid_elf_01_portrait_pale_01.dds"
+			"gfx/models/portraits/humanoid/humanoid_elf_01_portrait_pale_02.dds"
+			"gfx/models/portraits/humanoid/humanoid_elf_01_portrait_purple.dds"
+		}
+		custom_attachment_label = "HAIR_STYLE"
+
+		custom_close_up_position_offset = { x = -40 y = 80 }
+		custom_close_up_scale = 1.30
+		custom_mid_close_up_position_offset = { x = 0 y = -167 }
+		custom_mid_close_up_scale = 0.75
+	}
+
+}
+
+
+portrait_groups = {
+	humanoid_hp_01 {
+		default = humanoid_hp_01
+		game_setup = { #will run with a limited country scope. species and government is set but the country does not actually exist
+			add = {
+				trigger = {
+					ruler = {
+						OR = {
+							gender = male
+							gender = indeterminable
+						}
+					}
+				}
+				portraits = {
+					humanoid_hp_01
+				}
+			}
+			add = {
+				trigger = {
+					ruler = {
+						OR = {
+							gender = female
+							gender = indeterminable
+						}
+					}
+				}
+				portraits = {
+					humanoid_hp_01_female
+				}
+			}
+
+		}
+
+		#species scope
+		species = { #generic portrait for a species
+			add = {
+				trigger = {
+					exists = species
+					NOT = { species = { species_gender = female } }
+				}
+				portraits = {
+					humanoid_hp_01
+				}
+			}
+			add = {
+				trigger = {
+					exists = species
+					NOT = { species = { species_gender = male } }
+				}
+				portraits = {
+					humanoid_hp_01_female
+				}
+			}
+		}
+
+		#pop scope
+		pop = { #for a specific pop
+			add = {
+				trigger = {
+					NOT = { species = { species_gender = female } }
+				}
+				portraits = {
+					humanoid_hp_01
+				}
+			}
+			add = {
+				trigger = {
+					NOT = { species = { species_gender = male } }
+				}
+				portraits = {
+					humanoid_hp_01_female
+				}
+			}
+		}
+
+		leader = {
+			add = {
+				trigger = {
+					OR = {
+						gender = male
+						gender = indeterminable
+					}
+				}
+				portraits = {
+					humanoid_hp_01
+				}
+			}
+			add = {
+				trigger = {
+					OR = {
+						gender = female
+						gender = indeterminable
+					}
+				}
+				portraits = {
+					humanoid_hp_01_female
+				}
+			}
+		}
+
+		ruler = {
+			add = {
+				trigger = {
+					OR = {
+						gender = male
+						gender = indeterminable
+					}
+				}
+				portraits = {
+					humanoid_hp_01
+				}
+			}
+			add = {
+				trigger = {
+					OR = {
+						gender = female
+						gender = indeterminable
+					}
+				}
+				portraits = {
+					humanoid_hp_01_female
+				}
+			}
+		}
+	}
+}
+
+portrait_groups = {
+	humanoid_hp_02 {
+		default = humanoid_hp_02
+		game_setup = { #will run with a limited country scope. species and government is set but the country does not actually exist
+			add = {
+				trigger = {
+					ruler = {
+						OR = {
+							gender = male
+							gender = indeterminable
+						}
+					}
+				}
+				portraits = {
+					humanoid_hp_02
+				}
+			}
+			add = {
+				trigger = {
+					ruler = {
+						OR = {
+							gender = female
+							gender = indeterminable
+						}
+					}
+				}
+				portraits = {
+					humanoid_hp_02_female
+				}
+			}
+
+		}
+
+		#species scope
+		species = { #generic portrait for a species
+			add = {
+				trigger = {
+					exists = species
+					NOT = { species = { species_gender = female } }
+				}
+				portraits = {
+					humanoid_hp_02
+				}
+			}
+			add = {
+				trigger = {
+					exists = species
+					NOT = { species = { species_gender = male } }
+				}
+				portraits = {
+					humanoid_hp_02_female
+				}
+			}
+		}
+
+		#pop scope
+		pop = { #for a specific pop
+			add = {
+				trigger = {
+					NOT = { species = { species_gender = female } }
+				}
+				portraits = {
+					humanoid_hp_02
+				}
+			}
+			add = {
+				trigger = {
+					NOT = { species = { species_gender = male } }
+				}
+				portraits = {
+					humanoid_hp_02_female
+				}
+			}
+		}
+
+		leader = {
+			add = {
+				trigger = {
+					OR = {
+						gender = male
+						gender = indeterminable
+					}
+				}
+				portraits = {
+					humanoid_hp_02
+				}
+			}
+			add = {
+				trigger = {
+					OR = {
+						gender = female
+						gender = indeterminable
+					}
+				}
+				portraits = {
+					humanoid_hp_02_female
+				}
+			}
+		}
+
+		ruler = {
+			add = {
+				trigger = {
+					OR = {
+						gender = male
+						gender = indeterminable
+					}
+				}
+				portraits = {
+					humanoid_hp_02
+				}
+			}
+			add = {
+				trigger = {
+					OR = {
+						gender = female
+						gender = indeterminable
+					}
+				}
+				portraits = {
+					humanoid_hp_02_female
+				}
+			}
+		}
+	}
+}
+
+portrait_groups = {
+	humanoid_hp_06 {
+		default = humanoid_hp_06
+		game_setup = { #will run with a limited country scope. species and government is set but the country does not actually exist
+			add = {
+				trigger = {
+					ruler = {
+						OR = {
+							gender = male
+							gender = indeterminable
+						}
+					}
+				}
+				portraits = {
+					humanoid_hp_06
+				}
+			}
+			add = {
+				trigger = {
+					ruler = {
+						OR = {
+							gender = female
+							gender = indeterminable
+						}
+					}
+				}
+				portraits = {
+					humanoid_hp_06_female
+				}
+			}
+
+		}
+
+		#species scope
+		species = { #generic portrait for a species
+			add = {
+				trigger = {
+					exists = species
+					NOT = { species = { species_gender = female } }
+				}
+				portraits = {
+					humanoid_hp_06
+				}
+			}
+			add = {
+				trigger = {
+					exists = species
+					NOT = { species = { species_gender = male } }
+				}
+				portraits = {
+					humanoid_hp_06_female
+				}
+			}
+		}
+
+		#pop scope
+		pop = { #for a specific pop
+			add = {
+				trigger = {
+					NOT = { species = { species_gender = female } }
+				}
+				portraits = {
+					humanoid_hp_06
+				}
+			}
+			add = {
+				trigger = {
+					NOT = { species = { species_gender = male } }
+				}
+				portraits = {
+					humanoid_hp_06_female
+				}
+			}
+		}
+
+		leader = {
+			add = {
+				trigger = {
+					OR = {
+						gender = male
+						gender = indeterminable
+					}
+				}
+				portraits = {
+					humanoid_hp_06
+				}
+			}
+			add = {
+				trigger = {
+					OR = {
+						gender = female
+						gender = indeterminable
+					}
+				}
+				portraits = {
+					humanoid_hp_06_female
+				}
+			}
+		}
+
+		ruler = {
+			add = {
+				trigger = {
+					OR = {
+						gender = male
+						gender = indeterminable
+					}
+				}
+				portraits = {
+					humanoid_hp_06
+				}
+			}
+			add = {
+				trigger = {
+					OR = {
+						gender = female
+						gender = indeterminable
+					}
+				}
+				portraits = {
+					humanoid_hp_06_female
+				}
+			}
+		}
+	}
+}
+
+portrait_groups = {
+	humanoid_hp_07 {
+		default = humanoid_hp_07
+		game_setup = { #will run with a limited country scope. species and government is set but the country does not actually exist
+			add = {
+				trigger = {
+					ruler = {
+						OR = {
+							gender = male
+							gender = indeterminable
+						}
+					}
+				}
+				portraits = {
+					humanoid_hp_07
+				}
+			}
+			add = {
+				trigger = {
+					ruler = {
+						OR = {
+							gender = female
+							gender = indeterminable
+						}
+					}
+				}
+				portraits = {
+					humanoid_hp_07_female
+				}
+			}
+
+		}
+
+		#species scope
+		species = { #generic portrait for a species
+			add = {
+				trigger = {
+					exists = species
+					NOT = { species = { species_gender = female } }
+				}
+				portraits = {
+					humanoid_hp_07
+				}
+			}
+			add = {
+				trigger = {
+					exists = species
+					NOT = { species = { species_gender = male } }
+				}
+				portraits = {
+					humanoid_hp_07_female
+				}
+			}
+		}
+
+		#pop scope
+		pop = { #for a specific pop
+			add = {
+				trigger = {
+					NOT = { species = { species_gender = female } }
+				}
+				portraits = {
+					humanoid_hp_07
+				}
+			}
+			add = {
+				trigger = {
+					NOT = { species = { species_gender = male } }
+				}
+				portraits = {
+					humanoid_hp_07_female
+				}
+			}
+		}
+
+		leader = {
+			add = {
+				trigger = {
+					OR = {
+						gender = male
+						gender = indeterminable
+					}
+				}
+				portraits = {
+					humanoid_hp_07
+				}
+			}
+			add = {
+				trigger = {
+					OR = {
+						gender = female
+						gender = indeterminable
+					}
+				}
+				portraits = {
+					humanoid_hp_07_female
+				}
+			}
+		}
+
+		ruler = {
+			add = {
+				trigger = {
+					OR = {
+						gender = male
+						gender = indeterminable
+					}
+				}
+				portraits = {
+					humanoid_hp_07
+				}
+			}
+			add = {
+				trigger = {
+					OR = {
+						gender = female
+						gender = indeterminable
+					}
+				}
+				portraits = {
+					humanoid_hp_07_female
+				}
+			}
+		}
+	}
+}
+
+portrait_groups = {
+	humanoid_hp_08 {
+		default = humanoid_hp_08
+		game_setup = { #will run with a limited country scope. species and government is set but the country does not actually exist
+			add = {
+				trigger = {
+					ruler = {
+						OR = {
+							gender = male
+							gender = indeterminable
+						}
+					}
+				}
+				portraits = {
+					humanoid_hp_08
+				}
+			}
+			add = {
+				trigger = {
+					ruler = {
+						OR = {
+							gender = female
+							gender = indeterminable
+						}
+					}
+				}
+				portraits = {
+					humanoid_hp_08_female
+				}
+			}
+
+		}
+
+		#species scope
+		species = { #generic portrait for a species
+			add = {
+				trigger = {
+					exists = species
+					NOT = { species = { species_gender = female } }
+				}
+				portraits = {
+					humanoid_hp_08
+				}
+			}
+			add = {
+				trigger = {
+					exists = species
+					NOT = { species = { species_gender = male } }
+				}
+				portraits = {
+					humanoid_hp_08_female
+				}
+			}
+		}
+
+		#pop scope
+		pop = { #for a specific pop
+			add = {
+				trigger = {
+					NOT = { species = { species_gender = female } }
+				}
+				portraits = {
+					humanoid_hp_08
+				}
+			}
+			add = {
+				trigger = {
+					NOT = { species = { species_gender = male } }
+				}
+				portraits = {
+					humanoid_hp_08_female
+				}
+			}
+		}
+
+		leader = {
+			add = {
+				trigger = {
+					OR = {
+						gender = male
+						gender = indeterminable
+					}
+				}
+				portraits = {
+					humanoid_hp_08
+				}
+			}
+			add = {
+				trigger = {
+					OR = {
+						gender = female
+						gender = indeterminable
+					}
+				}
+				portraits = {
+					humanoid_hp_08_female
+				}
+			}
+		}
+
+		ruler = {
+			add = {
+				trigger = {
+					OR = {
+						gender = male
+						gender = indeterminable
+					}
+				}
+				portraits = {
+					humanoid_hp_08
+				}
+			}
+			add = {
+				trigger = {
+					OR = {
+						gender = female
+						gender = indeterminable
+					}
+				}
+				portraits = {
+					humanoid_hp_08_female
+				}
+			}
+		}
+	}
+}
+
+portrait_groups = {
+	humanoid_hp_09 {
+		default = humanoid_hp_09
+		game_setup = { #will run with a limited country scope. species and government is set but the country does not actually exist
+			add = {
+				trigger = {
+					ruler = {
+						OR = {
+							gender = male
+							gender = indeterminable
+						}
+					}
+				}
+				portraits = {
+					humanoid_hp_09
+				}
+			}
+			add = {
+				trigger = {
+					ruler = {
+						OR = {
+							gender = female
+							gender = indeterminable
+						}
+					}
+				}
+				portraits = {
+					humanoid_hp_09_female
+				}
+			}
+
+		}
+
+		#species scope
+		species = { #generic portrait for a species
+			add = {
+				trigger = {
+					exists = species
+					NOT = { species = { species_gender = female } }
+				}
+				portraits = {
+					humanoid_hp_09
+				}
+			}
+			add = {
+				trigger = {
+					exists = species
+					NOT = { species = { species_gender = male } }
+				}
+				portraits = {
+					humanoid_hp_09_female
+				}
+			}
+		}
+
+		#pop scope
+		pop = { #for a specific pop
+			add = {
+				trigger = {
+					NOT = { species = { species_gender = female } }
+				}
+				portraits = {
+					humanoid_hp_09
+				}
+			}
+			add = {
+				trigger = {
+					NOT = { species = { species_gender = male } }
+				}
+				portraits = {
+					humanoid_hp_09_female
+				}
+			}
+		}
+
+		leader = {
+			add = {
+				trigger = {
+					OR = {
+						gender = male
+						gender = indeterminable
+					}
+				}
+				portraits = {
+					humanoid_hp_09
+				}
+			}
+			add = {
+				trigger = {
+					OR = {
+						gender = female
+						gender = indeterminable
+					}
+				}
+				portraits = {
+					humanoid_hp_09_female
+				}
+			}
+		}
+
+		ruler = {
+			add = {
+				trigger = {
+					OR = {
+						gender = male
+						gender = indeterminable
+					}
+				}
+				portraits = {
+					humanoid_hp_09
+				}
+			}
+			add = {
+				trigger = {
+					OR = {
+						gender = female
+						gender = indeterminable
+					}
+				}
+				portraits = {
+					humanoid_hp_09_female
+				}
+			}
+		}
+	}
+}
+
+portrait_groups = {
+	humanoid_hp_10 {
+		default = humanoid_hp_10
+		game_setup = { #will run with a limited country scope. species and government is set but the country does not actually exist
+			add = {
+				trigger = {
+					ruler = {
+						OR = {
+							gender = male
+							gender = indeterminable
+						}
+					}
+				}
+				portraits = {
+					humanoid_hp_10
+				}
+			}
+			add = {
+				trigger = {
+					ruler = {
+						OR = {
+							gender = female
+							gender = indeterminable
+						}
+					}
+				}
+				portraits = {
+					humanoid_hp_10_female
+				}
+			}
+
+		}
+
+		#species scope
+		species = { #generic portrait for a species
+			add = {
+				trigger = {
+					exists = species
+					NOT = { species = { species_gender = female } }
+				}
+				portraits = {
+					humanoid_hp_10
+				}
+			}
+			add = {
+				trigger = {
+					exists = species
+					NOT = { species = { species_gender = male } }
+				}
+				portraits = {
+					humanoid_hp_10_female
+				}
+			}
+		}
+
+		#pop scope
+		pop = { #for a specific pop
+			add = {
+				trigger = {
+					NOT = { species = { species_gender = female } }
+				}
+				portraits = {
+					humanoid_hp_10
+				}
+			}
+			add = {
+				trigger = {
+					NOT = { species = { species_gender = male } }
+				}
+				portraits = {
+					humanoid_hp_10_female
+				}
+			}
+		}
+
+		leader = {
+			add = {
+				trigger = {
+					OR = {
+						gender = male
+						gender = indeterminable
+					}
+				}
+				portraits = {
+					humanoid_hp_10
+				}
+			}
+			add = {
+				trigger = {
+					OR = {
+						gender = female
+						gender = indeterminable
+					}
+				}
+				portraits = {
+					humanoid_hp_10_female
+				}
+			}
+		}
+
+		ruler = {
+			add = {
+				trigger = {
+					OR = {
+						gender = male
+						gender = indeterminable
+					}
+				}
+				portraits = {
+					humanoid_hp_10
+				}
+			}
+			add = {
+				trigger = {
+					OR = {
+						gender = female
+						gender = indeterminable
+					}
+				}
+				portraits = {
+					humanoid_hp_10_female
+				}
+			}
+		}
+	}
+}
+
+portrait_groups = {
+	humanoid_hp_11 {
+		default = humanoid_hp_11
+		game_setup = { #will run with a limited country scope. species and government is set but the country does not actually exist
+			add = {
+				trigger = {
+					ruler = {
+						OR = {
+							gender = male
+							gender = indeterminable
+						}
+					}
+				}
+				portraits = {
+					humanoid_hp_11
+				}
+			}
+			add = {
+				trigger = {
+					ruler = {
+						OR = {
+							gender = female
+							gender = indeterminable
+						}
+					}
+				}
+				portraits = {
+					humanoid_hp_11_female
+				}
+			}
+
+		}
+
+		#species scope
+		species = { #generic portrait for a species
+			add = {
+				trigger = {
+					exists = species
+					NOT = { species = { species_gender = female } }
+				}
+				portraits = {
+					humanoid_hp_11
+				}
+			}
+			add = {
+				trigger = {
+					exists = species
+					NOT = { species = { species_gender = male } }
+				}
+				portraits = {
+					humanoid_hp_11_female
+				}
+			}
+		}
+
+		#pop scope
+		pop = { #for a specific pop
+			add = {
+				trigger = {
+					NOT = { species = { species_gender = female } }
+				}
+				portraits = {
+					humanoid_hp_11
+				}
+			}
+			add = {
+				trigger = {
+					NOT = { species = { species_gender = male } }
+				}
+				portraits = {
+					humanoid_hp_11_female
+				}
+			}
+		}
+
+		leader = {
+			add = {
+				trigger = {
+					OR = {
+						gender = male
+						gender = indeterminable
+					}
+				}
+				portraits = {
+					humanoid_hp_11
+				}
+			}
+			add = {
+				trigger = {
+					OR = {
+						gender = female
+						gender = indeterminable
+					}
+				}
+				portraits = {
+					humanoid_hp_11_female
+				}
+			}
+		}
+
+		ruler = {
+			add = {
+				trigger = {
+					OR = {
+						gender = male
+						gender = indeterminable
+					}
+				}
+				portraits = {
+					humanoid_hp_11
+				}
+			}
+			add = {
+				trigger = {
+					OR = {
+						gender = female
+						gender = indeterminable
+					}
+				}
+				portraits = {
+					humanoid_hp_11_female
+				}
+			}
+		}
+	}
+}
+
+portrait_groups = {
+	humanoid_hp_12 {
+		default = humanoid_hp_12
+		game_setup = { #will run with a limited country scope. species and government is set but the country does not actually exist
+			add = {
+				trigger = {
+					ruler = {
+						OR = {
+							gender = male
+							gender = indeterminable
+						}
+					}
+				}
+				portraits = {
+					humanoid_hp_12
+				}
+			}
+			add = {
+				trigger = {
+					ruler = {
+						OR = {
+							gender = female
+							gender = indeterminable
+						}
+					}
+				}
+				portraits = {
+					humanoid_hp_12_female
+				}
+			}
+
+		}
+
+		#species scope
+		species = { #generic portrait for a species
+			add = {
+				trigger = {
+					exists = species
+					NOT = { species = { species_gender = female } }
+				}
+				portraits = {
+					humanoid_hp_12
+				}
+			}
+			add = {
+				trigger = {
+					exists = species
+					NOT = { species = { species_gender = male } }
+				}
+				portraits = {
+					humanoid_hp_12_female
+				}
+			}
+		}
+
+		#pop scope
+		pop = { #for a specific pop
+			add = {
+				trigger = {
+					NOT = { species = { species_gender = female } }
+				}
+				portraits = {
+					humanoid_hp_12
+				}
+			}
+			add = {
+				trigger = {
+					NOT = { species = { species_gender = male } }
+				}
+				portraits = {
+					humanoid_hp_12_female
+				}
+			}
+		}
+
+		leader = {
+			add = {
+				trigger = {
+					OR = {
+						gender = male
+						gender = indeterminable
+					}
+				}
+				portraits = {
+					humanoid_hp_12
+				}
+			}
+			add = {
+				trigger = {
+					OR = {
+						gender = female
+						gender = indeterminable
+					}
+				}
+				portraits = {
+					humanoid_hp_12_female
+				}
+			}
+		}
+
+		ruler = {
+			add = {
+				trigger = {
+					OR = {
+						gender = male
+						gender = indeterminable
+					}
+				}
+				portraits = {
+					humanoid_hp_12
+				}
+			}
+			add = {
+				trigger = {
+					OR = {
+						gender = female
+						gender = indeterminable
+					}
+				}
+				portraits = {
+					humanoid_hp_12_female
+				}
+			}
+		}
+	}
+}
+
+portrait_groups = {
+	humanoid_hp_13 {
+		default = humanoid_hp_13
+		game_setup = { #will run with a limited country scope. species and government is set but the country does not actually exist
+			add = {
+				trigger = {
+					ruler = {
+						OR = {
+							gender = male
+							gender = indeterminable
+						}
+					}
+				}
+				portraits = {
+					humanoid_hp_13
+				}
+			}
+			add = {
+				trigger = {
+					ruler = {
+						OR = {
+							gender = female
+							gender = indeterminable
+						}
+					}
+				}
+				portraits = {
+					humanoid_hp_13_female
+				}
+			}
+
+		}
+
+		#species scope
+		species = { #generic portrait for a species
+			add = {
+				trigger = {
+					exists = species
+					NOT = { species = { species_gender = female } }
+				}
+				portraits = {
+					humanoid_hp_13
+				}
+			}
+			add = {
+				trigger = {
+					exists = species
+					NOT = { species = { species_gender = male } }
+				}
+				portraits = {
+					humanoid_hp_13_female
+				}
+			}
+		}
+
+		#pop scope
+		pop = { #for a specific pop
+			add = {
+				trigger = {
+					NOT = { species = { species_gender = female } }
+				}
+				portraits = {
+					humanoid_hp_13
+				}
+			}
+			add = {
+				trigger = {
+					NOT = { species = { species_gender = male } }
+				}
+				portraits = {
+					humanoid_hp_13_female
+				}
+			}
+		}
+
+		leader = {
+			add = {
+				trigger = {
+					OR = {
+						gender = male
+						gender = indeterminable
+					}
+				}
+				portraits = {
+					humanoid_hp_13
+				}
+			}
+			add = {
+				trigger = {
+					OR = {
+						gender = female
+						gender = indeterminable
+					}
+				}
+				portraits = {
+					humanoid_hp_13_female
+				}
+			}
+		}
+
+		ruler = {
+			add = {
+				trigger = {
+					OR = {
+						gender = male
+						gender = indeterminable
+					}
+				}
+				portraits = {
+					humanoid_hp_13
+				}
+			}
+			add = {
+				trigger = {
+					OR = {
+						gender = female
+						gender = indeterminable
+					}
+				}
+				portraits = {
+					humanoid_hp_13_female
+				}
+			}
+		}
+	}
+}
+
+portrait_groups = {
+	humanoid_hp_14 = {
+		default = humanoid_hp_14_male
+		game_setup = { #will run with a limited country scope. species and government is set but the country does not actually exist
+			add = {
+				trigger = {
+					ruler = {
+						OR = {
+							gender = male
+							gender = indeterminable
+						}
+					}
+				}
+				portraits = {
+					humanoid_hp_14_male
+				}
+			}
+			add = {
+				trigger = {
+					ruler = {
+						OR = {
+							gender = female
+							gender = indeterminable
+						}
+					}
+				}
+				portraits = {
+					humanoid_hp_14_female
+				}
+			}
+
+		}
+
+		#species scope
+		species = { #generic portrait for a species
+			add = {
+				trigger = {
+					exists = species
+					NOT = { species = { species_gender = female } }
+				}
+				portraits = {
+					humanoid_hp_14_male
+				}
+			}
+			add = {
+				trigger = {
+					exists = species
+					NOT = { species = { species_gender = male } }
+				}
+				portraits = {
+					humanoid_hp_14_female
+				}
+			}
+		}
+
+		#pop scope
+		pop = { #for a specific pop
+			add = {
+				trigger = {
+					NOT = { species = { species_gender = female } }
+				}
+				portraits = {
+					humanoid_hp_14_male
+				}
+			}
+			add = {
+				trigger = {
+					NOT = { species = { species_gender = male } }
+				}
+				portraits = {
+					humanoid_hp_14_female
+				}
+			}
+		}
+
+		leader = {
+			add = {
+				trigger = {
+					OR = {
+						gender = male
+						gender = indeterminable
+					}
+				}
+				portraits = {
+					humanoid_hp_14_male
+				}
+			}
+			add = {
+				trigger = {
+					OR = {
+						gender = female
+						gender = indeterminable
+					}
+				}
+				portraits = {
+					humanoid_hp_14_female
+				}
+			}
+		}
+
+		ruler = {
+			add = {
+				trigger = {
+					OR = {
+						gender = male
+						gender = indeterminable
+					}
+				}
+				portraits = {
+					humanoid_hp_14_male
+				}
+			}
+			add = {
+				trigger = {
+					OR = {
+						gender = female
+						gender = indeterminable
+					}
+				}
+				portraits = {
+					humanoid_hp_14_female
+				}
+			}
+		}
+	}
+}
+
+portrait_groups = {
+	humanoid_hp_12 {
+		default = humanoid_hp_12
+		game_setup = { #will run with a limited country scope. species and government is set but the country does not actually exist
+			add = {
+				trigger = {
+					ruler = {
+						OR = {
+							gender = male
+							gender = indeterminable
+						}
+					}
+				}
+				portraits = {
+					humanoid_hp_12
+				}
+			}
+			add = {
+				trigger = {
+					ruler = {
+						OR = {
+							gender = female
+							gender = indeterminable
+						}
+					}
+				}
+				portraits = {
+					humanoid_hp_12_female
+				}
+			}
+
+		}
+
+		#species scope
+		species = { #generic portrait for a species
+			add = {
+				trigger = {
+					exists = species
+					NOT = { species = { species_gender = female } }
+				}
+				portraits = {
+					humanoid_hp_12
+				}
+			}
+			add = {
+				trigger = {
+					exists = species
+					NOT = { species = { species_gender = male } }
+				}
+				portraits = {
+					humanoid_hp_12_female
+				}
+			}
+		}
+
+		#pop scope
+		pop = { #for a specific pop
+			add = {
+				trigger = {
+					NOT = { species = { species_gender = female } }
+				}
+				portraits = {
+					humanoid_hp_12
+				}
+			}
+			add = {
+				trigger = {
+					NOT = { species = { species_gender = male } }
+				}
+				portraits = {
+					humanoid_hp_12_female
+				}
+			}
+		}
+
+		leader = {
+			add = {
+				trigger = {
+					OR = {
+						gender = male
+						gender = indeterminable
+					}
+				}
+				portraits = {
+					humanoid_hp_12
+				}
+			}
+			add = {
+				trigger = {
+					OR = {
+						gender = female
+						gender = indeterminable
+					}
+				}
+				portraits = {
+					humanoid_hp_12_female
+				}
+			}
+		}
+
+		ruler = {
+			add = {
+				trigger = {
+					OR = {
+						gender = male
+						gender = indeterminable
+					}
+				}
+				portraits = {
+					humanoid_hp_12
+				}
+			}
+			add = {
+				trigger = {
+					OR = {
+						gender = female
+						gender = indeterminable
+					}
+				}
+				portraits = {
+					humanoid_hp_12_female
+				}
+			}
+		}
+	}
+}
+
+portrait_groups = {
+	humanoid_hp_13 {
+		default = humanoid_hp_13
+		game_setup = { #will run with a limited country scope. species and government is set but the country does not actually exist
+			add = {
+				trigger = {
+					ruler = {
+						OR = {
+							gender = male
+							gender = indeterminable
+						}
+					}
+				}
+				portraits = {
+					humanoid_hp_13
+				}
+			}
+			add = {
+				trigger = {
+					ruler = {
+						OR = {
+							gender = female
+							gender = indeterminable
+						}
+					}
+				}
+				portraits = {
+					humanoid_hp_13_female
+				}
+			}
+
+		}
+
+		#species scope
+		species = { #generic portrait for a species
+			add = {
+				trigger = {
+					exists = species
+					NOT = { species = { species_gender = female } }
+				}
+				portraits = {
+					humanoid_hp_13
+				}
+			}
+			add = {
+				trigger = {
+					exists = species
+					NOT = { species = { species_gender = male } }
+				}
+				portraits = {
+					humanoid_hp_13_female
+				}
+			}
+		}
+
+		#pop scope
+		pop = { #for a specific pop
+			add = {
+				trigger = {
+					NOT = { species = { species_gender = female } }
+				}
+				portraits = {
+					humanoid_hp_13
+				}
+			}
+			add = {
+				trigger = {
+					NOT = { species = { species_gender = male } }
+				}
+				portraits = {
+					humanoid_hp_13_female
+				}
+			}
+		}
+
+		leader = {
+			add = {
+				trigger = {
+					OR = {
+						gender = male
+						gender = indeterminable
+					}
+				}
+				portraits = {
+					humanoid_hp_13
+				}
+			}
+			add = {
+				trigger = {
+					OR = {
+						gender = female
+						gender = indeterminable
+					}
+				}
+				portraits = {
+					humanoid_hp_13_female
+				}
+			}
+		}
+
+		ruler = {
+			add = {
+				trigger = {
+					OR = {
+						gender = male
+						gender = indeterminable
+					}
+				}
+				portraits = {
+					humanoid_hp_13
+				}
+			}
+			add = {
+				trigger = {
+					OR = {
+						gender = female
+						gender = indeterminable
+					}
+				}
+				portraits = {
+					humanoid_hp_13_female
+				}
+			}
+		}
+	}
+}
+
+#Human Elf
+
+portrait_groups = {
+	humanoid_elf = {
+		default = humanoid_elf_male
+		game_setup = { #will run with a limited country scope. species and government is set but the country does not actually exist
+			add = {
+				trigger = {
+					ruler = {
+						OR = {
+							gender = male
+							gender = indeterminable
+						}
+					}
+				}
+				portraits = {
+					humanoid_elf_male
+				}
+			}
+			add = {
+				trigger = {
+					ruler = {
+						OR = {
+							gender = female
+							gender = indeterminable
+						}
+					}
+				}
+				portraits = {
+					humanoid_elf_female
+				}
+			}
+
+		}
+
+		#species scope
+		species = { #generic portrait for a species
+			add = {
+				trigger = {
+					exists = species
+					NOT = { species = { species_gender = female } }
+				}
+				portraits = {
+					humanoid_elf_male
+				}
+			}
+			add = {
+				trigger = {
+					exists = species
+					NOT = { species = { species_gender = male } }
+				}
+				portraits = {
+					humanoid_elf_female
+				}
+			}
+		}
+
+		#pop scope
+		pop = { #for a specific pop
+			add = {
+				trigger = {
+					NOT = { species = { species_gender = female } }
+				}
+				portraits = {
+					humanoid_elf_male
+				}
+			}
+			add = {
+				trigger = {
+					NOT = { species = { species_gender = male } }
+				}
+				portraits = {
+					humanoid_elf_female
+				}
+			}
+		}
+
+		leader = {
+			add = {
+				trigger = {
+					OR = {
+						gender = male
+						gender = indeterminable
+					}
+				}
+				portraits = {
+					humanoid_elf_male
+				}
+			}
+			add = {
+				trigger = {
+					OR = {
+						gender = female
+						gender = indeterminable
+					}
+				}
+				portraits = {
+					humanoid_elf_female
+				}
+			}
+		}
+
+		ruler = {
+			add = {
+				trigger = {
+					OR = {
+						gender = male
+						gender = indeterminable
+					}
+				}
+				portraits = {
+					humanoid_elf_male
+				}
+			}
+			add = {
+				trigger = {
+					OR = {
+						gender = female
+						gender = indeterminable
+					}
+				}
+				portraits = {
+					humanoid_elf_female
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,1114 @@
+##############################################################
+###	PORTRAITS SETTINGS
+###
+### Which portraits are used is set in
+### common\species_classes\00_species_classes.txt
+###
+###	This file configures how portraits and planet backgrounds are built.
+###	Default position orientation is lower left.
+##############################################################
+
+############################
+portraits = {
+
+	# aquatic
+	aqu1_f = {	entity = "portrait_aquatic_01_entity" clothes_selector = "no_texture" attachment_selector = "no_texture"	greeting_sound = "aqu_portrait_01"
+		character_textures = {
+			"gfx/models/portraits/aquatic/aquatic_01_portrait_blue.dds"
+			"gfx/models/portraits/aquatic/aquatic_01_portrait_teal.dds"
+		}
+	}
+	aqu1_m = {	entity = "portrait_aquatic_01_entity" clothes_selector = "no_texture" attachment_selector = "no_texture"	greeting_sound = "aqu_portrait_01"
+	character_textures = {
+		"gfx/models/portraits/aquatic/aquatic_01_portrait_purple.dds"
+		"gfx/models/portraits/aquatic/aquatic_01_portrait_red.dds"
+	}
+}
+	aqu2_f = {	entity = "portrait_aquatic_02_entity" clothes_selector = "no_texture" attachment_selector = "no_texture"	greeting_sound = "aqu_portrait_02"
+		character_textures = {
+			"gfx/models/portraits/aquatic/aquatic_02_portrait_orange.dds"
+			"gfx/models/portraits/aquatic/aquatic_02_portrait_teal.dds"
+		}
+	}
+	aqu2_m = {	entity = "portrait_aquatic_02_entity" clothes_selector = "no_texture" attachment_selector = "no_texture"	greeting_sound = "aqu_portrait_02"
+	character_textures = {
+		"gfx/models/portraits/aquatic/aquatic_02_portrait_gold.dds"
+		"gfx/models/portraits/aquatic/aquatic_02_portrait_red.dds"
+	}
+}
+	aqu3 = {	entity = "portrait_aquatic_03_entity" clothes_selector = "no_texture" attachment_selector = "no_texture"	greeting_sound = "aqu_portrait_03"
+		character_textures = {
+			"gfx/models/portraits/aquatic/aquatic_03_portrait_red.dds"
+			"gfx/models/portraits/aquatic/aquatic_03_portrait_purple.dds"
+			"gfx/models/portraits/aquatic/aquatic_03_portrait_brown.dds"
+			"gfx/models/portraits/aquatic/aquatic_03_portrait_white.dds"
+		}
+	}
+	aqu4_f = {	entity = "portrait_aquatic_04_entity" clothes_selector = "aquatic_clothes_01" attachment_selector = "no_texture"	greeting_sound = "aqu_portrait_04"
+		character_textures = {
+			"gfx/models/portraits/aquatic/aquatic_04_portrait_gray_02.dds"
+			"gfx/models/portraits/aquatic/aquatic_04_portrait_orange_02.dds"
+			"gfx/models/portraits/aquatic/aquatic_04_portrait_teal_02.dds"
+			"gfx/models/portraits/aquatic/aquatic_04_portrait_white_02.dds"
+		}
+	}
+	aqu4_m = {	entity = "portrait_aquatic_04_entity" clothes_selector = "aquatic_clothes_01" attachment_selector = "no_texture"	greeting_sound = "aqu_portrait_04"
+	character_textures = {
+		"gfx/models/portraits/aquatic/aquatic_04_portrait_gray_01.dds"
+		"gfx/models/portraits/aquatic/aquatic_04_portrait_orange_01.dds"
+		"gfx/models/portraits/aquatic/aquatic_04_portrait_teal_01.dds"
+		"gfx/models/portraits/aquatic/aquatic_04_portrait_white_01.dds"
+	}
+}
+	
+	aqu5_f = {	entity = "portrait_aquatic_05_entity" clothes_selector = "aquatic_clothes_02" attachment_selector = "no_texture"	greeting_sound = "aqu_portrait_05"
+		character_textures = {
+            "gfx/models/portraits/aquatic/aquatic_05_portrait_green_02.dds"
+            "gfx/models/portraits/aquatic/aquatic_05_portrait_brown_02.dds"
+            "gfx/models/portraits/aquatic/aquatic_05_portrait_blue_02.dds"
+            "gfx/models/portraits/aquatic/aquatic_05_portrait_purple_02.dds"
+		}
+	}
+
+	aqu5_m = {	entity = "portrait_aquatic_05_entity" clothes_selector = "aquatic_clothes_02" attachment_selector = "no_texture"	greeting_sound = "aqu_portrait_05"
+		character_textures = {
+            "gfx/models/portraits/aquatic/aquatic_05_portrait_green_01.dds"
+            "gfx/models/portraits/aquatic/aquatic_05_portrait_brown_01.dds"
+            "gfx/models/portraits/aquatic/aquatic_05_portrait_blue_01.dds"
+            "gfx/models/portraits/aquatic/aquatic_05_portrait_purple_01.dds"
+		}
+	}
+
+	aqu6_m = {	entity = "portrait_aquatic_06_entity" clothes_selector = "aquatic_clothes_03" attachment_selector = "no_texture"	greeting_sound = "aqu_portrait_06"
+		character_textures = {
+            "gfx/models/portraits/aquatic/aquatic_06_portrait_purple.dds"
+            "gfx/models/portraits/aquatic/aquatic_06_portrait_blue.dds"
+            "gfx/models/portraits/aquatic/aquatic_06_portrait_pink.dds"
+            "gfx/models/portraits/aquatic/aquatic_06_portrait_teal.dds"
+		}
+	}
+
+	aqu6_f = {  entity = "portrait_aquatic_06_entity" clothes_selector = "aquatic_clothes_03" attachment_selector = "no_texture"    greeting_sound = "aqu_portrait_06"
+	character_textures = {
+			"gfx/models/portraits/aquatic/aquatic_06_portrait_female_purple.dds"
+			"gfx/models/portraits/aquatic/aquatic_06_portrait_female_blue.dds"
+			"gfx/models/portraits/aquatic/aquatic_06_portrait_female_pink.dds"
+			"gfx/models/portraits/aquatic/aquatic_06_portrait_female_teal.dds"
+		}
+	}
+
+	# Aquatics 7 - Coral
+	aqu7 = {	entity = "portrait_aquatic_07_entity" clothes_selector = "no_texture" attachment_selector = "no_texture"	greeting_sound = "aqu_portrait_07"
+		character_textures = {
+            "gfx/models/portraits/aquatic/aquatic_07_portrait_blue.dds"
+            "gfx/models/portraits/aquatic/aquatic_07_portrait_orange.dds"
+            "gfx/models/portraits/aquatic/aquatic_07_portrait_beige.dds"
+            "gfx/models/portraits/aquatic/aquatic_07_portrait_teal.dds"
+		}
+		custom_mid_close_up_position_offset = { x = 0 y = -40 }
+		custom_mid_close_up_scale = 1.0
+	}
+
+	aqu8 = {	entity = "portrait_aquatic_08_entity" clothes_selector = "no_texture" attachment_selector = "no_texture"	greeting_sound = "aqu_portrait_08"
+		character_textures = {
+            "gfx/models/portraits/aquatic/aquatic_08_portrait_teal.dds"
+            "gfx/models/portraits/aquatic/aquatic_08_portrait_red.dds"
+            "gfx/models/portraits/aquatic/aquatic_08_portrait_blue.dds"
+            "gfx/models/portraits/aquatic/aquatic_08_portrait_yellow.dds"
+		}
+	}
+
+	aqu9 = {	entity = "portrait_aquatic_09_entity" clothes_selector = "no_texture" attachment_selector = "no_texture"	greeting_sound = "aqu_portrait_09"
+		character_textures = {
+            "gfx/models/portraits/aquatic/aquatic_09_portrait_01_blue.dds"
+            "gfx/models/portraits/aquatic/aquatic_09_portrait_01_orange.dds"
+            "gfx/models/portraits/aquatic/aquatic_09_portrait_01_red.dds"
+            "gfx/models/portraits/aquatic/aquatic_09_portrait_01_purple.dds"
+            "gfx/models/portraits/aquatic/aquatic_09_portrait_02_blue.dds"
+            "gfx/models/portraits/aquatic/aquatic_09_portrait_02_orange.dds"
+            "gfx/models/portraits/aquatic/aquatic_09_portrait_02_red.dds"
+            "gfx/models/portraits/aquatic/aquatic_09_portrait_02_purple.dds"
+            "gfx/models/portraits/aquatic/aquatic_09_portrait_03_blue.dds"
+            "gfx/models/portraits/aquatic/aquatic_09_portrait_03_orange.dds"
+            "gfx/models/portraits/aquatic/aquatic_09_portrait_03_red.dds"
+            "gfx/models/portraits/aquatic/aquatic_09_portrait_03_purple.dds"
+		}
+	}
+	aqu10 = {	entity = "portrait_aquatic_10_entity" clothes_selector = "no_texture" attachment_selector = "no_texture"	greeting_sound = "aqu_portrait_10"
+		character_textures = {
+			"gfx/models/portraits/aquatic/aquatic_10_portrait_beige.dds"
+			"gfx/models/portraits/aquatic/aquatic_10_portrait_blue.dds"
+			"gfx/models/portraits/aquatic/aquatic_10_portrait_green.dds"
+			"gfx/models/portraits/aquatic/aquatic_10_portrait_pink.dds"
+		}
+	}
+	aqu11 = {	entity = "portrait_aquatic_11_entity" clothes_selector = "no_texture" attachment_selector = "no_texture"	greeting_sound = "aqu_portrait_11"
+ 		character_textures = {
+            "gfx/models/portraits/aquatic/aquatic_11_portrait_purple_01.dds"
+            "gfx/models/portraits/aquatic/aquatic_11_portrait_purple_02.dds"
+            "gfx/models/portraits/aquatic/aquatic_11_portrait_green_01.dds"
+            "gfx/models/portraits/aquatic/aquatic_11_portrait_green_02.dds"
+            "gfx/models/portraits/aquatic/aquatic_11_portrait_blue_01.dds"
+            "gfx/models/portraits/aquatic/aquatic_11_portrait_blue_02.dds"
+
+ 		}
+ 	}
+	aqu12 = {	entity = "portrait_aquatic_12_entity" clothes_selector = "no_texture" attachment_selector = "no_texture"	greeting_sound = "aqu_portrait_12"
+ 		character_textures = {
+            "gfx/models/portraits/aquatic/aquatic_12_portrait_green.dds"
+            "gfx/models/portraits/aquatic/aquatic_12_portrait_teal.dds"
+            "gfx/models/portraits/aquatic/aquatic_12_portrait_pink.dds"
+            "gfx/models/portraits/aquatic/aquatic_12_portrait_yellow.dds"
+            "gfx/models/portraits/aquatic/aquatic_12_portrait_purple.dds"
+ 		}
+ 	}
+ 	aqu13_f = {	entity = "portrait_aquatic_13_entity" clothes_selector = "no_texture" attachment_selector = "no_texture"	greeting_sound = "aqu_portrait_13"
+ 		character_textures = {
+            "gfx/models/portraits/aquatic/aquatic_13_portrait_green_01.dds"
+            "gfx/models/portraits/aquatic/aquatic_13_portrait_blue_01.dds"
+            "gfx/models/portraits/aquatic/aquatic_13_portrait_purple_01.dds"
+ 		}
+ 	}
+	 aqu13_m = {	entity = "portrait_aquatic_13_entity" clothes_selector = "no_texture" attachment_selector = "no_texture"	greeting_sound = "aqu_portrait_13"
+	 character_textures = {
+		"gfx/models/portraits/aquatic/aquatic_13_portrait_green_02.dds"
+		"gfx/models/portraits/aquatic/aquatic_13_portrait_blue_02.dds"
+		"gfx/models/portraits/aquatic/aquatic_13_portrait_purple_02.dds"
+	 }
+ }
+ 	aqu14 = {	entity = "portrait_aquatic_14_entity" clothes_selector = "no_texture" attachment_selector = "no_texture"	greeting_sound = "aqu_portrait_14"
+ 		character_textures = {
+            "gfx/models/portraits/aquatic/aquatic_14_portrait_blue.dds"
+            "gfx/models/portraits/aquatic/aquatic_14_portrait_purple.dds"
+            "gfx/models/portraits/aquatic/aquatic_14_portrait_green.dds"
+            "gfx/models/portraits/aquatic/aquatic_14_portrait_gray.dds"
+ 		}
+ 	}
+ 	aqu15_f = {	entity = "portrait_aquatic_15_entity" clothes_selector = "no_texture" attachment_selector = "no_texture"	greeting_sound = "aqu_portrait_15"
+ 		character_textures = {
+			"gfx/models/portraits/aquatic/aquatic_15_portrait_female_orange.dds"
+			"gfx/models/portraits/aquatic/aquatic_15_portrait_female_red.dds"
+			"gfx/models/portraits/aquatic/aquatic_15_portrait_female_yellow.dds"
+ 		}
+ 	}
+	 aqu15_m = {	entity = "portrait_aquatic_15_entity" clothes_selector = "no_texture" attachment_selector = "no_texture"	greeting_sound = "aqu_portrait_15"
+	 character_textures = {
+		"gfx/models/portraits/aquatic/aquatic_15_portrait_blue.dds"
+		"gfx/models/portraits/aquatic/aquatic_15_portrait_gray.dds"
+		"gfx/models/portraits/aquatic/aquatic_15_portrait_teal.dds"
+	 }
+ }
+	aqu_machine = { entity = "portrait_aquatic_machine_entity" clothes_selector = "no_texture" attachment_selector = "no_texture"	greeting_sound = "aqu_portrait_machine"
+		character_textures = {
+			"gfx/models/portraits/aquatic/aquatic_machine_portrait_teal.dds"
+			"gfx/models/portraits/aquatic/aquatic_machine_portrait_brown.dds"
+			"gfx/models/portraits/aquatic/aquatic_machine_portrait_purple.dds"
+			"gfx/models/portraits/aquatic/aquatic_machine_portrait_pink.dds"
+		}
+	}
+}
+
+portrait_groups = {
+
+	aqu1 = {
+		default = aqu1_f
+		game_setup = { #will run with a limited country scope. species and government is set but the country does not actually exist
+			add = {
+				trigger = {
+					ruler = {
+						OR = {
+							gender = male
+							gender = indeterminable
+						}
+					}
+				}
+				portraits = {
+					aqu1_m
+				}
+			}
+			add = {
+				trigger = {
+					ruler = {
+						OR = {
+							gender = female
+							gender = indeterminable
+						}
+					}
+				}
+				portraits = {
+					aqu1_f
+				}
+			}
+			#set = {
+			#	trigger = { ... }
+			#	portraits = { ... }
+			#	#using "set =" instead of "add" will first clear any portraits already added
+			#}
+		}
+
+		#species scope
+		species = { #generic portrait for a species
+			add = {
+				trigger = {
+					exists = species
+					NOT = { species = { species_gender = female } }
+				}
+				portraits = {
+					aqu1_m
+				}
+			}
+			add = {
+				trigger = {
+					exists = species
+					NOT = { species = { species_gender = male } }
+				}
+				portraits = {
+					aqu1_f
+				}
+			}
+		}
+
+		#pop scope
+		pop = { #for a specific pop
+			add = {
+				trigger = {
+					NOT = { species = { species_gender = female } }
+				}
+				portraits = {
+					aqu1_m
+				}
+			}
+			add = {
+				trigger = {
+					NOT = { species = { species_gender = male } }
+				}
+				portraits = {
+					aqu1_f
+				}
+			}
+		}
+
+		leader = {
+			add = {
+				trigger = {
+					OR = {
+						gender = male
+						gender = indeterminable
+					}
+				}
+				portraits = {
+					aqu1_m
+				}
+			}
+			add = {
+				trigger = {
+					OR = {
+						gender = female
+						gender = indeterminable
+					}
+				}
+				portraits = {
+					aqu1_f
+				}
+			}
+		}
+
+		ruler = {
+			add = {
+				trigger = {
+					OR = {
+						gender = male
+						gender = indeterminable
+					}
+				}
+				portraits = {
+					aqu1_m
+				}
+			}
+			add = {
+				trigger = {
+					OR = {
+						gender = female
+						gender = indeterminable
+					}
+				}
+				portraits = {
+					aqu1_f
+				}
+			}
+		}
+	}
+
+	aqu2 = {
+		default = aqu2_f
+		game_setup = { #will run with a limited country scope. species and government is set but the country does not actually exist
+			add = {
+				trigger = {
+					ruler = {
+						OR = {
+							gender = male
+							gender = indeterminable
+						}
+					}
+				}
+				portraits = {
+					aqu2_m
+				}
+			}
+			add = {
+				trigger = {
+					ruler = {
+						OR = {
+							gender = female
+							gender = indeterminable
+						}
+					}
+				}
+				portraits = {
+					aqu2_f
+				}
+			}
+			#set = {
+			#	trigger = { ... }
+			#	portraits = { ... }
+			#	#using "set =" instead of "add" will first clear any portraits already added
+			#}
+		}
+
+		#species scope
+		species = { #generic portrait for a species
+			add = {
+				trigger = {
+					exists = species
+					NOT = { species = { species_gender = female } }
+				}
+				portraits = {
+					aqu2_m
+				}
+			}
+			add = {
+				trigger = {
+					exists = species
+					NOT = { species = { species_gender = male } }
+				}
+				portraits = {
+					aqu2_f
+				}
+			}
+		}
+
+		#pop scope
+		pop = { #for a specific pop
+			add = {
+				trigger = {
+					NOT = { species = { species_gender = female } }
+				}
+				portraits = {
+					aqu2_m
+				}
+			}
+			add = {
+				trigger = {
+					NOT = { species = { species_gender = male } }
+				}
+				portraits = {
+					aqu2_f
+				}
+			}
+		}
+
+		leader = {
+			add = {
+				trigger = {
+					OR = {
+						gender = male
+						gender = indeterminable
+					}
+				}
+				portraits = {
+					aqu2_m
+				}
+			}
+			add = {
+				trigger = {
+					OR = {
+						gender = female
+						gender = indeterminable
+					}
+				}
+				portraits = {
+					aqu2_f
+				}
+			}
+		}
+
+		ruler = {
+			add = {
+				trigger = {
+					OR = {
+						gender = male
+						gender = indeterminable
+					}
+				}
+				portraits = {
+					aqu2_m
+				}
+			}
+			add = {
+				trigger = {
+					OR = {
+						gender = female
+						gender = indeterminable
+					}
+				}
+				portraits = {
+					aqu2_f
+				}
+			}
+		}
+	}
+
+	aqu4 = {
+		default = aqu4_f
+		game_setup = { #will run with a limited country scope. species and government is set but the country does not actually exist
+			add = {
+				trigger = {
+					ruler = {
+						OR = {
+							gender = male
+							gender = indeterminable
+						}
+					}
+				}
+				portraits = {
+					aqu4_m
+				}
+			}
+			add = {
+				trigger = {
+					ruler = {
+						OR = {
+							gender = female
+							gender = indeterminable
+						}
+					}
+				}
+				portraits = {
+					aqu4_f
+				}
+			}
+			#set = {
+			#	trigger = { ... }
+			#	portraits = { ... }
+			#	#using "set =" instead of "add" will first clear any portraits already added
+			#}
+		}
+
+		#species scope
+		species = { #generic portrait for a species
+			add = {
+				trigger = {
+					exists = species
+					NOT = { species = { species_gender = female } }
+				}
+				portraits = {
+					aqu4_m
+				}
+			}
+			add = {
+				trigger = {
+					exists = species
+					NOT = { species = { species_gender = male } }
+				}
+				portraits = {
+					aqu4_f
+				}
+			}
+		}
+
+		#pop scope
+		pop = { #for a specific pop
+			add = {
+				trigger = {
+					NOT = { species = { species_gender = female } }
+				}
+				portraits = {
+					aqu4_m
+				}
+			}
+			add = {
+				trigger = {
+					NOT = { species = { species_gender = male } }
+				}
+				portraits = {
+					aqu4_f
+				}
+			}
+		}
+
+		leader = {
+			add = {
+				trigger = {
+					OR = {
+						gender = male
+						gender = indeterminable
+					}
+				}
+				portraits = {
+					aqu4_m
+				}
+			}
+			add = {
+				trigger = {
+					OR = {
+						gender = female
+						gender = indeterminable
+					}
+				}
+				portraits = {
+					aqu4_f
+				}
+			}
+		}
+
+		ruler = {
+			add = {
+				trigger = {
+					OR = {
+						gender = male
+						gender = indeterminable
+					}
+				}
+				portraits = {
+					aqu4_m
+				}
+			}
+			add = {
+				trigger = {
+					OR = {
+						gender = female
+						gender = indeterminable
+					}
+				}
+				portraits = {
+					aqu4_f
+				}
+			}
+		}
+	}
+
+	aqu15 = {
+		default = aqu15_f
+		game_setup = { #will run with a limited country scope. species and government is set but the country does not actually exist
+			add = {
+				trigger = {
+					ruler = {
+						OR = {
+							gender = male
+							gender = indeterminable
+						}
+					}
+				}
+				portraits = {
+					aqu15_m
+				}
+			}
+			add = {
+				trigger = {
+					ruler = {
+						OR = {
+							gender = female
+							gender = indeterminable
+						}
+					}
+				}
+				portraits = {
+					aqu15_f
+				}
+			}
+			#set = {
+			#	trigger = { ... }
+			#	portraits = { ... }
+			#	#using "set =" instead of "add" will first clear any portraits already added
+			#}
+		}
+
+		#species scope
+		species = { #generic portrait for a species
+			add = {
+				trigger = {
+					exists = species
+					NOT = { species = { species_gender = female } }
+				}
+				portraits = {
+					aqu15_m
+				}
+			}
+			add = {
+				trigger = {
+					exists = species
+					NOT = { species = { species_gender = male } }
+				}
+				portraits = {
+					aqu15_f
+				}
+			}
+		}
+
+		#pop scope
+		pop = { #for a specific pop
+			add = {
+				trigger = {
+					NOT = { species = { species_gender = female } }
+				}
+				portraits = {
+					aqu15_m
+				}
+			}
+			add = {
+				trigger = {
+					NOT = { species = { species_gender = male } }
+				}
+				portraits = {
+					aqu15_f
+				}
+			}
+		}
+
+		leader = {
+			add = {
+				trigger = {
+					OR = {
+						gender = male
+						gender = indeterminable
+					}
+				}
+				portraits = {
+					aqu15_m
+				}
+			}
+			add = {
+				trigger = {
+					OR = {
+						gender = female
+						gender = indeterminable
+					}
+				}
+				portraits = {
+					aqu15_f
+				}
+			}
+		}
+
+		ruler = {
+			add = {
+				trigger = {
+					OR = {
+						gender = male
+						gender = indeterminable
+					}
+				}
+				portraits = {
+					aqu15_m
+				}
+			}
+			add = {
+				trigger = {
+					OR = {
+						gender = female
+						gender = indeterminable
+					}
+				}
+				portraits = {
+					aqu15_f
+				}
+			}
+		}
+	}
+
+	aqu13 = {
+		default = aqu13_f
+		game_setup = { #will run with a limited country scope. species and government is set but the country does not actually exist
+			add = {
+				trigger = {
+					ruler = {
+						OR = {
+							gender = male
+							gender = indeterminable
+						}
+					}
+				}
+				portraits = {
+					aqu13_m
+				}
+			}
+			add = {
+				trigger = {
+					ruler = {
+						OR = {
+							gender = female
+							gender = indeterminable
+						}
+					}
+				}
+				portraits = {
+					aqu13_f
+				}
+			}
+			#set = {
+			#	trigger = { ... }
+			#	portraits = { ... }
+			#	#using "set =" instead of "add" will first clear any portraits already added
+			#}
+		}
+
+		#species scope
+		species = { #generic portrait for a species
+			add = {
+				trigger = {
+					exists = species
+					NOT = { species = { species_gender = female } }
+				}
+				portraits = {
+					aqu13_m
+				}
+			}
+			add = {
+				trigger = {
+					exists = species
+					NOT = { species = { species_gender = male } }
+				}
+				portraits = {
+					aqu13_f
+				}
+			}
+		}
+
+		#pop scope
+		pop = { #for a specific pop
+			add = {
+				trigger = {
+					NOT = { species = { species_gender = female } }
+				}
+				portraits = {
+					aqu13_m
+				}
+			}
+			add = {
+				trigger = {
+					NOT = { species = { species_gender = male } }
+				}
+				portraits = {
+					aqu13_f
+				}
+			}
+		}
+
+		leader = {
+			add = {
+				trigger = {
+					OR = {
+						gender = male
+						gender = indeterminable
+					}
+				}
+				portraits = {
+					aqu13_m
+				}
+			}
+			add = {
+				trigger = {
+					OR = {
+						gender = female
+						gender = indeterminable
+					}
+				}
+				portraits = {
+					aqu13_f
+				}
+			}
+		}
+
+		ruler = {
+			add = {
+				trigger = {
+					OR = {
+						gender = male
+						gender = indeterminable
+					}
+				}
+				portraits = {
+					aqu13_m
+				}
+			}
+			add = {
+				trigger = {
+					OR = {
+						gender = female
+						gender = indeterminable
+					}
+				}
+				portraits = {
+					aqu13_f
+				}
+			}
+		}
+	}
+	aqu5 = {
+		default = aqu5_f
+		game_setup = { #will run with a limited country scope. species and government is set but the country does not actually exist
+			add = {
+				trigger = {
+					ruler = {
+						OR = {
+							gender = male
+							gender = indeterminable
+						}
+					}
+				}
+				portraits = {
+					aqu5_m
+				}
+			}
+			add = {
+				trigger = {
+					ruler = {
+						OR = {
+							gender = female
+							gender = indeterminable
+						}
+					}
+				}
+				portraits = {
+					aqu5_f
+				}
+			}
+			#set = {
+			#	trigger = { ... }
+			#	portraits = { ... }
+			#	#using "set =" instead of "add" will first clear any portraits already added
+			#}
+		}
+
+		#species scope
+		species = { #generic portrait for a species
+			add = {
+				trigger = {
+					exists = species
+					NOT = { species = { species_gender = female } }
+				}
+				portraits = {
+					aqu5_m
+				}
+			}
+			add = {
+				trigger = {
+					exists = species
+					NOT = { species = { species_gender = male } }
+				}
+				portraits = {
+					aqu5_f
+				}
+			}
+		}
+
+		#pop scope
+		pop = { #for a specific pop
+			add = {
+				trigger = {
+					NOT = { species = { species_gender = female } }
+				}
+				portraits = {
+					aqu5_m
+				}
+			}
+			add = {
+				trigger = {
+					NOT = { species = { species_gender = male } }
+				}
+				portraits = {
+					aqu5_f
+				}
+			}
+		}
+
+		leader = {
+			add = {
+				trigger = {
+					OR = {
+						gender = male
+						gender = indeterminable
+					}
+				}
+				portraits = {
+					aqu5_m
+				}
+			}
+			add = {
+				trigger = {
+					OR = {
+						gender = female
+						gender = indeterminable
+					}
+				}
+				portraits = {
+					aqu5_f
+				}
+			}
+		}
+
+		ruler = {
+			add = {
+				trigger = {
+					OR = {
+						gender = male
+						gender = indeterminable
+					}
+				}
+				portraits = {
+					aqu5_m
+				}
+			}
+			add = {
+				trigger = {
+					OR = {
+						gender = female
+						gender = indeterminable
+					}
+				}
+				portraits = {
+					aqu5_f
+				}
+			}
+		}
+	}
+
+	aqu6 = {
+		default = aqu6_f
+		game_setup = { #will run with a limited country scope. species and government is set but the country does not actually exist
+			add = {
+				trigger = {
+					ruler = {
+						OR = {
+							gender = male
+							gender = indeterminable
+						}
+					}
+				}
+				portraits = {
+					aqu6_m
+				}
+			}
+			add = {
+				trigger = {
+					ruler = {
+						OR = {
+							gender = female
+							gender = indeterminable
+						}
+					}
+				}
+				portraits = {
+					aqu6_f
+				}
+			}
+			#set = {
+			#	trigger = { ... }
+			#	portraits = { ... }
+			#	#using "set =" instead of "add" will first clear any portraits already added
+			#}
+		}
+
+		#species scope
+		species = { #generic portrait for a species
+			add = {
+				trigger = {
+					exists = species
+					NOT = { species = { species_gender = female } }
+				}
+				portraits = {
+					aqu6_m
+				}
+			}
+			add = {
+				trigger = {
+					exists = species
+					NOT = { species = { species_gender = male } }
+				}
+				portraits = {
+					aqu6_f
+				}
+			}
+		}
+
+		#pop scope
+		pop = { #for a specific pop
+			add = {
+				trigger = {
+					NOT = { species = { species_gender = female } }
+				}
+				portraits = {
+					aqu6_m
+				}
+			}
+			add = {
+				trigger = {
+					NOT = { species = { species_gender = male } }
+				}
+				portraits = {
+					aqu6_f
+				}
+			}
+		}
+
+		leader = {
+			add = {
+				trigger = {
+					OR = {
+						gender = male
+						gender = indeterminable
+					}
+				}
+				portraits = {
+					aqu6_m
+				}
+			}
+			add = {
+				trigger = {
+					OR = {
+						gender = female
+						gender = indeterminable
+					}
+				}
+				portraits = {
+					aqu6_f
+				}
+			}
+		}
+
+		ruler = {
+			add = {
+				trigger = {
+					OR = {
+						gender = male
+						gender = indeterminable
+					}
+				}
+				portraits = {
+					aqu6_m
+				}
+			}
+			add = {
+				trigger = {
+					OR = {
+						gender = female
+						gender = indeterminable
+					}
+				}
+				portraits = {
+					aqu6_f
+				}
+			}
+		}
+	}
+}

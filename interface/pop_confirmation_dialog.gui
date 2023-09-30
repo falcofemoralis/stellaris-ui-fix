@@ -1,0 +1,53 @@
+guiTypes = {
+
+	containerWindowType = {
+		name = "pop_confirmation_dialog"
+		position = { x = -267 y = -155 }
+		size = { width = 400 height = 267 }
+		moveable = yes
+		orientation = center
+
+		background = {
+			name = "background"
+			quadTextureSprite ="gfx_message_bg"
+		}
+
+		instantTextBoxType = {
+			name = "title"
+			font = "cg_16b"
+			position = { x = 13 y = 20 }
+			maxWidth = 373
+			maxHeight = 40
+			fixedSize = yes
+			format = center
+		}
+
+		buttonType = {
+			name = "AgreeButton"
+			quadTextureSprite = "GFX_button_animated_265_34"
+			position = { x = 7 y = 40 }
+			Orientation = "UPPER_LEFT"
+			buttonFont = "cg_16b"
+			shortcut = "RETURN"
+			clicksound = "confirm_click"
+		}
+		buttonType = {
+			name = "AgreeAll"
+			quadTextureSprite = "GFX_button_animated_265_34"
+			position = { x = 7 y = 93 }
+			Orientation = "UPPER_LEFT"
+			buttonFont = "cg_16b"
+			clicksound = "confirm_click"
+		}
+
+		buttonType = {
+			name = "DeclineButton"
+			quadTextureSprite = "GFX_button_animated_265_34"
+			position = { x = 7 y = 180 }
+			Orientation = "UPPER_LEFT"
+			buttonFont = "cg_16b"
+			shortcut = "ESCAPE"
+			clicksound = "back_click"
+		}
+	}
+}

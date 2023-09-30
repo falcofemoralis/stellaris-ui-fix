@@ -1,0 +1,274 @@
+guiTypes = {
+	
+	containerWindowType = {
+		name = "combat_debug_view"
+		position = { x=0 y=0 }	
+		size = { width=100% height=100% }
+		
+		#buttonType = {
+		#	name = "dbgbg"
+		#	spriteType = "gfx_message_bg"
+		#	position = { x = 100 y = 733 }
+		#	size = { x = 1733 y = 467 }
+		#}
+		#buttonType = {
+		#	name = "entity_sprite"
+		#	spriteType = "GFX_dummy_entity_sprite_debug"
+		#	position = { x = 0 y = 467 }
+		#	size = { x = 867 y = 667 }
+		#}
+		#buttonType = {
+		#	name = "entity_sprite2"
+		#	spriteType = "GFX_dummy_entity_sprite_debug"
+		#	position = { x = 867 y = 467 }
+		#	size = { x = 867 y = 667 }
+		#}
+		
+		buttonType = {
+			name ="topbar_04"
+			quadTextureSprite = "GFX_topbar_bar_04"
+			position = { x= -404 y = 15 }
+			Orientation = "UPPER_RIGHT"
+			shortcut = "SPACE"
+		}
+		
+		####################
+		# Time stuff
+		####################
+		containerWindowType = {
+			name = "time_window"
+			position = { x= 0 y = 0 }
+			size = { width=267 height=267 }
+			orientation = upper_right
+			
+			buttonType =
+			{
+				name = "decrease_speed"
+				quadTextureSprite = "GFX_topbar_date_minus"
+				position = { x= -200 y = 11  }
+				shortcut = "KP_MINUS"
+			}
+			
+			buttonType =
+			{
+				name = "increase_speed"
+				quadTextureSprite = "GFX_topbar_date_plus"
+				position = { x= -147 y = 11  }
+				shortcut = "KP_PLUS"
+			}
+			
+			instantTextBoxType={
+				name = "time"
+				font = "cg_16b"
+				position = { x= -380 y= 9 }
+				maxWidth = 133
+				maxHeight = 21
+			}
+			
+			iconType =
+			{
+				name ="strip_gamespeed"
+				spriteType = "GFX_speed_indicator"
+				position = { x= -404 y = 27 }
+				frame = 1
+			}
+		}
+		
+		containerWindowType = {
+			name = "leader_frame_box"
+			size = { width = 280 height = 333 }
+			position = { x = 5 y = 5 }
+			
+			background = {
+				name = "leader_frame"
+				spriteType = "GFX_tile_outliner_bg"
+				alwaysTransparent = yes
+			}
+		}
+		
+		instantTextBoxType = {
+			name = "current_scenario"
+			position = { x = 13 y = 33 }
+			maxWidth = 533
+			font = "cg_16b"
+			text = "CDV_CURRENT_SCENARIO"
+		}
+		
+		buttonType = {
+			name = "ship_designer"
+			position = { x = 27 y = 67 }
+			quadTextureSprite = "GFX_standard_button_142_34_button"
+			buttonText = "SHIPDESIGNER"
+			buttonFont = "cg_16b"
+		}
+		buttonType = {
+			name = "scenarios"
+			position = { x = 27 y = 120 }
+			quadTextureSprite = "GFX_standard_button_142_34_button"
+			buttonText = "CDV_SCENARIO"
+			buttonFont = "cg_16b"
+		}
+		buttonType = {
+			name = "reset"
+			position = { x = 27 y = 173 }
+			quadTextureSprite = "GFX_standard_button_142_34_button"
+			buttonText = "CDV_RESET"
+			buttonFont = "cg_16b"
+		}
+		
+		containerWindowType = {
+			name = "scenario_menu"
+			position = { x=-600 y=-467 }	
+			size = { width=1227 height=933 }
+			orientation = center
+			moveable = no
+			
+			background = {
+				name = "bg"
+				quadTextureSprite = "gfx_message_bg"
+				alwaystransparent = yes
+			}
+			
+			listBoxType = {
+				name ="scenarios"
+				position = { x=13 y=47 }	
+				size = { x=293 y=800 }
+				scrollbartype = "standardlistbox_slider"
+			}
+			
+			listBoxType = {
+				name ="countries"
+				position = { x=307 y=47 }	
+				size = { x=293 y=800 }
+				scrollbartype = "standardlistbox_slider"
+			}
+			listBoxType = {
+				name ="fleets"
+				position = { x=600 y=47 }	
+				size = { x=293 y=800 }
+				scrollbartype = "standardlistbox_slider"
+			}
+			listBoxType = {
+				name ="ships"
+				position = { x=893 y=47 }	
+				size = { x=293 y=800 }
+				scrollbartype = "standardlistbox_slider"
+			}
+			buttonType = {
+				name = "use_selected"
+				position = { x = 13 y = 847 }
+				quadTextureSprite = "GFX_standard_button_142_34_button"
+				buttonText = "CDV_USE_SELECTED"
+				buttonFont = "cg_16b"
+			}
+			buttonType = {
+				name = "rename_selected"
+				position = { x = 240 y = 847 }
+				quadTextureSprite = "GFX_standard_button_142_34_button"
+				buttonText = "CDV_RENAME_SELECTED"
+				buttonFont = "cg_16b"
+			}
+		}
+	}
+	
+	windowType = {
+		name = "combat_scenario_entry"
+		size = { x = 267 y = 53 }
+		
+		guiButtonType = {
+			name = "button"
+			position = { x = 0 y = -7 }
+			quadTextureSprite = "GFX_standard_button_142_34_button"
+			buttonText = ""
+			buttonFont = "cg_16b"
+		}
+		guiButtonType = {
+			name = "delete"
+			position = { x = 216 y = 7 }
+			quadTextureSprite = "GFX_close"
+			buttonText = ""
+			buttonFont = "cg_16b"
+		}
+	}
+	windowType = {
+		name = "combat_scenario_item_entry"
+		size = { x = 267 y = 53 }
+		
+		guiButtonType = {
+			name = "button"
+			position = { x = 0 y = -7 }
+			quadTextureSprite = "GFX_standard_button_142_34_button"
+			buttonText = ""
+			buttonFont = "cg_16b"
+		}
+		guiButtonType = {
+			name = "delete"
+			position = { x = 207 y = 7 }
+			quadTextureSprite = "GFX_close"
+			buttonText = ""
+			buttonFont = "cg_16b"
+			pdx_tooltip = "Remove"
+		}
+		guiButtonType = {
+			name = "clone"
+			position = { x = 253 y = 7 }
+			quadTextureSprite = "GFX_fleet_order_button_merge"
+			buttonText = ""
+			buttonFont = "cg_16b"
+			pdx_tooltip = "Duplicate"
+		}
+	}
+	
+	containerWindowType = {
+		name = "text_input_dialog"
+		position = { x=-267 y=-155 }	
+		size = { width=533 height=309 }
+		moveable = yes
+		orientation = center
+		
+		backGround = {
+			name = "background"	
+			quadTextureSprite ="gfx_message_bg"
+		}
+		
+		buttonType =
+		{
+			name = "AgreeButton"
+			quadTextureSprite = "GFX_standard_button_142_34_button"
+			position = { x= 293 y = 240  }
+			Orientation = "UPPER_LEFT"
+			buttonText = "OK"
+			buttonFont = "cg_16b"
+			shortcut = "RETURN"
+		}
+		buttonType =
+		{
+			name = "DeclineButton"
+			quadTextureSprite = "GFX_standard_button_142_34_button"
+			position = { x= 13 y = 240  }
+			Orientation = "UPPER_LEFT"
+			buttonText = "CANCEL"
+			buttonFont = "cg_16b"
+		}	
+		
+		instantTextBoxType={
+			position = { x = 0 y = 13 }
+			name = "title"
+			font = "cg_16b"
+			borderSize = {x = 0 y = 0 }	
+			maxWidth = 533
+			maxHeight = 27
+			text = "CDV_ENTER_NEW_NAME"	
+			orientation = "UPPER_LEFT"
+			format = centre
+		}	
+		editBoxType = { instantTextBoxType = no
+			position = { x = 13 y = 133 }
+			name = "editbox"
+			textureFile = "gfx/interface/tiles/small_tiles_dialog2.dds"
+			font = "cg_16b"
+			size = { x=507 y=47 }
+			borderSize = { x=7 y=1 }
+		}
+	}
+}

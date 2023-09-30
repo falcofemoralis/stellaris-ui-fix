@@ -1,0 +1,1686 @@
+
+@entry_info_height = 23
+@entry_memberInfo_height = 27
+@entry_memberName_height = 17
+@entry_memberType_height = 36
+guiTypes = {
+	containerWindowType = {
+		name ="federation_ethics_item"
+		position = { x=0 y =0}
+		size = { width=43 height = 43}
+
+		iconType = {
+			name = "icon"
+			position = { x = 0 y = 0 }
+			quadTextureSprite ="GFX_ethics"
+			tooltip_mode_enabled = yes
+		}
+		iconType = {
+			name = "opposing_ethics"
+			position = { x = -4 y = -3 }
+			quadTextureSprite = "GFX_federation_ethic_issue_ring"
+			frame = 2
+		}
+	}
+
+	containerWindowType = {
+		name = "small_member_item"
+		position = { x = 20 y = 60}
+		size = { width= 387 height= 51 }
+
+		background = {
+			name = "background"
+			spriteType = "GFX_dark_area_cut"
+		}
+
+		buttonType = {
+			name = "flag"
+			quadTextureSprite = "GFX_empire_flag_32"
+			position = { x= 8 y = 5  }
+		}
+		
+		iconType = {
+			name = "federation_leader_border"
+			quadTextureSprite = "GFX_federation_leader_border"
+			position = { x= 4 y = 3  }
+			alwaysTransparent = yes
+		}
+
+		instantTextBoxType={
+			name = "name"
+			font = "cg_16b"
+			maxWidth = 333
+			maxHeight = 33
+			position = { x = 53 y = 13}
+			alwaysTransparent = yes
+			fixedSize = yes
+		}
+
+		instantTextBoxType={
+			name = "power_amount"
+			font = "cg_16b"
+			maxWidth = 67
+			position = { x = 320 y = 13}
+			format = center
+		}
+	}
+
+	containerWindowType = {
+			name = "perk_item"
+			position = { x = 0	 y = 0 }
+			size = { width= 53 height= 53 }
+
+			iconType = {
+				name = "perk_icon"
+				quadTextureSprite = "GFX_government_civic"
+				position = { x = 0 y = 0 }
+			}
+		}
+
+	containerWindowType = {
+		name = "level_item"
+		position = { x = 0 y = 0 }
+		size = { width= 233 height= 147 }
+
+		#background = {
+		#name = "background"
+		#spriteType = "GFX_dark_area_cut"
+		#}
+
+		iconType = {
+			name = "perk_bg"
+			spriteType = "GFX_federation_perk_bg"
+			position = { x = 0 y = 0 }
+			alwaysTransparent = yes
+		}
+
+		iconType = {
+			name = "losing_level_icon"
+			position = { x= 8 y=7 }
+			spriteType = "GFX_federation_perk_lost"
+			scale = 1
+		}
+
+		instantTextBoxType={
+			name = "level_name"
+			font = "cg_16b"
+			position = { x = 27 y = 13 }
+			text = "Perk Lvl #"
+			maxWidth = 173
+			maxHeight = 53
+			fixedSize = yes
+			format = left
+		}
+
+		gridBoxType = {
+			name = "perks_grid_box"
+			position = { x = -7 y = 47 }
+			size = { width = 133 height = 53 }
+			slotsize = { width = 60 height = 53 }
+			add_horizontal = yes
+			max_slots_horizontal = 3
+			max_slots_vertical = 1
+		}
+	}	
+	
+	#Should be identical in items content to law_button_item
+	containerWindowType = {
+		name = "top_law_button_item"
+		position = { x = 8 y = 13 }
+		size = { width= 227 height= 72 }
+		clipping = no
+	
+		background = {
+			name = "bg"
+			quadTextureSprite = "GFX_tiled_window_transparent"
+		}
+	
+		buttonType = {
+			name = "select_button"
+			position = { x = 5 y = 7 }
+			quadTextureSprite = "GFX_law_button_big"
+			font = "cg_16b"
+			text = ""
+			format = center
+		}
+		
+		iconType = {
+			name = "selected_icon"
+			position = { x = 5 y = 7 }
+			quadTextureSprite = "GFX_law_button_big"
+			frame = 2
+		}
+		
+		instantTextBoxType={
+			name = "law_name"
+			font = "cg_16b"
+			position = { x = 16 y = 20 }
+			text = "Law"
+			maxWidth = 189
+			maxHeight = 45
+			fixedSize = yes
+			format = Center
+		}
+	
+		iconType = {
+			name = "level_lock"
+			#GFX_law_locked
+			quadTextureSprite = "GFX_centralization_locked"
+			position = { x = 80 y = -12 }
+			alwaysTransparent = yes
+		}
+		
+		instantTextBoxType={
+			name = "level_text"
+			font = "cg_16b"
+			position = { x = 69 y = -8 }
+			text = "LVL #"
+			maxWidth = 80
+			maxHeight = 53
+			fixedSize = yes
+			format = Center
+		}
+		
+		iconType = {
+			name = "centralization_lock"
+			quadTextureSprite = "GFX_law_locked"
+			position = { x = 101 y = -8 }
+			alwaysTransparent = yes
+		}
+	}
+	
+	#Should be identical in items content to top_law_button_item
+	containerWindowType = {
+		name = "law_button_item"
+		position = { x = 13 y = 13 }
+		size = { width= 200 height= 40 }
+		clipping = no
+	
+		background = {
+			name = "bg"
+			quadTextureSprite = "GFX_tiled_window_transparent"
+		}
+	
+		buttonType = {
+			name = "select_button"
+			position = { x = 0 y = 0 }
+			quadTextureSprite = "GFX_law_button_small"
+			font = "cg_16b"
+			text = ""
+			format = center
+			clicksound = select_click
+		}
+		
+		iconType = {
+			name = "selected_icon"
+			position = { x = 0 y = 0 }
+			quadTextureSprite = "GFX_law_button_small"
+			frame = 2
+		}
+		
+		instantTextBoxType={
+			name = "law_name"
+			font = "cg_16b"
+			position = { x = 0 y = 7 }
+			text = "Law"
+			maxWidth = 189
+			maxHeight = 45
+			fixedSize = yes
+			format = Center
+		}
+	
+		iconType = {
+			name = "level_lock"
+			#GFX_law_locked
+			quadTextureSprite = "GFX_centralization_locked"
+			position = { x = 60 y = -13 }
+			alwaysTransparent = no
+		}
+		
+		instantTextBoxType={
+			name = "level_text"
+			font = "cg_16b"
+			position = { x = 49 y = -11 }
+			text = "LVL #"
+			maxWidth = 80
+			maxHeight = 53
+			fixedSize = yes
+			format = Center
+		}
+		
+		iconType = {
+			name = "centralization_lock"
+			quadTextureSprite = "GFX_law_locked"
+			position = { x = 79 y = -21 }
+			alwaysTransparent = no
+		}
+	}
+	
+	containerWindowType = {
+		name = "law_category_item"
+		position = { x = 0 y = 0 }
+		size = { width = 1149 height = 107 }
+
+		background = {
+			name = "background"
+			spriteType = "GFX_centralization_bg"
+			position = { x = 0 y = 0 }
+		}
+
+		gridBoxType = {
+			name = "top_laws_grid_box"
+			position = { x = -3 y = 20 }
+			size = { width = 1127 height = 72 }
+			format = "UPPER_LEFT"
+			slotsize = { width = 224 height = 72 }
+			add_horizontal = yes
+			max_slots_vertical = 1
+		}
+
+		gridBoxType = {
+			name = "laws_grid_box"
+			position = { x = 7 y = 27 }
+			size = { width = 1127 height = 104 }
+			format = "UPPER_LEFT"
+			slotsize = { width = 191 height = 72 }
+			add_horizontal = yes
+			max_slots_vertical = 1
+
+			background = {
+				name = "background"
+				spriteType = "GFX_dark_area_cut"
+				position = { x = 0 y = -29 }
+			}
+		}
+
+		instantTextBoxType={
+			name = "category_name"
+			font = "cg_16b"
+			position = { x = 19 y = 13 }
+			text = "Law Title"
+			maxWidth = 267
+			maxHeight = 27
+			fixedSize = yes
+			format = Left
+		}
+	}
+
+
+	containerWindowType = {
+		name = "federation_view"
+		size = { width = 1640 height = 800 }
+		position = { x = 47 y = 53 }
+		#orientation = center
+		#origo = center
+		moveable = yes
+		clipping = no
+
+		background = {
+			name = "background"
+			spriteType = "GFX_tile_large_bg"
+		}
+
+		iconType = {
+			name = "hex_bg"
+			spriteType = "GFX_hex_bg"
+			position = { x = -13 y = -13 }
+			alwaysTransparent = yes
+		}
+
+		iconType = {
+			name = "empire_header_line"
+			quadTextureSprite = "GFX_line_long"
+			position = { x = 8 y = 28 }
+			alwaysTransparent = yes
+		}
+
+		instantTextBoxType={
+			name = "header"
+			font = "malgun_goth_24"
+			position = { x = 53 y = 7 }
+			maxwidth = 400
+			maxheight = 33
+			text = "FEDERATION"
+			alwaysTransparent = yes
+		}
+		
+		buttonType = {
+			name = "close"
+			quadTextureSprite = "GFX_close_button_galaxy"
+			position = { x= -53 y = 13  }
+			Orientation = "UPPER_RIGHT"
+			shortcut = "ESCAPE"
+			pdx_tooltip = "CLOSE_TITLE"
+			clicksound = "back_click"
+			actionshortcut = "cancel"
+		}
+
+		containerWindowType = {
+			name = "federation_info_box"
+			size = { width = 447 height = 720 }
+			position = { x = 7 y = 67 }
+
+			background = {
+				name = "ships_black_box_tile"
+				spriteType = "GFX_tiles_frame_light"
+			}
+
+			containerWindowType = {
+					name = "federation_txt_bg"
+					size = {width = 421 height = 373}
+					position = { x = 13 y = 60 }
+
+					background = {
+						name = "federation_txt_bg"
+						quadTextureSprite = "GFX_framed_area_tile"
+					}
+			}
+
+			iconType = {
+					name = "federation_bg"
+					quadTextureSprite = "GFX_federation_name_bg"
+					position = { x = 7 y = 0 }
+					alwaysTransparent = yes
+			}
+
+			#iconType = {
+			#	name = "hex_bg"
+			#	spriteType = "GFX_hex_bg"
+			#	position = { x = 87 y = -13 }
+			#	alwaysTransparent = yes
+			#}
+
+			buttonType = {
+				name = "federation_type_button"
+				quadTextureSprite = "GFX_default_federation"
+				position = { x = 19 y = 13 }
+			}
+		}
+
+		instantTextBoxType = {
+			name = "federation_name"
+			font = "cg_16b"
+			position = { x = 113 y = 80 }
+			maxWidth = 331
+			maxheight = 33
+			fixedsize = yes
+			alwaysTransparent = yes
+		}
+		
+		buttonType = {
+			name = "federation_rename_button"
+			spriteType = "GFX_invisible"
+			position = { x = 113 y = 67 }
+			size = { x = 333 y = 33 }
+		}
+		
+		instantTextBoxType = {
+			name = "federation_type"
+			font = "cg_16b"
+			position = { x = 113 y = 105 }
+			maxwidth = 400
+			maxheight = 33
+			fixedsize = yes
+			text = "Federation Type"
+			text_color_code = "H" 
+			alwaysTransparent = yes
+		}
+		
+		buttonType = {
+			name = "federation_switch_type_button"
+			spriteType = "GFX_invisible"
+			position = { x = 113 y = 105 }
+			size = { x = 333 y = 33 }
+		}
+		
+		instantTextBoxType = {
+			name = "federation_formed"
+			font = "cg_16b"
+			position = { x = 113 y = 131 }
+			maxwidth = 333
+			maxheight = 33
+			fixedsize = yes
+		}
+		
+		instantTextBoxType = {
+			name = "federation_type_desc"
+			font = "cg_16b"
+			position = { x = 43 y = 187 }
+			maxwidth = 381
+			maxheight = 80
+			fixedsize = yes
+			text = "Federation Type"
+		}
+		
+		instantTextBoxType={
+			name = "federation_perk_desc"
+			font = "cg_16b"
+			position = { x = 43 y = 267 }
+			maxwidth = 381
+			maxheight = 153
+			fixedsize = yes
+			text = "Federation Type"
+		}
+		
+		instantTextBoxType={
+			name = "federation_law_desc"
+			font = "cg_16b"
+			position = { x = 43 y = 427 }
+			maxwidth = 381
+			maxheight = 60
+			fixedsize = yes
+			text = "Federation Type"
+		}
+
+		containerWindowType = {
+			name = "federation_members_small_window"
+			size = { width = 432 height = 267 }
+			position = { x = 13 y = 507}
+
+			#background = {
+			#	name = "ships_black_box_tile"
+			#	spriteType = "GFX_tiles_frame_light"
+			#}
+
+			iconType = {
+				name = "empire_header_line"
+				quadTextureSprite = "GFX_line"
+				position = { x = 7 y = 32 }
+				alwaysTransparent = yes
+				scale = 1
+			}
+
+			instantTextBoxType={
+				name = "federation_member_txt"
+				font = "cg_16b"
+				position = { x = 27 y = 13 }
+				text = "FEDERATION_MEMBERS"
+				maxWidth = 160
+				maxHeight = 53
+				fixedSize = yes
+				format = left
+			}
+
+			instantTextBoxType={
+				name = "federation_power_txt"
+				font = "cg_16b"
+				position = { x =247 y = 13 }
+				text = "FEDERATION_ECONOMY"
+				maxWidth = 160
+				maxHeight = 53
+				fixedSize = yes
+				format = right
+			}
+
+			## Needs Code - Members list small
+			smoothListboxType = {
+				name = "members_short_list"
+				id = "members_short_list"
+				position = { x = 20 y = 60 }
+				size = { x = 387 y = 196 }
+				scrollbarType = "standardlistbox_slider"
+				navDown = "leave_button"
+			}
+		}
+
+
+		###<-----------------------LEVELS---------------------->###
+		containerWindowType = {
+			name = "levels_window"
+			position = { x = 464 y = 67 }
+			size = { width= 1160 height= 720 }
+			
+			iconType = {
+				name = "federation_type_bg"
+				spriteType = "GFX_federation_type_default_bg"
+				position = { x =4 y = 3 }
+				alwaysTransparent = yes
+				scale = 1 
+			}
+			
+			containerWindowType = {
+				name = "portrait_window"
+				position = { x = 3 y = 0 }
+				size = { width = 1160 height = 467 }
+				moveable = no
+				clipping = yes
+
+				iconType = {
+					name = "portrait_frame_shadow"
+					quadTextureSprite = "GFX_federation_portraitframe_shadow"
+					position = { x = 0 y = 0 }
+					scale = 1
+					alwaysTransparent = no
+				}
+
+				iconType = {
+					name = "portrait"
+					quadTextureSprite = "GFX_portrait_character"
+					position = { x = 133 y = -11 }
+					scale = 0.60
+					alwaysTransparent = yes
+				}
+
+				iconType = {
+					name = "portrait_frame_stripes"
+					quadTextureSprite = "GFX_federation_stripes"
+					position = { x = 0 y = 0 }
+					alwaysTransparent = no
+				}
+
+				iconType = {
+					name = "portrait_frame"
+					quadTextureSprite = "GFX_federation_portraitframe"
+					position = { x = 0 y = 0 }
+					alwaysTransparent = no
+				}
+			}
+
+			
+
+			iconType = {
+				name = "president_txt_bg"
+				position = { x = 1 y = 1 }
+				quadTextureSprite = "GFX_president_txt_bg"
+				alwaysTransparent = yes
+			}
+
+			buttonType = {
+				name = "leader"
+				quadTextureSprite = "GFX_empire_flag_64"
+				position = { x= 7 y = 0  }
+			}
+
+			instantTextBoxType={
+				name = "president_title"
+				font = "cg_16b"
+				text = "FEDERATION_PRESIDENT"
+				position = { x = 100 y = 13 }
+				maxwidth = 600
+				maxheight = 44
+				fixedSize = yes
+			}
+
+			instantTextBoxType={
+				name = "leader_desc"
+				font = "cg_16b"
+				position = { x = 8000 y = 53 }
+				maxwidth = 600
+				maxheight = 44
+				fixedSize = yes
+			}
+
+			containerWindowType = {
+				name = "xp_level_window"
+				position = { x = 0 y = 407}
+				size = { width= 1160 height= 256 }
+				clipping = no
+
+				background = {
+					name = "background"
+					spriteType = "GFX_dark_area_cut"
+				}
+
+				iconType = {
+					name = "hex_bg"
+					spriteType = "GFX_hex_bg"
+					position = { x = -20 y = 0 }
+					alwaysTransparent = yes
+				}
+
+				instantTextBoxType={
+					name = "level_num_large"
+					text = "Level # Txt"
+					font = "malgun_goth_24"
+					position = { x = 20 y = 13 }
+					maxwidth = 267
+					maxheight = 44
+					fixedSize = yes
+				}
+				
+				iconType = {
+					name = "xp_icon"
+					spriteType = "GFX_xp_icon"
+					position = { x = 15 y = 47 }
+					scale = 0.9
+				}
+
+				instantTextBoxType={
+					name = "xp_total_number"
+					font = "cg_16b"
+					position = { x = 40 y = 47 }
+					text = "XP - ### / #### give me colors"
+					maxWidth = 267
+					maxHeight = 53
+					fixedSize = yes
+					format = left
+				}
+
+				iconType = {
+					name = "xp_progress_bar"
+					position = { x = 13 y = 72 }
+					spriteType = "GFX_federation_xp_progressbar"
+					frame = 75
+					orientation = upper_left
+				}
+
+				## Needs Code - Perk Grid Box
+				containerWindowType = {
+					name = "levels_window"
+					position = { x = 13 y = 100}
+					size = { width= 1133 height= 147 }
+
+					#background = {
+					#name = "background"
+					#spriteType = "GFX_dark_area_cut"
+					#}
+
+					gridBoxType = {
+						name = "levels_grid_box"
+						position = { x = -3 y = -5 }
+						size = { width = 1133 height = 147 }
+						format = "UPPER_LEFT"
+						slotsize = { width = 227 height = 160 }
+						add_horizontal = yes
+						max_slots_horizontal = 5
+						max_slots_vertical = 1
+					}
+				}
+			}	
+
+			## Needs Code - Cohesion Bar
+			containerWindowType = {
+				name = "cohesion_window"
+				position = { x = 0 y = 307}
+				size = { width= 1160 height= 88 }
+				clipping = no
+
+				background = {
+					name = "background"
+					spriteType = "GFX_dark_area_cut"
+				}
+
+				iconType = {
+					name = "hex_bg"
+					spriteType = "GFX_hex_bg"
+					position = { x = -20 y = 0 }
+					alwaysTransparent = yes
+				}
+
+				instantTextBoxType={
+					name = "cohesion_title"
+					text = "FEDERATION_COHESION"
+					font = "malgun_goth_24"
+					position = { x = 20 y = 24 }
+					maxwidth = 267
+					maxheight = 44
+					fixedSize = yes
+				}
+
+				containerWindowType = {
+					name = "cohesion_bar_window"
+					position = { x = 320 y = 7}
+					size = { width= 275 height= 133 }
+
+					iconType = {
+						name = "cohesion_bar_bg"
+						spriteType = "GFX_federation_cohesion_bar_bg"
+						position = { x = 8 y = 47}
+						alwaysTransparent = yes
+					}
+
+					iconType = {
+						name = "cohesion_progress_positive"
+						position = { x = 0 y = 51 }
+						spriteType = "GFX_federation_cohesion_positive_progressbar"
+						frame = 50
+						orientation = upper_right
+					}
+
+					iconType = {
+						name = "cohesion_progress_negative"
+						position = { x = 12 y = 51 }
+						spriteType = "GFX_federation_cohesion_negative_progressbar"
+						frame = 25
+						orientation = upper_left
+					}
+
+					instantTextBoxType={
+						name = "xp_gain_value"
+						font = "cg_16b"
+						position = { x = 236 y = 73 }
+						text = "XP num"
+						maxWidth = 80
+						maxHeight = 53
+						fixedSize = yes
+						format = center
+					}
+
+					containerWindowType = {
+						name = "cohesion_infoBox"
+						position = { x = 27 y = 9 }
+						size = { width=400 height= 40 }
+
+						## NEEDS CODE  --- Cohesion: Cohesion Icon & num, Envoy Icon & num
+
+						iconType = {
+							name = "cohesion_icon"
+							quadTextureSprite = "GFX_cohesion_icon"
+							position = { x = 0 y = -1 }
+						}
+
+						instantTextBoxType={
+							name = "cohesion_number"
+							font = "cg_16b"
+							position = { x = 47 y = 8 }
+							text = "Cohesion Numer"
+							maxWidth = 80
+							maxHeight = 53
+							fixedSize = yes
+							format = left
+						}
+
+
+						iconType = {
+							name = "envoy_icon"
+							quadTextureSprite = "GFX_envoy_icon"
+							position = { x = 149 y = 0 }
+							scale = .85
+						}
+
+						instantTextBoxType={
+							name = "envoy_number"
+							font = "cg_16b"
+							position = { x = 187 y = 8 }
+							text = "Envoy Number"
+							maxWidth = 53
+							maxHeight = 33
+							fixedSize = yes
+							format = left
+						}
+					}
+					
+					iconType = {
+					name = "federation_progressBar_cohesion_centerPiece"
+					position = { x = 265 y = 40 }
+					quadTextureSprite = "GFX_federation_progressBar_cohesion_centerPiece"
+					alwaysTransparent = yes
+					}
+				}
+			}
+		}	
+
+
+		###<--------------Header (Members, Navy, Laws)---------->###
+		containerWindowType = {
+			name = "level_cohesion_window"
+			position = { x = 464 y = 67 } ##50
+			size = { width= 1147 height= 45 }
+
+			iconType = {
+						name = "header_bg"
+						quadTextureSprite = "GFX_levelCohesion_header_bg"
+						position = { x = 0 y = 0 }
+			}
+
+			instantTextBoxType={
+				name = "federation_level_short"
+				font = "cg_16b"
+				position = { x = 13 y = 11 }
+				text = "Fed lvl"
+				maxWidth = 80
+				maxHeight = 53
+				fixedSize = yes
+				format = center
+
+			}
+
+			containerWindowType = {
+				name = "cohesion_infoBox"
+				position = { x = 147 y = 3 }
+				size = { width=400 height= 40 }
+
+
+				## NEEDS CODE  --- Cohesion: Cohesion Icon & num, Envoy Icon & num
+
+				iconType = {
+					name = "cohesion_icon"
+					quadTextureSprite = "GFX_cohesion_icon"
+					position = { x = 0 y = 1 }
+					alwaysTransparent = yes
+				}
+
+				instantTextBoxType={
+					name = "cohesion_number"
+					font = "cg_16b"
+					position = { x = 47 y = 11 }
+					text = "Cohesion Numer"
+					maxWidth = 80
+					maxHeight = 53
+					fixedSize = yes
+					format = left
+				}
+
+
+				iconType = {
+					name = "envoy_icon"
+					quadTextureSprite = "GFX_envoy_icon"
+					position = { x = 140 y = 5 }
+					alwaysTransparent = yes
+					scale = .9
+				}
+
+				instantTextBoxType={
+					name = "envoy_number"
+					font = "cg_16b"
+					position = { x = 180 y = 11 }
+					text = "Envoy Number"
+					maxWidth = 80
+					maxHeight = 53
+					fixedSize = yes
+					format = left
+				}
+			}
+		}
+
+		###<--------------------MEMBERS UI------------>###
+		containerWindowType = {
+			name = "members_window"
+			position = { x = 464 y = 116 }
+			size = { width= 1153 height= 613 }
+
+			background = {
+				name = "background"
+				spriteType = "GFX_dark_area_cut"
+			}
+
+			
+
+			containerWindowType = {
+				name = "sort_buttons"
+				position = {  x = 11 y = 0 }
+				size = { width= 100% height= 35 }
+				moveable = yes
+
+				@sort_button_height = -7
+				
+				buttonType={
+					name = "name_button"
+					font = "cg_16b"
+					spriteType = "GFX_galactic_object_button"
+					buttonText = "ALLIANCE_AND_FEDERATION_VIEW_NAME"
+					position = { x = -13 y = 3 }
+					Orientation = UPPER_LEFT
+					pdx_tooltip = "ALLIANCE_AND_FEDERATION_VIEW_SORT_NAME"
+				}				
+
+				buttonType={
+					name = "economy_power_button"
+					font = "cg_16b"
+					spriteType = "GFX_button_75_24"
+					buttonText = "ALLIANCE_AND_FEDERATION_VIEW_ECONOMY_POWER"
+					position = { x = 352 y = @sort_button_height }
+					Orientation = UPPER_LEFT
+					pdx_tooltip = "ALLIANCE_AND_FEDERATION_VIEW_SORT_ECONOMY_POWER"
+				}
+
+				buttonType={
+					name = "fleet_power_button"
+					font = "cg_16b"
+					spriteType = "GFX_button_75_24"
+					buttonText = "ALLIANCE_AND_FEDERATION_VIEW_FLEET_POWER"
+					position = { x = 459 y = @sort_button_height }
+					Orientation = UPPER_LEFT
+					pdx_tooltip = "ALLIANCE_AND_FEDERATION_VIEW_SORT_FLEET_POWER"
+				}
+
+				buttonType={
+					name = "technology_power_button"
+					font = "cg_16b"
+					spriteType = "GFX_button_75_24"
+					buttonText = "ALLIANCE_AND_FEDERATION_VIEW_TECHNOLOGY_POWER"
+					position = { x = 565 y = @sort_button_height }
+					Orientation = UPPER_LEFT
+					pdx_tooltip = "ALLIANCE_AND_FEDERATION_VIEW_SORT_TECHNOLOGY_POWER"
+				}
+
+				buttonType={
+					name = "opinion_button"
+					font = "cg_16b"
+					spriteType = "GFX_button_95_24"
+					buttonText = "ALLIANCE_AND_FEDERATION_VIEW_OPINION"
+					position = { x = 672 y = @sort_button_height }
+					Orientation = UPPER_LEFT
+					pdx_tooltip = "ALLIANCE_AND_FEDERATION_VIEW_SORT_OPINION"
+				}
+
+				buttonType={
+					name = "diplomacy_button"
+					font = "cg_16b"
+					spriteType = "GFX_button_35_24"
+					#buttonText = "ALLIANCE_AND_FEDERATION_VIEW_OPINION"
+					position = { x = 805 y = @sort_button_height }
+					Orientation = UPPER_LEFT
+					#pdx_tooltip = "ALLIANCE_AND_FEDERATION_VIEW_SORT_OPINION"
+				}
+
+				iconType = {
+					name = "diplo_weight_icon"
+					quadTextureSprite = "GFX_diplomatic_weight_large"
+					scale = .80
+					position = { x = 828 y = 11 }
+					orientation = "UPPER_LEFT"
+					alwaysTransparent = yes
+				}	
+
+				buttonType={
+					name = "envoys_button"
+					font = "cg_16b"
+					spriteType = "GFX_button_35_24"
+					#buttonText = "ALLIANCE_AND_FEDERATION_VIEW_OPINION"
+					position = { x = 859 y = @sort_button_height }
+					Orientation = UPPER_LEFT
+					#pdx_tooltip = "ALLIANCE_AND_FEDERATION_VIEW_SORT_OPINION"
+				}
+
+				iconType = {
+					name = "envoy_icon"
+					quadTextureSprite = "GFX_envoy_icon"
+					position = { x = 885 y = 12 }
+					alwaysTransparent = yes
+					scale = .75
+				}
+
+				## NEEDS CODE
+				buttonType={
+					name = "ethics_button"
+					font = "cg_16b"
+					spriteType = "GFX_button_150_24"
+					buttonText = "ETHICS"
+					position = { x = 912 y = @sort_button_height }
+					Orientation = UPPER_LEFT
+					#pdx_tooltip = "ALLIANCE_AND_FEDERATION_VIEW_SORT_OPINION"
+				}
+				
+			}
+
+			### MEMBERS LIST ###
+
+			containerWindowType = {
+				name = "members_list_window"
+				size = { width = 1140 height = 560}
+				position = { x = 7 y = 45 }
+
+				#background = {
+				#	name ="alliance_and_federation_members_window_bg"
+				#	spriteType = "GFX_black_box_bg"
+				#	position = { x = 0 y = 0 }
+				#}
+
+				smoothListboxType = {
+					name = "members"
+					id = "members"
+					position = { x = 0 y = 0 }
+					size = { x = 1140 y = 560 }
+					scrollbarType = "standardlistbox_slider"
+					navDown = "leave_button"
+				}
+			}	
+		}
+
+		### <-----------FEDERATION FLEETS---------> ###
+		containerWindowType = {
+			name = "fleets_window"
+			position = { x = 464 y = 116 }
+			size = { width= 1153 height= 613 }
+
+			background = {
+				name = "background"
+				spriteType = "GFX_dark_area_cut"
+			}
+
+			
+
+			instantTextBoxType = {
+				name = "text"
+				font = "cg_16b"
+				text = "FEDERATION_VIEW_FLEET_TITLE"
+				position = { x = 27 y = 20 }
+				maxwidth = 400
+				maxheight = 43
+				tooltip_mode_enabled = yes
+			}
+
+			containerWindowType = {
+				name = "fleet_list_window"
+				size = { width = 843 height = 553 }
+				position = { x = 13 y = 47 }
+
+				background = {
+				name = "background"
+				spriteType = "GFX_dark_area_cut"
+			}
+				#buttonType = {
+				#	name ="bg"
+				#	spriteType = "GFX_black_box_bg"
+				#	position = { x = 0 y = 0 }
+				#	size = { x = 847 y = 605 }
+				#}
+
+				smoothListboxType = {
+					name = "fleet_list"
+					id = "fleet_list"
+					position = { x = 0 y = 0 }
+					size = { x = 827 y = 547 }
+					scrollbarType = "standardlistbox_slider"
+					navDown = "ship_designer"
+				}
+			}
+
+			buttonType={
+				name = "ship_designer_button"
+				id = "ship_designer"
+				font = "cg_16b"
+				spriteType = "GFX_standard_button_200_34_button"
+				buttonText = "FEDERATION_VIEW_SHIP_DESIGNER"
+				position = { x = -300 y = 35 }
+				orientation = upper_right
+				navUp = "fleet_list"
+			}
+		}
+		
+		### <-----------Laws UI---------> ###
+		containerWindowType = {
+			name = "laws_window"
+			position = { x = 464 y = 116 }
+			size = { width= 1153 height= 613 }
+			clipping = yes
+
+			background = {
+				name = "background"
+				spriteType = "GFX_dark_area_cut"
+			}
+
+			## NEEDS CODE 
+			containerWindowType = {
+				name = "laws_list_window"
+				size = { width = 1149 height = 605}
+				position = { x = 7 y = 0 }
+
+				smoothListboxType = {
+					name = "laws"
+					id = "laws"
+					position = { x = -7 y = 0 }
+					size = { x = 1139 y = 605 }
+					scrollbarType = "standardlistbox_slider"
+					##navDown = "leave_button"
+				}
+			}
+
+			containerWindowType = {
+				 name = "decision_scroll_horizontal_fade"
+				 position = { x = 5 y = 563}
+				 size = { width = 1128 height = 43}
+				 
+
+				 	background = {
+						name = "decision_horizontal_fade"
+						spriteType = "GFX_horizontal_fade"
+						alwaysTransparent = yes
+					}
+			}				
+		}	
+
+		########################
+		# THE TABS
+		########################
+
+		@tabHeight = -4
+		
+		buttonType = {
+			name = "tab_levels"
+			quadTextureSprite = "GFX_tab_1_inactive"
+			position = { x= -27 y = @tabHeight }
+			font = "cg_16b"
+			buttonText = "FEDERATION_VIEW_LEVELS_HEADER"
+			buttonFont = "cg_16b"
+			shortcut = "z"
+			clicksound = "tab_click"
+			Orientation = "LOWER_LEFT"
+		}
+		
+		buttonType = {
+			name = "tab_levels_active"
+			quadTextureSprite = "GFX_tab_1_active"
+			position = { x = -27 y = @tabHeight }
+			font = "cg_16b"
+			buttonText = "FEDERATION_VIEW_LEVELS_HEADER"
+			buttonFont = "cg_16b"
+			clicksound = "tab_click"
+			shortcut = "z"
+			Orientation = "LOWER_LEFT"
+		}
+		
+		buttonType = {
+			name = "tab_members"
+			quadTextureSprite = "GFX_tab_2_inactive"
+			position = { x= 145 y = @tabHeight }
+			font = "cg_16b"
+			buttonText = "FEDERATION_VIEW_MEMBERS_HEADER"
+			buttonFont = "cg_16b"
+			shortcut = "x"
+			clicksound = "tab_click"
+			Orientation = "LOWER_LEFT"
+		}
+		
+		buttonType = {
+			name = "tab_members_active"
+			quadTextureSprite = "GFX_tab_2_active"
+			position = { x = 145 y = @tabHeight }
+			font = "cg_16b"
+			buttonText = "FEDERATION_VIEW_MEMBERS_HEADER"
+			buttonFont = "cg_16b"
+			clicksound = "tab_click"
+			shortcut = "x"
+			Orientation = "LOWER_LEFT"
+		}
+
+		buttonType = {
+			name = "tab_fleets"
+			quadTextureSprite = "GFX_tab_2_inactive"
+			position = { x = 317 y = @tabHeight }
+			font = "cg_16b"
+			buttonText = "FEDERATION_VIEW_FLEETS_HEADER"
+			buttonFont = "cg_16b"
+			shortcut = "c"
+			clicksound = "tab_click"
+			Orientation = "LOWER_LEFT"
+		}
+		
+		buttonType = {
+			name = "tab_fleets_active"
+			quadTextureSprite = "GFX_tab_2_active"
+			position = { x = 317 y = @tabHeight }
+			font = "cg_16b"
+			buttonText = "FEDERATION_VIEW_FLEETS_HEADER"
+			buttonFont = "cg_16b"
+			clicksound = "tab_click"
+			shortcut = "c"
+			Orientation = "LOWER_LEFT"
+		}
+		
+		buttonType = {
+			name = "tab_laws"
+			quadTextureSprite = "GFX_tab_2_inactive"
+			position = { x= 489 y = @tabHeight }
+			font = "cg_16b"
+			buttonText = "FEDERATION_VIEW_LAWS_HEADER"
+			buttonFont = "cg_16b"
+			shortcut = "v"
+			clicksound = "tab_click"
+			Orientation = "LOWER_LEFT"
+		}
+		
+		buttonType = {
+			name = "tab_laws_active"
+			quadTextureSprite = "GFX_tab_2_active"
+			position = { x = 489 y = @tabHeight }
+			font = "cg_16b"
+			buttonText = "FEDERATION_VIEW_LAWS_HEADER"
+			buttonFont = "cg_16b"
+			clicksound = "tab_click"
+			shortcut = "v"
+			Orientation = "LOWER_LEFT"
+		}
+		
+		buttonType={
+			name = "assign_envoy_button"
+			id = "leave_button"
+			font = "cg_16b"
+			spriteType = "GFX_button_150_24"
+			position = { x = -1187 y =727 }
+			text = "ASSIGN_ENVOY"
+			orientation = upper_right
+		}
+		
+		buttonType={
+			name = "leave_federation_button"
+			id = "leave_button"
+			font = "cg_16b"
+			spriteType = "GFX_button_164_24"
+			position = { x = -253 y = 727 }
+			text = "FEDERATION_VIEW_LEAVE_FEDERATION"
+			orientation = upper_right
+		}
+	}
+
+	containerWindowType = {
+		name = "federation_member_entry"
+		position = { x=0 y=0 }
+		size = { width=1133 height=67 }
+
+		containerWindowType = {
+		name = "federation_entry_bg"
+		position = { x=5 y=7 }
+		size = { width=1127 height=60 }
+
+			background = {
+				name = "background"
+				spriteType = "GFX_dark_area_cut"
+
+			}
+		}
+
+		containerWindowType = {
+			name = "selected_overlay"
+			position = { x = 0 y = 0 }
+			size = { width = 100% height = 100% }
+			background = {
+				name = "selected_bg"
+				spriteType = "GFX_glow_tile_orange"
+				alwaysTransparent = yes
+			}
+		}
+
+		buttonType = {
+			name = "flag"
+			quadTextureSprite = "GFX_empire_flag_32"
+			position = { x= 13 y = 16  }
+		}
+		
+		iconType = {
+			name = "federation_leader_border"
+			quadTextureSprite = "GFX_federation_leader_border"
+			position = { x= 11 y = 13  }
+			alwaysTransparent = yes
+		}
+
+		instantTextBoxType={
+			name = "name"
+			font = "cg_16b"
+			maxWidth = 333
+			maxHeight = 33
+			position = { x = 67 y = @entry_memberName_height}
+			alwaysTransparent = yes
+			text_color_code = "E"
+			fixedSize = yes
+		}
+
+		instantTextBoxType={
+			name = "empire_type"
+			font = "cg_16b"
+			maxWidth = 333
+			maxHeight = 33
+			position = { x = 67 y = @entry_memberType_height }
+			text = "Despotic Hegemony"
+		}
+
+		instantTextBoxType={
+			name = "economy_power_amount"
+			font = "cg_16b"
+			maxWidth = 67
+			position = { x = 393 y = @entry_memberInfo_height }
+			format = center
+		}
+
+		instantTextBoxType={
+			name = "fleet_power_amount"
+			font = "cg_16b"
+			maxWidth = 67
+			position = { x = 500 y = @entry_memberInfo_height }
+			format = center
+		}
+
+		instantTextBoxType={
+			name = "technology_power_amount"
+			font = "cg_16b"
+			maxWidth = 67
+			position = { x = 607 y = @entry_memberInfo_height }
+			format = center
+		}
+		
+		instantTextBoxType={
+			name = "their_opinion"
+			font = "cg_16b"
+			text = "-"
+			maxWidth = 67
+			position = { x = 727 y = @entry_memberInfo_height }
+			format = center
+		}
+		
+		instantTextBoxType={
+			name = "diplomacy_weight"
+			font = "cg_16b"
+			text = "-"
+			maxWidth = 67
+			position = { x = 813 y = @entry_memberInfo_height }
+			format = center
+		}
+		
+		instantTextBoxType={
+			name = "envoys_count"
+			font = "cg_16b"
+			text = "-"
+			maxWidth = 67
+			position = { x = 869 y = @entry_memberInfo_height }
+			format = center
+		}
+		
+		overlappingElementsBoxType = {
+			name = "ethics"
+			position = { x = 973 y = 20 }
+			size = { x = 160 y = 43 }
+			spacing = 3
+			format = left
+			orientation = "UPPER_LEFT"
+		}
+	}
+
+	containerWindowType = {
+		name = "federation_fleet_entry"
+		position = { x = 0 y = 0 }
+		size = { width = 833 height = 59 }
+
+		buttonType = {
+			name = "button"
+			spriteType = "GFX_tiles_frame_light"
+			size = { x = 833 y = 64 }
+		}
+
+		containerWindowType = {
+			name = "selected_overlay"
+			position = { x = 0 y = 0 }
+			size = { width = 100% height = 100% }
+			background = {
+				name = "selected_bg"
+				spriteType = "GFX_glow_tile_orange"
+				alwaysTransparent = yes
+			}
+		}
+
+		iconType = {
+			name = "alliance_icon"
+			position = { x = 16 y = 13 }
+			spriteType = "GFX_ship_class_small"
+			frame = 16
+			scale = 1
+		}
+
+		instantTextBoxType={
+			name = "name"
+			font = "cg_16b"
+			maxWidth = 333
+			position = { x = 67 y = @entry_info_height }
+			alwaysTransparent = yes
+		}
+
+		instantTextBoxType = {
+			name = "hull_points"
+			position = { x = 407 y = @entry_info_height }
+			font = "cg_16b"
+			text = "10/10"
+			maxWidth = 93
+			maxHeight = 20
+			fixedSize = yes
+		}
+
+		instantTextBoxType = {
+			name = "fleet_size"
+			font = "cg_16b"
+			text = "?"
+			position = { x = 520 y = @entry_info_height }
+			maxWidth = 67
+			maxHeight = 27
+			fixedSize = yes
+			orientation = "UPPER_LEFT"
+			format = left
+			text_color_code = "H" 
+			alwaysTransparent = yes
+		}
+
+		instantTextBoxType = {
+			name = "offensive_power"
+			position = { x = 627 y = @entry_info_height }
+			font = "cg_16b"
+			maxWidth = 133
+			maxHeight = 27
+			text = "?"
+			alwaysTransparent = yes
+			fixedSize = yes
+			text_color_code = "H" 
+		}
+	}
+
+	containerWindowType = {
+		name = "federation_law_popup"
+		position = { x=-267 y=-288 }
+		size = { width = 800 height = 667 }
+		moveable = yes
+		Orientation = center
+		
+		background = {
+			name = "background"
+			quadTextureSprite ="GFX_tile_outliner_bg"
+		}
+
+		iconType = {
+			name = "hex_bg"
+			spriteType = "GFX_hex_center_bg"
+			position = { x = -367 y = 0 }
+			alwaysTransparent = yes
+			Orientation = "CENTER_UP"
+		}
+
+		iconType = {
+			name = "empire_header_line"
+			quadTextureSprite = "GFX_line_center"
+			position = { x = 27 y = 51 }
+		}
+		
+		buttonType = {
+			name = "AgreeButton"
+			quadTextureSprite = "GFX_standard_button_142_34_button"
+			position = { x = -233 y = -80 }
+			orientation = "LOWER_RIGHT"
+			buttonText = "YES"
+			buttonFont = "cg_16b"
+			actionShortcut = "accept"
+			shortcut = "RETURN"
+			clicksound = "button_senate_floor_propose_law"
+		}
+
+		buttonType = {
+			name = "DeclineButton"
+			quadTextureSprite = "GFX_standard_button_142_34_button"
+			position = { x = 16 y = -80 }
+			orientation = "LOWER_LEFT"
+			buttonText = "NO"
+			buttonFont = "cg_16b"
+			actionShortcut = "cancel"
+			clicksound = "back_click"
+		}
+		
+		instantTextBoxType = {
+			position = { x = 0 y = 27 }
+			name = "title"
+			font = "malgun_goth_24"
+			borderSize = {x = 0 y = 0 }	
+			maxWidth = 733
+			maxHeight = 27
+			text = ""	
+			orientation = "UPPER_LEFT"
+			format = centre
+		}
+
+		instantTextBoxType = {
+			name = "description"
+			font = "cg_16b"
+			format = center
+			orientation = center_up
+			maxWidth = 533
+			maxHeight = 0
+			position = { x = -267 y = 93 }
+			alwaysTransparent = yes
+		}
+
+		containerWindowType = {
+			name = "vote_breakdown"
+			position = { x=20 y=200 }
+			size = { width = 95% height = 387 }
+			
+			background = {
+				name = "breakdown_bg"
+				spriteType = "GFX_tiled_window_transparent"
+				alwaysTransparent = yes
+			}
+
+			containerWindowType = {
+				name = "vote_conditions_bg"
+				size = { width = 100% height = 45}
+				position = { x = 0 y = 0 }
+
+				background = {
+					name = "breakdown_bg"
+					spriteType = "GFX_dark_area_cut"
+					alwaysTransparent = yes
+				}
+			}
+
+			containerWindowType = {
+				name = "votes_list_bg"
+				size = { width = 100% height = 347}
+				position = { x = 0 y = 53 }
+
+				background = {
+					name = "breakdown_bg"
+					spriteType = "GFX_dark_area_cut"
+					alwaysTransparent = yes
+				}
+			}
+
+			instantTextBoxType = {
+				name = "vote_type_text"
+				font = "cg_16b"
+				text = "Voting: Majority"
+				format = left
+				maxWidth = 267
+				maxHeight = 40
+				position = { x = 24 y = 11 }
+				text_color_code = "E"
+				#alwaysTransparent = yes
+			}
+
+			instantTextBoxType = {
+				name = "vote_result_text"
+				font = "cg_16b"
+				text = "Votes: 2/5"
+				format = right
+				maxWidth = 267
+				maxHeight = 40
+				position = { x = -293 y = 11 }
+				orientation = upper_right
+				#alwaysTransparent = yes
+			}
+
+			instantTextBoxType = {
+				name = "vote_list_call_favors_title"
+				font = "cg_16b"
+				text = "CALL_IN_FAVOR_ICON"
+				format = right
+				maxWidth = 267
+				maxHeight = 40
+				position = { x = -533 y = 11 }
+				orientation = upper_right
+			}
+
+			smoothListBoxType = {
+				name = "voters_list"
+				position = { x = 20 y = 53 }
+				orientation = upper_left
+				size = { x = 733 y = 320 }
+				borderSize = { x = 0 y = 0 }
+				scrollbartype = "standardlistbox_slider"
+				alwaysTransparent = no
+			}
+		}
+	}
+
+	containerWindowType = {
+		name = "federation_law_voter_entry"
+		position = { x = 0 y = 0 }
+		size = { width = 720 height = 67 }
+		moveable = no
+
+		background = {
+			name = "entry_bg"
+			spriteType = "GFX_dark_area_cut"
+		}
+
+		buttonType = {
+			name = "flag"
+			quadTextureSprite = "GFX_empire_flag_32"
+			position = { x = 7 y = 13 }
+			orientation = upper_left
+		}
+
+		instantTextBoxType = {
+			name = "name"
+			font = "cg_16b"
+			text = "LONG EMPIRE NAAAAAAMEEEEEEEEEE"
+			format = left
+			maxWidth = 267
+			maxHeight = 40
+			position = { x = 53 y = 23 }
+			#alwaysTransparent = yes
+		}
+
+		buttonType = {
+			name = "decrease_favors"
+			quadTextureSprite = "GFX_button_left"
+			position = { x = -400 y = 0 }
+			clicksound = "click"
+			pdx_tooltip = "DECREASE_FAVOR_TOOLTIP"
+			orientation = upper_right
+		}
+
+		buttonType = {
+			name = "increase_favors"
+			quadTextureSprite = "GFX_button_right"
+			position = { x = -267 y = 0 }
+			clicksound = "click"
+			pdx_tooltip = "INCREASE_FAVOR_TOOLTIP"
+			orientation = upper_right
+		}	
+
+		instantTextBoxType={
+			name = "favors_amount"
+			font = "cg_16b"
+			position = { x = -347 y = 15 }
+			maxWidth = 80
+			maxHeight = 27
+			fixedSize = yes
+			text = "2/3"
+			format = center
+			orientation = upper_right
+		}
+
+		instantTextBoxType = {
+			name = "acceptance_text"
+			font = "cg_16b"
+			text = "-10000"
+			format = right
+			maxWidth = 67
+			maxHeight = 40
+			position = { x = -180 y = 23 }
+			#alwaysTransparent = yes
+			orientation = upper_right
+		}
+
+		iconType = {
+			name = "acceptance_icon"
+			quadTextureSprite = "GFX_alliance_vote_status"
+			position = { x = -87 y = 7  }
+			orientation = upper_right
+		}
+	}
+}

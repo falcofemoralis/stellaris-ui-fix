@@ -1,0 +1,51 @@
+guiTypes = {
+	containerWindowType = {
+		name = "pop_confirmation_dialog_gamepad"
+		position = { x=-267 y=-155 }
+		size = { width = 400 height = 267 }		
+		moveable = yes
+		orientation = center
+		
+		background = {
+			name = "background"	
+			quadTextureSprite ="gfx_message_bg"
+		}
+		
+		buttonType =
+		{
+			id = "AgreeButton"
+			name = "AgreeButton"
+			quadTextureSprite = "GFX_button_animated_265_34"
+			position = { x= 7 y = 13  }
+			Orientation = "UPPER_LEFT"
+			buttonFont = "cg_16b"
+			shortcut = "RETURN"
+			defaultSelection = yes
+			navDown = "AgreeAll"
+		}
+		
+		buttonType =
+		{
+			id = "AgreeAll"
+			name = "AgreeAll"
+			quadTextureSprite = "GFX_button_animated_265_34"
+			position = { x= 7 y = 80  }
+			Orientation = "UPPER_LEFT"
+			buttonFont = "cg_16b"
+			navDown = "DeclineButton"
+			navUp = "AgreeButton"
+		}			
+
+		buttonType =
+		{
+			id = "DeclineButton"
+			name = "DeclineButton"
+			quadTextureSprite = "GFX_button_animated_265_34"
+			position = { x= 7 y = 173  }
+			Orientation = "UPPER_LEFT"
+			buttonFont = "cg_16b"
+			actionShortcut = "cancel"
+			navUp = "AgreeAll"
+		}
+	}
+}

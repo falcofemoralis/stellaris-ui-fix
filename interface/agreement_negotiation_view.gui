@@ -1,0 +1,1391 @@
+guiTypes = {
+	#PRESET LIST
+	containerWindowType = {
+		name = "preset_dropdown_entry"
+		size = { width = 367 height = 55 }
+
+		background = {
+			name = "hitbox"
+			spriteType = "GFX_invisible"
+		}
+
+		buttonType = {
+			name = "bg"
+			spriteType = "GFX_bg_area_light"
+			size = { x = 367 y = 53 }
+			position = { x = 0 y = 0 }
+			alwaysTransparent = yes
+			clicksound = interface
+		}
+
+		containerWindowType = {
+			name = "selected_overlay"
+			position = { x = 0 y = 0 }
+			size = { width = 367 height = 53 }
+
+			background = {
+				name = "selected_bg"
+				spriteType = "GFX_glow_tile_orange_no_padding"
+				alwaysTransparent = yes
+			}
+		}
+
+        iconType = {
+            name = "icon"
+            spriteType = "GFX_pink_box"
+            position = { x = 16 y = 4 }
+            alwaysTransparent = yes
+        }
+
+		instantTextBoxType = {
+			name = "text"
+			font = "cg_16b"
+			maxWidth = 381
+			maxHeight = 53
+			position = { x = 0 y = 0 }
+			format = center
+			vertical_alignment = center
+			alwaysTransparent = yes
+			fixedSize = yes
+			text = ""
+		}
+	}
+
+	# The main negotiation view
+	containerWindowType = {
+		name = "agreement_negotiation_view"
+		position = { x = -904 y = -427 }
+		size = { width = 1691 height = 827 }
+		moveable = yes
+		orientation = center
+
+		background = {
+			name = "background"
+			quadTextureSprite ="GFX_tile_large_bg"
+		}
+
+		iconType = {
+			name = "hex_bg"
+			spriteType = "GFX_hex_bg"
+			position = { x = 7 y = -16 }
+			alwaysTransparent = yes
+		}
+
+		iconType = {
+			name = "window_header_line"
+			quadTextureSprite = "GFX_line_medium"
+			position = { x = 8 y = 31 }
+		}
+
+		instantTextBoxType = {
+			name = "header"
+			font = "malgun_goth_24"
+			text = "NEGOTIATE_TERMS"
+			position = { x = 40 y = 7 }
+			maxWidth = 747
+			maxHeight = 67
+			format = left
+		}
+
+		buttonType = {
+			name = "go_to_home_world"
+			quadTextureSprite = "GFX_fleetview_focus"
+			position = { x = -108 y = 21 }
+			Orientation = "UPPER_RIGHT"
+			pdx_tooltip = "ZOOM_TO_CAPITAL"
+			tooltip_mode_enabled = yes
+		}
+
+		buttonType = {
+			name = "close_button"
+			quadTextureSprite = "GFX_close_button_galaxy"
+			position = { x= -59 y = 21  }
+			Orientation = "UPPER_RIGHT"
+			shortcut = "ESCAPE"
+			pdx_tooltip = "CLOSE_TITLE"
+			clicksound = "back_click"
+		}
+
+		# AGREEMENT TERMS TITLE
+		instantTextBoxType = {
+			name = "terms_title"
+			font = "malgun_goth_24"
+			position = { x = 40 y = 64 }
+			text = "TERMS_HEADER"
+			maxWidth = 533
+			maxHeight = 32
+			format = LEFT
+			fixedsize = yes
+		}
+
+		#ALL TERMS LIST CONTAINER
+		containerWindowType = {
+			name = "preset_terms"
+			position = { x = 12 y = 101 }
+			size = { width = 1260 height = 713 }
+
+			background = {
+				name = "background"
+				spriteType = "GFX_tiles_dark_area_cut_8"
+			}
+
+			containerWindowType = {
+				name = "agreement_term_container"
+				position = { x = 9 y = 9 }
+				size = { width = 100% height = 100% }
+
+				smoothListBoxType = {
+					name = "agreement_term_list"
+					orientation = upper_left
+					spacing = 9
+					size = { x = 1228 y = 692 }
+					scrollbartype = "standardlistbox_slider"
+				}
+			}
+		}
+
+		containerWindowType = {
+			name = "specialist_empire_dropdown"
+			position = { x = -407 y = 101 }
+			size = { width = 395 height = 309 }
+			orientation = UPPER_RIGHT
+
+			background = {
+				name = "background"
+				spriteType = "GFX_tiles_frame_extra_light"
+			}
+
+			iconType = {
+				name = "preset_text_selected_hex_bg"
+				spriteType = "GFX_hex_bg_mirrored"
+				position = { x = 0 y = -120 }
+				centerPosition = yes
+				orientation = center
+			}
+
+			iconType = {
+				name = "preset_icon_selected"
+				spriteType = "GFX_pink_box"
+				position = { x = 23 y = 13 }
+				alwaysTransparent = yes
+			}
+
+			instantTextBoxType = {
+				name = "preset_text_selected"
+				font = "cg_16b"
+				text = "Bulwark" #Changed in code
+				maxWidth = 395
+				maxHeight = 59
+				position = { x = 0 y = 3 }
+				format = center
+				vertical_alignment = center
+			}
+
+			buttonType = {
+				name = "expand_button_background"
+				quadTextureSprite = "gfx_transparency_button"
+				size = { x = 395 y = 67 }
+				clicksound = "outliner_click_tab"
+				oversound = no_sound
+			}
+
+			iconType = {
+				name = "expand_icon"
+				quadTextureSprite = "GFX_entry_expand_collapse_arrow"
+				position = { x = 347 y = 13 }
+				frame = 2
+				alwaysTransparent = yes
+			}
+
+			smoothListBoxType = {
+				name = "specialist_dropdown_list"
+				orientation = upper_left
+				spacing = 7
+				position = { x = 7 y = 67 }
+				size = { x = 367 y = 239 }
+				scrollbartype = "standardlistbox_slider"
+			}
+
+			instantTextBoxType = {
+				name = "preset_flavor_text_selected"
+				font = "cg_16b"
+				text = ""
+				maxWidth = 352
+				maxHeight = 213
+				position = { x = 13 y = 80 }
+				text_color_code = "L"
+				scrollbartype = "standardtext_slider_small"
+			}
+
+		}
+
+		###### SUMMARY
+
+		containerWindowType = {
+			name = "summary box"
+			position = { x = -12 y = -12 }
+			size = { width = 395 height = 395 }
+			orientation = LOWER_RIGHT
+			origo = LOWER_RIGHT
+
+			containerWindowType = {
+				name = "summary box"
+				position = { x = 0 y = 0 }
+				size = { width = 117 height = 32 }
+
+				background = {
+					name = "background"
+					spriteType = "GFX_tiles_dark_area_cut_8"
+				}
+			}
+
+			instantTextBoxType={
+				name = "subject_title"
+				font = "cg_16b"
+				position = { x = 0 y = 5 }
+				text = "SUBJECT_TITLE_TEXT"
+				maxWidth = 117
+				maxHeight = 32
+				format = center
+			}
+
+			instantTextBoxType={
+				name = "overlord_title"
+				font = "cg_16b"
+				position = { x = 1 y = 5 }
+				text = "OVERLORD_TITLE_TEXT"
+				maxWidth = 117
+				maxHeight = 32
+				format = center
+			}
+
+			# EMPIRE PORTRAIT
+			containerWindowType = {
+				name = "target_country_info"
+				position = { x = 0 y = 32 }
+				size = { width = 400 height = 400 }
+
+				iconType = {
+					name = "target_country_portrait"
+					position = { x = 0 y = 11 }
+					quadTextureSprite = "GFX_portrait_gamesetup_mask"
+					alwaysTransparent = yes
+					scale = 0.311
+				}
+
+				iconType = {
+					name = "city_frame"
+					spriteType = "GFX_diplomacy_portrait_frame"
+					position = { x = -3 y = 8 }
+					alwaysTransparent = yes
+					scale = 0.311
+				}
+				# EMPIRE NAME
+				containerWindowType = {
+					name = "empire_name_container"
+					position = { x = 0 y = 80 }
+					size = { width = 400 height = 45 }
+					
+					# DECORATIVE ONLY
+					containerWindowType = {
+						name = "background"
+						position = { x = 27 y = 24 }
+						size = { width = 360 height = 32 }
+
+						background = {
+							name = "bg"
+							spriteType = "GFX_tile_dark_cut"
+						}
+					}
+
+					buttonType = {
+						name = "target_country_flag"
+						quadTextureSprite = "GFX_empire_flag_32"
+						position = { x= 7 y = 17 }
+						orientation = UPPER_LEFT
+						oversound = no_sound
+					}
+
+					instantTextBoxType={
+						name = "target_country_name"
+						font = "malgun_goth_24"
+						position = { x = 53 y = 21 }
+						maxWidth = 331
+						maxHeight = 43
+						format = LEFT
+						text_color_code = "E"
+					}
+				}
+			}
+
+			#LOYALTY INDICATOR CONTAINERS IN SUMMARY
+			containerWindowType = {
+				name = "old_loyalty_container"
+				position = { x = 0 y = 189 }
+				size = { width = 100% height = 67 }
+
+				# DECORATIVE ONLY
+				containerWindowType = {
+					name = "background"
+					position = { x = 0 y = 0 }
+					size = { width = 100% height = 48 }
+
+					background = {
+						name = "background"
+						spriteType = "GFX_tiles_dark_area_cut_8"
+					}
+				}
+
+				containerWindowType = {
+					name = "old_loyalty"
+					position = { x = 104 y = 8}
+
+					iconType = {
+						name = "old_loyalty_icon"
+						spriteType = "GFX_loyalty_icon"
+						position = { x = 0 y = 0 }
+						tooltip = "LOYALTY_BREAKDOWN_HEADER_OLD"
+					}
+
+					instantTextBoxType = {
+						name = "old_loyalty_value"
+						font = "cg_16b"
+						text = "-200"
+						position = { x = 37 y = 4 }
+						maxWidth = 53
+						maxHeight = 48
+						format = left
+						tooltip = "LOYALTY_BREAKDOWN_HEADER_OLD"
+					}
+				}
+
+				containerWindowType = {
+					name = "old_monthly_loyalty"
+					position = { x = 227 y = 8 }
+
+					iconType = {
+						name = "old_monthly_loyalty_icon"
+						spriteType = "GFX_loyalty_icon"
+						position = { x = 0 y = 0 }
+					}
+
+					iconType = {
+						name = "monthly_clock_overlay"
+						position = { x = -5 y = -7 }
+						quadTextureSprite = "GFX_timed_overlay"
+						alwaystransparent = yes
+					}
+
+					instantTextBoxType = {
+						name = "old_monthly_loyalty_value"
+						font = "cg_16b"
+						text = "-200"
+						position = { x = 37 y = 4 }
+						maxWidth = 53
+						maxHeight = 21
+						format =left
+					}
+				}
+
+				iconType = {
+					name = "transition_arrows"
+					spriteType = "GFX_transition_arrows"
+					position = { x = 0 y = 33 }
+					centerPosition = yes
+					orientation = center
+				}
+			}
+
+			containerWindowType = {
+				name = "new_loyalty_container"
+				position = { x = 0 y = 276 }
+				size = { width = 100% height = 61 }
+
+				background = {
+					name = "background_glow"
+					spriteType = "GFX_glow_tile_cyan"
+				}
+
+				background = {
+					name = "background"
+					spriteType = "GFX_no_highlight_tile"
+				}
+
+				# NEW MAIN LOYALTY
+				containerWindowType = {
+					name = "new_loyalty"
+					position = { x = 96 y = 7 }
+					
+					iconType = {
+						name = "new_loyalty_icon"
+						spriteType = "GFX_loyalty_icon_large"
+						position = { x = 0 y = 0 }
+					}
+
+					instantTextBoxType = {
+						name = "new_loyalty_value"
+						font = "cg_16b"
+						text = "-200"
+						position = { x = 45 y = 13 }
+						maxWidth = 53
+						maxHeight = 21
+						format = left
+					}
+				}
+
+				# NEW MONTHLY LOYALTY
+				containerWindowType = {
+					name = "new_monthly_loyalty"
+					position = { x = 219 y = 7 }
+
+					iconType = {
+						name = "new_monthly_loyalty_icon"
+						spriteType = "GFX_loyalty_icon_large"
+						position = { x = 0 y = 0 }
+					}
+
+					iconType = {
+						name = "monthly_clock_overlay"
+						position = { x = 3 y = 3 }
+						quadTextureSprite = "GFX_timed_overlay"
+						alwaystransparent = yes
+					}
+
+					instantTextBoxType = {
+						name = "new_monthly_loyalty_value"
+						font = "cg_16b"
+						text = "-200"
+						position = { x = 45 y = 13 }
+						maxWidth = 53
+						maxHeight = 21
+						format = left
+					}
+				}
+			}
+
+			# RESET, PROCEED, END AGREEMENT BUTTONS
+			buttonType = {
+				name = "reset_terms_button"
+				quadTextureSprite = "GFX_galaxy_tab"
+				font = "cg_16b"
+				position { x = -16 y = 333 }
+				buttonText = "reset_to_selected_preset"
+				pdx_tooltip = "RESET_TERMS_TOOLTIP"
+			}
+
+			buttonType ={
+				name ="confirm_button"
+				quadTextureSprite = "GFX_standard_button_180_34_button"
+				font = "cg_16b"
+				position = { x = 139  y = 333 }
+				buttonText = "PROCEED"
+			}
+
+			buttonType = {
+				name = "end_agreement_button"
+				quadTextureSprite = "GFX_standard_button_200_24"
+				font = "cg_16b"
+				position = { x = 112 y = -7 }
+				buttonText = "END_AGREEMENT"
+			}
+		
+			iconType = {
+				name = "ai_acceptance_icon"
+				spriteType = "GFX_ai_acceptance"
+				position = { x = 352 y = 355 }
+				scale = 0.6
+				frame = 1
+			}
+		}
+	}
+
+	# Template for a single discrete term (inside agreement_term_grid)
+	# SUBJECT INTEGRATION, DIPLOMATIC FREEDOM ETC
+	containerWindowType = {
+		name = "agreement_term_entry"
+		size = { width = 1227 height = 56 }
+		position = { x = 0 y = 0 }
+
+		background = {
+			name = "background"
+			spriteType = "GFX_tiles_dark_area_cut_8"
+		}
+
+		buttonType = {
+			name = "expand_button"
+			quadTextureSprite = "GFX_tiled_window_transparent"
+			size = { x = 1227 y = 56 }
+			position = { x = 0 y = 0 }
+			clicksound = "outliner_click_tab"
+			oversound = no_sound
+		}
+
+		instantTextBoxType = {
+			name = "term_entry_text"
+			font = "cg_16b"
+			text = "AN_ENTRY"
+			position = { x = 19 y = 16 }
+			maxWidth = 400
+			maxHeight = 21
+			format = left
+		}
+
+		containerWindowType = {
+			name = "agreement_term_loyalty_impact"
+			position = { x = 971 y = 5 }
+			size = { width = 200 height = 45 }
+
+			background = {
+				name = "background"
+				spriteType = "GFX_tiles_dark_area_cut_8"
+			}
+
+			containerWindowType = {
+				name = "loyalty_impact"
+				position = { x = 0 y = 0 }
+
+				iconType = {
+					name = "loyalty_icon"
+					spriteType = "GFX_loyalty_icon"
+					position = { x = 27 y = 23 }
+					centerPosition = yes
+					alwaysTransparent = no
+					tooltip = "LOYALTY_IMPACT_PER_AGREEMENT_TERM"
+				}
+
+				instantTextBoxType = {
+					name = "term_loyalty_impact_value"
+					font = "cg_16b"
+					text = "-100"
+					position = { x = 47 y = 12 }
+					maxWidth = 53
+					maxHeight = 45
+					format = left
+					tooltip = "LOYALTY_IMPACT_PER_AGREEMENT_TERM"
+				}
+			}
+
+			containerWindowType = {
+				name = "monthly_loyalty_impact"
+				position = { x = 120 y = 0 }
+				size = { width = 240 height = 45 }
+
+				iconType = {
+					name = "monthly_loyalty_icon"
+					position = { x = 0 y = 23 }
+					spriteType = "GFX_loyalty_icon"
+					centerPosition = yes
+					tooltip = "LOYALTY_IMPACT_PER_AGREEMENT_TERM"
+				}
+
+				iconType = {
+					name = "monthly_clock_overlay"
+					position = { x = -21 y = 0 }
+					quadTextureSprite = "GFX_timed_overlay"
+					alwaystransparent = yes
+					tooltip = "LOYALTY_IMPACT_PER_AGREEMENT_TERM"
+				}
+				
+				instantTextBoxType = {
+					name = "term_monthly_loyalty_impact_value"
+					font = "cg_16b"
+					position = { x = 20 y = 12 }
+					text = "105.75"
+					maxWidth = 67
+					maxHeight = 45
+					format = left
+					tooltip = "MONTHLY_LOYALTY_IMPACT_PER_AGREEMENT_TERM"
+				}
+			}
+		}
+
+		iconType = {
+			name = "expand_icon"
+			quadTextureSprite = "GFX_entry_expand_collapse_arrow"
+			position = { x = 1179 y = 11 }
+			frame = 1
+			alwaysTransparent = yes
+		}
+
+		containerWindowType = {
+			name = "term_value_grid_container"
+			position = { x = 8 y = 67 }
+			size = { width = 1227 height = 0 }
+
+			gridBoxType = {
+				name = "term_value_grid"
+				position = { x = 0 y = 0 }
+				slotSize = { width = 304 height = 60 }
+				padding = { left = 0 bottom = 6 top = 0 }
+				max_slots_horizontal = 4
+				format = "UPPER_LEFT"
+			}
+		}
+	}
+
+	# Template for a single discrete number term (inside agreement_term_grid)
+	# HOLDINGS LIMIT
+	containerWindowType = {
+		name = "agreement_term_number_entry"
+		size = { width = 1227 height = 56 }
+		position = { x = 0 y = 0 }
+
+		background = {
+			name = "background"
+			spriteType = "GFX_tiles_dark_area_cut_8"
+		}
+
+		buttonType = {
+			name = "expand_button"
+			quadTextureSprite = "GFX_tiled_window_transparent"
+			size = { x = 1227 y = 56 }
+			position = { x = 0 y = 0 }
+			clicksound = "outliner_click_tab"
+			oversound = no_sound
+		}
+
+		instantTextBoxType = {
+			name = "term_entry_text"
+			font = "cg_16b"
+			text = "AN_ENTRY"
+			position = { x = 19 y = 16 }
+			maxWidth = 400
+			maxHeight = 21
+			format = left
+		}
+
+		containerWindowType = {
+			name = "agreement_term_loyalty_impact"
+			position = { x = 971 y = 5 }
+			size = { width = 200 height = 45 }
+
+			background = {
+				name = "background"
+				spriteType = "GFX_tiles_dark_area_cut_8"
+			}
+
+			containerWindowType = {
+				name = "loyalty_impact"
+				position = { x = 0 y = 0 }
+
+				iconType = {
+					name = "loyalty_icon"
+					spriteType = "GFX_loyalty_icon"
+					position = { x = 27 y = 23 }
+					centerPosition = yes
+					alwaysTransparent = no
+				}
+
+				instantTextBoxType = {
+					name = "term_loyalty_impact_value"
+					font = "cg_16b"
+					text = "-100"
+					position = { x = 47 y = 12 }
+					maxWidth = 53
+					maxHeight = 45
+					format = left
+					tooltip = "LOYALTY_IMPACT_PER_AGREEMENT_TERM"
+				}
+			}
+
+			containerWindowType = {
+				name = "monthly_loyalty_impact"
+				position = { x = 120 y = 0 }
+				size = { width = 240 height = 45 }
+
+				iconType = {
+					name = "monthly_loyalty_icon"
+					position = { x = 0 y = 23 }
+					spriteType = "GFX_loyalty_icon"
+					centerPosition = yes
+				}
+
+				iconType = {
+					name = "monthly_clock_overlay"
+					position = { x = -21 y = 0 }
+					quadTextureSprite = "GFX_timed_overlay"
+					alwaystransparent = yes
+				}
+				
+				instantTextBoxType = {
+					name = "term_monthly_loyalty_impact_value"
+					font = "cg_16b"
+					position = { x = 20 y = 12 }
+					text = "105.75"
+					maxWidth = 67
+					maxHeight = 45
+					format = left
+					tooltip = "MONTHLY_LOYALTY_IMPACT_PER_AGREEMENT_TERM"
+				}
+			}
+		}
+
+		iconType = {
+			name = "expand_icon"
+			quadTextureSprite = "GFX_entry_expand_collapse_arrow"
+			position = { x = 1179 y = 11 }
+			frame = 1
+			alwaysTransparent = yes
+		}
+
+		containerWindowType = {
+			name = "term_value_grid_container"
+			position = { x = 0 y = 64 }
+			size = { width = 1133 height = 0 }
+
+			gridBoxType = {
+				name = "term_value_grid"
+				position = { x = 8 y = 0 }
+				slotSize = { width = 72 height = 37 }
+				padding = { left = 0 bottom = 6 top = 0 }
+				max_slots_horizontal = 10
+				format = "UPPER_LEFT"
+			}
+		}
+	}
+
+
+	containerWindowType = {
+		name = "agreement_term_specialist_entry"
+		position = { x = 0 y = 5 }
+		size = { width = 1227 height = 200 }
+
+		background = {
+			name = "background"
+			spriteType = "GFX_tiles_dark_area_cut_8"
+		}
+
+		buttonType = {
+			name = "expand_button"
+			quadTextureSprite = "GFX_tiled_window_transparent"
+			size = { x = 1227 y = 56 }
+			position = { x = 0 y = 0 }
+			clicksound = "outliner_click_tab"
+			oversound = no_sound
+		}
+
+		instantTextBoxType = {
+			name = "term_entry_text"
+			font = "cg_16b"
+			text = "AN_ENTRY"
+			position = { x = 19 y = 16 }
+			maxWidth = 400
+			maxHeight = 21
+			format = left
+		}
+
+		containerWindowType = {
+			name = "term_value_grid_container"
+			position = { x = 0 y = 60 }
+			size = { width = 1133 height = 200 }
+
+			gridBoxType = {
+				name = "term_value_grid"
+				position = { x = 13 y = 3 }
+				slotSize = { width = 560 height = 80 }
+				padding = { left = 2 bottom = 5 }	
+				max_slots_horizontal = 2
+				format = "UPPER_LEFT"
+			}
+		}
+
+		iconType = {
+			name = "expand_icon"
+			quadTextureSprite = "GFX_entry_expand_collapse_arrow"
+			position = { x = 1179 y = 11 }
+			frame = 1
+			alwaysTransparent = yes
+		}
+	}
+
+	# Template for a single resource contribution term (inside agreement_term_grid)
+	containerWindowType = {
+		name = "agreement_term_resource_entry"
+		size = { width = 1227 height = 56 }
+
+		background = {
+			name = "background"
+			spriteType = "GFX_tiles_dark_area_cut_8"
+		}
+
+		buttonType = {
+			name = "expand_button"
+			quadTextureSprite = "GFX_tiled_window_transparent"
+			size = { x = 1227 y = 56 }
+			position = { x = 0 y = 0 }
+			clicksound = "outliner_click_tab"
+			oversound = no_sound
+		}
+
+		instantTextBoxType = {
+			name = "term_entry_text"
+			font = "cg_16b"
+			text = "AN_ENTRY"
+			position = { x = 19 y = 16 }
+			maxWidth = 400
+			maxHeight = 21
+			format = left
+		}
+
+		containerWindowType = {
+			name = "agreement_term_loyalty_impact"
+			position = { x = 971 y = 5 }
+			size = { width = 200 height = 45 }
+
+			background = {
+				name = "background"
+				spriteType = "GFX_tiles_dark_area_cut_8"
+			}
+
+			containerWindowType = {
+				name = "loyalty_impact"
+				position = { x = 0 y = 0 }
+
+				iconType = {
+					name = "loyalty_icon"
+					spriteType = "GFX_loyalty_icon"
+					position = { x = 27 y = 23 }
+					centerPosition = yes
+					alwaysTransparent = no
+				}
+
+				instantTextBoxType = {
+					name = "term_loyalty_impact_value"
+					font = "cg_16b"
+					text = "-100"
+					position = { x = 47 y = 12 }
+					maxWidth = 53
+					maxHeight = 45
+					format = left
+					tooltip = "LOYALTY_IMPACT_PER_AGREEMENT_TERM"
+				}
+			}
+
+			containerWindowType = {
+				name = "monthly_loyalty_impact"
+				position = { x = 120 y = 0 }
+				size = { width = 240 height = 45 }
+
+				iconType = {
+					name = "monthly_loyalty_icon"
+					position = { x = 0 y = 23 }
+					spriteType = "GFX_loyalty_icon"
+					centerPosition = yes
+				}
+
+				iconType = {
+					name = "monthly_clock_overlay"
+					position = { x = -21 y = 0 }
+					quadTextureSprite = "GFX_timed_overlay"
+					alwaystransparent = yes
+				}
+				
+				instantTextBoxType = {
+					name = "term_monthly_loyalty_impact_value"
+					font = "cg_16b"
+					position = { x = 20 y = 12 }
+					text = "105.75"
+					maxWidth = 67
+					maxHeight = 45
+					format = left
+					tooltip = "MONTHLY_LOYALTY_IMPACT_PER_AGREEMENT_TERM"
+				}
+			}
+		}
+
+		iconType = {
+			name = "expand_icon"
+			quadTextureSprite = "GFX_entry_expand_collapse_arrow"
+			position = { x = 1179 y = 11 }
+			frame = 1
+			alwaysTransparent = yes
+		}
+
+		containerWindowType = {
+			name = "term_value_grid_container"
+			position = { x = 0 y = 60 }
+			size = { width = 1173 height = 0 }
+
+			gridBoxType = {
+				name = "term_value_grid"
+				position = { x = 8 y = 0 }
+				slotSize = { width = 609 height = 80 }
+				padding = { left = 0 bottom = 6 }	
+				max_slots_horizontal = 2
+				format = "UPPER_LEFT"
+			}
+		}
+	}
+
+	# Template for discrete term value inside term_value_grid
+	containerWindowType = {
+		name = "discrete_term_value_entry"
+		position = { x = 0 y = 0 }
+		size = { width = 299 height = 60 }
+
+#		background = {
+#			name = "background"
+#			quadTextureSprite = "GFX_term_toggle_button_large"
+#			frame = 1
+#		}
+#
+#		containerWindowType = {
+#			name = "selected_overlay"
+#			position = { x = 0 y = 0 }
+#			size = { width = 100% height = 100% }
+#
+#			background = {
+#				name = "selected_bg"
+#				quadTextureSprite = "GFX_term_toggle_button_large"
+#				frame = 2
+#				alwaysTransparent = yes
+#			}
+#		}
+
+		background = {
+			name = "background"
+			spriteType = "GFX_subjugation_btn_selection_off"
+			#size = { x = 285 y = 59 }
+			#position = { x = 7 y = 0 }
+			#oversound = no_sound
+			#clicksound = select_click
+		}
+
+        containerWindowType = {
+            name = "selected_overlay"
+            position = { x = 0 y = 0 }
+            size = { width = 299 height = 60 }
+            background = {
+				name = "selected_bg"
+				spriteType = "GFX_subjugation_btn_selection_on"
+				alwaysTransparent = yes
+			}
+        }
+
+		instantTextBoxType = {
+			name = "term_value_entry_text"
+			font = "cg_16b"
+			text = "A_TERM_VALUE_ENTRY"
+			position = { x = 0 y = 0 }
+			maxWidth = 299
+			maxHeight = 60
+			format = center
+			vertical_alignment = center
+			fixedSize = yes
+		}
+	}
+
+	# Template for discrete number term value inside term_value_grid
+	containerWindowType = {
+		name = "discrete_number_term_value_entry"
+		position = { x = 0 y = 0 }
+		size = { width = 67 height = 37 }
+
+		background = {
+			name = "background"
+			spriteType = "GFX_subjugation_btn_selection_off"
+		}
+
+        containerWindowType = {
+            name = "selected_overlay"
+            position = { x = 0 y = 0 }
+            size = { width = 67 height = 37 }
+            background = {
+				name = "selected_bg"
+				spriteType = "GFX_subjugation_btn_selection_on"
+				alwaysTransparent = yes
+			}
+        }
+
+		instantTextBoxType = {
+			name = "term_value_entry_text"
+			font = "cg_16b"
+			text = "A_TERM_VALUE_ENTRY"
+			position = { x = 0 y = 0 }
+			maxWidth = 67
+			maxHeight = 37
+			format = center
+			vertical_alignment = center
+			fixedSize = yes
+		}
+	}
+
+	# Template for resource term value inside term_value_grid
+	# RESOURCE CONTRIBUTION
+	containerWindowType = {
+		name = "resource_term_value_entry"
+		position = { x = 0 y = 0 }
+		size = { width = 601 height = 75 }
+
+		background = {
+			name = "background"
+			spriteType = "GFX_resource_contribution_bg"
+			alwaysTransparent = yes
+		}
+
+		# Uncomment if separate text/resource_icons are 
+		# instantTextBoxType = {
+		# 	name = "term_value_entry_text"
+		# 	font = "cg_16b"
+		# 	text = "A_TERM_VALUE_ENTRY"
+		# 	position = { x = 7 y = 7 }
+		# 	maxWidth = 267
+		# 	maxHeight = 21
+		# 	format = left
+		# 	text_color_code = "Y"
+		# }
+
+		# instantTextBoxType={
+		# 	name = "term_value_entry_resource_icons"
+		# 	font = "cg_16b"
+		# 	text = "XXX"
+		# 	position = { x = 113 y = 7 }
+		# 	maxWidth = 180
+		# 	maxHeight = 56
+		# 	format = left
+		# 	text_color_code = "Y"
+		# }
+
+		instantTextBoxType={
+			name = "term_value_entry_text_and_resource_icons"
+			font = "cg_16b"
+			text = "A_TERM_VALUE_ENTRY"
+			position = { x = 9 y = 8 }
+			maxWidth = 267
+			maxHeight = 27
+			format = left
+			text_color_code = "W"
+		}
+
+		instantTextBoxType = {
+			name = "resource_value"
+			font = "cg_16b"
+			text = "XXXX"
+			position = { x = 496 y = 8 }
+			maxWidth = 93
+			maxHeight = 27
+			format = right
+			text_color_code = "E"
+		}
+
+		scrollbartype = {
+			id = "num_resource_slider"
+			name = "resource_slider"
+			slider = "scrollbar_SliderButton"
+			track = "scrollbar_TrackButton"
+			leftbutton = "scrollbar_upButton"
+			rightbutton = "scrollbar_downButton"
+			size = {x = 599 y = 25 }
+			position = { x = 0 y = 37 }
+			#priority = 100
+			borderSize = {x = 0 y = 0 }
+			maxValue = 0.75
+			minValue = -0.75
+			stepSize = 0.15
+			startValue = 0
+			horizontal = 1
+			snappoint_center = "scrollbar_snappoint_center"
+			snappoint = "scrollbar_snappoint"
+
+			guiButtonType = {
+				name = "scrollbar_SliderButton"
+				quadTextureSprite = "GFX_na_settings_scroll_dragger"
+				tooltip = ""
+				tooltipText =""
+				delayedTooltipText = ""
+				position = { x = 0 y = 0 }
+			}
+
+			guiButtonType = {
+				name = "scrollbar_TrackButton"
+				quadTextureSprite = "GFX_na_scrollbar_track"
+				position = { x = 0 y = 0 }
+			}
+
+			guiButtonType = {
+				name = "scrollbar_upButton"
+				quadTextureSprite = "GFX_na_scrollbar_left_button"
+				position = { x = 0 y = 0 }
+			}
+
+			guiButtonType = {
+				name = "scrollbar_downButton"
+				quadTextureSprite = "GFX_na_scrollbar_right_button"
+				position = { x = 0 y = 0 }
+			}
+
+			iconType = {
+				name = "scrollbar_snappoint_center"
+				spriteType = "GFX_na_scroll_snap_point_center"
+				position = { x = 0 y = 0 }
+				alwaysTransparent = yes
+			}
+
+			guiButtonType = {
+				name = "scrollbar_snappoint"
+				quadTextureSprite = "GFX_na_scroll_snap_point"
+				position = { x = 0 y = 0 }
+				alwaysTransparent = yes
+			}			
+		}
+	}
+
+	containerWindowType = {
+		name = "specialist_term_value_entry"
+		position = { x = 0 y = 7 }
+		size = { width = 1227 height = 228 }
+
+		containerWindowType = {
+			name = "subject_type_label"
+			position = { x = 0 y = 0 }
+			size = { width = 204 height = 173 }
+
+			iconType = {
+				name = "hex_bg"
+				spriteType = "GFX_hex_bg_mirrored"
+				position = { x = 0 y = 53 }
+				centerPosition = yes
+				orientation = center
+			}
+			iconType = {
+				name = "subject_info_specialist_icon_big"
+				spriteType = "GFX_overlord_specialty_big" # Changed in code
+				position = { x = 0 y = -13 }
+				centerPosition = yes
+				orientation = center
+			}
+
+			instantTextBoxType = {
+				name = "subject_info_specialist_name"
+				position = { x = 0 y = 128 }
+				font = "cg_16b"
+				maxWidth = 204
+				maxHeight = 21
+				fixedSize = yes
+				format = center
+				text = "Specialist title" # Changed in code
+				text_color_code = "E"
+			}
+
+			iconType = {
+				name = "line_title"
+				spriteType = "GFX_header_line_mirrored"
+				position = { x = 0 y = 75 }
+				centerPosition = yes
+				orientation = center
+				scale = 0.7
+			}
+		}
+
+		# Specialist leveling GUI
+		# Note: If you change things here,
+		# then you might need to change it in the galaxy view too.
+		containerWindowType = {
+			name = "specialist_levels_container"
+			position = { x = 187 y = -13 }
+			size = { width = 237 height = 205 }
+			clipping = no
+
+			containerWindowType = {
+				name = "background_container"
+				position = { x = 1 y = 0 }
+				size = { width = 172 height = 100%  }
+				orientation = lower_right
+				origo = lower_right
+			}
+
+			#instantTextBoxType = { 
+			#	name = "specialist_level_current_level"
+			#	text = "Tier: X" # Changed in code
+			#	font = "cg_16b"
+			#	position = { x = -123 y = 32 }
+			#	maxWidth = 133
+			#	maxHeight = 27
+			#	format = LEFT
+			#}
+
+			gridBoxType = {
+				name = "specialist_levels_grid"
+				position = { x = 0 y = 0 }
+				slotSize = { width = 59 height = 76 }			
+				max_slots_horizontal = 1
+				max_slots_vertical = 3
+				format = "UPPER_LEFT"
+			}
+		}
+
+		# Breakdown of properties for chosen type
+		containerWindowType = {
+			name = "subject_properties_breakdown"
+			position = { x = 485 y = -13 }
+			size = { width = 356 height = 240 }
+
+			background = {
+				name = "background"
+				spriteType = "GFX_resource_contribution_bg"
+				alwaysTransparent = yes
+			}
+
+			iconType = {
+				name = "hex_bg"
+				spriteType = "GFX_hex_bg"
+				position = { x = 0 y = -13 }
+				alwaysTransparent = yes
+			}
+			
+			buttonType = {
+				name = "subject_country_flag"
+				quadTextureSprite = "GFX_empire_flag_32"
+				position = { x= 7 y = 8 }
+				orientation = UPPER_LEFT
+				oversound = no_sound
+			}
+			
+			instantTextBoxType = {
+				name = "subject_gets"
+				font = "cg_16b"
+				text_color_code = "E"
+				position = { x = 51 y = 17 }
+				maxWidth = 296
+				maxHeight = 40
+				format = left
+			}
+			
+			instantTextBoxType = {
+				name = "subject_gets_desc"
+				font = "cg_16b"
+				text_color_code = "W"
+				text = "empire_modifier"
+				position = { x = 11 y = 53 }
+				maxWidth = 335
+				maxHeight = 40
+				format = left
+			}
+		}
+		
+		# Breakdown of properties for chosen type
+		containerWindowType = {
+			name = "overlord_properties_breakdown"
+			position = { x = 849 y = -13 }
+			size = { width = 356 height = 240 }
+
+			background = {
+				name = "background"
+				spriteType = "GFX_resource_contribution_bg"
+				alwaysTransparent = yes
+			}
+
+			iconType = {
+				name = "hex_bg"
+				spriteType = "GFX_hex_bg"
+				position = { x = 0 y = -13 }
+				alwaysTransparent = yes
+			}
+			
+			buttonType = {
+				name = "overlord_country_flag"
+				quadTextureSprite = "GFX_empire_flag_32"
+				position = { x= 7 y = 8 }
+				orientation = UPPER_LEFT
+				oversound = no_sound
+			}
+			
+			instantTextBoxType = {
+				name = "overlord_gets"
+				font = "cg_16b"
+				text_color_code = "E"
+				position = { x = 51 y = 17 }
+				maxWidth = 296
+				maxHeight = 40
+				format = left
+			}
+			
+			instantTextBoxType = {
+				name = "overlord_gets_desc"
+				font = "cg_16b"
+				text_color_code = "W"
+				text = "empire_modifier"
+				position = { x = 11 y = 53 }
+				maxWidth = 335
+				maxHeight = 40
+				format = left
+			}
+		}
+	}
+	
+	# Template for the box for a single specialist tier
+	# Note: If you change things here,
+	# then you might need to change it in the galaxy view too.
+	containerWindowType = {
+		name = "agreement_negotiation_specialist_level_entry"
+		position = { x = 43 y = 13 }
+		size = { width = 35 height = 35 }
+
+		containerWindowType = {
+			name = "specialist_perks_mouse_hover_box"
+			position = { x = 0 y = 0 }
+			size = { width = 0 height = 0 }
+
+			background = {
+				name = "background"
+				spriteType = "gfx_transparency_button"
+				alwaysTransparent = no
+			}
+		}
+
+		containerWindowType = {
+			name = "level_box"
+			position = { x = 0 y = -5 }
+			size = { width = 59 height = 59 }
+
+			iconType = {
+				name = "xp_bar"
+				spriteType = "GFX_specialist_level_bar_36"
+				position = { x = 23 y = 49 }
+				alwaysTransparent = yes
+			}
+
+			iconType = {
+				name = "level_background"
+				spriteType = "GFX_specialist_subject_tier_box"
+				position = { x = 0 y = 0 }
+			}
+		}
+
+		containerWindowType = {
+			name = "specialist_subject_perks_container"
+			position = { x = 0 y = 0 }
+			size = { width = 173 height = 53 }
+
+			gridBoxType = {
+				name = "specialist_perk_grid_box"
+				format = "UPPER_LEFT"
+				position = { x = 73 y = 7 }
+				slotsize = { width = 41 height = 41 }
+				add_horizontal = yes
+			}
+			
+			# This sprite need to be displayed at all time, and ONLY on the Tier we currently are. Needs code support.
+			iconType = {
+				name = "tier_perks_link"
+				spriteType = "GFX_subjugation_tier_perks_link"
+				position = { x = 51 y = 23 }
+				scale = 1.4
+			}
+		}
+	}
+
+	# Template for a single specialist perk entry
+	containerWindowType = {
+		name = "specialist_subject_perk_entry"
+		position = { x = 0 y = 0 }
+		size = { width = 27 height = 27 }
+
+		iconType = {
+			name = "specialist_perk_icon"
+			spriteType = "GFX_pink_box" # Changed in code
+			position = { x = 0 y = 0 }
+			alwaysTransparent = no
+		}
+	}
+}

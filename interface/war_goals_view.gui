@@ -1,0 +1,607 @@
+guiTypes = {
+	containerWindowType = {
+		name = "war_goals_view"
+		size = { width = 1280 height = 853 }
+		orientation = center
+		origo = center
+		moveable = yes
+
+		background = {
+			name = "background"
+			spriteType = "GFX_tile_large_bg"
+		}
+		
+		iconType = {
+			name = "hex_bg"
+			spriteType = "GFX_hex_bg"
+			position = { x = -16 y = -16 }
+			alwaysTransparent = yes
+		}
+		iconType = {
+			name = "header_line"
+			quadTextureSprite = "GFX_line"
+			position = { x = 7 y = 33 }
+			alwaysTransparent = yes
+		}
+		instantTextBoxType = {
+			name = "title"
+			position = { x = 17 y = 7 }
+			font = "malgun_goth_24"
+			maxWidth = 612
+			maxHeight = 32
+			text = "ACTION_DECLARE_WAR_TITLE"
+			format = left
+			vertical_alignment = center
+			alwaysTransparent = yes
+		}
+
+		buttonType = {
+			name = "close"
+			spriteType = "GFX_close"
+			position = { x = -60 y = 23 }
+			orientation = UPPER_RIGHT
+			pdx_tooltip = "CLOSE"
+			shortcut = "ESCAPE"
+			clicksound = "back_click"
+		}
+
+		iconType = {
+			name = "illustration"
+			quadTextureSprite = "GFX_waroverview_declare_war_illustration"
+			position = { x = -200 y = 113 }
+		#	scale = 0.75
+			alwaysTransparent = yes
+			orientation = center_up
+		}
+
+		iconType = {
+			name = "fade"
+			quadTextureSprite = "GFX_waroverview_war_illustration_fade"
+			position = { x = -200 y = 113 }
+		#	scale = 0.75
+			alwaysTransparent = yes
+			orientation = center_up
+		}
+
+		iconType = {
+			name = "frame"
+			quadTextureSprite = "GFX_waroverview_war_illustration_frame"
+			position = { x = -200 y = 113 }
+		#	scale = 0.75
+			alwaysTransparent = yes
+			orientation = center_up
+		}
+
+		# manage_claims
+		buttonType = {
+			name = "manage_claims"
+			spriteType = "GFX_standard_button_200_34_button"
+			orientation = LOWER_LEFT
+			position = { x = -3 y = -72 }
+			borderSize = { x = 16 y = 16 }
+			font = "cg_16b"
+			text = "WAR_GOALS_VIEW_MANAGE_CLAIMS"
+		}
+
+		# left side
+		containerWindowType = {
+			name = "left_side"
+			position = { x = 13 y = 49 }
+			size = { width = 407 height = 740 }
+
+			instantTextBoxType = {
+				name = "header"
+				position = { x = 0 y = 4 }
+				font = "malgun_goth_24"
+				maxWidth = 407
+				maxHeight = 67
+				fixedSize = yes
+				format = center
+				vertical_alignment = center
+				alwaysTransparent = yes
+			}
+
+			containerWindowType = {
+				name = "participants"
+				position = { x = 0 y = 60 }
+				size = { width = 407 height = 267 }
+
+				background = {
+					name = "background"
+					spriteType = "GFX_tiles_dark_area_cut_8"
+				}
+
+				smoothListBoxType = {
+					name = "list"
+					position = { x = 0 y = 4 }
+					size = { x = 407 y = 0 } # see waroverview_side_participants_list_size_with_button/waroverview_side_participants_list_size_without_button
+
+					scrollbarType = "standardlistbox_slider"
+					offset = { x = -10 y = 0 }
+				}
+
+				buttonType = {
+					name = "invite_allies"
+					spriteType = "GFX_standard_button_200_34_button"
+					position = { x = -149 y = -69 }
+					orientation = center_down
+					borderSize = { x = 16 y = 16 }
+					font = "cg_16b"
+				}
+			}
+
+			containerWindowType = {
+				name = "bottom_list"
+				position = { x = 0 y = 333 }
+				size = { width = 407 height = 407 }
+
+				background = {
+					name = "background"
+					spriteType = "GFX_tiles_dark_area_cut_8"
+				}
+
+				instantTextBoxType = {
+					name = "header"
+					position = { x = 7 y = 11 }
+					font = "malgun_goth_24"
+					maxWidth = 393
+					maxHeight = 32
+					fixedSize = yes
+					format = center
+					vertical_alignment = center
+					alwaysTransparent = yes
+					text = "SET_WAR_GOAL"
+				}
+
+				smoothListboxType = {
+					name = "list"
+					position = { x = 7 y = 48 }
+					size = { x = 400 y = 352 }
+					scrollbartype = "standardlistbox_slider"
+					offset = { x = -12 y = 0 }
+					spacing = 4
+				}
+			}
+		}
+
+		# right side
+		containerWindowType = {
+			name = "right_side"
+			position = { x = -13 y = 49 }
+			size = { width = 407 height = 740 }
+			origo = upper_right
+			orientation = upper_right
+
+			instantTextBoxType = {
+				name = "header"
+				position = { x = -407 y = 4 }
+				orientation = upper_right
+				font = "malgun_goth_24"
+				maxWidth = 407
+				maxHeight = 67
+				fixedSize = yes
+				format = center
+				vertical_alignment = center
+				alwaysTransparent = yes
+			}
+
+			containerWindowType = {
+				name = "participants"
+				position = { x = 0 y = 60 }
+				size = { width = 407 height = 267 }
+
+				background = {
+					name = "background"
+					spriteType = "GFX_tiles_dark_area_cut_8"
+				}
+
+				smoothListBoxType = {
+					name = "list"
+					position = { x = 0 y = 4 }
+					size = { x = 407 y = 0 } # see waroverview_side_participants_list_size_with_button/waroverview_side_participants_list_size_without_button
+
+					scrollbarType = "standardlistbox_slider"
+					offset = { x = -10 y = 0 }
+				}
+			}
+
+			containerWindowType = {
+				name = "bottom_list"
+				position = { x = 0 y = 333 }
+				size = { width = 407 height = 407 }
+
+				background = {
+					name = "background"
+					spriteType = "GFX_tiles_dark_area_cut_8"
+				}
+
+				instantTextBoxType = {
+					name = "header"
+					position = { x = 7 y = 11 }
+					font = "malgun_goth_24"
+					maxWidth = 393
+					maxHeight = 32
+					fixedSize = yes
+					format = center
+					vertical_alignment = center
+					alwaysTransparent = yes
+					text = "SET_WAR_GOAL"
+				}
+
+				smoothListboxType = {
+					name = "list"
+					position = { x = 7 y = 48 }
+					size = { x = 400 y = 352 }
+					scrollbartype = "standardlistbox_slider"
+					offset = { x = -12 y = 0 }
+					spacing = 4
+				}
+			}
+		}
+
+		containerWindowType = {
+			name = "tooltip_box"
+			
+			position = { x = 0 y = 383 }
+			size = { width = 427 height = 407 }
+			moveable = no
+			orientation = center_up
+			origo = center_up
+
+			background = {
+				name = "background"
+				spriteType = "GFX_tiles_dark_area_cut_8"
+			}
+
+			iconType = {
+				name = "war_goal_icon"
+				position = { x = 40 y = 168 }
+				centerPosition = yes
+				spriteType = "GFX_alliance_vote_status" # Changed in code
+				alwaysTransparent = yes
+			}
+			instantTextBoxType = {
+				name = "war_goal_header"
+				position = { x = 67 y = 147 }
+				maxWidth = 347
+				maxHeight = 27
+				font = "cg_16b"
+				text_color_code = H
+				fixedSize = yes
+				vertical_alignment = center
+			}
+			instantTextBoxType = {
+				name = "war_goal_text"
+				position = { x = 67 y = 180 }
+				maxWidth = 340
+				maxHeight = 213
+				font = "cg_16b"
+				scrollbarType = "standardtext_slider"
+				alwaysTransparent = no
+			}
+
+			buttonType = {
+				name = "ally_flag"
+				position = { x = 20 y = 152 }
+				quadTextureSprite = "GFX_empire_flag_32"
+			}
+			instantTextBoxType = {
+				name = "ally_name"
+				position = { x = 67 y = 160 }
+				maxWidth = 347
+				maxHeight = 27
+				font = "cg_16b"
+				text_color_code = H
+				fixedSize = yes
+				vertical_alignment = center
+				alwaysTransparent = yes
+			}
+			instantTextBoxType = {
+				name = "ally_description"
+				position = { x = 67 y = 187 }
+				maxWidth = 340
+				maxHeight = 64
+				font = "cg_16b"
+				fixedSize = yes
+			}
+			containerWindowType = {
+				name = "ally_stats"
+				position = { x = 65 y = 267 }
+
+				# opinion
+				containerWindowType = {
+					name = "opinion"
+					position = { x = 0 y = 0 }
+					size = { width = 125 height = 40 }
+
+					background = {
+						name = "background"
+						spriteType = "GFX_info_background"
+					}
+
+					iconType = {
+						name = "icon"
+						spriteType = "GFX_diplomacy_opinion"
+						position = { x = 3 y = 3 }
+						alwaysTransparent = yes
+					}
+
+					instantTextBoxType = {
+						name = "label"
+						font = "cg_16b"
+						maxWidth = 125
+						position = { x = 1 y = 9 }
+						format = center
+						alwaysTransparent = yes
+					}
+				}
+
+				# planet
+				containerWindowType = {
+					name = "planets"
+					position = { x = 0 y = 44 }
+					size = { width = 125 height = 40 }
+
+					background = {
+						name = "background"
+						spriteType = "GFX_info_background"
+					}
+
+					iconType = {
+						name = "icon"
+						spriteType = "GFX_colonies"
+						position = { x = 0 y = 4 }
+						alwaysTransparent = yes
+					}
+
+					instantTextBoxType = {
+						name = "label"
+						font = "cg_16b"
+						maxWidth = 80
+						position = { x = 33 y = 9 }
+						format = right
+						alwaysTransparent = yes
+					}
+				}
+
+				# pops
+				containerWindowType = {
+					name = "pops"
+					position = { x = 0 y = 88 }
+					size = { width = 125 height = 40 }
+
+					background = {
+						name = "background"
+						spriteType = "GFX_info_background"
+					}
+
+					iconType = {
+						name = "icon"
+						spriteType = "GFX_population"
+						position = { x = 7 y = -1 }
+						alwaysTransparent = yes
+					}
+
+					instantTextBoxType = {
+						name = "label"
+						font = "cg_16b"
+						maxWidth = 80
+						position = { x = 33 y = 9 }
+						format = right
+						alwaysTransparent = yes
+					}
+				}
+
+				# trust
+				containerWindowType = {
+					name = "trust"
+					position = { x = 137 y = 0 }
+					size = { width = 205 height = 40 }
+
+					background = {
+						name = "background"
+						spriteType = "GFX_info_background_125"
+					}
+
+					iconType = {
+						name = "icon"
+						spriteType = "GFX_diplomacy_trust"
+						position = { x = 3 y = 5 }
+						alwaysTransparent = yes
+					}
+
+					instantTextBoxType = {
+						name = "label"
+						font = "cg_16b"
+						maxWidth = 133
+						maxHeight = 27
+						position = { x = 27 y = 9 }
+						format = right
+						alwaysTransparent = yes
+					}
+				}
+
+				# power
+				containerWindowType = {
+					name = "power"
+					position = { x = 137 y = 44 }
+					size = { width = 205 height = 40 }
+
+					background = {
+						name = "background"
+						spriteType = "GFX_info_background_125"
+					}
+
+					iconType = {
+						name = "icon"
+						spriteType = "GFX_relative_power_icon"
+						position = { x = 4 y = 4 }
+						alwaysTransparent = yes
+					}
+
+					instantTextBoxType = {
+						name = "label"
+						font = "cg_16b"
+						maxWidth = 133
+						maxHeight = 27
+						position = { x = 27 y = 9 }
+						format = right
+						alwaysTransparent = yes
+					}
+				}
+
+				# attitude
+				containerWindowType = {
+					name = "attitude"
+					position = { x = 137 y = 88 }
+					size = { width = 205 height = 40 }
+
+					background = {
+						name = "background"
+						spriteType = "GFX_info_background_125"
+					}
+
+					iconType = {
+						name = "icon"
+						spriteType = "GFX_attitude"
+						position = { x = 7 y = 7 }
+						alwaysTransparent = yes
+					}
+
+					instantTextBoxType = {
+						name = "label"
+						font = "cg_16b"
+						maxWidth = 133
+						maxHeight = 27
+						position = { x = 27 y = 9 }
+						format = right
+						alwaysTransparent = yes
+					}
+				}
+			}
+		
+			instantTextBoxType = {
+				name = "instructions"
+				position = { x = 11 y = 13 }
+				maxWidth = 405
+				maxHeight = 131
+				font = "cg_16b"
+				fixedSize = yes
+			}
+		}
+
+		buttonType = {
+			name = "confirm"
+			spriteType = "GFX_standard_button_200_34_button"
+			position = { x = -296 y = -72 }
+			orientation = LOWER_RIGHT
+			borderSize = { x = 16 y = 16 }
+			font = "cg_16b"
+		}
+	}
+	
+	containerWindowType = {
+		name = "war_goals_view_invite_attacker_entry"
+		size = { width = 393 height = 67 }
+
+		background = {
+			name = "background"
+			spriteType = "GFX_tiles_frame_light"
+			clicksound = "select_click"
+		}
+		
+		buttonType = {
+			name = "flag"
+			quadTextureSprite = "GFX_empire_flag_32"
+			position = { x= 8 y = 12  }
+		}
+
+		instantTextBoxType={
+			name = "country_name"
+			position = { x = 55 y = 0 }
+			font = "cg_16b"
+			maxWidth = 280
+			maxHeight = 67
+			format = left
+			vertical_alignment = center
+			multiline = no
+			alwaysTransparent = yes
+		}
+
+		iconType = {
+			name = "vote"
+			orientation = UPPER_LEFT
+			position = { x = 335 y = 7 }
+			spriteType = "GFX_alliance_vote_status"
+			scale = 1.0
+			frame = 2
+		}
+
+		containerWindowType = {
+			name = "hover_overlay"
+			position = { x = -1 y = -1 }
+			size = { width = 396 height = 69 }
+			background = {
+				name = "hover_bg"
+				spriteType = "GFX_clean_frame_area"
+				alwaysTransparent = yes
+			}
+		}
+	}
+	
+	containerWindowType = {
+		name = "war_goals_view_war_goal_entry"
+		size = { width = 393 height = 67 }
+		clipping = no
+
+		background = {
+			name = "background"
+			spriteType = "GFX_tiles_frame_light"
+			clicksound = "select_click"
+		}
+
+		instantTextBoxType={
+			name = "header"
+			position = { x = 63 y = 0 }
+			maxWidth = 316
+			maxHeight = 67
+			fixedSize = yes
+			font = "cg_16b"
+			alwaysTransparent = yes
+			text_color_code = "H"
+			format = left
+			multiline = no
+			vertical_alignment = center
+		}
+
+		iconType = {
+			name = "war_goal_icon"
+			position = { x = 33 y = 33 }
+			centerPosition = yes
+			spriteType = "GFX_alliance_vote_status" # Changed in code
+			alwaysTransparent = yes
+		}
+
+		containerWindowType = {
+			name = "selected_overlay"
+			position = { x = -1 y = -1 }
+			size = { width = 396 height = 69 }
+			background = {
+				name = "selected_bg"
+				spriteType = "GFX_glow_tile_orange"
+				alwaysTransparent = yes
+			}
+		}
+
+		containerWindowType = {
+			name = "hover_overlay"
+			position = { x = -1 y = -1 }
+			size = { width = 396 height = 69 }
+			background = {
+				name = "hover_bg"
+				spriteType = "GFX_clean_frame_area"
+				alwaysTransparent = yes
+			}
+		}
+	}
+}

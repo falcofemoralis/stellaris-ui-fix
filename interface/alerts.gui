@@ -1,0 +1,254 @@
+guiTypes = {
+	containerWindowType = {
+		name = "alerticon_window"
+		position = { x = 0 y = 0 }
+		size = { width = 85 height = 85 }
+
+		buttonType = {
+			name = "alerticon_banner"
+			spriteType = "GFX_alerticon_banner_med"
+			position = { x= 0 y = 1 }
+			Orientation = "UPPER_RIGHT"
+			oversound = no_sound
+		}
+
+		iconType = {
+			name = "alerticon"
+			spriteType = "GFX_alerticons"
+			position = { x = 121 y = 61 }
+			centerPosition = yes
+		}
+	}
+
+	positionType = {
+		name = "alerticon_startposition"
+		position = { x = 267 y = 40 }
+	}
+
+	positionType = {
+		name = "alerticon_offset"
+		position = { x = 73 y = 96 }
+	}
+
+	positionType = {
+		name = "alerticon_per_row"
+		position = { x = 5 y = 0 }
+	}
+
+	### TOAST MESSAGE ###
+
+	@toast_custom_container_w = 377
+	@toast_custom_container_h = 133
+
+	containerWindowType = {
+		name = "toast_container"
+		moveable = no
+		orientation = UPPER_RIGHT
+		size = { width = 379 height = 253 }
+		clipping = no
+
+		hide_position = { x = -740 y = -400 }
+		show_position = { x = -740 y = 73 }
+
+		show_animation_type = decelerated
+		hide_animation_type = accelerated
+		animation_time = 550
+		fade_time = 1000
+
+		background = {
+			name = "background"
+			quadTextureSprite = "GFX_tile_outliner_bg"
+		}
+
+		iconType = {
+			name = "alert_icon_line"
+			spriteType = "GFX_alerticon_line"
+			position = { x = 181 y = -29 }
+			alwaysTransparent = yes
+		}
+
+		iconType = {
+			name = "hex_bg"
+			spriteType = "GFX_small_hex_bg"
+			position = { x = 40 y = -7 }
+			alwaysTransparent = yes
+		}
+
+		containerWindowType = {
+			name = "leader_portrait_container"
+			position = { x = -152 y = 0 }
+			size = { width = 149 height = 200 }
+			fade_time = 550
+		}
+
+		iconType = {
+			name = "toast_icon"
+			position = { x = 20 y = 27 }
+			spriteType = "GFX_toast_leader_acquired"
+		}
+
+		instantTextBoxType = {
+			position = { x = 73 y = 20 }
+			name = "toast_title"
+			font = "malgun_goth_24"
+			maxWidth = 333
+			maxHeight = 13
+			text = "TOAST_TITLE"
+			format = left
+			fixedsize = yes
+			truncate = yes
+		}
+
+		instantTextBoxType = {
+			position = { x = 73 y = 57 }
+			name = "toast_description"
+			font = "cg_16b"
+			maxWidth = 280
+			maxHeight = 27
+			text = "TOAST_DESC"
+			format = left
+			text_color_code = "E"
+		}
+
+		containerWindowType = {
+			name = "custom_content_container"
+			position = { x = 0 y = 120 }
+			size = { width = @toast_custom_container_w height = @toast_custom_container_h }
+
+			fade_time = 200
+
+			background = {
+				name = "background"
+				quadTextureSprite = "GFX_tiles_frame_light"
+			}
+
+			iconType = {
+				name = "custom_content_toast_icon"
+				position = { x = 9 y = 53 }
+				spriteType = "GFX_toast_leader_acquired"
+			}
+
+			instantTextBoxType = {
+				name = "custom_toast_desc"
+				position = { x = 73 y = 40 }
+				font = "cg_16b"
+				maxWidth = 280
+				maxHeight = 80
+				text = ""
+			}
+		}
+
+		buttonType = {
+			name = "message_settings_button"
+			quadTextureSprite = "GFX_outliner_options_button"
+			position =  { x = 347 y = 20 }
+			pdx_tooltip = "OPEN_MESSAGE_SETTINGS_TOAST"
+			clicksound = "click_outliner"
+		}
+
+		iconType = {
+			name = "toast_cooldown_bar"
+			spriteType = "GFX_toast_timing_progress_bar"
+			position =  { x = 7 y = -16 } # moved in code
+			#centerPosition = yes
+			orientation = lower_left
+			alwaysTransparent = yes
+		}
+	}
+
+	containerWindowType = {
+		name = "leader_recruitment_custom_container"
+		size = { width = @toast_custom_container_w height = @toast_custom_container_h }
+
+		iconType = {
+			name = "leader_rarity_frame"
+			spriteType = "GFX_invisible"
+			position = { x = 0 y = 0 }
+			alwaysTransparent = yes
+		}
+
+		iconType = {
+			name = "icon"
+			spriteType = "GFX_icon_leader"
+			position = { x = 17 y = 47 }
+		}
+
+		instantTextBoxType = {
+			name = "recruited_leader_text"
+			font = "cg_16b"
+			position = { x = 69 y = 32 }
+			maxWidth = 293
+			maxHeight = 67
+			fixedSize = yes
+			format = left
+			vertical_alignment = center
+			alwaysTransparent = no
+		}
+	}
+
+	containerWindowType = {
+		name = "negative_trait_custom_container"
+		size = { width = @toast_custom_container_w height = @toast_custom_container_h }
+		fade_time = 200
+
+		containerWindowType = {
+			name = "trait_layered_icon_locator"
+			position = { x = 25 y = 25 }
+		}
+
+		instantTextBoxType = {
+			name = "trait_name"
+			font = "cg_16b"
+			text = "TRAIT_NAME"
+			position = { x = 80 y = 19 }
+			maxWidth = 280
+			maxHeight = 53
+			fixedSize = yes
+			format = left
+			text_color_code = "H"
+			alwaysTransparent = no
+		}
+
+		instantTextBoxType = {
+			name = "trait_desc"
+			font = "cg_16b"
+			text = "TRAIT_DESC"
+			position = { x = 80 y = 40 }
+			maxWidth = 280
+			maxHeight = 80
+			fixedSize = yes
+			format = left
+			alwaysTransparent = no
+		}
+	}
+
+	containerWindowType = {
+		name = "mass_gained_trait_custom_container"
+		size = { width = @toast_custom_container_w height = @toast_custom_container_h }
+
+		containerWindowType = {
+			name = "mass_trait_layered_icon_locator"
+			position = { x = 25 y = 25 }
+		}
+
+		instantTextBoxType = {
+			name = "mass_trait_name"
+			font = "cg_16b"
+			text = "TRAIT_NAME"
+			position = { x = 80 y = 19 }
+			maxWidth = 280
+			maxHeight = 53
+			fixedSize = yes
+			format = left
+			text_color_code = "H"
+			alwaysTransparent = no
+		}
+
+		buttonType = {
+			name = "open_leader_view_button"
+			size = { x = @toast_custom_container_w y = @toast_custom_container_h }
+			position = { x = 0 y = 0 }
+			spriteType = "GFX_invisible"
+		}
+	}
+}

@@ -1,0 +1,175 @@
+guiTypes = {
+	containerWindowType = {
+		name = "election_view"
+		orientation = center
+		origo = center
+		size = { width = 960 height = 880 }
+		clipping = no
+		moveable = yes
+		
+		background = {
+			name = "background"
+			quadTextureSprite = "GFX_tile_header_bg"
+		}
+			
+		containerWindowType = {
+			name = "start_screen_frame_bg"
+			position = { x = 13 y = 147 }
+			size = { width = 933 height = 667 }
+			orientation = upper_left
+			
+			background = {
+				name = "start_screen_frame"
+				quadTextureSprite = "GFX_election_frame"
+				position = { x = 0 y = 0 }
+				alwaysTransparent = yes
+			}
+		}
+		
+		instantTextBoxType = {
+			name = "next_election"
+			position = { x = 460 y = 47 }
+			orientation = "UPPER_LEFT"
+			text = "DEMOCRATIC_ELECTION_VIEW_NEXT_ELECTION"
+			font = "cg_16b"
+			maxWidth = 373
+			maxHeight = 27
+			alwaysTransparent = yes
+			text_color_code = "H"
+			format = right
+		}
+
+		buttonType = {
+			name = "close"
+			quadTextureSprite = "GFX_close"
+			position = { x = -63 y = 19 }
+			Orientation = "UPPER_RIGHT"
+			shortCut = "ESCAPE"
+			clicksound = "back_click"
+		}
+		
+		iconType = {
+			name = "hex_bg"
+			spriteType = "GFX_hex_bg"
+			position = { x = -13 y = -15 }
+			alwaysTransparent = yes
+		}
+
+		iconType = {
+			name = "empire_header_line"
+			quadTextureSprite = "GFX_line_long"
+			position = { x = 8 y = 32 }
+			alwaysTransparent = yes
+		}
+		
+		instantTextBoxType = {
+			name = "title"
+			position = { x = 27 y = 11 }
+			orientation = "UPPER_LEFT"
+			text = "ELECTION_VIEW_TITLE"
+			font = "malgun_goth_24"
+			maxWidth = 800
+			maxHeight = 133
+			fixedSize = yes
+			alwaysTransparent = yes
+		}
+		
+		instantTextBoxType = {
+			name = "description"
+			position = { x = 40 y = 77 }
+			orientation = "UPPER_LEFT"
+			text = "ELECTION_VIEW_DESCRIPTION"
+			font = "cg_16b"
+			maxWidth = 853
+			maxHeight = 133
+			format = center
+			#alwaysTransparent = yes
+			text_color_code = "E"
+		}
+
+		containerWindowType = {
+			name = "candidates"
+			position = { x = 27 y = 160 }
+			size = { width = 907 height = 640 }
+			
+			verticalScrollbar = "right_vertical_slider"
+			background = {
+				name = "bg"
+				quadTextureSprite = "GFX_invisible"
+			}
+
+			gridBoxType = {
+				name = "candidate_entries"
+				slotSize = { width = 853 height = 160 }
+				max_slots_horizontal = 1
+			}
+		}
+		
+		instantTextBoxType = {
+			name = "election_cost"
+			position = { x = 367 y = 835 }
+			orientation = "UPPER_LEFT"
+			font = "cg_16b"
+			maxWidth = 333
+			maxHeight = 27
+			fixedSize = yes
+			format = right
+			alwaysTransparent = yes
+			#text_color_code = "H"
+		}
+		
+		buttonType = {
+			name = "elect"
+			quadTextureSprite = "GFX_standard_button_142_34_button"
+			position = { x = 723 y = 805 }
+			orientation = "LEFT"
+			text = "ELECT"
+			font = "cg_16b"
+		}
+		
+		buttonType = {
+			name = "abstain"
+			quadTextureSprite = "GFX_standard_button_142_34_button"
+			position = { x = 16 y = 805 }
+			orientation = "LEFT"
+			text = "ABSTAIN"
+			font = "cg_16b"
+		}
+	}
+	
+	containerWindowType = {
+		name = "election_candidate_entry"
+		position = { x = 427 y = 0 }
+		orientation = upper_left
+		size = { width = 907 height = 160 }
+		
+		background = {
+			name = "background"
+			quadTextureSprite = "GFX_invisible"
+			clicksound = interface
+		}
+				
+		buttonType = {
+			name = "not_selected"
+			quadTextureSprite = "GFX_clean_frame_area"
+			position = { x = 0 y = 0 }
+			size = { x = 907 y = 160 }
+			alwaysTransparent = yes
+		}
+
+		buttonType = {
+			name = "selected"
+			quadTextureSprite = "GFX_glow_tile_orange"
+			position = { x = 0 y = 0 }
+			size = { x = 907 y = 160 }
+			alwaystransparent = yes
+		}
+
+		containerWindowType = {
+			name = "leader_container"
+			size = { width = 800 height = 129 }
+			position = { x = 11 y = 12 }
+			clipping = yes
+		}
+	}
+}

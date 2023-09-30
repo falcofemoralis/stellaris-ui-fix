@@ -1,0 +1,142 @@
+guiTypes = {
+	containerWindowType = {
+		name = "army_view_gamepad"
+		position = { x= 0 y = 0 }
+		size = { width=507 height=13 }
+
+		background = {
+			name = "bg"
+			quadTextureSprite = "GFX_tile_outliner_bg"
+			position = { x= 0 y = 0  }
+		}
+
+		instantTextBoxType={
+			name = "label"
+			font = "cg_16b"
+			position = { x= 16 y= 8 }
+			maxHeight = 21
+			maxWidth = 332
+			fixedsize = yes
+			alwaysTransparent = yes
+			text = "POP_FACTIONS_COLUMN_ACTIONS"
+			text_color_code = "H"
+		}
+
+		buttonType = {
+			name = "close"
+			quadTextureSprite = "gfx_transparency_button"
+			position = { x = 0 y = 0 }
+			Orientation = "UPPER_RIGHT"
+			shortCut = "ESCAPE"
+			pdx_tooltip = "CLOSE_TITLE"
+			clicksound = "back_click"
+			actionShortcut = "cancel"
+		}
+
+		smoothListboxType =
+		{
+			name = "options"
+			position = { x=13 y=33 }
+			priority = 100
+			size = { x=337 y=0 }
+			scrollbartype = "standardlistbox_slider"
+			defaultSelection = yes
+		}
+	
+		containerWindowType = {
+			name = "possible_attachments_window"
+			position = { x = 0 y = 0 }
+		#	position = { x = 313 y = 300 }
+			size = { width = 480 height = 293 }
+			orientation = upper_left
+			moveable = no
+			#verticalScrollBar = "right_vertical_slider"
+			
+			background = {
+				name = "possible_attachments_background"
+				quadTextureSprite = "GFX_tile_outliner_bg"
+			}
+			
+			iconType = {
+				name = "hex_bg"
+				spriteType = "GFX_hex_bg"
+				position = { x = -13 y = -16 }
+				alwaysTransparent = yes
+			}
+		
+			iconType = {
+				name = "icon_energy"
+				spriteType = "GFX_line"
+				position = { x = 0 y = 29 }
+			}
+
+			instantTextBoxType = {
+				name = "header"
+				font = "malgun_goth_24"
+				text = "ARMY_ATTACHMENTS_ATTACH"
+				position = { x = 12 y = 7 }
+				maxWidth = 291
+				maxHeight = 27
+				fixedSize = yes
+				format = left
+				orientation = "UPPER_LEFT"
+			}
+			
+			gridBoxType = {
+				position = { x = 12 y = 93 }
+				name = "attachments"
+				slotSize = { width = 53 height = 53 }
+				max_slots_horizontal = 8
+				format = "UPPER_LEFT"
+			}
+		}
+	}
+
+	#Option entries
+	containerWindowType = {
+		name = "option_entry_gamepad"
+		position = { x=-31 y=0 }
+		size = { width=480 height=37 }
+		clipping = no
+
+		buttonType = {
+			name = "button"
+			quadTextureSprite = "GFX_event_button_452"
+			position = { x= -64 y = 0  }
+			font = "malgun_goth_24"
+			oversound = mouse_over
+			clicksound = confirmation
+			format = center
+		}
+	}
+	
+	# ARMY ATTACHMENT ENTRY
+	containerWindowType = {
+		name = "army_attachment_entry_gamepad"
+		size = { width = 53 height = 53 }
+		
+		background = {
+			name = "army_attachment_entry_background"
+			spriteType = "GFX_army_attachment_slot"
+			clicksound = click_army_menu
+		}
+
+		containerWindowType = {
+			name = "selected_overlay"
+			position = { x = 0 y = 0 }
+			size = { width = 100% height = 100% }
+			background = {
+				name = "selected_bg"
+				spriteType = "GFX_glow_tile_orange_no_padding"
+				alwaysTransparent = yes
+			}
+		}	
+		
+		iconType = {
+			name = "icon"
+			position = { x = 3 y = 3 }
+			quadTextureSprite = "GFX_army_attachment"
+			alwaysTransparent = yes
+		}
+	}
+}

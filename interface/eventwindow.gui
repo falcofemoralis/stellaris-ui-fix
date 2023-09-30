@@ -1,0 +1,312 @@
+@SituationEventElementHeight = 107
+
+guiTypes = {
+	containerWindowType = {
+		name = "EventWindow"
+		orientation = center
+		origo = center
+		moveable = yes
+		clipping = no
+		size = { width = 653 height=827 }
+		position = { x = 0 y = 0 }
+
+		background = {
+			name = "background"
+			quadTextureSprite ="GFX_tile_outliner_bg"
+		}
+
+		### TITLE ###
+
+		iconType = {
+			name = "hex_bg"
+			alwaysTransparent = yes
+			spriteType = "GFX_hex_bg"
+			position = { x = -16 y = -19 }
+		}
+
+		iconType = {
+			name = "header_line"
+			alwaysTransparent = yes
+			spriteType = "GFX_line"
+			position = { x = 8 y = 33 }
+		}
+
+		instantTextBoxType = {
+			name = "Title"
+			alwaysTransparent = yes
+			maxWidth = 613
+			maxHeight = 43
+			position = { x = 20 y = 7 }
+			textureFile = ""
+			font = "malgun_goth_24"
+			text = "Long text here!"
+		}
+
+		buttonType = {
+			name = "focus_button"
+			position = { x = 553 y = 17 }
+			spriteType ="GFX_fleetview_focus"
+			buttonFont = "cg_16b"
+			shortcut = "q"
+		}
+
+		buttonType = {
+			name = "track_button"
+			position = { x = 509 y = 17 }
+			spriteType = "GFX_button_track_project"
+			buttonFont = "cg_16b"
+		}
+
+		### DISMISS BUTTON
+		buttonType = {
+			name = "close"
+			quadTextureSprite = "GFX_close"
+			position = { x = 597 y = 17 }
+			pdx_tooltip = "CLOSE_TITLE"
+			shortcut = "escape"
+		}
+
+		### PORTRAIT ###
+
+		@PORTRAIT_Y = 173
+
+		iconType = {
+			name ="event_picture"
+			spriteType = "GFX_event_frame"
+			orientation = center_up
+			centerPosition = yes
+			position = { x = 0 y = @PORTRAIT_Y }
+			alwaystransparent = yes
+		}
+
+		iconType = {
+			name = "picture_frame"
+			spriteType = "GFX_event_frame"
+			orientation = center_up
+			centerPosition = yes
+			position = { x = 0 y = @PORTRAIT_Y }
+			alwaystransparent = yes
+		}
+
+		iconType = {
+			name = "stripes_1"
+			spriteType = "GFX_event_stripes_1"
+			orientation = center_up
+			centerPosition = yes
+			position = { x = 0 y = @PORTRAIT_Y }
+			alwaystransparent = yes
+		}
+
+		### SITUATION ###
+
+		containerWindowType = { #If the Situation is finished, this shifts up by situations_progress_bar_container height
+			name = "situations_progress_subview"
+			position = { x = 0 y = 317 }
+			size = { width = 100% height = @SituationEventElementHeight }
+
+			iconType = {
+				name = "middle_indicator"
+				position = { x = 325 y = 43 }
+				spriteType = "GFX_situation_middle_indicator"
+			}
+
+			containerWindowType = {
+				name = "situations_progress_bar_container"
+				position = { x = 103 y = 0 }
+				size = { width = 447 height = 53 }
+
+				iconType = {
+					name = "progress_bar_monodirectional"
+					position = { x = 0 y = 41 }
+					spriteType = "GFX_situation_event_progressbar_monodirectional_neutral" # Set in code
+				}
+
+				iconType = {
+					name = "progress_bar_bidirectional_left"
+					position = { x = 0 y = 41 }
+					spriteType = "GFX_situation_event_progressbar_bidirectional_neutral_left" # Set in code
+				}
+
+				iconType = {
+					name = "progress_bar_bidirectional_right"
+					position = { x = 224 y = 41 }
+					spriteType = "GFX_situation_event_progressbar_bidirectional_neutral_right" # Set in code
+				}
+			}
+
+			iconType = {
+				name = "start_indicator"
+				position = { x = 99 y = 43 }
+				spriteType = "GFX_situation_start_indicator"
+			}
+
+			iconType = {
+				name = "outcome_right"
+				orientation = upper_right
+				position = { x = -81 y = 51 }
+				spriteType = "GFX_invisible"
+				centerPosition = yes
+			}
+
+			iconType = {
+				name = "outcome_right_frame"
+				orientation = upper_right
+				position = { x = -81 y = 52 }
+				spriteType = "GFX_invisible"
+				centerPosition = yes
+			}
+
+			iconType = {
+				name = "outcome_left"
+				position = { x = 81 y = 52 }
+				spriteType = "GFX_invisible"
+				centerPosition = yes
+			}
+
+			iconType = {
+				name = "outcome_left_frame"
+				position = { x = 81 y = 52 }
+				spriteType = "GFX_invisible"
+				centerPosition = yes
+			}
+
+			containerWindowType = {
+				name = "progress_bar_pin_container"
+				size = { width = 96 height = 40 }
+				clipping = no
+
+				iconType = {
+					name = "pin_bg"
+					position = { x = 0 y = 1 }
+					quadTextureSprite = "GFX_situation_progress_pin"
+				}
+
+				iconType = {
+					name = "pin_icon"
+					position = { x = 69 y = 17 }
+					spriteType = "GFX_situation_progress_directions"
+					centerPosition = yes
+				}
+
+				instantTextBoxType = {
+					name = "monthly_change"
+					position = { x = -4 y = 7 }
+					font = "cg_16b"
+					maxWidth = 53
+					maxHeight = 40
+					format = right
+				}
+			}
+
+			containerWindowType = { #If the Situation is finished, this shifts down by situations_progress_bar_container height
+				name = "situation_title_container"
+				position = { x = 0 y = -33 }
+				size = { width = 653 height = 43 }
+
+				instantTextBoxType = {
+					name = "situation_title"
+					position = { x = 0 y = 0 }
+					maxWidth = 653
+					maxHeight = 43
+					format = center
+					font = "cg_16b"
+					text_color_code = "H"
+					text = "Situation Title Here"
+				}
+			}
+
+			buttonType = {
+				name = "situation_goto_button"
+				quadTextureSprite = "gfx_transparency_button"
+				position = { x = 27 y = -13 }
+				size = { x = 613 y = 107 }
+				oversound = no_sound
+			}
+		}
+
+		buttonType = {
+			name = "tts_button"
+			position = { x = 587 y = 247 }
+			spriteType = "GFX_button_tts_start"
+			buttonFont = "cg_16b"
+			shortCut = "t"
+		}
+
+		### DESCRIPTION ###
+
+		containerWindowType = {
+			name = "description_frame"
+			orientation = center_up
+			origo = center_up
+			size = { width = 616 height = 200 }
+			position = { x = -19 y = 293 }
+
+			background = {
+				name = "description_frame"
+				spriteType = "GFX_tiles_frame_light"
+				alwaystransparent = yes
+			}
+
+			instantTextBoxType = {
+				name = "description"
+				alwaysTransparent = yes
+				maxWidth = 581
+				maxHeight = 171
+				format = left
+				position = { x = 17 y = 16 }
+				font = "cg_16b"
+				textureFile = ""
+				#fixedsize = yes
+				text_color_code = "E"
+				text = "Long text here!"
+			}
+		}
+	}
+	containerWindowType = {
+		name = "event_window_option_entry"
+		size = { width = 635 height = 43 }
+
+		ButtonType = {
+			name = "event_option_button"
+			#position = { x = 0 y = 0 }
+			spriteType = "GFX_event_button_452"
+			buttonFont = "cg_16b"
+			clicksound = confirmation
+		}
+
+		OverlappingElementsBoxType = {
+			name = "trigger_icons"
+			position = { x = 0  y = 3 }
+			size = { x=48 y= 37 }
+		}
+
+		iconType = {
+			name = "selector_gui_presence_icon"
+			position = { x = 587 y = 7 }
+			spriteType = "GFX_coop_presence_indicator"
+			scale = 0.55
+		}
+	}
+
+	containerWindowType = {
+		name = "trigger_icon_entry"
+		size = { width = 43 height = 43 }
+
+		gridBoxType = {
+			name = "trigger_icon_layers_gridbox"
+			size = { width = 43 height = 43 }
+			slotSize = { width = 0 height = 43 }
+
+			background = {
+				name = "background"
+				spriteType = "GFX_invisible"
+				position = { x = 0 y = 0 }
+			}
+		}
+	}
+
+	positionType = {
+		name = "event_option_offset"
+		position = { x = 9 y = 40 }
+	}
+}

@@ -1,0 +1,2237 @@
+guiTypes = {
+	@dynamic_extra = 0.8
+	@dynamic_extra_left_panel = 0.8
+
+	containerWindowType = {
+		name = "galaxy_view"
+		show_position = { x = 47 y = 53 }
+		hide_position = { x = -1696 y = 53 }
+		animation_time = 200
+		animation_type = decelerated
+
+		size = { width = 1696 height = 827 }
+		dynamic_extra_height = @dynamic_extra
+		moveable = no
+
+		containerWindowType = {
+			name = "galaxy_view_background_box"
+			size = { width = 100% height = 100% }
+			position = { x = 0 y = 0 }
+
+			background = {
+				name = "galaxy_view_background"
+				spriteType = "GFX_tile_large_bg"
+			}
+		}
+
+		iconType = {
+			name = "hex_bg"
+			spriteType = "GFX_hex_bg"
+			position = { x = 7 y = -16 }
+			alwaysTransparent = yes
+		}
+
+		iconType = {
+			name = "empire_header_line"
+			quadTextureSprite = "GFX_line"
+			position = { x = 8 y = 28 }
+		}
+
+		instantTextBoxType={
+			name = "header"
+			font = "malgun_goth_24"
+			position = { x = 47 y = 7 }
+			text = "topbar_button_contacts_name"
+			format = left
+		}
+
+		buttonType = {
+			name = "close"
+			quadTextureSprite = "GFX_close_button_galaxy"
+			position = { x= -56 y = 17	}
+			Orientation = "UPPER_RIGHT"
+			shortcut = "ESCAPE"
+			pdx_tooltip = "CLOSE_TITLE"
+			clicksound = "back_click"
+		}
+
+		containerWindowType = {
+			name = "galaxy"
+			position = { x = 0 y = 21 }
+			size = { width = 100% height = 720 }
+			dynamic_extra_height = @dynamic_extra_left_panel
+			moveable = no
+
+			containerWindowType = {
+				name = "empire_profile"
+				size = { width = 100% height = 100% }
+
+				containerWindowType = {
+					name = "info_box"
+					position = { x = 15 y = 39 }
+					size = { width = 420 height = 725 }
+					dynamic_extra_height = @dynamic_extra_left_panel
+
+					background = {
+						name = "area51"
+						spriteType = "GFX_tiles_dark_area_cut_8"
+					}
+				}
+
+				containerWindowType = {
+					name = "species_box"
+					position = { x = 0 y = 39 }
+					size = { width = 427 height = 304 }
+					clipping = yes
+
+					iconType = {
+						name = "species"
+						quadTextureSprite = "GFX_contacts_portrait_character_masked"
+						scale = 0.6
+					}
+				}
+
+				containerWindowType = {
+					name = "leader_frame_box"
+					size = { width = 400 height = 100 }
+					position = { x = 25 y = 45 }
+
+					background = {
+						name = "leader_frame"
+						spriteType = "GFX_tiles_dark_area_cut_8"
+					}
+				}
+
+				iconType = {
+					name = "portrait_frame"
+					spriteType = "GFX_contacts_portrait_frame"
+					position = { x = 16 y = 31}
+					alwaysTransparent = yes
+				}
+
+
+				containerWindowType = {
+					name = "diplo_stats"
+					position = { x = 111 y = 308 }
+
+					iconType = {
+						name = "Intel_darkcut"
+						spriteType = "GFX_darkcut_intel"
+						position = { x = -91 y = 55 }
+					}
+
+					## Intel ##
+
+					containerWindowType = {
+						name = "intel"
+						position = { x = -93 y = 55 }
+						size = { width = 419 height = 63 }
+
+						iconType = {
+							name = "icon"
+							spriteType = "GFX_intel_level"
+							position = { x = 20 y = 12 }
+							frame = 1
+						}
+
+						instantTextBoxType = {
+							name = "label"
+							font = "cg_16b"
+							position = { x = 60 y = 11 }
+							maxWidth = 147
+							maxHeight = 27
+							format = left
+						}
+
+						iconType = {
+							name = "intel_progressbar"
+							position = { x = 60 y = 35 }
+							spriteType = "GFX_intel_progressbar"
+						}
+
+					}
+
+
+					## Espionage bar ##
+
+					containerWindowType = {
+						name = "espionage"
+						position = { x = -93 y = 55 }
+						size = { width = 419 height = 63 }
+
+						iconType = {
+							name = "icon"
+							position = { x = 307 y = 11 }
+							spriteType = "GFX_resource_spy_network"
+						}
+
+						instantTextBoxType={
+							name = "label"
+							font = "cg_16b"
+							text = "200"
+							position = { x = 343 y = 16 }
+							maxWidth = 67
+							maxHeight = 21
+							format = LEFT
+							#text_color_code = "E"
+							fixedsize = yes
+						}
+						
+						instantTextBoxType = {
+							name = "espionage_unavailable_text"
+							font = "cg_16b"
+							maxWidth = 173
+							maxHeight = 27
+							position = { x = 207 y = 16 }
+							orientation = right
+							format = right
+							text = "ESPIONAGE_IS_UNAVAILABLE"
+						}
+
+						iconType = {
+							name = "spypower_trend_up"
+							position = { x = 380 y = 19 }
+							spriteType = "GFX_cohesion_trending_up_arrow"
+						}
+
+						iconType = {
+							name = "spypower_trend_down"
+							position = { x = 380 y = 19 }
+							spriteType = "GFX_cohesion_trending_down_arrow"
+						}
+
+						iconType = {
+							name = "spypower_trend_stagnant"
+							position = { x = 380 y = 19 }
+							spriteType = "GFX_spypower_trend_stagnant_arrow"
+						}
+					}
+
+					containerWindowType = {
+						name = "diplomacy_left_bg"
+						size = { width = 296 height = 149 }
+						position = { x = -89 y = 113 }
+
+						background = {
+							name = "diplomacy_left_frame"
+							spriteType = "GFX_tiles_dark_area_cut_8"
+							alwaysTransparent = yes
+						}
+					}
+
+					containerWindowType = {
+						name = "diplomacy_right_bg"
+						size = { width = 104 height = 149 }
+						position = { x = 213 y = 113 }
+
+						background = {
+							name = "diplomacy_right_frame"
+							spriteType = "GFX_tiles_dark_area_cut_8"
+							alwaysTransparent = yes
+						}
+					}
+
+					# planets
+					## VM: removed and added to the sorting list
+
+					# Sprawl
+
+					containerWindowType = {
+						name = "sprawl"
+						position = { x = 213 y = 121 }
+						size = { width = 125 height = 67 }
+
+						iconType = {
+							name = "icon"
+							spriteType = "GFX_empire_sprawl_icon"
+							position = { x = 12 y = 4 }
+						}
+
+						instantTextBoxType = {
+							name = "label"
+							font = "cg_16b"
+							maxWidth = 60
+							maxHeight = 27
+							position = { x = 53 y = 12 }
+							format = left
+						}
+					}
+
+					# pops
+					containerWindowType = {
+						name = "pops"
+						position = { x = 225 y = 167 }
+						size = { width = 125 height = 40 }
+
+						iconType = {
+							name = "icon"
+							spriteType = "GFX_population"
+							position = { x = 0 y = 0 }
+							alwaysTransparent = yes
+						}
+
+						instantTextBoxType = {
+							name = "label"
+							font = "cg_16b"
+							maxWidth = 80
+							position = { x = 40 y = 9 }
+							format = left
+							alwaysTransparent = yes
+						}
+					}
+
+					# Diplo weight
+
+					containerWindowType = {
+						name = "diplo_weight"
+						position = { x = 224 y = 217 }
+						size = { width = 133 height = 80 }
+
+						iconType = {
+							name = "icon"
+							spriteType = "GFX_diplomatic_weight_large"
+							position = { x = 3 y = 0 }
+							scale = .8
+						}
+
+						instantTextBoxType = {
+							name = "label"
+							font = "cg_16b"
+							maxWidth = 80
+							position = { x = 40 y = 5 }
+							format = left
+							alwaysTransparent = yes
+						}
+					}
+
+
+					# opinion
+					containerWindowType = {
+						name = "opinion"
+						position = { x = -96 y = 113 }
+						size = { width = 293 height = 60 }
+						moveable = no
+
+						iconType = {
+							name = "diplomacy_icon"
+							quadTextureSprite = "GFX_diplomacy_opinion"
+							position = { x= 17 y = 12  }
+						}
+
+						iconType = {
+							name = "icon"
+							position = { x = 68 y = 7 }
+							spriteType = "GFX_diplomacy_opinion_excellent"
+							frame = 50
+						}
+
+						instantTextBoxType={
+							name = "label"
+							font = "cg_16b"
+							position = { x = 69 y = 13 } ##x = 7
+							maxWidth = 197
+							maxHeight = 27
+							format = center
+							text = "OPINION_LEVEL"
+							#alwaysTransparent = yes
+						}
+					}
+
+
+					# awareness
+					containerWindowType = {
+						name = "awareness"
+						position = { x = -96 y = 113 }
+						size = { width = 293 height = 60 }
+						moveable = no
+
+						iconType = {
+							name = "diplomacy_icon"
+							quadTextureSprite = "GFX_diplomacy_awareness"
+							position = { x= 17 y = 12  }
+						}
+
+						iconType = {
+							name = "icon"
+							position = { x = 68 y = 7 }
+							spriteType = "GFX_diplomacy_awareness_unaware"
+							frame = 50
+						}
+
+						instantTextBoxType={
+							name = "label"
+							font = "cg_16b"
+							position = { x = 69 y = 13 } ##x = 7
+							maxWidth = 197
+							maxHeight = 27
+							format = center
+							text = "OPINION_LEVEL"
+							#alwaysTransparent = yes
+						}
+					}
+
+					# Diplo stance
+
+					containerWindowType = {
+						name = "diplo_stance"
+						position = { x = -85 y = 159 }
+						size = { width = 293 height = 56 }
+						moveable = no
+
+						iconType = {
+							name = "background"
+							spriteType = "GFX_info_background_148"
+							position = { x = 57 y = 7}
+						}
+
+						iconType = {
+							name = "icon"
+							quadTextureSprite = "GFX_government_civic"
+							position = { x = 0 y = 1 }
+							orientation = "UPPER_LEFT"
+							scale = .85
+						}
+
+						instantTextBoxType = {
+							name = "label"
+							position = { x = 56 y = 16 }
+							font = "cg_16b"
+							text = "DIPLOMACY_STANCE"
+							maxWidth = 200
+							maxHeight = 29
+							fixedSize = yes
+							format = center
+						}
+					}
+
+					# power
+
+					containerWindowType = {
+						name = "power"
+						position = { x = -85 y = 208 }
+						size = { width = 219 height = 40 }
+
+						iconType = {
+							name = "icon"
+							spriteType = "GFX_relative_power_icon"
+							position = { x = 11 y = 5 }
+							alwaysTransparent = yes
+						}
+
+						background = {
+							name = "background"
+							spriteType = "GFX_info_background_148"
+							position = { x = 57 y = 4 }
+						}
+
+						instantTextBoxType = {
+							name = "label"
+							font = "cg_16b"
+							maxWidth = 219
+							maxHeight = 27
+							position = { x = 47 y = 12 }
+							format = center
+							alwaysTransparent = yes
+						}
+					}
+
+
+					# preftl tech age
+					containerWindowType = {
+						name = "preftl_tech"
+						position = { x = -96 y = 208 }
+						size = { width = 219 height = 40 }
+
+
+						iconType = {
+							name = "diplomacy_icon"
+							quadTextureSprite = "GFX_diplomacy_tech_age"
+							position = { x= 17 y = 12  }
+						}
+
+						iconType = {
+							name = "icon"
+							position = { x = 68 y = 7 }
+							spriteType = "GFX_diplomacy_tech_age_bar"
+							frame = 50
+						}
+
+						instantTextBoxType={
+							name = "label"
+							font = "cg_16b"
+							position = { x = 69 y = 13 } ##x = 7
+							maxWidth = 197
+							maxHeight = 27
+							format = center
+							text = "OPINION_LEVEL"
+							#alwaysTransparent = yes
+						}
+					}
+
+					## VM: commenting instead of deleting, as for the next patch we can go back to this idea :)
+
+					# Origins
+					#containerWindowType = {
+					#	name = "origin"
+					#	position = { x = -89 y = 325 }
+					#	size = { width = 407 height = 53 }
+					#	moveable = no
+
+					#	background = {
+					#		name = "origin_frame"
+					#		spriteType = "GFX_tiles_dark_area_cut_8"
+					#	}
+
+					#	iconType = {
+					#		name = "icon"
+					#		quadTextureSprite = "GFX_government_civic"
+					#		position = { x = 16 y = 8 }
+					#		orientation = "UPPER_LEFT"
+					#		scale = 1.1
+					#	}
+
+					#	instantTextBoxType = {
+					#		name = "label"
+					#		position = { x = 73 y = 0 }
+					#		font = "cg_16b"
+					#		text = "ORIGIN"
+					#		maxWidth = 200
+					#		maxHeight = 53
+					#		fixedSize = yes
+					#		format = left
+					#		vertical_alignment = center
+					#	}
+					#}
+
+				}
+
+
+				OverlappingElementsBoxType = {
+					name = "selected_empire_ethics_icons"
+					position = { x = 224 y = 293 }
+					size = { x = 200 y = 40 }
+					spacing = 0
+					format = right
+				}
+
+				buttonType = {
+					name = "selected_empire_flag"
+					quadTextureSprite = "GFX_empire_flag_64"
+					position = { x= 8 y = 268 }
+					orientation = UPPER_LEFT
+					oversound = no_sound
+				}
+
+				instantTextBoxType={
+					name = "selected_empire_name"
+					font = "malgun_goth_24"
+					position = { x = 37 y = 53 }
+					maxWidth = 380
+					maxHeight = 27
+					format = LEFT
+					fixedsize = yes
+					text_color_code = "E"
+				}
+
+				iconType = {
+					name = "government_authority"
+					quadTextureSprite = "GFX_government_authority"
+					position = { x = 37 y = 89 }
+					scale = .80
+					orientation = "UPPER_LEFT"
+				}
+
+				instantTextBoxType={
+					name = "selected_empire_government_type"
+					font = "cg_16b"
+					position = { x = 97 y = 89	}
+					maxWidth = 267
+					maxHeight = 43
+					format = LEFT
+					text_color_code = "E"
+				}
+
+				instantTextBoxType={
+					name = "selected_empire_personality_type"
+					font = "cg_16b"
+					position = { x = 97 y = 113	}
+					maxWidth = 267
+					maxHeight = 43
+					text = "Despicable Neutrals"
+					format = left
+					#text_color_code = "E"
+				}
+
+				## VM: commenting instead of deleting, as for the next patch we can go back to this idea :)
+
+				# Specie and Planet
+				#containerWindowType = {
+				#	name = "species_area"
+				#	position = { x = 21 y = 691 }
+				#	size = { width = 407 height = 65 }
+				#	moveable = no
+
+				#		background = {
+				#			name = "species_frame"
+				#			spriteType = "GFX_tiles_dark_area_cut_8"
+				#		}
+				#}
+
+				#instantTextBoxType={
+				#	name = "species_name"
+				#	font = "cg_16b"
+				#	position = { x = 160 y = 723 }
+				#	maxWidth = 307
+				#	maxHeight = 43
+				#	fixedSize = yes
+				#	format = LEFT
+				#}
+
+				#instantTextBoxType={
+				#	name = "species_type"
+				#	font = "cg_16b"
+				#	position = { x = 160 y = 700 }
+				#	maxWidth = 173
+				#	maxHeight = 43
+				#	format = LEFT
+				#	text_color_code = "E"
+				#}
+
+				#iconType = {
+				#	name = "founder_species"
+				#	quadTextureSprite = "GFX_portrait_character"
+				#	position = { x = 53 y = 680 }
+				#	scale = 0.15
+				#	tooltip_mode_enabled = yes
+				#}
+
+				#iconType = {
+				#	name = "capital_icon"
+				#	quadTextureSprite = "GFX_planet_type"
+				#	position = { x = 40 y = 700 }
+				#	tooltip_mode_enabled = yes
+				#}
+
+				containerWindowType = {
+					name = "detailed_diplomacy_window"
+					size = { width = 407 height = 129}
+					dynamic_extra_height = @dynamic_extra_left_panel
+					position = { x = 21 y = 576 }
+					clipping = yes
+
+					background = {
+						name = "detailed_diplo_frame"
+						spriteType = "GFX_tiles_dark_area_cut_8"
+					}
+
+					smoothListboxType = {
+						name = "detailed_diplomacy_list"
+						position = { x = 13 y = 4 }
+						size = { x = 373 y = 120 }
+						dynamic_extra_height = @dynamic_extra_left_panel
+						scrollbarType = "standardlistbox_slider"
+					}
+				}
+
+				buttonType={
+					name = "diplomacy_button"
+					font = "cg_16b"
+					spriteType = "GFX_button_animated_110_34"
+					buttonText = "GALAXY_VIEW_EMPIRE_DIPLOMACY"
+					orientation = lower_left
+					position = { x = 9 y = -25 }
+				}
+
+				buttonType={
+					name = "espionage_button"
+					font = "cg_16b"
+					spriteType = "GFX_button_animated_110_34"
+					buttonText = "GALAXY_VIEW_EMPIRE_ESPIONAGE"
+					orientation = lower_left
+					position = { x = 167 y = -25 }
+				}
+
+				buttonType = {
+					name = "zoom_to_capital_button"
+					quadTextureSprite = "GFX_fleetview_focus"
+					position = { x = 379 y = -12 }
+					orientation = lower_left
+					pdx_tooltip = "ZOOM_TO_CAPITAL"
+				}
+			}
+
+			containerWindowType = {
+				name = "empire_profile_minimalist"
+				size = { width = 100% height = 100% }
+
+				containerWindowType = {
+					name = "info_box"
+					position = { x=15 y=39 }
+					size = { width = 420 height= 272 }
+
+					background = {
+						name = "area51"
+						spriteType = "GFX_tiles_dark_area_cut_8"
+					}
+				}
+
+				buttonType = {
+					name = "selected_empire_flag"
+					quadTextureSprite = "GFX_empire_flag_128"
+					position = { x= 16 y = 56 }
+					#orientation = CENTER_UP
+				}
+
+				instantTextBoxType={
+					name = "selected_empire_name"
+					font = "malgun_goth_24"
+					position = { x = 189 y = 125 }
+					maxWidth = 237
+					maxHeight = 107
+					fixedsize = yes
+					text_color_code = "E"
+				}
+
+				buttonType={
+					name = "diplomacy_button"
+					font = "cg_16b"
+					spriteType = "GFX_button_animated_110_34"
+					buttonText = "GALAXY_VIEW_EMPIRE_DIPLOMACY"
+					position = { x = 13 y = 235 }
+				}
+			}
+
+			containerWindowType = {
+				name = "empire_list"
+				position = { x=447 y=100 }
+				size = { width= 1235 height= 664 }
+				dynamic_extra_height = @dynamic_extra
+
+				background = {
+					name = "area51"
+					spriteType = "GFX_tiles_dark_area_cut_8"
+				}
+			}
+
+			@sort_button_height = 44
+
+
+
+
+			#filters are dynamic ( except for the "other" filter, which is hard coded )
+			#a filter requires
+			# 1) a checkboxType named "filter_checkbox_<country_type>"
+			# 2) an instantTextBoxType named "filter_label_<country_type>"
+			# government text in entries will use the same text_color_code as the filter_label for their matching filter
+
+			dropDownBoxType = {
+				name = "filters"
+				position = { x = 1467 y = -13 }
+				size = { width = 269 height = 51 }
+
+				## VM: Commenting here for now
+				
+				#expandButton = {
+				#	name = "expand_filters_button"
+				#	position = { x = 0 y = 0 }
+				#	font = "cg_16b"
+				#	spriteType = "GFX_button_animated_110_34"
+				#	buttonText = "GALAXY_VIEW_FILTERS"
+				#}
+
+				expandedWindow = {
+					name = "expanded_filters_window"
+					position = { x = -40 y = -267 }
+					hide_position = { x = -40 y = -267 }
+					show_position = { x = -40 y = 67 }
+					show_animation_type = decelerated
+					hide_animation_type = accelerated
+					animation_time = 200
+					size = { width = 260 height = 333 }
+					#verticalScrollbar = "right_vertical_slider"
+
+					background = {
+						name = "bg"
+						spriteType = "GFX_subwindow_tile_plain_solid"
+					}
+
+					gridBoxType = {
+						name = "gridbox"
+						format = "UPPER_LEFT"
+						position = { x = 7 y = 7 }
+						size = { width = 253 height = 0 }
+						slotsize = { width = 387 height = 53 }
+						max_slots_horizontal = 1
+					}
+				}
+			}
+
+			checkboxType = {
+				name = "filter_checkbox_default"
+				position = { x = 508 y = 13 }
+				quadTextureSprite = "GFX_checkbox_20_20_01"
+				clicksound = select_click
+			}
+
+			instantTextBoxType = {
+				name = "filter_label_default"
+				font = "cg_16b"
+				text = "EMPIRE"
+				position = { x = 552 y = 21 }
+				maxWidth = 200
+				maxHeight = 27
+				format = left
+				fixedsize = yes
+				text_color_code = "W"
+				alwaystransparent = yes
+			}
+			
+			checkboxType = {
+				name = "filter_checkbox_fallen_empire"
+				position = { x = 709 y = 13 }
+				quadTextureSprite = "GFX_checkbox_20_20_01"
+				clicksound = select_click
+			}
+
+			instantTextBoxType = {
+				name = "filter_label_fallen_empire"
+				font = "cg_16b"
+				text = "COUNTRY_FALLEN_EMPIRE"
+				position = { x = 752 y = 21 }
+				maxWidth = 200
+				maxHeight = 27
+				format = left
+				fixedsize = yes
+				text_color_code = "H"
+				alwaystransparent = yes
+			}
+
+			checkboxType = {
+				name = "filter_checkbox_primitive"
+				position = { x = 963 y = 13 }
+				quadTextureSprite = "GFX_checkbox_20_20_01"
+				clicksound = select_click
+			}
+
+			instantTextBoxType = {
+				name = "filter_label_primitive"
+				font = "cg_16b"
+				text = "PRIMITIVES"
+				position = { x = 1005 y = 21 }
+				maxWidth = 200
+				maxHeight = 27
+				format = left
+				fixedsize = yes
+				text_color_code = "L"
+				alwaystransparent = yes
+			}
+			
+			checkboxType = {
+				name = "filter_checkbox_other"
+				position = { x = 1189 y = 13 }
+				quadTextureSprite = "GFX_checkbox_20_20_01"
+				clicksound = select_click
+			}
+
+			instantTextBoxType = {
+				name = "filter_label_other"
+				font = "cg_16b"
+				text = "OTHER"
+				position = { x = 1232 y = 21 }
+				maxWidth = 200
+				maxHeight = 27
+				format = left
+				fixedsize = yes
+				text_color_code = "M"
+				alwaystransparent = yes
+			}
+
+			checkboxType = {
+				name = "filter_checkbox_non_player"
+				position = { x = 1376 y = 13 }
+				quadTextureSprite = "GFX_checkbox_20_20_01"
+				clicksound = select_click
+			}
+
+			instantTextBoxType = {
+				name = "filter_label_non_player"
+				font = "cg_16b"
+				text = "COUNTRY_NON_PLAYER"
+				position = { x = 1419 y = 21 }
+				maxWidth = 200
+				maxHeight = 27
+				format = left
+				fixedsize = yes
+				text_color_code = "H"
+				alwaystransparent = yes
+			}
+
+
+			buttonType={
+				name = "name"
+				font = "cg_16b"
+				spriteType = "GFX_galactic_object_button"
+				buttonText = "GALAXY_VIEW_EMPIRE_NAME"
+				position = { x = 460 y = 53 }
+				pdx_tooltip = "GALAXY_VIEW_SORT_NAME"
+			}
+
+			buttonType = {
+				name = "empire_relations"
+				spriteType = "GFX_button_35_24"
+				position = { x= 821 y = @sort_button_height }
+				pdx_tooltip = "SORT_BY_RELATION"
+			}
+
+			iconType ={
+				name ="their_opinion_icon"
+				spriteType = "GFX_diplomacy_opinion"
+				position = { x = 845 y = 63 }
+				alwaystransparent = yes
+				scale = .85
+			}
+
+			buttonType={
+				name = "status"
+				font = "cg_16b"
+				#spriteType = "GFX_galactic_object_button"
+				spriteType = "GFX_button_164_24"
+				buttonText = "GALAXY_VIEW_EMPIRE_STATUS"
+				position = { x = 873 y = 44 }
+				pdx_tooltip = "GALAXY_VIEW_SORT_DIPLOMACY"
+			}
+
+			buttonType={
+				name = "planets"
+				font = "cg_16b"
+				#spriteType = "GFX_galactic_object_button"
+				spriteType = "GFX_button_35_24"
+				position = { x = 1097 y = 44 }
+				pdx_tooltip = "SORT_BY_PLANETS"
+			}
+
+			iconType ={
+				name = "planets_icon"
+				quadTextureSprite = "GFX_colonies"
+				position = { x = 1115 y = 63 }
+				alwaystransparent = yes
+			}
+
+			buttonType = {
+				name = "power"
+				font = "cg_16b"
+				spriteType = "GFX_button_116_24"
+				position = { x = 1149 y = @sort_button_height }
+				pdx_tooltip = "GALAXY_VIEW_SORT_POWER"
+			}
+
+			iconType ={
+				name = "power_icon"
+				quadTextureSprite = "GFX_relative_power_icon"
+				position = { x = 1229 y = 63 }
+				alwaystransparent = yes
+				scale = .85
+			}
+
+			buttonType={
+				name = "alliance_federation"
+				font = "cg_16b"
+				spriteType = "GFX_button_150_24"
+				buttonText = "GALAXY_VIEW_EMPIRE_ALLIANCE_FEDERATION"
+				position = { x = 1309 y = @sort_button_height }
+				pdx_tooltip = "GALAXY_VIEW_SORT_ALLIANCE_OR_FEDERATION"
+			}
+
+			buttonType={
+				name = "war_status"
+				font = "cg_16b"
+				spriteType = "GFX_button_95_24"
+				buttonText = "GALAXY_VIEW_EMPIRE_WAR_STATUS"
+				position = { x = 1516 y = @sort_button_height }
+				pdx_tooltip = "GALAXY_VIEW_SORT_WAR_STATUS"
+			}
+
+
+			containerWindowType = {
+				name = "empires_window"
+				size = { width = 907 height = 647}
+				position = { x=467 y=101 }
+				margin = { top = 7 bottom = 7 }
+
+				background = {
+					name ="empires_window_bg"
+					spriteType = "GFX_tiled_window_transparent"
+				}
+
+				smoothListboxType = {
+					name = "galaxy_empires"
+					position = { x = -9 y = 0 }
+					backGround = ""
+					size = { x = 1200 y = 647 }
+					dynamic_extra_height = @dynamic_extra
+					scrollbarType = "standardlistbox_slider"
+					borderSize = { x = 0 y = 0 }
+				}
+			}
+		}
+
+		containerWindowType = {
+			name = "agreements"
+			position = { x = 0 y = 67 }
+			size = { width = 100% height = 749 }
+			dynamic_extra_height = @dynamic_extra_left_panel
+			moveable = no
+
+			containerWindowType = {
+				name = "overlord_info"
+				position = { x = 9 y = 0 }
+				size = { width = 640 height = 173 }
+
+				containerWindowType = {
+					name = "overlord_info_portrait_window"
+					size = { width = 236 height = 257 }
+					position = { x = -4 y = 0 }
+
+					iconType = {
+						name = "overlord_info_portrait_icon"
+						orientation = center
+						position = { x = 83 y = 0 }
+						scale = 0.54
+						quadTextureSprite = "GFX_portrait_room_masked"
+						centerPosition = yes
+						alwaysTransparent = yes
+					}
+
+					containerWindowType = {
+						name = "overlord_info_portrait_frame"
+						position = { x = 0 y = 0 }
+						size = { width = 236 height = 255 }
+						
+						background = {
+							name = "background"
+							spriteType = "GFX_overlord_portrait_frame"
+							alwaysTransparent = yes
+						}
+					}
+				}
+
+				containerWindowType = {
+					name = "overlord_info_header"
+					position = { x = 233 y = 27 }
+					size = { width = 360 height = 80 }
+		
+					background = {
+						name = "background"
+						position = { x = 0 y = -9 }
+						spriteType = "GFX_hex_bg"
+						alwaysTransparent = yes
+					}
+
+					buttonType = {
+						name = "overlord_info_flag"
+						position = { x = 0 y = 0 }
+						quadTextureSprite = "GFX_empire_flag_48"
+					}
+
+					instantTextBoxType={
+						name = "overlord_info_name"
+						position = { x = 75 y = 15 }
+						font = "malgun_goth_24"
+						text = "Overlord"
+						maxWidth = 293
+						maxHeight = 27
+						format = LEFT
+						fixedsize = yes
+					}
+				}
+
+				containerWindowType = {
+					name = "overlord_info_properties"
+					position = { x = 227 y = 120 }
+					size = { width = 467 height = 133 }
+
+					instantTextBoxType = {
+						name = "overlord_info_agreements_count"
+						position = { x = 13 y = 0 }
+						font = "cg_16b"
+						text = "Agreements: 0"
+						maxWidth = 267
+						maxHeight = 27
+						format = LEFT
+						fixedsize = yes
+					}
+
+					instantTextBoxType = {
+						name = "overlord_info_holdings_count"
+						position = { x = 13 y = 27 }
+						font = "cg_16b"
+						text = "Holdings: 42"
+						maxWidth = 267
+						maxHeight = 27
+						format = LEFT
+						fixedsize = yes
+					}
+					
+					containerWindowType = {
+						name = "subject_view_details_window"
+						position = { x = 0 y = 0 }
+						size = { width = 100% height = 100% }
+					
+						containerWindowType = {
+							name = "subject_view_intel"
+							position = { x = 287 y = 87 }
+							size = { width = 300 height = 40 }
+						
+							iconType = {
+								name = "sicon"
+								spriteType = "GFX_intel_level_0"
+								position = { x = 0 y = 0 }
+							}
+						
+							instantTextBoxType = {
+								name = "label"
+								font = "cg_16b"
+								position = { x = 40 y = 0 }
+								maxWidth = 147
+								maxHeight = 27
+								format = left
+							}
+						
+							iconType = {
+								name = "intel_progressbar"
+								position = { x = 40 y = 23 }
+								spriteType = "GFX_intel_progressbar"
+							}
+						}
+					
+						containerWindowType = {
+							name = "subject_view_opinion"
+							position = { x = 13 y = 80 }
+							size = { width = 293 height = 60 }
+							moveable = no
+						
+							iconType = {
+								name = "diplomacy_icon"
+								quadTextureSprite = "GFX_diplomacy_opinion"
+								position = { x = -1 y = 11  }
+							}
+						
+							iconType = {
+								name = "icon"
+								position = { x = 40 y = 7 }
+								spriteType = "GFX_diplomacy_opinion_excellent"
+								frame = 50
+							}
+						
+							instantTextBoxType={
+								name = "label"
+								font = "cg_16b"
+								position = { x = 40 y = 15 }
+								maxWidth = 197
+								maxHeight = 27
+								format = center
+								text = "OPINION_LEVEL"
+							}
+						}
+					}
+				}
+			}
+
+			containerWindowType = {
+				name = "agreements_list_window"
+				orientation = lower_left
+				origo = lower_left
+				position = { x = 9 y = 0 }
+				size = { width = 693 height = 481 }
+
+				background = {
+					name ="background"
+					spriteType = "GFX_tiles_dark_area_cut_8"
+				}
+
+				smoothListboxType = {
+					name = "agreements_list"
+					position = { x = 0 y = 7 }
+					size = { x = 673 y = 468 }
+					scrollbarType = "standardlistbox_slider"
+					borderSize = { x = 0 y = 0 }
+					spacing = 5
+				}
+
+				containerWindowType = {
+					name = "empty_tip"
+	
+					instantTextBoxType = {
+						name = "empty_tip_text"
+						orientation = upper_left
+						position = { x = 27 y = 80 }
+						font = "cg_16b"
+						text = "xenos_ui_no_agreements"
+						maxWidth = 133
+						maxHeight = 53
+						fixedSize = yes
+						format = center
+						text_color_code = "_"
+					}
+				}
+			}
+
+			containerWindowType = {
+				name = "subject_view_agreements_list_window"
+				orientation = lower_left
+				origo = lower_left
+				position = { x = 9 y = 0 }
+				size = { width = 693 height = 481 }
+
+				background = {
+					name = "background"
+					spriteType = "GFX_tiles_dark_area_cut_8"
+				}
+
+				smoothListboxType = {
+					name = "subject_view_agreements_list"
+					position = { x = 0 y = 7 }
+					size = { x = 673 y = 468 }
+					scrollbarType = "standardlistbox_slider"
+					borderSize = { x = 0 y = 0 }
+					spacing = 5
+				}
+
+				containerWindowType = {
+					name = "empty_tip"
+	
+					instantTextBoxType = {
+						name = "empty_tip_text"
+						orientation = upper_left
+						position = { x = 27 y = 27 }
+						font = "cg_16b"
+						text = "xenos_ui_no_agreements"
+						maxWidth = 133
+						maxHeight = 53
+						fixedSize = yes
+						format = center
+						text_color_code = "_"
+					}
+				}
+			}
+	
+			containerWindowType = {
+				name = "agreement_info"
+				position = { x = 711 y = 4 }
+				size = { width = 975 height = 745 }
+	
+				background = {
+					name = "background"
+					spriteType = "GFX_tiles_dark_area_cut_8"
+				}
+	
+				iconType = {
+					name = "subject_info_portrait"
+					position = { x = 5 y = 5 }
+					quadTextureSprite = "GFX_portrait_gamesetup_mask"
+					scale = .758
+					mirror = yes
+				}
+
+				iconType = {
+					name = "city_frame"
+					position = { x = 0 y = 0 }
+					spriteType = "GFX_diplomacy_portrait_frame"
+					scale = .758
+					alwaysTransparent = yes
+				}
+
+				iconType = {
+					name = "gradient"
+					position = { x = 9 y = 7 }
+					spriteType = "GFX_empire_gradient_bg"
+					alwaysTransparent = yes
+				}
+
+				iconType = {
+					name = "gradient_right"
+					position = { x = -388 y = 7 }
+					spriteType = "GFX_empire_gradient_bg"
+					mirror = yes
+					alwaysTransparent = yes
+				}
+
+
+				containerWindowType = {
+					name = "subject_info_specialist_bg"
+					size = { width = 232 height = 61 }
+					position = { x = 27 y = 24 }
+
+					background = {
+						name = "background"
+						spriteType = "GFX_tiles_dark_area_cut_8"
+					}
+				}
+				
+				iconType = {
+					name = "subject_info_preset_icon"
+					spriteType = "GFX_pink_box" # Changed in code
+					position = { x = 49 y = 55 }
+					centerPosition = yes
+				}
+				
+				iconType = {
+					name = "subject_specialty_icon_big"
+					spriteType = "GFX_overlord_specialty_big"
+					position = { x = 9 y = 13 }
+					scale = 0.86
+				}
+
+				instantTextBoxType = {
+					name = "subject_info_specialist_name"
+					position = { x = 93 y = 33 }
+					font = "cg_16b"
+					text = "Specialist Title" # Changed in code
+					maxWidth = 267
+					maxHeight = 27
+					fixedSize = yes
+					format = left
+					text_color_code = "E"
+				}
+
+				containerWindowType = {
+					name = "subject_info_floating_window"
+					orientation = upper_right
+					origo = upper_right
+					position = { x = -21 y = 24 }
+					size = { width = 293 height = 120 }
+		
+					background = {
+						name = "background"
+						spriteType = "GFX_tiles_dark_area_cut_8"
+					}
+
+					buttonType = {
+						name = "subject_info_flag"
+						orientation = upper_right
+						position = { x = -47 y = 4 }
+						quadTextureSprite = "GFX_empire_flag_32"
+					}
+					
+					instantTextBoxType={
+						name = "subject_info_name"
+						position = { x = 8 y = -3 }
+						font = "cg_16b"
+						text = "Example Subject Empire Long Name" # Changed in code
+						maxWidth = 235
+						maxHeight = 53
+						vertical_alignment = center
+						format = RIGHT
+						fixedsize = yes
+						text_color_code = "E"
+					}
+
+					iconType = {
+						name = "subject_info_loyalty_icon"
+						orientation = lower_right
+						position = { x = -41 y = -71 }
+						spriteType = "GFX_loyalty_icon"
+					}
+
+					instantTextBoxType={
+						name = "subject_info_loyalty"
+						position = { x = 8 y = 53 }
+						font = "cg_16b"
+						text = "0"
+						maxWidth = 235
+						maxHeight = 27
+						format = RIGHT
+						fixedsize = yes
+						text_color_code = "_"
+					}
+
+					iconType = {
+						name = "subject_monthly_loyalty_icon"
+						orientation = lower_right
+						position = { x = -41 y = -37 }
+						spriteType = "GFX_loyalty_icon"
+					}
+
+					iconType = {
+						name = "monthly_clock_overlay"
+						position = { x = -47 y = -44 }
+						quadTextureSprite = "GFX_timed_overlay"
+						orientation = lower_right
+						alwaystransparent = yes
+					}
+
+					instantTextBoxType={
+						name = "subject_monthly_loyalty"
+						position = { x = 8 y = 88 }
+						font = "cg_16b"
+						text = "-10.6"
+						maxWidth = 235
+						maxHeight = 27
+						format = RIGHT
+						fixedsize = yes
+						text_color_code = "_"
+					}
+				}
+
+				containerWindowType = {
+					name = "terms_info_window"
+					position = { x = 8 y = 360 }
+					size = { width = 959 height = 329 }
+
+					# Resource terms
+					containerWindowType = {
+						name = "resource_terms_grid_window"
+						orientation = upper_left
+						position = { x = 0 y = 0 }
+						size = { width = 475 height = 181 }
+
+						background = {
+							name ="background"
+							spriteType = "GFX_tiles_dark_area_cut_8"
+						}
+
+						instantTextBoxType = {
+							name = "title"
+							position = { x = 8 y = 5 }
+							text = "xenos_ui_resources"
+							font = "cg_16b"
+							maxWidth = 475
+							maxHeight = 27
+							format = LEFT
+						}
+
+						gridBoxType = {
+							name = "resource_terms_grid"
+							position = { x = 8 y = 33 }
+							size = { width = 500 height = 144 }
+							slotsize = { width = 232 height = 73 }
+							max_slots_horizontal = 2
+							max_slots_vertical = 2
+							format = "UPPER_LEFT"
+						}
+					}
+
+					# Holdings
+					containerWindowType = {
+						name = "holdings_window"
+						origo = lower_left
+						orientation = lower_left
+						position = { x = 0 y = 0 }
+						size = { width = 475 height = 139 }
+
+						containerWindowType = {
+							name = "holdings_grid_container"
+							position = { x = 0 y = 0 }
+							size = { width = 100% height = 100% }
+
+							background = {
+								name = "background"
+								quadTextureSprite = "GFX_tiles_dark_area_cut_8"
+							}
+
+							gridBoxType = {
+								name = "holdings_gridbox"
+								position = { x = 0 y = 29 }
+								slotSize = { width = 116 height = 95 }
+								max_slots_horizontal = 4
+								format = "UPPER_LEFT"
+							}
+
+							containerWindowType = {
+								name = "empty_tip"
+				
+								instantTextBoxType = {
+									name = "empty_tip_text"
+									font = "cg_16b"
+									text = "HOLDINGS_EMPTY"
+									position = { x = 0 y = 80 }
+									orientation = upper_left
+									maxWidth = 133
+									maxHeight = 53
+									fixedSize = yes
+									format = center
+									alwaysTransparent = yes
+									text_color_code = "Y"
+								}
+							}
+						}
+
+						instantTextBoxType = {
+							name = "holdings_title"
+							text = "AGREEMENTS_HOLDINGS_TITLE" # Changed in code
+							font = "cg_16b"
+							position = { x = 8 y = 5 }
+							maxWidth = 533
+							maxHeight = 27
+							format = LEFT
+						}
+					}
+
+					# Discrete terms
+					containerWindowType = {
+						name = "discrete_terms_grid_window"
+						origo = upper_right
+						orientation = upper_right
+						position = { x = 0 y = 0 }
+						size = { width = 475	 height = 329 }
+		
+						background = {
+							name ="background"
+							spriteType = "GFX_tiles_dark_area_cut_8"
+						}
+						
+						### NOTE - This also affects diplomacy_incoming_view.gui 
+						gridBoxType = {
+							name = "discrete_terms_grid"
+							position = { x = 13 y = 9 }
+							slotsize = { width = 237 height = 80 }
+							max_slots_horizontal = 2
+							max_slots_vertical = 4
+							format = "UPPER_LEFT"
+						}
+					}
+
+					# Term Buttons
+					containerWindowType = {
+						name = "terms_buttons"
+						position = { x = 0 y = 0 }
+						size = { width = 100% height = 56 }
+						orientation = lower_left
+						clipping = no
+
+						buttonType={
+							name = "terms_negotiation_button"
+							font = "cg_16b"
+							spriteType = "GFX_standard_button_200_34_button"
+							buttonText = "xenos_ui_negotiate_agreement"
+							orientation = upper_left
+							position = { x = 192 y = -11 }
+						}
+
+						buttonType={
+							name = "trade_negotiation_button"
+							font = "cg_16b"
+							spriteType = "GFX_standard_button_200_34_button"
+							buttonText = "TRADE_NEGOTIATION"
+							orientation = upper_left
+							position = { x = 468 y = -11 }
+						}
+					}
+				}
+				
+				# Specialist leveling GUI
+				# Note: If you change things here,
+				# then you might need to change it in the agreement negotiation view too.
+				containerWindowType = {
+					name = "specialist_level_window"
+					position = { x = 20 y = 125 }
+					size = { width = 237 height = 199 }
+					clipping = no
+
+					containerWindowType = {
+						name = "background_container"
+						position = { x = 1 y = 0 }
+						size = { width = 172 height = 100%  }
+						orientation = lower_right
+						origo = lower_right
+
+						backGround = {
+							name = "background"
+							spriteType = "GFX_tiles_dark_area_cut_8"
+						}
+					}
+
+					gridBoxType = {
+						name = "specialist_levels_grid"
+						position = { x = 0 y = 0 }
+						slotSize = { width = 59 height = 76 }			
+						max_slots_horizontal = 1
+						max_slots_vertical = 3
+						format = "UPPER_LEFT"
+					}
+
+					instantTextBoxType = { 
+						name = "specialist_level_current_level"
+						text = "Tier: X" # Changed in code
+						font = "cg_16b"
+						position = { x = 72 y = -72 }
+						maxWidth = 133
+						maxHeight = 27
+						format = LEFT
+					}
+
+					instantTextBoxType = {
+						name = "specialist_level_xp"
+						text = "SPECIALIST_XP"
+						font = "cg_16b"
+						position = { x = 5 y = -27 }
+						maxWidth = 213
+						maxHeight = 27
+						format = left
+						alwaysTransparent = no
+					}
+				}
+			}
+		}
+
+		# tabs ----------------------------------------------
+		@tabheight = -3
+
+		buttonType = {
+			name = "tab_galaxy"
+			quadTextureSprite = "GFX_tab_1_inactive"
+			position = { x= -27 y = @tabheight }
+			font = "cg_16b"
+			buttonText = "topbar_button_contacts_name"
+			buttonFont = "cg_16b"
+			shortcut = "z"
+			clicksound = "tab_click"
+			Orientation = "LOWER_LEFT"
+			oversound = no_sound
+		}
+		buttonType = {
+			name = "tab_galaxy_active"
+			quadTextureSprite = "GFX_tab_1_active"
+			position = { x= -27 y = @tabheight }
+			font = "cg_16b"
+			buttonText = "topbar_button_contacts_name"
+			buttonFont = "cg_16b"
+			clicksound = "tab_click"
+			shortcut = "z"
+			Orientation = "LOWER_LEFT"
+			oversound = no_sound
+		}
+
+		buttonType = {
+			name = "tab_agreements"
+			quadTextureSprite = "GFX_tab_2_inactive"
+			position = { x= 145 y = @tabheight }
+			font = "cg_16b"
+			buttonText = "xenos_ui_agreements"
+			buttonFont = "cg_16b"
+			shortcut = "x"
+			clicksound = "tab_click"
+			Orientation = "LOWER_LEFT"
+			oversound = no_sound
+		}
+		buttonType = {
+			name = "tab_agreements_active"
+			quadTextureSprite = "GFX_tab_2_active"
+			position = { x= 145 y = @tabheight }
+			font = "cg_16b"
+			buttonText = "xenos_ui_agreements"
+			buttonFont = "cg_16b"
+			clicksound = "tab_click"
+			shortcut = "x"
+			Orientation = "LOWER_LEFT"
+			oversound = no_sound
+		}
+	}
+
+	containerWindowType = {
+		name = "agreements_list_entry"
+		position = { x = 0 y = 0 }
+		size = { width = 693 height = 59 }
+
+		buttonType = {
+			name = "background"
+			spriteType = "GFX_bg_area_light"
+			size = { x = 667 y = 59 }
+			position = { x = 7 y = 0 }
+			oversound = no_sound
+			clicksound = select_click
+		}
+
+		containerWindowType = {
+			name = "selected_overlay"
+			position = { x = 7 y = 0 }
+			size = { width = 667 height = 59 }
+
+			background = {
+				name = "selected_bg"
+				spriteType = "GFX_glow_tile_orange_no_padding"
+				alwaysTransparent = yes
+			}
+		}
+
+		buttonType = { # Changed in code
+			name = "flag"
+			quadTextureSprite = "GFX_empire_flag_32"
+			position = { x= 11 y = 8	 }
+		}
+
+		instantTextBoxType = {
+			name = "name"
+			font = "cg_16b"
+			maxWidth = 293
+			maxHeight = 53
+			position = { x = 59 y = 1 }
+			vertical_alignment = center
+			text_color_code = "E"
+			fixedSize = yes
+		}
+
+		iconType = {
+			name = "specialist_icon"
+			spriteType = "GFX_pink_box" # Changed in code
+			scale = 1
+			position = { x = 380 y = 29 }
+			centerPosition = yes
+		}
+		
+		instantTextBoxType={
+			name = "conversion_timer"
+			font = "cg_16b"
+			position = { x = 407 y = 1 }
+			maxWidth = 93
+			maxHeight = 53
+			text = "SPECIALIST_CONVERSION_TIME"
+			vertical_alignment = center
+		}
+
+		iconType ={
+			name = "loyalty_icon"
+			quadTextureSprite = "GFX_loyalty_icon"
+			position = { x = 499 y = 29 }
+			centerPosition = yes
+		}
+
+		instantTextBoxType = {
+			name = "loyalty"
+			font = "cg_16b"
+			maxWidth = 80
+			maxHeight = 53
+			position = { x = 517 y = 1 }
+			vertical_alignment = center
+			text = "42" # Changed in code
+			text_color_code = "_"
+			fixedSize = yes
+			format = left
+		}
+
+		iconType ={
+			name = "monthly_loyalty_icon"
+			quadTextureSprite = "GFX_loyalty_icon"
+			position = { x = 587 y = 29 }
+			centerPosition = yes
+		}
+
+		iconType = {
+			name = "monthly_clock_overlay"
+			position = { x = 583 y = 25 }
+			quadTextureSprite = "GFX_timed_overlay"
+			alwaystransparent = yes
+			centerPosition = yes
+		}
+
+		instantTextBoxType = {
+			name = "monthly_loyalty"
+			font = "cg_16b"
+			maxWidth = 80
+			maxHeight = 53
+			position = { x = 603 y = 1 }
+			vertical_alignment = center
+			text = "+30.8" # Changed in code
+			text_color_code = "_"
+			fixedSize = yes
+			format = left
+		}
+	}
+
+	containerWindowType = {
+		name = "subject_view_agreements_list_entry"
+		position = { x = 0 y = 0 }
+		size = { width = 693 height = 59 }
+
+		containerWindowType = {
+			name = "bg_box"
+			position = { x = 7 y = 0 }
+			size = { width = 667 height = 59 }
+
+			background = {
+				name = "background"
+				spriteType = "GFX_tiles_dark_area_cut_8"
+				alwaysTransparent = yes
+			}
+		}
+
+		buttonType = { # Changed in code
+			name = "flag"
+			quadTextureSprite = "GFX_empire_flag_32"
+			position = { x = 11 y = 8 }
+		}
+
+		instantTextBoxType = {
+			name = "name"
+			font = "cg_16b"
+			maxWidth = 347
+			maxHeight = 53
+			position = { x = 59 y = 1 }
+			vertical_alignment = center
+			text_color_code = "E"
+			fixedSize = yes
+		}
+
+		iconType = {
+			name = "specialist_icon"
+			spriteType = "GFX_pink_box" # Changed in code
+			position = { x = 380 y = 29 }
+			centerPosition = yes
+		}
+		
+		instantTextBoxType={
+			name = "conversion_timer"
+			font = "cg_16b"
+			position = { x = 407 y = 1 }
+			maxWidth = 93
+			maxHeight = 53
+			text = "SPECIALIST_CONVERSION_TIME"
+			vertical_alignment = center
+		}
+
+		iconType ={
+			name = "loyalty_icon"
+			quadTextureSprite = "GFX_loyalty_icon"
+			position = { x = 531 y = 29 }
+			centerPosition = yes
+		}
+
+		instantTextBoxType = { # Might need to remove the monthly change data from this one
+			name = "loyalty"
+			font = "cg_16b"
+			maxWidth = 107
+			maxHeight = 53
+			position = { x = 551 y = 1 }
+			vertical_alignment = center
+			text = "42" # Changed in code
+			fixedSize = yes
+			format = left
+			text_color_code = "_"
+		}
+	}
+
+	containerWindowType = {
+		name = "discrete_terms_grid_entry_agreements_view"
+		position = { x = 0 y = 0 }
+		size = { width = 237 height = 40 }
+		
+		background = {
+			# This name is used by code for tooltips
+			name = "bg_discrete_term_entry"
+			spriteType = "GFX_tiled_window_transparent"
+		}
+
+		instantTextBoxType={
+			name = "name"
+			font = "cg_16b"
+			maxWidth = 237
+			maxHeight = 40
+			position = { x = 0 y = 0 }
+			alwaysTransparent = yes
+			text = "Diplomatic Freedom:" # Changed in code
+			text_color_code = "W"
+			fixedSize = yes
+		}
+
+		instantTextBoxType={
+			name = "value"
+			font = "cg_16b"
+			maxWidth = 237
+			maxHeight = 40
+			position = { x = 0 y = 20 }
+			text = "Independent diplomacy" # Changed in code
+			text_color_code = "Y"
+		}
+	}
+
+	containerWindowType = {
+		name = "discrete_terms_grid_entry_incoming_diplo_view"
+		position = { x = 0 y = 0 }
+		size = { width = 267 height = 40 }
+		
+		background = {
+			# This name is used by code for tooltips
+			name = "bg_discrete_term_entry"
+			spriteType = "GFX_tiled_window_transparent"
+		}
+
+		instantTextBoxType={
+			name = "name"
+			font = "cg_16b"
+			maxWidth = 267
+			maxHeight = 40
+			position = { x = 0 y = 0 }
+			alwaysTransparent = yes
+			text = "Diplomatic Freedom:" # Changed in code
+			text_color_code = "W"
+			fixedSize = yes
+		}
+
+		instantTextBoxType={
+			name = "value"
+			font = "cg_16b"
+			maxWidth = 267
+			maxHeight = 40
+			position = { x = 0 y = 20 }
+			text = "Independent diplomacy" # Changed in code
+			text_color_code = "Y"
+		}
+	}
+
+	containerWindowType = {
+		name = "resource_terms_grid_entry_agreements_view"
+		position = { x = 0 y = 0 }
+		size = { width = 227 height = 67 }
+
+		background = {
+			# This name is used by code for tooltips
+			name = "bg_resource_contribution_entry"
+			spriteType = "GFX_no_highlight_tile"
+		}
+
+		instantTextBoxType={
+			name = "resource_description"
+			font = "cg_16b"
+			text = "Icon Basic Resources" # Changed in code
+			position = { x = 9 y = 8 }
+			maxWidth = 160
+			maxHeight = 56
+			format = left
+			multiline = no
+		}
+
+		instantTextBoxType={
+			name = "resource_icons"
+			font = "cg_16b"
+			text = "XXX"
+			position = { x = 9 y = 36 }
+			maxWidth = 180
+			maxHeight = 56
+			format = left
+			text_color_code = "Y"
+		}
+
+		instantTextBoxType = {
+			name = "resource_value"
+			font = "cg_16b"
+			text = "42%" # Changed in code
+			position = { x = 161 y = 0 }
+			font = "cg_16b"
+			maxWidth = 53
+			maxHeight = 67
+			format = right
+			text_color_code = "E"
+			vertical_alignment = center
+			alwaysTransparent = yes
+		}
+	}
+	
+	containerWindowType = {
+		name = "resource_terms_grid_entry_incoming_diplo_view"
+		position = { x = 0 y = 0 }
+		size = { width = 192 height = 59 }
+
+		background = {
+			# This name is used by code for tooltips
+			name = "bg_resource_contribution_entry"
+			spriteType = "GFX_no_highlight_tile"
+		}
+
+		instantTextBoxType={
+			name = "resource_description"
+			font = "cg_16b"
+			text = "Icon Basic Resources" # Changed in code
+			position = { x = 8 y = 4 }
+			maxWidth = 160
+			maxHeight = 56
+			format = left
+			multiline = no
+		}
+
+		instantTextBoxType={
+			name = "resource_icons"
+			font = "cg_16b"
+			text = "XXX"
+			position = { x = 9 y = 27 }
+			maxWidth = 180
+			maxHeight = 56
+			format = left
+			text_color_code = "Y"
+		}
+
+		instantTextBoxType = {
+			name = "resource_value"
+			font = "cg_16b"
+			text = "42%" # Changed in code
+			position = { x = 128 y = -5 }
+			font = "cg_16b"
+			maxWidth = 53
+			maxHeight = 67
+			format = right
+			text_color_code = "E"
+			vertical_alignment = center
+			alwaysTransparent = yes
+		}
+	}
+
+	# Template for a single specialist tier
+	# Note: If you change things here,
+	# then you might need to change it in the agreement negotiation view too.
+	containerWindowType = {
+		name = "xenos_ui_specialist_level_entry"
+		position = { x = 0 y = 0 }
+		size = { width = 35 height = 35 }
+
+		containerWindowType = {
+			name = "level_box"
+			position = { x = 0 y = -5 }
+			size = { width = 59 height = 59 }
+
+			iconType = {
+				name = "xp_bar"
+				spriteType = "GFX_specialist_level_bar_36"
+				position = { x = 23 y = 49 }
+				alwaysTransparent = yes
+			}
+
+			iconType = {
+				name = "level_background"
+				spriteType = "GFX_specialist_subject_tier_box"
+				position = { x = 0 y = 0 }
+			}
+		}
+
+		containerWindowType = {
+			name = "specialist_subject_perks_container"
+			position = { x = 0 y = 0 }
+			size = { width = 173 height = 53 }
+
+			gridBoxType = {
+				name = "specialist_perk_grid_box"
+				format = "UPPER_LEFT"
+				position = { x = 73 y = 7 }
+				slotsize = { width = 41 height = 41 }
+				add_horizontal = yes
+			}
+			
+			# This sprite need to be displayed at all time, and ONLY on the Tier we currently are. Needs code support.
+			iconType = {
+				name = "tier_perks_link"
+				spriteType = "GFX_subjugation_tier_perks_link"
+				position = { x = 51 y = 24 }
+			}
+		}
+	}
+
+	containerWindowType = {
+		name = "galaxy_view_empire_entry"
+		position = { x=0 y=0 }
+		size = { width=1200 height=63 }
+
+		buttonType = {
+			name = "background"
+			spriteType = "GFX_tiles_frame_light"
+			size = { x = 1213 y = 72 }
+			position = { x= -7 y = -7 }
+			oversound = no_sound
+			clicksound = select_click
+		}
+
+		containerWindowType = {
+			name = "selected_overlay"
+			position = { x = 0 y = 0 }
+			size = { width = 100% height = 59 }
+			background = {
+				name = "selected_bg"
+				spriteType = "GFX_glow_tile_orange_no_padding"
+				alwaysTransparent = yes
+			}
+		}
+
+		buttonType = {
+			name = "flag"
+			quadTextureSprite = "GFX_empire_flag_32"
+			position = { x= 5 y = 9	 }
+		}
+
+		instantTextBoxType={
+			name = "name"
+			font = "cg_16b"
+			maxWidth = 329
+			maxHeight = 40
+			position = { x = 59 y = -1 }
+			vertical_alignment = center
+			alwaysTransparent = yes
+			text_color_code = "E"
+			fixedSize = yes
+		}
+
+		instantTextBoxType={
+			name = "empire_type"
+			font = "cg_16b"
+			maxWidth = 373
+			maxHeight = 40
+			position = { x = 59 y = 27 }
+			#text_color_code = "H"
+			text = "Despotic Hegemony"
+		}
+
+		instantTextBoxType={
+			name = "empire_relations"
+			font = "cg_16b"
+			maxWidth = 60
+			position = { x = 373 y = 17 }
+			format = center
+		}
+
+		OverlappingElementsBoxType = {
+			name = "diplomacy_icons"
+			position = { x = 440 y = 12 }
+			size = { x = 200 y = 53 }
+			format = left
+			spacing = 12.0
+		}
+
+		# PLANETS
+
+		instantTextBoxType={
+			name = "planets"
+			font = "cg_16b"
+			maxWidth = 147
+			maxHeight = 21
+			position = { x = 607 y = 20 }
+			text = "01"
+			format = center
+		}
+
+		# RELATIVE POWER
+
+		instantTextBoxType={
+			name = "power"
+			font = "cg_16b"
+			maxWidth = 147
+			maxHeight = 21
+			position = { x = 713 y = 20 }
+			text = "Relative Power"
+			format = center
+		}
+
+		# FEDERATION
+
+		instantTextBoxType={
+			name = "alliance_federation"
+			font = "cg_16b"
+			position = { x = 869 y = 9 }
+			maxWidth = 199
+			maxHeight = 40
+			format = center
+			vertical_alignment = center
+		}
+
+		# WAR STATUS
+
+		iconType ={
+			name ="war_status_icon"
+			quadTextureSprite = "GFX_diplomacy_status_war"
+			position = { x = 1109 y = 9 }
+			scale = 0.9
+		}
+
+	}
+
+	containerWindowType = {
+		name = "selected_empire_detailed_diplomacy_entry"
+		size = { width=280 height=45 }
+
+		iconType ={
+			name ="diplomacy_type_icon"
+			quadTextureSprite = "GFX_diplo_type_icon" # Changed in code
+			position = { x= -3 y = 5 }
+			orientation = LEFT
+		}
+
+		OverlappingElementsBoxType = {
+			name = "diplomacy_empires"
+			position = { x = 47 y = 5 }
+			size = { x = 253 y = 53 }
+			spacing = 4.0
+		}
+	}
+
+	# Template for a single holding building entry
+	containerWindowType = {
+		name = "agreements_holding_entry"
+		position = { x = 8 y = 8 }
+		size = { width = 111 height = 93 }
+
+		background = {
+			name = "background"
+			spriteType = "GFX_no_highlight_tile"
+		}
+
+		containerWindowType = {
+		name = "building_container"
+		position = { x = 16 y = 8 }
+		size = { width = 77 height = 77 }
+
+			iconType = {
+				name = "building_bg"
+				position = { x = 1 y = 0 }
+				spriteType = "GFX_building_bg"
+				scale = 0.64
+				alwaysTransparent = yes
+			}
+
+			iconType = {
+				name = "add_building_bg"
+				spriteType = "GFX_spaceport_module_slot"
+				position = { x = 0 y = 0 }
+			}
+
+			iconType = {
+				name = "building_icon"
+				position = { x = -19 y = 3 }
+				scale = 0.68
+				spriteType = "GFX_building_unknown"
+				alwaysTransparent = yes
+			}
+
+			iconType = {
+				name = "progressbar"
+				spriteType = "GFX_building_progressbar"
+				position = { x = 4 y = 64 }
+				alwaysTransparent = yes
+			}
+
+			buttonType = {
+				name = "open_building_button"
+				position = { x = 0 y = 0 }
+				size = { x = 77 y = 77 }
+				quadTextureSprite = "GFX_button_light"
+				clicksound = "menu_slide_open"
+			}
+		}
+
+		iconType = {
+			name = "planet_icon"
+			position = { x = 4 y = 1 }
+			spriteType = "GFX_planet_type"
+			frame = 1
+			scale = 0.75
+		}
+
+		# This extra box is necessary since the planet icons all have alwaystransparent = yes
+		# Make sure that the size of this window matches the icon decently
+		containerWindowType = {
+			name = "planet_icon_tooltip_box"
+			position = { x = 5 y = 1 }
+			size = { width = 33 height = 33 }
+
+			background = {
+				name = "background"
+				spriteType = "gfx_transparency_button"
+				alwaysTransparent = no
+			}
+		}
+	}
+}

@@ -1,0 +1,914 @@
+guiTypes = {
+	containerWindowType = {
+		name = "topbar_factions_view_gamepad"
+		position = { x = 165 y = 165 }
+		size = { width = 1373 height = 744 }
+		orientation = upper_left
+		moveable = no
+		clipping = no
+		
+		background = {
+			name = "background"
+			spriteType = "GFX_plain_bg_tile"
+		}
+		
+		containerWindowType = {
+			name = "leader_portrait"
+			size = { width = 373 height = 267 }
+			position = { x = 15 y = 15 }
+			clipping = yes
+			
+			background = {
+					name = "area51"
+					spriteType = "GFX_tiles_dark_area_cut_8"
+			}
+
+			iconType = {
+				name = "leader_portrait"
+				quadTextureSprite = "GFX_portrait_character"
+				position = { x = -73 y = 21 }
+				scale = 0.5
+			}
+		}
+		
+
+
+
+		
+
+		iconType = {
+			name = "faction_icon"
+			quadTextureSprite = "GFX_faction_icon_imperialist"
+			position = { x = 7 y = 7 }
+			scale = 1
+		}
+		
+		instantTextBoxType = {
+			name = "selected_faction_name_label"
+			font = "malgun_goth_24"
+			text = "Klaxxagons liberation front"
+			position = { x = 107 y = 16 }
+			maxWidth = 280
+			maxHeight = 60
+			fixedSize = no
+			format = left
+			vertical_alignment = center
+		}	
+		
+		instantTextBoxType = {
+			name = "faction_leader_name_label"
+			font = "cg_16b"
+			text = "Klas den store"
+			position = { x = 25 y = 253 }
+			maxWidth = 400
+			maxHeight = 27
+			fixedSize = yes
+			format = left
+			text_color_code = "E"
+		}
+		
+
+		containerWindowType = {
+			name = "stat_box"
+			size = { width = 533 height = 133 }
+			position = { x = 243 y = 140 }
+			
+			
+			iconType = {
+				name = "stat_bg_01"
+				quadTextureSprite = "GFX_satisfaction_bg"
+				position = { x = 15 y = 0 }
+				alwaysTransparent = yes
+			}
+		
+			iconType = {
+				name = "happiness_icon"
+				spriteType = "GFX_mod_pop_happiness"
+				position = { x = 33 y = 7 }
+			}
+
+			instantTextBoxType = {
+				name = "happiness_value"
+				font = "malgun_goth_24"
+				text = "0"
+				position = { x = 53 y = 7 }
+				maxWidth = 80
+				maxHeight = 47
+				fixedSize = yes
+				format = right
+				text_color_code = "E"
+			}
+
+			iconType = {
+				name = "stat_bg_02"
+				quadTextureSprite = "GFX_satisfaction_bg"
+				position = { x = 15 y = 47 }
+				alwaysTransparent = yes
+			}
+			
+			iconType = {
+				name = "attraction_icon"
+				spriteType = "GFX_faction_attraction_icon"
+				position = { x = 25 y = 55 }
+			}
+			
+			instantTextBoxType = {
+				name = "attraction_value"
+				font = "malgun_goth_24"
+				text = "0"
+				position = { x = 0 y = 52 }
+				maxWidth = 120
+				maxHeight = 47
+				fixedSize = yes
+				format = right
+				text_color_code = "E"
+			}		
+			
+			iconType = {
+				name = "stat_bg_03"
+				quadTextureSprite = "GFX_satisfaction_bg"
+				position = { x = 15 y = 93 }
+				alwaysTransparent = yes
+			}
+
+			iconType = {
+				name = "pops_icon"
+				spriteType = "GFX_planet_view_pop"
+				position = { x = 27 y = 95 }
+				scale = 1
+			}
+
+			instantTextBoxType = {
+				name = "pops_amount"
+				font = "malgun_goth_24"
+				text = "0"
+				position = { x = 0 y = 97 }
+				maxWidth = 107
+				maxHeight = 47
+				fixedSize = yes
+				format = right
+				text_color_code = "E"
+			}
+		}
+			
+		buttonType = {
+			name = "manage"
+			quadTextureSprite = "GFX_standard_button_200_34_button"
+			position = { x = 391 y = 216 }
+			orientation = "UPPER_LEFT"
+			text = "POP_FACTION_MANAGE"
+			font = "cg_16b"
+		}
+		
+		### ACTIONS
+
+		@actions_w = 1240
+		@actions_h = 0
+
+		containerWindowType = {
+			name = "actions"
+			position = { x = 13 y = 147 }
+			size = { width = @actions_w height = @actions_h }
+			moveable = no
+
+			containerWindowType = {
+				name = "background"
+				position = { x = 0 y = 0 }
+				size = { width = @actions_w height = @actions_h }
+			
+
+			}
+
+			smoothListboxType = {
+				name = "list"
+				position = { x = 0 y = 0 }
+				size = { x = @actions_w y = @actions_h }
+				spacing = 7
+			}
+		}		
+		
+		@demands_w = 408
+		@demands_h = 267
+		
+		containerWindowType = {
+			name = "demands"
+			position = { x = 693 y = 0 }
+			size = { width = @demands_w height = @demands_h }
+			moveable = no
+
+			containerWindowType = {
+				name = "background"
+				position = { x = 0 y = 15 }
+				size = { width = 327 height = 216 }
+
+				background = {
+					name = "background"
+					spriteType = "GFX_tiles_dark_area_cut_8"
+				}
+			}
+			
+						
+
+			instantTextBoxType = {
+				name = "demands_label"
+				font = "malgun_goth_24"
+				text = "POP_FACTIONS_COLUMN_DEMANDS"
+				position = { x = 13 y = 15 }
+				maxWidth = 400
+				maxHeight = 27
+				fixedSize = yes
+				format = left
+				#text_color_code = "E"
+			}
+			
+			smoothListboxType = {
+				name = "list"
+				position = { x = 0 y = 53 }
+				size = { x = @demands_w y = @demands_h }
+				spacing = -13
+			}
+		}
+		
+		
+		
+		containerWindowType = {
+			name = "influence_effects"
+			position = { x = 400  y = 0 }
+			size = { width = 280 height = 20 }
+			moveable = no
+
+			containerWindowType = {
+				name = "background"
+				position = { x = 0 y = 15 }
+				size = { width = 280 height = 207 }
+
+				background = {
+					name = "background"
+					spriteType = "GFX_tiles_dark_area_cut_8"
+				}	
+			}
+			
+			instantTextBoxType = {
+				name = "influence_label"
+				font = "malgun_goth_24"
+				text = "influence"
+				position = { x = 13 y = 15 }
+				maxWidth = 400
+				maxHeight = 27
+				fixedSize = yes
+				format = left
+				#text_color_code = "E"
+			}
+			
+		}
+		
+		@support_w = 408
+		@support_h = 267
+
+		containerWindowType = {
+			name = "support_effects"
+			position = { x = 1033  y = 0 }
+			size = { width = 411 height = 160 }
+			moveable = no
+
+			containerWindowType = {
+				name = "background"
+				position = { x = 0 y = 15 }
+				size = { width = 327 height = 216 }
+
+				background = {
+					name = "background"
+					spriteType = "GFX_tiles_dark_area_cut_8"
+				}
+			}
+			
+
+			instantTextBoxType = {
+				name = "effects_label"
+				font = "malgun_goth_24"
+				text = "Effects"
+				position = { x = 13 y = 15 }
+				maxWidth = 400
+				maxHeight = 27
+				fixedSize = yes
+				format = left
+				#text_color_code = "E"
+			}
+			smoothListboxType = {
+				name = "list"
+				position = { x = 0 y = 53 }
+				size = { x = @support_w y = @support_h }
+				spacing = 0
+			}
+		}
+				
+		buttonType = {
+			name = "sort_type_button"
+			#size = { x = 397 y = 47 }
+			position = { x = 0 y = 281 }
+			spriteType = "GFX_button_75_24"
+			buttonFont = "cg_16b"
+			text = "TYPE"
+			font = "cg_16b"
+			orientation = UPPER_LEFT
+		}		
+		
+		buttonType = {
+			name = "sort_name_button"
+			#size = { x = 397 y = 47 }
+			position = { x = 103 y = 291 }
+			spriteType = "GFX_galactic_object_button"
+			buttonFont = "cg_16b"
+			text = "NAME"
+			font = "cg_16b"
+			orientation = UPPER_LEFT
+		}	
+		
+		buttonType = {
+			name = "sort_happiness_button"
+			#size = { x = 397 y = 47 }
+			position = { x = 463 y = 281 }
+			spriteType = "GFX_button_116_24"
+			buttonFont = "cg_16b"
+			text = "HAPPINESS"
+			font = "cg_16b"
+			orientation = UPPER_LEFT
+		}	
+		
+		buttonType = {
+			name = "sort_size_button"
+			#size = { x = 397 y = 47 }
+			position = { x = 620 y = 281 }
+			spriteType = "GFX_button_75_24"
+			buttonFont = "cg_16b"
+			text = "SIZE"
+			font = "cg_16b"
+			orientation = UPPER_LEFT
+		}
+	
+		buttonType = {
+			name = "sort_attraction_button"
+			#size = { x = 397 y = 47 }
+			position = { x = 723 y = 281 }
+			spriteType = "GFX_button_150_24"
+			buttonFont = "cg_16b"
+			text = "POP_FACTIONS_ATTRACTION_TITLE"
+			font = "cg_16b"
+			orientation = UPPER_LEFT
+		}
+	
+		buttonType = {
+			name = "sort_demands_button"
+			#size = { x = 397 y = 47 }
+			position = { x = 925 y = 281 }
+			spriteType = "GFX_button_150_24"
+			buttonFont = "cg_16b"
+			text = "POP_FACTIONS_COLUMN_DEMANDS"
+			font = "cg_16b"
+			orientation = UPPER_LEFT
+		}		
+		
+		buttonType = {
+			name = "sort_effects_button"
+			#size = { x = 397 y = 47 }
+			position = { x = 1128 y = 281 }
+			spriteType = "GFX_button_150_24"
+			buttonFont = "cg_16b"
+			text = "POP_FACTIONS_COLUMN_SUPPORT_EFFECTS"
+			font = "cg_16b"
+			orientation = UPPER_LEFT
+		}
+		
+		
+		
+		
+		
+		containerWindowType = {
+			name = "list_background"
+			size = { width = 1353 height = 407 }
+			position = { x = 9 y = 333 }
+	       
+			background = {
+				name = "leader_frame2"
+				spriteType = "GFX_dark_area_cut"
+				alwaysTransparent = yes
+			}
+		}
+		
+		# Column Labels
+		
+		containerWindowType = {
+			name = "column_labels"
+			position = { x = 13320 y = 0 }
+
+			
+			instantTextBoxType = {
+				name = "column_type"
+				font = "cg_16b"
+				text = "POP_FACTIONS_COLUMN_TYPE"
+				position = { x = 133 y = 80 }
+				maxWidth = 227
+				maxHeight = 27
+				Orientation = "UPPER_LEFT"
+				format = left
+				pdx_tooltip = "POP_FACTIONS_COLUMN_TYPE_DESC"
+			}			
+			
+			instantTextBoxType = {
+				name = "column_leader"
+				font = "cg_16b"
+				text = "POP_FACTIONS_COLUMN_LEADER"
+				position = { x = 40 y = 80 }
+				maxWidth = 227
+				maxHeight = 27
+				Orientation = "UPPER_LEFT"
+				format = left
+				pdx_tooltip = "POP_FACTIONS_COLUMN_LEADER_DESC"
+			}
+
+			instantTextBoxType = {
+				name = "column_support"
+				font = "cg_16b"
+				text = "POP_FACTIONS_COLUMN_SUPPORT"
+				position = { x = 267 y = 80 }
+				maxWidth = 227
+				maxHeight = 27
+				Orientation = "UPPER_LEFT"
+				format = left
+				pdx_tooltip = "POP_FACTIONS_COLUMN_SUPPORT_DESC"
+			}
+		
+			instantTextBoxType = {
+				name = "column_demands"
+				font = "cg_16b"
+				text = "POP_FACTIONS_COLUMN_DEMANDS"
+				position = { x = 667 y = 80 }
+				maxWidth = 227
+				maxHeight = 27
+				Orientation = "UPPER_LEFT"
+				format = left
+				pdx_tooltip = "POP_FACTIONS_COLUMN_DEMANDS_DESC"
+			}
+		
+			instantTextBoxType = {
+				name = "column_support_effects"
+				font = "cg_16b"
+				text = "POP_FACTIONS_COLUMN_SUPPORT_EFFECTS"
+				position = { x = 1120 y = 80 }
+				maxWidth = 227
+				maxHeight = 27
+				Orientation = "UPPER_LEFT"
+				format = left
+				pdx_tooltip = "POP_FACTIONS_COLUMN_SUPPORT_EFFECTS_DESC"
+			}	
+			
+			instantTextBoxType = {
+				name = "column_ethics"
+				font = "cg_16b"
+				text = "Pop Ethics Appeal"
+				position = { x = 1467 y = 80 }
+				maxWidth = 227
+				maxHeight = 27
+				Orientation = "UPPER_LEFT"
+				format = left
+			}		
+		}
+
+		smoothListboxType = {
+			name = "pop_faction_list"
+			position = { x = 9 y = 333 }
+			size = { x = 1333 y = 400 }
+			scrollbartype = "standardlistbox_slider"
+			spacing = 0
+			autohide_scrollbar = no				
+		}
+		
+		gridBoxType = {
+			name = "ethics_attraction_list"
+			position = { x = 700 y = 313 }
+			slotSize = { width = 83 height = 73 }
+			max_slots_vertical = 1
+			format = "LOWER_LEFT"
+			add_horizontal = yes
+		}			
+	}
+	
+	
+	containerWindowType = {
+		name = "ethics_attraction_entry_gamepad"
+		size = { width = 7 height = 4 }
+		position = { x = 0 y = 0}
+
+		iconType = {
+			name = "ethic_icon"
+			position = { x = 0 y = 0 }
+			quadTextureSprite = "GFX_ethics"
+			scale = 1
+			
+		}
+		
+		instantTextBoxType = {
+			name = "ethics_label"
+			font = "cg_16b"
+			text = "100%"
+			position = { x = 43 y = -7 }
+			maxWidth = 53
+			maxHeight = 53
+			format = left
+			vertical_alignment = center
+		}	
+	}
+	
+	### POP FACTION ENTRY
+
+	containerWindowType = {
+		name = "pop_faction_demand_gamepad"
+		size = { width = 333 height = 55 }
+
+		background = {
+			name = "demand_hitbox"
+			spriteType = "GFX_invisible"
+		}
+
+		iconType = {
+			name = "icon_good"
+			spriteType = "GFX_dot_green_icon"
+			position = { x = 3 y = 0 }
+			alwaysTransparent = yes
+		}
+		
+		iconType = {
+			name = "icon_bad"
+			spriteType = "GFX_dot_red_icon"
+			position = { x = 3 y = 0 }
+			alwaysTransparent = yes
+		}
+
+		iconType = {
+			name = "icon_neutral"
+			spriteType = "GFX_dot_yellow_icon"
+			position = { x = 3 y = 0 }
+			alwaysTransparent = yes
+		}	
+
+		# REMOVE TEXT
+		instantTextBoxType = {
+			name = "text"
+			font = "cg_16b"
+			text = "POP_FACTION_DEMAND"
+			position = { x = 27 y = 0 }
+			maxWidth = 293
+			maxHeight = 56
+
+			#fixedSize = yes
+			format = left
+			#alwaysTransparent = yes
+		}
+	}
+
+	containerWindowType = {
+		name = "pop_faction_support_gamepad"
+		size = { width = 333 height = 48 }
+		clipping = no
+
+		background = {
+			name = "support_hitbox"
+			spriteType = "GFX_invisible"
+			position = { x = 0 y = 0 }
+		}
+
+		iconType = {
+			name = "icon"
+			spriteType = "GFX_dot_red_icon"
+			position = { x = 3 y = 0 }
+		}
+
+		#REMOVE THIS
+		instantTextBoxType = {
+			name = "text"
+			font = "cg_16b"
+			text = ""
+			position = { x = 27 y = 3 }
+			maxWidth = 267
+			maxHeight = 60
+			fixedSize = yes
+			format = left
+		}
+	}
+
+	@pop_faction_action_w = 1560
+	@pop_faction_action_h = 61
+
+	containerWindowType = {
+		name = "pop_faction_action_gamepad"
+		size = { width = @pop_faction_action_w height = @pop_faction_action_h }
+
+		containerWindowType = {
+			name = "background"
+			position = { x = 0 y = 0 }
+			size = { width = @pop_faction_action_w height = @pop_faction_action_h }
+
+			background = {
+				name = "background"
+				spriteType = "GFX_plain_green_frame_tile"
+			}
+		}
+
+		instantTextBoxType = {
+			name = "title"
+			font = "cg_16b"
+			text = "POP_FACTION_ACTION_TITLE"
+			position = { x = 13 y = 4 }
+			maxWidth = 533
+			maxHeight = 40
+			fixedSize = yes
+			format = left
+			text_color_code = "E"
+			alwaysTransparent = yes
+		}
+
+		instantTextBoxType = {
+			name = "text"
+			font = "cg_16b"
+			text = "POP_FACTION_ACTION_DESCRIPTION"
+			position = { x = 13 y = 33 }
+			maxWidth = 800
+			maxHeight = 133
+			#fixedSize = yes
+			format = left
+			alwaysTransparent = yes
+		}
+
+		buttonType = {
+			name = "button"
+			quadTextureSprite = "GFX_button_animated_265_34"
+			position = { x = -377 y = -8 }
+			orientation = "UPPER_RIGHT"
+			text = "POP_FACTION_ACTION"
+			font = "cg_16b"
+		}
+	}
+
+	containerWindowType = {
+		name = "pop_faction_list_entry_gamepad"
+		size = { width = 1337 height = 64 }
+
+		background = {
+			name = "background"
+			quadTextureSprite = "GFX_clean_frame_area"
+		}
+		
+		# Change texture to this one when selected
+		#GFX_glow_tile_orange
+		# OR show this object and hide the background. 
+		
+		containerWindowType = {
+			name = "selected_box"
+			size = { width = 1340 height = 67 }
+			position = { x = -1 y = -1 }
+			
+				background = {
+					name = "selection_area"
+					spriteType = "GFX_glow_tile_striped"
+					clicksound = "interface"
+				}
+		}
+		
+		containerWindowType = {
+			name = "selection_box"
+			size = { width = 1207 height = 64 }
+			position = { x = 0 y = 0 }
+			
+				background = {
+					name = "selection_area"
+					spriteType = "GFX_invisible"
+				}
+		}
+		
+
+
+		
+		iconType = {
+			name = "faction_icon"
+			quadTextureSprite = "GFX_faction_icon_imperialist"
+			position = { x = 7 y = 0 }
+			scale = 0.75
+		}
+		
+
+
+		instantTextBoxType = {
+			name = "faction_name_header_label"
+			font = "cg_16b"
+			text = "FACTION_NAME"
+			position = { x = 72 y = 9 }
+			maxWidth = 413
+			maxHeight = 47
+			fixedSize = yes
+			format = left
+			alwaysTransparent = yes
+		}
+		
+		instantTextBoxType = {
+			name = "faction_leader_label"
+			font = "cg_16b"
+			text = "FACTION_LEADER"
+			position = { x = 72 y = 29 }
+			maxWidth = 400
+			maxHeight = 47
+			fixedSize = yes
+			format = left
+			text_color_code = "E"
+			alwaysTransparent = yes
+		}
+		
+		# REMOVE THIS
+		containerWindowType = {
+			name = "leader_frame"
+			size = { width = 99 height = 115 }
+			position = { x = 13323 y = 3 }
+
+			background = {
+				name = "leader_frame"
+				spriteType = "GFX_clean_frame_area"
+				alwaysTransparent = yes
+			}
+		}
+		
+		containerWindowType = {
+			name = "happiness"
+			size = { width = 107 height = 33 }
+			position = { x = 473 y = 13 }
+			
+			background = {
+				name = "happiness_hitbox"
+				spriteType = "GFX_invisible"
+			}
+
+			instantTextBoxType = {
+				name = "value"
+				font = "cg_16b"
+				text = "0"
+				position = { x = 13 y = 7 }
+				maxWidth = 80
+				maxHeight = 47
+				fixedSize = yes
+				format = right
+				text_color_code = "E"
+				alwaysTransparent = yes
+			}
+		}
+		
+		containerWindowType = {
+			name = "pops"
+			size = { width = 100 height = 33 }
+			position = { x = 627 y = 13 }
+
+			background = {
+				name = "pops_hitbox"
+				spriteType = "GFX_invisible"
+			}
+
+			iconType = {
+				name = "icon"
+				spriteType = "GFX_planet_view_pop"
+				position = { x = 0 y = 1 }
+				alwaysTransparent = yes
+				scale = 0.85
+			}
+
+			instantTextBoxType = {
+				name = "amount"
+				font = "cg_16b"
+				text = "0"
+				position = { x = 40 y = 7 }
+				maxWidth = 133
+				maxHeight = 47
+				fixedSize = yes
+				format = left
+				text_color_code = "E"
+				alwaysTransparent = yes
+			}
+		}
+
+		containerWindowType = {
+			name = "attraction"
+			size = { width = 227 height = 40 }
+			position = { x = 667 y = 13 }
+			
+			background = {
+				name = "attraction_hitbox"
+				spriteType = "GFX_invisible"
+			}
+		
+			iconType = {
+				name = "icon"
+				spriteType = "GFX_has_ftl_magnet"
+				position = { x = 87 y = -4 }
+				alwaysTransparent = yes
+			}
+			
+			instantTextBoxType = {
+				name = "value"
+				font = "cg_16b"
+				text = "0"
+				position = { x = 33 y = 7 }
+				maxWidth = 120
+				maxHeight = 47
+				fixedSize = yes
+				format = right
+				text_color_code = "E"
+				alwaysTransparent = yes
+			}
+		}
+		
+		containerWindowType = {
+			name = "support"
+			position = { x = 133220 y = 87 }
+			size = { width = 267 height = 40 }
+
+			background = {
+				name = "support_hitbox"
+				spriteType = "GFX_invisible"
+			}
+
+			iconType = {
+				name = "support_icon"
+				spriteType = "GFX_faction_support_icon"
+				position = { x = 213 y = 5 }
+				alwaysTransparent = yes
+			}
+
+			iconType = {
+				name = "support_bar"
+				spriteType = "GFX_queue_progressbar_156"
+				position = { x = 0 y = 17 }
+				alwaysTransparent = yes
+			}
+		}
+			
+		instantTextBoxType={
+			name = "influence_label"
+			position = { x = 1147 y = 20 }
+			orientation = "UPPER_LEFT"
+			font = "cg_16b"
+			text = "INFLUENCE_GAIN_FROM_FACTION"
+			maxWidth = 133
+			maxHeight = 40		
+		}		
+		
+		gridBoxType = {
+			name = "demands_list"
+			position = { x = 933 y = 40 }
+			slotSize = { width = 20 height = 20 }
+			max_slots_vertical = 1
+			format = "LOWER_LEFT"
+			add_horizontal = yes
+		}
+		
+		gridBoxType = {
+			name = "effects_list"
+			position = { x = 1013 y = 28 }
+			slotSize = { width = 20 height = 20 }
+			max_slots_vertical = 1
+			format = "LOWER_LEFT"
+			add_horizontal = yes
+		}
+	}
+	
+	containerWindowType = {
+		name = "pop_faction_icon_entry_green_gamepad"
+		size = { width = 20 height = 20 }
+
+		iconType = {
+			name = "icon"
+			spriteType = "GFX_dot_green_icon"
+			position = { x = 3 y = 0 }
+			alwaysTransparent = yes
+		}
+	}
+	
+	containerWindowType = {
+		name = "pop_faction_icon_entry_yellow_gamepad"
+		size = { width = 27 height = 27 }
+
+		iconType = {
+			name = "icon"
+			spriteType = "GFX_dot_yellow_icon"
+			position = { x = 3 y = 0 }
+			alwaysTransparent = yes
+		}
+	}
+	
+	containerWindowType = {
+		name = "pop_faction_icon_entry_red_gamepad"
+		size = { width = 27 height = 27 }
+
+		iconType = {
+			name = "icon"
+			spriteType = "GFX_dot_red_icon"
+			position = { x = 3 y = 0 }
+			alwaysTransparent = yes
+		}
+	}
+}

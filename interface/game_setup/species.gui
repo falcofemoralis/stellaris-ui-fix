@@ -1,0 +1,1655 @@
+guiTypes = {
+	containerWindowType = {
+		name = "gamesetup_speciesview"
+		position = { x=-813 y = -360 }
+		size = { width=1635 height = 717 }
+		orientation = center
+	}
+
+	containerWindowType = {
+		name = "premade_pick_screen"
+		position = { x=-813 y = -360 }
+		size = { width=1635 height = 717 }
+		orientation = center
+		clipping = no
+
+		containerWindowType = {
+			name = "upper_window"
+			position = { x = 133 y = 80 }
+			size = { width = 752 height = 533 }
+			orientation = upper_left
+			clipping = no
+
+			@left_portrait_pos = -133
+			@right_portrait_pos = 219
+			@portrait_button_y = 427
+
+
+			@portrait_offset_y = 0
+
+			@race_class_y = 433
+
+			@portrait_scales = 0.4
+			@portrait_y = 460
+			@portrait_width = 133
+			@portrait_height = 153
+			@portrait_offset_x = -27
+
+			@species_y = 613
+
+
+
+
+
+		#	buttonType = {
+		#		name = "pick_species_custom"
+		#		position = { x = -100 y = -80 }
+		#		quadTextureSprite = "GFX_custom_race_bg"
+		#	}
+
+			instantTextBoxType={
+				name = "species_Custom"
+				font = "malgun_goth_24"
+				text = "customizer_custom"
+				position = { x =-33 y = 367 }
+				maxWidth = 333
+				maxHeight = 53
+				alwaysTransparent = yes
+			}
+
+
+
+
+		#	buttonType = {
+		#		name = "pick_species_random"
+		#		position = { x = 267 y = -80 }
+		#		quadTextureSprite = "GFX_species_random"
+		#	}
+
+			instantTextBoxType={
+				name = "species_Random"
+				font = "malgun_goth_24"
+				text = "RANDOM"
+				position = { x = 333 y = 133 }
+				maxWidth = 595
+				maxHeight = 53
+				alwaysTransparent = yes
+			}
+
+
+
+
+
+
+
+		#	buttonType = {
+		#		name = "pick_species_humans1"
+		#		position = { x = -80 y = @portrait_button_y }
+		#		quadTextureSprite = "GFX_species_bg"
+		#		clicksound = interface
+		#	}
+
+			instantTextBoxType={
+				name = "species_Earth_class"
+				font = "cg_16b"
+				text = "MAM"
+				position = { x = -73 y = @race_class_y }
+				maxWidth = 173
+				maxHeight = 53
+				format = center
+				text_color_code = "E"
+				alwaysTransparent = yes
+			}
+
+			containerWindowType = {
+				name = "portrait_humans1"
+				size = { width = @portrait_width height = @portrait_height }
+				position = { x = -67 y = @portrait_y }
+				clipping = yes
+
+				buttonType = {
+					name = "button"
+					position = { x = @portrait_offset_x y = @portrait_offset_y }
+					quadTextureSprite = "GFX_portrait_character"
+					scale = @portrait_scales
+					alwaysTransparent = yes
+				}
+			}
+
+			instantTextBoxType={
+				name = "species_Earth"
+				font = "malgun_goth_24"
+				text = "humans1"
+				position = { x = -73 y = @species_y }
+				maxWidth = 173
+				maxHeight = 107
+				format = center
+				alwaysTransparent = yes
+			}
+
+
+
+
+		#	buttonType = {
+		#		name = "pick_species_yondar"
+		#		position = { x = 107 y = @portrait_button_y }
+		#		quadTextureSprite = "GFX_species_bg"
+		#		clicksound = interface
+		#	}
+
+			instantTextBoxType={
+				name = "species_yondarim_class"
+				font = "cg_16b"
+				text = "AVI"
+				position = { x = 107 y = @race_class_y }
+				maxWidth = 173
+				maxHeight = 53
+				format = center
+				text_color_code = "E"
+				alwaysTransparent = yes
+			}
+
+			containerWindowType = {
+				name = "portrait_yondar"
+				size = { width = @portrait_width height = @portrait_height }
+				position = { x = 120 y = @portrait_y }
+				clipping = yes
+
+				buttonType = {
+					name = "button"
+					position = { x = @portrait_offset_x y = @portrait_offset_y }
+					quadTextureSprite = "GFX_portrait_character"
+					scale = @portrait_scales
+					alwaysTransparent = yes
+				}
+			}
+
+			instantTextBoxType={
+				name = "species_yondarim"
+				font = "malgun_goth_24"
+				text = "yondar"
+				position = { x = 107 y = @species_y }
+				maxWidth = 173
+				maxHeight = 107
+				format = center
+				alwaysTransparent = yes
+			}
+
+
+
+
+
+		#	buttonType = {
+		#		name = "pick_species_tzynn"
+		#		position = { x = 293 y = @portrait_button_y }
+		#		quadTextureSprite = "GFX_species_bg"
+		#		clicksound = interface
+		#	}
+
+			instantTextBoxType={
+				name = "species_Tzynn_class"
+				font = "cg_16b"
+				text = "REP"
+				position = { x = 293 y = @race_class_y }
+				maxWidth = 173
+				maxHeight = 53
+				format = center
+				text_color_code = "E"
+				alwaysTransparent = yes
+			}
+
+			containerWindowType = {
+				name = "portrait_tzynn"
+				size = { width = @portrait_width height = @portrait_height }
+				position = { x = 307 y = @portrait_y }
+				clipping = yes
+
+				buttonType = {
+					name = "button"
+					position = { x = @portrait_offset_x y = @portrait_offset_y }
+					quadTextureSprite = "GFX_portrait_character"
+					scale = @portrait_scales
+					alwaysTransparent = yes
+				}
+			}
+
+			instantTextBoxType={
+				name = "species_Tzynn"
+				font = "malgun_goth_24"
+				text = "tzynn"
+				position = { x = 293 y = @species_y }
+				maxWidth = 173
+				maxHeight = 107
+				format = center
+				#vertical_alignment = center
+				alwaysTransparent = yes
+			}
+
+
+
+
+
+		#	buttonType = {
+		#		name = "pick_species_ixidar"
+		#		position = { x = 480 y = @portrait_button_y }
+		#		quadTextureSprite = "GFX_species_bg"
+		#		clicksound = interface
+		#	}
+
+			instantTextBoxType={
+				name = "species_ixidar_class"
+				font = "cg_16b"
+				text = "ART"
+				position = { x = 480 y = @race_class_y }
+				maxWidth = 173
+				maxHeight = 53
+				format = center
+				text_color_code = "E"
+				alwaysTransparent = yes
+			}
+
+			containerWindowType = {
+				name = "portrait_ixidar"
+				size = { width = @portrait_width height = @portrait_height }
+				position = { x = 493 y = @portrait_y }
+				clipping = yes
+
+				buttonType = {
+					name = "button"
+					position = { x = @portrait_offset_x y = @portrait_offset_y }
+					quadTextureSprite = "GFX_portrait_character"
+					scale = @portrait_scales
+					alwaysTransparent = yes
+				}
+			}
+
+			instantTextBoxType={
+				name = "species_ixidar"
+				font = "malgun_goth_24"
+				text = "ixidar"
+				position = { x = 480 y = @species_y }
+				maxWidth = 173
+				maxHeight = 107
+				format = center
+				alwaysTransparent = yes
+			}
+
+
+
+
+		#	buttonType = {
+		#		name = "pick_species_scyldari"
+		#		position = { x = 667 y = @portrait_button_y }
+		#		quadTextureSprite = "GFX_species_bg"
+		#		clicksound = interface
+		#	}
+
+			instantTextBoxType={
+				name = "species_Scyldari_class"
+				font = "cg_16b"
+				text = "MAM"
+				position = { x = 667 y = @race_class_y }
+				maxWidth = 173
+				maxHeight = 53
+				format = center
+				text_color_code = "E"
+				alwaysTransparent = yes
+			}
+
+			containerWindowType = {
+				name = "portrait_scyldari"
+				size = { width = @portrait_width height = @portrait_height }
+				position = { x = 680 y = @portrait_y }
+				clipping = yes
+
+				buttonType = {
+					name = "button"
+					position = { x = @portrait_offset_x y = @portrait_offset_y }
+					quadTextureSprite = "GFX_portrait_character"
+					scale = @portrait_scales
+					alwaysTransparent = yes
+				}
+			}
+
+			instantTextBoxType={
+				name = "species_Scyldari"
+				font = "malgun_goth_24"
+				text = "scyldari"
+				position = { x = 667 y = @species_y }
+				maxWidth = 173
+				maxHeight = 107
+				format = center
+				alwaysTransparent = yes
+			}
+
+
+
+
+
+
+		#	buttonType = {
+		#		name = "pick_species_jehetma"
+		#		position = { x = 853 y = @portrait_button_y }
+		#		quadTextureSprite = "GFX_species_bg"
+		#		clicksound = interface
+		#	}
+
+			instantTextBoxType={
+				name = "species_Jehetma_class"
+				font = "cg_16b"
+				text = "FUN"
+				position = { x = 853 y = @race_class_y }
+				maxWidth = 173
+				maxHeight = 53
+				format = center
+				text_color_code = "E"
+				alwaysTransparent = yes
+			}
+
+			containerWindowType = {
+				name = "portrait_jehetma"
+				size = { width = @portrait_width height = @portrait_height }
+				position = { x = 867 y = @portrait_y }
+				clipping = yes
+
+				buttonType = {
+					name = "button"
+					position = { x = @portrait_offset_x y = @portrait_offset_y }
+					quadTextureSprite = "GFX_portrait_character"
+					scale = @portrait_scales
+					alwaysTransparent = yes
+				}
+			}
+
+			instantTextBoxType={
+				name = "species_Jehetma"
+				font = "malgun_goth_24"
+				text = "jehetma"
+				position = { x = 853 y = @species_y }
+				maxWidth = 173
+				maxHeight = 107
+				format = center
+				alwaysTransparent = yes
+			}
+
+
+
+
+
+
+		#	buttonType = {
+		#		name = "pick_species_chinorr"
+		#		position = { x = 1040 y = @portrait_button_y }
+		#		quadTextureSprite = "GFX_species_bg"
+		#		clicksound = interface
+		#	}
+
+			instantTextBoxType={
+				name = "species_Chinorr_class"
+				font = "cg_16b"
+				text = "MOL"
+				position = { x = 1040 y = @race_class_y }
+				maxWidth = 173
+				maxHeight = 53
+				format = center
+				text_color_code = "E"
+				alwaysTransparent = yes
+			}
+
+			containerWindowType = {
+				name = "portrait_chinorr"
+				size = { width = @portrait_width height = @portrait_height }
+				position = { x = 1053 y = @portrait_y }
+				clipping = yes
+
+				buttonType = {
+					name = "button"
+					position = { x = @portrait_offset_x y = @portrait_offset_y }
+					quadTextureSprite = "GFX_portrait_character"
+					scale = @portrait_scales
+					alwaysTransparent = yes
+				}
+			}
+
+			instantTextBoxType={
+				name = "species_Chinorr"
+				font = "malgun_goth_24"
+				text = "chinorr"
+				position = { x = 1040 y = @species_y }
+				maxWidth = 173
+				maxHeight = 107
+				format = center
+				alwaysTransparent = yes
+			}
+
+
+
+
+
+		#	buttonType = {
+		#		name = "pick_species_humans2"
+		#		position = { x = 1227 y = @portrait_button_y }
+		#		quadTextureSprite = "GFX_species_bg"
+		#		clicksound = interface
+		#	}
+
+			instantTextBoxType={
+				name = "species_Man_class"
+				font = "cg_16b"
+				text = "MAM"
+				position = { x =1227 y = @race_class_y }
+				maxWidth = 173
+				maxHeight = 53
+				format = center
+				text_color_code = "E"
+				alwaysTransparent = yes
+			}
+
+
+			containerWindowType = {
+				name = "portrait_humans2"
+				size = { width = @portrait_width height = @portrait_height }
+				position = { x = 1240 y = @portrait_y }
+				clipping = yes
+
+				buttonType = {
+					name = "button"
+					position = { x = @portrait_offset_x y = @portrait_offset_y }
+					quadTextureSprite = "GFX_portrait_character"
+					scale = @portrait_scales
+					alwaysTransparent = yes
+				}
+			}
+
+			instantTextBoxType={
+				name = "species_Man"
+				font = "malgun_goth_24"
+				text = "humans2"
+				position = { x = 1227 y = @species_y }
+				maxWidth = 173
+				maxHeight = 107
+				format = center
+				alwaysTransparent = yes
+			}
+
+
+
+
+
+		}
+
+		containerWindowType = {
+			name = "lower_left_window"
+			position = { x = -193 y = -360 }
+			size = { width=595 height = 333}
+			orientation = center
+			clipping = no
+
+			containerWindowType = {
+				name = "species_info_bg_box"
+				size = { width = 911 height = 480 }
+				position = { x = 3 y = 3 }
+
+				background = {
+					name = "species_info_bg"
+					spriteType = "GFX_tiles_dark_area_cut_8"
+				}
+			}
+
+		#	iconType = {
+		#		name = "random_selected"
+		#		spriteType = "GFX_species_random"
+		#		position = { x = 13 y = 13 }
+		#		scale = 0.9
+		#	}
+
+		#	buttonType = {
+		#		name = "species_selected"
+		#		position = { x = 0 y = 13 }
+		#		quadTextureSprite = "GFX_species_unselected_bg"
+		#		scale = 0.5
+		#		alwaystransparent = yes
+		#	}
+
+			instantTextBoxType={
+				name = "desc_title"
+				font = "malgun_goth_24"
+				position = { x = 293 y = 9 }
+				maxWidth = 595
+				maxHeight = 53
+				text_color_code = "H"
+			}
+
+			instantTextBoxType={
+				name = "capital_label"
+				font = "malgun_goth_24"
+				position = { x = 293 y = 47 }
+				maxWidth = 595
+				maxHeight = 53
+				text = "GOVERNMENT_VIEW_CAPITAL_LABEL"
+				text_color_code = "E"
+			}
+
+			instantTextBoxType={
+				name = "capital_name"
+				font = "malgun_goth_24"
+				position = { x = 533 y = 47 }
+				maxWidth = 595
+				maxHeight = 53
+			}
+
+			instantTextBoxType={
+				name = "leader_label"
+				font = "malgun_goth_24"
+				position = { x = 293 y = 73 }
+				maxWidth = 595
+				maxHeight = 53
+				text = "LEADER_LABEL"
+				text_color_code = "E"
+			}
+
+			instantTextBoxType={
+				name = "leader_name"
+				font = "malgun_goth_24"
+				position = { x = 533 y = 73 }
+				maxWidth = 595
+				maxHeight = 53
+			}
+
+			instantTextBoxType={
+				name = "desc"
+				font = "cg_16b"
+				position = { x = 293 y = 219 }
+				maxWidth = 553
+				maxHeight = 261
+				scrollbartype = "standardtext_slider"
+			}
+		}
+
+		containerWindowType = {
+			name ="lower_right_window"
+			position = { x = 33 y = 67 }
+			size = { width=595 height = 333}
+			orientation = center
+
+			instantTextBoxType={
+				name = "species_class_label"
+				font = "malgun_goth_24"
+				position = { x = 67 y = -327 }
+				maxWidth = 595
+				maxHeight = 27
+				text = "SPECIES_CLASS_LABEL"
+				text_color_code = "E"
+			}
+
+			instantTextBoxType={
+				name = "species_class"
+				font = "malgun_goth_24"
+				position = { x = 307 y = -327 }
+				maxWidth = 595
+				maxHeight = 27
+			}
+
+			instantTextBoxType={
+				name = "homeworld_class_label"
+				font = "malgun_goth_24"
+				position = { x = 67 y = -300 }
+				maxWidth = 595
+				maxHeight = 27
+				text = "HOMEWORLD_CLASS_LABEL"
+				text_color_code = "E"
+			}
+
+			instantTextBoxType={
+				name = "homeworld_class"
+				font = "malgun_goth_24"
+				position = { x = 307 y = -300 }
+				maxWidth = 595
+				maxHeight = 27
+			}
+
+			instantTextBoxType={
+				name = "government_label"
+				font = "malgun_goth_24"
+				position = { x = 67 y = -273 }
+				maxWidth = 595
+				maxHeight = 27
+				text = "GOVERNMENT_LABEL"
+				text_color_code = "E"
+			}
+
+			instantTextBoxType={
+				name = "government"
+				font = "malgun_goth_24"
+				position = { x = 307 y = -273 }
+				maxWidth = 595
+				maxHeight = 27
+			}
+
+			instantTextBoxType={
+				name = "ethics_label"
+				font = "malgun_goth_24"
+				position = { x = -200 y = -173 }
+				maxWidth = 595
+				maxHeight = 27
+				text = "ETHICS"
+			}
+
+			OverlappingElementsBoxType = {
+				name = "ethics"
+				position = { x = -200  y = -133 }
+				size = { x=275 y= 17 }
+				spacing = 32
+			}
+
+			instantTextBoxType={
+				name = "traits_label"
+				font = "malgun_goth_24"
+				position = { x = -200 y = -93 }
+				maxWidth = 595
+				maxHeight = 27
+				text = "TRAITS"
+			}
+
+			OverlappingElementsBoxType = {
+				name = "traits"
+				position = { x = -200  y = -53 }
+				size = { x=275 y= 17 }
+				spacing = 32
+			}
+		}
+
+		buttonType = {
+			name = "custom_button"
+			quadTextureSprite = "GFX_standard_button_large_211_40"
+			position = { x = -579 y = 40 }
+			orientation = "LOWER_RIGHT"
+			buttonFont = "malgun_goth_24"
+			buttonText = "CUSTOMIZE"
+			oversound = mouse_over
+		}
+	}
+
+	containerWindowType = {
+		name ="object_icon"
+		position = { x=0 y =0}
+		size = { width=43 height = 43}
+
+		iconType = {
+			name = "icon"
+			position = { x = 0 y = 0 }
+			quadTextureSprite ="GFX_ethics"
+			tooltip_mode_enabled = yes
+		}
+		iconType = {
+			name = "timed_overlay"
+			position = { x = 0 y = 0 }
+			quadTextureSprite ="GFX_timed_overlay"
+		}
+	}
+
+	containerWindowType = {
+		name = "edit_species_screen"
+		position = { x=-813 y = -360 }
+		size = { width=1635 height = 717 }
+		orientation = center
+
+	#	iconType = {
+	#		name = "customize_species_bg"
+	#		position = { x = -27 y = -37 }
+	#		quadTextureSprite ="GFX_customize_species_bg"
+	#	}
+
+		containerWindowType = {
+			name = "lower_window"
+			position = { x = -379 y = 133 }
+			size = { width = 757 height = 427 }
+			orientation = center
+
+			instantTextBoxType = {
+				name = "Customize_label"
+				position = { x = 213 y = -473 }
+				font = "malgun_goth_24"
+				maxWidth = 272
+				maxHeight = 69
+				alwaysTransparent = yes
+				text = "CUSTOMIZE"
+				orientation = "UPPER_LEFT"
+			}
+
+			# Ethos
+			containerWindowType = {
+				name = "ethos_window"
+				position = { x = 240 y = -360}
+				size = { width = 1333 height = 424}
+
+
+				instantTextBoxType = {
+					name = "ethics_label"
+					position = { x = -16 y = -40 }
+					font = "malgun_goth_24"
+					maxWidth = 272
+					maxHeight = 69
+					alwaysTransparent = yes
+					text = "ETHICS"
+					orientation = "UPPER_LEFT"
+				}
+
+				instantTextBoxType = {
+					name = "ethics_points_left"
+					position = { x = -27 y = -29 }
+					font = "cg_16b"
+					maxWidth = 272
+					maxHeight = 69
+					alwaysTransparent = yes
+					text = ""
+					orientation = "UPPER_LEFT"
+					format = right
+				}
+
+				instantTextBoxType = {
+					name = "ethics_authoritarian"
+					position = { x = -13 y = 4 }
+					font = "cg_16b"
+					maxWidth = 272
+					maxHeight = 69
+					alwaysTransparent = yes
+					text = "ethic_authoritarian"
+					orientation = "UPPER_LEFT"
+					format = left
+				}
+
+				instantTextBoxType = {
+					name = "ethics_Individualist"
+					position = { x = -27 y = 4 }
+					font = "cg_16b"
+					maxWidth = 272
+					maxHeight = 69
+					alwaysTransparent = yes
+					text = "ethic_egalitarian"
+					orientation = "UPPER_LEFT"
+					format = right
+				}
+
+				buttonType = {
+					name = "ethic_fanatic_authoritarian"
+					position = { x = 0 y = 27 }
+					quadTextureSprite ="GFX_ethics_fanatic_authoritarian"
+				}
+
+				buttonType = {
+					name = "ethic_authoritarian"
+					position = { x = 47 y = 27 }
+					quadTextureSprite ="GFX_ethics_authoritarian"
+				}
+
+				buttonType = {
+					name = "col_neutral"
+					position = { x = 93 y = 27 }
+					quadTextureSprite ="GFX_ethics_middle"
+				}
+
+				buttonType = {
+					name = "ethic_egalitarian"
+					position = { x = 140 y = 27 }
+					quadTextureSprite ="GFX_ethics_egalitarian"
+				}
+
+				buttonType = {
+					name = "ethic_fanatic_egalitarian"
+					position = { x = 187 y = 27 }
+					quadTextureSprite ="GFX_ethics_fanatic_egalitarian"
+				}
+
+				instantTextBoxType = {
+					name = "ethics_Xenophobe"
+					position = { x = -13 y = 87 }
+					font = "cg_16b"
+					maxWidth = 272
+					maxHeight = 69
+					alwaysTransparent = yes
+					text = "ethic_xenophobe"
+					orientation = "UPPER_LEFT"
+					format = left
+				}
+
+				instantTextBoxType = {
+					name = "ethics_Xenophile"
+					position = { x = -27 y = 87 }
+					font = "cg_16b"
+					maxWidth = 272
+					maxHeight = 69
+					alwaysTransparent = yes
+					text = "ethic_xenophile"
+					orientation = "UPPER_LEFT"
+					format = right
+				}
+
+				buttonType = {
+					name = "ethic_fanatic_xenophobe"
+					position = { x = 0 y = 107 }
+					quadTextureSprite ="GFX_ethics_fanatic_xenophobe"
+				}
+
+				buttonType = {
+					name = "ethic_xenophobe"
+					position = { x = 47 y = 107 }
+					quadTextureSprite ="GFX_ethics_xenophobe"
+				}
+
+				buttonType = {
+					name = "xen_neutral"
+					position = { x = 93 y = 107 }
+					quadTextureSprite ="GFX_ethics_middle"
+				}
+
+				buttonType = {
+					name = "ethic_xenophile"
+					position = { x = 140 y = 107 }
+					quadTextureSprite ="GFX_ethics_xenophile"
+				}
+
+				buttonType = {
+					name = "ethic_fanatic_xenophile"
+					position = { x = 187 y = 107 }
+					quadTextureSprite ="GFX_ethics_fanatic_xenophile"
+				}
+
+				instantTextBoxType = {
+					name = "ethics_Militarist"
+					position = { x = -13 y = 167 }
+					font = "cg_16b"
+					maxWidth = 272
+					maxHeight = 69
+					alwaysTransparent = yes
+					text = "ethic_militarist"
+					orientation = "UPPER_LEFT"
+					format = left
+				}
+
+				instantTextBoxType = {
+					name = "ethics_Pacifist"
+					position = { x = -27 y = 167 }
+					font = "cg_16b"
+					maxWidth = 272
+					maxHeight = 69
+					alwaysTransparent = yes
+					text = "ethic_pacifist"
+					orientation = "UPPER_LEFT"
+					format = right
+				}
+
+				buttonType = {
+					name = "ethic_fanatic_militarist"
+					position = { x = 0 y = 187 }
+					quadTextureSprite ="GFX_ethics_fanatic_militarist"
+				}
+
+				buttonType = {
+					name = "ethic_militarist"
+					position = { x = 47 y = 187 }
+					quadTextureSprite ="GFX_ethics_militarist"
+				}
+
+				buttonType = {
+					name = "mil_neutral"
+					position = { x = 93 y = 187 }
+					quadTextureSprite ="GFX_ethics_middle"
+				}
+
+				buttonType = {
+					name = "ethic_pacifist"
+					position = { x = 140 y = 187 }
+					quadTextureSprite ="GFX_ethics_pacifist"
+				}
+
+				buttonType = {
+					name = "ethic_fanatic_pacifist"
+					position = { x = 187 y = 187 }
+					quadTextureSprite ="GFX_ethics_fanatic_pacifist"
+				}
+
+				instantTextBoxType = {
+					name = "ethics_Spiritualist"
+					position = { x = -13 y = 247 }
+					font = "cg_16b"
+					maxWidth = 272
+					maxHeight = 69
+					alwaysTransparent = yes
+					text = "ethic_spiritualist"
+					orientation = "UPPER_LEFT"
+					format = left
+				}
+
+				instantTextBoxType = {
+					name = "ethics_Materialist"
+					position = { x = -27 y = 247 }
+					font = "cg_16b"
+					maxWidth = 272
+					maxHeight = 69
+					alwaysTransparent = yes
+					text = "ethic_materialist"
+					orientation = "UPPER_LEFT"
+					format = right
+				}
+
+				buttonType = {
+					name = "ethic_fanatic_spiritualist"
+					position = { x = 0 y = 267 }
+					quadTextureSprite ="GFX_ethics_fanatic_spiritualist"
+				}
+
+				buttonType = {
+					name = "ethic_spiritualist"
+					position = { x = 47 y = 267 }
+					quadTextureSprite ="GFX_ethics_spiritualist"
+				}
+
+				buttonType = {
+					name = "spi_neutral"
+					position = { x = 93 y = 267 }
+					quadTextureSprite ="GFX_ethics_middle"
+				}
+
+				buttonType = {
+					name = "ethic_materialist"
+					position = { x = 140 y = 267 }
+					quadTextureSprite ="GFX_ethics_materialist"
+				}
+
+				buttonType = {
+					name = "ethic_fanatic_materialist"
+					position = { x = 187 y = 267 }
+					quadTextureSprite ="GFX_ethics_fanatic_materialist"
+				}
+			}
+
+
+
+
+
+
+
+			instantTextBoxType = {
+				name = "trait_points_label"
+				position = { x = 227 y = -13 }
+				font = "malgun_goth_24"
+				maxWidth = 171
+				maxHeight = 69
+				text = "TRAITS"
+				format = left
+				orientation = "UPPER_LEFT"
+			}
+
+			instantTextBoxType = {
+				name = "trait_points_left"
+				position = { x = 227 y = 133 }
+				font = "cg_16b"
+				maxWidth = 213
+				maxHeight = 69
+				orientation = "UPPER_LEFT"
+				format = left
+			}
+
+			listboxType = {
+				name = "traits_list"
+				position = { x = 227 y = 33 }
+				size = { x = 267 y = 333 }
+				scrollbarType = "standardlistbox_slider"
+			}
+
+
+
+
+
+			# Empire Modifiers
+			instantTextBoxType = {
+				name = "empire_modifier_summary"
+				position = { x = 807 y = -400 }
+				font = "malgun_goth_24"
+				maxWidth = 267
+				maxHeight = 347
+				orientation = "UPPER_LEFT"
+				format = center
+				text = "SUMMARY_EMPIRE_MODIFIERS"
+			}
+
+			instantTextBoxType = {
+				name = "empire_modifier_breakdown"
+				position = { x = 853 y = -360 }
+				font = "cg_16b"
+				maxWidth = 267
+				maxHeight = 347
+				orientation = "UPPER_LEFT"
+				format = left
+			}
+
+			# Pop Modifiers
+			instantTextBoxType = {
+				name = "pop_modifier_summary"
+				position = { x = 793 y = -213 }
+				font = "malgun_goth_24"
+				maxWidth = 267
+				maxHeight = 347
+				orientation = "UPPER_LEFT"
+				format = center
+				text = "SUMMARY_POP_MODIFIERS"
+			}
+
+			instantTextBoxType = {
+				name = "pop_modifier_breakdown"
+				position = { x = 857 y = -173 }
+				font = "cg_16b"
+				maxWidth = 293
+				maxHeight = 333
+				orientation = "UPPER_LEFT"
+				format = left
+				scrollbarType = "standardlistbox_slider"
+			}
+
+			# FTL Method
+			instantTextBoxType = {
+				name = "ftl_method_label"
+				position = { x = -413 y = 85 }
+				font = "malgun_goth_24"
+				maxWidth = 272
+				maxHeight = 69
+				alwaysTransparent = yes
+				text = "FTL_LABEL"
+			}
+
+			buttonType = {
+				name = "pick_ftl_method"
+				position = { x = -132  y = 84 }
+				quadTextureSprite = "GFX_dropdown_button_104"
+			}
+
+			instantTextBoxType = {
+				name = "pick_ftl_method_text"
+				position = { x = -120  y = 85 }
+				font = "malgun_goth_24"
+				maxWidth = 272
+				maxHeight = 69
+				alwaysTransparent = yes
+				orientation = "UPPER_LEFT"
+			}
+
+			# Name List
+			instantTextBoxType = {
+				name = "pick_name_list_label"
+				position = { x = -413 y = 123 }
+				font = "malgun_goth_24"
+				maxWidth = 272
+				maxHeight = 69
+				alwaysTransparent = yes
+				text = "NAME_LIST"
+				orientation = "UPPER_LEFT"
+			}
+
+			buttonType = {
+				name = "pick_name_list"
+				position = { x = -132  y = 123 }
+				quadTextureSprite ="GFX_dropdown_button_104"
+			}
+
+			instantTextBoxType = {
+				name = "pick_name_list_text"
+				position = { x = -120  y = 123 }
+				font = "malgun_goth_24"
+				maxWidth = 272
+				maxHeight = 69
+				alwaysTransparent = yes
+				orientation = "UPPER_LEFT"
+			}
+
+			# Dropdown lists have to be last to overlap previous elements
+			listboxType = {
+				name = "pick_ftl_method_list"
+				position = { x = -133  y = 87 }
+				size = { x = 272 y = 533 }
+				scrollbarType = "standardlistbox_slider"
+				alwaystransparent = yes
+			}
+
+			listboxType = {
+				name = "pick_name_list_list"
+				position = { x = -133  y = 127 }
+				size = { x = 272 y = 533 }
+				scrollbarType = "standardlistbox_slider"
+				alwaystransparent = yes
+			}
+		}
+
+		containerWindowType = {
+			name = "upper_window"
+			position = { x=0 y=0}
+			size = { width=757 height = 424}
+			orientation = upper_left
+
+			# Portrait
+			containerWindowType = {
+				name = "portrait_window"
+				position = { x = 13 y = 13 }
+				size = { width = 624 height = 240}
+				moveable = no
+				orientation = upper_left
+				clipping = yes
+
+				buttonType = {
+					name ="portrait"
+					spriteType = "GFX_portrait_planet_character"
+					position = { x= 0 y= -140 }
+				}
+			}
+
+			# Species Name
+
+			iconType = {
+				name ="customize_species_text_bg_01"
+				spriteType = "GFX_customize_species_text_bg"
+				position = { x= 307 y = 267 }
+			}
+
+			instantTextBoxType = {
+				name = "species_name_label"
+				position = { x = 27 y = 267 }
+				font = "malgun_goth_24"
+				maxWidth = 171
+				maxHeight = 27
+				text = "SPECIES_NAME"
+				format = left
+				orientation = "UPPER_LEFT"
+				text_color_code = "E"
+			}
+
+			editBoxType = {
+				name = "species_name"
+				position = { x = 320 y = 267 }
+				orientation = "UPPER_LEFT"
+				font = "malgun_goth_24"
+				size = { x=267 y=27 }
+				text = "SPECIESNAME"
+			}
+
+			# Portrait
+
+			instantTextBoxType = {
+				name = "pick_portrait_label"
+				position = { x = 0 y = 213 }
+				font = "cg_16b"
+				maxWidth = 224
+				maxHeight = 27
+				text = "PORTRAIT"
+				format = center
+				orientation = "UPPER_LEFT"
+			}
+
+			instantTextBoxType = {
+				name = "pick_portrait_num"
+				position = { x = 0 y = 229 }
+				font = "cg_16b"
+				maxWidth = 224
+				maxHeight = 27
+				text = "1/5"
+				format = center
+				orientation = "UPPER_LEFT"
+			}
+
+			buttonType = {
+				name = "prev_portrait"
+				quadTextureSprite = "GFX_gamesetup_prev"
+				position = { x = 13 y = 213 }
+			}
+
+			buttonType = {
+				name = "next_portrait"
+				quadTextureSprite = "GFX_gamesetup_next"
+				position = { x = 160 y = 213 }
+			}
+
+			# Species Class
+			instantTextBoxType = {
+				name = "pick_species_class_label"
+				position = { x = 27 y = 499 }
+				font = "malgun_goth_24"
+				maxWidth = 272
+				maxHeight = 69
+				alwaysTransparent = yes
+				text = "SPECIES_CLASS"
+				orientation = "UPPER_LEFT"
+			}
+
+			buttonType = {
+				name = "pick_species_class"
+				position = { x = 307 y = 499 }
+				quadTextureSprite = "GFX_dropdown_button_104"
+			}
+
+			instantTextBoxType = {
+				name = "pick_species_class_text"
+				position = { x = 320 y = 499 }
+				font = "malgun_goth_24"
+				maxWidth = 272
+				maxHeight = 69
+				alwaysTransparent = yes
+				orientation = "UPPER_LEFT"
+			}
+
+			# Ideal Planet
+			instantTextBoxType = {
+				name = "pick_ideal_planet_label"
+				position = { x = 27 y = 539 }
+				font = "malgun_goth_24"
+				maxWidth = 272
+				maxHeight = 69
+				alwaysTransparent = yes
+				text = "HOMEWORLD_CLASS"
+				orientation = "UPPER_LEFT"
+			}
+
+			buttonType = {
+				name = "pick_ideal_planet"
+				position = { x = 307 y = 537 }
+				quadTextureSprite = "GFX_dropdown_button_104"
+			}
+
+			instantTextBoxType = {
+				name = "pick_ideal_planet_text"
+				position = { x = 320 y = 539 }
+				font = "malgun_goth_24"
+				maxWidth = 272
+				maxHeight = 69
+				alwaysTransparent = yes
+				orientation = "UPPER_LEFT"
+			}
+
+			iconType = {
+				name ="customize_species_text_bg_02"
+				spriteType = "GFX_customize_species_text_bg"
+				position = { x= 307 y = 305 }
+			}
+
+			instantTextBoxType = {
+				name = "empire_name_label"
+				position = { x = 27 y = 304 }
+				font = "malgun_goth_24"
+				maxWidth = 272
+				maxHeight = 69
+				alwaysTransparent = yes
+				text = "EMPIRE_NAME"
+				orientation = "UPPER_LEFT"
+				text_color_code = "E"
+			}
+
+			editBoxType = {
+				position = { x = 320 y = 304  }
+				name = "empire_name"
+				#textureFile = "gfx/interface/tiles/small_tiles_dialog.dds"
+				font = "malgun_goth_24"
+				borderSize = { x=0 y=0 }
+				size = { x=320 y=53 }
+				text = " "
+				orientation = "UPPER_LEFT"
+			}
+
+			iconType = {
+				name ="customize_species_text_bg_03"
+				spriteType = "GFX_customize_species_text_bg"
+				position = { x= 307 y = 344 }
+			}
+
+			instantTextBoxType = {
+				name = "empire_adj_label"
+				position = { x = 27 y = 344 }
+				font = "malgun_goth_24"
+				maxWidth = 272
+				maxHeight = 69
+				alwaysTransparent = yes
+				text = "ADJ_FORM"
+				orientation = "UPPER_LEFT"
+				text_color_code = "E"
+			}
+
+
+			editBoxType = {
+				position = { x = 320 y = 344  }
+				name = "empire_adj_name"
+				#textureFile = "gfx/interface/tiles/small_tiles_dialog.dds"
+				font = "malgun_goth_24"
+				borderSize = { x=0 y=0 }
+				size = { x=320 y=53 }
+				text = " "
+				orientation = "UPPER_LEFT"
+			}
+
+			iconType = {
+				name ="customize_species_text_bg_04"
+				spriteType = "GFX_customize_species_text_bg"
+				position = { x= 307 y = 383 }
+			}
+
+			instantTextBoxType = {
+				name = "leader_name_label"
+				position = { x = 27 y = 381 }
+				font = "malgun_goth_24"
+				maxWidth = 272
+				maxHeight = 69
+				alwaysTransparent = yes
+				text = "LEADER_NAME"
+				orientation = "UPPER_LEFT"
+				text_color_code = "E"
+			}
+
+			editBoxType = {
+				position = { x = 320 y = 381  }
+				name = "leader_name"
+				#textureFile = "gfx/interface/tiles/small_tiles_dialog.dds"
+				font = "malgun_goth_24"
+				borderSize = { x=0 y=0 }
+				size = { x=320 y=53 }
+				text = " "
+				orientation = "UPPER_LEFT"
+			}
+
+			# Ship prefix
+
+			iconType = {
+				name ="customize_species_text_bg_05"
+				spriteType = "GFX_customize_species_text_bg"
+				position = { x= 307 y = 421 }
+			}
+
+			instantTextBoxType = {
+				name = "ship_prefix_label"
+				position = { x = 27 y = 421 }
+				font = "malgun_goth_24"
+				maxWidth = 272
+				maxHeight = 69
+				alwaysTransparent = yes
+				text = "SHIP_PREFIX"
+				orientation = "UPPER_LEFT"
+				text_color_code = "E"
+			}
+
+			editBoxType = {
+				position = { x = 320 y = 421  }
+				name = "ship_prefix"
+				#textureFile = "gfx/interface/tiles/small_tiles_dialog.dds"
+				font = "malgun_goth_24"
+				borderSize = { x=0 y=0 }
+				size = { x=320 y=53 }
+				text = " "
+				orientation = "UPPER_LEFT"
+			}
+
+			# Home world
+
+			iconType = {
+				name ="customize_species_text_bg_06"
+				spriteType = "GFX_customize_species_text_bg"
+				position = { x= 307 y = 460 }
+			}
+
+			instantTextBoxType = {
+				name = "homeworld_label"
+				position = { x = 27 y = 460 }
+				font = "malgun_goth_24"
+				maxWidth = 272
+				maxHeight = 69
+				alwaysTransparent = yes
+				text = "HOMEWORLD_NAME"
+				orientation = "UPPER_LEFT"
+				text_color_code = "E"
+			}
+
+			editBoxType = {
+				position = { x = 320 y = 460 }
+				name = "homeworld"
+				#textureFile = "gfx/interface/tiles/small_tiles_dialog.dds"
+				font = "malgun_goth_24"
+				borderSize = { x=0 y=0 }
+				size = { x=320 y=53 }
+				text = ""
+				orientation = "UPPER_LEFT"
+			}
+
+			instantTextBoxType = {
+				name = "pick_government_label"
+				position = { x = 1047 y = 93 }
+				font = "malgun_goth_24"
+				maxWidth = 533
+				maxHeight = 69
+				alwaysTransparent = yes
+				text = "PICK_GOVERNMENT_LABEL"
+
+			}
+
+			listboxType = {
+				name = "governments"
+				position = { x=973 y = 160}
+				size = { x=273 y =400}
+				horizontal = 0
+				scrollbarType = "standardlistbox_slider"
+				alwaystransparent = yes
+			}
+
+			iconType = {
+				name ="flag"
+				spriteType = "GFX_empire_flag_64"
+				position = { x= 507 y = 80 }
+			}
+
+			buttonType = {
+				name ="prev_icon"
+				quadTextureSprite = "GFX_gamesetup_prev"
+				position = { x = 453 y = 100 }
+			}
+
+			buttonType = {
+				name ="next_icon"
+				quadTextureSprite = "GFX_gamesetup_next"
+				position = { x = 595 y = 100 }
+			}
+		#	buttonType = {
+		#		name ="toggle_colorpicker"
+		#		quadTextureSprite = "GFX_gamesetup_colorpicker_button"
+		#		position = { x = 528 y = 173 }
+		#	}
+
+			listboxType = {
+				name ="color_picker_list"
+				position = { x = 528 y = 227 }
+				size = { x= 272 y =267 }
+				scrollbarType = "standardlistbox_slider"
+				alwaystransparent = yes
+			}
+
+			# Dropdown lists, they have to be here in order to overlap previous elements
+
+			listboxType = {
+				name = "pick_species_class_list"
+				position = { x = 307 y = 500 }
+				size = { x = 272 y = 400 }
+				scrollbarType = "standardlistbox_slider"
+			}
+
+			listboxType = {
+				name = "pick_ideal_planet_list"
+				position = { x = 307 y = 540 }
+				size = { x= 272 y =533 }
+				scrollbarType = "standardlistbox_slider"
+			}
+		}
+	}
+
+	containerWindowType = {
+		name ="trait_list_item"
+		position = { x = 0 y = 0}
+		size = { width = 560 height = 43}
+
+		OverlappingElementsBoxType = {
+			name = "box"
+			position = { x = 0  y = 0 }
+			size = { x=560 y= 43 }
+			spacing = 0
+		}
+	}
+
+	containerWindowType = {
+		name = "colorpicker_list_item"
+		position = { x=0 y=0 }
+		size = { width=272 height= 53 }
+
+		buttonType = {
+			name = "color1"
+			position = { x = 0 y = 0 }
+			quadTextureSprite ="GFX_gamesetup_colorpicker"
+		}
+
+		buttonType = {
+			name = "color2"
+			position = { x = 43 y = 0 }
+			quadTextureSprite ="GFX_gamesetup_colorpicker"
+		}
+
+		buttonType = {
+			name = "color3"
+			position = { x = 85 y = 0 }
+			quadTextureSprite ="GFX_gamesetup_colorpicker"
+		}
+
+		buttonType = {
+			name = "color4"
+			position = { x = 128 y = 0 }
+			quadTextureSprite ="GFX_gamesetup_colorpicker"
+		}
+
+		buttonType = {
+			name = "color5"
+			position = { x = 171 y = 0 }
+			quadTextureSprite ="GFX_gamesetup_colorpicker"
+		}
+	}
+
+	containerWindowType = {
+		name = "government_list_item"
+		position = { x=0 y=0 }
+		size = { width=272 height= 80 }
+
+		buttonType = {
+			name = "gov1"
+			position = { x = -27 y = 0 }
+			quadTextureSprite = "GFX_government_authority"
+		}
+
+		iconType = {
+			name ="gov1_sel"
+			spriteType = "GFX_gamesetup_gov_sel"
+			position = { x= -31 y = -4 }
+			alwaysTransparent = yes
+		}
+
+		buttonType = {
+			name = "gov2"
+			position = { x = 40 y = 0 }
+			quadTextureSprite = "GFX_government_authority"
+		}
+
+		iconType = {
+			name ="gov2_sel"
+			spriteType = "GFX_gamesetup_gov_sel"
+			position = { x= 36 y = -4 }
+			alwaysTransparent = yes
+		}
+
+		buttonType = {
+			name = "gov3"
+			position = { x = 107 y = 0 }
+			quadTextureSprite = "GFX_government_authority"
+		}
+
+		iconType = {
+			name ="gov3_sel"
+			spriteType = "GFX_gamesetup_gov_sel"
+			position = { x= 103 y = -4 }
+			alwaysTransparent = yes
+		}
+
+		buttonType = {
+			name = "gov4"
+			position = { x = 173 y = 0 }
+			quadTextureSprite = "GFX_government_authority"
+		}
+
+		iconType = {
+			name ="gov4_sel"
+			spriteType = "GFX_gamesetup_gov_sel"
+			position = { x= 169 y = -4 }
+			alwaysTransparent = yes
+		}
+
+		buttonType = {
+			name = "gov5"
+			position = { x = 240 y = 0 }
+			quadTextureSprite = "GFX_government_authority"
+		}
+
+		iconType = {
+			name ="gov5_sel"
+			spriteType = "GFX_gamesetup_gov_sel"
+			position = { x= 236 y = -4 }
+			alwaysTransparent = yes
+		}
+	}
+
+	containerWindowType = {
+		name = "government_item"
+		position = { x=0 y=0 }
+		size = { width=272 height= 40 }
+
+		buttonType = {
+			name = "background"
+			position = { x = 0 y = 0 }
+			quadTextureSprite ="GFX_government_authority"
+		}
+	}
+
+	containerWindowType = {
+		name = "class_selection_entry"
+		position = { x=0 y=0 }
+		size = { width=200 height= 73 }
+
+		buttonType = {
+			name = "button"
+			position = { x = 0 y = 0 }
+			quadTextureSprite ="GFX_standard_button_142_34_button"
+			tooltip = ""
+			tooltipText =""
+			delayedTooltipText = ""
+			buttonText = ""
+			buttonFont = "cg_16b"
+		}
+	}
+
+	containerWindowType = {
+		name = "species_customize_dropdown_list_item"
+		position = { x=0 y=0 }
+		size = { width=272 height= 35 }
+
+		buttonType = {
+			name = "background"
+			position = { x = 0 y = 0 }
+			quadTextureSprite ="GFX_dropdown_item_104"
+		}
+
+		instantTextBoxType = {
+			name = "text"
+			position = { x = 0 y = 0 }
+			font = "cg_16b"
+			borderSize = {x = 1 y = 1}
+			maxWidth = 272
+			maxHeight = 40
+			orientation = "UPPER_LEFT"
+		}
+	}
+}

@@ -1,0 +1,15 @@
+spriteTypes = {	
+	corneredTileSpriteType = {
+		name = "GFX_hotjoin_requests_background"
+		size = { x = 267 y = 43 }		
+		textureFile = "gfx/interface/tiles/black_bg_tile.tga"
+		borderSize = { x = 5 y = 5 }
+		effectFile = "gfx/FX/buttonstate_onlydisable.shader"
+	}
+	
+#	spriteType = {
+#		name = "GFX_green_checkbox"
+#		texturefile = "gfx/interface/main/green_checkbox.dds"
+#		noOfFrames = 4
+#	}
+}

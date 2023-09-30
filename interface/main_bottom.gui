@@ -1,0 +1,749 @@
+guiTypes = {
+
+	positionType = {
+		name = "control_groups_min_from_center"
+		position = { x = 328 y = 0 }
+	}
+
+	#Adjusts offset for tooltips for all elements at the bottom of the screen
+	@tt_offset_y = 0
+
+	containerWindowType = {
+		name = "maingui_bottombar"
+		size = { width = 100% height = 100% }
+
+		## Control Groups
+		overlappingElementsBoxType = {
+			name = "control_groups"
+			position = { x = 5  y = -61 }
+			size = { x=933 y= 17 }
+			spacing = 3
+			Orientation = "LOWER_LEFT"
+			format = left
+		}
+
+
+		### LEAVE SYSTEM WINDOW
+		containerWindowType = {
+			name = "leave_system_window"
+			size = { width = 221 height = 152 }
+			hide_position = { x = 0 y = 0 }
+			show_position = { x = 0 y = -127 }
+			animation_type = decelerated
+			animation_time = 500.5
+			orientation = center_down
+			origo = center_up
+
+			###	BACKGROUND FOR AVOIDED SYSTEMS					
+			iconType = {
+				name = "starsystem_panel_avoid_bg"
+				spriteType = "GFX_starsystem_panel_avoid"
+				position = { x = 0 y = 83 }
+				alwaysTransparent = yes
+				orientation = center_up
+				centerPosition = yes
+			}
+
+			iconType = {
+				name = "starsystem_panel"
+				spriteType = "GFX_starsystem_panel"
+				position = { x = 0 y = 83 }
+				alwaysTransparent = yes
+				orientation = center_up
+				centerPosition = yes
+			}
+
+			iconType = {
+				name = "paused_bar_bg"
+				spriteType = "GFX_paused_bar_glow"
+				position = { x = 0 y = 59 }
+				alwaysTransparent = yes
+				orientation = center_up
+				centerPosition = yes
+			}
+
+			### BACKGROUND FOR CLAIMS BUTTON VISIBLE WHEN ENABLED
+			iconType = {
+				name = "claims_button_bg"
+				spriteType = "GFX_starsystem_panel_left"
+				position = { x = -273 y = 51 }				
+			}
+
+			### BACKGROUND FOR AVOID SYSTEM BUTTON VISIBLE WHEN ENABLED
+			iconType = {
+				name = "restricted_button_bg"
+				spriteType = "GFX_starsystem_panel_right"
+				position = { x = -149 y = 61 }				
+			}
+
+			buttonType = {
+				name = "flag_button"
+				quadTextureSprite = "GFX_empire_flag_64"
+				position = { x= -343 y = 36  }
+				orientation = center_up
+				clicksound = interface
+				oversound = no_sound
+			}
+			
+			iconType = {
+				name = "map_button_bg"
+				orientation = center_up
+				position = { x = 265 y = 51 }
+				spriteType = "GFX_bottombar_button_bg"
+				alwaystransparent = yes
+			}
+			
+			buttonType = {
+				name = "button"
+				quadTextureSprite = "GFX_open_galaxy_map"
+				orientation = center_up
+				position = { x = 259 y = 44 }
+				#pdx_tooltip = "" # Set in code
+				pdx_tooltip_anchor_offset = { x= 0 y = @tt_offset_y }
+				pdx_tooltip_anchor_orientation = lower_left
+				clicksound = ui_galaxy_map_open
+				oversound = mouse_over
+			}
+
+			instantTextBoxType={
+				name = "paused"
+				font = "large_title_font"
+				position = { x = -267 y = 1 }
+				text = "GAME_SPEED_0"
+				maxWidth = 533
+				maxHeight = 67
+				format = center
+				orientation = center_up
+				alwaystransparent = yes
+				text_color_code = "H"
+			}
+
+			instantTextBoxType={
+				name = "system_name"
+				font = "large_title_font_28"
+				position = { x = -260 y = 52 }
+				text = "Systemname"
+				maxWidth = 520
+				maxHeight = 67
+				format = center
+				orientation = center_up
+				alwaystransparent = yes
+				fixedsize = yes
+				#text_color_code = "E"
+			}
+			
+			instantTextBoxType={
+				name = "system_type"
+				font = "cg_16b"
+				position = { x = -260 y = 88 }
+				text = "Mining System"
+				maxWidth = 520
+				maxHeight = 67
+				format = center
+				orientation = center_up
+				alwaystransparent = yes
+				fixedsize = yes
+				text_color_code = "E"
+			}			
+
+			buttonType = {
+				name = "system_rename_button"
+				spriteType = "GFX_invisible"
+				position = { x = -217 y = 53 }
+				size = { x = 440 y = 60 }
+				orientation = center_up
+				pdx_tooltip = "RENAME_SYSTEM_TOOLTIP"
+				oversound = no_sound
+			}
+			
+			iconType = {
+				name = "environmental_effects_icon"
+				spriteType = "GFX_system_hazards_icon"
+				position = { x = 336 y = 65 }				
+			}
+
+			buttonType = {
+				name = "claim_system_button"
+				quadTextureSprite = "GFX_claim_system_icon"
+				position = { x = -272 y = 57 }		
+			}			
+
+			buttonType = {
+				name = "restricted_system_button"
+				quadTextureSprite = "GFX_restricted_system_icon"
+				position = { x = -149 y = 57 }		
+			}			
+		}
+
+		### LEAVE GALAXY WINDOW
+		containerWindowType = {
+			name = "leave_galaxy_window"
+			
+			size = { width = 221 height = 152 }
+			hide_position = { x = 0 y = 0 }
+			show_position = { x = 0 y = -127 }
+			animation_type = decelerated
+			animation_time = 500.5
+			orientation = center_down
+			origo = center_up
+
+			# iconType = {
+			# 	name = "system_button_panel"
+			# 	spriteType = "GFX_system_button_panel"
+			# 	position = { x = -173 y = 47 }
+			# 	alwaysTransparent = yes
+			# }
+
+			iconType = {
+				name = "starsystem_panel"
+				spriteType = "GFX_starsystem_panel"
+				position = { x = 0 y = 83 }
+				alwaysTransparent = yes
+				orientation = center_up
+				centerPosition = yes
+			}
+
+			iconType = {
+				name = "paused_bar_bg"
+				spriteType = "GFX_paused_bar_glow"
+				position = { x = 0 y = 59 }
+				alwaysTransparent = yes
+				orientation = center_up
+				centerPosition = yes
+			}
+
+			buttonType = {
+				name = "flag_button_galaxy_view"
+				quadTextureSprite = "GFX_empire_flag_64"
+				position = { x= -343 y = 36  }
+				orientation = center_up
+				clicksound = interface
+				oversound = no_sound
+			}
+	
+			iconType = {
+				name = "map_button_bg"
+				orientation = center_up
+				position = { x = 265 y = 51 }
+				spriteType = "GFX_bottombar_button_bg"
+				alwaystransparent = yes
+			}
+
+			buttonType = {
+				name = "change_camera_mode_button"
+				quadTextureSprite = "GFX_open_system_map"
+				position = { x= 259 y = 44 }
+				orientation = center_up
+				#text = "LEAVE_GALAXY"
+				buttonFont = "cg_16b"
+				pdx_tooltip_anchor_offset = { x= 0 y = @tt_offset_y }
+				pdx_tooltip_anchor_orientation = lower_left
+				clicksound = ui_galaxy_map_close
+				oversound = mouse_over
+			}
+
+			instantTextBoxType={
+				name = "paused"
+				font = "large_title_font"
+				position = { x = -169 y = 1 }
+				text = "GAME_SPEED_0"
+				maxWidth = 533
+				maxHeight = 67
+				format = center
+				alwaystransparent = yes
+				text_color_code = "H"
+			}
+			
+			instantTextBoxType={
+				name = "empire_name"
+				font = "large_title_font_28"
+				position = { x = -260 y = 52 }
+				maxWidth = 520
+				maxHeight = 67
+				format = center
+				orientation = center_up
+				alwaystransparent = yes
+				fixedsize = yes
+			}
+			
+			instantTextBoxType={
+				name = "empire_type"
+				font = "cg_16b"
+				position = { x = -260 y = 88 }
+				maxWidth = 520
+				maxHeight = 67
+				format = center
+				orientation = center_up
+				alwaystransparent = yes
+				fixedsize = yes
+				text_color_code = "E"
+			}	
+
+		}
+
+		## Claims Management
+		containerWindowType = {
+			name = "claims_management"
+
+			size = { width = 221 height = 152 }
+			position = { x = -111 y = 0 }
+			hide_position = { x = -111 y = 27 }
+			show_position = { x = -111 y = -129 }
+			animation_type = decelerated
+			animation_time = 500.5
+
+			orientation = center_down
+
+			instantTextBoxType={
+				name = "status"
+				font = "malgun_goth_24"
+				position = { x = -80 y = -13 }
+				maxWidth = 333
+				maxHeight = 21
+				alwaysTransparent = yes
+				format = center
+				text = "CLAIMS_MANAGEMENT_MODE"
+			}
+
+			iconType = {
+				name = "system_button_panel"
+				spriteType = "GFX_system_button_panel"
+				position = { x = -173 y = 60 }
+				alwaysTransparent = yes
+			}
+
+			buttonType = {
+				name = "close"
+				quadTextureSprite = "GFX_standard_button_142_34_button"
+				position = { x = -19 y = 56 }
+				text = "CLOSE"
+				buttonFont = "cg_16b"
+				pdx_tooltip = "TOOLTIP_CLOSE_CLAIMS_MANAGEMENT"
+			}
+		}
+
+		## Trade Routes Management
+		containerWindowType = {
+			name = "trade_routes_management"
+			size = { width = 221 height = 152 }
+			position = { x = -111 y = 0 }
+			hide_position = { x = -111 y = 27 }
+			show_position = { x = -111 y = -129 }
+			animation_type = decelerated
+			animation_time = 500.5
+
+			orientation = center_down
+
+			instantTextBoxType={
+				name = "status"
+				font = "malgun_goth_24"
+				position = { x = -80 y = -13 }
+				maxWidth = 333
+				maxHeight = 21
+				alwaysTransparent = yes
+				format = center
+				text = "TRADE_ROUTES_MANAGEMENT_MODE"
+			}
+
+			iconType = {
+				name = "system_button_panel"
+				spriteType = "GFX_system_button_panel"
+				position = { x = -173 y = 60 }
+				alwaysTransparent = yes
+			}
+
+			buttonType = {
+				name = "close"
+				quadTextureSprite = "GFX_standard_button_142_34_button"
+				position = { x = -19 y = 56 }
+				text = "CLOSE"
+				buttonFont = "cg_16b"
+				pdx_tooltip = "TOOLTIP_CLOSE_TRADE_ROUTES_MANAGEMENT_MODE"
+			}
+		}
+
+		# Map Modes
+		containerWindowType = {
+			name = "mapmodes"
+			size = { width = 320 height = 133 }
+			position = { x = -369 y = -181 }
+			orientation = lower_right
+			#verticalScrollBar = "right_vertical_slider"
+
+			#background = {
+			#	name = "background"
+			#	spriteType = "GFX_tiles_frame"
+			#}
+
+			gridBoxType = {
+				name = "map_modes"
+				slotSize = { width = 45 height = 45 }
+				max_slots_horizontal = 12
+				format = "LOWER_LEFT"
+				orientation = "LOWER_LEFT"
+			}
+		}
+
+		# Lower right toolbar
+		containerWindowType = {
+			name = "toolbar"
+			position = { x = -505 y = -48 }
+			size = { width = 505 height = 48 }
+			orientation = lower_right
+			clipping = no
+
+			background = {
+				name = "bg"
+				quadTextureSprite = "GFX_topbar_background"
+				position = { x = 0 y = 0  }
+			}
+
+			iconType = {
+				name = "bottombar_details"
+				spriteType = "GFX_bottombar_details"
+				position = { x= 0 y = -7 }
+			}
+
+			buttonType = {
+				name = "button_topbar_menu"
+				quadTextureSprite = "GFX_button_60_29"
+				position = { x= -119 y = -60  }
+				shortcut = "ESCAPE"
+				pdx_tooltip = "TOPBAR_MENU"
+				pdx_tooltip_anchor_offset = { x= 0 y = @tt_offset_y }
+				pdx_tooltip_anchor_orientation = lower_left
+				orientation = lower_right
+				clicksound = confirm_click
+			}
+
+			iconType = {
+				name ="main_menu_icon"
+				spriteType = "GFX_topbar_menu_button"
+				position = { x= -99 y = -44 }
+				orientation = lower_right
+				alwaystransparent = yes
+			}
+
+			buttonType = {
+				name = "button_topbar_chat"
+				quadTextureSprite = "GFX_button_60_29"
+				position = { x = -295 y = -60  }
+				orientation = lower_right
+				shortcut = "l"
+			}
+
+			iconType = {
+				name = "chat_icon"
+				spriteType = "GFX_chat_icon"
+				position = { x = -275 y = -47 }
+				orientation = lower_right
+				alwaystransparent = yes
+			}
+
+			buttonType = {
+				name = "button_topbar_help"
+				quadTextureSprite = "GFX_button_60_29"
+				position = { x = -207 y = -60  }
+				orientation = lower_right
+				shortcut="alt+b"
+			}
+
+			buttonType = {
+				name = "button_topbar_help_menu"
+				quadTextureSprite = "GFX_button_60_29"
+				position = { x = -207 y = -60  }
+				orientation = lower_right
+			}
+
+			iconType = {
+				name = "help_icon"
+				spriteType = "GFX_help_icon"
+				position = { x = -187 y = -47 }
+				orientation = lower_right
+				alwaystransparent = yes
+			}
+
+			#containerWindowType = {
+			#	name = "social_view_interface_window"
+			#	position = { x= -295 y = -60 }	
+			#	size = { width=341 height=341 }
+			#	orientation = lower_right
+				
+			#	buttonType = {
+			#		name = "toggle_button"
+			#		quadTextureSprite = "GFX_button_60_29"
+			#		position = { x= 0 y = 0  }
+			#		pdx_tooltip_anchor_offset = { x= 0 y = @tt_offset_y }
+			#		pdx_tooltip_anchor_orientation = lower_left
+			#	}
+				
+			#	iconType = {
+			#		name = "button_toggle_socialview_icon"
+			#		spriteType = "GFX_socialview_icon"
+			#		position = { x= 20 y = 13 }
+			#		alwaystransparent = yes
+			#	}
+				
+			#	instantTextBoxType={
+			#		name = "friends_online"
+			#		font = "cg_16b"
+			#		position = { x= 48 y= 24 }
+			#		text = "0"
+			#		maxWidth = 40
+			#		maxHeight = 21
+			#		alwaysTransparent = yes
+			#		format = center
+			#	}
+				
+			#	iconType = {
+			#		name = "new_message"
+			#		position = { x = 80 y = 11 }
+			#		spriteType = "GFX_new_message_icon"
+			#		pdx_tooltip = "SOCIAL_NEW_MESSAGE"
+			#	}
+			#	
+			#	iconType = {
+			#		name = "new_friend"
+			#		position = { x = 80 y = 25 }
+			#		spriteType = "GFX_new_friend_icon"
+			#		pdx_tooltip = "SOCIAL_NEW_FRIEND"
+			#	}
+			#}
+			
+			buttonType = {
+				name = "toggle_gotobox"
+				quadTextureSprite = "GFX_button_60_29"
+				position = { x= -383 y = -60  }
+				shortCut = "f"
+				pdx_tooltip = "GOTOBOX_HEADER"
+				pdx_tooltip_anchor_offset = { x= 0 y = @tt_offset_y }
+				pdx_tooltip_anchor_orientation = lower_left
+				orientation = lower_right
+				clicksound = confirm_click
+			}
+
+			iconType = {
+				name = "toggle_gotobox_icon"
+				spriteType = "GFX_search_icon"
+				position = { x= -361 y = -47 }
+				orientation = lower_right
+				alwaystransparent = yes
+			}
+
+			buttonType = {
+				name = "home_button"
+				quadTextureSprite = "GFX_button_60_29"
+				position = { x= -471 y = -60  }
+				shortCut = "HOME"
+				pdx_tooltip = "GOTO_HOME"
+				pdx_tooltip_anchor_offset = { x= 0 y = @tt_offset_y }
+				pdx_tooltip_anchor_orientation = lower_left
+				orientation = lower_right
+				shortCut = "BACKSPACE"
+			}
+
+			iconType = {
+				name = "home_icon"
+				spriteType = "GFX_home_icon"
+				position = { x= -451 y = -44 }
+				orientation = lower_right
+				alwaystransparent = yes
+			}
+
+			## Filters
+
+			iconType = {
+				name = "toggle_mapmode_icon_details"
+				spriteType = "GFX_mapmode"
+				frame = 9
+				position = { x = -499 y = -44 }
+				orientation = "LOWER_RIGHT"
+				alwaystransparent = yes
+			}
+
+			buttonType = {
+				name = "toggle_mapmode_details"
+				quadTextureSprite = "GFX_button_29_animated_survey"
+				position = { x= -515 y = -60  }
+				pdx_tooltip = "TOGGLE_MAPMODE_DETAILS_INFO"
+				pdx_tooltip_anchor_offset = { x= 0 y = @tt_offset_y }
+				pdx_tooltip_anchor_orientation = lower_left
+				orientation = lower_right
+			}
+
+			iconType = {
+				name = "toggle_mapmode_icon_sectors"
+				spriteType = "GFX_map_mode_sectors"
+				position = { x = -507 y = -93 }
+				orientation = "LOWER_RIGHT"
+				alwaystransparent = yes
+			}
+
+ 			buttonType = {
+				name = "toggle_mapmode_sectors"
+				quadTextureSprite = "GFX_button_29_animated"
+				position = { x= -521 y = -109  }
+				pdx_tooltip = "TOGGLE_MAPMODE_SECTORS_INFO"
+				pdx_tooltip_anchor_offset = { x= 0 y = @tt_offset_y }
+				pdx_tooltip_anchor_orientation = lower_left
+				orientation = lower_right
+			}
+			
+			iconType = {
+				name = "toggle_mapmode_icon_hyperlanes"
+				spriteType = "GFX_map_mode_hyperlanes"
+				position = { x = -461 y = -93 }
+				orientation = "LOWER_RIGHT"
+				alwaystransparent = yes
+			}
+
+			buttonType = {
+				name = "toggle_mapmode_hyperlanes"
+				quadTextureSprite = "GFX_button_29_animated"
+				position = { x= -477 y = -109  }
+				pdx_tooltip = "TOGGLE_MAPMODE_HYPERLANES_INFO"
+				pdx_tooltip_anchor_offset = { x= 0 y = @tt_offset_y }
+				pdx_tooltip_anchor_orientation = lower_left
+				orientation = lower_right
+			}
+
+			iconType = {
+				name = "toggle_mapmode_icon_trade_routes"
+				spriteType = "GFX_map_mode_trade_routes"
+				position = { x = -461 y = -137 }
+				orientation = "LOWER_RIGHT"
+				alwaystransparent = yes
+			}
+
+ 			buttonType = {
+				name = "toggle_mapmode_trade_routes"
+				quadTextureSprite = "GFX_button_29_animated"
+				position = { x= -477 y = -153  }
+				pdx_tooltip = "TOGGLE_MAPMODE_TRADE_ROUTES_INFO"
+				pdx_tooltip_anchor_offset = { x= 0 y = @tt_offset_y }
+				pdx_tooltip_anchor_orientation = lower_left
+				orientation = lower_right
+			}
+
+			iconType = {
+				name = "toggle_mapmode_icon_unions"
+				spriteType = "GFX_map_mode_unions"
+				position = { x = -417 y = -93 }
+				orientation = "LOWER_RIGHT"
+				alwaystransparent = yes
+			}
+
+ 			buttonType = {
+				name = "toggle_mapmode_unions"
+				quadTextureSprite = "GFX_button_29_animated"
+				position = { x= -433 y = -109  }
+				pdx_tooltip = "TOGGLE_MAPMODE_UNIONS_INFO"
+				pdx_tooltip_anchor_offset = { x= 0 y = @tt_offset_y }
+				pdx_tooltip_anchor_orientation = lower_left
+				orientation = lower_right
+			}
+
+			iconType = {
+				name = "toggle_mapmode_icon_players"
+				spriteType = "GFX_map_mode_players"
+				position = { x = -505 y = -137 }
+				orientation = "LOWER_RIGHT"
+				alwaystransparent = yes
+			}
+
+			buttonType = {
+				name = "toggle_mapmode_players"
+				quadTextureSprite = "GFX_button_29_animated"
+				position = { x = -521 y = -153 }
+				pdx_tooltip = "TOGGLE_MAPMODE_PLAYERS_INFO"
+				pdx_tooltip_anchor_offset = { x= 0 y = @tt_offset_y }
+				pdx_tooltip_anchor_orientation = lower_left
+				orientation = lower_right
+			}
+
+			## Error Log
+
+			buttonType = {
+				name = "error_log_button"
+				quadTextureSprite = "GFX_error_log_button"
+				position = { x= -147 y = -91 }
+				text = "ERROR"
+				buttonFont = "cg_16b"
+				Orientation = "LOWER_RIGHT"
+				oversound = no_sound
+			}
+		}
+	}
+
+	containerWindowType = {
+		name = "control_group_window"
+		size = { width=83 height=63 }
+
+		buttonType = {
+			name ="background"
+			quadTextureSprite = "GFX_control_group_window_bg"
+			position = { x= 0 y = 13 }
+			clicksound = interface
+		}
+
+		iconType = {
+			name ="progress"
+			spriteType = "GFX_control_group_progress"
+			position = { x= 0 y = 1 }
+			alwaysTransparent = yes
+		}
+
+		iconType = {
+			name ="in_combat_flash"
+			spriteType = "GFX_control_group_in_combat_flash"
+			position = { x= -5 y = 4 }
+			alwaysTransparent = yes
+		}
+
+		iconType = {
+			name ="icon"
+			spriteType = "GFX_control_group_strip"
+			position = { x= 29 y = 20 }
+			alwaysTransparent = yes
+		}
+
+		instantTextBoxType={
+			name = "info"
+			font = "cg_16b"
+			position = { x= 57 y= 33 }
+			maxWidth = 41
+			maxHeight = 21
+			alwaysTransparent = yes
+			format = left
+		}
+
+		instantTextBoxType={
+			name = "number"
+			font = "cg_16b"
+			position = { x= 3 y= 24 }
+			maxWidth = 25
+			maxHeight = 21
+			alwaysTransparent = yes
+			format = center
+		}
+	}
+#map mode neighbours
+	containerWindowType = {
+		name = "main_gui_map_mode_entry"
+		position = { x= 0 y = 0 }
+		size = { width=43 height=43 }
+
+		buttonType =
+		{
+			name = "button"
+			quadTextureSprite = "GFX_button_29_animated"
+			position = { x = -16 y = -16 }
+			clicksound = "ui_click_map_mode"
+		}
+		iconType = {
+			name = "icon"
+			spriteType = "GFX_map_mode_neighbours"
+			alwaysTransparent = yes
+		}
+	}
+}

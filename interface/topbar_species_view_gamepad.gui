@@ -1,0 +1,637 @@
+guiTypes = {
+	containerWindowType = {
+		name = "topbar_species_view_gamepad"
+		position = { x = 165 y = 165 }
+		size = { width = 1373 height = 744 }
+		orientation = upper_left
+		moveable = no
+		clipping = no
+
+		background = {
+			name = "background"
+			spriteType = "GFX_plain_bg_tile"
+		}
+
+		buttonType = {
+			name = "close"
+			quadTextureSprite = "GFX_close"
+			position = { x = -55 y = 17 }
+			orientation = upper_right
+			shortcut = "ESCAPE"
+			clicksound = "back_click"
+			pdx_tooltip = "CLOSE_TITLE"
+		}
+
+		########################
+		# TAB WINDOWS
+		########################
+		
+		containerWindowType = {
+			name = "topbar_species_tab_gamepad"
+
+			containerWindowType = {
+				name = "info_box"
+				position = { x=7 y=7 }
+				size = { width = 372 height= 304 }
+	        
+				background = {
+					name = "area51"
+					spriteType = "GFX_tiles_dark_area_cut_8"
+				}
+			}
+        
+			# Species black backgound
+			containerWindowType = {
+				name = "empire_list"
+				id = "empire_list"
+				position = { x=387 y=43 }
+				size = { width= 979 height= 692 }
+				navLeft = "modify_or_uplift_button"
+				
+	        
+				background = {
+					name = "area51"
+					spriteType = "GFX_tiles_dark_area_cut_8"
+	        
+				}
+			}
+			
+			# THIS PORTRAITS NEEDS A CONTAINER WINDOW
+			iconType = {
+				name = "selected_species"
+				quadTextureSprite = "GFX_portrait_character"
+				position = { x = -1 y = 7			}
+				scale = 0.6
+			}
+	        
+			instantTextBoxType={
+				name = "selected_species_name"
+				font = "large_title_font"
+				maxWidth = 467
+				maxHeight = 40
+				position = { x = 16 y = 7 }
+				text_color_code = "E"
+				fixedsize = yes
+			}
+	        
+			instantTextBoxType={
+				name = "selected_species_type"
+				font = "cg_16b"
+				maxWidth = 200
+				maxHeight = 27
+				position = { x = 16 y = 51 }
+				text_color_code = "H"
+			}
+			
+			containerWindowType = {
+				name = "info_box_2"
+				position = { x=7 y=257 }
+				size = { width = 372 height= 53 }
+	        
+				background = {
+					name = "area51"
+					spriteType = "GFX_tiles_dark_area_cut_8"
+				}
+			}
+			
+			instantTextBoxType={
+				name = "selected_species_home_planet_name"
+				font = "cg_16b"
+				maxWidth = 140
+				maxHeight = 53
+				position = { x = 40 y = 267 }
+				#format = right
+				#text_color_code = "E"
+			}
+			
+			iconType = {
+				name = "icon_capital"
+				quadTextureSprite = "GFX_empire_capital"
+				position = { x = 11 y = 260 }
+				scale = 0.7
+			}
+			
+			instantTextBoxType={
+				name = "species_class"
+				font = "cg_16b"
+				position = { x = 213 y = 267 }
+				format = left
+				text = "GOTO_HOMEPLANET_GP"
+				maxWidth = 160
+				maxHeight = 53
+				text_color_code = "H"
+			}
+					
+			iconType = {
+				name ="rs_scroll_icon"
+				spriteType = "GFX_controller_icon_rs"
+				position = { x = 176 y = 260 }
+				alwaystransparent = yes
+				
+			}
+			
+			
+	        
+			buttonType = {
+				name = "selected_species_home_planet_type_button" #Remove?
+				quadTextureSprite = "gfx_transparency_button"
+				position = { x = 187 y = 276 }
+				shortCut = "q"
+			}
+			
+			
+			iconType = {
+				name = "info_bg_02"
+				quadTextureSprite = "GFX_numbers_bg"
+				position = { x = 187 y = 368 }
+			}
+	        
+			iconType = {
+				name = "selected_species_population_icon"
+				quadTextureSprite = "GFX_pop"
+				position = { x = 193 y = 369 }
+			}
+	        
+			instantTextBoxType={
+				name = "selected_species_amount"
+				font = "cg_16b"
+				maxWidth = 40
+				position = { x = 220 y = 380 }
+				format = RIGHT
+			}
+	        
+	        
+			buttonType={
+				name = "modify_or_uplift_button"
+				id = "modify_or_uplift_button"
+				font = "cg_16b"
+				spriteType = "GFX_galactic_object_button"
+				position = { x = 0 y = 420 }
+				Orientation = UPPER_LEFT
+				#pdx_tooltip = "GALAXY_VIEW_SORT_NAME"
+				navDown = "set_rights_button"
+				navRight = "species"
+				
+				
+
+			}
+			
+			buttonType= {
+				name = "set_rights_button"
+				id = "set_rights_button"
+				font = "cg_16b"
+				text = "SET_RIGHTS"
+				spriteType = "GFX_galactic_object_button"
+				position = { x = 0 y = 456 }
+				Orientation = UPPER_LEFT
+				navUp = "modify_or_uplift_button"
+			}		
+
+			buttonType= {
+				name = "set_default_rights_button"
+				font = "cg_16b"
+				text = "SET_DEFAULT_RIGHTS"
+				spriteType = "GFX_standard_button_142_34_button"
+				position = { x = 1465 y = 360 }
+				Orientation = UPPER_LEFT
+			}		
+			
+			##black stripes
+			buttonType = {
+				name = "value_slot_2"
+				spriteType = "GFX_tiled_window_transparent"
+				position = { x = 13 y = 507}
+				alwaystransparent = yes
+			}
+			
+			containerWindowType = {
+				name = "value_slot_bg_1"
+				position = { x=7 y=507 }
+				size = { width = 372 height= 47 }
+	        
+				background = {
+					name = "area51"
+					spriteType = "GFX_tiles_dark_area_cut_8"
+				}
+			}
+			
+			containerWindowType = {
+				name = "value_slot_bg_2"
+				position = { x=7 y=559 }
+				size = { width = 372 height= 47 }
+	        
+				background = {
+					name = "area51"
+					spriteType = "GFX_tiles_dark_area_cut_8"
+				}
+			}
+			
+			containerWindowType = {
+				name = "value_slot_bg_3"
+				position = { x=7 y=613 }
+				size = { width = 372 height= 47 }
+	        
+				background = {
+					name = "area51"
+					spriteType = "GFX_tiles_dark_area_cut_8"
+				}
+			}
+			
+			OverlappingElementsBoxType = {
+				name = "selected_species_traits_icons"
+				position = { x =27 y = 320 }
+				size = { x = 293 y = 240 }
+				format = left
+				spacing = 5.0
+			}
+			
+
+			
+			iconType = {
+				name = "trait_points_icon"
+				quadTextureSprite = "GFX_trait_points_icon"
+				position = { x = 293 y = 373 }
+				scale = 0.8
+			}
+	        
+			instantTextBoxType={
+				name = "trait_points"
+				font = "cg_16b"
+				maxWidth = 27
+				position = { x = 327 y = 380 }
+				format = RIGHT
+			}
+	        
+			## SORT BUTTONS
+			
+			@sort_button_height2 = 131
+	        
+			instantTextBoxType={
+				name = "empire_or_galaxy_label"
+				font = "cg_16b"
+				maxWidth = 267
+				position = { x = 780 y = 91 }
+				format = left
+				text = "SHOWING_SPECIES_HEADER"
+			}
+
+			buttonType={
+				name = "empire_or_galaxy"
+				font = "cg_16b"
+				spriteType = "GFX_button_116_24"
+				position = { x = 0 y = 360 }
+				Orientation = UPPER_LEFT
+				text = "TOGGLE_SPECIES"
+			}
+	        
+			buttonType={
+				name = "species_name_button"
+				font = "cg_16b"
+				spriteType = "GFX_standard_button_200_24"
+				buttonText = "SPECIES_VIEW_SPECIES"
+				position = { x = 363 y = 0 }
+				Orientation = UPPER_LEFT
+				pdx_tooltip = "SPECIES_VIEW_SORT_NAME"
+			}
+	        
+			buttonType={
+				name = "type_button"
+				font = "cg_16b"
+				spriteType = "GFX_button_164_24"
+				buttonText = "SPECIES_VIEW_TYPE"
+				position = { x = 641 y = -9 }
+				Orientation = UPPER_LEFT
+				pdx_tooltip = "SPECIES_VIEW_SORT_TYPE"
+			}
+	        
+			buttonType={
+				name = "population_button"
+				font = "cg_16b"
+				spriteType = "GFX_button_35_24"
+				position = { x = 863 y = -9 }
+				Orientation = UPPER_LEFT
+				pdx_tooltip = "SPECIES_VIEW_SORT_POPULATION"
+			}
+	        
+			iconType ={
+				name ="pop_opinion_icon"
+				spriteType = "GFX_pop_green"
+				position = { x = 885 y = 7 }
+				alwaystransparent = yes
+			}
+			
+			buttonType={
+				name = "traits_button"
+				font = "cg_16b"
+				spriteType = "GFX_button_164_24"
+				buttonText = "SPECIES_VIEW_TRAITS"
+				position = { x = 912 y = -9 }
+				Orientation = UPPER_LEFT
+				pdx_tooltip = "SPECIES_VIEW_SORT_TRAITS"
+			}
+			
+			buttonType={
+				name = "rights_button"
+				font = "cg_16b"
+				spriteType = "GFX_button_150_24"
+				buttonText = "SPECIES_VIEW_RIGHTS"
+				position = { x = 1133 y = -9 }
+				Orientation = UPPER_LEFT
+				pdx_tooltip = "SPECIES_VIEW_SORT_RIGHTS"
+			}		
+	        
+			containerWindowType = {
+				name = "species_window"
+				size = { width = 953 height = 307}
+				position = { x = 389 y = 37 }
+				margin = { top = 7 bottom = 7 }
+	        
+
+	        
+				# Size of species list
+				smoothListboxType = {
+					name = "species"
+					id = "species"
+					position = { x = 0 y = 0 }
+					size = { x = 957 y = 685 }
+					scrollbarType = "standardlistbox_slider"
+					borderSize = { x = 0 y = 0 }
+					navLeft = "modify_or_uplift_button"
+					defaultSelection = yes
+					
+				}
+			}
+		}
+
+		########################
+		# TABS
+		########################
+
+		@tab_x_species = -27
+		@tab_x_species_rights = 145
+		@tab_y = -3
+		
+		buttonType = {
+			name = "tab_species"
+			quadTextureSprite = "GFX_tab_1_inactive"
+			position = { x = @tab_x_species y = @tab_y }
+			font = "cg_16b"
+			buttonText = "tab_species_button"
+			buttonFont = "cg_16b"
+			shortcut = "z"
+			clicksound = "tab_click"
+			Orientation = "LOWER_LEFT"
+		}
+		
+		buttonType = {
+			name = "tab_species_active"
+			quadTextureSprite = "GFX_tab_1_active"
+			position = { x = @tab_x_species y = @tab_y }
+			font = "cg_16b"
+			buttonText = "tab_species_button"
+			buttonFont = "cg_16b"
+			clicksound = "tab_click"
+			shortcut = "z"
+			Orientation = "LOWER_LEFT"
+		}
+	}
+	
+	containerWindowType = {
+		name = "species_entry_gamepad"
+		position = { x=0 y=0 }
+		size = { width=800 height=64 }
+
+		buttonType = {
+			name = "background"
+			spriteType = "GFX_tiles_frame_light"
+			size = { x = 963 y = 72 }
+		}
+	
+
+		@entry_info_height = 24
+
+		# THIS PORTRAITS NEEDS A CONTAINER WINDOW
+		iconType = {
+			name = "species"
+			quadTextureSprite = "GFX_portrait_character"
+			position = { x = 0 y = 4 }
+			scale = 0.12
+			#Orientation = "LOWER_LEFT"
+		}
+		
+		buttonType ={
+			name ="selected_entry"
+			spriteType = "GFX_glow_tile_striped"
+			position = { x=  0 y = 0 }
+			size = { x = 963 y = 72 }
+			alwaystransparent = yes
+		}
+
+		instantTextBoxType={
+			name = "name"
+			font = "cg_16b"
+			maxWidth = 227
+			maxHeight = 53
+			position = { x = 87 y = 7 }
+			orientation = left
+			vertical_alignment = center
+			text_color_code = "E"
+		}
+
+		instantTextBoxType={
+			name = "type"
+			font = "cg_16b"
+			maxWidth = 200
+			maxHeight = 53
+			position = { x = 277 y = 7 }
+			format = center
+			vertical_alignment = center
+		}
+
+		instantTextBoxType={
+			name = "population"
+			font = "cg_16b"
+			maxWidth = 40
+			position = { x = 496 y = @entry_info_height }
+			format = center
+		}
+
+		OverlappingElementsBoxType = {
+			name = "traits_icons"
+			position = { x = 556 y = 15 }
+			size = { x = 227 y = 53 }
+			format = left
+			spacing = 4.0
+		}
+		
+		instantTextBoxType={
+			name = "rights"
+			font = "cg_16b"
+			maxWidth = 180
+			text = "Serfdom"
+			position = { x = 773 y = 24 }
+			format = center
+			
+		}		
+	}
+	
+	containerWindowType = {
+		name = "species_rights_settings_item_gamepad"
+		orientation = center
+		origo = center
+		moveable = yes
+		clipping = yes
+		size = { width = 793 height = 853 } 
+		
+		background = {
+			name = "background"
+			spriteType = "GFX_tile_outliner_bg"
+		}
+				
+		iconType = {
+			name = "hex_bg"
+			spriteType = "GFX_hex_bg"
+			position = { x = 39 y = -16 }
+			alwaysTransparent = yes
+		}
+		
+		iconType = {
+			name = "species_rights_header_line"
+			quadTextureSprite = "GFX_line"
+			position = { x = 8 y = 28 }
+			alwaystransparent = yes
+		}
+
+		instantTextBoxType = {
+			name = "species_rights_header"
+			font = "malgun_goth_24"
+			text = "Selected Species"
+			position = { x = 20 y = 7 }
+			maxWidth = 400
+			maxHeight = 27
+			fixedSize = yes
+			format = left
+		}
+		
+		buttonType = {
+			name = "close"
+			quadTextureSprite = "GFX_close"
+			position = { x = -60 y = 21 }
+			orientation = upper_right
+			shortcut = "ESCAPE"
+			clicksound = "back_click"
+			pdx_tooltip = "CLOSE_TITLE"
+		}
+        
+		containerWindowType = {
+			name = "species_right_list_window"
+			position = { x = 8 y = 73 }
+			size = { width = 777 height = 769 }
+        
+			background = {
+				name = "background"
+				spriteType = "GFX_tiles_frame_light"
+			}
+        
+			smoothListboxType = {
+				name = "species_right_list"
+				position = { x = 13 y = 13 }
+				backGround=""
+				size = { x = 733 y = 743 }
+				spacing = 1
+				scrollbartype = "standardlistbox_slider"
+				borderSize = { x = 0 y = 0 }
+				orientation = "UPPER_LEFT"
+			}
+		}
+	}	
+
+	containerWindowType = {
+		name = "species_right_group_entry_gamepad"
+		position = { x=13 y=13 }
+		size = { width = 507 height = 40 }
+
+		buttonType = {
+			name = "background"
+			quadTextureSprite = "GFX_tiles_dark_area_cut_8_hover"
+			size = { x = 733 y = 36 }
+		}
+
+		iconType = {
+			name = "group_icon"
+			alwaysTransparent = yes
+			position = { x = 0 y = 0 }
+			quadTextureSprite = "GFX_species_right_citizenship"
+		}
+
+		instantTextBoxType = {
+			name = "species_right_name"
+			font = "cg_16b"
+			position = { x = 43 y = 7 }
+			fixedSize = yes
+			format = left
+			maxWidth = 320
+			alwaysTransparent = yes
+		}
+		
+		instantTextBoxType = {
+			name = "selected_option_name"
+			font = "cg_16b"
+			position = { x = 340 y = 7 }
+			fixedSize = yes
+			maxWidth = 347
+			format = right
+			alwaysTransparent = yes
+
+			text = "Selected Option"
+			text_color_code = "H"
+		}
+		
+		iconType = {
+			name = "expand_icon"
+			quadTextureSprite = "GFX_entry_expand"
+			position = { x = 693 y = 4 }
+			alwaysTransparent = yes
+		}
+
+		smoothListboxType = {
+			name = "options"
+			position = { x = 20 y = 40 }
+			size = { x = 620 y = 67 }
+			alwaysTransparent = yes
+		}
+	}
+	
+	containerWindowType = {
+		name = "species_right_entry_gamepad"
+		position = { x = 0 y = 0 }
+		size = { width = 107 height = 40 }
+
+		buttonType = {
+			name = "option_button"
+			quadTextureSprite = "GFX_tiles_dark_area_cut_8_hover"
+			position = { x = 13 y = 0 }
+			size = { x = 600 y = 36 }
+		}
+
+		instantTextBoxType = {
+			name = "name"
+			font = "cg_16b"
+			position = { x = 56 y = 8 }
+			fixedSize = yes
+			format = left
+			alwaysTransparent = yes
+			text = "Species Right Name"
+			text_color_code = "E"
+		}
+
+		iconType = {
+			name = "is_selected"
+			alwaysTransparent = yes
+			position = { x = 19 y = 3 }
+			quadTextureSprite = "GFX_radio_button"
+			frame = 1
+			scale = 0.8
+		}
+	}
+}

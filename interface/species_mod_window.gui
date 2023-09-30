@@ -1,0 +1,291 @@
+guiTypes = {
+	containerWindowType = {
+		name = "species_mod_window"
+		position = { x = -213 y = -27 }
+		size = { width = 557 height = 821 }
+		orientation = center
+		origo = center
+		moveable = yes
+
+		background = {
+			name = "species_mod_background"
+			quadTextureSprite = "GFX_tile_outliner_bg"
+		}
+
+		buttonType = {
+			name = "species_portrait_edit_button"
+			quadTextureSprite = "GFX_advisor_button"
+			position = { x = 4 y = 44 }
+		}
+		containerWindowType = {
+			name = "species_portrait_container"
+			position = { x = 21 y = 61 }
+			size = { width = 131 height = 157 }
+			clipping = yes
+
+			iconType = {
+				name = "species_portrait"
+				spriteType = "GFX_portrait_character"
+				position = { x = -47 y = 0 }
+				scale = 0.32
+				alwaysTransparent = yes
+			}
+		}
+
+		iconType = {
+			name = "hex_bg"
+			spriteType = "GFX_hex_bg"
+			position = { x = -13 y = -17 }
+			alwaysTransparent = yes
+		}
+
+		iconType = {
+			name = "header_line"
+			spriteType = "GFX_line"
+			position = { x = 8 y = 28 }
+		}
+
+		instantTextBoxType={
+			name = "title"
+			font = "malgun_goth_24"
+			position = { x = 27 y = 7 }
+			maxWidth = 464
+			maxHeight = 29
+			fixedSize = yes
+			format = left
+			alwaysTransparent = yes
+			text = "GENE_MODIFICATION"
+		}
+
+		buttonType = {
+			name = "close"
+			quadTextureSprite = "GFX_close"
+			position = { x = -59 y = 21 }
+			orientation = upper_right
+			shortcut = "ESCAPE"
+			clicksound = "back_click"
+			pdx_tooltip = "CLOSE_TITLE"
+		}
+
+		buttonType = {
+			name = "species_name_button"
+			font = "cg_16b"
+			format = left
+			vertical_alignment = center
+			quadTextureSprite = "GFX_button_200_24_no_anim"
+			position = { x = 168 y = 77 }
+			size = { x = 267 y = 32 }
+			borderSize = { x = 27 y = 0 }
+			pdx_tooltip = "SPECIES_NAME_TOOLTIP"
+		}
+
+		instantTextBoxType={
+			name = "species_class"
+			font = "cg_16b"
+			position = { x = 193 y = 123 }
+			maxWidth = 267
+			maxHeight = 29
+			fixedSize = yes
+			format = left
+			text_color_code = "E"
+			pdx_tooltip = "SPECIES_CLASS_TOOLTIP"
+		}
+
+		instantTextBoxType={
+			name = "ideal_planet_class"
+			font = "cg_16b"
+			position = { x = 193 y = 156 }
+			maxWidth = 267
+			maxHeight = 29
+			fixedSize = yes
+			format = left
+			pdx_tooltip = "IDEAL_PLANET_CLASS_TOOLTIP"
+		}
+
+		instantTextBoxType = {
+			name = "points"
+			font = "cg_16b"
+			position = { x = 27 y = 236 }
+			maxWidth = 227
+			maxHeight = 29
+			fixedSize = yes
+			format = left
+		}
+		instantTextBoxType = {
+			name = "picks"
+			font = "cg_16b"
+			position = { x = 299 y = 236 }
+			maxWidth = 237
+			maxHeight = 29
+			fixedSize = yes
+			format = right
+		}
+
+		containerWindowType = {
+			name = "has_traits_frame_box"
+			size = { width = 531 height = 67 }
+			position = { x = 13 y = 260 }
+
+			background = {
+				name = "has_traits_frame"
+				spriteType = "GFX_clean_frame_area"
+			}
+		}
+		containerWindowType = {
+			name = "current_traits_container"
+			size = { width = 531 height = 67 }
+			position = { x = 23 y = 268 }
+			verticalScrollbar = "right_vertical_slider_s"
+
+			background = {
+				name = "current_traits_container_bg"
+				spriteType = "GFX_invisible"
+			}
+
+			gridBoxType = {
+				name = "traits"
+				slotSize = { width = 56 height = 60 }
+				max_slots_horizontal = 9
+				format = "UPPER_LEFT"
+			}
+		}
+
+		instantTextBoxType = {
+			name = "planet_traits_header"
+			font = "cg_16b"
+			position = { x = 27 y = 337 }
+			maxWidth = 493
+			maxHeight = 29
+			fixedSize = yes
+			text = "PLANET_CLASS_PREFERENCE_TRAITS"
+		}
+		containerWindowType = {
+			name = "planet_class_traits_frame_box"
+			size = { width = 531 height = 67 }
+			position = { x = 13 y = 360 }
+
+			background = {
+				name = "has_traits_frame"
+				spriteType = "GFX_clean_frame_area"
+			}
+		}
+		instantTextBoxType = {
+			name = "planet_traits_not_applicable"
+			font = "cg_16b"
+			position = { x = 27 y = 368 }
+			maxWidth = 493
+			maxHeight = 51
+			fixedSize = yes
+			format = center
+			vertical_alignment = center
+			text = "SPECIES_MOD_NO_PLANET_CLASS"
+			text_color_code = "g"
+		}
+
+		containerWindowType = {
+			name = "planet_class_traits_container"
+			size = { width = 519 height = 53 }
+			position = { x = 23 y = 367 }
+			verticalScrollbar = "right_vertical_slider_s"
+
+			background = {
+				name = "planet_class_traits_container_bg"
+				spriteType = "GFX_invisible"
+			}
+
+			gridBoxType = {
+				name = "traits"
+				slotSize = { width = 56 height = 60 }
+				max_slots_horizontal = 9
+				format = "UPPER_LEFT"
+			}
+		}
+
+		instantTextBoxType = {
+			name = "available_traits_header"
+			font = "cg_16b"
+			text = "SPECIES_MOD_SELECT_TRAITS"
+			position = { x = 27 y = 437 }
+			maxWidth = 493
+			maxHeight = 40
+			alwaysTransparent = no
+		}
+		containerWindowType = {
+			name = "possible_traits_frame_box"
+			size = { width = 531 height = 291 }
+			position = { x = 13 y = 460 }
+
+			background = {
+				name = "possible_traits_frame"
+				spriteType = "GFX_clean_frame_area"
+			}
+		}
+		containerWindowType = {
+			name = "available_traits_container"
+			size = { width = 520 height = 272 }
+			position = { x = 21 y = 469 }
+			verticalScrollbar = "right_vertical_slider"
+
+			background = {
+				name = "BG_available_traits"
+				quadTextureSprite = "GFX_tiled_window_transparent"
+				position = { x = 0 y = -5 }
+			}
+
+			gridBoxType = {
+				name = "traits"
+				slotSize = { width = 56 height = 53 }
+				max_slots_horizontal = 9
+				format = "UPPER_LEFT"
+			}
+		}
+
+		buttonType = {
+			name = "create_new_template"
+			quadTextureSprite = "GFX_standard_button_142_34_button"
+			position = { x = 3 y = -80 }
+			orientation = "LOWER_LEFT"
+			text = "CREATE_NEW_SPECIES_MOD_TEMPLATE_BUTTON"
+			font = "cg_16b"
+		}
+
+		buttonType = {
+			name = "delete_template"
+			font = "cg_16b"
+			spriteType = "GFX_gamesetup_delete"
+			position = { x = -267 y = -68  }
+			orientation = "LOWER_RIGHT"
+		}
+
+		buttonType = {
+			name = "update_template"
+			quadTextureSprite = "GFX_standard_button_142_34_button"
+			position = { x = -224 y = -80  }
+			orientation = "LOWER_RIGHT"
+			shortCut = "RETURN"
+			text = "UPDATE_SPECIES_MOD_TEMPLATE_BUTTON"
+			font = "cg_16b"
+			borderSize = { x = 16 y = 16 }
+			multiline = yes
+			clicksound = "confirm_click"
+		}
+	}
+
+	containerWindowType = {
+		name = "species_mod_trait_entry"
+		size = { width = 59 height = 59 }
+		clipping = no
+
+		buttonType = {
+			name = "trait"
+			position = { x = 7 y = 7 }
+			quadTextureSprite = "GFX_traits"
+		}
+
+		iconType = {
+			name = "selected"
+			position = { x = 3 y = 3 }
+			quadTextureSprite = "GFX_traits_selected"
+		}
+	}
+}

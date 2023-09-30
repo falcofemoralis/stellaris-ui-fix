@@ -1,0 +1,117 @@
+guiTypes = {
+	containerWindowType = {
+		name = "tutorial_mission_view_docked"
+		position = { x = 0 y = 0 }
+		orientation = UPPER_RIGHT
+		size = { width = 0 height = 0 }
+
+		# Separate container for content to enable animation of only content
+		containerWindowType = {
+			name = "container"
+			position = { x =  -1747 y = 960 }
+			show_position = { x =  -1000 y = 56 }
+			hide_position = { x =  -1747 y = 960 }
+			animation_time = 1000
+			animation_type = decelerated
+
+			containerWindowType = {
+				name = "content"
+				size = { width = 400 height = 400 }
+				position = { x = 0 y = -533 }
+				show_position = { x = 0 y = 0 }
+				hide_position = { x = 0 y = -533 }
+				animation_time = 300
+				animation_type = decelerated
+
+				background= {
+					name = "bg"
+					quadTextureSprite = "GFX_plain_bg_tile"
+				}
+
+				iconType = {
+					name = "title_hex"
+					quadTextureSprite = "GFX_hex_bg"
+					position = { x = 8 y = 11 }
+				}
+
+				instantTextBoxType= {
+					name = "title"
+					font = "malgun_goth_24"
+					text = "" # text is set in code
+					position = { x = 47 y = 33 }
+					maxWidth = 307
+					maxHeight = 133
+					format = left
+				}
+
+				instantTextBoxType= {
+					name = "instructions"
+					font = "cg_16b"
+					text = "" # text is set in code
+					position = { x = 47 y = 107 }
+					maxWidth = 307
+					maxHeight = 200
+					format = left
+					scrollbartype = "standardtext_slider"
+				}
+
+				buttonType = {
+					name = "open_tutorial_mission_view"
+					font = "cg_16b"
+					quadTextureSprite = "GFX_standard_button_190_24"
+					buttonText = HELP_TUTORIAL_CHANGE_MISSION
+					orientation = CENTER_DOWN
+					clicksound = "back_click"
+					position = { x = -140 y = -80 }
+				}
+
+				iconType = {
+					name = "button_mission_completed_glow"
+					position = { x = 57 y = 317 }
+					quadTextureSprite = "GFX_mission_completed_glow"
+					alwaysTransparent = yes
+				}
+			}
+		}
+
+		containerWindowType = {
+			name = "toggle_button_container"
+			size = { width = 100% height = 296 }
+			position = { x = -1093 y = 41 }
+
+			fade_time = 7000
+			fade_type = linear
+
+			buttonType = {
+				name = "show"
+				quadTextureSprite = "GFX_btn_mission_toggle_closed"
+				position = { x = 0 y = 0 }
+				clicksound = interface
+				oversound = mouse_over
+			}
+
+			buttonType = {
+				name = "hide"
+				quadTextureSprite = "GFX_btn_mission_toggle_opened"
+				position = { x = 0 y = 0 }
+				clicksound = interface
+				oversound = mouse_over
+			}
+
+			buttonType = {
+				name = "completed"
+				quadTextureSprite = "GFX_btn_mission_toggle_completed"
+				position = { x = 0 y = 0 }
+				clicksound = interface
+				oversound = mouse_over
+			}
+
+			iconType = {
+				name = "toggle_mission_completed_glow"
+				position = { x = -3 y = -3 }
+				quadTextureSprite = "GFX_toggle_mission_completed_glow"
+				alwaysTransparent = yes
+			}
+		}
+	}
+}

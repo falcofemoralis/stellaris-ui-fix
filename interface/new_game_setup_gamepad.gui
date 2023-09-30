@@ -1,0 +1,891 @@
+guiTypes = {
+
+	### RANDOM SPECIES PREVIEW ###
+
+	containerWindowType = {
+		name = "random_species_preview_gamepad"
+		orientation = center
+		origo = center
+		size = { width = 1387 height = 947 }
+		position = { x = 153 y = 0 }
+
+		background = {
+			name = "random"
+			spriteType = "GFX_tile_large_bg_plain"
+		}
+		
+		iconType = {
+			name = "randomize_image"
+			spriteType = "GFX_gamesetup_randomize_image"
+			position = { x = 8 y = 60 }
+			alwaysTransparent = yes
+		}
+		
+		instantTextBoxType = {
+				name = "text"
+				position = { x = 27 y = 411 }
+				font = "large_title_font"
+				maxWidth = 1333	
+				text = "RANDOMIZE_EMPIRE"
+				format = center
+				orientation = "UPPER_LEFT"
+				alwaysTransparent = yes
+				fixedsize = yes
+			}
+		
+	}
+
+	### CUSTOM SPECIES PREVIEW ###
+
+	containerWindowType = {
+		name = "custom_species_preview_gamepad"
+		orientation = center
+		origo = center
+		size = { width = 1387 height = 947 }
+		position = { x = 153 y = 0 }
+
+		background = {
+			name = "custom"
+			spriteType = "GFX_tile_large_bg_plain"
+		}
+		
+		iconType = {
+			name = "create_new_image"
+			spriteType = "GFX_gamesetup_create_new_image"
+			position = { x = 8 y = 60 }
+			alwaysTransparent = yes
+		}
+		
+		instantTextBoxType = {
+				name = "text"
+				position = { x = 27 y = 411 }
+				font = "large_title_font"
+				maxWidth = 1333	
+				text = "CREATE_NEW_EMPIRE"
+				format = center
+				orientation = "UPPER_LEFT"
+				alwaysTransparent = yes
+				fixedsize = yes
+			}
+	}
+
+	### PRESET/USER SPECIES PREVIEW ###
+
+	containerWindowType = {
+		name = "species_preview_gamepad"
+		orientation = center
+		origo = center
+		size = { width = 1200 height = 800 }
+		position = { x = 153 y = -7 }
+
+		background = {
+			name = "background"
+			spriteType = "GFX_tile_large_bg_plain"
+		}
+		
+		#Empire name
+		containerWindowType = {
+			name = "empire_name"
+			size = { width = 667 height = 73 }
+			position = { x = 267 y = 5 }
+			clipping = no
+			
+			background = {
+				name = "bg"
+				spriteType = "GFX_invisible"
+				clicksound = tab_click
+			}
+
+			iconType = {
+				name = "title_glow_big"
+				spriteType = "GFX_title_glow_big"
+				orientation = center
+				centerPosition = yes
+				position = { x = 0 y = 27 }
+				alwaysTransparent = yes
+			}
+				
+			instantTextBoxType = {
+				name = "label"
+				font = "large_title_font"
+				text = "COOL_EMPIRE"
+				alwaysTransparent = yes
+				fixedsize = yes
+				format = center
+				orientation = center_up
+				maxWidth = 1013
+				maxHeight = 80
+				position = { x = -507 y = 16 }
+			}
+		}
+		
+		buttonType = {
+			name = "species_description_bg"
+			spriteType = "GFX_tiles_dark_area_cut_8"
+			size = { x = 387 y = 400 }
+			position = { x = 360 y =387 }
+		}
+		
+		instantTextBoxType = {
+			name = "Biography"
+			font = "malgun_goth_24"
+			position = { x = 333 y = 387 }
+			maxWidth = 407
+			text =	 "Biography"
+			format = center
+			alwaysTransparent = yes
+		}
+		
+		instantTextBoxType = {
+			name = "species_description"
+			position = { x = 367 y = 420 }
+			font = "cg_16b"
+			maxWidth = 373
+			maxHeight = 373
+			format = left
+			text_color_code = "E"
+			scrollbarType = "standardtext_slider"
+			alwaysTransparent = yes
+		}
+		
+		#portrait
+		containerWindowType = {
+			name = "portrait_window"
+			position = { x = 8 y = 80 }
+			size = { width = 1028 height = 380 }
+			orientation = upper_left
+			clipping = yes
+
+			background = {
+				name = "asdf"
+				spriteType = "GFX_invisible"
+			}
+			
+			iconType = {
+				name = "portrait"
+				spriteType = "GFX_portrait_gamesetup_mask"
+				position = { x = 5 y = 7 }
+				scale = 0.65
+				alwaysTransparent = yes
+			}
+
+			buttonType = {
+				name = "ruler_hitbox"
+				spriteType = "GFX_invisible"
+				position = { x = 227 y = 13 }
+				size = { x = 293 y = 347 }
+			}
+
+			buttonType = {
+				name = "city_hitbox"
+				spriteType = "GFX_invisible"
+				position = { x = 520 y = 53 }
+				size = { x = 453 y = 267 }
+			}
+			
+			iconType = {
+				name = "black_frame"
+				spriteType = "GFX_diplomacy_portrait_shadow_frame"
+				position = { x = 3 y = 0}
+				scale = 0.65
+				alwaysTransparent = yes
+			}
+			
+			iconType = {
+				name = "stripes_1"
+				spriteType = "GFX_diplomacy_stripes_2"
+				position = { x = 8 y = 7 }
+				orientation = upper_left
+				scale = 0.65
+				alwaysTransparent = yes
+			}
+			
+			iconType = {
+				name = "city_frame"
+				spriteType = "GFX_diplomacy_portrait_frame"
+				position = { x = 0 y = 0 }
+				scale = 0.65
+				alwaysTransparent = yes
+			}
+		}
+		
+		#empire flag
+		buttonType = {
+			name = "empire_flag"
+			spriteType = "GFX_empire_flag_200"#GFX_empire_flag_200
+			position = { x= 13 	y = 147  }
+			scale = 0.75
+			#alwaysTransparent = yes
+			clicksound = tab_click
+		}
+		
+		#Home world
+		containerWindowType = {
+			name = "home_world"
+			size = { width = 333 height = 347 }
+			position = { x = 853 y = 67 }
+			
+			background = {
+				name = "bg"
+				spriteType = "GFX_invisible"
+				clicksound = tab_click
+			}
+
+			# Planet Name
+			containerWindowType = {
+				name = "homeworld_name"
+				size = { width = 400 height = 40 }
+				position = { x = 0 y = 0 }
+				clipping = yes
+
+
+				instantTextBoxType = {
+					name = "field"
+					position = { x = 67 y = 13 }
+					orientation = UPPER_LEFT
+					font = "malgun_goth_24"
+					text = "spawnpoint"	
+					text_color_code = "H"
+					format = center
+					maxWidth = 213
+					maxHeight = 53
+					fixedSize = yes
+				}
+			}
+			
+			buttonType = {
+				name = "3d_icon"
+				position = { x = 77 y = 53 }
+				spriteType = "GFX_dummy_3d_home_world"
+				size = { x = 200 y = 200 }
+
+			}
+
+			containerWindowType = {
+				name = "class"
+				size = { width = 400 height = 367 }
+				position = { x = 67 y = 260 }
+				
+				instantTextBoxType = {
+					name = "selected"
+					font = "cg_16b"
+					maxWidth = 213
+					maxHeight = 53
+					text = "Continental"
+					format = center
+					text_color_code = "E"
+				}
+			}
+		}
+		
+		#government and ethics
+		containerWindowType = {
+			name = "government_and_ethics"
+			position = { x = 13 y = 387 }
+			size = { width = 340 height = 180 }
+			
+			background = {
+				name = "government_hitbox"
+				spriteType = "GFX_tiles_dark_area_cut_8"
+				clicksound = tab_click
+			}
+			iconType = {
+				name = "government_icon"
+				spriteType = "GFX_government_authority"
+				position = { x = 11 y = 11 }
+				alwaysTransparent = yes
+				scale = 0.7
+			}
+			instantTextBoxType = {
+				name = "government_name"
+				position = { x = 60 y = 11 }
+				font = "malgun_goth_24"
+				maxWidth = 347
+				text = "GOVERNMENT_NAME"
+				alwaysTransparent = yes
+			}
+			smoothListboxType = {
+				name = "ethics"
+				position = { x = 133 y = 53 }
+				size = { x = 400 y = 400 }
+				scrollbarType = "standardlistbox_slider"
+				alwaysTransparent = yes
+			}
+		}
+		
+		#species
+		containerWindowType = {
+			name = "species_window"
+			position = { x = 13 y = 573 }
+			size = { width = 340 height = 213 }
+			
+			background = {
+				name = "species_hitbox"
+				spriteType = "GFX_tiles_dark_area_cut_8"
+				clicksound = tab_click
+			}
+			instantTextBoxType = {
+				name = "species_name"
+				format = left
+				maxWidth = 173
+				maxHeight = 33
+				position = { x = 7 y = 4 }
+				font = "malgun_goth_24"
+				text = "SPECIES NAME"
+				alwaysTransparent = yes
+				fixedSize = yes
+			}
+			buttonType = {
+				name = "species_name_hitbox"
+				spriteType = "GFX_invisible"
+				size = { x = 160 y = 33 }
+				position = { x = 0 y = 4 }
+			}
+			instantTextBoxType = {
+				name = "species_class"
+				format = left
+				position = { x = 8 y = 32 }
+				maxWidth = 267
+				font = "cg_16b"
+				text = "SPECIES CLASS"
+				text_color_code = "E"
+				alwaysTransparent = yes
+			}
+			smoothListboxType = {
+				name = "traits"
+				position = { x = 133  y = 7 }
+				size = { x = 200 y = 213 }
+				scrollbarType = "standardlistbox_slider"
+				borderSize = { x = 0 y = 0 }
+				orientation = "UPPER_LEFT"
+				spacing = 0
+				alwaysTransparent = yes
+			}
+			
+			containerWindowType = {
+				name = "portrait"
+				clipping = yes
+				size = { width = 187 height = 267 }
+				position = { x = 9 y = 27 }
+
+				iconType = {
+					name = "portrait"
+					spriteType = "GFX_portrait_character"
+					scale = 0.35
+					position = { x = -67 y = 0 }
+					alwaysTransparent = yes
+				}
+			}
+				
+
+		}
+		
+		#starting ftl
+		containerWindowType = {
+			name = "starting_ftl"
+			position = { x = 976 y = 387 }
+			size = { width = 216 height = 204 }
+			background = {
+				name = "ftl_hitbox"
+				spriteType = "GFX_tiles_dark_area_cut_8"
+				clicksound = tab_click
+			}
+			iconType = {
+				name = "icon"
+				spriteType = "GFX_travel_method_01"
+				position = { x = -7 y = 56 }
+				scale = 0.8
+				alwaysTransparent = yes
+			}
+			instantTextBoxType = {
+				name = "ftl_type"
+				position = { x = 0 y = 0 }
+				font = "malgun_goth_24"
+				maxWidth = 216
+				maxHeight = 27
+				text = "STARTING FTL TYPE"
+				format = center
+				alwaysTransparent = yes
+				fixedSize = yes
+				text_color_code = "H"
+			}
+			
+			instantTextBoxType = {
+				name = "starting_ftl"
+				position = { x = 0 y = 29 }
+				font = "cg_16b"
+				maxWidth = 216
+				text =  "FTL Travel"
+				format = center
+				alwaysTransparent = yes
+			}
+		}
+		
+		#ship preview
+		containerWindowType = {
+			name = "ship_preview"
+			position = { x = 753 y = 597 }
+			size = { width = 439 height = 189 }
+			
+			background = {
+				name = "ship_hitbox"
+				spriteType = "GFX_tiles_dark_area_cut_8"
+				clicksound = tab_click
+			}
+			buttonType = {
+				name = "render_target"
+				quadTextureSprite = "GFX_dummy_3d_graphical_culture_preview"
+				position = { x = 7 y = 7 }
+				size = { x = 424 y = 176 }
+			}
+		}
+	}
+
+	containerWindowType = {
+		name = "species_preview_alternative_gamepad"
+		size = { width = 1373 height = 767 }
+		position = { x = 165 y = 127 }
+
+		containerWindowType = {
+			name = "background_gfx"
+			size = { width = 100% height = 767 }
+
+			background = {
+				name = "background"
+				spriteType = "GFX_tile_large_bg_plain"
+			}
+		}
+
+		containerWindowType = {
+			name = "tabbar_buttons"
+			size = { width = 100% height = 56 }
+			position = { x = 0 y = 767 }
+
+			instantTextBoxType = {
+				name = "done"
+				text = "GAMEPAD_DONE"
+				position = { x = -147 y = 16 }
+				font = "cg_16b"
+				maxWidth = 133
+				format = right
+				alwaysTransparent = yes
+				orientation = upper_right
+			}
+		}
+
+		#portrait
+		containerWindowType = {
+			name = "portrait_window"
+			position = { x = 8 y = 7 }
+			size = { width = 967 height = 347 }
+			orientation = upper_left
+
+			background = {
+				name = "asdf"
+				spriteType = "GFX_invisible"
+			}
+			
+			iconType = {
+				name = "portrait"
+				spriteType = "GFX_portrait_gamesetup_mask"
+				position = { x = 5 y = 7 }
+				scale = 0.72
+				alwaysTransparent = yes
+			}
+
+			buttonType = {
+				name = "ruler_hitbox"
+				spriteType = "GFX_invisible"
+				position = { x = 227 y = 13 }
+				size = { x = 293 y = 347 }
+			}
+
+			buttonType = {
+				name = "city_hitbox"
+				spriteType = "GFX_invisible"
+				position = { x = 520 y = 53 }
+				size = { x = 453 y = 267 }
+			}
+			
+			iconType = {
+				name = "black_frame"
+				spriteType = "GFX_diplomacy_portrait_shadow_frame"
+				position = { x = 3 y = 0}
+				scale = 0.72
+				alwaysTransparent = yes
+			}
+			
+			iconType = {
+				name = "stripes_1"
+				spriteType = "GFX_diplomacy_stripes_2"
+				position = { x = 8 y = 7 }
+				orientation = upper_left
+				scale = 0.72
+				alwaysTransparent = yes
+			}
+			
+			iconType = {
+				name = "city_frame"
+				spriteType = "GFX_diplomacy_portrait_frame"
+				position = { x = 0 y = 0 }
+				scale = 0.72
+				alwaysTransparent = yes
+			}
+			
+			iconType = {
+				name = "text_shadow"
+				spriteType = "GFX_diplomacy_portrait_text_shadow"
+				position = { x = 0 y = 0 }
+				scale = 0.72
+				alwaysTransparent = yes
+			}
+		}
+		
+		#empire flag
+		buttonType = {
+			name = "empire_flag"
+			spriteType = "GFX_empire_flag_200"#GFX_empire_flag_200
+			position = { x= 13 	y = 64  }
+			scale = 0.85
+			#alwaysTransparent = yes
+			clicksound = tab_click
+		}
+
+		#Empire name
+		containerWindowType = {
+			name = "empire_name"
+			size = { width = 547 height = 133 }
+			position = { x = 373 y = 24 }
+			
+			background = {
+				name = "bg"
+				spriteType = "GFX_invisible"
+				clicksound = tab_click
+			}
+
+			instantTextBoxType = {
+				name = "label"
+				font = "large_title_font"
+				text = "COOL_EMPIRE"
+				alwaysTransparent = yes
+				format = right
+				
+				fixedsize = yes
+				maxWidth = 533
+				maxHeight = 133
+			}
+		}
+		
+		#Home world
+		containerWindowType = {
+			name = "home_world"
+			size = { width = 387 height = 347 }
+			position = { x = 980 y = 7 }
+			
+			background = {
+				name = "bg"
+				spriteType = "GFX_invisible"
+				clicksound = tab_click
+			}
+
+			# Planet gfx
+			buttonType = {
+				name = "3d_icon"
+				position = { x = 60 y = 40 }
+				spriteType = "GFX_dummy_3d_home_world"
+				size = { x = 253 y = 253 }
+			}
+
+			# Planet Name
+			containerWindowType = {
+				name = "homeworld_name"
+				size = { width = 333 height = 40 }
+				position = { x = 0 y = 0 }
+				clipping = yes
+
+
+				instantTextBoxType = {
+					name = "field"
+					position = { x = 77 y = 0 }
+					orientation = UPPER_LEFT
+					font = "malgun_goth_24"
+					text = "spawnpoint"	
+					text_color_code = "H"
+					format = center
+					maxWidth = 213
+					maxHeight = 53
+					fixedSize = yes
+				}
+				
+
+			}
+			
+			# Planet Class
+			containerWindowType = {
+				name = "class"
+				size = { width = 333 height = 33 }
+				position = { x = 77 y = -40 }
+				orientation = LOWER_LEFT
+				
+				instantTextBoxType = {
+					name = "selected"
+					font = "cg_16b"
+					maxWidth = 213
+					maxHeight = 53
+					text = "Continental"
+					format = center
+					text_color_code = "E"
+				}
+			}
+		}
+		
+		#government and ethics
+		containerWindowType = {
+			name = "government_and_ethics"
+			position = { x = 13 y = 360 }
+			size = { width = 413 height = 180 }
+			
+			background = {
+				name = "government_hitbox"
+				spriteType = "GFX_tiles_dark_area_cut_8"
+				clicksound = tab_click
+			}
+			iconType = {
+				name = "government_icon"
+				spriteType = "GFX_government_authority"
+				position = { x = 16 y = 16 }
+				alwaysTransparent = yes
+			}
+			instantTextBoxType = {
+				name = "government_name"
+				position = { x = 93 y = 9 }
+				font = "malgun_goth_24"
+				maxWidth = 347
+				text = "GOVERNMENT_NAME"
+				alwaysTransparent = yes
+			}
+			smoothListboxType = {
+				name = "ethics"
+				position = { x = 77 y = 43 }
+				size = { x = 400 y = 140 }
+				scrollbarType = "standardlistbox_slider"
+				alwaysTransparent = yes
+			}
+		}
+		
+		#species
+		containerWindowType = {
+			name = "species_window"
+			position = { x = 13 y = 547 }
+			size = { width = 413 height = 213 }
+			
+			background = {
+				name = "species_hitbox"
+				spriteType = "GFX_tiles_dark_area_cut_8"
+				clicksound = tab_click
+			}
+			instantTextBoxType = {
+				name = "species_name"
+				format = center
+				maxWidth = 173
+				maxHeight = 33
+				position = { x = -4 y = 4 }
+				font = "malgun_goth_24"
+				text = "SPECIES NAME"
+				alwaysTransparent = yes
+				fixedSize = yes
+			}
+			buttonType = {
+				name = "species_name_hitbox"
+				spriteType = "GFX_invisible"
+				size = { x = 160 y = 33 }
+				position = { x = 0 y = 4 }
+			}
+			instantTextBoxType = {
+				name = "species_class"
+				format = left
+				position = { x = 27 y = 184 }
+				maxWidth = 267
+				font = "cg_16b"
+				text = "SPECIES CLASS"
+				text_color_code = "E"
+				alwaysTransparent = yes
+			}
+			smoothListboxType = {
+				name = "traits"
+				position = { x = 160 y = 20 }
+				size = { x = 239 y = 192 }
+				scrollbarType = "standardlistbox_slider"
+				borderSize = { x = 0 y = 0 }
+				orientation = "UPPER_LEFT"
+				autohide_scrollbar = yes
+				spacing = -3
+				alwaysTransparent = yes
+			}
+
+			containerWindowType = {
+				name = "leader_frame_box"
+				size = { width = 109 height = 133 }
+				position = { x = 27 y = 44 }
+				
+					background = {
+						name = "leader_frame"
+						spriteType = "GFX_planet_bg_tile"
+					}
+			}
+			
+			containerWindowType = {
+				name = "portrait"
+				clipping = yes
+				size = { width = 109 height = 133 }
+				position = { x = 27 y = 43 }
+
+				iconType = {
+					name = "portrait"
+					spriteType = "GFX_portrait_character"
+					scale = 0.31
+					position = { x = -67 y = -20 }
+					alwaysTransparent = yes
+				}
+			}
+				
+			buttonType = {
+				name = "species_frame"
+				spriteType = "GFX_clean_frame_area"
+				size = { x = 123 y = 147 }
+				position = { x = 20 y = 36 }
+				alwaysTransparent = yes
+			}
+		}
+
+		buttonType = {
+			name = "species_description_bg"
+			spriteType = "GFX_tiles_dark_area_cut_8"
+			size = { x = 393 y = 400 }
+			position = { x = 433 y = 360 }
+		}
+		
+		instantTextBoxType = {
+			name = "species_description"
+			position = { x = 447 y = 367 }
+			font = "cg_16b"
+			maxWidth = 367
+			maxHeight = 387
+			format = left
+			text_color_code = "E"
+			scrollbarType = "standardtext_slider"
+			alwaysTransparent = yes
+		}
+		
+		#starting ftl
+		containerWindowType = {
+			name = "starting_ftl"
+			position = { x = 1100 y = 360 }
+			size = { width = 260 height = 207 }
+
+			background = {
+				name = "ftl_hitbox"
+				spriteType = "GFX_tiles_dark_area_cut_8"
+				clicksound = tab_click
+			}
+
+			iconType = {
+				name = "icon"
+				spriteType = "GFX_travel_method_01"
+				position = { x = 12 y = 47 }
+				scale = 0.78
+				alwaysTransparent = yes
+			}
+
+			instantTextBoxType = {
+				name = "ftl_type"
+				position = { x = 0 y = 7 }
+				font = "malgun_goth_24"
+				maxWidth = 260
+				text = "STARTING FTL TYPE"
+				format = center
+				alwaysTransparent = yes
+			}
+		}
+		
+		#ship preview
+		containerWindowType = {
+			name = "ship_preview"
+			position = { x = 833 y = 573 }
+			size = { width = 527 height = 187 }
+			
+			background = {
+				name = "ship_hitbox"
+				spriteType = "GFX_tiles_dark_area_cut_8"
+				clicksound = tab_click
+			}
+			buttonType = {
+				name = "render_target"
+				quadTextureSprite = "GFX_dummy_3d_graphical_culture_preview"
+				position = { x = 13 y = 7 }
+				size = { x = 500 y = 173 }
+			}
+		}
+	}
+	
+	containerWindowType = {
+		name = "species_preview_trait_gamepad"
+		size = { width = 200 height = 40 }
+		
+
+		background = {
+			name = "bg"
+			spriteType = "GFX_invisible" # HITBOX DONT REMOVE ME!
+			clicksound = tab_click
+		}
+			
+		iconType = {
+			name = "icon"
+			quadTextureSprite = "GFX_traits"
+			position = { x = 0 y = 0 }
+			scale = 0.73
+			alwaysTransparent = yes
+		}
+			
+		instantTextBoxType = {
+			name = "name"
+			font = "cg_16b"
+			position = { x = 35 y = 1 }
+			maxWidth = 200
+			text =	 "Resilient"
+			format = left
+			alwaysTransparent = yes	
+		}
+	}
+
+	containerWindowType = {
+		name = "species_preview_ethic_gamepad"
+		size = { width = 200 height = 40 }
+
+		background = {
+			name = "bg"
+			spriteType = "GFX_invisible" # HITBOX DONT REMOVE ME!
+			clicksound = tab_click
+		}
+			
+		iconType = {
+			name = "icon"
+			quadTextureSprite = "GFX_ethics"
+			position = { x = 0 y = 0 }
+			alwaysTransparent = yes
+			scale = 0.73
+		}
+			
+		instantTextBoxType = {
+			name = "name"
+			font = "cg_16b"
+			position = { x = 35 y = 1 }
+			maxWidth = 200
+			maxHeight = 133
+			text =	 "Bananas"
+			format = left
+			alwaysTransparent = yes
+		}
+	}
+
+}

@@ -1,0 +1,1210 @@
+guiTypes = {
+
+	@SOURCE_W = 644
+	@SOURCE_H = 67
+	
+	@TARGET_W = 1333
+	@TARGET_H = 73
+
+	containerWindowType = {
+		name = "place_colony_cursor_gamepad"
+		size = { width = 85 height = 85 }
+
+		iconType = {
+			name = "building"
+			spriteType = "GFX_building"
+			position = { x = -85 y = -64 }
+			alwaystransparent = yes
+		}
+	}
+
+	containerWindowType = {
+		name = "expansion_planner_dropdown_entry_gamepad"
+		size = { width = 248 height = 53 }
+
+		background = {
+			name = "hitbox"
+			spriteType = "GFX_invisible"
+		}
+
+		buttonType = {
+			name = "bg"
+			spriteType = "GFX_tiles_dark_area_cut_8"
+			orientation = center
+			size = { x = 247 y = 51 }
+			position = { x = -124 y = -25 }
+			alwaysTransparent = yes
+		}
+
+		instantTextBoxType = {
+			name = "text"
+			font = "cg_16b"
+			maxWidth = 240
+			maxHeight = 53
+			position = { x = 0 y = 0 }
+			format = center
+			vertical_alignment = center
+			alwaysTransparent = yes
+			fixedSize = yes
+			text = ""
+		}
+	}
+
+	### EXPANSION SOURCE PLANET SUB ENTRY ###
+
+	containerWindowType = {
+		name = "expansion_source_planet_sub_entry_gamepad"
+		size = { width = 564 height = 121 }
+		#position = { x = 200 y = 0 }
+		
+		containerWindowType = {
+			name = "black_background_box_01"
+			size = { width = 564 height = 117 }
+			position = { x = 0 y = 0 }
+		
+			background = {
+				name = "bg"
+				#spriteType = "GFX_plain_green_frame_tile"
+				spriteType = "GFX_plain_green_frame_tile"
+				alwaysTransparent = yes
+				clicksound = interface
+			}
+		}
+
+		containerWindowType = {
+			name = "portrait"
+			position = { x = 7 y = 7 }
+			size = { width = 87 height = 103 }
+			clipping = yes
+
+			background = {
+				name = "portrait_hitbox"
+				spriteType = "GFX_invisible"
+			}
+
+			iconType = {
+				name = "species_portrait"
+				spriteType = "GFX_portrait_character"
+				position = { x = -29 y = 3 }
+				scale = 0.22
+				alwaysTransparent = yes
+			}
+		}
+
+		instantTextBoxType = {
+			name = "ship_type"
+			font = "cg_16b"
+			position = { x = 107 y = 8 }
+			maxWidth = 459
+			maxHeight = 53
+			fixedSize = yes
+			format = left
+			orientation = upper_left
+			text_color_code = "E"
+			alwaysTransparent = yes
+		}
+
+		instantTextBoxType = {
+			name = "species_name"
+			font = "cg_16b"
+			position = { x = 107 y = 27 }
+			maxWidth = 459
+			maxHeight = 53
+			fixedSize = yes
+			format = left
+			orientation = upper_left
+			text_color_code = "E"
+			alwaysTransparent = yes
+		}
+
+		instantTextBoxType = {
+			name = "ideal_planet_class"
+			font = "cg_16b"
+			position = { x = 107 y = 45 }
+			maxWidth = 459
+			maxHeight = 53
+			fixedSize = yes
+			format = left
+			orientation = upper_left
+			alwaysTransparent = yes
+			pdx_tooltip = "IDEAL_PLANET_CLASS_TOOLTIP"
+		}
+
+		instantTextBoxType = {
+			name = "colony_ship_cost"
+			font = "cg_16b"
+			position = { x = -147 y = 8 }
+			maxWidth = 80
+			maxHeight = 93
+			format = right
+			#vertical_alignment = center
+			orientation = UPPER_RIGHT
+		}
+
+		instantTextBoxType = {
+			name = "habitability"
+			font = "cg_16b"
+			position = { x = -147 y = 27 }
+			maxWidth = 80
+			maxHeight = 61
+			fixedSize = yes
+			alwaysTransparent = yes
+			format = right
+			orientation = UPPER_RIGHT
+		}
+		
+		buttonType = {
+			name = "colonize_button"
+			position = { x = -57 y = 7 }
+			spriteType = "GFX_invisible"
+			orientation = UPPER_RIGHT
+			actionShortcut = "accept"
+		}
+		
+		overlappingElementsBoxType = {
+			name = "traits_list"
+			size = { x = 400 y = 32 }
+			position = { x = 107 y = 64 }
+			orientation = "UPPER_LEFT"
+			format = left
+			spacing = 0
+		}
+
+		containerWindowType = {
+			name = "selected_overlay"
+			size = { width = 100% height = 100% }
+			position = { x = 0 y = 0 }
+			moveable = no
+			clipping = no
+			
+			background = {
+				name = "selected_bg"
+				spriteType = "GFX_glow_tile_striped"
+				alwaysTransparent = yes
+			}
+		}
+	}
+
+	### EXPANSION SOURCE PLANET ENTRY ###
+	
+	containerWindowType = {
+		name = "expansion_source_planet_entry_gamepad"
+		size = { width = @SOURCE_W height = 71 }
+		#position = { x = 13 y = 133 }
+		
+		containerWindowType = {
+		name = "terraform_entry"
+		size = { width = @SOURCE_W height = 67 }
+
+		
+			background = {
+				name = "black"
+				spriteType = "GFX_planet_bg_tile"
+				alwaysTransparent = yes
+			}
+		}
+		
+		iconType = {
+			name = "planet_class_icon"
+			quadTextureSprite = "GFX_planet_type"
+			position = { x = 8 y = 7 }
+		}
+		
+		instantTextBoxType = {
+			name = "planet_name"
+			font = "cg_16b"
+			position = { x = 80 y = 9 }
+			maxWidth = 400
+			maxHeight = 27
+			alwaysTransparent = yes
+			text_color_code = "E"
+		}
+		
+		instantTextBoxType = {
+			name = "planet_class"
+			font = "cg_16b"
+			position = { x = 80 y = 33 }
+			maxWidth = 400
+			maxHeight = 27
+			alwaysTransparent = yes
+		}
+
+		checkboxType = {
+			name = "expand"
+			spriteType = "GFX_entry_expand"
+			position = { x = -47 y = 19 }
+			orientation = UPPER_RIGHT
+		}
+
+		smoothListBoxType = {
+			name = "list"
+			size = { x = 573 y = 0 }
+			position = { x = 73 y = 73 }
+			#scrollbartype = "standardlistbox_slider"
+			#autohide_scrollbar = yes
+			#spacing = 7
+			alwaysTransparent = yes
+		}
+		
+		containerWindowType = {
+			name = "selected_overlay"
+			size = { width = 100% height = 100% }
+			position = { x = 0 y = 0 }
+			moveable = no
+			clipping = no
+			
+			background = {
+				name = "selected_bg"
+				spriteType = "GFX_glow_tile_striped"
+				alwaysTransparent = yes
+			}
+		}
+	}
+
+	### EXPANSION SOURCE FLEET ENTRY ###
+	
+	containerWindowType = {
+		name = "expansion_source_fleet_entry_gamepad"
+		size = { width = @SOURCE_W height = 103 }
+		
+		containerWindowType = {
+			name = "entry_bg"
+			size = { width = @SOURCE_W height = 100 }
+		
+			background = {
+				name = "black"
+				spriteType = "GFX_plain_green_frame_tile"
+				alwaysTransparent = yes
+			}
+		}
+
+		containerWindowType = {
+			name = "portrait"
+			size = { width = 80 height = 85 }
+			position = { x = 7 y = 8 }
+			clipping = yes
+
+			background = {
+				name = "portrait_hitbox"
+				spriteType = "GFX_invisible"
+			}
+			
+			iconType = {
+				name = "portrait"
+				quadTextureSprite = "GFX_portrait_character"
+				#orientation = "LOWER_LEFT"
+				position = { x = -29 y = -5 }
+				scale = 0.18
+				alwaysTransparent = yes
+			}
+		}
+		
+		instantTextBoxType = {
+			name = "ship_name"
+			font = "cg_16b"
+			position = { x = 87 y = 7 }
+			maxWidth = 400
+			maxHeight = 27
+			text_color_code = "E"
+		}
+		
+		instantTextBoxType = {
+			name = "ship_location"
+			font = "cg_16b"
+			position = { x = 87 y = 27 }
+			maxWidth = 400
+			maxHeight = 27
+			fixedSize = yes
+		}
+
+		overlappingElementsBoxType = {
+			name = "traits_list"
+			size = { x = 333 y = 43 }
+			position = { x = 87 y = 47 }
+			orientation = "UPPER_LEFT"
+			format = left
+			spacing = 0
+		}
+
+		instantTextBoxType = {
+			name = "habitability"
+			font = "malgun_goth_24"
+			position = { x = -140 y = 12 }
+			maxWidth = 80
+			maxHeight = 93
+			format = right
+			#vertical_alignment = center
+			orientation = UPPER_RIGHT
+		}
+
+		buttonType = {
+			name = "colonize_button"
+			position = { x = -55 y = 5 }
+			spriteType = "GFX_invisible"
+			orientation = UPPER_RIGHT
+			actionShortcut = "accept"
+		}
+		
+		containerWindowType = {
+			name = "selected_overlay"
+			size = { width = 100% height = 100% }
+			position = { x = 0 y = 0 }
+			moveable = no
+			clipping = no
+			
+			background = {
+				name = "selected_bg"
+				spriteType = "GFX_glow_tile_striped"
+				alwaysTransparent = yes
+			}
+		}
+	}
+
+	### EXPANSION TARGET ENTRY ###
+
+	containerWindowType = {
+		name = "planet_modifier_entry_gamepad"
+		size = { width = 64 height = 64 }
+
+		iconType = {
+			name = "icon"
+			spriteType = "GFX_modifier_pm_unknown"
+			scale = 0.8
+			tooltip_mode_enabled = yes
+		}
+
+		iconType = {
+			name = "icon_frame"
+			spriteType = "GFX_modifier_frames"
+			scale = 0.8
+			frame = 1
+			alwaystransparent = yes
+		}
+	}
+
+	containerWindowType = {
+		name = "expansion_target_entry_gamepad"
+		size = { width = @TARGET_W height = 72 }
+
+		buttonType = {
+			name = "background"
+			spriteType = "GFX_button_1134_50_animated"
+			size = { x = 1320 y = 67 }
+			position = { x = -9 y = -9 }
+		}
+		
+		buttonType = {
+			name = "zoom_to_planet"
+			spriteType = "GFX_fleetview_focus"
+			position = { x = 12 y = 15 }
+			pdx_tooltip = "FOCUS_ON_PLANET"
+		}
+
+		iconType = {
+			name = "planet_class_icon"
+			position = { x = 64 y = 15 }
+			spriteType = "GFX_planet_type"
+			frame = 1
+			scale = 1.0
+			pdx_tooltip = "FOCUS_ON_PLANET"
+		}
+
+		iconType = {
+			name = "has_expansion_entry"
+			position = { x = 97 y = 11 }
+			spriteType = "GFX_has_expansion_entry"
+			pdx_tooltip = "EXPANSION_PLANNER_HAS_EXPANSION_ENTRY"
+		}
+
+		instantTextBoxType = {
+			name = "habitability_amount"
+			font = "cg_16b"
+			position = { x = 109 y = 31 }
+			maxWidth = 80
+			maxHeight = 27
+			format = center
+			text_color_code = "E"
+		}
+		
+		instantTextBoxType = {
+			name = "planet_name"
+			font = "cg_16b"
+			text = "Blareogle System"
+			position = { x = 193 y = 17 }
+			maxWidth = 269
+			maxHeight = 27
+			format = left
+			fixedSize = yes
+			alwaysTransparent = yes
+		}
+		
+		instantTextBoxType = {
+			name = "planet_class"
+			font = "cg_16b"
+			text = "Arid"
+			position = { x = 193 y = 44 }
+			maxWidth = 227
+			maxHeight = 27
+			text_color_code = "E"
+			format = left
+			alwaysTransparent = yes
+		}
+
+		iconType = {
+			name = "planet_size_icon"
+			spriteType = "GFX_planet_view_planet"
+			position = { x = 483 y = 13 }
+			alwaysTransparent = yes
+		}
+		
+		instantTextBoxType = {
+			name = "planet_size_amount"
+			font = "cg_16b"
+			text = "25"
+			position = { x = 467 y = 44 }
+			maxWidth = 67
+			maxHeight = 27
+			format = center
+			alwaysTransparent = yes
+		}
+		
+		iconType = {
+			name = "influence_icon"
+			spriteType = "GFX_diplomatic_influence_top_bar"
+			position = { x = 591 y = 16 }
+			alwaysTransparent = yes
+		}
+		
+		instantTextBoxType = {
+			name = "expansion_cost"
+			font = "cg_16b"
+			text = "131"
+			position = { x = 569 y = 44 }
+			maxWidth = 67
+			maxHeight = 27
+			format = center
+			alwaysTransparent = yes
+		}
+		
+		@resource_y = 24
+		
+		instantTextBoxType = {
+			name = "food_amount"
+			font = "malgun_goth_24"
+			text = "-"
+			position = { x = 649 y = @resource_y }
+			maxWidth = 67
+			maxHeight = 27
+			format = center
+			alwaysTransparent = yes
+		}
+		
+		instantTextBoxType = {
+			name = "energy_amount"
+			font = "malgun_goth_24"
+			text = "-"
+			position = { x = 700 y = @resource_y }
+			maxWidth = 67
+			maxHeight = 27
+			format = center
+			alwaysTransparent = yes
+		}
+		
+		instantTextBoxType = {
+			name = "minerals_amount"
+			font = "malgun_goth_24"
+			text = "-"
+			position = { x = 749 y = @resource_y }
+			maxWidth = 67
+			maxHeight = 27
+			format = center
+			alwaysTransparent = yes
+		}
+		
+		instantTextBoxType = {
+			name = "physics_amount"
+			font = "malgun_goth_24"
+			text = "-"
+			position = { x = 801 y = @resource_y }
+			maxWidth = 67
+			maxHeight = 27
+			format = center
+			alwaysTransparent = yes
+		}
+		
+		instantTextBoxType = {
+			name = "society_amount"
+			font = "malgun_goth_24"
+			text = "-"
+			position = { x = 851 y = @resource_y }
+			maxWidth = 67
+			maxHeight = 27
+			format = center
+			alwaysTransparent = yes
+		}
+		
+		instantTextBoxType = {
+			name = "engineering_amount"
+			font = "malgun_goth_24"
+			text = "-"
+			position = { x = 903 y = @resource_y }
+			maxWidth = 67
+			maxHeight = 27
+			format = center
+			alwaysTransparent = yes
+		}
+
+		### PLANET MODIFIERS
+
+		overlappingElementsBoxType = {
+			name = "modifiers"
+			position = { x = 963 y = 8 }
+			size = { x = 200 y = 64 }
+			format = center
+			#orientation = upper_left
+		}
+
+		iconType = {
+			name = "has_intel_hostile"
+			position = { x = 1249 y = 19 }
+			spriteType = "GFX_hostile_intel_icon"
+		}
+
+		iconType = {
+			name = "has_anomaly"
+			position = { x = 1249 y = 19 }
+			spriteType = "GFX_hostile_intel_icon"
+		}
+
+		buttonType = {
+			name = "cancel_colonize_button"
+			spriteType = "GFX_close_button_planet"
+			position = { x = -60 y = 15 }
+			orientation = "UPPER_RIGHT"
+			oversound = mouse_over
+		}
+		
+		containerWindowType = {
+			name = "selected_overlay"
+			size = { width = 100% height = 80 }
+			position = { x = 0 y = 0 }
+			moveable = no
+			clipping = no
+			
+			background = {
+				name = "selected_bg"
+				spriteType = "GFX_glow_tile_striped"
+				alwaysTransparent = yes
+			}
+		}
+	}
+
+	### TILE RESOURCE ###
+
+	containerWindowType = {
+		name = "expansion_planner_surface_resource_entry_gamepad"
+		size = { width = 43 height = 27 }
+
+		iconType = {
+			name = "icon"
+			spriteType = "GFX_resource"
+			position = { x = 0 y = 3 }
+			tooltip_mode_enabled = yes
+		}
+
+		instantTextBoxType = {
+			name = "amount"
+			font = "cg_16b"
+			text = "0"
+			position = { x = 27 y = 4 }
+			maxWidth = 27
+			maxHeight = 27
+			fixedSize = yes
+			format = left
+		}
+	}
+
+	### SURFACE TILE ###
+
+	containerWindowType = {
+		name = "expansion_planner_surface_tile_entry_gamepad"
+		size = { width = 133 height = 133 }
+		
+		background = {
+			name = "tile_entry_background"
+			spriteType = "GFX_tiles_frame"
+		}
+
+		iconType = {
+			name = "tile_background"
+			spriteType = "GFX_planet_background"
+			position = { x = 1 y = 1 }
+		}
+
+		iconType = {
+			name = "tile_building"
+			spriteType = "GFX_building"
+			position = { x = 13 y = 5 }
+			scale = 0.9
+		}
+		
+		# Portrait
+		containerWindowType = {
+			name = "portrait"
+			size = { width = 93 height = 95 }
+			position = { x = 0 y = 11 }
+			clipping = yes
+
+			iconType = {
+				name = "portrait"
+				quadTextureSprite = "GFX_portrait_character"
+				position = { x = -43 y = -11 }
+				scale = 0.215		# DONT TOUCH, MAGIC NUMBER!
+			}
+		}
+		
+		iconType = {
+			name = "pop_status"
+			spriteType = "GFX_pop_status"
+			position = { x = 0 y = 63 }
+		}
+		
+		iconType = {
+			name = "tile_blocker"
+			position = { x = 1 y = 1 }
+			spriteType = "GFX_planet_background_frame_blocker"
+			alwaysTransparent = yes
+		}
+		
+		iconType = {
+			name = "tile_blocker_clearable"
+			position = { x = 1 y = 1 }
+			spriteType = "GFX_planet_background_frame_blocker"
+			alwaysTransparent = yes
+		}		
+		
+		containerWindowType = {
+			name = "output"
+			size = { width = 131 height = 27 }
+			position = { x = 1 y = -28 }
+			orientation = LOWER_LEFT
+	
+			background = {
+				name = "output_bar"
+				spriteType = "GFX_tile_output"
+			}
+	
+			overlappingElementsBoxType = {
+				name = "outputs_box"
+				size = { x = 160 y = 0 }
+				position = { x = -11 y = 0 }
+				orientation = upper_left
+				spacing = 0
+				format = center
+			}
+		}
+		
+		#containerWindowType = {
+		#	name = "drop_area"
+		#	size = { width = 100% height = 100% }
+		#
+		#	background = {
+		#		name = "drop_area_background"
+		#		quadTextureSprite = "GFX_drop_area_green"
+		#	}
+		#}
+		
+		containerWindowType = {
+			name = "selected_overlay"
+			position = { x = 0 y = 0 }
+			size = { width = 100% height = 100% }
+			background = {
+				name = "selected_bg"
+				spriteType = "GFX_glow_tile_orange_no_padding"
+				alwaysTransparent = yes
+			}
+		}
+	}
+
+	### SURFACE VIEW ###
+
+	containerWindowType = {
+		name = "expansion_planner_surface_view_gamepad"
+		orientation = center
+		origo = center
+		moveable = yes
+		clipping = no
+		size = { width = 1440 height = 847 }
+
+		background = {
+			name = "bg"
+			spriteType = "GFX_tile_outliner_bg"
+		}
+
+		### WINDOW HEADER ###
+
+		buttonType = {
+			name = "close"
+			spriteType = "GFX_invisible"
+			position = { x = -56 y = 16 }
+			orientation = upper_right
+			shortcut = "ESCAPE"
+			pdx_tooltip = "CLOSE_TITLE"
+			clicksound = "back_click"
+			actionShortcut = "cancel"
+		}
+
+		iconType = {
+			name = "hex_bg"
+			spriteType = "GFX_hex_bg"
+			position = { x = -13 y = -19 }
+			alwaysTransparent = yes
+		}
+
+		iconType = {
+			name = "title_line"
+			spriteType = "GFX_line_long"
+			position = { x = 8 y = 29 }
+			alwaysTransparent = yes
+		}
+
+		instantTextBoxType = {
+			name = "title"
+			font = "malgun_goth_24"
+			text = "EXPANSION_PLANNER_SURFACE_VIEW"
+			position = { x = 20 y = 7 }
+			maxWidth = 1333
+			maxHeight = 27
+			fixedSize = yes
+			alwaysTransparent = yes
+		}
+
+		instantTextBoxType = {
+			name = "sub_title"
+			font = "cg_16b"
+			text = "EXPANSION_PLANNER_COLONY_SHIP_SOURCE"
+			position = { x = 20 y = 73 }
+			maxWidth = 1333
+			maxHeight = 27
+			fixedSize = yes
+			alwaysTransparent = yes
+		}
+
+		### PLANET INFO ###
+
+		instantTextBoxType = {
+			name = "expansion_cost_label"
+			font = "cg_16b"
+			text = "EXPANSION_COST_LABEL"
+			position = { x = 360 y = 73 }
+			maxWidth = 240
+			maxHeight = 27
+			format = Right
+		}
+		
+		instantTextBoxType = {
+			name = "expansion_cost"
+			font = "cg_16b"
+			text = "131"
+			position = { x = 620 y = 73 }
+			maxWidth = 67
+			maxHeight = 27
+			format = left
+		}
+
+		overlappingElementsBoxType = {
+			name = "modifiers"
+			format = center
+			position = { x = 960 y = 40 }
+			size = { x = 200 y = 64 }
+		}
+
+		iconType = {
+			name = "has_intel_hostile"
+			position = { x = 1380 y = 64 }
+			spriteType = "GFX_hostile_intel_icon"
+		}
+
+		### TILES ###
+
+		containerWindowType = {
+			name = "outer_tiles_wrapper"
+			size = { width = 720 height = 720 }
+			position = { x = -20 y = 107 }
+			orientation = upper_right
+			origo = upper_right
+
+			background = {
+				name = "bg"
+				spriteType = "GFX_plain_green_frame_tile"
+				#alwaysTransparent = yes
+			}
+
+			containerWindowType = {
+				name = "inner_tiles_wrapper"
+				size = { width = 693 height = 693 }
+				orientation = center
+				origo = center
+
+				gridBoxType = {
+					name = "tiles"
+					format = "UPPER_LEFT"
+					max_slots_horizontal = 5
+					max_slots_vertical = 5
+					slotSize = { width = 139 height = 139 }
+					size = { width = 693 height = 693 }
+				}
+			}
+		}
+
+		### LIST COLONY SHIP SOURCES ###
+
+		# Entry is either a finished colony ship or a planet capable of constructing colony ships.
+		# Entry shows potential cost and production time.
+		# Entry click updates list of colonist variations.
+
+		containerWindowType = {
+			name = "expansion_source"
+			size = { width = @SOURCE_W height = 0 }
+			position = { x = 7 y = 107 }
+			clipping = no
+
+			buttonType = {
+				name = "list_bg"
+				spriteType = "GFX_tiles_dark_area_cut_8"
+				size = { x = 673 y = 720 }
+				position = { x = 7 y = 0 }
+				alwaysTransparent = yes
+			}
+
+			smoothListboxType = {
+				name = "list"
+				size = { x = @SOURCE_W y = 700 }
+				position = { x = 16 y = 11 }
+				scrollbartype = "standardlistbox_slider"
+				defaultSelection = yes
+			}
+		}
+	}
+
+	### EXPANSION PLANNER VIEW ###
+
+	containerWindowType = {
+		name = "expansion_planner_view_gamepad"
+		position = { x = 165 y = 165 }
+		size = { width = 1373 height = 744 }
+
+		orientation = UPPER_LEFT
+		origo = UPPER_LEFT
+		moveable = no
+		clipping = no
+
+		containerWindowType = {
+			name = "black_background_box_01"
+			size = { width = 100% height = 100% }
+			position = { x = 0 y = 0 }
+			
+			background = {
+				name = "background"
+				quadTextureSprite = "GFX_plain_bg_tile"
+			}
+		}
+
+		### WINDOW HEADER ###
+
+		buttonType = {
+			name = "close"
+			spriteType = "GFX_invisible"
+			position = { x = -56 y = 16 }
+			orientation = "UPPER_RIGHT"
+			shortcut = "ESCAPE"
+			pdx_tooltip = "CLOSE_TITLE"
+			clicksound = "back_click"
+			actionShortcut = "cancel"
+		}
+
+		### LIST COLONY SHIP TARGETS ###
+
+		# Entry shows planet class, habitability, name, tile size, expansion cost, resources, modifiers, risks.
+
+		instantTextBoxType = {
+			name = "expansion_target_title"
+			font = "malgun_goth_24"
+			text = "topbar_button_expansion_planner_name"
+			position = { x = 27 y = 13 }
+			maxWidth = 1333
+			maxHeight = 27
+			fixedSize = yes
+			alwaysTransparent = yes
+			text = "EXPANSION_PLANNER_COLONY_SHIP_TARGET"
+		}
+
+		containerWindowType = {
+			name = "expansion_target"
+			size = { width = @TARGET_W height = 0 }
+			position = { x = 0 y = 47 }
+			clipping = no
+			
+			@sort_button_height = 0
+
+			buttonType={
+				id = "class"
+				name = "class"
+				font = "cg_16b"
+				spriteType = "GFX_button_95_24"
+				buttonText = "PLANETVIEW_PLANET_CLASS"
+				position = { x = 0 y = @sort_button_height }
+				orientation = UPPER_LEFT
+				pdx_tooltip = "EXPANSION_PLANNER_SORT_CLASS"
+				oversound = mouse_over
+				navRight = "habitability"
+			}
+			
+			buttonType={
+				id = "habitability"
+				name = "habitability"
+				font = "cg_16b"
+				spriteType = "GFX_button_35_24"
+				buttonText = ""
+				position = { x = 131 y = @sort_button_height }
+				orientation = UPPER_LEFT
+				pdx_tooltip = "EXPANSION_PLANNER_SORT_HABITABILITY"
+				oversound = mouse_over
+				navRight = "name"
+				navLeft = "class"
+			}
+			
+			iconType = {
+				name = "habitability_icon"
+				spriteType = "GFX_mod_habitability"
+				position = { x = 149 y = 16 }
+				alwaysTransparent = yes
+			}
+			
+			buttonType={
+				id = "name"
+				name = "name"
+				font = "cg_16b"
+				spriteType = "GFX_standard_button_200_24"
+				buttonText = "NAME"
+				position = { x = 181 y = 9 }
+				orientation = UPPER_LEFT
+				pdx_tooltip = "EXPANSION_PLANNER_SORT_NAME"
+				#format = left
+				oversound = mouse_over
+				navRight = "size"
+				navLeft = "habitability"
+			}
+			
+			buttonType={
+				id = "size"
+				name = "size"
+				font = "cg_16b"
+				spriteType = "GFX_button_75_24"
+				buttonText = "Size"
+				position = { x = 452 y = @sort_button_height }
+				orientation = UPPER_LEFT
+				pdx_tooltip = "EXPANSION_PLANNER_SORT_SIZE"
+				oversound = mouse_over
+				navRight = "cost"
+				navLeft = "name"
+			}
+			
+			buttonType={
+				id = "cost"
+				name = "cost"
+				font = "cg_16b"
+				spriteType = "GFX_button_75_24"
+				buttonText = "Cost"
+				position = { x = 556 y = @sort_button_height }
+				orientation = UPPER_LEFT
+				pdx_tooltip = "EXPANSION_PLANNER_SORT_COST"
+				oversound = mouse_over
+				navRight = "sort_food"
+				navLeft = "size"
+			}
+			
+			buttonType={
+				id = "sort_food"
+				name = "sort_food"
+				font = "cg_16b"
+				spriteType = "GFX_button_35_24"
+				buttonText = ""
+				position = { x = 660 y = @sort_button_height }
+				orientation = UPPER_LEFT
+				pdx_tooltip = "EXPANSION_PLANNER_SORT_FOOD"
+				oversound = mouse_over
+				navRight = "sort_energy"
+				navLeft = "cost"
+			}
+			
+			iconType = {
+				name = "food_research_icon"
+				spriteType = "GFX_resource_food"
+				position = { x = 687 y = 20 }
+				alwaysTransparent = yes
+			}
+			
+			buttonType={
+				id = "sort_energy"
+				name = "sort_energy"
+				font = "cg_16b"
+				spriteType = "GFX_button_35_24"
+				buttonText = ""
+				position = { x = 711 y = @sort_button_height }
+				orientation = UPPER_LEFT
+				pdx_tooltip = "EXPANSION_PLANNER_SORT_ENERGY"
+				oversound = mouse_over
+				navRIght = "sort_minerals"
+				navLeft = "sort_food"
+			}
+			
+			iconType = {
+				name = "energy_icon"
+				spriteType = "GFX_resource_energy"
+				position = { x = 739 y = 20 }
+				alwaysTransparent = yes
+			}
+			
+			buttonType={
+				id = "sort_minerals"
+				name = "sort_minerals"
+				font = "cg_16b"
+				spriteType = "GFX_button_35_24"
+				buttonText = ""
+				position = { x = 761 y = @sort_button_height }
+				orientation = UPPER_LEFT
+				pdx_tooltip = "EXPANSION_PLANNER_SORT_MINERALS"
+				oversound = mouse_over
+				navRight = "sort_physics"
+				navLeft = "sort_energy"
+			}
+			
+			iconType = {
+				name = "minerals_icon"
+				spriteType = "GFX_resource_minerals"
+				position = { x = 788 y = 20 }
+				alwaysTransparent = yes
+			}
+			
+			buttonType={
+				id = "sort_physics"
+				name = "sort_physics"
+				font = "cg_16b"
+				spriteType = "GFX_button_35_24"
+				buttonText = ""
+				position = { x = 812 y = @sort_button_height }
+				orientation = UPPER_LEFT
+				pdx_tooltip = "EXPANSION_PLANNER_SORT_PHYSICS"
+				oversound = mouse_over
+				navRight = "sort_society"
+				navLeft = "sort_minerals"
+			}
+			
+			iconType = {
+				name = "physics_research_icon"
+				spriteType = "GFX_resource_physics"
+				position = { x = 839 y = 20 }
+				alwaysTransparent = yes
+			}
+			
+			buttonType={
+				id = "sort_society"
+				name = "sort_society"
+				font = "cg_16b"
+				spriteType = "GFX_button_35_24"
+				buttonText = ""
+				position = { x = 863 y = @sort_button_height }
+				orientation = UPPER_LEFT
+				pdx_tooltip = "EXPANSION_PLANNER_SORT_SOCIETY"
+				oversound = mouse_over
+				navRight = "sort_engineering"
+				navLeft = "sort_physics"
+			}
+			
+			iconType = {
+				name = "society_research_icon"
+				spriteType = "GFX_resource_society"
+				position = { x = 889 y = 20 }
+				alwaysTransparent = yes
+			}
+			
+			buttonType={
+				id = "sort_engineering"
+				name = "sort_engineering"
+				font = "cg_16b"
+				spriteType = "GFX_button_35_24"
+				buttonText = ""
+				position = { x = 913 y = @sort_button_height }
+				orientation = UPPER_LEFT
+				pdx_tooltip = "EXPANSION_PLANNER_SORT_ENGINEERING"
+				oversound = mouse_over
+				navRight = "sort_modifiers"
+				navLeft = "sort_society"
+			}
+			
+			iconType = {
+				name = "engineering_research_icon"
+				spriteType = "GFX_resource_engineering"
+				position = { x = 940 y = 20 }
+				alwaysTransparent = yes
+			}
+			
+			buttonType={
+				id = "sort_modifiers"
+				name = "sort_modifiers"
+				font = "cg_16b"
+				spriteType = "GFX_button_150_24"
+				buttonText = "Modifiers"
+				position = { x = 964 y = @sort_button_height }
+				orientation = UPPER_LEFT
+				pdx_tooltip = "EXPANSION_PLANNER_SORT_MODIFIERS"
+				oversound = mouse_over
+				navRight = "sort_status"
+				navLeft = "sort_engineering"
+			}
+			
+			buttonType={
+				id = "sort_status"
+				name = "sort_status"
+				font = "cg_16b"
+				spriteType = "GFX_button_116_24"
+				buttonText = "Status"
+				position = { x = 1167 y = @sort_button_height }
+				orientation = UPPER_LEFT
+				pdx_tooltip = "EXPANSION_PLANNER_SORT_STATUS"
+				oversound = mouse_over
+				navLeft = "sort_modifiers"
+			}
+
+			buttonType = {
+				name = "list_bg"
+				spriteType = "GFX_tiles_dark_area_cut_8"
+				size = { x = 1344 y = 615 }
+				position = { x = 15 y = 67 }
+				alwaysTransparent = yes
+			}
+
+			smoothListboxType = {
+				name = "list"
+				size = { x = @TARGET_W y = 605 }
+				position = { x = 19 y = 71 }
+				scrollbartype = "standardlistbox_slider"
+				defaultSelection = yes
+			}
+		}
+	}
+
+
+
+
+
+	### LIST COLONIST VARIATIONS ###
+
+	# Entry shows pop portrait, name, planet preference, traits, etc. Same as before.
+
+
+	### PLANET TILE SELECTION ###
+
+	# Planet view style tile layout.
+}

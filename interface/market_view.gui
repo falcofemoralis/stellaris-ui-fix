@@ -1,0 +1,1020 @@
+guiTypes = {
+
+	# MARKET
+	containerWindowType = {
+		name = "market_view"
+		size = { width = 1200 height = 913 }
+		moveable = no
+		orientation = upper_left
+
+		position = { x = 47 y = 53 }
+		show_position = { x = 47 y = 53 }
+        hide_position = { x = -1077 y = 53 }
+        animation_time = 200
+        animation_type = decelerated
+
+		containerWindowType = {
+			name = "galaxy_view_background_box"
+			size = { width = 1200 height = 800 }
+			position = { x = 0 y = 0 }
+
+			background = {
+				name = "galaxy_view_background"
+				spriteType = "GFX_tile_large_bg"
+			}
+		}
+
+		iconType = {
+			name = "hex_bg"
+			spriteType = "GFX_hex_bg"
+			position = { x = 7 y = -16 }
+			alwaysTransparent = yes
+		}
+
+		iconType = {
+			name = "empire_header_line"
+			quadTextureSprite = "GFX_line_long"
+			position = { x = 8 y = 28 }
+		}
+
+		instantTextBoxType={
+			name = "windows_title"
+			font = "malgun_goth_24"
+			position = { x = 47 y = 7 }
+			maxWidth = 1067
+			maxHeight = 53
+			fixedSize = yes
+			format = left
+		}
+
+		buttonType = {
+			name = "close"
+			quadTextureSprite = "GFX_close"
+			position = { x = -60 y = 21 }
+			orientation = upper_right
+			shortcut = "ESCAPE"
+			clicksound = "back_click"
+			actionshortcut = "cancel"
+		}
+
+		@tabheight = -116 
+		buttonType = {
+			name = "tab_market"
+			quadTextureSprite = "GFX_tab_1_active"
+			position = { x= -27 y = @tabheight }
+			font = "cg_16b"
+			buttonText = "MARKET_VIEW"
+			buttonFont = "cg_16b"
+			shortcut = "z"
+			clicksound = "tab_click"
+			Orientation = "LOWER_LEFT"
+			oversound = no_sound
+		}
+		buttonType = {
+			name = "tab_market_active"
+			quadTextureSprite = "GFX_tab_1_active"
+			position = { x= -27 y = @tabheight }
+			font = "cg_16b"
+			buttonText = "MARKET_VIEW"
+			buttonFont = "cg_16b"
+			clicksound = "tab_click"
+			shortcut = "z"
+			Orientation = "LOWER_LEFT"
+			oversound = no_sound
+		}
+
+		buttonType = {
+			name = "tab_slave_market"
+			quadTextureSprite = "GFX_tab_2_inactive"
+			position = { x= 145 y = @tabheight }
+			font = "cg_16b"
+			buttonText = "SLAVE_MARKET"
+			buttonFont = "cg_16b"
+			shortcut = "x"
+			clicksound = "tab_click"
+			Orientation = "LOWER_LEFT"
+			oversound = no_sound
+		}
+
+		buttonType = {
+			name = "tab_slave_market_active"
+			quadTextureSprite = "GFX_tab_2_active"
+			position = { x= 145 y = @tabheight }
+			font = "cg_16b"
+			buttonText = "SLAVE_MARKET"
+			buttonFont = "cg_16b"
+			shortcut = "x"
+			clicksound = "tab_click"
+			Orientation = "LOWER_LEFT"
+			oversound = no_sound
+		}
+
+		containerWindowType = {
+			name = "market"
+			size = { width = 1200 height = 913 }
+			moveable = no
+			orientation = upper_left
+			position = { x = 0 y = 0 }
+
+			containerWindowType = {
+				name = "resources_box"
+				size = { width = 723 height = 327 }
+				position = { x = 11 y = 53 }
+
+				instantTextBoxType = {
+						name = "select_resource_text"
+						font = "malgun_goth_24"
+						position = { x = 0 y = 9 }
+						text = "SELECT_RESOURCE"
+						maxWidth = 683
+						maxHeight = 267
+						fixedSize = yes
+						format = center
+				}
+
+				gridBoxType = {
+					name = "resources_grid"
+					position = { x = 187 y = 113 }
+					size = { width = 120 height = 213 }
+					slotsize = {
+						width = 108
+						height = 47
+					}
+					max_slots_horizontal = 3
+				}
+			}
+
+			containerWindowType = {
+				name = "buy_box"
+				size = { width = 320 height = 427 }
+				position = { x = 37 y = 373 }
+				clipping = yes
+				
+				containerWindowType = {
+					name = "empire_list"
+					position = { x=0 y= 67 }
+					size = { width= 400 height= 300 }
+
+					background = {
+						name = "area51"
+						spriteType = "GFX_tiles_dark_area_cut_8"
+					}
+				}
+
+				instantTextBoxType = {
+						name = "buy_header_text"
+						font = "malgun_goth_24"
+						position = { x = 27 y = 13 }
+						text = "MARKET_BUY"
+						maxWidth = 267
+						maxHeight = 267
+						fixedSize = yes
+						format = left
+				}
+
+				iconType = {
+					name = "header_line"
+					quadTextureSprite = "GFX_line"
+					position = { x = -80 y = 36 }
+				}
+
+				instantTextBoxType = {
+						name = "unit_price_buy"
+						font = "cg_16b"
+						position = { x = 173 y = 13 }
+						maxWidth = 173
+						maxHeight = 267
+						fixedSize = yes
+				}
+
+				instantTextBoxType = {
+						name = "buy_info_text"
+						font = "cg_16b"
+						position = { x = 13 y = 73 }
+						text = "MARKET_BUY_INFO"
+						maxWidth = 293
+						maxHeight = 27
+						fixedSize = yes
+						format = center
+				}
+
+				gridBoxType = {
+					name = "buy_resources_grid"
+					position = { x = -9 y = 107 }
+					size = { width = 147 height = 267 }
+					slotsize = {
+						width = 100
+						height = 117
+					}
+					max_slots_horizontal = 3
+				}
+			}
+
+			containerWindowType = {
+				name = "sell_box"
+				size = { width = 320 height = 427 }
+				position = { x = 393 y = 373 }
+				clipping = yes
+
+				containerWindowType = {
+					name = "empire_list"
+					position = { x=0 y= 67 }
+					size = { width= 400 height= 300 }
+
+					background = {
+						name = "area51"
+						spriteType = "GFX_tiles_dark_area_cut_8"
+					}
+				}
+				
+				instantTextBoxType = {
+						name = "sell_header_text"
+						font = "malgun_goth_24"
+						position = { x = 27 y = 13 }
+						text = "MARKET_SELL"
+						maxWidth = 267
+						maxHeight = 267
+						fixedSize = yes
+						format = left
+				}
+
+				iconType = {
+					name = "header_line"
+					quadTextureSprite = "GFX_line"
+					position = { x = -80 y = 36 }
+				}
+
+				instantTextBoxType = {
+						name = "unit_price_sell"
+						font = "cg_16b"
+						position = { x = 173 y = 13 }
+						maxWidth = 173
+						maxHeight = 267
+						fixedSize = yes
+				}
+
+				instantTextBoxType = {
+						name = "sell_info_text"
+						font = "cg_16b"
+						position = { x = 13 y = 73 }
+						text = "MARKET_SELL_INFO"
+						maxWidth = 293
+						maxHeight = 27
+						fixedSize = yes
+						format = center
+				}
+
+				gridBoxType = {
+					name = "sell_resources_grid"
+					position = { x = -9 y = 107 }
+					size = { width = 147 height = 267 }
+					slotsize = {
+						width = 100
+						height = 117
+					}
+					max_slots_horizontal = 3
+				}
+			}
+
+			instantTextBoxType = {
+				name = "total_bought_text"
+				font = "cg_16b"
+				position = { x = 33 y = 740 }
+				maxWidth = 333
+				maxHeight = 67
+				fixedSize = yes
+				format = center
+				alwaysTransparent = no
+			}
+
+			instantTextBoxType = {
+				name = "total_sold_text"
+				font = "cg_16b"
+				position = { x = 380 y = 740 }
+				maxWidth = 333
+				maxHeight = 67
+				fixedSize = yes
+				format = center
+				alwaysTransparent = no
+			}
+
+			containerWindowType = {
+				name = "trade_fee_box"
+				size = { width = 280 height = 40 }
+				position = { x = 213 y = 104 }
+
+					background = {
+						name = "background"
+						spriteType = "GFX_tiles_dark_area_cut_8"
+						alwaysTransparent = yes
+					}
+
+				iconType = {
+					name = "market_trade_icon"
+					quadTextureSprite = "GFX_topbar_market_button"
+					position = { x = 13 y = 4 }
+					alwaysTransparent = yes
+					scale = 0.85
+				}
+
+				instantTextBoxType = {
+					name = "trade_fee"
+					font = "cg_16b"
+					position = { x = 73 y = 9 }
+					text = "MARKET_TRADE_FEE_HEADER"
+					maxWidth = 120
+					maxHeight = 27
+					fixedSize = yes
+					alwaysTransparent = no
+				}
+
+				instantTextBoxType = {
+					name = "trade_fee_value"
+					font = "cg_16b"
+					position = { x = 200 y = 9 }
+					maxWidth = 67
+					maxHeight = 67
+					fixedSize = yes
+					alwaysTransparent = no
+				}
+			}
+
+			instantTextBoxType = {
+				name = "market_state"
+				font = "cg_16b"
+				position = { x = 747 y = 99 }
+				format = center
+				text = "GALACTIC_MARKET"
+				maxWidth = 411
+				maxHeight = 67
+				fixedSize = yes
+				text_color_code = "H" 
+			}
+
+			containerWindowType = {
+				name = "market_info_window"
+				size = { width = 411 height = 160 }
+				position = { x = 747 y = 107 }
+
+				background = {
+					name = "bg"
+					quadTextureSprite = "GFX_market_info_box"
+				}
+
+				instantTextBoxType = {
+					name = "market_info"
+					font = "cg_16b"
+					position = { x = 53 y = 40 }
+					format = center
+					maxWidth = 304
+					maxHeight = 107
+					fixedSize = yes
+				}
+
+				containerWindowType = {
+					name = "market_leader"
+					size = { width = 384 height = 93 }
+					position = { x = 13 y = 40 }
+
+					instantTextBoxType = {
+						name = "market_leader_desc"
+						font = "cg_16b"
+						position = { x = 67 y = 0 }
+						format = center
+						text = "MARKET_LEADER_DESC"
+						maxWidth = 277
+						maxHeight = 67
+						fixedSize = yes
+					}
+
+					buttonType = {
+						name = "flag"
+						quadTextureSprite = "GFX_empire_flag_32"
+						position = { x = 67 y = 33  }
+					}
+
+					instantTextBoxType = {
+						name = "name"
+						font = "cg_16b"
+						position = { x = 127 y = 43 }
+						maxWidth = 240
+						maxHeight = 67
+						text_color_code = "H" 
+						fixedSize = yes
+					}
+				}
+			}
+
+			containerWindowType = {
+				name = "automatic_trades_box"
+				size = { width = 411 height = 493 }
+				position = { x = 740 y = 267 }
+
+				instantTextBoxType = {
+					name = "automatic_trades_header"
+					font = "malgun_goth_24"
+					position = { x = 23 y = 20 }
+					format = center
+					text = "AUTOMATIC_TRADES"
+					maxWidth = 373
+					maxHeight = 67
+					fixedSize = yes
+					alwaysTransparent = no
+				}
+
+				containerWindowType = {
+					name = "trades"
+					size = { width = 400 height = 413 }
+					position = { x = 13 y = 60 }
+
+					background = {
+						name = "background"
+						spriteType = "GFX_tiles_dark_area_cut_8"
+					}
+
+					buttonType = {
+						name = "new_trade_button"
+						position = { x = 4 y = 7 }
+						spriteType = "GFX_galactic_object_button"
+					}
+
+					instantTextBoxType = {
+						name = "new_trade_button_title"
+						font = "cg_16b"
+						position = { x = 24 y = 16 }
+						format = center
+						text = "ADD_NEW_TRADE"
+						maxWidth = 349
+						maxHeight = 27
+						fixedSize = yes
+						format = center
+					}
+
+					iconType = {
+						name = "divider"
+						quadTextureSprite = "GFX_line_horizontal"
+						position = { x = 35 y = 47 }
+						alwaysTransparent = yes
+					}
+
+					containerWindowType = {
+						name = "trade_grid_box"
+						position = { x = 13 y = 71 }
+						size = { width = 387 height = 333 }
+						verticalScrollbar = "right_vertical_slider_s"
+
+						background = {
+							name = "bg"
+							quadTextureSprite = "GFX_tiled_window_transparent"
+						}
+
+						gridBoxType = {
+							name = "monthly_trades_grid"
+							position = { x = -11 y = 0 }
+							size = { width = 387 height = 327 }
+							slotsize = {
+								width = 384
+								height = 40
+							}
+							max_slots_horizontal = 1
+						}
+					}
+				}
+			}
+		}
+
+		# SLAVE MARKET
+		containerWindowType = {
+			name = "slave_market"
+			size = { width = 1200 height = 913 }
+			moveable = no
+			orientation = upper_left
+			position = { x = 0 y = 0 }
+
+			containerWindowType = {
+				name = "left_box"
+				size = { width = 667 height = 693 }
+				position = { x = 20 y = 80 }
+
+				@sortButtonY = -13
+				buttonType = {
+					name = "sort_name"
+					position = { x = 0 y = @sortButtonY }
+					spriteType = "GFX_button_150_24"
+					buttonFont = "cg_16b"
+					text = "NAME"
+					font = "cg_16b"
+					pdx_tooltip = "SORT_BY_NAME"
+					orientation = UPPER_LEFT
+				}
+
+				buttonType={
+					name = "sort_habitability"
+					position = { x = 203 y = @sortButtonY }
+					font = "cg_16b"
+					spriteType = "GFX_button_35_24"
+					orientation = UPPER_LEFT
+					pdx_tooltip = "EXPANSION_PLANNER_SORT_HABITABILITY"
+					oversound = mouse_over
+				}
+
+				iconType = {
+					name = "habitability_icon"
+					spriteType = "GFX_mod_habitability"
+					position = { x = 225 y = 5 }
+					scale = 0.85
+					alwaystransparent = yes
+				}
+
+				buttonType = {
+					name = "sort_traits"
+					position = { x = 252 y = -4 }
+					font = "cg_16b"
+					spriteType = "GFX_standard_button_200_24"
+					text = "TRAITS"
+					pdx_tooltip = "SPECIES_VIEW_SORT_TRAITS"
+					oversound = mouse_over
+				}
+
+				buttonType = {
+					name = "sort_cost"
+					position = { x = 521 y = @sortButtonY }
+					spriteType = "GFX_button_75_24"
+					buttonFont = "cg_16b"
+					text = "COST"
+					orientation = UPPER_LEFT
+					pdx_tooltip = "SORT_BY_COST"
+					oversound = mouse_over
+				}
+
+				buttonType = {
+					name = "sell_slaves"
+					font = "cg_16b"
+					spriteType = "GFX_standard_button_142_34_button"
+					buttonText = "SELL_SLAVES"
+					pdx_tooltip = "CLICK_TO_SELL_SLAVES"
+					position = { x = 227 y = 627 }
+				}
+
+				containerWindowType = {
+					name = "slaves_for_sale"
+					position = { x = 13 y = 33 }
+					size = { width = 647 height = 600 }
+					margin = { 
+						top = 10 
+						bottom = 10 
+					}
+
+					verticalScrollbar = "right_vertical_slider"
+
+					background = {
+						name = "bg"
+						quadTextureSprite = "GFX_tiled_window_transparent"
+					}
+
+					instantTextBoxType = {
+						name = "no_slaves_for_sale"
+						font = "cg_16b"
+						position = { x = 5 y = 33 }
+						format = center
+						text = "NO_SLAVES_FOR_SALE"
+						maxWidth = 620
+						maxHeight = 67
+						fixedSize = yes
+						alwaysTransparent = no
+					}
+
+					gridBoxType = {
+						name = "slave_list"
+						position = { x = 0 y = 0 }
+						size = { width = 508 height = 493 }
+						slotsize = {
+							 width = 507 
+							 height = 93 
+							}
+						max_slots_horizontal = 1
+					}
+				}
+			}
+
+			containerWindowType = {
+				name = "right_box"
+				size = { width = 481 height = 693 }
+				position = { x = 693 y = 80 }
+
+				iconType = {
+					name = "title_hex"
+					quadTextureSprite = "GFX_hex_bg"
+					position = { x = -7 y = -37 }
+				}
+
+				iconType = {
+					name = "header_line"
+					spriteType = "GFX_line"
+					position = { x = 8 y = 13 }
+					alwaystransparent = yes
+				}
+
+				instantTextBoxType={
+					name = "header"
+					font = "malgun_goth_24"
+					text = "DESTINATION"
+					position = { x = 27 y = -13 }
+					maxWidth = 400
+					maxHeight = 27
+					fixedSize = yes
+					format = left
+				}
+
+				containerWindowType = {
+					name = "selectable_planets"
+					position = { x = 13 y = 35 }
+					size = { width = 460 height = 600 }
+					margin = { 
+						top = 10 
+						bottom = 10 
+					}
+
+					verticalScrollbar = "right_vertical_slider"
+
+					background = {
+						name = "bg"
+						quadTextureSprite = "GFX_tiled_window_transparent"
+					}
+
+					gridBoxType = {
+						name = "planet_list"
+						position = { x = 0 y = 0 }
+						size = { width = 321 height = 493 }
+						slotsize = {
+							 width = 320 
+							 height = 144 
+							}
+						max_slots_horizontal = 1
+					}
+				}
+			}
+		}
+	}
+
+	# GRID ENTRIES
+	containerWindowType = {
+		name = "market_resource_grid_entry"
+		size = {
+			width = 99
+			height = 40
+		}
+
+		background = {
+			name = "bg"
+			quadTextureSprite = "GFX_interface_list_light"
+			clicksound = "outliner_click_tab"
+		}
+
+		background = {
+			name = "selected_overlay"
+			spriteType = "GFX_glow_tile_orange_no_padding"
+		}
+
+		iconType = {
+			name = "disabled_bg"
+			spriteType = "GFX_striped"
+			position = { x = 0 y = 13 }
+			alwaysTransparent = no
+			orientation = center_up
+			centerPosition = yes
+		}
+
+		instantTextBoxType = {
+			name = "resource_amount"
+			font = "cg_16b"
+			position = { x = -7 y = 8 }
+			maxWidth = 93
+			maxHeight = 27
+			fixedSize = yes
+			format = center
+			alwaysTransparent = yes
+		}
+	}
+
+	containerWindowType = {
+		name = "market_trade_resource_grid_entry"
+		size = {
+			width = 93
+			height = 113
+		}
+
+		background = {
+			name = "bg"
+			quadTextureSprite = "GFX_market_trade_resource_box"
+			clicksound = "confirm_click"
+		}
+
+		iconType = {
+			name = "large_resource_icon"
+			spriteType = "gfx_transparency"
+			position = { x = 24 y = 11 }
+			alwaysTransparent = yes
+		}
+
+		instantTextBoxType = {
+			name = "resource_amount"
+			font = "cg_16b"
+			position = { x = 13 y = 63 }
+			maxWidth = 67
+			maxHeight = 40
+			fixedSize = yes
+			format = center
+			text_color_code = "E"
+			alwaysTransparent = yes
+		}
+
+		instantTextBoxType = {
+			name = "price"
+			font = "cg_16b"
+			position = { x = -3 y = 87 }
+			maxWidth = 93
+			maxHeight = 40
+			fixedSize = yes
+			format = center
+			alwaysTransparent = yes
+		}
+	}
+
+	containerWindowType = {
+		name = "market_monthly_trade_grid_entry"
+		size = { width = 373 height = 123 }
+
+		buttonType = {
+			name = "trade_entry"
+			font = "cg_16b"
+			spriteType = "GFX_galactic_object_button"
+			orientation = UPPER_LEFT
+		}
+		instantTextBoxType = {
+			name = "trade_type"
+			font = "cg_16b"
+			position = { x = 27 y = 12 }
+			maxWidth = 67
+			maxHeight = 40
+			text = "SELL"
+			fixedSize = yes
+			alwaysTransparent = yes
+		}
+
+		iconType = {
+			name = "resource_icon"
+			spriteType = "GFX_resource_minerals"
+			position = { x = 93 y = 11 }
+			alwaysTransparent = yes
+		}
+
+		instantTextBoxType = {
+			name = "amount"
+			font = "cg_16b"
+			position = { x = 120 y = 12 }
+			maxWidth = 93
+			maxHeight = 40
+			fixedSize = yes
+			alwaysTransparent = yes
+		}
+
+		instantTextBoxType = {
+			name = "price_text"
+			font = "cg_16b"
+			position = { x = 240 y = 12 }
+			maxWidth = 93
+			maxHeight = 40
+			fixedSize = yes
+			alwaysTransparent = yes
+		}
+
+		instantTextBoxType = {
+			name = "price_value"
+			font = "cg_16b"
+			position = { x = 293 y = 12 }
+			maxWidth = 93
+			maxHeight = 40
+			fixedSize = yes
+			alwaysTransparent = yes
+		}
+	}
+
+	containerWindowType = {
+		name = "slave_market_pop_entry"
+		size = { width = 633 height = 87 }
+		position = { x = 0 y = 0 }
+
+		background = {
+			name = "slave_market_pop_entry_bg"
+			spriteType = "GFX_tiles_dark_area_cut_8"
+		}
+
+		containerWindowType = {
+			name = "portrait"
+			position = { x = 7 y = 8 }
+			size = { width = 67 height = 73 }
+			clipping = yes
+
+			iconType = {
+				name = "species_portrait"
+				quadTextureSprite = "GFX_portrait_character"
+				position = { x = -43 y = -20 }
+				scale = 0.19
+			}
+
+			iconType = {
+				name = "pop_status"
+				spriteType = "GFX_pop_status"
+				position = { x = 0 y = 40 }
+				scale = 0.8
+			}
+		}
+
+		instantTextBoxType = {
+			name = "species"
+			position = { x = 80 y = 20 }
+			alwaystransparent = no
+			font = "cg_16b"
+			maxWidth = 133
+			maxHeight = 27
+			fixedSize = yes
+			text_color_code = "H" 
+		}
+
+		instantTextBoxType={
+			name = "type"
+			position = { x = 80 y = 43 }
+			font = "cg_16b"
+			maxWidth = 133
+			maxHeight = 27
+			fixedSize = yes
+		}
+
+		instantTextBoxType={
+			name = "habitability"
+			position = { x = 213 y = 33 }
+			font = "cg_16b"
+			maxWidth = 67
+			text = "TEST"
+		}
+
+		OverlappingElementsBoxType = {
+			name = "traits_icons"
+			position = { x = 293 y = 27 }
+			size = { x = 200 y = 53 }
+			format = left
+		}
+
+		buttonType = {
+			name = "buy_cancel"
+			position = { x = 507 y = 11 }
+			font = "cg_16b"
+			spriteType = "GFX_button_75_24"
+		}
+	}
+
+	containerWindowType = {
+		name = "slave_market_planet_entry"
+		size = { width = 448 height = 137 }
+		position = { x = 0 y = 0 }
+
+		background = {
+			name = "slave_market_planet_entry_bg"
+			spriteType = "GFX_tiles_dark_area_cut_8"
+		}
+
+		background = {
+			name = "selected_overlay"
+			spriteType = "GFX_glow_tile_orange_no_padding"
+		}
+
+		containerWindowType = {
+			name = "planet_info"
+			size = { width = 360 height = 80 }
+			position = { x = 56 y = 0 }
+
+			iconType = {
+				name = "planet_class_icon"
+				position = { x = 0 y = 11 }
+				spriteType = "GFX_planet_type"
+			}
+
+			instantTextBoxType = {
+				name = "name"
+				position = { x = 67 y = 16 }
+				alwaystransparent = no
+				font = "cg_16b"
+				maxWidth = 253
+				maxHeight = 53
+				text_color_code = "H"
+			}
+
+			instantTextBoxType={
+				name = "type"
+				position = { x = 67 y = 39 }
+				font = "cg_16b"
+				maxWidth = 253
+				text_color_code = "E" 
+			}
+
+			instantTextBoxType = {
+				name = "habitability"
+				position = { x = 280 y = 16 }
+				alwaystransparent = no
+				font = "cg_16b"
+				maxWidth = 253
+				maxHeight = 53
+			}
+		}
+
+		containerWindowType = {
+			name = "planet_housing"
+			size = { width = 101 height = 45 }
+			position = { x = 56 y = 75 }
+
+			background = {
+				name = "background"
+				spriteType = "GFX_dark_area_cut"
+			}
+
+			iconType = {
+				name = "planet_housing_icon"
+				spriteType = "GFX_planet_view_planet_housing"
+				position = { x = 9 y = 7 }
+				tooltip_mode_enabled = yes
+			}
+
+			instantTextBoxType={
+				name = "planet_housing_amount"
+				font = "cg_16b"
+				position = { x = 40 y = 11 }
+				text = "10"
+				maxWidth = 53
+				maxHeight = 27
+				fixedSize = yes
+				format = center
+			}
+		}
+
+		containerWindowType = {
+			name = "planet_jobs"
+			size = { width = 115 height = 45 }
+			position = { x = 165 y = 75 }
+
+			background = {
+				name = "background"
+				spriteType = "GFX_dark_area_cut"
+			}
+
+			iconType = {
+				name = "planet_jobs_icon"
+				spriteType = "GFX_pop_job"
+				position = { x = 7 y = 3 }
+				scale = 0.97
+				tooltip_mode_enabled = yes
+			}
+
+			instantTextBoxType={
+				name = "planet_jobs_amount"
+				font = "cg_16b"
+				position = { x = 31 y = 11 }
+				text = "2"
+				maxWidth = 80
+				maxHeight = 27
+				fixedSize = yes
+				format = center
+			}
+		}
+
+		containerWindowType = {
+			name = "planet_unemployed"
+			size = { width = 101 height = 45 }
+			position = { x = 288 y = 75 }
+
+			background = {
+				name = "background"
+				spriteType = "GFX_dark_area_cut"
+			}
+
+			iconType = {
+				name = "planet_unemployed_icon"
+				spriteType = "GFX_unemployed"
+				position = { x = 7 y = 5 }
+				tooltip_mode_enabled = yes
+				scale = 0.92
+			}
+
+			instantTextBoxType={
+				name = "planet_unemployed_amount"
+				font = "cg_16b"
+				position = { x = 40 y = 11 }
+				text = "2"
+				maxWidth = 53
+				maxHeight = 27
+				fixedSize = yes
+				format = center
+			}
+		}
+	}
+}

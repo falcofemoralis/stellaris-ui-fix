@@ -1,0 +1,1987 @@
+@entries_row1_y = 84
+@entries_row2_y = 439
+@entries_column1 = 15
+@entries_column2 = 433
+@entries_column3 = 852
+@entries_column4 = 1271
+@entry_h = 347
+@entry_w = 411
+
+@two_layer_tree_h = 33
+@three_layer_tree_h = 0
+
+@dynamic_extra = 0.8
+@dynamic_extra_max = 347
+
+guiTypes = {
+
+	################################################################
+	# ASCENSION PERKS ENTRY POSITIONS
+	################################################################
+
+	positionType = { name = "ap_0"	position = { x = 20 y = 67 } }
+	positionType = { name = "ap_1"	position = { x = 97 y = 67 } }
+	positionType = { name = "ap_2"	position = { x = 175 y = 67 } }
+	positionType = { name = "ap_3"	position = { x = 252 y = 67 } }
+	positionType = { name = "ap_4"	position = { x = 59 y = 132 } }
+	positionType = { name = "ap_5"	position = { x = 136 y = 132 } }
+	positionType = { name = "ap_6"	position = { x = 213 y = 132 } }
+	positionType = { name = "ap_7"	position = { x = 291 y = 132 } }
+
+	containerWindowType = {
+		name = "traditions_ascension_perk_entry"
+		size = { width = 59 height = 59 }
+
+		iconType = {
+			name = "icon"
+			position = { x = 12 y = 7 }
+			quadTextureSprite = "GFX_ascension_perk_slot_locked"
+			alwaystransparent = yes
+			scale = 1.0
+		}
+
+		buttonType = {
+			name = "ascension_perk_button"
+			spriteType = "GFX_flag_64_frame"
+			buttonFont = "cg_16b"
+			clicksound = click
+			oversound = no_sound
+		}
+
+	}
+
+	################################################################
+	# TRADITION ENTRY
+	################################################################
+
+	containerWindowType = {
+		name = "tradition_entry"
+		size = { width = 59 height = 59 }
+
+		buttonType = {
+			name = "tradition_adopt_button"
+			spriteType = "GFX_event_button_452"
+			buttonFont = "cg_16b"
+			clicksound = select_click
+			oversound = no_sound
+		}
+
+		#Orange frame to show available traditions
+		iconType = {
+			name = "available_tradition"
+			spriteType = "GFX_tradition_available_button"
+			alwaysTransparent = yes
+			position = { x = -29 y = -29 }
+		}
+	}
+
+	################################################################
+	# TRADITION VIEW
+	################################################################
+
+	containerWindowType = {
+		name = "traditions_view"
+		size = { width = 1696 height = 800 }
+
+		position = { x = -1693 y = 53 }
+		show_position = { x = 47 y = 53 }
+		hide_position = { x = -1693 y = 53 }
+		animation_time = 200
+		animation_type = decelerated
+
+		orientation = upper_left
+		moveable = no
+		clipping = no
+		show_sound = "interface"
+
+		background = {
+			name = "background"
+			spriteType = "GFX_tile_outliner_bg"
+		}
+
+		iconType = {
+			name = "hex_bg"
+			spriteType = "GFX_hex_bg"
+			position = { x = 7 y = -16 }
+			alwaysTransparent = yes
+		}
+
+		iconType = {
+			name = "header_line"
+			spriteType = "GFX_line_medium"
+			position = { x = 8 y = 28 }
+			alwaystransparent = yes
+		}
+
+		instantTextBoxType={
+			name = "header"
+			font = "malgun_goth_24"
+			text = "TRADITIONS"
+			position = { x = 47 y = 7 }
+			maxWidth = 400
+			maxHeight = 27
+			fixedSize = yes
+			format = left
+		}
+
+		buttonType = {
+			name = "close"
+			spriteType = "GFX_close"
+			position = { x = -60 y = 21 }
+			orientation = upper_right
+			shortcut = "ESCAPE"
+			clicksound = "back_click"
+			pdx_tooltip = "CLOSE_TITLE"
+		}
+
+		########################
+		# TABS
+		########################
+		@tabHeight = 797
+
+		buttonType = {
+			name = "tab_traditions"
+			quadTextureSprite = "GFX_tab_1_inactive"
+			position = { x = -27 y = @tabHeight }
+			font = "cg_16b"
+			buttonText = "TRADITIONS"
+			buttonFont = "cg_16b"
+			shortcut = "z"
+			clicksound = "tab_click"
+		}
+
+		buttonType = {
+			name = "tab_traditions_active"
+			quadTextureSprite = "GFX_tab_1_active"
+			position = { x = -27 y = @tabHeight }
+			font = "cg_16b"
+			buttonText = "TRADITIONS"
+			buttonFont = "cg_16b"
+			shortcut = "z"
+			clicksound = "tab_click"
+		}
+
+		buttonType = {
+			name = "tab_relics"
+			quadTextureSprite = "GFX_tab_2_inactive"
+			position = { x = 145 y = @tabHeight }
+			font = "cg_16b"
+			buttonText = "RELICS"
+			buttonFont = "cg_16b"
+			shortcut = "x"
+			clicksound = "tab_click"
+		}
+
+		buttonType = {
+			name = "tab_relics_active"
+			quadTextureSprite = "GFX_tab_2_active"
+			position = { x = 145 y = @tabHeight }
+			font = "cg_16b"
+			buttonText = "RELICS"
+			buttonFont = "cg_16b"
+			shortcut = "x"
+			clicksound = "tab_click"
+		}
+
+		buttonType = {
+			name = "tab_crisis"
+			quadTextureSprite = "GFX_tab_2_inactive"
+			position = { x = 317 y = @tabHeight }
+			font = "cg_16b"
+			buttonText = "CRISIS_TAB"
+			buttonFont = "cg_16b"
+			shortcut = "c"
+			clicksound = "tab_click"
+		}
+
+		buttonType = {
+			name = "tab_crisis_active"
+			quadTextureSprite = "GFX_tab_2_active"
+			position = { x = 317 y = @tabHeight }
+			font = "cg_16b"
+			buttonText = "CRISIS_TAB"
+			buttonFont = "cg_16b"
+			shortcut = "c"
+			clicksound = "tab_click"
+		}
+
+		################################################################
+		# TRADITION TAB
+		################################################################
+
+		containerWindowType = {
+			name = "traditions_window"
+			size = { width = 1696 height = 800 }
+			moveable = no
+			orientation = upper_left
+			position = { x = 0 y = 0 }
+
+			containerWindowType = {
+				name = "tradition_box"
+				size = { width = 800 height = 53 }
+				position = { x = 493 y = 27 }
+
+				instantTextBoxType = {
+					name = "tradition_cost"
+					font = "malgun_goth_24"
+					position = { x = 0 y = -4 }
+					maxWidth = 187
+					maxHeight = 27
+					fixedSize = yes
+					format = right
+				}
+
+				iconType = {
+					name = "progress"
+					spriteType = "GFX_tech_research_progressbar"
+					position = { x = 200 y = -13 }
+				}
+
+				instantTextBoxType = {
+					name = "time_to_next_tradition"
+					font = "malgun_goth_24"
+					text = "11 months"
+					position = { x = 520 y = -4 }
+					maxWidth = 400
+					maxHeight = 27
+					fixedSize = yes
+					format = left
+				}
+			}
+
+			gridBoxType = {
+				name = "tradition_category_gridbox"
+				position = { x = @entries_column1 y = @entries_row1_y }
+				size = { width = 1667 height = 700 }
+				slotSize = { width = 419 height = 355 }
+				max_slots_horizontal = 4
+				format = "UPPER_LEFT"
+			}
+
+			################################################################
+			# TRADITION ASCENSION PERKS
+			################################################################
+
+			containerWindowType = {
+				name = "ascension_perks"
+				size = { width = @entry_w height = @entry_h }
+				position = { x = 1271 y = @entries_row2_y }
+
+				background = {
+					name = "black"
+					spriteType = "GFX_plain_bg_tile"
+					alwaysTransparent = yes
+				}
+
+				iconType = {
+					name = "hex_bg"
+					spriteType = "GFX_hex_bg"
+					position = { x = -20 y = -20 }
+					alwaysTransparent = yes
+				}
+
+				instantTextBoxType = {
+					name = "ascension_perks_label"
+					font = "malgun_goth_24"
+					position = { x = 24 y = 5 }
+					text = "ASCENSION_PERKS"
+				}
+
+				containerWindowType = {
+					name = "tradition_box"
+					size = { width = 400 height = 267 }
+					position = { x = 20 y = 93 }
+				}
+			}
+		}
+
+		###############################
+		# RELICS TAB
+		###############################
+
+		containerWindowType = {
+			name = "relics_window"
+			size = { width = 1696 height = 800 }
+			moveable = no
+			orientation = upper_left
+			position = { x = 0 y = 0 }
+
+			###############################
+			# RELICS
+			###############################
+
+			@relicsWidth = 984
+			@relicsWidthWide = 1664
+
+			###############################
+			# RELICS BOX
+			###############################
+
+			containerWindowType = {
+				name = "relics_box"
+				size = { width = @relicsWidth height = 715 }
+				position = { x = 13 y = 67 }
+
+				background = {
+					name = "bg"
+					quadTextureSprite = "GFX_relics_panel_bg"
+				}
+
+				# TOP BAR
+				containerWindowType = {
+					name = "relics_topbar"
+					size = { width = @relicsWidth height = 87 }
+					position = { x = 0 y = 0 }
+
+					# LEFT SIDE
+					containerWindowType = {
+						name = "relics_topbar_left"
+						size = { width = 227 height = 87 }
+						position = { x = 0 y = 0 }
+
+						instantTextBoxType = {
+							name = "relics_found_text"
+							font = "cg_16b"
+							position = { x = 13 y = 20 }
+							text = "RELICS_FOUND"
+							maxWidth = 200
+							maxHeight = 29
+							fixedSize = yes
+							format = centre
+							text_color_code = "H"
+						}
+
+						instantTextBoxType = {
+							name = "relics_found_value"
+							font = "cg_16b"
+							position = { x = 13 y = 47 }
+							maxWidth = 200
+							maxHeight = 40
+							fixedSize = yes
+							format = centre
+						}
+					}
+
+					# RIGHT SIDE
+					containerWindowType = {
+						name = "relics_topbar_right"
+						size = { width = 767 height = 87 }
+						position = { x = 233 y = 0 }
+
+						instantTextBoxType = {
+							name = "no_triumph_text"
+							font = "cg_16b"
+							position = { x = 133 y = 27 }
+							text = "ACTIVATE_RELIC_FOR_TRIUMPH"
+							maxWidth = 333
+							maxHeight = 29
+							fixedSize = yes
+							text_color_code = "Y"
+						}
+
+						instantTextBoxType = {
+							name = "active_triumph_text"
+							font = "cg_16b"
+							position = { x = 67 y = 13 }
+							text = "ACTIVE_TRIUMPH_TEXT"
+							maxWidth = 200
+							maxHeight = 29
+							fixedSize = yes
+							text_color_code = "H"
+						}
+
+						instantTextBoxType = {
+							name = "active_triumph_value"
+							font = "cg_16b"
+							position = { x = 267 y = 13 }
+							maxWidth = 80
+							maxHeight = 40
+							fixedSize = yes
+							format = centre
+						}
+
+						iconType = {
+							name = "progressbar"
+							spriteType = "GFX_queue_progressbar"
+							position = { x = 67 y = 40 }
+						}
+					}
+				}
+
+				# RELICS CONTENT
+				containerWindowType = {
+					name = "relics_content"
+					size = { width = @relicsWidth height = 627 }
+					position = { x = 0 y = 80 }
+					verticalScrollbar = "right_vertical_slider"
+					margin = { top = 13 bottom = 0 }
+
+					background = {
+						name = "bg"
+						quadTextureSprite = "GFX_tiled_window_transparent"
+					}
+
+					gridBoxType = {
+						name = "relics_grid"
+						position = { x = 127 y = 40 }
+						size = { width = 267 height = 533 }
+						slotsize = {
+							width = 245
+							height = 259
+						}
+						max_slots_horizontal = 3
+					}
+				}
+			}
+
+			###############################
+			# RELICS BOX WIDE
+			###############################
+
+			containerWindowType = {
+				name = "relics_box_wide"
+				size = { width = @relicsWidthWide height = 715 }
+				position = { x = 13 y = 67 }
+
+				background = {
+					name = "bg"
+					quadTextureSprite = "GFX_relics_panel_bg_wide"
+				}
+
+				# TOP BAR
+				containerWindowType = {
+					name = "relics_topbar"
+					size = { width = @relicsWidthWide height = 87 }
+					position = { x = 0 y = 0 }
+
+					# LEFT SIDE
+					containerWindowType = {
+						name = "relics_topbar_left"
+						size = { width = 227 height = 87 }
+						position = { x = 0 y = 0 }
+
+						instantTextBoxType = {
+							name = "relics_found_text"
+							font = "cg_16b"
+							position = { x = 13 y = 20 }
+							text = "RELICS_FOUND"
+							maxWidth = 200
+							maxHeight = 29
+							fixedSize = yes
+							format = centre
+							text_color_code = "H"
+						}
+
+						instantTextBoxType = {
+							name = "relics_found_value"
+							font = "cg_16b"
+							position = { x = 13 y = 47 }
+							maxWidth = 200
+							maxHeight = 40
+							fixedSize = yes
+							format = centre
+						}
+					}
+
+					# RIGHT SIDE
+					containerWindowType = {
+						name = "relics_topbar_right"
+						size = { width = 767 height = 87 }
+						position = { x = 620 y = 0 }
+
+						instantTextBoxType = {
+							name = "no_triumph_text"
+							font = "cg_16b"
+							position = { x = 133 y = 27 }
+							text = "ACTIVATE_RELIC_FOR_TRIUMPH"
+							maxWidth = 333
+							maxHeight = 29
+							fixedSize = yes
+							text_color_code = "Y"
+						}
+
+						instantTextBoxType = {
+							name = "active_triumph_text"
+							font = "cg_16b"
+							position = { x = 67 y = 13 }
+							text = "ACTIVE_TRIUMPH_TEXT"
+							maxWidth = 200
+							maxHeight = 29
+							fixedSize = yes
+							text_color_code = "H"
+						}
+
+						instantTextBoxType = {
+							name = "active_triumph_value"
+							font = "cg_16b"
+							position = { x = 267 y = 13 }
+							maxWidth = 80
+							maxHeight = 40
+							fixedSize = yes
+							format = centre
+						}
+
+						iconType = {
+							name = "progressbar"
+							spriteType = "GFX_queue_progressbar"
+							position = { x = 67 y = 40 }
+						}
+					}
+				}
+
+				# RELICS CONTENT
+				containerWindowType = {
+					name = "relics_content"
+					size = { width = @relicsWidthWide height = 627 }
+					position = { x = 0 y = 80 }
+					verticalScrollbar = "right_vertical_slider"
+					margin = { top = 13 bottom = 0 }
+
+					background = {
+						name = "bg"
+						quadTextureSprite = "GFX_tiled_window_transparent"
+					}
+
+					gridBoxType = {
+						name = "relics_grid"
+						position = { x = 340 y = 40 }
+						size = { width = 267 height = 533 }
+						slotsize = {
+							width = 245
+							height = 259
+						}
+						max_slots_horizontal = 4
+					}
+				}
+			}
+
+			###############################
+			# ARTIFACTS
+			###############################
+
+			@artifactsWidth = 669
+
+			containerWindowType = {
+				name = "artifacts_box"
+				size = { width = @artifactsWidth height = 688 }
+				position = { x = 1009 y = 93 }
+
+				background = {
+					name = "bg"
+					quadTextureSprite = "GFX_artifacts_panel_bg"
+				}
+
+				# TOP BAR
+				containerWindowType = {
+					name = "artifacts_topbar"
+					size = { width = @artifactsWidth height = 87 }
+					position = { x = 0 y = 0 }
+
+					background = {
+						name = "background"
+						spriteType = "GFX_invisible"
+					}
+
+					instantTextBoxType = {
+						name = "artifacts_header"
+						font = "cg_16b"
+						position = { x = 27 y = 19 }
+						text = "MINOR_ARTIFACTS"
+						maxWidth = 200
+						maxHeight = 29
+						fixedSize = yes
+						format = left
+						text_color_code = "H"
+						alwaysTransparent = yes
+					}
+
+					instantTextBoxType = {
+						name = "amount"
+						font = "cg_16b"
+						position = { x = 443 y = 19 }
+						maxWidth = 200
+						maxHeight = 29
+						format = right
+						alwaysTransparent = yes
+					}
+
+				}
+
+				# CONTENT
+				containerWindowType = {
+					name = "artifacts_content"
+					size = { width = 657 height = 632 }
+					position = { x = 13 y = 67 }
+					verticalScrollbar = "right_vertical_slider"
+					margin = { top = 0 bottom = 20 }
+
+					background = {
+						name = "bg"
+						quadTextureSprite = "GFX_tiled_window_transparent"
+					}
+
+					gridBoxType = {
+						name = "artifact_actions_grid"
+						position = { x = 0 y = 0 }
+						size = { width = 640 height = 600 }
+						slotsize = {
+							width = 640
+							height = 57
+						}
+						max_slots_horizontal = 1
+					}
+				}
+			}
+		}
+
+		###############################
+		# CRISIS TAB
+		###############################
+
+		containerWindowType = {
+			name = "crisis_window"
+			size = { width = 1696 height = 800 }
+			moveable = no
+			orientation = upper_left
+			position = { x = 0 y = 0 }
+
+			###############################
+			# CRISIS LEVELS AND PERKS
+			###############################
+
+			@progressionWidth = 984
+			@progressionHeight = 715
+			@perksContentHeight = 627
+
+			containerWindowType = {
+				name = "progression_container"
+				size = { width = @progressionWidth height = @progressionHeight }
+				position = { x = 13 y = 67 }
+
+				background = {
+					name = "bg"
+					quadTextureSprite = "GFX_crisis_bg"
+				}
+
+				containerWindowType = {
+					name = "crisis_level_progressbar_box"
+					size = { width = 83 height = 680 }
+					position = { x = 13 y = 19 }
+
+					iconType = {
+						name = "crisis_level_progressbar_box_bg"
+						position = { x = 0 y = 0 }
+						quadTextureSprite = "GFX_crisis_levels_frame"
+						#alwaysTransparent = yes
+					}
+
+					iconType = {
+						name = "crisis_level_progressbar"
+						position = { x = 39 y = 52 }
+						spriteType = "GFX_crisis_progressbar"
+						frame = 0
+					}
+
+					smoothListboxType = {
+						name = "crisis_level_icon_list"
+						position = { x = 0 y = 27 }
+						size = { x = @progressionWidth y = 715 }
+						borderSize = { x = 0 y = 0 }
+						spacing = 0
+					}
+				}
+
+				containerWindowType = {
+					name = "crisis_level_list_container"
+					size = { width = 848 height = @progressionHeight }
+					position = { x = 120 y = 27 }
+
+					smoothListboxType = {
+						name = "crisis_level_list"
+						position = { x = 0 y = 0 }
+						size = { x = 848 y = @progressionHeight }
+						scrollbarType = "standardlistbox_slider"
+						borderSize = { x = 0 y = 0 }
+						spacing = 0
+					}
+				}
+			}
+
+
+			###############################
+			# CRISIS INFORMATION
+			###############################
+
+			@infoWidth = 669
+
+			containerWindowType = {
+				name = "information_box"
+				size = { width = @infoWidth height = 640 }
+				position = { x = 1009 y = 139 }
+
+				background = {
+					name = "bg"
+					quadTextureSprite = "GFX_artifacts_panel_bg"
+				}
+
+				buttonType = {
+					name = "crisis_objectives_button"
+					quadTextureSprite = "GFX_standard_button_230_34_button"
+					buttonFont = "cg_16b"
+					text = "CRISIS_OBJECTIVES"
+					position = { x = 0 y = -3 }
+					orientation = "UPPER_LEFT"
+					clicksound = confirm_click
+				}
+
+				buttonType = {
+					name = "crisis_effects_button"
+					quadTextureSprite = "GFX_standard_button_230_34_button"
+					buttonFont = "cg_16b"
+					text = "CRISIS_EFFECTS"
+					position = { x = 331 y = -3 }
+					orientation = "UPPER_LEFT"
+					clicksound = confirm_click
+				}
+
+
+				# OBJECTIVES
+				containerWindowType = {
+					name = "objectives_box"
+					size = { width = @infoWidth height = 573 }
+					position = { x = 0 y = 67 }
+
+					background = {
+						name = "crisis_objectives_bg"
+						quadTextureSprite = "GFX_framed_area_tile"
+					}
+
+					instantTextBoxType = {
+						name = "objectives_header"
+						font = "cg_16b"
+						position = { x = 27 y = 20 }
+						text = "CRISIS_OBJECTIVES"
+						format = left
+					}
+
+					instantTextBoxType = {
+						name = "objectives_desc"
+						font = "cg_16b"
+						position = { x = 405 y = 19 }
+						maxWidth = 200
+						maxHeight = 29
+						fixedSize = yes
+						format = right
+						text = "CRISIS_OBJECTIVE_GAINED"
+					}
+
+					iconType = {
+						name = "crisis_objectives_header_line"
+						quadTextureSprite = "GFX_line_crisis"
+						position = { x = 8 y = 40 }
+						alwaysTransparent = yes
+					}
+
+					smoothListboxType = {
+						name = "objectives_list"
+						position = { x = 13 y = 67 }
+						size = { x = 640 y = 491 }
+						scrollbarType = "standardlistbox_slider"
+						borderSize = { x = 0 y = 0 }
+						spacing = 3
+					}
+				}
+
+				# EFFECTS
+				containerWindowType = {
+					name = "effects_box"
+					size = { width = @infoWidth height = 573 }
+					position = { x = 0 y = 67 }
+
+					background = {
+						name = "crisis_effects_bg"
+						quadTextureSprite = "GFX_framed_area_tile"
+					}
+
+					# DESCRIPTIONS
+					containerWindowType = {
+						name = "effects_descriptions"
+						size = { width = 616 height = 180 }
+						position = { x = 0 y = 0 }
+
+						instantTextBoxType = {
+							name = "crisis_description_title"
+							font = "cg_16b"
+							maxWidth = 616
+							maxHeight = 27
+							position = { x = 27 y = 24 }
+							text = "CRISIS_DESCRIPTION_TITLE"
+							text_color_code = "H"
+							format = left
+						}
+
+						instantTextBoxType = {
+							name = "crisis_description"
+							font = "cg_16b"
+							position = { x = 27 y = 47 }
+							maxWidth = 616
+							maxHeight = 67
+							text = "CRISIS_DESCRIPTION"
+							format = left
+						}
+
+						instantTextBoxType = {
+							name = "crisis_howto_title"
+							font = "cg_16b"
+							maxWidth = 616
+							maxHeight = 27
+							position = { x = 27 y = 387 }
+							text = "CRISIS_HOWTO_TITLE"
+							text_color_code = "H"
+							format = left
+						}
+
+						instantTextBoxType = {
+							name = "crisis_howto"
+							font = "cg_16b"
+							position = { x = 27 y = 409 }
+							maxWidth = 616
+							maxHeight = 67
+							text = "CRISIS_HOWTO"
+							format = left
+						}
+					}
+
+					# TOP BAR
+					containerWindowType = {
+						name = "effects_top_bar"
+						size = { width = @infoWidth height = 60 }
+						position = { x = 0 y = 0 }
+
+						instantTextBoxType = {
+							name = "effects_header"
+							font = "cg_16b"
+							position = { x = 27 y = 224 }
+							#text = "EFFECTS_CLEAN"
+							format = left
+						}
+
+						iconType = {
+							name = "crisis_objectives_header_line"
+							quadTextureSprite = "GFX_line_crisis"
+							position = { x = 8 y = 360 }
+							alwaysTransparent = yes
+						}
+					}
+
+					# CONTENT
+					containerWindowType = {
+						name = "effects_content"
+						size = { width = 640 height = 285 }
+						position = { x = 13 y = 267 }
+						verticalScrollbar = "right_vertical_slider"
+						margin = { top = 0 bottom = 20 }
+
+						background = {
+							name = "bg"
+							quadTextureSprite = "GFX_tiled_window_transparent"
+						}
+
+						instantTextBoxType = {
+							name = "effects_desc"
+							font = "cg_16b"
+							position = { x = 13 y = 13 }
+						}
+					}
+				}
+			}
+
+
+			###############################
+			# CRISIS TITLE BOX
+			###############################
+			containerWindowType = {
+				name = "crisis_level_bar"
+				size = { width = 729 height = 109 }
+				position = { x = 1009 y = 93 }
+
+				iconType = {
+					name = "crisis_title_box"
+					position = { x = 0 y = -27 }
+					quadTextureSprite = "GFX_crisis_title_box"
+					#alwaysTransparent = yes
+				}
+
+				iconType = {
+					name = "crisis_title_separate"
+					position = { x = 13 y = -5 }
+					quadTextureSprite = "GFX_crisis_title_separate"
+					#alwaysTransparent = yes
+				}
+
+				instantTextBoxType = {
+					name = "crisis_title_text"
+					font = "cg_16b"
+					position = { x = 0 y = 5 }
+					text = "CRISIS_TITLE_TXT"
+					text_color_code = "W"
+					maxHeight = 27
+					maxWidth = 167
+					format = right
+				}
+
+				instantTextBoxType={
+					name = "crisis_level_number"
+					font = "cg_16b"
+					position = { x = 173 y = 5 }
+					maxWidth = 187
+					maxHeight = 27
+					fixedSize = no
+					text = "crisis_level_1"
+					format = left
+					maxHeight = 27
+				}
+
+				# MENACE
+				containerWindowType = {
+					name = "menace_container"
+					size = { width = 133 height = 87 }
+					position = { x = 413 y = -8 }
+
+					instantTextBoxType = {
+						name = "menace_text"
+						font = "cg_16b"
+						position = { x = -67 y = 13 }
+						text = "menace_name"
+						text_color_code = "W"
+						maxHeight = 27
+						maxWidth = 160
+						format = right
+					}
+
+					instantTextBoxType = {
+						name = "menace_value"
+						font = "cg_16b"
+						position = { x = 100 y = 13 }
+						text = "MENACE_VALUE"
+						maxHeight = 27
+						maxWidth = 160
+					}
+				}
+			}
+		}
+	}
+
+	################################################################
+	# TRADITION CATEGORY GRID BOX ENTRY TEMPLATES
+	################################################################
+
+	containerWindowType = {
+		name = "tradition_category_grid_entry"
+		size = { width = @entry_w height = @entry_h }
+
+		containerWindowType = {
+			name = "tradition_grid_entry_bg_container"
+			position = { x = 1 y = 47 }
+			size = { width = 408 height = 291 }
+
+			iconType = {
+				name = "tradition_grid_entry_bg"
+				spriteType = "GFX_tradition_category_bg_locked"
+				alwaysTransparent = yes
+			}
+		}
+
+		containerWindowType = {
+			name = "category_name_container"
+			position = { x = 0 y = 0 }
+
+			iconType = {
+				name = "hex_bg"
+				spriteType = "GFX_tradition_hex_bg_tradition_locked"
+				position = { x = -5 y = -4 }
+				alwaysTransparent = yes
+			}
+
+			iconType = {
+				name = "category_icon"
+				spriteType = "GFX_tradition_category_icon_locked"
+				position = { x = 0 y = 3 }
+			}
+
+			instantTextBoxType = {
+				name = "category_label"
+				font = "malgun_goth_24"
+				position = { x = 45 y = 5 }
+				maxWidth = 267
+				maxHeight = 33
+				text = "TRADITION_SLOT_EMPTY"
+			}
+		}
+
+		containerWindowType = {
+			name = "adopted_count_container"
+			size = { width = 200 height = 53 }
+			position = { x = 216 y = -3 }
+
+			iconType = {
+				name = "adopted_count_bg"
+				spriteType = "GFX_adopt_tradition_category_button"
+			}
+
+			instantTextBoxType = {
+				name = "adopted_count_value"
+				font = "cg_16b"
+				position = { x = 44 y = 16 }
+				maxWidth = 133
+				maxHeight = 27
+				fixedSize = yes
+				format = center
+			}
+		}
+
+		buttonType = {
+			name = "category_adopt_button"
+			size = { x = 397 y = 47 }
+			position = { x = 216 y = -3 }
+			spriteType = "GFX_adopt_tradition_category_button"
+			buttonFont = "cg_16b"
+			text = "TRADITION_ADOPT_BUTTON"
+			font = "cg_16b"
+			oversound = mouse_over
+		}
+
+		instantTextBoxType = {
+			name = "category_desc"
+			font = "cg_16b"
+			position = { x = 13 y = 47 }
+			maxWidth = 373
+			format = center
+			vertical_alignment = center
+			text = "TRADITION_SLOT_LOCKED"
+		}
+
+		containerWindowType = {
+			name = "tree"
+		}
+
+		containerWindowType = {
+			name = "blocker_container"
+			position = { x = 0 y = 0 }
+			size = { width = 100% height = 100%}
+
+			background = {
+				name = "blocker"
+				spriteType = "GFX_ship_designer_blocker"
+			}
+		}
+	}
+
+	################################################################
+	# TRADITION CATEGORY TREE TEMPLATES
+	################################################################
+
+	### 2 to 1, 1 to 1 ###
+
+	#####   #####   #####
+	# 1 #   # 2 #   # 3 #
+	#####   #####   #####
+
+		##### 		#####
+		# 4 # 		# 5 #
+	    ##### 		#####
+
+	containerWindowType = {
+		name = "tree_21_11"
+		position = { x = 0 y = @two_layer_tree_h }
+
+		iconType = {
+			name = "arrow_1"
+			spriteType = "GFX_arrow_merge"
+			position = { x = 109 y = 133 }
+			alwaysTransparent = yes
+		}
+
+		iconType = {
+			name = "arrow_2"
+			spriteType = "GFX_arrow_single"
+			position = { x = 289 y = 133 }
+			alwaysTransparent = yes
+		}
+
+		containerWindowType = {
+			name = "tree_21_11_tradition_1"
+			position = { x = 81 y = 73 }
+		}
+
+		containerWindowType = {
+			name = "tree_21_11_tradition_2"
+			position = { x = 175 y = 73 }
+		}
+
+		containerWindowType = {
+			name = "tree_21_11_tradition_3"
+			position = { x = 268 y = 73 }
+		}
+
+		containerWindowType = {
+			name = "tree_21_11_tradition_4"
+			position = { x = 128 y = 167 }
+		}
+
+		containerWindowType = {
+			name = "tree_21_11_tradition_5"
+			position = { x = 268 y = 167 }
+		}
+		# Don't put any container windows above this comment that shouldn't contain a tradition.
+	}
+
+	### 1 to 2, 1 to 1 ###
+
+		#####		#####
+		# 1 #      	# 2 #
+		#####      	#####
+
+	#####   #####   #####
+	# 3 #   # 4 #   # 5 #
+	#####   #####   #####
+
+	containerWindowType = {
+		name = "tree_12_11"
+		position = { x = 0 y = @two_layer_tree_h }
+
+		iconType = {
+			name = "arrow_1"
+			spriteType = "GFX_arrow_double"
+			position = { x = 101 y = 133 }
+			alwaysTransparent = yes
+		}
+
+		iconType = {
+			name = "arrow_2"
+			spriteType = "GFX_arrow_single"
+			position = { x = 289 y = 133 }
+			alwaysTransparent = yes
+		}
+
+		containerWindowType = {
+			name = "tree_12_11_tradition_1"
+			position = { x = 128 y = 73 }
+		}
+
+		containerWindowType = {
+			name = "tree_12_11_tradition_2"
+			position = { x = 268 y = 73 }
+		}
+
+		containerWindowType = {
+			name = "tree_12_11_tradition_3"
+			position = { x = 81 y = 167 }
+		}
+
+		containerWindowType = {
+			name = "tree_12_11_tradition_4"
+			position = { x = 175 y = 167 }
+		}
+
+		containerWindowType = {
+			name = "tree_12_11_tradition_5"
+			position = { x = 268 y = 167 }
+		}
+		# Don't put any container windows above this comment that shouldn't contain a tradition.
+	}
+
+	### 1 to 1, 1 to 2 ###
+
+	#####		#####
+	# 1 #      	# 3 #
+	#####      	#####
+
+	#####   #####   #####
+	# 2 #   # 4 #   # 5 #
+	#####   #####   #####
+
+	containerWindowType = {
+		name = "tree_11_12"
+		position = { x = 0 y = @two_layer_tree_h }
+
+		iconType = {
+			name = "arrow_1"
+			spriteType = "GFX_arrow_single"
+			position = { x = 103 y = 133 }
+			alwaysTransparent = yes
+		}
+
+		iconType = {
+			name = "arrow_2"
+			spriteType = "GFX_arrow_double"
+			position = { x = 196 y = 133 }
+			alwaysTransparent = yes
+		}
+
+		containerWindowType = {
+			name = "tree_11_12_tradition_1"
+			position = { x = 81 y = 73 }
+		}
+
+		containerWindowType = {
+			name = "tree_11_12_tradition_2"
+			position = { x = 81 y = 167 }
+		}
+
+		containerWindowType = {
+			name = "tree_11_12_tradition_3"
+			position = { x = 221 y = 73 }
+		}
+
+		containerWindowType = {
+			name = "tree_11_12_tradition_4"
+			position = { x = 175 y = 167 }
+		}
+
+		containerWindowType = {
+			name = "tree_11_12_tradition_5"
+			position = { x = 268 y = 167 }
+		}
+		# Don't put any container windows above this comment that shouldn't contain a tradition.
+	}
+
+	### 1 to 2, 1 to 2 ###
+
+		#####	 #####
+		# 1 #    # 2 #
+		#####    #####
+
+	#####   #####   #####
+	# 3 #   # 4 #   # 5 #
+	#####   #####   #####
+
+	containerWindowType = {
+		name = "tree_12_12"
+		position = { x = 0 y = @two_layer_tree_h }
+
+		iconType = {
+			name = "arrow_1"
+			spriteType = "GFX_arrow_double"
+			position = { x = 103 y = 133 }
+			alwaysTransparent = yes
+		}
+
+		iconType = {
+			name = "arrow_2"
+			spriteType = "GFX_arrow_double"
+			position = { x = 196 y = 133 }
+			alwaysTransparent = yes
+		}
+
+		containerWindowType = {
+			name = "tree_12_12_tradition_1"
+			position = { x = 128 y = 73 }
+		}
+
+		containerWindowType = {
+			name = "tree_12_12_tradition_2"
+			position = { x = 221 y = 73 }
+		}
+
+		containerWindowType = {
+			name = "tree_12_12_tradition_3"
+			position = { x = 81 y = 167 }
+		}
+
+		containerWindowType = {
+			name = "tree_12_12_tradition_4"
+			position = { x = 175 y = 167 }
+		}
+
+		containerWindowType = {
+			name = "tree_12_12_tradition_5"
+			position = { x = 268 y = 167 }
+		}
+		# Don't put any container windows above this comment that shouldn't contain a tradition.
+	}
+
+	### 2 to 1, 2 to 1 ###
+
+	#####   #####   #####
+	# 1 #   # 2 #   # 3 #
+	#####   #####   #####
+
+		#####	 #####
+		# 4 #    # 5 #
+		#####    #####
+
+	containerWindowType = {
+		name = "tree_21_21"
+		position = { x = 0 y = @two_layer_tree_h }
+
+		iconType = {
+			name = "arrow_1"
+			spriteType = "GFX_arrow_merge"
+			position = { x = 103 y = 133 }
+			alwaysTransparent = yes
+		}
+
+		iconType = {
+			name = "arrow_2"
+			spriteType = "GFX_arrow_merge"
+			position = { x = 196 y = 133 }
+			alwaysTransparent = yes
+		}
+
+		containerWindowType = {
+			name = "tree_21_21_tradition_1"
+			position = { x = 81 y = 73 }
+		}
+
+		containerWindowType = {
+			name = "tree_21_21_tradition_2"
+			position = { x = 175 y = 73 }
+		}
+
+		containerWindowType = {
+			name = "tree_21_21_tradition_3"
+			position = { x = 268 y = 73 }
+		}
+
+		containerWindowType = {
+			name = "tree_21_21_tradition_4"
+			position = { x = 128 y = 167 }
+		}
+
+		containerWindowType = {
+			name = "tree_21_21_tradition_5"
+			position = { x = 221 y = 167 }
+		}
+		# Don't put any container windows above this comment that shouldn't contain a tradition.
+	}
+
+	### 1 to 1, 1 to 1 to 1 ###
+
+	#####		#####
+	# 1 #      	# 3 #
+	#####      	#####
+
+	#####		#####
+	# 2 #		# 4 #
+	#####		#####
+
+				#####
+				# 5 #
+				#####
+
+	containerWindowType = {
+		name = "tree_11_111"
+		position = { x = 0 y = @three_layer_tree_h }
+
+		iconType = {
+			name = "arrow_1"
+			spriteType = "GFX_arrow_single"
+			position = { x = 149 y = 133 }
+			alwaysTransparent = yes
+		}
+
+		iconType = {
+			name = "arrow_2"
+			spriteType = "GFX_arrow_single"
+			position = { x = 243 y = 133 }
+			alwaysTransparent = yes
+		}
+
+		iconType = {
+			name = "arrow_3"
+			spriteType = "GFX_arrow_single"
+			position = { x = 243 y = 227 }
+		}
+
+		containerWindowType = {
+			name = "tree_11_111_tradition_1"
+			position = { x = 128 y = 73 }
+		}
+
+		containerWindowType = {
+			name = "tree_11_111_tradition_2"
+			position = { x = 128 y = 167 }
+		}
+
+		containerWindowType = {
+			name = "tree_11_111_tradition_3"
+			position = { x = 221 y = 73 }
+		}
+
+		containerWindowType = {
+			name = "tree_11_111_tradition_4"
+			position = { x = 221 y = 167 }
+		}
+
+		containerWindowType = {
+			name = "tree_11_111_tradition_5"
+			position = { x = 221 y = 260 }
+		}
+		# Don't put any container windows above this comment that shouldn't contain a tradition.
+	}
+
+	### 1 to 1 to 1, 1 to 1 ###
+
+	#####		#####
+	# 1 #      	# 4 #
+	#####      	#####
+
+	#####		#####
+	# 2 #		# 5 #
+	#####		#####
+
+	#####
+	# 3 #
+	#####
+
+	containerWindowType = {
+		name = "tree_111_11"
+		position = { x = 0 y = @three_layer_tree_h }
+
+		iconType = {
+			name = "arrow_1"
+			spriteType = "GFX_arrow_single"
+			position = { x = 149 y = 133 }
+			alwaysTransparent = yes
+		}
+
+		iconType = {
+			name = "arrow_2"
+			spriteType = "GFX_arrow_single"
+			position = { x = 149 y = 227 }
+			alwaysTransparent = yes
+		}
+
+		iconType = {
+			name = "arrow_3"
+			spriteType = "GFX_arrow_single"
+			position = { x = 243 y = 133 }
+			alwaysTransparent = yes
+		}
+
+		containerWindowType = {
+			name = "tree_111_11_tradition_1"
+			position = { x = 128 y = 73 }
+		}
+
+		containerWindowType = {
+			name = "tree_111_11_tradition_2"
+			position = { x = 128 y = 167 }
+		}
+
+		containerWindowType = {
+			name = "tree_111_11_tradition_3"
+			position = { x = 128 y = 260 }
+		}
+
+		containerWindowType = {
+			name = "tree_111_11_tradition_4"
+			position = { x = 221 y = 73 }
+		}
+
+		containerWindowType = {
+			name = "tree_111_11_tradition_5"
+			position = { x = 221 y = 167 }
+		}
+		# Don't put any container windows above this comment that shouldn't contain a tradition.
+	}
+
+	### 2 to 1, 1 to 2 ###
+
+	#####		#####
+	# 1 #      	# 2 #
+	#####      	#####
+
+		  #####
+		  # 3 #
+		  #####
+
+	#####		#####
+	# 4 #		# 5 #
+	#####		#####
+
+	containerWindowType = {
+		name = "tree_21_12"
+		position = { x = 0 y = @three_layer_tree_h }
+
+		iconType = {
+			name = "arrow_1"
+			spriteType = "GFX_arrow_merge"
+			position = { x = 156 y = 133 }
+			alwaysTransparent = yes
+		}
+
+		iconType = {
+			name = "arrow_2"
+			spriteType = "GFX_arrow_double"
+			position = { x = 149 y = 227 }
+			alwaysTransparent = yes
+		}
+
+		containerWindowType = {
+			name = "tree_21_12_tradition_1"
+			position = { x = 128 y = 73 }
+		}
+
+		containerWindowType = {
+			name = "tree_21_12_tradition_2"
+			position = { x = 221 y = 73 }
+		}
+
+		containerWindowType = {
+			name = "tree_21_12_tradition_3"
+			position = { x = 175 y = 167 }
+		}
+
+		containerWindowType = {
+			name = "tree_21_12_tradition_4"
+			position = { x = 128 y = 260 }
+		}
+
+		containerWindowType = {
+			name = "tree_21_12_tradition_5"
+			position = { x = 221 y = 260 }
+		}
+		# Don't put any container windows above this comment that shouldn't contain a tradition.
+	}
+
+	### 1 to 2, 1 to 1, 1 to 1 ###
+
+		  #####
+		  # 1 #
+		  #####
+
+	#####		#####
+	# 2 #      	# 3 #
+	#####      	#####
+
+	#####		#####
+	# 4 #		# 5 #
+	#####		#####
+
+	containerWindowType = {
+		name = "tree_12_11_11"
+		position = { x = 0 y = @three_layer_tree_h }
+
+		iconType = {
+			name = "arrow_1"
+			spriteType = "GFX_arrow_double"
+			position = { x = 149 y = 133 }
+			alwaysTransparent = yes
+		}
+
+		iconType = {
+			name = "arrow_2"
+			spriteType = "GFX_arrow_single"
+			position = { x = 149 y = 227 }
+			alwaysTransparent = yes
+		}
+
+		iconType = {
+			name = "arrow_3"
+			spriteType = "GFX_arrow_single"
+			position = { x = 243 y = 227 }
+		}
+
+		containerWindowType = {
+			name = "tree_12_11_11_tradition_1"
+			position = { x = 175 y = 73 }
+		}
+
+		containerWindowType = {
+			name = "tree_12_11_11_tradition_2"
+			position = { x = 128 y = 167 }
+		}
+
+		containerWindowType = {
+			name = "tree_12_11_11_tradition_3"
+			position = { x = 221 y = 167 }
+		}
+
+		containerWindowType = {
+			name = "tree_12_11_11_tradition_4"
+			position = { x = 128 y = 260 }
+		}
+
+		containerWindowType = {
+			name = "tree_12_11_11_tradition_5"
+			position = { x = 221 y = 260 }
+		}
+		# Don't put any container windows above this comment that shouldn't contain a tradition.
+	}
+
+
+	### 1 to 1, 1 to 1, 2 to 1 ###
+
+	#####		#####
+	# 1 #      	# 2 #
+	#####      	#####
+
+	#####		#####
+	# 3 #		# 4 #
+	#####		#####
+
+		  #####
+		  # 5 #
+		  #####
+
+	containerWindowType = {
+		name = "tree_11_11_21"
+		position = { x = 0 y = @three_layer_tree_h }
+
+		iconType = {
+			name = "arrow_1"
+			spriteType = "GFX_arrow_single"
+			position = { x = 149 y = 133 }
+			alwaysTransparent = yes
+		}
+
+		iconType = {
+			name = "arrow_2"
+			spriteType = "GFX_arrow_single"
+			position = { x = 243 y = 133 }
+			alwaysTransparent = yes
+		}
+
+		iconType = {
+			name = "arrow_3"
+			spriteType = "GFX_arrow_merge"
+			position = { x = 156 y = 227 }
+			alwaysTransparent = yes
+		}
+
+		containerWindowType = {
+			name = "tree_11_11_21_tradition_1"
+			position = { x = 128 y = 73 }
+		}
+
+		containerWindowType = {
+			name = "tree_11_11_21_tradition_2"
+			position = { x = 221 y = 73 }
+		}
+
+		containerWindowType = {
+			name = "tree_11_11_21_tradition_3"
+			position = { x = 128 y = 167 }
+		}
+
+		containerWindowType = {
+			name = "tree_11_11_21_tradition_4"
+			position = { x = 221 y = 167 }
+		}
+
+		containerWindowType = {
+			name = "tree_11_11_21_tradition_5"
+			position = { x = 175 y = 260 }
+		}
+
+		# Don't put any container windows above this comment that shouldn't contain a tradition.
+	}
+
+	################################################################
+	# TRADITION CATEGORY SELECTION VIEW
+	################################################################
+
+	containerWindowType = {
+		name = "tradition_category_selection_dialog"
+		size = { width = 1696 height = 907 }
+		dynamic_extra_height = @dynamic_extra
+		dynamic_extra_height_max = @dynamic_extra_max
+		orientation = center
+		origo = center
+		moveable = yes
+
+		background = {
+			name = "selection_dialog_bg"
+			quadTextureSprite = "GFX_planet_bg_tile"
+		}
+
+		containerWindowType = {
+			name = "thin_edge"
+			size = { width = 1696 height = 905 }
+			dynamic_extra_height = @dynamic_extra
+			dynamic_extra_height_max = @dynamic_extra_max
+			background = {
+				name = "selection_dialog_bg"
+				quadTextureSprite = "GFX_plain_green_frame_tile"
+				alwaysTransparent = yes
+			}
+		}
+
+		iconType = {
+			name = "hex_bg"
+			spriteType = "GFX_hex_bg"
+			position = { x = 7 y = -16 }
+			alwaysTransparent = yes
+		}
+
+		instantTextBoxType = {
+			name = "selection_ui_title"
+			font = "malgun_goth_24"
+			text = "TRADITION_SELECTION_TITLE"
+			position = { x = 32 y = 11 }
+			maxWidth = 459
+			maxHeight = 53
+			fixedSize = yes
+			orientation = upper_left
+			alwaysTransparent = yes
+		}
+
+		iconType = {
+			name = "header_line"
+			spriteType = "GFX_line_medium"
+			position = { x = 8 y = 37 }
+			alwaystransparent = yes
+		}
+
+		buttonType = {
+			name = "close"
+			quadTextureSprite = "GFX_close"
+			position = { x = -60 y = 9 }
+			orientation = "UPPER_RIGHT"
+			shortCut = "ESCAPE"
+			clicksound = "back_click"
+		}
+
+		containerWindowType = {
+			name = "tradition_category_gridbox_container"
+			position = { x = 13 y = @entries_row1_y }
+			size = { width = 1683 height = 808 }
+			dynamic_extra_height = @dynamic_extra
+			dynamic_extra_height_max = @dynamic_extra_max
+			verticalScrollbar = "right_vertical_slider"
+
+			background = {
+				name = "gridbox_container_bg"
+				quadTextureSprite = "GFX_tiled_window_transparent"
+			}
+
+			gridBoxType = {
+				name = "tradition_category_gridbox"
+				size = { width = 1667 height = 820 }
+				slotSize = { width = 419 height = 355 }
+				max_slots_horizontal = 4
+				format = "UPPER_LEFT"
+			}
+		}
+	}
+
+	# RELIC GRID BOX ENTRY
+	containerWindowType = {
+		name = "relic_grid_entry"
+		size = {
+			width = 243
+			height = 259
+		}
+
+		background = {
+			name = "bg"
+			quadTextureSprite = "GFX_tiled_window_transparent"
+			no_clicksound = yes # this will be manually set by the relic type and played in the UI via code
+		}
+
+		iconType = {
+			name = "frame"
+			position = { x = 0 y = 0 }
+			quadTextureSprite = "GFX_relics_frame"
+			alwaysTransparent = yes
+		}
+
+		iconType = {
+			name = "frame_unused"
+			position = { x = 0 y = 0 }
+			quadTextureSprite = "GFX_relics_frame_unused"
+			alwaysTransparent = yes
+		}
+
+		iconType = {
+			name = "relic_portrait"
+			position = { x = 13 y = 20 }
+			quadTextureSprite = "GFX_tiled_window_transparent"
+			alwaysTransparent = yes
+		}
+	}
+
+	# ARTIFACT ACTION GRID BOX ENTRY
+	containerWindowType = {
+		name = "artifact_action_grid_entry"
+		size = {
+			width =  643
+			height = 53
+		}
+
+		background = {
+			name = "bg"
+			quadTextureSprite = "GFX_tiles_dark_area_cut_8"
+		}
+
+		instantTextBoxType = {
+			name = "title"
+			font = "cg_16b"
+			position = { x = 13 y = 19 }
+			text = "MINOR_ARTIFACTS"
+			maxWidth = 400
+			maxHeight = 29
+			fixedSize = yes
+			format = left
+			alwaysTransparent = yes
+		}
+
+		instantTextBoxType = {
+			name = "cost"
+			font = "cg_16b"
+			position = { x = 427 y = 19 }
+			maxWidth = 200
+			maxHeight = 29
+			fixedSize = yes
+			format = right
+			text = "45"
+			alwaysTransparent = yes
+		}
+
+		buttonType = {
+			name = "button"
+			quadTextureSprite = "GFX_button_light"
+			position = { x = -1 y = -1 }
+			clicksound = "queuing_building"
+			size = { x = 645 y = 56 }
+		}
+	}
+
+	# CRISIS LEVEL ICON ENTRY
+	containerWindowType = {
+		name = "crisis_level_icon_entry"
+		size = { width = 83 height = 137 }
+		position = { x = 0 y = 0 }
+
+		background = {
+			name = "entry_bg"
+			quadTextureSprite = "GFX_tiled_window_transparent"
+		}
+
+		iconType = {
+			name = "level_icon"
+			position = { x = 12 y = 0 }
+			quadTextureSprite = "GFX_crisis_level_5_btn"
+			frame = 2
+			#alwaysTransparent = yes
+		}
+	}
+
+
+	# CRISIS LEVEL LIST ENTRY
+	containerWindowType = {
+		name = "level_list_entry"
+		size = { width = 848 height = 133 }
+		position = { x = 0 y = 0 }
+
+		background = {
+			name = "level_entry_bg"
+			quadTextureSprite = "GFX_crisis_level_boxes"
+			frame = 2
+		}
+
+		instantTextBoxType = {
+			name = "level_name"
+			font = "malgun_goth_24"
+			position = { x = 27 y = 20 }
+			maxWidth = 333
+			maxHeight = 27
+			fixedSize = no
+			text = "crisis_level_1"
+			format = left
+			vertical_alignment = center
+		}
+
+		instantTextBoxType = {
+			name = "level_description"
+			font = "cg_16b"
+			position = { x = 27 y = 53 }
+			maxWidth = 307
+			maxHeight = 53
+			fixedSize = no
+			text = "LEVEL_DESCRIPTION"
+			format = left
+			vertical_alignment = top
+		}
+
+		gridBoxType = {
+			name = "perks_grid"
+			position = { x = 133 y = 13 }
+			size = { width = 576 height = 120 }
+			slotsize = { width = 100 height = 100 }
+			max_slots_vertical = 1
+		}
+	}
+
+	# CRISIS PERK GRID ENTRY
+	containerWindowType = {
+		name = "perk_grid_entry"
+		size = { width = 100 height = 100 }
+
+		background = {
+			name = "entry_bg"
+			quadTextureSprite = "GFX_tiled_window_transparent"
+		}
+
+		iconType = {
+			name = "perk_icon"
+			position = { x = 0 y = 0 }
+			quadTextureSprite = "GFX_crisis_perks"
+			frame = 1
+			#alwaysTransparent = yes
+		}
+	}
+
+	# OBJECTIVES LIST ENTRY
+	containerWindowType = {
+		name = "objectives_list_entry"
+		size = { width =  643 height = 47 }
+
+		background = {
+			name = "bg"
+			quadTextureSprite = "GFX_tiles_dark_area_cut_8"
+		}
+
+		instantTextBoxType = {
+			name = "title"
+			font = "cg_16b"
+			position = { x = 13 y = 13 }
+			text = "menace_name"
+			maxWidth = 400
+			maxHeight = 29
+			fixedSize = yes
+			format = left
+			alwaysTransparent = yes
+		}
+
+		iconType = {
+			name = "icon"
+			position = { x = 553 y = 11 }
+			quadTextureSprite = "GFX_resource_menace"
+			alwaystransparent = yes
+			scale = 1.0
+		}
+
+		iconType = {
+			name = "recurring_overlay"
+			position = { x = 541 y = 5 }
+			quadTextureSprite = "GFX_timed_overlay"
+			alwaystransparent = yes
+			scale = 1.0
+		}
+
+		instantTextBoxType = {
+			name = "reward"
+			font = "cg_16b"
+			position = { x = 583 y = 13 }
+			maxWidth = 200
+			maxHeight = 29
+			fixedSize = yes
+			format = left
+			text = "45"
+			alwaysTransparent = yes
+		}
+	}
+}

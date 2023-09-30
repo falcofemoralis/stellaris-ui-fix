@@ -1,0 +1,395 @@
+guiTypes = {
+	containerWindowType = {
+		name = "matchmaking_window_coop"
+		position = { x = -847 y = -460 }
+		size = { width = 1680 height = 773 }
+		orientation = center
+
+		containerWindowType = {
+			name = "matchmaking_servers_window"
+			size = { width = 1363 height = 747 }
+			orientation = upper_left
+
+			containerWindowType = {
+				name = "setting_bg_box"
+				size = { width = 1693 height = 947 }
+				position = { x = 0 y = -13 }
+
+					background = {
+						name = "setting_bg_frame"
+						spriteType = "GFX_tile_large_bg"
+					}
+			}
+
+			iconType = {
+				name = "hex_bg"
+				spriteType = "GFX_hex_bg"
+				position = { x = -7 y = -7 }
+				alwaysTransparent = yes
+			}
+
+			iconType = {
+				name = "empire_header_line"
+				quadTextureSprite = "GFX_line"
+				position = { x = 13 y = 53 }
+			}
+
+			containerWindowType = {
+				name = "setting_bg_box2"
+				size = { width = 1627 height = 547 }
+				position = { x = 33 y = 273 }
+
+				background = {
+					name = "setting_bg_frame2"
+					spriteType = "GFX_tiles_dark_area_cut_8"
+				}
+			}
+
+			@filterbuttonY = 181
+			@filter_titleY = 192
+			checkboxType = {
+				name = "filter_no_password"
+				position = { x = 28 y = @filterbuttonY }
+				quadTextureSprite = "GFX_checkbox_20_20_01"
+			}
+
+			instantTextBoxType = {
+				name = "filter_no_password_title"
+				position = { x = 75 y = @filter_titleY }
+				maxWidth = 341
+				maxHeight = 32
+				font = "cg_16b"
+				text = "MATCHMAKING_FILTER_NOPASSWORD"
+			}
+
+			checkboxType = {
+				name = "filter_not_full"
+				position = { x = 268 y = @filterbuttonY }
+				quadTextureSprite = "GFX_checkbox_20_20_01"
+			}
+
+			instantTextBoxType = {
+				name = "filter_not_full_title"
+				position = { x = 315 y = @filter_titleY }
+				maxWidth = 171
+				maxHeight = 32
+				font = "cg_16b"
+				text = "MATCHMAKING_FILTER_NOTFULL"
+			}
+
+			checkboxType = {
+				name = "filter_mod"
+				position = { x = 508 y = @filterbuttonY }
+				quadTextureSprite = "GFX_checkbox_20_20_01"
+			}
+
+			instantTextBoxType = {
+				name = "filter_mod_title"
+				position = { x = 555 y = @filter_titleY }
+				maxWidth = 341
+				maxHeight = 32
+				font = "cg_16b"
+				text = "MATCHMAKING_FILTER_MOD"
+			}
+
+			checkboxType = {
+				name = "filter_version"
+				position = { x = 748 y = @filterbuttonY }
+				quadTextureSprite = "GFX_checkbox_20_20_01"
+			}
+
+			instantTextBoxType = {
+				name = "filter_version_title"
+				position = { x = 795 y = @filter_titleY}
+				maxWidth = 341
+				maxHeight = 32
+				font = "cg_16b"
+				text = "MATCHMAKING_FILTER_VERSION"
+			}
+
+			checkboxType = {
+				name = "filter_crossplay"
+				position = { x = 1015 y = @filterbuttonY }
+				quadTextureSprite = "GFX_checkbox_20_20_01"
+			}
+
+			instantTextBoxType = {
+				name = "filter_crossplay_title"
+				position = { x = 1061 y = @filter_titleY }
+				maxWidth = 341
+				maxHeight = 32
+				font = "cg_16b"
+				text = "MATCHMAKING_FILTER_CROSSPLAY"
+			}
+
+			editBoxType = {
+				position = { x = 1333 y = 144 }
+				name = "filter_name"
+				instantTextBoxType = no
+				textureFile = "gfx/interface/tiles/small_tiles_dialog.dds"
+				font = "cg_16b"
+				borderSize = { x = 11 y = 5 }
+				size = { x = 341 y = 43 }
+				text = "MATCHMAKING_SERVER_FILTER_SEARCH_NAMES"
+				orientation = "UPPER_LEFT"
+			}
+
+			editBoxType = {
+				position = { x = 1333 y = 188 }
+				name = "filter_tags"
+				instantTextBoxType = no
+				textureFile = "gfx/interface/tiles/small_tiles_dialog.dds"
+				font = "cg_16b"
+				borderSize = { x = 11 y = 5 }
+				size = { x = 341 y = 43 }
+				text = "MATCHMAKING_SERVER_FILTER_SEARCH"
+				orientation = "UPPER_LEFT"
+			}
+
+			buttonType = {
+				name = "filter_tags_search"
+				quadTextureSprite = "GFX_standard_button_large_211_40"
+				position = { x = -13332 y = 56 }
+				buttonText = "MESSAGE_BUTTON_SEARCH"
+				buttonFont = "cg_16b"
+			}
+
+			instantTextBoxType = {
+				name = "no_servers"
+				position = { x = 27 y = 273 }
+				borderSize = { x = 0 y = 0 }
+				maxWidth = 1627
+				maxHeight = 307
+				font = "malgun_goth_24"
+				text = "MATCHMAKING_SERVERS_DOSEARCH"
+				format = center
+				vertical_alignment = center
+				#text_color_code = "H"
+			}
+
+			listboxType = {
+				name = "servers"
+				position = { x = 27 y = 273 }
+				size = { x = 1627 y = 547 }
+				Orientation = "UPPER_LEFT"
+				spacing = 1
+				scrollbartype = "standardlistbox_slider"
+			}
+
+			@buttonY = 103
+			buttonType = {
+				name = "refresh_servers"
+				quadTextureSprite = "GFX_standard_button_200_34_button"
+				position = { x = 287 y = @buttonY }
+				buttonText = "MATCHMAKING_REFRESH_SERVERS"
+				buttonFont = "cg_16b"
+				shortCut = "s"
+				Orientation = "LOWER_LEFT"
+				oversound = mouse_over
+			}
+
+			buttonType = {
+				name = "join_direct"
+				quadTextureSprite = "GFX_standard_button_200_34_button"
+				position = { x = 560 y = @buttonY }
+				buttonText = "MATCHMAKING_JOIN_DIRECT"
+				buttonFont = "cg_16b"
+				shortCut = "d"
+				Orientation = "LOWER_LEFT"
+				oversound = mouse_over
+			}
+
+			buttonType = {
+				name = "host"
+				quadTextureSprite = "GFX_standard_button_200_34_button"
+				position = { x = 835 y = @buttonY }
+				buttonText = "MATCHMAKING_HOST_NEWGAME"
+				buttonFont = "cg_16b"
+				shortCut = "n"
+				Orientation = "LOWER_LEFT"
+				oversound = mouse_over
+			}
+
+			buttonType = {
+				name = "host_savegame"
+				quadTextureSprite = "GFX_standard_button_200_34_button"
+				position = { x = 1108 y = @buttonY }
+				buttonText = "MATCHMAKING_HOST_SAVEGAME"
+				buttonFont = "cg_16b"
+				shortCut = "h"
+				Orientation = "LOWER_LEFT"
+				oversound = mouse_over
+			}
+
+			buttonType = {
+				name = "join"
+				quadTextureSprite = "GFX_standard_button_large_211_40"
+				position = { x = 1379 y = 103 }
+				buttonText = "MATCHMAKING_JOIN_SERVER"
+				buttonFont = "cg_16b"
+				shortCut = "j"
+				Orientation = "LOWER_LEFT"
+				oversound = mouse_over
+			}
+
+			buttonType = {
+				name = "sort_by_password"
+				quadTextureSprite = "GFX_button_116_24"
+				position = { x = 19 y = 219 }
+				buttonText = "MATCHMAKING_SERVER_PASSWORD"
+				buttonFont = "cg_16b"
+			}
+
+			buttonType = {
+				name = "sort_by_name"
+				quadTextureSprite = "GFX_galactic_object_button"
+				position = { x = 177 y = 228 }
+				buttonText = "MATCHMAKING_SERVER_NAME"
+				buttonFont = "cg_16b"
+			}
+
+			buttonType = {
+				name = "sort_by_slots"
+				quadTextureSprite = "GFX_button_116_24"
+				position = { x = 539 y = 219 }
+				buttonText = "MATCHMAKING_SERVER_SLOTS"
+				buttonFont = "cg_16b"
+			}
+
+			buttonType = {
+				name = "sort_by_version"
+				quadTextureSprite = "GFX_button_116_24"
+				position = { x = 697 y = 219 }
+				buttonText = "MATCHMAKING_SERVER_VERSION"
+				buttonFont = "cg_16b"
+			}
+
+			buttonType = {
+				name = "sort_by_tags"
+				quadTextureSprite = "GFX_standard_button_200_24"
+				position = { x = 856 y = 228 }
+				buttonText = "MATCHMAKING_SERVER_TAGS"
+				buttonFont = "cg_16b"
+			}
+
+			buttonType = {
+				name = "sort_by_mod"
+				quadTextureSprite = "GFX_galactic_object_button"
+				position = { x = 1127 y = 228 }
+				buttonText = "MATCHMAKING_SERVER_MOD"
+				buttonFont = "cg_16b"
+			}
+
+			buttonType = {
+				name = "sort_by_status"
+				quadTextureSprite = "GFX_button_116_24"
+				position = { x = 1488 y = 219 }
+				buttonText = "MATCHMAKING_SERVER_STATUS"
+				buttonFont = "cg_16b"
+			}
+		}
+
+		instantTextBoxType = {
+			name = "matchmaking_title"
+			position = { x = 35 y = 0 }
+			font = "large_title_font"
+			borderSize = { x = 5 y = 5 }
+			text = "MATCHMAKING_TITLE_COOP"
+			maxWidth = 683
+			maxHeight = 43
+		}
+
+		buttonType = {
+			name = "back"
+			quadTextureSprite = "GFX_standard_button_large_211_40"
+			position = { x = -4 y = 76 }
+			buttonText = "FRONT_BACK"
+			buttonFont = "malgun_goth_24"
+			clicksound = back_click
+			oversound = mouse_over
+			Orientation = "LOWER_LEFT"
+			actionShortCut = "cancel"
+			shortcut = "ESCAPE"
+		}
+	}
+
+	containerWindowType = {
+		name = "matchmaking_server_item_coop"
+		size = { width = 1627 height = 53 }
+
+		buttonType = {
+			name = "select"
+			spriteType = "GFX_matchmaking_entry"
+			position = { x = 7 y = 0 }
+		}
+
+		iconType = {
+			name = "password"
+			spriteType = "GFX_matchmaking_password_icon"
+			position = { x = 67 y = -4 }
+		}
+
+		instantTextBoxType = {
+			name = "name"
+			position = { x = 173 y = 8 }
+			maxWidth = 340
+			maxHeight = 24
+			font = "cg_16b"
+			fixedsize = yes
+			truncate = yes
+			format = center
+		}
+
+		instantTextBoxType = {
+			name = "slots"
+			position = { x = 560 y = 8 }
+			maxWidth = 93
+			maxHeight = 24
+			font = "cg_16b"
+			fixedsize = yes
+			format = center
+		}
+
+		instantTextBoxType = {
+			name = "version"
+			position = { x = 680 y = 8 }
+			maxWidth = 173
+			maxHeight = 24
+			font = "cg_16b"
+			text = "1.0.2"
+			fixedsize = yes
+			format = center
+		}
+
+		instantTextBoxType = {
+			name = "tags"
+			position = { x = 840 y = 8 }
+			maxWidth = 267
+			maxHeight = 24
+			font = "cg_16b"
+			fixedsize = yes
+			format = center
+		}
+
+		instantTextBoxType = {
+			name = "mod"
+			position = { x = 1120 y = 8 }
+			maxWidth = 347
+			maxHeight = 24
+			font = "cg_16b"
+			text = "Sengoku"
+			fixedsize = yes
+			format = center
+		}
+
+		instantTextBoxType = {
+			name = "status"
+			position = { x = 1473 y = 8 }
+			maxWidth = 153
+			maxHeight = 24
+			font = "cg_16b"
+			fixedsize = yes
+			format = center
+		}
+	}
+}

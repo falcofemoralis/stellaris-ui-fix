@@ -1,0 +1,211 @@
+guiTypes = {
+	positionType = {
+		name = "hud_tutorial_window_pos"
+		position = { x = 0 y = 0 }
+	}
+
+	containerWindowType = {
+		name = "hud_tutorial"
+		position = { x = 0 y = 0 }
+		size = { width=100% height=100% }
+
+		background = { # Prevent the player from clicking on unrelated stuff
+			name ="background"
+			quadTextureSprite = "gfx_transparency_button"
+		}
+
+		containerWindowType = {
+			name = "hud_tutorial_dialog"
+			position = { x = 0 y = 0 } # Positioned in code by CHudTutorial
+			size = { width = 485 height = 317 }
+
+			background = {
+				name ="background"
+				quadTextureSprite = "GFX_set_focus_bg"
+				position = { x = 0 y = 0 }
+			}
+
+			buttonType = {
+				name = "close"
+				quadTextureSprite = "GFX_close"
+				position = { x = -65 y = 15 }
+				orientation = upper_right
+				shortcut = "ESCAPE"
+				clicksound = "back_click"
+				pdx_tooltip = "CLOSE_TITLE"
+			}
+
+			containerWindowType = {
+				name = "description_frame_without_more_button"
+				position = { x = 13 y = 67 }
+				size = { width = 459 height = 193 }
+				orientation = upper_left
+
+				background = {
+					name = "frame_background"
+					quadTextureSprite = "GFX_advisor_frame"
+					position = { x = 0 y = 0 }
+				}
+			}
+
+			containerWindowType = {
+				name = "description_frame_with_more_button"
+				position = { x = 13 y = 67 }
+				size = { width = 459 height = 147 }
+				orientation = upper_left
+
+				background = {
+					name = "frame_background"
+					quadTextureSprite = "GFX_advisor_frame"
+					position = { x = 0 y = 0 }
+				}
+			}
+
+			instantTextBoxType={
+				name = "title"
+				font = "malgun_goth_24"
+				text = "" # Set in code by CHudTutorial
+				position = { x = 8 y = 24 }
+				maxWidth = 459
+				maxHeight = 27
+				fixedSize = yes
+				format = center
+			}
+
+			instantTextBoxType = {
+				name = "desc"
+				font = "cg_16b"
+				text = "" # Text set in code by CHudTutorial
+				position = { x = 32 y = 80 }
+				maxWidth = 411
+				maxHeight = 163
+				format = left
+				text_color_code = "E"
+				scrollbartype = "standardtext_slider"
+				alwaysTransparent = no
+			}
+
+			buttonType = {
+				name = "show_more_button"
+				font = "cg_16b"
+				buttonText = SHOW_MORE
+				position = { x = 4 y = 216 }
+				quadTextureSprite = "GFX_tutorial_button_334"
+				clicksound = interface
+				oversound = mouse_over
+			}
+
+			buttonType = {
+				name = "prev_button"
+				font = "cg_16b"
+				text = PREV
+				quadTextureSprite = "GFX_button_164_24"
+				position = { x = 4 y = 251 }
+				clicksound = interface
+				oversound = mouse_over
+			}
+
+			buttonType = {
+				name = "next"
+				font = "cg_16b"
+				buttonText = NEXT
+				quadTextureSprite = "GFX_button_164_24"
+				position = { x = 231 y = 251 }
+				clicksound = interface
+				oversound = mouse_over
+			}
+
+			buttonType = {
+				name = "finished"
+				font = "cg_16b"
+				buttonText = CLOSE
+				quadTextureSprite = "GFX_button_164_24"
+				position = { x = 231 y = 251 }
+				clicksound = interface
+				oversound = mouse_over
+			}
+
+			buttonType = {
+				name = "missions"
+				font = "cg_16b"
+				buttonText = HELP_TUTORIAL_TITLE
+				quadTextureSprite = "GFX_button_164_24"
+				position = { x = 231 y = 251 }
+				clicksound = interface
+				oversound = mouse_over
+			}
+		}
+
+		containerWindowType = {
+			name = "hud_tutorial_close_confirmation"
+			size = { width = 485 height = 317 }
+			position = { x = -243 y = -267 }
+			orientation = center
+
+			background = {
+				name ="background"
+				quadTextureSprite = "GFX_set_focus_bg"
+				position = { x = 0 y = 0 }
+			}
+
+			containerWindowType = {
+				name = "description_frame"
+				position = { x = 13 y = 67 }
+				size = { width = 459 height = 147 }
+				orientation = upper_left
+
+				background = {
+					name = "frame_background"
+					quadTextureSprite = "GFX_advisor_frame"
+					position = { x = 0 y = 0 }
+				}
+			}
+
+			instantTextBoxType={
+				name = "title"
+				font = "malgun_goth_24"
+				text = HUD_TUTORIAL_CLOSE_CONFIRMATION_TITLE
+				position = { x = 8 y = 24 }
+				maxWidth = 459
+				maxHeight = 27
+				fixedSize = yes
+				format = center
+			}
+
+			instantTextBoxType={
+				name = "desc"
+				font = "cg_16b"
+				text = HUD_TUTORIAL_CLOSE_CONFIRMATION_DESC
+				position = { x = 32 y = 80 }
+				maxWidth = 427
+				maxHeight = 160
+				fixedSize = yes
+				format = left
+				text_color_code = "E"
+			}
+
+			buttonType = {
+				name = "no_button"
+				font = "cg_16b"
+				buttonText = NO
+				quadTextureSprite = "GFX_button_164_24"
+				position = { x = 4 y = 251 }
+				clicksound = interface
+				oversound = mouse_over
+				clicksound = "back_click"
+				pdx_tooltip = CLOSE_TITLE
+			}
+
+			buttonType = {
+				name = "yes_button"
+				font = "cg_16b"
+				buttonText = YES
+				quadTextureSprite = "GFX_button_164_24"
+				position = { x = 231 y = 251 }
+				clicksound = interface
+				shortcut = "ESCAPE"
+				oversound = mouse_over
+			}
+		}
+	}
+}

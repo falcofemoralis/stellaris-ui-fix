@@ -1,0 +1,261 @@
+guiTypes = {
+	containerWindowType = {
+		name = "topbar_leaders_view_gamepad"
+		position = { x = 165 y = 165 }
+		size = { width = 1373 height = 744 }
+		orientation = upper_left
+		moveable = no
+		clipping = no
+		
+		background = {
+			name = "background"
+			spriteType = "GFX_plain_bg_tile"
+		}
+				
+		buttonType = {
+			name = "close"
+			quadTextureSprite = "GFX_invisible"
+			position = { x = -55 y = 17 }
+			orientation = upper_right
+			shortcut = "ESCAPE"
+			clicksound = "back_click"
+			pdx_tooltip = "CLOSE_TITLE"
+			actionshortcut = "cancel"
+		}
+		
+		@role_icon_y = 20
+		@role_label_y = 27
+		@recruit_button_y = 27
+		@frame_box_y = 71
+		@column_width = 324
+        
+		buttonType = {
+			name = "governor_icon"
+			quadTextureSprite = "GFX_leader_icons"
+			frame = 4
+			position = { x = 20 y = @role_icon_y }
+			orientation = "UPPER_LEFT"
+			#alwaysTransparent = yes
+		}
+        
+		instantTextBoxType = {
+			name = "governor_title_lable"
+			font = "malgun_goth_24"
+			text = "GOVERNORS"
+			position = { x = 73 y = @role_label_y }
+			maxWidth = 173
+			maxHeight = 27
+			orientation = "UPPER_LEFT"
+			format = left
+			fixedSize = yes
+		}
+        
+		buttonType = {
+			name = "scientist_icon"
+			quadTextureSprite = "GFX_leader_icons"
+			frame = 3
+			position = { x = 347 y = @role_icon_y }
+			orientation = "UPPER_LEFT"
+			alwaysTransparent = yes
+		}
+        
+		instantTextBoxType = {
+			name = "scientits_title_lable"
+			font = "malgun_goth_24"
+			text = "SCIENTIST"
+			position = { x = 393 y = @role_label_y }
+			maxWidth = 160
+			maxHeight = 27
+			orientation = "UPPER_LEFT"
+			format = left
+		}
+        
+		buttonType = {
+			name = "admiral_icon"
+			quadTextureSprite = "GFX_leader_icons"
+			frame = 1
+			position = { x = 687 y = @role_icon_y }
+			orientation = "UPPER_LEFT"
+			#alwaysTransparent = yes
+		}
+        
+		instantTextBoxType = {
+			name = "admirals_title_lable"
+			font = "malgun_goth_24"
+			text = "ADMIRALS"
+			position = { x = 733 y = @role_label_y }
+			maxWidth = 160
+			maxHeight = 27
+			orientation = "UPPER_LEFT"
+			format = left
+		}
+        
+		buttonType = {
+			name = "general_icon"
+			quadTextureSprite = "GFX_leader_icons"
+			frame = 2
+			position = { x = 1027 y = @role_icon_y }
+			orientation = "UPPER_LEFT"
+			alwaysTransparent = yes
+		}
+        
+		instantTextBoxType = {
+			name = "generals_title_lable"
+			font = "malgun_goth_24"
+			text = "GENERALS"
+			position = { x = 1080 y = @role_label_y }
+			maxWidth = 160
+			maxHeight = 27
+			orientation = "UPPER_LEFT"
+			format = left
+		}
+        
+		instantTextBoxType = {
+			name = "leader_instructions"
+			font = "cg_16b"
+			text = "SELECT_LEADER_FOR"
+			position = { x = 27 y = 51 }
+			maxWidth = 667
+			maxHeight = 53
+			fixedSize = yes
+			format = left
+			alwaysTransparent = yes
+		}
+        
+		instantTextBoxType = {
+			name = "leader_capacity"
+			font = "cg_16b"
+			text = "LEADER_CAPACITY"
+			position = { x = 1099 y = 1 }
+			maxWidth = 267
+			maxHeight = 27
+			fixedSize = yes
+			format = right
+		}
+        
+		containerWindowType = {
+			name = "leader_frame_area_1"
+			size = { width = 343 height = 664 }
+			position = { x = 5 y = @frame_box_y }
+        
+			background = {
+				name = "leader_frame2"
+				spriteType = "GFX_dark_area_cut"
+				alwaysTransparent = yes
+			}
+		}
+
+        
+		containerWindowType = {
+			name = "leader_frame_area_2"
+			size = { width = 336 height = 664 }
+			position = { x = 351 y = @frame_box_y }
+        
+			background = {
+				name = "leader_frame2"
+				spriteType = "GFX_dark_area_cut"
+				alwaysTransparent = yes
+			}
+		}
+        
+		containerWindowType = {
+			name = "leader_frame_area_3"
+			size = { width = 336 height = 664 }
+			position = { x = 689 y = @frame_box_y }
+			
+			background = {
+				name = "leader_frame2"
+				spriteType = "GFX_dark_area_cut"
+				alwaysTransparent = yes
+			}
+		}
+		
+		containerWindowType = {
+			name = "leader_frame_area_4"
+			size = { width = 336 height = 664 }
+			position = { x = 1029 y = @frame_box_y }
+			
+			background = {
+				name = "leader_frame2"
+				spriteType = "GFX_dark_area_cut"
+				alwaysTransparent = yes
+			}
+		}
+        
+		# Governors list
+		smoothListboxType = {
+			name ="governors_list"
+			position = { x = 9 y = @frame_box_y }
+			size = { x= @column_width y = 653 }
+			scrollbartype = "standardlistbox_slider"	
+			spacing = -5
+		}
+        
+		# Scientists list
+		smoothListboxType = {
+			name ="scientists_list"
+			position = { x = 348 y = @frame_box_y }
+			size = { x= @column_width y = 653 }
+			scrollbartype = "standardlistbox_slider"
+			spacing = -5
+		}
+        
+		# Admirals list
+		smoothListboxType = {
+			name ="admirals_list"
+			position = { x = 687 y = @frame_box_y }
+			size = { x= @column_width y = 653 }
+			scrollbartype = "standardlistbox_slider"
+			spacing = -5
+		}
+        
+		# Generals list
+		smoothListboxType = {
+			name ="generals_list"
+			position = { x = 1027 y = @frame_box_y }
+			size = { x= @column_width y = 653 }
+			scrollbartype = "standardlistbox_slider"
+			spacing = -8
+		}
+	}	
+	
+	# Recruit leader entry
+	containerWindowType = {
+		name = "topbar_leaders_view_recruit_entry_gamepad"
+		position = { x=0 y=0 }
+		size = { width = 331 height = 60 }
+
+		buttonType = {
+			name = "background"
+			spriteType = "GFX_tiles_frame_light"
+			size = { x = 331 y = 51 }
+			position = { x= 0 y = 4 }
+			clicksound = assign_leader_click
+			
+		}
+		
+		instantTextBoxType = {
+			name = "text"
+			font = "cg_16b"
+			position = { x = 0 y = 16 }
+			maxWidth = @column_width
+			text = "Recruit new leader"
+			format = center
+			alwaysTransparent = yes
+			
+		}
+		
+		containerWindowType = {
+			name = "selected"
+			position = { x=  0 y = 4 }
+			size = { width = 331 height = 51 }
+			background = {
+				name = "selected_bg"
+				spriteType = "GFX_glow_tile_striped"
+				alwaysTransparent = yes
+				
+			}
+		
+		}
+	}
+}

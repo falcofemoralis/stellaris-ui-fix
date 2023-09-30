@@ -1,0 +1,59 @@
+guiTypes = {
+	containerWindowType = {
+		name = "species_portrait_picker_entry"
+		position = { x = 3 y = 3 }
+		size = { width = 128 height = 173 }
+
+		background = {
+			name = "background"
+			spriteType = "GFX_clean_frame_area"
+			clicksound = select_click
+		}
+
+		buttonType = {
+			name = "selected"
+			spriteType = "GFX_glow_tile_orange"
+			orientation = center
+			size = { x = 131 y = 176 }
+			position = { x = -65 y = -88 }
+			alwaysTransparent = yes
+			clicksound = select_click
+		}
+
+		containerWindowType = {
+			name = "portrait"
+			clipping = yes
+			size = { width = 113 height = 160 }
+			position = { x = 8 y = 7 }
+
+			iconType = {
+				name = "portrait"
+				spriteType = "GFX_portrait_character_close_up"
+				scale = 0.36
+				position = { x = -80 y = -13 }
+				alwaysTransparent = yes
+			}
+
+			iconType = {
+				name = "portrait_overlay"
+				spriteType = "GFX_invisible"
+				scale = 1 
+				position = { x = 7 y = 7 }
+				alwaysTransparent = yes
+			}
+
+			instantTextBoxType={
+				name = "portrait_count_text"
+				font = "malgun_goth_24"
+				text = ""
+				position = { x= 49 y = 56 }
+				maxWidth = 47
+				maxHeight = 47
+				fixedSize = yes
+				text_color_code = "E"
+				format = left
+				alwaysTransparent = yes
+			}
+		}
+	}
+}

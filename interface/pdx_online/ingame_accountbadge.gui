@@ -1,0 +1,410 @@
+@accountlogin_title_font = "malgun_goth_24"
+@accountlogin_label_font = "cg_16b"
+@accountlogin_error_font = "cg_16b"
+@accountlogin_success_font = "cg_16b"
+
+guiTypes = {
+	containerWindowType = {
+		name = "pdx_online_linkaccount_dialog"
+		orientation = center
+		origo = center
+		moveable = no
+		position = { x = 0 y = -13 }
+		size = { width = 800 height = 349 }
+
+		background = {
+			name = "background"
+			quadTextureSprite ="GFX_tile_outliner_bg"
+		}
+
+		instantTextBoxType = {
+			position = { x= 67 y = 107 }
+			name = "link_description"
+			font = "cg_16b"
+			borderSize = {x = 0 y = 0 }
+			maxWidth = 667
+			maxHeight = 27
+			text = "LINK_ACCOUNTS"
+			orientation = "UPPER_LEFT"
+			format = center
+		}
+		
+		iconType = {
+			name = "hex_bg"
+			spriteType = "GFX_hex_center_bg"
+			position = { x = -367 y = 0 }
+			alwaysTransparent = yes
+			Orientation = "CENTER_UP"
+		}
+
+		iconType = {
+			name = "empire_header_line"
+			quadTextureSprite = "GFX_line_center"
+			position = { x = 53 y = 51 }
+		}
+
+		buttonType = {
+			name = "DeclineButton"
+			quadTextureSprite = "GFX_standard_button_142_34_button"
+			orientation = center_down
+			position = { x = 107 y = -160 }
+			Orientation = "LOWER_LEFT"
+			buttonText = ""
+			buttonFont = "cg_16b"
+			shortcut = "ESCAPE"
+		}
+
+		buttonType = {
+			name = "AgreeButton"
+			quadTextureSprite = "GFX_standard_button_142_34_button"
+			orientation = center_down
+			position = { x = -328 y = -160 }
+			Orientation = "LOWER_RIGHT"
+			buttonText = ""
+			buttonFont = "cg_16b"
+			shortcut = "RETURN"
+		}
+		
+		instantTextBoxType = {
+			position = { x= 67 y = -60 }
+			name = "dont_remind_description"
+			font = "cg_16b"
+			borderSize = {x = 0 y = 0 }
+			maxWidth = 667
+			maxHeight = 27
+			text = "LINK_ACCOUNTS_DONT_REMIND"
+			orientation = "LOWER_LEFT"
+			#format = center
+		}
+		
+		checkboxType = {
+			name = "dont_remind_checkbox"
+			orientation = "LOWER_LEFT"
+			quadTextureSprite = "GFX_checkbox"
+			position = { x= 20 y = -57 }		
+		}
+			
+		instantTextBoxType = {
+			position = { x = 67 y = 27 }
+			name = "title"
+			font = "malgun_goth_24"
+			borderSize = {x = 0 y = 0 }
+			maxWidth = 667
+			maxHeight = 27
+			text = ""
+			orientation = "UPPER_LEFT"
+			format = center
+		}
+	}
+	
+	containerWindowType = {
+		name = "pdx_online_createprofile_dialog"
+		orientation = center
+		origo = center
+		moveable = no
+		position = { x = 0 y = -13 }
+		size = { width = 800 height = 363 }
+
+		background = {
+			name = "background"
+			quadTextureSprite ="GFX_tile_outliner_bg"
+		}
+
+		instantTextBoxType = {
+			position = { x= 67 y = 107 }
+			name = "create_description"
+			font = "cg_16b"
+			borderSize = {x = 0 y = 0 }
+			maxWidth = 667
+			maxHeight = 27
+			text = "CREATE_PROFILE_DESCRIPTION"
+			orientation = "UPPER_LEFT"
+			format = center
+		}
+		
+		iconType = {
+			name = "hex_bg"
+			spriteType = "GFX_hex_center_bg"
+			position = { x = -367 y = 0 }
+			alwaysTransparent = yes
+			Orientation = "CENTER_UP"
+		}
+
+		iconType = {
+			name = "empire_header_line"
+			quadTextureSprite = "GFX_line_center"
+			position = { x = 53 y = 51 }
+		}
+
+		buttonType = {
+			name = "DeclineButton"
+			quadTextureSprite = "GFX_standard_button_142_34_button"
+			orientation = center_down
+			position = { x = 5 y = -80 }
+			Orientation = "LOWER_LEFT"
+			buttonText = ""
+			buttonFont = "cg_16b"
+			shortcut = "ESCAPE"
+		}
+
+		buttonType = {
+			name = "AgreeButton"
+			quadTextureSprite = "GFX_standard_button_142_34_button"
+			orientation = center_down
+			position = { x = -227 y = -80 }
+			Orientation = "LOWER_RIGHT"
+			buttonText = ""
+			buttonFont = "cg_16b"
+			shortcut = "RETURN"
+		}
+		
+		instantTextBoxType = {
+			position = { x = 67 y = 27 }
+			name = "title"
+			font = "malgun_goth_24"
+			borderSize = {x = 0 y = 0 }
+			maxWidth = 667
+			maxHeight = 27
+			text = ""
+			orientation = "UPPER_LEFT"
+			format = center
+		}
+		
+		instantTextBoxType={
+			name = "createprofile_username"
+			text = "CREATE_PROFILE_USERNAME"
+			orientation = center_down
+			position = { x = -333 y = -127 }
+			font = @accountlogin_label_font
+			maxWidth = 667
+			maxHeight = 43	
+			format = left
+			fixedsize = no
+			truncate = no
+		}
+		
+		editBoxType={
+			name = "createprofile_username_editusername"
+			orientation = upper_left
+			position = { x = 187 y = 227 }
+			text = ""
+			font = @accountlogin_label_font
+			size = { x=467 y=37 }
+			instantTextBoxType = no
+			use_special_chars = no
+			textureFile = "pdx_online_assets/gfx/interface/online_accountlogin_line.dds"
+		}
+		
+		# Errors
+		instantTextBoxType={
+			name = "errormessage"
+			position = { x= 21 y = -91 }
+			Orientation = "LOWER_LEFT"	
+			text = ""
+			font = @accountlogin_error_font
+			maxWidth = 667
+			maxHeight = 43
+			format = left
+			fixedsize = no
+			truncate = no
+		}
+	}
+	
+	containerWindowType = {
+		name = "pdx_online_login_dialog"
+		orientation = center
+		origo = center
+		moveable = no
+		position = { x = 0 y = -13 }
+		size = { width = 800 height = 483 }
+
+		background = {
+			name = "background"
+			quadTextureSprite ="GFX_tile_outliner_bg"
+		}
+
+		iconType = {
+			name = "hex_bg"
+			spriteType = "GFX_hex_center_bg"
+			position = { x = -367 y = 0 }
+			alwaysTransparent = yes
+			Orientation = "CENTER_UP"
+		}
+
+		iconType = {
+			name = "empire_header_line"
+			quadTextureSprite = "GFX_line_center"
+			position = { x = 53 y = 51 }
+		}
+
+		buttonType = {
+			name = "DeclineButton"
+			quadTextureSprite = "GFX_standard_button_142_34_button"
+			orientation = center_down
+			position = { x = -393 y = -80 }
+			buttonText = "DIALOG_DECLINE"
+			buttonFont = "cg_16b"
+			shortcut = "ESCAPE"
+		}
+
+		instantTextBoxType = {
+			position = { x = 67 y = 27 }
+			name = "title"
+			font = "malgun_goth_24"
+			borderSize = {x = 0 y = 0 }
+			maxWidth = 667
+			maxHeight = 27
+			text = ""
+			orientation = "UPPER_LEFT"
+			format = center
+		}
+	}
+
+	windowType = {
+		name = "ingame_online_accountlogin_window"
+		position = { x=0 y= -133}
+		size = { x=840 y=400 }
+		moveable = 0
+
+		instantTextBoxType = {
+			position = { x= 121 y = 240 }
+			name = "login_description_bold"
+			font = "malgun_goth_24"
+			borderSize = {x = 0 y = 0 }
+			maxWidth = 560
+			maxHeight = 27
+			text = "LOGIN_DESCRIPTION_BOLD"
+			orientation = "UPPER_LEFT"
+			format = center
+		}
+		
+		instantTextBoxType = {
+			position = { x= 67 y = 341 }
+			name = "login_description"
+			font = "cg_16b"
+			borderSize = {x = 0 y = 0 }
+			maxWidth = 667
+			maxHeight = 27
+			text = "LOGIN_DESCRIPTION"
+			orientation = "UPPER_LEFT"
+			format = center
+		}
+		
+		# Email
+		instantTextBoxType={
+			name = "online_accountlogin_email"
+			position = { x= 37 y = 43 }
+			text = "EMAIL"
+			Orientation = "LOWER_LEFT"
+			font = @accountlogin_label_font
+			maxWidth = 667
+			maxHeight = 43	
+			format = left
+			fixedsize = no
+			truncate = no
+		}
+		
+		editBoxType={
+			name = "online_accountlogin_editemail"
+			position = { x= 128 y = 32 }
+			Orientation = "LOWER_LEFT"
+			text = ""
+			font = @accountlogin_label_font
+			size = { x=395 y=37 }
+			instantTextBoxType = no
+			use_special_chars = no
+			textureFile = "pdx_online_assets/gfx/interface/online_accountlogin_line.dds"
+		}
+		
+		# Password
+		instantTextBoxType={
+			name = "online_accountlogin_password"
+			position = { x= 37 y = 80 }
+			Orientation = "LOWER_LEFT"
+			text = "PASSWORD"
+			font = @accountlogin_label_font
+			maxWidth = 667
+			maxHeight = 43	
+			format = left
+			fixedsize = no
+			truncate = no
+		}
+
+		editBoxType={
+			name = "online_accountlogin_editpassword"
+			position = { x= 128 y = 69 }
+			Orientation = "LOWER_LEFT"
+			text = ""
+			font = @accountlogin_label_font
+			size = { x=395 y=37 }
+			instantTextBoxType = no
+			use_special_chars = no
+			textureFile = "pdx_online_assets/gfx/interface/online_accountlogin_line.dds"
+		}
+
+		checkboxType = {
+			name = "online_accountlogin_peekpassword"
+			quadTextureSprite = "GFX_peekpassword"
+			position = { x= 528 y = 72 }		
+			Orientation = "LOWER_LEFT"			
+		}
+
+		
+		guiButtonType = {
+			name = "online_form_submitbutton"
+			quadTextureSprite = "GFX_standard_button_142_34_button"
+			position = { x= -268 y = 136  }
+			Orientation = "LOWER_RIGHT"
+			buttonText = "LOG_IN"
+			buttonFont = "cg_16b"
+		}
+		
+		guiButtonType = {
+			name = "online_form_forgot_password"
+			quadTextureSprite = "GFX_standard_button_142_34_button"
+			position = { x= -268 y = 75  }
+			Orientation = "LOWER_RIGHT"
+			buttonText = "FORGOT_PASSWORD"
+			buttonFont = "cg_16b"
+			web_link = "https://accounts.paradoxplaza.com/profile/password/reset/new"
+		}
+		
+		guiButtonType =	{
+			name = "create_account_button"
+			quadTextureSprite = "GFX_standard_button_142_34_button"
+			position = { x= -268 y = 13  }
+			Orientation = "LOWER_RIGHT"
+			buttonText = "CREATE_ACCOUNT"
+			buttonFont = "cg_16b"
+		}
+
+		# Success
+		instantTextBoxType={
+			name = "online_accountlogin_success"
+			position = { x= 21 y = 117 }
+			Orientation = "LOWER_LEFT"	
+			text = ""
+			font = @accountlogin_success_font
+			maxWidth = 667
+			maxHeight = 43
+			format = left
+			fixedsize = no
+			truncate = no
+		}
+	
+		# Errors
+		instantTextBoxType={
+			name = "online_accountlogin_error"
+			position = { x= 21 y = 117 }
+			Orientation = "LOWER_LEFT"	
+			text = ""
+			font = @accountlogin_error_font
+			maxWidth = 667
+			maxHeight = 43
+			format = left
+			fixedsize = no
+			truncate = no
+		}
+		
+	}
+}

@@ -1,0 +1,244 @@
+guiTypes = {
+	containerWindowType = {
+		name = "dlc_landing_page"
+		position = { x = 0 y = -5 }
+		size = { width=1060 height=1013 }
+		origo = center
+		orientation = center
+
+		iconType = {
+			name ="backgroundshade"
+		 	quadTextureSprite = "GFX_black_bg_tile"
+			position = { x=-6667 y=-6667 }
+			scale = 1000
+		}
+
+		buttonType = {
+			name ="background"
+		 	quadTextureSprite = "GFX_tile_large_bg_plain"
+			position = { x= -529 y = -507 }
+			size = { x=1060 y=1013 }
+			orientation = center
+		}
+
+		buttonType = {
+			name = "spinner_prevButton"
+			spriteType = "GFX_button_left"
+			size = { x = 47 y = 47 }
+			position = { x = 5 y = 4 }
+			clicksound = decrement_click
+		}
+
+		buttonType = {
+			name = "spinner_nextButton"
+			spriteType = "GFX_button_right"
+			size = { x = 47 y = 47 }
+			position = { x = 1005 y = 4 }
+			clicksound = increment_click
+		}
+		
+		buttonType = { # Removes the ability to use the backspace shortcut of the view behind the landing page
+			name = "shortcut_eater"
+			spriteType = "GFX_invisible"
+			shortcut = "BACKSPACE"
+			position = { x = -6667 y = -6667 }
+			clicksound = no_sound
+		}
+
+		instantTextBoxType = {
+			name = "dlc_name"
+			font = "large_title_font"
+			position = { x = 100 y = 7 }
+			maxWidth = 893
+			format = center
+			alwaysTransparent = yes
+		}
+
+		iconType = { 
+			name = "dlc_banner"
+			spriteType = "GFX_apocalypse_banner"
+			position = { x = 20 y = 64 }
+			scale = 0.788
+			alwaysTransparent = yes
+		}
+
+		iconType = {
+			name = "black_frame"
+			spriteType = "GFX_diplomacy_portrait_shadow_frame"
+			position = { x = 16 y = 60 }
+			scale = 0.8
+			alwaysTransparent = yes
+		}
+		
+		iconType = {
+			name = "stripes_1"
+			spriteType = "GFX_diplomacy_stripes_2"
+			position = { x = 23 y = 67 }
+			orientation = upper_left
+			scale = 0.8
+			alwaysTransparent = yes
+		}
+		
+		iconType = {
+			name = "city_frame"
+			spriteType = "GFX_diplomacy_portrait_frame"
+			position = { x = 15 y = 60 }
+			scale = 0.8
+			alwaysTransparent = yes
+		}
+
+		buttonType = {
+			name = "expansion_description_bg"
+			spriteType = "GFX_tiles_dark_area_cut_8"
+			size = { x = 627 y = 427 }
+			position = { x = 20 y = 447 }
+			clicksound = tab_click
+		}
+
+		instantTextBoxType = {
+			name = "expansion_title"
+			position = { x = 29 y = 467 }
+			font = "malgun_goth_24"
+			maxWidth = 613
+			maxHeight = 80
+			format = left
+			text = "Expansion"
+			fixedsize = yes
+		}
+
+		instantTextBoxType = {
+			name = "expansion_description"
+			position = { x = 29 y = 533 }
+			font = "cg_16b"
+			maxWidth = 607
+			maxHeight = 335
+			format = left
+			text = "MISSING_TEXT"
+			scrollbarType = "standardtext_slider"
+			text_color_code = "L"
+		}
+
+		buttonType = {
+			name = "tts_button_description"
+			position = { x = 607 y = 833 }
+			spriteType = "GFX_button_tts_start"
+			buttonFont = "cg_16b"
+			shortCut = "t"
+		}
+
+		buttonType = {
+			name = "expansion_features_bg"
+			spriteType = "GFX_tiles_dark_area_cut_8"
+			size = { x = 387 y = 427 }
+			position = { x = 653 y = 447 }
+			clicksound = tab_click
+		}
+
+		instantTextBoxType = {
+			name = "expansion_features"
+			position = { x = 667 y = 453 }
+			font = "cg_16b"
+			maxWidth = 367
+			maxHeight = 416
+			format = left
+			text = "MISSING_TEXT"
+			scrollbarType = "standardtext_slider"
+		}
+
+		buttonType = {
+			name = "tts_button_features"
+			position = { x = 1000 y = 833 }
+			spriteType = "GFX_button_tts_start"
+			buttonFont = "cg_16b"
+			shortCut = "t"
+		}
+
+		instantTextBoxType = {
+			name = "dlc_ownership"
+			font = "cg_16b"
+			position = { x = 27 y = 896 }
+			maxWidth = 667
+			text = "NOT_OWN_DLC"
+			format = left
+			alwaysTransparent = yes
+		}
+
+		instantTextBoxType = {
+			name = "dlc_recommendations"
+			font = "cg_16b"
+			position = { x = 1013 y = 896 }
+			maxWidth = 280
+			text = "RECOMMENDED_DLCS"
+			format = left
+			alwaysTransparent = yes
+		}
+
+		gridBoxType = {
+			name = "recommendations"
+			position = { x = 800 y = 880 }
+			size = { width = 533 height = 267 }
+			#spacing = 0
+			orientation = LEFT_UP
+			slotSize = {
+				width = 53
+				height = 53
+			}
+		}
+
+		buttonType = {
+			id = "BackButton"
+			name = "BackButton"
+			quadTextureSprite = "GFX_standard_button_large_211_40"
+			position = { x = 0 y = 927 }
+			buttonFont = "malgun_goth_24"
+			shortcut = "ESCAPE"
+			clicksound = "back_click"
+			buttontext = "CANCEL"
+			actionShortCut = "cancel"
+			navRight = "StoreButton"
+			oversound = mouse_over
+		}
+
+		buttonType = {
+			id = "StoreButton"
+			name = "StoreButton"
+			quadTextureSprite = "GFX_standard_button_large_211_40"
+			position = { x = 740 y = 927 }
+			buttonFont = "malgun_goth_24"
+			clicksound = "confirm_click"
+			buttontext = "VIEW_IN_STORE"
+			navLeft = "BackButton"
+			oversound = mouse_over
+		}
+	}
+
+	containerWindowType = {
+		name = "landing_page_dlc_list_entry"
+		position = { x = 0 y = 0 }
+		size = { width = 67 height = 60 }
+
+		buttonType = {
+			name = "dlc_underlay"
+			position = { x = -12 y = 0 }
+			quadTextureSprite = "GFX_invisible" # Set by code
+			alwaysTransparent = no
+		}
+
+		buttonType = {
+			name = "dlc_button"
+			position = { x = -1 y = 1 }
+			quadTextureSprite = "GFX_invisible"
+			format = center
+			pdx_tooltip = "DLC_START"
+			alwaysTransparent = yes
+		}	
+
+		iconType = {
+			name = "dlc_frame"
+			position = { x = -1 y = 1 }
+			quadTextureSprite = "GFX_invisible"
+			pdx_tooltip = "DLC_START"
+			alwaysTransparent = yes
+		}
+	}
+}

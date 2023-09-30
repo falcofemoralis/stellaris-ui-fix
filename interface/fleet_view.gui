@@ -1,0 +1,1764 @@
+guiTypes = {
+
+
+
+	positionType = {
+		name = "fleet_view_max_height_subtraction"
+		position = { x = 0 y = 153 }
+	}
+
+
+	# Controlls the entire window
+
+	containerWindowType = {
+		name = "fleet_view"
+		size = { width = 680 height = 60 }
+
+		orientation = LOWER_LEFT
+		origo = LOWER_LEFT
+		show_position = { x = 47 y = -40 }
+		hide_position = { x = -633 y = -40 }
+		animation_time = 200
+		animation_type = decelerated
+
+		# Controlls size of top bar
+
+		# Selected Fleets
+		smoothListboxType = {
+			name = "fleets"
+			position = { x = 0 y = 31 }
+			size = { x = 667 y = 0 }
+			scrollbarType = "standardlistbox_slider"
+			borderSize = { x = 0 y = 0 }
+			orientation = "UPPER_LEFT"
+			spacing = 1
+		}
+
+		###### Very Top part of fleet view, with orders for entire fleet ####
+
+		containerWindowType = {
+			name = "header"
+			size = { width = 680 height = 67 }
+			position = { x = 0 y = -27 }
+
+			iconType = {
+				name = "fleet_view_entry_bg"
+				spriteType = "GFX_fleet_view_top_panel_bg"
+				position = { x = 0 y = 0 }
+			}
+
+			containerWindowType = {
+				name = "orders"
+				size = { width = 680 height = 400 }
+				position = { x = 0 y = -5 }
+
+				# Top orders spacing
+				gridBoxType = {
+					name = "orders"
+					slotSize = { width = 45 height = 40 }
+					format = "UPPER_LEFT"
+				}
+			}
+
+			buttonType = {
+				name = "close"
+				quadTextureSprite = "GFX_close_square"
+				orientation = UPPER_RIGHT
+				position = { x = -60 y = 4  }
+				shortcut = "ESCAPE"
+				clicksound = "back_click"
+				actionShortcut = "cancel"
+			}
+		}
+	}
+
+	# New Fleet View SubEntry
+
+	# Individual ship
+	containerWindowType = {
+		name = "fleet_view_subentry"
+		size = { width = 680 height = 56 }		#Fleet entry size
+		position = { x = 0 y = 0 }
+
+		iconType = {
+			name = "fleet_view_entry_top_background"
+			spriteType = "GFX_ship_entry_bg"
+		}
+
+		iconType = {
+			name = "health"
+			position = { x = 0 y = 0 }
+			spriteType = "GFX_fleet_view_health"
+			alwaysTransparent = yes
+		}
+
+		iconType = {
+			name = "armor"
+			position = { x = 9 y = 0 }
+			spriteType = "GFX_fleet_view_armor"
+			alwaysTransparent = yes
+		}
+
+		iconType = {
+			name = "shields"
+			position = { x = 19 y = 0 }
+			spriteType = "GFX_fleet_view_shields"
+			alwaysTransparent = yes
+		}
+
+		iconType = {
+			name = "icon"
+			position = { x = 31 y = 8 }
+			spriteType = "GFX_ship_sizes"
+			frame = 1
+			alwaysTransparent = yes
+		}
+
+		instantTextBoxType={
+			name = "name"
+			position = { x = 73 y = 0 }
+			font = "cg_16b"
+			text = "NAME"
+			maxWidth = 467
+			maxHeight = 59
+			fixedSize = yes
+			format = left
+			vertical_alignment = center
+			#alwaysTransparent = yes
+		}
+
+		buttonType = {
+			name = "disband"
+			quadTextureSprite = "GFX_fleetview_destroy_fleet"
+#			quadTextureSprite = "GFX_delete_template_button"
+			position = { x= -60 y = 3 }
+			Orientation = "UPPER_RIGHT"
+			buttonFont = "cg_16b"
+		}
+
+		buttonType = {
+			name = "inspect"
+			quadTextureSprite = "GFX_fleetview_inspect_ship"
+			position = { x= -105 y = 3 }
+			Orientation = "UPPER_RIGHT"
+			buttonFont = "cg_16b"
+		}
+
+		buttonType = {
+			name = "inspect_army"
+			quadTextureSprite = "GFX_fleetview_inspect_army"
+			position = { x= -151 y = 3 }
+			Orientation = "UPPER_RIGHT"
+			buttonFont = "cg_16b"
+			clicksound = click_army_select
+		}
+	}
+
+
+	# New Fleet View Summary Entry
+
+	containerWindowType = {
+		name = "fleet_view_summary_entry"
+		size = { width = 125 height = 56 }
+
+		iconType = {
+			name = "health"
+			position = { x = 0 y = 1 }
+			spriteType = "GFX_fleet_view_health_2"
+			alwaysTransparent = yes
+		}
+
+		iconType = {
+			name = "armor"
+			position = { x = 7 y = 1 }
+			spriteType = "GFX_fleet_view_armor_2"
+			alwaysTransparent = yes
+		}
+
+		iconType = {
+			name = "shields"
+			position = { x = 13 y = 1 }
+			spriteType = "GFX_fleet_view_shields_2"
+			alwaysTransparent = yes
+		}
+
+		iconType = {
+			name = "icon"
+			position = { x = 20 y = 1 }
+			spriteType = "GFX_ship_sizes_top"
+			frame = 1
+		}
+
+		iconType = {
+			name = "icon_damaged"
+			position = { x = 20 y = 1 }
+			spriteType = "GFX_ship_sizes_top_damaged"
+			frame = 1
+		}
+
+		iconType = {
+			name = "upgradable"
+			position = { x = -25 y = 4 }
+			spriteType = "GFX_fleet_view_upgradable_design"
+			orientation = "UPPER_RIGHT"
+			pdx_tooltip = "FLEET_VIEW_DESIGN_UPGRADABLE"
+			frame = 2
+		}
+
+		instantTextBoxType={
+			name = "count"
+			orientation = lower_left
+			position = { x = 28 y = -25 }
+			font = "cg_16b"
+			text = "999"
+			maxWidth = 67
+			maxHeight = 53
+			fixedSize = no
+			format = left
+			alwaysTransparent = no
+		}
+	}
+
+	# New Fleet View Summary
+
+	containerWindowType = {
+		name = "fleet_view_summary"
+		size = { width = 680 height = 57 }
+
+		buttonType = {
+			name = "interactable_bg"
+			spriteType = "GFX_ship_entry_bg"
+			position = { x = 0 y = 0 }
+		}
+
+		iconType = {
+			name = "non_interactable_bg"
+			spriteType = "GFX_ship_entry_bg"
+			position = { x = 0 y = 0 }
+		}
+
+		overlappingElementsBoxType = {
+			name = "entries"
+			position = { x = 0 y = 0 }
+			size = { x = 667 y = 0 }
+		}
+	}
+
+	# New Fleet View Entry
+
+	containerWindowType = {
+		name = "fleet_view_entry"
+		size = { width = 680 height = 345 }    # SET DISTANCE BETWEEN ENTRIES
+		position = { x = 0 y = 0 }
+		#Ship name and type section
+
+		clipping = no
+
+		containerWindowType = {
+			name = "top"
+			size = { width = 680 height = 53 }
+			position = { x = 0 y = 0 }
+
+			buttonType = {
+				name = "header_button"
+				quadTextureSprite = "GFX_fleet_view_main_transport_bg"
+				position = { x = 0 y = 0 }
+				oversound = no_sound
+				clicksound = click
+			}
+
+			iconType = {
+				name = "header_line"
+				spriteType = "GFX_line"
+				position = { x = 21 y = 51 }
+			}
+
+			iconType = {
+				name = "icon"
+				position = { x = 72 y = 9 }
+				spriteType = "GFX_ship_class_medium"
+				alwaysTransparent = yes
+			}
+
+			buttonType = {
+				name = "flag"
+				quadTextureSprite = "GFX_empire_flag_64"
+				position = { x= 0 y = 0  }
+				scale = 0.8
+				oversound = no_sound
+			}
+
+			instantTextBoxType={
+				name = "fleet_name"
+				font = "malgun_goth_24"
+				text = "NAME"
+				position = { x = 120 y = 7 }
+				maxWidth = 347
+				maxHeight = 20
+				fixedSize = yes
+				format = left
+				alwaysTransparent = yes
+			}
+
+			instantTextBoxType={
+				name = "unknown_faction_name"
+				font = "cg_16b"
+				text = ""
+				position = { x = 120 y = 37 }
+				maxWidth = 240
+				maxHeight = 20
+				fixedSize = yes
+				format = left
+				alwaysTransparent = yes
+			}
+
+			buttonType = {
+				name = "rename_button"
+				quadTextureSprite = "gfx_transparency_button"
+				position = { x = 120 y = 9 }
+				size = { x = 347 y = 20 }
+				clicksound = confirm_click
+				oversound = no_sound
+			}
+
+			instantTextBoxType = {
+				name = "fleet_type"
+				font = "cg_16b"
+				text = ""
+				position = { x = 120 y = 36 }
+				maxWidth = 573
+				maxHeight = 53
+				fixedSize = yes
+				format = left
+				text_color_code = "E"
+				alwaysTransparent = yes
+			}
+
+			buttonType = {
+				name = "open_fleet_manager"
+				quadTextureSprite = "GFX_fleet_manager_button"
+				position = { x= -196 y = 13 }
+				Orientation = "UPPER_RIGHT"
+				buttonFont = "cg_16b"
+			}
+
+			buttonType = {
+				name = "disband"
+				quadTextureSprite = "GFX_delete_template_button"
+				position = { x= -105 y = 13 }
+				Orientation = "UPPER_RIGHT"
+				buttonFont = "cg_16b"
+			}
+
+			buttonType = {
+				name = "deselect"
+				quadTextureSprite = "GFX_close_square"
+				position = { x= -60 y = 13 }
+				Orientation = "UPPER_RIGHT"
+				buttonFont = "cg_16b"
+			}
+		}
+
+		# SIZE AND POSITION OF LEADER BG
+		@leader_area_w = 377
+		@fleet_info_area_h = 140
+		@fleet_info_area_y_pos = 120
+		@fleet_info_area_y_pos_portrait = 137
+		containerWindowType = {
+			name = "observation_station_window"
+			size = { width = @leader_area_w height = @fleet_info_area_h }
+			position = { x = 9 y = @fleet_info_area_y_pos }
+
+			background = {
+				name = "info_background"
+				spriteType = "GFX_tiles_dark_area_cut_8"
+				position = { x = 0 y =0 }
+			}
+
+			instantTextBoxType = {
+				name = "civ_name"
+				font = "cg_16b"
+				position = { x = 7 y = 7 }
+				maxWidth = 573
+				maxHeight = 53
+				fixedSize = yes
+				format = left
+				text = "Human Civilization (Steam Age)"
+				text_color_code = "H"
+				alwaysTransparent = yes
+			}
+			instantTextBoxType = {
+				name = "output"
+				font = "cg_16b"
+				position = { x = 7 y = 33 }
+				maxWidth = 333
+				maxHeight = 53
+				fixedSize = yes
+				format = left
+				text_color_code = "E"
+			}
+
+			iconType = {
+				name = "progress_bar"
+				spriteType = "GFX_progressbar_green"
+				position = { x = 7 y = 93 }
+			}
+		}
+
+		containerWindowType = {
+			name = "colonizer_pop"
+			size = { width = @leader_area_w height = @fleet_info_area_h }
+			position = { x = 9 y = @fleet_info_area_y_pos }
+
+
+			buttonType = {
+				name = "portrait_bg"
+				quadTextureSprite = "GFX_leader_bg_admiral"
+				position = { x = 11 y = 11 }
+				scale = 0.225
+				alwaystransparent = yes
+			}
+
+			#GFX_tiles_green_side_frame_top
+			background = {
+				name = "colonizer_background"
+				spriteType = "GFX_tiles_dark_area_cut_8"
+				position = { x = 0 y = 0 }
+			}
+
+			instantTextBoxType={
+				name = "name"
+				position = { x = 113 y = 7 }
+				font = "cg_16b"
+				text = "NAME"
+				maxWidth = 293
+				maxHeight = 20
+				fixedSize = yes
+				format = left
+				alwaysTransparent = yes
+			}
+
+			OverlappingElementsBoxType = {
+				name = "ethos"
+				position = { x = 115 y = 35 }
+				size = { x = 208 y = 21 }
+				format = left
+			}
+			OverlappingElementsBoxType = {
+				name = "traits"
+				position = { x = 115 y = 83 }
+				size = { x = 208 y = 21 }
+				format = left
+			}
+
+			containerWindowType = {
+				name = "species_portrait"
+				size = { width = 100 height = 113 }
+				position = { x = 0 y = 0  }
+				clipping = no
+
+				iconType = {
+					name = "portrait"
+					quadTextureSprite = "GFX_portrait_character"
+					scale = 0.30
+					alwaysTransparent = yes
+					position = { x = -60 y = -27  }
+				}
+			}
+		}
+
+		containerWindowType = {
+			name = "portrait_container"
+			position = { x = 13 y = @fleet_info_area_y_pos }
+			size = { width = 367 height = @fleet_info_area_h }
+
+			background = {
+				name = "leader_background"
+				spriteType = "GFX_dark_area_cut"
+				alwaysTransparent = yes
+			}
+		}
+
+		containerWindowType = {
+			name = "orders_small"
+			size = { width = 280 height = @fleet_info_area_h }
+			position = { x = 393 y = @fleet_info_area_y_pos }
+
+			background = {
+				name = "orders_small_background"
+				spriteType = "GFX_tiles_dark_area_cut_8"
+			}
+
+			gridBoxType = {
+				name = "orders"
+				position = { x = -7 y = -4 }
+				slotSize = { width = 68 height = 67 }
+				max_slots_horizontal = 4
+				format = "UPPER_LEFT"
+			}
+		}
+
+		containerWindowType = {
+			name = "orders_large"
+			size = { width = 336 height = @fleet_info_area_h }
+			position = { x = 336 y = @fleet_info_area_y_pos }
+
+			background = {
+				name = "orders_large_background"
+				spriteType = "GFX_tiles_dark_area_cut_8"
+			}
+
+			gridBoxType = {
+				name = "orders"
+				position = { x = -7 y = -4 }
+				slotSize = { width = 65 height = 67 }
+				format = "UPPER_LEFT"
+				max_slots_horizontal = 5
+			}
+		}
+
+		containerWindowType = {
+			name = "observation_orders"
+			size = { width = 269 height = @fleet_info_area_h }
+			position = { x = 396 y = @fleet_info_area_y_pos }
+
+			background = {
+				name = "orders_small_background"
+				spriteType = "GFX_tiles_dark_area_cut_8"
+			}
+
+			instantTextBoxType = {
+				name = "name"
+				font = "malgun_goth_24"
+				position = { x = 7 y = 0 }
+				maxWidth = 573
+				maxHeight = 53
+				fixedSize = yes
+				format = left
+				text_color_code = "E"
+				alwaysTransparent = yes
+			}
+
+			instantTextBoxType = {
+				name = "cost_and_gains"
+				font = "cg_16b"
+				position = { x = 7 y = 33 }
+				maxWidth = 260
+				maxHeight = 27
+				fixedSize = yes
+				format = left
+				text = "YES"
+				text_color_code = "E"
+			}
+
+			gridBoxType = {
+				name = "orders"
+				position = { x = -7 y = 60 }
+				slotSize = { width = 67 height = 64 }
+				max_slots_horizontal = 4
+				format = "UPPER_LEFT"
+			}
+		}
+
+		containerWindowType = {
+			name = "precommunications"
+
+			iconType = {
+				name = "image"
+				spriteType = "GFX_precom_fleet_xenophobe"
+				position = { x = 8 y = 73 }
+				alwaysTransparent = yes
+				scale = 0.9
+			}
+
+			buttonType = {
+				name = "investigate"
+				font = "cg_16b"
+				spriteType = "GFX_button_150_24"
+				buttonText = "FLEET_VIEW_INVESTIGATE"
+				position = { x = 408 y = 213 }
+			}
+		}
+
+		containerWindowType = {
+			name = "observation_actions"
+			position = { x = 0 y = 260}
+
+			buttonType = {
+				name = "open_diplomacy"
+                font = "cg_16b"
+                spriteType = "GFX_standard_button_240_34_button"
+                buttonText = "DIPLOMACY"
+                position = { x = 0 y = 0 }
+                orientation = UPPER_CENTER
+                clicksound = interface
+			}
+
+
+			buttonType = {
+				name = "open_espionage"
+                font = "cg_16b"
+                spriteType = "GFX_standard_button_240_34_button"
+                buttonText = "ESPIONAGE"
+                position = { x = 329 y = 0 }
+                orientation = UPPER_CENTER
+                clicksound = interface
+			}
+		}
+
+		##### Bottom part of main entry, with focus on ship etc.   ####
+
+		containerWindowType = {
+			name = "bottom"
+			size = { width = 680 height = 53 }
+			position = { x = 36 y = 253 }
+
+		#	background = {
+		#		name = "fleet_view_entry_bottom_background"
+		#		spriteType = "GFX_tiles_frame"
+		#	}
+
+			buttonType = {
+				name = "focus_on"
+				orientation = LOWER_LEFT
+				position = { x = 493 y = -293 }
+				quadTextureSprite = "GFX_fleetview_lock_focus"
+				pdx_tooltip = "FOCUS_ON_FLEET"
+				#frame = 1
+				shortCut = "q"
+			}			
+			
+			buttonType = {
+				name = "go_to_planet_view"
+				orientation = LOWER_LEFT
+				quadTextureSprite = "GFX_fleetview_open_planet"
+				position = { x = 448 y = -293 }
+			}
+
+			instantTextBoxType={
+				name = "orders"
+				orientation = LOWER_LEFT
+				position = { x = -20 y = -40 }
+				font = "cg_16b"
+				text = "ORDERS"
+				maxWidth = 613
+				maxHeight = 24
+				fixedSize = yes
+				format = left
+			}
+
+			instantTextBoxType={
+				name = "activity"
+				position = { x = -20 y = 33 }
+				font = "cg_16b"
+				text = "ACTIVITY"
+				maxWidth = 293
+				maxHeight = 45
+				fixedSize = yes
+				format = left
+			}
+
+			@status_y = -167
+			@status_text_width_large = 147
+			@status_text_width_medium = 133
+			@status_text_width_small = 87
+			@status_text_height = 20
+
+			instantTextBoxType = {
+				name = "hull_points"
+				position = { x = -27 y = @status_y }
+				font = "cg_16b"
+				text = "100%"
+				maxWidth = @status_text_width_small
+				maxHeight = @status_text_height
+				fixedSize = yes
+				format = left
+			}
+
+			instantTextBoxType = {
+				name = "armor_points"
+				position = { x = 53 y = @status_y }
+				font = "cg_16b"
+				text = "100%"
+				maxWidth = @status_text_width_small
+				maxHeight = @status_text_height
+				fixedSize = yes
+				format = left
+			}
+
+			instantTextBoxType = {
+				name = "shield_points"
+				position = { x = 133 y = @status_y }
+				font = "cg_16b"
+				text = "100%"
+				maxWidth = @status_text_width_small
+				maxHeight = @status_text_height
+				fixedSize = yes
+				format = left
+			}
+
+			containerWindowType = {
+				name = "cloaking_values"
+				position = { x = 240 y = @status_y }
+
+				iconType = {
+					name = "cloaking_strength"
+					spriteType = "GFX_cloaking_strength_icon"
+					position = { x = -20 y = -3 }
+				}
+
+				iconType = {
+					name = "cloaking_detection"
+					spriteType = "GFX_cloaking_detection_icon"
+					position = { x = -20 y = -3 }
+				}
+
+				iconType = {
+					name = "cloaking_level"
+					spriteType = "GFX_cloaking_level_0"
+					position = { x = 7 y = -3 }
+				}
+			}
+
+			instantTextBoxType = {
+				name = "piracy_suppression"
+				position = { x = 317 y = @status_y }
+				font = "cg_16b"
+				text = "100%"
+				maxWidth = @status_text_width_small
+				maxHeight = @status_text_height
+				fixedSize = yes
+				format = right
+			}
+
+			instantTextBoxType = {
+				name = "size_limit"
+				position = { x = 404 y = @status_y }
+				font = "cg_16b"
+				text = "10/10"
+				maxWidth = @status_text_width_large
+				maxHeight = @status_text_height
+				fixedSize = yes
+				format = right
+				text_color_code = "Y"
+			}
+
+			instantTextBoxType = {
+				name = "fleet_power"
+				position = { x = 544 y = @status_y }
+				font = "cg_16b"
+				text = "10000"
+				maxWidth = @status_text_width_small
+				maxHeight = @status_text_height
+				fixedSize = yes
+				format = right
+				text_color_code = "Y"
+			}
+
+			gridBoxType = {
+				name = "actions"
+				position = { x = 625 y = 3 }
+				slotSize = { width = 45 height = 45 }
+				format = "UPPER_RIGHT"
+			}
+		}
+
+		# Selected Fleets
+		# List of ships. space between enties
+		smoothListboxType = {
+			name = "ships"
+			position = { x = 0 y = 341 }
+			size = { x = 667 y = 0 }
+			borderSize = { x = 0 y = 0 }
+			orientation = "UPPER_LEFT"
+			spacing = 1
+		}
+
+		# Drop Area
+		containerWindowType = {
+			name = "drop_area"
+			size = { width = 100% height = 100% }
+
+			background = {
+				name = "drop_area_background"
+				quadTextureSprite = "GFX_drop_area_green"
+			}
+		}
+
+		containerWindowType = {
+			name = "science_ship_automation_settings_container"
+			size = { width = 360 height = 387 }
+			position = { x = 688 y = 11 }
+			moveable = yes
+
+			clipping = no
+			respect_parent_boundaries = no
+
+			background = {
+				name = "bg"
+				quadTextureSprite = "GFX_plain_bg_tile"
+			}
+
+			instantTextBoxType = {
+				name = "science_ship_settings_title"
+				font = "malgun_goth_24"
+				text = "SCIENCE_SHIP_AUTOMATION_TITLE"
+				position = { x = 0 y = 27 }
+				maxWidth = 360
+				maxHeight = 53
+				format = CENTER
+			}
+
+			@checkbox_pos_x = 13
+			@checkbox_title_pos_x = 67
+			@checkbox_title_width = 267
+
+			containerWindowType = {
+				name = "main_content"
+				position = { x = 0 y = 80 }
+
+				checkboxType = {
+					name = "automate_explore"
+					position = { x = @checkbox_pos_x y = 0 }
+		 			quadTextureSprite = "GFX_checkbox_20_20_01"
+		 		}
+
+		 		instantTextBoxType = {
+					name = "automate_explore_title"
+					font = "cg_16b"
+					text = "AUTOMATION_EXPLORE"
+					position = { x = @checkbox_title_pos_x y = 7 }
+					maxWidth = @checkbox_title_width
+					maxHeight = 53
+					format = left
+				}
+
+		 		checkboxType = {
+					name = "automate_survey"
+					position = { x = @checkbox_pos_x y = 40 }
+		 			quadTextureSprite = "GFX_checkbox_20_20_01"
+		 		}
+
+		 		instantTextBoxType = {
+					name = "automate_survey_title"
+					font = "cg_16b"
+					text = "AUTOMATION_SURVEY"
+					position = { x = @checkbox_title_pos_x y = 47 }
+					maxWidth = @checkbox_title_width
+					maxHeight = 53
+					format = left
+				}
+
+		 		checkboxType = {
+					name = "automate_anomaly"
+					position = { x = @checkbox_pos_x y = 80 }
+		 			quadTextureSprite = "GFX_checkbox_20_20_01"
+		 		}
+
+		 		instantTextBoxType = {
+					name = "automate_anomaly_title"
+					font = "cg_16b"
+					text = "AUTOMATION_ANOMALIES"
+					position = { x = @checkbox_title_pos_x y = 87 }
+					maxWidth = @checkbox_title_width
+					maxHeight = 53
+					format = left
+				}
+
+		 		checkboxType = {
+					name = "automate_digsite"
+					position = { x = @checkbox_pos_x y = 120 }
+		 			quadTextureSprite = "GFX_checkbox_20_20_01"
+		 		}
+
+		 		instantTextBoxType = {
+					name = "automate_digsite_title"
+					font = "cg_16b"
+					text = "AUTOMATION_DIGSITES"
+					position = { x = @checkbox_title_pos_x y = 127 }
+					maxWidth = @checkbox_title_width
+					maxHeight = 53
+					format = left
+				}
+
+		 		checkboxType = {
+					name = "automate_special_project"
+					position = { x = @checkbox_pos_x y = 160 }
+		 			quadTextureSprite = "GFX_checkbox_20_20_01"
+		 		}
+
+		 		instantTextBoxType = {
+					name = "automate_special_project_title"
+					font = "cg_16b"
+					text = "AUTOMATION_SPECIAL_PROJECTS"
+					position = { x = @checkbox_title_pos_x y = 167 }
+					maxWidth = @checkbox_title_width
+					maxHeight = 53
+					format = left
+				}
+			}
+
+			buttonType = {
+				position = { x = 0 y = 307 }
+				name = "cancel_automation"
+				spriteType = "GFX_standard_button_116_34"
+				buttonFont = "cg_16b"
+				text = "CLOSE"
+				font = "cg_16b"
+				shortcut = "ESCAPE"
+				pdx_tooltip = "CLOSE_TITLE"
+				clicksound = "back_click"
+			}
+
+			buttonType = {
+				position = { x = 173 y = 307 }
+				name = "start_automation"
+				spriteType = "GFX_standard_button_116_34"
+				buttonFont = "cg_16b"
+				shortcut = "RETURN"
+				text = "START"
+				font = "cg_16b"
+			}
+		}
+	}
+
+	# Shipyard
+	containerWindowType = {
+		name = "fleet_view_shipyard_entry"
+		size = { width = 680 height = 600 }    # SET DISTANCE BETWEEN ENTRIES
+		position = { x = 0 y = 0 }
+
+		#Ship name and type section
+		containerWindowType = {
+			name = "top"
+			size = { width = 100%% height = -60 }
+			position = { x = 0 y = 0 }
+
+			buttonType = {
+				name = "header_button"
+				quadTextureSprite = "GFX_fleet_view_main_transport_bg"
+				position = { x = 0 y = 0 }
+				oversound = no_sound
+				clicksound = click
+				alwaysTransparent = yes
+			}
+
+			iconType = {
+				name = "header_line"
+				spriteType = "GFX_line"
+				position = { x = 21 y = 51 }
+			}
+
+			iconType = {
+				name = "icon"
+				position = { x = 72 y = 9 }
+				spriteType = "GFX_ship_class_medium"
+				alwaysTransparent = yes
+			}
+
+			buttonType = {
+				name = "flag"
+				quadTextureSprite = "GFX_empire_flag_64"
+				position = { x= 0 y = 0  }
+				scale = 0.8
+				oversound = no_sound
+			}
+
+			instantTextBoxType={
+				name = "fleet_name"
+				font = "malgun_goth_24"
+				text = "NAME"
+				position = { x = 120 y = 7 }
+				maxWidth = 347
+				maxHeight = 20
+				fixedSize = yes
+				format = left
+				alwaysTransparent = yes
+			}
+
+			instantTextBoxType={
+				name = "unknown_faction_name"
+				font = "cg_16b"
+				text = ""
+				position = { x = 120 y = 37 }
+				maxWidth = 240
+				maxHeight = 20
+				fixedSize = yes
+				format = left
+				alwaysTransparent = yes
+			}
+
+			buttonType = {
+				name = "rename_button"
+				quadTextureSprite = "gfx_transparency_button"
+				position = { x = 120 y = 9 }
+				size = { x = 347 y = 20 }
+				clicksound = confirm_click
+				oversound = no_sound
+			}
+
+			instantTextBoxType = {
+				name = "fleet_type"
+				font = "cg_16b"
+				text = ""
+				position = { x = 120 y = 36 }
+				maxWidth = 573
+				maxHeight = 53
+				fixedSize = yes
+				format = left
+				text_color_code = "E"
+				alwaysTransparent = yes
+			}
+
+			buttonType = {
+				name = "open_fleet_manager"
+				quadTextureSprite = "GFX_fleet_manager_button"
+				position = { x= -196 y = 13 }
+				Orientation = "UPPER_RIGHT"
+				buttonFont = "cg_16b"
+				pdx_tooltip = "FLEET_VIEW_OPEN_FLEET_MANAGER"
+			}
+
+			buttonType = {
+				name = "disband"
+				quadTextureSprite = "GFX_delete_template_button"
+				position = { x= -105 y = 13 }
+				Orientation = "UPPER_RIGHT"
+				buttonFont = "cg_16b"
+			}
+
+			buttonType = {
+				name = "deselect"
+				quadTextureSprite = "GFX_close_square"
+				position = { x= -60 y = 13 }
+				Orientation = "UPPER_RIGHT"
+				buttonFont = "cg_16b"
+				pdx_tooltip = "DISBAND"
+			}
+		}
+
+		# SIZE AND POSITION OF LEADER BG
+		containerWindowType = {
+			name = "observation_station_window"
+			size = { width = @leader_area_w height = @fleet_info_area_h }
+			position = { x = 9 y = @fleet_info_area_y_pos }
+
+			background = {
+				name = "info_background"
+				spriteType = "GFX_tiles_dark_area_cut_8"
+				position = { x = 0 y =0 }
+			}
+
+			instantTextBoxType = {
+				name = "civ_name"
+				font = "cg_16b"
+				position = { x = 7 y = 7 }
+				maxWidth = 573
+				maxHeight = 53
+				fixedSize = yes
+				format = left
+				text = "Human Civilization (Steam Age)"
+				text_color_code = "H"
+				alwaysTransparent = yes
+			}
+
+			instantTextBoxType = {
+				name = "name"
+				font = "malgun_goth_24"
+				position = { x = 7 y = 27 }
+				maxWidth = 573
+				maxHeight = 53
+				fixedSize = yes
+				format = left
+				text_color_code = "E"
+				alwaysTransparent = yes
+			}
+
+			instantTextBoxType = {
+				name = "mods"
+				font = "cg_16b"
+				position = { x = 7 y = 67 }
+				maxWidth = 573
+				maxHeight = 53
+				fixedSize = yes
+				format = left
+				text_color_code = "E"
+				alwaysTransparent = yes
+			}
+
+			iconType = {
+				name = "progress_bar"
+				spriteType = "GFX_progressbar_green"
+				position = { x = 7 y = 93 }
+			}
+
+			instantTextBoxType = {
+				name = "cost_and_gains"
+				font = "cg_16b"
+				position = { x = 13 y = 67 }
+				maxWidth = 333
+				maxHeight = 53
+				fixedSize = yes
+				format = left
+				text = "YES"
+				text_color_code = "E"
+			}
+		}
+
+		containerWindowType = {
+			name = "colonizer_pop"
+			size = { width = @leader_area_w height = @fleet_info_area_h }
+			position = { x = 9 y = @fleet_info_area_y_pos }
+
+
+			buttonType = {
+				name = "portrait_bg"
+				quadTextureSprite = "GFX_leader_bg_admiral"
+				position = { x = 11 y = 11 }
+				scale = 0.225
+				alwaystransparent = yes
+			}
+
+			#GFX_tiles_green_side_frame_top
+			background = {
+				name = "colonizer_background"
+				spriteType = "GFX_tiles_dark_area_cut_8"
+				position = { x = 0 y = 0 }
+			}
+
+			instantTextBoxType={
+				name = "name"
+				position = { x = 113 y = 7 }
+				font = "cg_16b"
+				text = "NAME"
+				maxWidth = 293
+				maxHeight = 20
+				fixedSize = yes
+				format = left
+				alwaysTransparent = yes
+			}
+
+			OverlappingElementsBoxType = {
+				name = "ethos"
+				position = { x = 115 y = 35 }
+				size = { x = 208 y = 21 }
+				format = left
+			}
+			OverlappingElementsBoxType = {
+				name = "traits"
+				position = { x = 115 y = 83 }
+				size = { x = 208 y = 21 }
+				format = left
+			}
+		}
+		containerWindowType = {
+			name = "portrait"
+			size = { width = 100 height = 113 }
+			position = { x = 20 y = @fleet_info_area_y_pos_portrait }
+			clipping = yes
+
+			iconType = {
+				name = "portrait"
+				quadTextureSprite = "GFX_portrait_character"
+				scale = 0.30
+				alwaysTransparent = yes
+				position = { x = -67 y = -20 }
+			}
+		}
+
+		containerWindowType = {
+			name = "orders_small"
+			size = { width = 229 height = @fleet_info_area_h }
+			position = { x = 395 y = @fleet_info_area_y_pos }
+
+			background = {
+				name = "orders_small_background"
+				spriteType = "GFX_tiles_dark_area_cut_8"
+			}
+
+			gridBoxType = {
+				name = "orders"
+				position = { x = 0 y = -4 }
+				slotSize = { width = 68 height = 64 }
+				max_slots_horizontal = 3
+				format = "UPPER_LEFT"
+			}
+		}
+
+		containerWindowType = {
+			name = "orders_large"
+			size = { width = 347 height = 72 }
+			position = { x = 320 y = 127 }
+
+			background = {
+				name = "orders_large_background"
+				spriteType = "GFX_tiles_dark_area_cut_8"
+			}
+
+			gridBoxType = {
+				name = "orders"
+				position = { x = -4 y = -4 }
+				slotSize = { width = 68 height = 64 }
+				format = "UPPER_LEFT"
+				max_slots_horizontal = 5
+			}
+		}
+
+		#This is for avoiding asserts in the juggernaut view
+		containerWindowType = {
+			name = "observation_orders"
+			size = { width = 269 height = @fleet_info_area_h }
+			position = { x = 391 y = @fleet_info_area_y_pos }
+		}
+
+		#For avoiding asserts in the juggernaut view
+		containerWindowType = {
+			name = "observation_actions"
+			position = { x = -4 y = 264 }
+
+			buttonType = {
+				name = "open_diplomacy"
+                font = "cg_16b"
+                spriteType = "GFX_standard_button_240_34_button"
+                buttonText = "DIPLOMACY"
+                position = { x = 0 y = 0 }
+                orientation = UPPER_CENTER
+                clicksound = interface
+			}
+
+			buttonType = {
+				name = "open_espionage"
+                font = "cg_16b"
+                spriteType = "GFX_standard_button_240_34_button"
+                buttonText = "ESPIONAGE"
+                position = { x = 327 y = 0 }
+                orientation = UPPER_CENTER
+                clicksound = interface
+			}
+		}
+
+		containerWindowType = {
+			name = "precommunications"
+
+			iconType = {
+				name = "image"
+				spriteType = "GFX_precom_fleet_xenophobe"
+				position = { x = 8 y = 73 }
+				alwaysTransparent = yes
+				scale = 0.9
+			}
+
+			buttonType = {
+				name = "investigate"
+				font = "cg_16b"
+				spriteType = "GFX_button_150_24"
+				buttonText = "FLEET_VIEW_INVESTIGATE"
+				position = { x = 393 y = 213 }
+			}
+		}
+
+		##### Bottom part of main entry, with focus on ship etc.   ####
+
+		containerWindowType = {
+			name = "bottom"
+			size = { width = 680 height = 333 }
+			position = { x = 51 y = 251 }
+
+		#	background = {
+		#		name = "fleet_view_entry_bottom_background"
+		#		spriteType = "GFX_tiles_frame"
+		#	}
+
+			buttonType = {
+				name = "focus_on"
+				orientation = LOWER_LEFT
+				position = { x = 479 y = -571 }
+				quadTextureSprite = "GFX_fleetview_lock_focus"
+				pdx_tooltip = "FOCUS_ON_FLEET"
+				#frame = 1
+				shortCut = "q"
+			}
+
+			instantTextBoxType={
+				name = "orders"
+				orientation = LOWER_LEFT
+				position = { x = -33 y = -53 }
+				font = "cg_16b"
+				text = "ORDERS"
+				maxWidth = 427
+				maxHeight = 53
+				fixedSize = yes
+				format = left
+			}
+
+			instantTextBoxType={
+				name = "activity"
+				orientation = LOWER_LEFT
+				position = { x = -13 y = -20 }
+				font = "cg_16b"
+				text = "ACTIVITY"
+				maxWidth = 427
+				maxHeight = 27
+				fixedSize = yes
+				format = left
+			}
+
+			@status_y_shipyard = -164
+
+			instantTextBoxType = {
+				name = "hull_points"
+				position = { x = -33 y = @status_y_shipyard }
+				font = "cg_16b"
+				text = "100%"
+				maxWidth = @status_text_width_small
+				maxHeight = @status_text_height
+				fixedSize = yes
+				format = left
+			}
+
+			instantTextBoxType = {
+				name = "armor_points"
+				position = { x = 53 y = @status_y_shipyard }
+				font = "cg_16b"
+				text = "100%"
+				maxWidth = @status_text_width_small
+				maxHeight = @status_text_height
+				fixedSize = yes
+				format = left
+			}
+
+			instantTextBoxType = {
+				name = "shield_points"
+				position = { x = 140 y = @status_y_shipyard }
+				font = "cg_16b"
+				text = "100%"
+				maxWidth = @status_text_width_small
+				maxHeight = @status_text_height
+				fixedSize = yes
+				format = left
+			}
+
+			instantTextBoxType = {
+				name = "piracy_suppression"
+				position = { x = 267 y = @status_y_shipyard }
+				font = "cg_16b"
+				text = "100%"
+				maxWidth = @status_text_width_small
+				maxHeight = @status_text_height
+				fixedSize = yes
+				format = left
+			}
+
+			instantTextBoxType = {
+				name = "size_limit"
+				position = { x = 387 y = @status_y_shipyard }
+				font = "cg_16b"
+				text = "10/10"
+				maxWidth = @status_text_width_large
+				maxHeight = @status_text_height
+				fixedSize = yes
+				format = right
+				text_color_code = "Y"
+			}
+
+			instantTextBoxType = {
+				name = "fleet_power"
+				position = { x = 480 y = @status_y_shipyard }
+				font = "cg_16b"
+				text = "10000"
+				maxWidth = @status_text_width_medium
+				maxHeight = @status_text_height
+				fixedSize = yes
+				format = right
+				text_color_code = "Y"
+			}
+
+			gridBoxType = {
+				name = "actions"
+				position = { x = 611 y = 264 }
+				slotSize = { width = 45 height = 45 }
+				format = "UPPER_RIGHT"
+			}
+
+			#For avoiding asserts in the juggernaut view
+			containerWindowType = {
+				name = "cloaking_values"
+
+				iconType = {
+					name = "cloaking_strength"
+					spriteType = "GFX_cloaking_strength_icon"
+				}
+
+				iconType = {
+					name = "cloaking_detection"
+					spriteType = "GFX_cloaking_detection_icon"
+				}
+
+				iconType = {
+					name = "cloaking_level"
+					spriteType = "GFX_cloaking_level_0"
+				}
+			}
+		}
+
+		containerWindowType = {
+			name = "build_queue_info"
+			position = { x = 320 y = 207 }
+			size = { width = 345 height = -127 }
+
+			background = {
+				name = "build_queue_background"
+				spriteType = "GFX_tiles_frame"
+			}
+
+			instantTextBoxType = {
+				name = "no_constructions"
+				font = "malgun_goth_24"
+				text = "SHIPYARD_QUEUE"
+				position = { x = 0 y = 11 }
+				maxWidth = 347
+				maxHeight = 27
+				fixedSize = yes
+				format = center
+				alwaysTransparent = yes
+			}
+
+			smoothListBoxType = {
+				name = "build_queue_list"
+				position = { x = 13 y = 57 }
+				orientation = upper_left
+				size = { x = 313 y = 200 }
+				borderSize = { x = 0 y = 0 }
+				scrollbartype = "standardlistbox_slider"
+				autohide_scrollbar = no
+				spacing = 4
+			}
+
+			buttonType = {
+				name = "open_catalog"
+				size = { x = 387 y = 47 }
+				position = { x = -3 y = -77 }
+				orientation = lower_left
+				spriteType = "GFX_standard_button_240_34_button"
+				buttonFont = "cg_16b"
+				text = "STARBASE_OPEN_SHIP_DESIGNS"
+				font = "cg_16b"
+				clicksound = planet_view_menu_click_01
+				shortcut = "b"
+				oversound = mouse_over
+			}
+		}
+
+		# Selected Fleets
+		# List of ships. space between enties
+		smoothListboxType = {
+			name = "ships"
+			position = { x = 0 y = 600 }
+			size = { x = 667 y = 0 }
+			borderSize = { x = 0 y = 0 }
+			orientation = "UPPER_LEFT"
+			spacing = 1
+		}
+
+		# Drop Area
+		containerWindowType = {
+			name = "drop_area"
+			size = { width = 100% height = 100% }
+
+			background = {
+				name = "drop_area_background"
+				quadTextureSprite = "GFX_drop_area_green"
+			}
+		}
+	}
+
+	# Dragged Ships
+
+	containerWindowType = {
+		name = "fleet_view_dragged_ships_entry"
+		size = { width = 53 height = 53 }
+
+		iconType = {
+			name = "icon"
+			spriteType = "GFX_ship_sizes_top"
+			frame = 1
+			alwaysTransparent = yes
+			position = { x = -53 y = -31 }
+		}
+
+		instantTextBoxType = {
+			name = "count"
+			orientation = lower_left
+			position = { x = -88 y = -55 }
+			font = "cg_16b"
+			text = "999"
+			text_color_code = "S"
+			maxWidth = 49
+			maxHeight = 53
+			fixedSize = no
+			format = right
+			alwaysTransparent = yes
+		}
+	}
+
+	containerWindowType = {
+		name = "fleet_view_dragged_ships"
+		size = { width = 633 height = 60 }
+
+		overlappingElementsBoxType = {
+			name = "entries"
+			position = { x = 0 y = 0 }
+			size = { x = 633 y = 53 }
+		}
+	}
+
+	containerWindowType = {
+		name = "fleet_view_order_button"
+		size = { width = 51 height = 51 }
+		position = { x = 11 y = 5 }
+
+		buttonType = {
+			name = "button_animation"
+			spriteType = "GFX_fleet_order_button_ground_support_selective"
+			alwaysTransparent = yes
+		}
+
+		buttonType = {
+			name = "button"
+			spriteType = "GFX_fleet_task_planetfall_action"
+		}
+	}
+	containerWindowType = {
+		name = "fleet_view_order_button_custom_audio"
+		size = { width = 51 height = 51 }
+		position = { x = 11 y = 5 }
+
+		buttonType = {
+			name = "button_animation"
+			no_clicksound = yes
+			spriteType = "GFX_fleet_order_button_ground_support_selective"
+			alwaysTransparent = yes
+		}
+
+		buttonType = {
+			name = "button"
+			no_clicksound = yes
+			spriteType = "GFX_fleet_order_button_ground_support_selective"
+		}
+	}
+
+
+	# New Fleet View
+
+	containerWindowType = {
+		name = "fleet_view_action_button"
+		size = { width = 51 height = 51 }
+		position = { x = 4 y = 21 }
+
+		buttonType = {
+			name = "button"
+			spriteType = "GFX_fleet_action_button_new"
+		}
+	}
+
+	# Fleet Transfer View Entry - Group
+
+	containerWindowType = {
+		name = "fleet_transfer_view_entry_group"
+		size = { width = 507 height = 61 }
+
+		background = {
+			name = "fleet_transfer_view_entry_background"
+			quadTextureSprite = "GFX_tiles_dark_area_cut_8"
+			position = { x = 20 y = 0 }
+		}
+
+		iconType = {
+			name = "icon"
+			position = { x = 27 y = 11 }
+			spriteType = "GFX_ship_sizes"
+			frame = 1
+		}
+
+		instantTextBoxType = {
+			name = "label"
+			position = { x = 67 y = 21 }
+			font = "cg_16b"
+			text = ""
+			maxWidth = 413
+			maxHeight = 61
+			fixedSize = yes
+			format = center
+		}
+	}
+
+	# Fleet Transfer View Entry - Group (Damaged)
+
+	containerWindowType = {
+		name = "fleet_transfer_view_entry_group_damaged"
+		size = { width = 507 height = 61 }
+
+		background = {
+			name = "fleet_transfer_view_entry_background"
+			quadTextureSprite = "GFX_tiles_dark_area_cut_8"
+			position = { x = 20 y = 0 }
+		}
+
+		instantTextBoxType = {
+			name = "label"
+			position = { x = 27 y = 21 }
+			font = "cg_16b"
+			text = ""
+			maxWidth = 493
+			maxHeight = 61
+			fixedSize = yes
+			format = center
+		}
+	}
+
+	# Fleet Transfer View Entry
+
+	containerWindowType = {
+		name = "fleet_transfer_view_entry"
+		size = { width = 507 height = 61 }
+
+		background = {
+			name = "fleet_transfer_view_entry_background"
+			quadTextureSprite = "GFX_tiles_dark_area_cut_8"
+			position = { x = 20 y = 0 }
+		}
+
+		iconType = {
+			name = "icon"
+			spriteType = "GFX_ship_sizes_top"
+			frame = 1
+			alwaysTransparent = yes
+			position = { x = 56 y = 4 }
+		}
+
+		iconType = {
+			name = "health"
+			position = { x = 27 y = 3 }
+			spriteType = "GFX_fleet_view_health"
+			alwaysTransparent = yes
+		}
+
+		iconType = {
+			name = "armor"
+			position = { x = 36 y = 3 }
+			spriteType = "GFX_fleet_view_armor"
+			alwaysTransparent = yes
+		}
+
+		iconType = {
+			name = "shields"
+			position = { x = 45 y = 3 }
+			spriteType = "GFX_fleet_view_shields"
+			alwaysTransparent = yes
+		}
+
+		instantTextBoxType = {
+			name = "name"
+			position = { x = 168 y = 9 }
+			font = "cg_16b"
+			text = "NAME"
+			format = left
+			maxWidth = 395
+			maxHeight = 20
+		#	alwaysTransparent = yes
+		}
+	}
+
+	# Fleet Transfer View
+
+	containerWindowType = {
+		name = "fleet_transfer_view"
+		size = { width = 553 height = 533 }
+		orientation = center
+		position = { x = -193 y = -267 }
+		moveable = yes
+
+		background = {
+			name = "fleet_transfer_background"
+			quadTextureSprite = "GFX_tile_outliner_bg"
+		}
+
+		buttonType = {
+			name = "close"
+			quadTextureSprite = "GFX_close_square"
+			orientation = UPPER_RIGHT
+			position = { x = -60 y = 21  }
+			shortcut = "ESCAPE"
+			clicksound = "back_click"
+		}
+
+		instantTextBoxType = {
+			name = "desc"
+			position = { x = 0 y = 31 }
+			font = "malgun_goth_24"
+			text = "DESC"
+			maxWidth = 493
+			maxHeight = 80
+			fixedSize = yes
+			format = center
+			#text_color_code = "H"
+		}
+
+		smoothListboxType = {
+			name = "ships"
+			position = { x = 0 y = 100 }
+			size = { x = 524 y = 427 }
+			scrollbarType = "standardlistbox_slider"
+			borderSize = { x = 0 y = 0 }
+			orientation = "UPPER_LEFT"
+			autohide_scrollbar = no
+			spacing = 7
+		}
+	}
+
+	containerWindowType = {
+		name = "fleet_view_shipyard_side_view"
+		position = { x = 687 y = 0 }
+		size = { width = 491 height = 627 }
+
+
+		background = {
+			name = "planet_view_spaceport_construction_panel_background"
+			quadTextureSprite = "GFX_plain_bg_tile"
+		}
+
+		instantTextBoxType = {
+			name = "title"
+			font = "malgun_goth_24"
+			text = "STARBASE_SHIPS"
+			position = { x = 16 y = 16 }
+			maxWidth = 404
+			maxHeight = 27
+			fixedSize = yes
+			orientation = "UPPER_LEFT"
+			#text_color_code = "E"
+			format = CENTER
+		}
+
+		# Close Button
+		buttonType = {
+			name = "close"
+			quadTextureSprite = "GFX_close"
+			position = { x = -61 y = 9 }
+			orientation = "UPPER_RIGHT"
+			shortcut = "ESCAPE"
+			clicksound = "back_click"
+			actionShortcut = "cancel"
+		}
+
+		smoothListboxType = {
+			name = "entries_list"
+			position = { x = 16 y = 71 }
+			size = { x = 453 y = 536 }
+			scrollbarType = "standardlistbox_slider"
+			borderSize = { x = 0 y = 0 }
+			orientation = "UPPER_LEFT"
+			spacing = 4
+		}
+	}
+}

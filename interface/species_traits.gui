@@ -1,0 +1,973 @@
+guiTypes = {
+	containerWindowType =  {
+		name = "species_traits"
+		position = { x= 7 y = 80 }	
+		
+		Orientation = upper_left
+		
+		
+		
+	#	containerWindowType = {
+	#		name = "leader_frame_box"
+	#		size = { width = 1467 height = 800 }
+	#		position = { x = 3 y = 3 }
+	#		
+	#			background = {
+	#				name = "leader_frame"
+	#				spriteType = "GFX_tiles_dark_area_cut_8"
+	#			}
+	#	}
+			
+	#	iconType = {
+	#		name = "customize_species_bg"
+	#		position = { x = 0 y = -20 }
+	#		quadTextureSprite ="GFX_customize_species_bg"
+	#	}
+
+		
+	#	iconType = {
+	#		name ="setting_window_bg"
+	#		spriteType = "GFX_setting_window_bg"
+	#		position = { x= 0 y = 0 }	
+	#	}
+		
+		
+		iconType = {
+			name = "hex_bg"
+			spriteType = "GFX_hex_bg"
+			position = { x = 13 y = -11 }
+			alwaysTransparent = yes
+		}
+		
+		iconType = {
+			name = "empire_header_line"
+			quadTextureSprite = "GFX_line_long"
+			position = { x = 35 y = 41 }
+		}		
+		
+		instantTextBoxType = {
+			name = "choose_ethics_title"
+			position = { x = 60 y = 16 }
+			font = "malgun_goth_24"
+			maxWidth = 400
+			maxHeight = 27	
+			text = "Choose Traits"
+			format = left
+			orientation = "UPPER_LEFT"
+			text_color_code = "H"
+		}
+		
+		instantTextBoxType = {
+			name = "choose_ethics_desc"
+			position = { x = 60 y = 63 }
+			font = "cg_16b"
+			maxWidth = 640
+			maxHeight = 53	
+			text = "Choose the traits which signifies your race."
+			format = left
+			orientation = "UPPER_LEFT"
+		}
+		
+		
+		
+				
+		instantTextBoxType = {
+			name = "trait_points_label"
+			position = { x = 1013 y = 16 }
+			font = "malgun_goth_24"
+			maxWidth = 400
+			maxHeight = 27	
+			text = "Points Remaining:"
+			format = right
+			orientation = "UPPER_LEFT"
+			text_color_code = "H"
+		}		
+				
+		instantTextBoxType = {
+			name = "trait_points_left"
+			position = { x = 1407 y = 16 }
+			font = "malgun_goth_24"
+			maxWidth = 40
+			maxHeight = 27	
+			text = "2"
+			format = right
+			orientation = "UPPER_LEFT"
+			#text_color_code = "H"
+		}	
+	
+		iconType = {
+			name = "species_trait_01_bg"
+			quadTextureSprite = "GFX_test_message_icon"
+			position = { x = 40 y = 100 }
+		}	
+	
+		instantTextBoxType = {
+			name = "species_trait_01_title"
+			position = { x = 107 y = 104 }
+			font = "malgun_goth_24"
+			maxWidth = 267
+			maxHeight = 27	
+			text = "Trait title"
+			format = left
+			orientation = "UPPER_LEFT"
+			text_color_code = "H"
+			format = left
+		}		
+		
+		iconType = {
+			name = "species_trait_01_line"
+			quadTextureSprite = "GFX_line"
+			position = { x = 47 y = 125 }
+		}
+		
+		iconType = {
+			name = "species_trait_01"
+			quadTextureSprite = "GFX_trait_example"
+			position = { x = 60 y = 108 }
+		}
+		
+		instantTextBoxType = {
+			name = "species_trait_01_cost"
+			position = { x = 453 y = 108 }
+			font = "cg_16b"
+			maxWidth = 267
+			maxHeight = 27	
+			text = "1"
+			format = left
+			orientation = "UPPER_LEFT"
+			text_color_code = "H"
+			format = left
+		}	
+		
+		instantTextBoxType = {
+			name = "species_trait_01_cost_title"
+			position = { x = 400 y = 108 }
+			font = "cg_16b"
+			maxWidth = 267
+			maxHeight = 27	
+			text = "Cost:"
+			format = left
+			orientation = "UPPER_LEFT"
+			
+			format = left
+		}
+			
+		instantTextBoxType = {
+			name = "species_trait_01_desc"
+			position = { x = 60 y = 147 }
+			font = "cg_16b"
+			maxWidth = 400
+			maxHeight = 53	
+			text = "Description of trait, should be short, should be no longer than two rowes. "
+			format = left
+			orientation = "UPPER_LEFT"
+			text_color_code = "E"
+		}		
+		
+		instantTextBoxType = {
+			name = "species_trait_01_modifer_01"
+			position = { x = 60 y = 200 }
+			font = "cg_16b"
+			maxWidth = 400
+			maxHeight = 27	
+			text = "Production output +50%"
+			format = left
+			orientation = "UPPER_LEFT"
+		}	
+		
+		instantTextBoxType = {
+			name = "species_trait_01_modifer_02"
+			position = { x = 60 y = 220 }
+			font = "cg_16b"
+			maxWidth = 400
+			maxHeight = 27	
+			text = "Research speed-25%"
+			format = left
+			orientation = "UPPER_LEFT"
+		}		
+		
+		
+		
+		
+		
+		iconType = {
+			name = "species_trait_02_bg"
+			quadTextureSprite = "GFX_test_message_icon"
+			position = { x = 40 y = 273 }
+		}
+	
+		instantTextBoxType = {
+			name = "species_trait_02_title"
+			position = { x = 107 y = 277 }
+			font = "malgun_goth_24"
+			maxWidth = 267
+			maxHeight = 27	
+			text = "Trait title"
+			format = left
+			orientation = "UPPER_LEFT"
+			text_color_code = "H"
+			format = left
+		}		
+		
+		iconType = {
+			name = "species_trait_02_line"
+			quadTextureSprite = "GFX_line"
+			position = { x = 47 y = 299 }
+		}
+		
+		iconType = {
+			name = "species_trait_02"
+			quadTextureSprite = "GFX_trait_example"
+			position = { x = 60 y = 281 }
+		}
+		
+		instantTextBoxType = {
+			name = "species_trait_02_cost"
+			position = { x = 453 y = 281 }
+			font = "cg_16b"
+			maxWidth = 267
+			maxHeight = 27	
+			text = "1"
+			format = left
+			orientation = "UPPER_LEFT"
+			text_color_code = "H"
+			format = left
+		}	
+		
+		instantTextBoxType = {
+			name = "species_trait_02_cost_title"
+			position = { x = 400 y = 281 }
+			font = "cg_16b"
+			maxWidth = 267
+			maxHeight = 27	
+			text = "Cost:"
+			format = left
+			orientation = "UPPER_LEFT"
+			
+			format = left
+		}
+		
+		instantTextBoxType = {
+			name = "species_trait_02_desc"
+			position = { x = 60 y = 320 }
+			font = "cg_16b"
+			maxWidth = 400
+			maxHeight = 53	
+			text = "Description of trait, should be short, should be no longer than two rowes. "
+			format = left
+			orientation = "UPPER_LEFT"
+			text_color_code = "E"
+		}		
+		
+		instantTextBoxType = {
+			name = "species_trait_02_modifer_01"
+			position = { x = 60 y = 373 }
+			font = "cg_16b"
+			maxWidth = 400
+			maxHeight = 27	
+			text = "Production output +50%"
+			format = left
+			orientation = "UPPER_LEFT"
+		}	
+		
+		instantTextBoxType = {
+			name = "species_trait_02_modifer_02"
+			position = { x = 60 y = 393 }
+			font = "cg_16b"
+			maxWidth = 400
+			maxHeight = 27	
+			text = "Research speed-25%"
+			format = left
+			orientation = "UPPER_LEFT"
+		}		
+		
+		
+		
+		
+		
+		
+		iconType = {
+			name = "species_trait_03_bg"
+			quadTextureSprite = "GFX_test_message_icon"
+			position = { x = 40 y = 447 }
+		}
+	
+		instantTextBoxType = {
+			name = "species_trait_03_title"
+			position = { x = 107 y = 451 }
+			font = "malgun_goth_24"
+			maxWidth = 267
+			maxHeight = 27	
+			text = "Trait title"
+			format = left
+			orientation = "UPPER_LEFT"
+			text_color_code = "H"
+			format = left
+		}		
+		
+		iconType = {
+			name = "species_trait_03_line"
+			quadTextureSprite = "GFX_line"
+			position = { x = 47 y = 472 }
+		}
+		
+		iconType = {
+			name = "species_trait_03"
+			quadTextureSprite = "GFX_trait_example"
+			position = { x = 60 y = 455 }
+		}
+		
+		instantTextBoxType = {
+			name = "species_trait_03_cost"
+			position = { x = 453 y = 455 }
+			font = "cg_16b"
+			maxWidth = 267
+			maxHeight = 27	
+			text = "1"
+			format = left
+			orientation = "UPPER_LEFT"
+			text_color_code = "H"
+			format = left
+		}	
+		
+		instantTextBoxType = {
+			name = "species_trait_03_cost_title"
+			position = { x = 400 y = 455 }
+			font = "cg_16b"
+			maxWidth = 267
+			maxHeight = 27	
+			text = "Cost:"
+			format = left
+			orientation = "UPPER_LEFT"
+			
+			format = left
+		}
+		
+		instantTextBoxType = {
+			name = "species_trait_03_desc"
+			position = { x = 60 y = 493 }
+			font = "cg_16b"
+			maxWidth = 400
+			maxHeight = 53	
+			text = "Description of trait, should be short, should be no longer than two rowes. "
+			format = left
+			orientation = "UPPER_LEFT"
+			text_color_code = "E"
+		}		
+		
+		instantTextBoxType = {
+			name = "species_trait_03_modifer_01"
+			position = { x = 60 y = 547 }
+			font = "cg_16b"
+			maxWidth = 400
+			maxHeight = 27	
+			text = "Production output +50%"
+			format = left
+			orientation = "UPPER_LEFT"
+		}	
+		
+		instantTextBoxType = {
+			name = "species_trait_03_modifer_02"
+			position = { x = 60 y = 567 }
+			font = "cg_16b"
+			maxWidth = 400
+			maxHeight = 27	
+			text = "Research speed-25%"
+			format = left
+			orientation = "UPPER_LEFT"
+		}	
+		
+		
+		
+		
+		
+		iconType = {
+			name = "species_trait_04_bg"
+			quadTextureSprite = "GFX_test_message_icon"
+			position = { x = 40 y = 620 }
+		}
+	
+		instantTextBoxType = {
+			name = "species_trait_04_title"
+			position = { x = 67 y = 623 }
+			font = "malgun_goth_24"
+			maxWidth = 267
+			maxHeight = 27	
+			text = "Trait title"
+			format = left
+			orientation = "UPPER_LEFT"
+			text_color_code = "H"
+			format = left
+		}
+			
+		iconType = {
+			name = "species_trait_04_line"
+			quadTextureSprite = "GFX_line"
+			position = { x = 47 y = 644 }
+		}
+		
+		instantTextBoxType = {
+			name = "species_trait_04_desc"
+			position = { x = 60 y = 667 }
+			font = "cg_16b"
+			maxWidth = 400
+			maxHeight = 53	
+			text = "Description of trait, should be short, should be no longer than two rowes. "
+			format = left
+			orientation = "UPPER_LEFT"
+			text_color_code = "E"
+		}		
+		
+		instantTextBoxType = {
+			name = "species_trait_04_modifer_01"
+			position = { x = 60 y = 720 }
+			font = "cg_16b"
+			maxWidth = 400
+			maxHeight = 27	
+			text = "Production output +50%"
+			format = left
+			orientation = "UPPER_LEFT"
+		}	
+		
+		instantTextBoxType = {
+			name = "species_trait_04_modifer_02"
+			position = { x = 60 y = 740 }
+			font = "cg_16b"
+			maxWidth = 400
+			maxHeight = 27	
+			text = "Research speed-25%"
+			format = left
+			orientation = "UPPER_LEFT"
+		}	
+				
+		
+		@box2_x = 520 
+		@title2_x = 547 
+		@line2_x = 533
+		@info2_x = 540
+
+	
+	
+		iconType = {
+			name = "species_trait_05_bg"
+			quadTextureSprite = "GFX_test_message_icon"
+			position = { x = @box2_x y = 100 }
+		}
+	
+		instantTextBoxType = {
+			name = "species_trait_05_title"
+			position = { x = @title2_x y = 103 }
+			font = "malgun_goth_24"
+			maxWidth = 267
+			maxHeight = 27	
+			text = "Trait title"
+			format = left
+			orientation = "UPPER_LEFT"
+			text_color_code = "H"
+			format = left
+		}
+			
+		iconType = {
+			name = "species_trait_05_line"
+			quadTextureSprite = "GFX_line"
+			position = { x = @line2_x y = 124 }
+		}
+		
+		instantTextBoxType = {
+			name = "species_trait_05_desc"
+			position = { x = @info2_x y = 147 }
+			font = "cg_16b"
+			maxWidth = 400
+			maxHeight = 53	
+			text = "Description of trait, should be short, should be no longer than two rowes. "
+			format = left
+			orientation = "UPPER_LEFT"
+			text_color_code = "E"
+		}		
+		
+		instantTextBoxType = {
+			name = "species_trait_05_modifer_01"
+			position = { x = @info2_x y = 200 }
+			font = "cg_16b"
+			maxWidth = 400
+			maxHeight = 27	
+			text = "Production output +50%"
+			format = left
+			orientation = "UPPER_LEFT"
+		}	
+		
+		instantTextBoxType = {
+			name = "species_trait_05_modifer_02"
+			position = { x = @info2_x y = 220 }
+			font = "cg_16b"
+			maxWidth = 400
+			maxHeight = 27	
+			text = "Research speed-25%"
+			format = left
+			orientation = "UPPER_LEFT"
+		}		
+		
+		
+		
+		
+		
+		iconType = {
+			name = "species_trait_06_bg"
+			quadTextureSprite = "GFX_test_message_icon"
+			position = { x = @box2_x y = 273 }
+		}
+	
+		instantTextBoxType = {
+			name = "species_trait_06_title"
+			position = { x = @title2_x y = 276 }
+			font = "malgun_goth_24"
+			maxWidth = 267
+			maxHeight = 27	
+			text = "Trait title"
+			format = left
+			orientation = "UPPER_LEFT"
+			text_color_code = "H"
+			format = left
+		}
+			
+		iconType = {
+			name = "species_trait_06_line"
+			quadTextureSprite = "GFX_line"
+			position = { x = @line2_x y = 297 }
+		}
+		
+		instantTextBoxType = {
+			name = "species_trait_06_desc"
+			position = { x = @info2_x y = 320 }
+			font = "cg_16b"
+			maxWidth = 400
+			maxHeight = 53	
+			text = "Description of trait, should be short, should be no longer than two rowes. "
+			format = left
+			orientation = "UPPER_LEFT"
+			text_color_code = "E"
+		}		
+		
+		instantTextBoxType = {
+			name = "species_trait_06_modifer_01"
+			position = { x = @info2_x y = 373 }
+			font = "cg_16b"
+			maxWidth = 400
+			maxHeight = 27	
+			text = "Production output +50%"
+			format = left
+			orientation = "UPPER_LEFT"
+		}	
+		
+		instantTextBoxType = {
+			name = "species_trait_06_modifer_02"
+			position = { x = @info2_x y = 393 }
+			font = "cg_16b"
+			maxWidth = 400
+			maxHeight = 27	
+			text = "Research speed-25%"
+			format = left
+			orientation = "UPPER_LEFT"
+		}		
+		
+		
+		
+		
+		
+		
+		iconType = {
+			name = "species_trait_07_bg"
+			quadTextureSprite = "GFX_test_message_icon"
+			position = { x = @box2_x y = 447 }
+		}
+	
+		instantTextBoxType = {
+			name = "species_trait_07_title"
+			position = { x = @title2_x y = 449 }
+			font = "malgun_goth_24"
+			maxWidth = 267
+			maxHeight = 27	
+			text = "Trait title"
+			format = left
+			orientation = "UPPER_LEFT"
+			text_color_code = "H"
+			format = left
+		}
+			
+		iconType = {
+			name = "species_trait_07_line"
+			quadTextureSprite = "GFX_line"
+			position = { x = @line2_x y = 471 }
+		}
+		
+		instantTextBoxType = {
+			name = "species_trait_07_desc"
+			position = { x = @info2_x y = 493 }
+			font = "cg_16b"
+			maxWidth = 400
+			maxHeight = 53	
+			text = "Description of trait, should be short, should be no longer than two rowes. "
+			format = left
+			orientation = "UPPER_LEFT"
+			text_color_code = "E"
+		}		
+		
+		instantTextBoxType = {
+			name = "species_trait_07_modifer_01"
+			position = { x = @info2_x y = 547 }
+			font = "cg_16b"
+			maxWidth = 400
+			maxHeight = 27	
+			text = "Production output +50%"
+			format = left
+			orientation = "UPPER_LEFT"
+		}	
+		
+		instantTextBoxType = {
+			name = "species_trait_07_modifer_02"
+			position = { x = @info2_x y = 567 }
+			font = "cg_16b"
+			maxWidth = 400
+			maxHeight = 27	
+			text = "Research speed-25%"
+			format = left
+			orientation = "UPPER_LEFT"
+		}	
+		
+		
+		
+		
+		
+		iconType = {
+			name = "species_trait_08_bg"
+			quadTextureSprite = "GFX_test_message_icon"
+			position = { x = @box2_x y = 620 }
+		}
+	
+		instantTextBoxType = {
+			name = "species_trait_08_title"
+			position = { x = @title2_x y = 623 }
+			font = "malgun_goth_24"
+			maxWidth = 267
+			maxHeight = 27	
+			text = "Trait title"
+			format = left
+			orientation = "UPPER_LEFT"
+			text_color_code = "H"
+			format = left
+		}
+			
+		iconType = {
+			name = "species_trait_08_line"
+			quadTextureSprite = "GFX_line"
+			position = { x = @line2_x y = 644 }
+		}
+		
+		instantTextBoxType = {
+			name = "species_trait_08_desc"
+			position = { x = @info2_x y = 667 }
+			font = "cg_16b"
+			maxWidth = 400
+			maxHeight = 53	
+			text = "Description of trait, should be short, should be no longer than two rowes. "
+			format = left
+			orientation = "UPPER_LEFT"
+			text_color_code = "E"
+		}		
+		
+		instantTextBoxType = {
+			name = "species_trait_08_modifer_01"
+			position = { x = @info2_x y = 720 }
+			font = "cg_16b"
+			maxWidth = 400
+			maxHeight = 27	
+			text = "Production output +50%"
+			format = left
+			orientation = "UPPER_LEFT"
+		}	
+		
+		instantTextBoxType = {
+			name = "species_trait_08_modifer_02"
+			position = { x = @info2_x y = 740 }
+			font = "cg_16b"
+			maxWidth = 400
+			maxHeight = 27	
+			text = "Research speed-25%"
+			format = left
+			orientation = "UPPER_LEFT"
+		}	
+				
+		@box3_x = 1000 
+		@title3_x = 1027 
+		@line3_x = 1013
+		@info3_x = 1020
+
+	
+	
+		iconType = {
+			name = "species_trait_09_bg"
+			quadTextureSprite = "GFX_test_message_icon"
+			position = { x = @box3_x y = 100 }
+		}
+	
+		instantTextBoxType = {
+			name = "species_trait_09_title"
+			position = { x = @title3_x y = 103 }
+			font = "malgun_goth_24"
+			maxWidth = 267
+			maxHeight = 27	
+			text = "Trait title"
+			format = left
+			orientation = "UPPER_LEFT"
+			text_color_code = "H"
+			format = left
+		}
+			
+		iconType = {
+			name = "species_trait_09_line"
+			quadTextureSprite = "GFX_line"
+			position = { x = @line3_x y = 124 }
+		}
+		
+		instantTextBoxType = {
+			name = "species_trait_09_desc"
+			position = { x = @info3_x y = 147 }
+			font = "cg_16b"
+			maxWidth = 400
+			maxHeight = 53	
+			text = "Description of trait, should be short, should be no longer than two rowes. "
+			format = left
+			orientation = "UPPER_LEFT"
+			text_color_code = "E"
+		}		
+		
+		instantTextBoxType = {
+			name = "species_trait_09_modifer_01"
+			position = { x = @info3_x y = 200 }
+			font = "cg_16b"
+			maxWidth = 400
+			maxHeight = 27	
+			text = "Production output +50%"
+			format = left
+			orientation = "UPPER_LEFT"
+		}	
+		
+		instantTextBoxType = {
+			name = "species_trait_09_modifer_02"
+			position = { x = @info3_x y = 220 }
+			font = "cg_16b"
+			maxWidth = 400
+			maxHeight = 27	
+			text = "Research speed-25%"
+			format = left
+			orientation = "UPPER_LEFT"
+		}		
+		
+		
+		
+		
+		
+		iconType = {
+			name = "species_trait_10_bg"
+			quadTextureSprite = "GFX_test_message_icon"
+			position = { x = @box3_x y = 273 }
+		}
+	
+		instantTextBoxType = {
+			name = "species_trait_10_title"
+			position = { x = @title3_x y = 276 }
+			font = "malgun_goth_24"
+			maxWidth = 267
+			maxHeight = 27	
+			text = "Trait title"
+			format = left
+			orientation = "UPPER_LEFT"
+			text_color_code = "H"
+			format = left
+		}
+			
+		iconType = {
+			name = "species_trait_10_line"
+			quadTextureSprite = "GFX_line"
+			position = { x = @line3_x y = 297 }
+		}
+		
+		instantTextBoxType = {
+			name = "species_trait_10_desc"
+			position = { x = @info3_x y = 320 }
+			font = "cg_16b"
+			maxWidth = 400
+			maxHeight = 53	
+			text = "Description of trait, should be short, should be no longer than two rowes. "
+			format = left
+			orientation = "UPPER_LEFT"
+			text_color_code = "E"
+		}		
+		
+		instantTextBoxType = {
+			name = "species_trait_10_modifer_01"
+			position = { x = @info3_x y = 373 }
+			font = "cg_16b"
+			maxWidth = 400
+			maxHeight = 27	
+			text = "Production output +50%"
+			format = left
+			orientation = "UPPER_LEFT"
+		}	
+		
+		instantTextBoxType = {
+			name = "species_trait_10_modifer_02"
+			position = { x = @info3_x y = 393 }
+			font = "cg_16b"
+			maxWidth = 400
+			maxHeight = 27	
+			text = "Research speed-25%"
+			format = left
+			orientation = "UPPER_LEFT"
+		}		
+		
+		
+		
+		
+		
+		
+		iconType = {
+			name = "species_trait_11_bg"
+			quadTextureSprite = "GFX_test_message_icon"
+			position = { x = @box3_x y = 447 }
+		}
+	
+		instantTextBoxType = {
+			name = "species_trait_11_title"
+			position = { x = @title3_x y = 449 }
+			font = "malgun_goth_24"
+			maxWidth = 267
+			maxHeight = 27	
+			text = "Trait title"
+			format = left
+			orientation = "UPPER_LEFT"
+			text_color_code = "H"
+			format = left
+		}
+			
+		iconType = {
+			name = "species_trait_11_line"
+			quadTextureSprite = "GFX_line"
+			position = { x = @line3_x y = 471 }
+		}
+		
+		instantTextBoxType = {
+			name = "species_trait_11_desc"
+			position = { x = @info3_x y = 493 }
+			font = "cg_16b"
+			maxWidth = 400
+			maxHeight = 53	
+			text = "Description of trait, should be short, should be no longer than two rowes. "
+			format = left
+			orientation = "UPPER_LEFT"
+			text_color_code = "E"
+		}		
+		
+		instantTextBoxType = {
+			name = "species_trait_11_modifer_01"
+			position = { x = @info3_x y = 547 }
+			font = "cg_16b"
+			maxWidth = 400
+			maxHeight = 27	
+			text = "Production output +50%"
+			format = left
+			orientation = "UPPER_LEFT"
+		}	
+		
+		instantTextBoxType = {
+			name = "species_trait_11_modifer_02"
+			position = { x = @info3_x y = 567 }
+			font = "cg_16b"
+			maxWidth = 400
+			maxHeight = 27	
+			text = "Research speed-25%"
+			format = left
+			orientation = "UPPER_LEFT"
+		}	
+		
+		
+		
+		
+		
+		iconType = {
+			name = "species_trait_12_bg"
+			quadTextureSprite = "GFX_test_message_icon"
+			position = { x = @box3_x y = 620 }
+		}
+	
+		instantTextBoxType = {
+			name = "species_trait_12_title"
+			position = { x = @title3_x y = 623 }
+			font = "malgun_goth_24"
+			maxWidth = 267
+			maxHeight = 27	
+			text = "Trait title"
+			format = left
+			orientation = "UPPER_LEFT"
+			text_color_code = "H"
+			format = left
+		}
+			
+		iconType = {
+			name = "species_trait_12_line"
+			quadTextureSprite = "GFX_line"
+			position = { x = @line3_x y = 644 }
+		}
+		
+		instantTextBoxType = {
+			name = "species_trait_12_desc"
+			position = { x = @info3_x y = 667 }
+			font = "cg_16b"
+			maxWidth = 400
+			maxHeight = 53	
+			text = "Description of trait, should be short, should be no longer than two rowes. "
+			format = left
+			orientation = "UPPER_LEFT"
+			text_color_code = "E"
+		}		
+		
+		instantTextBoxType = {
+			name = "species_trait_12_modifer_01"
+			position = { x = @info3_x y = 720 }
+			font = "cg_16b"
+			maxWidth = 400
+			maxHeight = 27	
+			text = "Production output +50%"
+			format = left
+			orientation = "UPPER_LEFT"
+		}	
+		
+		instantTextBoxType = {
+			name = "species_trait_12_modifer_02"
+			position = { x = @info3_x y = 740 }
+			font = "cg_16b"
+			maxWidth = 400
+			maxHeight = 27	
+			text = "Research speed-25%"
+			format = left
+			orientation = "UPPER_LEFT"
+		}	
+		
+		
+
+		
+		
+		
+
+
+		
+		
+		
+		
+		
+
+	
+
+			
+	}
+}

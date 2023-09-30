@@ -1,0 +1,352 @@
+guiTypes = {
+	### ENCLAVE CARAVANEER EVENT OPTION ###
+
+	containerWindowType = {
+		name = "enclave_caravaneer_option_gamepad"
+		position = { x=0 y=0 }
+		size = { width = 517 height = 40 }
+		moveable = no
+		
+		buttonType = {
+			name = "option_button"
+			quadTextureSprite = "GFX_event_button_452_caravaneer"
+			position = { x=0 y=11 }
+			font = "cg_16b"
+			text = "OPTION_TEXT"
+		}
+		
+		OverlappingElementsBoxType = {
+			name = "trigger_icons"
+			position = { x = 0  y = 13 }
+			size = { x=87 y= 37 }
+		}
+	}
+
+	### ENCLAVE CARAVANEER EVENT WINDOW ###
+
+	containerWindowType = {
+		name = "enclave_caravaneer_window_gamepad"
+		orientation = center
+		origo = center
+		position = { x = 0  y = 20 }
+		size = { width = 1171 height = 893 }
+
+		background = {
+			name = "background"
+			quadTextureSprite ="GFX_tile_large_bg_caravaneer"
+		}
+
+		iconType = {
+			name = "hex_bg"
+			spriteType = "GFX_hex_bg"
+			position = { x = -13 y = -19 }
+			alwaysTransparent = yes
+		}
+
+		iconType = {
+			name = "empire_header_line"
+			quadTextureSprite = "GFX_line_long_caravaneer"
+			position = { x = 8 y = 29 }
+			alwaysTransparent = yes
+		}
+		
+		buttonType = {
+			name = "focus_button"
+			position = { x = -60 y = 16 }
+			orientation = "UPPER_RIGHT"
+			spriteType = "GFX_fleetview_focus"
+			buttonFont = "cg_16b"
+			shortcut = "q"
+		}
+		
+
+		instantTextBoxType = {
+			name = "heading"
+			font = "malgun_goth_24"
+			text = "DIPLOMACY"
+			position = { x = 27 y = 7 }
+			maxWidth = 724
+			maxHeight = 29
+			fixedSize = yes
+			alwaysTransparent = yes
+		}
+		
+		buttonType = {
+			name = "alien_message_background"
+			size = { x = 507 y = 363 }
+			position = { x = 13 y = 517 }
+			spriteType = "GFX_tiles_dark_area_cut_8"
+			alwaysTransparent = yes
+		}
+		
+		instantTextBoxType = {
+			name = "alien_message"
+			font = "cg_16b"
+			position = { x = 20 y = 520 }
+			maxWidth = 487
+			maxHeight = 360
+			format = left
+			scrollbartype = "standardlistbox_slider"
+			
+		}
+
+		instantTextBoxType = {
+			name = "confirm_text"
+			orientation = "LOWER_RIGHT"
+			format = center
+			position = { x= -453 y = -240 }
+			maxWidth = 240
+			maxHeight = 27
+			font = "malgun_goth_24"
+			text = "OK_GAMEPAD_INDICATOR"
+		}
+
+		### PORTRAIT ###
+
+		containerWindowType = {
+			name = "portrait_background"
+			position = { x = 60 y = 60 }
+			size = { width = 1067 height = 467 }
+			clipping = yes
+			
+			iconType = {
+				name = "event_picture"
+				spriteType = "GFX_diplomacy_portrait_frame"
+				position = { x = -8 y = -7 }
+			}
+			
+			iconType = {
+				name = "portrait"
+				position = { x = 333 y = 0 }
+				spriteType = "GFX_portrait_character"
+			}	
+		}
+		
+		containerWindowType = {
+			name = "portrait"
+			position = { x = 15 y = 56 }
+			size = { width = 1187 height = 467 }
+			clipping = yes
+			
+			
+			iconType = {
+				name = "portrait"
+				spriteType = "GFX_portrait_gamesetup_mask"
+				alwaysTransparent = yes
+				scale = 0.9
+
+			}
+					
+			iconType = {
+				name = "black_frame"
+				spriteType = "GFX_diplomacy_portrait_shadow_frame"
+				position = { x = -5 y = -7}
+				alwaysTransparent = yes
+				scale = 0.9
+			}
+			
+			iconType = {
+				name = "stripes_1"
+				spriteType = "GFX_diplomacy_stripes_2"
+				alwaysTransparent = yes
+				scale = 0.9
+			}
+				
+			iconType = {
+				name = "city_frame"
+				spriteType = "GFX_diplomacy_portrait_frame_caravaneer"
+				position = { x = -8 y = -7 }
+				alwaysTransparent = yes
+				scale = 0.9
+			}
+		}
+
+		### EMPIRE INFO ###
+		
+		iconType = {
+			name = "empire_info_bg"
+			spriteType = "GFX_diplomacy_dark_fade_bg"
+			position = { x = 44 y = 85 }
+			alwaysTransparent = yes
+		}
+
+		instantTextBoxType={
+			name = "empire_name"
+			font = "malgun_goth_24"
+			text = "Kammarian Galactic Concordat"
+			position = { x = 60 y = 93 }
+			maxWidth = 600
+			maxHeight = 21
+			format = LEFT
+			text_color_code = "E"
+			fixedsize = yes
+		}
+
+		instantTextBoxType={
+			name = "empire_government_type"
+			font = "cg_16b"
+			text = "Autocracy"
+			position = { x = 60 y = 127	}
+			maxWidth = 333
+			maxHeight = 21
+			format = LEFT
+			fixedsize = yes
+			text_color_code = "Y"
+		}
+		
+		instantTextBoxType={
+			name = "empire_personality_type"
+			font = "cg_16b"
+			text = "Despicable Neutrals"
+			position = { x = 60 y = 149	}
+			maxWidth = 333
+			maxHeight = 21
+			format = LEFT
+			fixedsize = yes
+		}
+
+		OverlappingElementsBoxType = {
+			name = "empire_ethics_icons"
+			position = { x = 60 y = 184 }
+			size = { x = 320 y = 40 }
+			spacing = 2.0
+			format = left
+		}
+
+		iconType = {
+			name = "empire_flag"
+			spriteType = "GFX_empire_flag_128_trader"
+			position = { x = 33 y = 313 }
+			orientation = UPPER_LEFT
+			alwaysTransparent = yes
+		}
+		
+		containerWindowType = {
+			name = "leader_details"
+			position = { x = 33 y = 100 }
+			
+			containerWindowType = {
+				name = "empire_traits_box"
+				position = { x = 0 y = -7 }
+				size = { width = 280 height = 100 }
+
+				background = {
+					name = "ethics_bg"
+					spriteType = "GFX_tiles_dark_area_cut_8"
+				}
+			}
+			
+			instantTextBoxType = {
+				name = "empire_traits_label"
+				position = { x = 285 y = 49 }
+				font = "cg_16b"
+				maxWidth = 307
+				maxHeight = 27
+				fixedSize = yes
+				format = left
+				#text_color_code = "E"
+				text = "RULER_TRAITS"
+				alwaysTransparent = yes
+			}
+		
+			overlappingElementsBoxType = {
+				name = "leader_traits"
+				position = { x = 287 y = 73 }
+				size = { x = 167 y = 440 }
+			}
+	
+			instantTextBoxType = {
+				name = "leader_name"
+				position = { x = 13 y = 0 }
+				font = "cg_16b"
+				maxWidth = 440
+				maxHeight = 27
+				fixedSize = yes
+				format = left
+				text = "Leader Name"
+				text_color_code = "E"
+			}
+	
+			instantTextBoxType = {
+				name = "leader_species"
+				position = { x = 13 y = 24 }
+				font = "cg_16b"
+				maxWidth = 440
+				maxHeight = 27
+				fixedSize = yes
+				text = "Leader Species"
+				format = left
+			}
+		}
+
+		### OPINION
+		containerWindowType = {
+			name = "opinion_window"
+			position = { x = 36 y = 147 }
+			size = { width = 125 height = 40 }
+			
+			# Use this for tooltip area, picture comes from somewhere else
+			background = {
+				name = "opinion_bg"
+				spriteType = "GFX_tiled_window_transparent"
+			}
+			
+			iconType = {
+				name = "their_opinion_icon"
+				spriteType = "GFX_diplomacy_opinion"
+				position = { x = 9 y = 5 }
+				alwaysTransparent = yes
+			}
+
+			instantTextBoxType = {
+				name = "their_opinion"
+				font = "cg_16b"
+				maxWidth = 53
+				position = { x = 53 y = 9 }
+				format = left
+				text = "100"
+				alwaysTransparent = yes
+			}
+		}
+		
+		### EVENT DIPLO ###
+		
+		containerWindowType = {
+			name = "EVENT_DIPLO"
+			position = { x = -4 y = 477 }
+			size = { width=751 height=293 }
+			moveable = no
+			
+			instantTextBoxType={
+				name = "action_title"
+				font = "malgun_goth_24"
+				position = { x = 27 y = 0 }
+				maxWidth = 693
+				alwaysTransparent = yes
+			}
+			
+			instantTextBoxType={
+				name = "action_desc"
+				font = "malgun_goth_24"
+				position = { x = 527 y = 0 }
+				maxWidth = 667
+				maxHeight = 240
+				Orientation = "UPPER_LEFT"
+				format = center
+				alwaysTransparent = yes
+				text_color_code = "H"
+			}
+			
+			listboxType = {
+				name = "option_list"
+				position = { x = 536 y = 27 }
+				backGround=""
+				size = { x=783 y=400 }
+				spacing = 1
+				scrollbartype = "standardlistbox_slider"
+				borderSize = { x = 0 y = 0 }
+				Orientation = "UPPER_LEFT"
+			}
+		}
+	}
+}

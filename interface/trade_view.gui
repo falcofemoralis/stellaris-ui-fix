@@ -12,7 +12,7 @@ guiTypes = {
 		size = { width = 1643 height = 853 }
 		dynamic_extra_height = @dynamic_extra
 		orientation = center
-		origo = center
+		origo = center_right 
 
 		containerWindowType = {
 			name = "diplo_trade_view_background_window"

@@ -1244,7 +1244,7 @@ guiTypes = {
 
 		containerWindowType = {
 			name = "background"
-			size = { width = 453 height = 813 }
+			size = { width = 410 height = 813 }
 			position = { x = 7 y = 7 } # OFFE TODO Set x = -80 when minimized
 
 			background = {

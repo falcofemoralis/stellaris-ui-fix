@@ -755,7 +755,7 @@ guiTypes = {
 			name = "trade_type"
 			font = "cg_16b"
 			position = { x = 27 y = 12 }
-			maxWidth = 67
+			maxWidth = 87
 			maxHeight = 40
 			text = "SELL"
 			fixedSize = yes
@@ -765,14 +765,14 @@ guiTypes = {
 		iconType = {
 			name = "resource_icon"
 			spriteType = "GFX_resource_minerals"
-			position = { x = 93 y = 11 }
+			position = { x = 108 y = 11 }
 			alwaysTransparent = yes
 		}
 
 		instantTextBoxType = {
 			name = "amount"
 			font = "cg_16b"
-			position = { x = 120 y = 12 }
+			position = { x = 135 y = 12 }
 			maxWidth = 93
 			maxHeight = 40
 			fixedSize = yes

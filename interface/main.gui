@@ -1018,7 +1018,7 @@ guiTypes = {
 		buttonType = {
 			name = "message_icon_button"
 			quadTextureSprite = "GFX_test_message_icon"
-			position = { x= -3 y = 16  }
+			position = { x= 30 y = 16  }
 			clicksound = "confirmation"
 			oversound = no_sound
 		}
@@ -1026,7 +1026,7 @@ guiTypes = {
 		iconType = {
 			name ="message_frame"
 			spriteType = "GFX_message_frame"
-			position = { x= -24 y = -15 }
+			position = { x= 9 y = -15 }
 			alwaysTransparent = yes
 			frame = 1
 		}
@@ -1034,7 +1034,7 @@ guiTypes = {
 		iconType = {
 			name ="message_circle"
 			spriteType = "GFX_message_circle"
-			position = { x= -4 y = 15 }
+			position = { x= 29 y = 15 }
 			alwaysTransparent = yes
 		}
 

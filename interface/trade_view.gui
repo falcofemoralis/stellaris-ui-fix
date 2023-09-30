@@ -20,12 +20,6 @@ guiTypes = {
 			dynamic_extra_height = @dynamic_extra
 			position = { x = 0 y = -13 }
 			#moveable = yes
-
-			background = {
-				name = "background"
-				quadTextureSprite = "GFX_tile_large_bg"
-				alwaysTransparent = yes
-			}
 		}
 
 		buttonType = {

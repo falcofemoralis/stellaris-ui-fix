@@ -1,0 +1,103 @@
+guiTypes = {
+	containerWindowType = {
+		name = "matchmaking_chat_window"
+		position = { x=-851 y=-493 }	
+		#size = { width=1560 height=747 }
+		size = { width=100% height=100% }
+		orientation = center
+
+		buttonType = {
+			name = "close"
+			quadTextureSprite = "GFX_close"
+			position = { x= 1187 y = 187 }
+			buttonFont = "cg_16b"
+		}
+
+		OverlappingElementsBoxType = {
+			name = "channels"	
+			position = { x = 0  y = 0  }
+			size = { x=101 y= 24 }
+			spacing = 1.0
+		}
+
+		listboxType = 
+		{
+			name ="chat"
+			position = { x = 44 y = 187 }
+			backGround=""
+			size = { x = 1193 y = 600}
+			Orientation = "UPPER_LEFT"
+			spacing = 1
+			scrollbartype = "standardlistbox_slider"
+			borderSize = {x = 0 y = 0}
+		}
+
+		listboxType = 
+		{
+			name ="users"
+			position = { x = 101 y = 0 }
+			backGround=""
+			size = { x=133 y =509}
+			Orientation = "UPPER_LEFT"
+			spacing = 3
+			scrollbartype = "standardlistbox_slider"
+			borderSize = {x = 0 y = 0}
+		}
+
+		editBoxType = {
+			position = { x = 51 y = 804 }
+			name = "chat_input"
+			textureFile = ""
+			font = "cg_16b"
+			size = { x=1093 y=43 }
+			text = ""
+			orientation = "UPPER_LEFT"
+			cursor = { x=-1 y= -4}	
+		}
+
+		editBoxType = {
+			position = { x = 51 y = 799 }
+			name = "largefont_chat_input"
+			textureFile = ""
+			font = "malgun_goth_24"
+			size = { x=1093 y=43 }
+			text = ""
+			orientation = "UPPER_LEFT"
+			cursor = { x=-1 y= -4}	
+		}
+
+	}
+
+	containerWindowType = {
+		name = "matchmaking_chat_item"
+		position = { x=0 y=0 }	
+		size = { width=981 height= 24 }
+
+		instantTextBoxType={
+			position = {x = 7 y = 0 }
+			name = "text"
+			font = "cg_16b"
+			borderSize = {x = 0 y = 0}	
+			maxWidth = 1195
+			maxHeight = 24
+			text = ""	
+		}
+	}
+
+	containerWindowType = {
+		name = "largefont_matchmaking_chat_item"
+		position = { x=0 y=0 }	
+		size = { width=981 height= 29 }
+
+		instantTextBoxType={
+			position = {x = 7 y = 0 }
+			name = "text"
+			font = "malgun_goth_24"
+			borderSize = {x = 0 y = 0}	
+			maxWidth = 1195
+			maxHeight = 29
+			text = ""	
+		}
+	}	
+
+}

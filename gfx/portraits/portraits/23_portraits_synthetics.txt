@@ -1,0 +1,939 @@
+##############################################################
+###	PORTRAITS SETTINGS
+###
+### Which portraits are used is set in
+### common\species_classes\00_species_classes.txt
+###
+###	This file configures how portraits and planet backgrounds are built.
+###	Default position orientation is lower left.
+##############################################################
+
+############################
+portraits = {
+	# Eagle
+	synth01 = {
+		entity = "synthetics_01_portrait_01_entity"
+		clothes_selector = "synthetics_01_clothes_01"
+		attachment_selector = "no_texture"
+		greeting_sound = "machineage_portrait_synthetic_01"
+
+		portrait_evolution = {
+			evolution_stages = {
+				# portrait stages
+				{
+					values = {
+						# stage 1 variant 1
+						{
+							decal = "gfx/models/portraits/synthetics_machine/synthetics_02_portrait_01_color_green.dds"
+							mask = "gfx/models/portraits/common/empty_portrait_evolution_mask.dds"
+						}
+					}
+					values = {
+						# stage 1 variant 2
+						{
+							decal = "gfx/models/portraits/synthetics_machine/synthetics_02_portrait_01_color_blue.dds"
+							mask = "gfx/models/portraits/common/empty_portrait_evolution_mask.dds"
+						}
+					}
+					values = {
+						# stage 1 variant 3
+						{
+							decal = "gfx/models/portraits/synthetics_machine/synthetics_02_portrait_01_color_red.dds"
+							mask = "gfx/models/portraits/common/empty_portrait_evolution_mask.dds"
+						}
+					}
+
+					#leader, pop or species scope (when called with species scope, from subscope can contain a country species related to)
+					# Set to always = no as we only use this for showing the portrait in the empire creator
+					# The actual portrait swap is done via set_synth_or_robot_portrait_effect to ensure the species archetype is changed as well
+					trigger = {
+						always = no
+					}
+				}
+			}
+		}
+
+		character_textures = {
+			"gfx/models/portraits/synthetics/synthetics_01_portrait_01_color_green.dds"
+			"gfx/models/portraits/synthetics/synthetics_01_portrait_01_color_blue.dds"
+			"gfx/models/portraits/synthetics/synthetics_01_portrait_01_color_red.dds"
+		}
+
+		custom_close_up_position_offset = { x = 0 y = 447 }
+		custom_close_up_scale = 2.0
+	}
+
+	# Puppy
+	synth02 = {
+		entity = "synthetics_01_portrait_02_entity"
+		clothes_selector = "synthetics_01_clothes_02"
+		attachment_selector = "no_texture"
+		greeting_sound = "machineage_portrait_synthetic_02"
+
+		portrait_evolution = {
+			evolution_stages = {
+				# portrait stages
+				{
+					values = {
+						# stage 1 variant 1
+						{
+							decal = "gfx/models/portraits/synthetics_machine/synthetics_02_portrait_02_color_blue.dds"
+							mask = "gfx/models/portraits/common/empty_portrait_evolution_mask.dds"
+						}
+					}
+					values = {
+						# stage 1 variant 2
+						{
+							decal = "gfx/models/portraits/synthetics_machine/synthetics_02_portrait_02_color_green.dds"
+							mask = "gfx/models/portraits/common/empty_portrait_evolution_mask.dds"
+						}
+					}
+					values = {
+						# stage 1 variant 3
+						{
+							decal = "gfx/models/portraits/synthetics_machine/synthetics_02_portrait_02_color_gold.dds"
+							mask = "gfx/models/portraits/common/empty_portrait_evolution_mask.dds"
+						}
+					}
+
+					#leader, pop or species scope (when called with species scope, from subscope can contain a country species related to)
+					# Set to always = no as we only use this for showing the portrait in the empire creator
+					# The actual portrait swap is done via set_synth_or_robot_portrait_effect to ensure the species archetype is changed as well
+					trigger = {
+						always = no
+					}
+				}
+			}
+		}
+
+		character_textures = {
+			"gfx/models/portraits/synthetics/synthetics_01_portrait_02_color_gold.dds"
+			"gfx/models/portraits/synthetics/synthetics_01_portrait_02_color_blue.dds"
+			"gfx/models/portraits/synthetics/synthetics_01_portrait_02_color_green.dds"
+		}
+
+		custom_close_up_position_offset = { x = -7 y = 429 }
+		custom_close_up_scale = 2.0
+	}
+
+	# Molluscoid
+	synth03 = {
+		entity = "synthetics_01_portrait_03_entity"
+		clothes_selector = "synthetics_01_clothes_03"
+		attachment_selector = "no_texture"
+		greeting_sound = "machineage_portrait_synthetic_03"
+
+		portrait_evolution = {
+			evolution_stages = {
+				# portrait stages
+				{
+					values = {
+						# stage 1 variant 1
+						{
+							decal = "gfx/models/portraits/synthetics_machine/synthetics_02_portrait_03_color_red.dds"
+							mask = "gfx/models/portraits/common/empty_portrait_evolution_mask.dds"
+						}
+					}
+					values = {
+						# stage 1 variant 2
+						{
+							decal = "gfx/models/portraits/synthetics_machine/synthetics_02_portrait_03_color_green.dds"
+							mask = "gfx/models/portraits/common/empty_portrait_evolution_mask.dds"
+						}
+					}
+					values = {
+						# stage 1 variant 3
+						{
+							decal = "gfx/models/portraits/synthetics_machine/synthetics_02_portrait_03_color_yellow.dds"
+							mask = "gfx/models/portraits/common/empty_portrait_evolution_mask.dds"
+						}
+					}
+
+					#leader, pop or species scope (when called with species scope, from subscope can contain a country species related to)
+					# Set to always = no as we only use this for showing the portrait in the empire creator
+					# The actual portrait swap is done via set_synth_or_robot_portrait_effect to ensure the species archetype is changed as well
+					trigger = {
+						always = no
+					}
+				}
+			}
+		}
+
+		character_textures = {
+			"gfx/models/portraits/synthetics/synthetics_01_portrait_03_color_green.dds"
+			"gfx/models/portraits/synthetics/synthetics_01_portrait_03_color_red.dds"
+			"gfx/models/portraits/synthetics/synthetics_01_portrait_03_color_yellow.dds"
+		}
+
+		custom_close_up_position_offset = { x = 233 y = 167 }
+		custom_close_up_scale = 1.5
+	}
+
+	# Alien
+	synth04 = {
+		entity = "synthetics_01_portrait_04_entity"
+		clothes_selector = "synthetics_01_clothes_04"
+		attachment_selector = "no_texture"
+		greeting_sound = "machineage_portrait_synthetic_04"
+
+		character_textures = {
+			"gfx/models/portraits/synthetics/synthetics_01_portrait_04_color_green.dds"
+			"gfx/models/portraits/synthetics/synthetics_01_portrait_04_color_orange.dds"
+			"gfx/models/portraits/synthetics/synthetics_01_portrait_04_color_pink.dds"
+			"gfx/models/portraits/synthetics/synthetics_01_portrait_04_color_purple.dds"
+		}
+
+		portrait_evolution = {
+			evolution_stages = {
+				# portrait stages
+				{
+					values = {
+						# stage 1 variant 1
+						{
+							decal = "gfx/models/portraits/synthetics_machine/synthetics_02_portrait_04_color_green.dds"
+							mask = "gfx/models/portraits/common/empty_portrait_evolution_mask.dds"
+						}
+					}
+
+					#leader, pop or species scope (when called with species scope, from subscope can contain a country species related to)
+					# Set to always = no as we only use this for showing the portrait in the empire creator
+					# The actual portrait swap is done via set_synth_or_robot_portrait_effect to ensure the species archetype is changed as well
+					trigger = {
+						always = no
+					}
+				}
+			}
+		}
+
+		custom_close_up_position_offset = { x = 20 y = 427 }
+		custom_close_up_scale = 2.0
+	}
+
+	# Cat
+	synth05 = {
+		entity = "synthetics_01_portrait_05_entity"
+		clothes_selector = "synthetics_01_clothes_05"
+		attachment_selector = "no_texture"
+		greeting_sound = "machineage_portrait_synthetic_05"
+
+		portrait_evolution = {
+			evolution_stages = {
+				# portrait stages
+				{
+					values = {
+						# stage 1 variant 1
+						{
+							decal = "gfx/models/portraits/synthetics_machine/synthetics_02_portrait_05_color_blue.dds"
+							mask = "gfx/models/portraits/common/empty_portrait_evolution_mask.dds"
+						}
+					}
+					values = {
+						# stage 1 variant 2
+						{
+							decal = "gfx/models/portraits/synthetics_machine/synthetics_02_portrait_05_color_red.dds"
+							mask = "gfx/models/portraits/common/empty_portrait_evolution_mask.dds"
+						}
+					}
+					values = {
+						# stage 1 variant 3
+						{
+							decal = "gfx/models/portraits/synthetics_machine/synthetics_02_portrait_05_color_yellow.dds"
+							mask = "gfx/models/portraits/common/empty_portrait_evolution_mask.dds"
+						}
+					}
+
+					#leader, pop or species scope (when called with species scope, from subscope can contain a country species related to)
+					# Set to always = no as we only use this for showing the portrait in the empire creator
+					# The actual portrait swap is done via set_synth_or_robot_portrait_effect to ensure the species archetype is changed as well
+					trigger = {
+						always = no
+					}
+				}
+			}
+		}
+
+		character_textures = {
+			"gfx/models/portraits/synthetics/synthetics_01_portrait_05_color_blue.dds"
+			"gfx/models/portraits/synthetics/synthetics_01_portrait_05_color_red.dds"
+			"gfx/models/portraits/synthetics/synthetics_01_portrait_05_color_yellow.dds"
+		}
+
+		custom_close_up_position_offset = { x = -60 y = 467 }
+		custom_close_up_scale = 2.2
+	}
+
+	# Snake
+	synth06_f = {
+		entity = "synthetics_01_portrait_06_entity"
+		clothes_selector = "synthetics_01_clothes_06"
+		attachment_selector = "no_texture"
+		greeting_sound = "machineage_portrait_synthetic_06"
+
+		portrait_evolution = {
+			evolution_stages = {
+				# portrait stages
+				{
+					values = {
+						# stage 1 variant 1
+						{
+							decal = "gfx/models/portraits/synthetics_machine/synthetics_02_portrait_06_color_gold.dds"
+							mask = "gfx/models/portraits/common/empty_portrait_evolution_mask.dds"
+						}
+					}
+					values = {
+						# stage 1 variant 2
+						{
+							decal = "gfx/models/portraits/synthetics_machine/synthetics_02_portrait_06_color_green.dds"
+							mask = "gfx/models/portraits/common/empty_portrait_evolution_mask.dds"
+						}
+					}
+					values = {
+						# stage 1 variant 3
+						{
+							decal = "gfx/models/portraits/synthetics_machine/synthetics_02_portrait_06_color_pink.dds"
+							mask = "gfx/models/portraits/common/empty_portrait_evolution_mask.dds"
+						}
+					}
+					values = {
+						# stage 1 variant 4
+						{
+							decal = "gfx/models/portraits/synthetics_machine/synthetics_02_portrait_06_color_salmon.dds"
+							mask = "gfx/models/portraits/common/empty_portrait_evolution_mask.dds"
+						}
+					}
+					values = {
+						# stage 1 variant 5
+						{
+							decal = "gfx/models/portraits/synthetics_machine/synthetics_02_portrait_06_color_teal.dds"
+							mask = "gfx/models/portraits/common/empty_portrait_evolution_mask.dds"
+						}
+					}
+
+					#leader, pop or species scope (when called with species scope, from subscope can contain a country species related to)
+					# Set to always = no as we only use this for showing the portrait in the empire creator
+					# The actual portrait swap is done via set_synth_or_robot_portrait_effect to ensure the species archetype is changed as well
+					trigger = {
+						always = no
+					}
+				}
+			}
+		}
+
+		character_textures = {
+			"gfx/models/portraits/synthetics/synthetics_01_portrait_06_f_color_blue.dds"
+			"gfx/models/portraits/synthetics/synthetics_01_portrait_06_f_color_candy.dds"
+			"gfx/models/portraits/synthetics/synthetics_01_portrait_06_f_color_green.dds"
+			"gfx/models/portraits/synthetics/synthetics_01_portrait_06_f_color_pink.dds"
+		}
+
+		custom_close_up_position_offset = { x = 113 y = 547 }
+		custom_close_up_scale = 2.3
+	}
+
+	# Snake
+	synth06_m = {
+		entity = "synthetics_01_portrait_06_entity"
+		clothes_selector = "synthetics_01_clothes_06"
+		attachment_selector = "no_texture"
+		greeting_sound = "machineage_portrait_synthetic_06"
+
+		portrait_evolution = {
+			evolution_stages = {
+				# portrait stages
+				{
+					values = {
+						# stage 1 variant 1
+						{
+							decal = "gfx/models/portraits/synthetics_machine/synthetics_02_portrait_06_color_gold.dds"
+							mask = "gfx/models/portraits/common/empty_portrait_evolution_mask.dds"
+						}
+					}
+					values = {
+						# stage 1 variant 2
+						{
+							decal = "gfx/models/portraits/synthetics_machine/synthetics_02_portrait_06_color_green.dds"
+							mask = "gfx/models/portraits/common/empty_portrait_evolution_mask.dds"
+						}
+					}
+					values = {
+						# stage 1 variant 3
+						{
+							decal = "gfx/models/portraits/synthetics_machine/synthetics_02_portrait_06_color_pink.dds"
+							mask = "gfx/models/portraits/common/empty_portrait_evolution_mask.dds"
+						}
+					}
+					values = {
+						# stage 1 variant 4
+						{
+							decal = "gfx/models/portraits/synthetics_machine/synthetics_02_portrait_06_color_salmon.dds"
+							mask = "gfx/models/portraits/common/empty_portrait_evolution_mask.dds"
+						}
+					}
+					values = {
+						# stage 1 variant 5
+						{
+							decal = "gfx/models/portraits/synthetics_machine/synthetics_02_portrait_06_color_teal.dds"
+							mask = "gfx/models/portraits/common/empty_portrait_evolution_mask.dds"
+						}
+					}
+
+					#leader, pop or species scope (when called with species scope, from subscope can contain a country species related to)
+					# Set to always = no as we only use this for showing the portrait in the empire creator
+					# The actual portrait swap is done via set_synth_or_robot_portrait_effect to ensure the species archetype is changed as well
+					trigger = {
+						always = no
+					}
+				}
+			}
+		}
+
+		character_textures = {
+			"gfx/models/portraits/synthetics/synthetics_01_portrait_06_m_color_lime.dds"
+			"gfx/models/portraits/synthetics/synthetics_01_portrait_06_m_color_orange.dds"
+			"gfx/models/portraits/synthetics/synthetics_01_portrait_06_m_color_pink.dds"
+			"gfx/models/portraits/synthetics/synthetics_01_portrait_06_m_color_salmon.dds"
+		}
+
+		custom_close_up_position_offset = { x = 113 y = 547 }
+		custom_close_up_scale = 2.3
+	}
+
+	# Zombie
+	synth07_m = {
+		entity = "synthetics_01_portrait_07_entity"
+		clothes_selector = "synthetics_01_clothes_07"
+		attachment_selector = "no_texture"
+		greeting_sound = "machineage_portrait_synthetic_07"
+		character_textures = {
+			"gfx/models/portraits/synthetics/synthetics_01_portrait_07_m_color_orange.dds"
+			"gfx/models/portraits/synthetics/synthetics_01_portrait_07_m_color_green.dds"
+			"gfx/models/portraits/synthetics/synthetics_01_portrait_07_m_color_pink.dds"
+			"gfx/models/portraits/synthetics/synthetics_01_portrait_07_m_color_red.dds"
+			"gfx/models/portraits/synthetics/synthetics_01_portrait_07_m_color_teal.dds"
+		}
+
+		portrait_evolution = {
+			evolution_stages = {
+				# portrait stages
+				{
+					values = {
+						# stage 1 variant 1
+						{
+							decal = "gfx/models/portraits/synthetics_machine/synthetics_02_portrait_07_color_gold.dds"
+							mask = "gfx/models/portraits/common/empty_portrait_evolution_mask.dds"
+						}
+					}
+					values = {
+						# stage 1 variant 2
+						{
+							decal = "gfx/models/portraits/synthetics_machine/synthetics_02_portrait_07_color_grey.dds"
+							mask = "gfx/models/portraits/common/empty_portrait_evolution_mask.dds"
+						}
+					}
+					values = {
+						# stage 1 variant 3
+						{
+							decal = "gfx/models/portraits/synthetics_machine/synthetics_02_portrait_07_color_orange.dds"
+							mask = "gfx/models/portraits/common/empty_portrait_evolution_mask.dds"
+						}
+					}
+					values = {
+						# stage 1 variant 4
+						{
+							decal = "gfx/models/portraits/synthetics_machine/synthetics_02_portrait_07_color_stripe.dds"
+							mask = "gfx/models/portraits/common/empty_portrait_evolution_mask.dds"
+						}
+					}
+					values = {
+						# stage 1 variant 5
+						{
+							decal = "gfx/models/portraits/synthetics_machine/synthetics_02_portrait_07_color_white.dds"
+							mask = "gfx/models/portraits/common/empty_portrait_evolution_mask.dds"
+						}
+					}
+
+					#leader, pop or species scope (when called with species scope, from subscope can contain a country species related to)
+					# Set to always = no as we only use this for showing the portrait in the empire creator
+					# The actual portrait swap is done via set_synth_or_robot_portrait_effect to ensure the species archetype is changed as well
+					trigger = {
+						always = no
+					}
+				}
+			}
+		}
+
+		custom_close_up_position_offset = { x = -7 y = 427 }
+		custom_close_up_scale = 2
+	}
+
+	synth07_f = {
+		entity = "synthetics_01_portrait_07_entity"
+		clothes_selector = "synthetics_01_clothes_07"
+		attachment_selector = "no_texture"
+		greeting_sound = "machineage_portrait_synthetic_07"
+
+		portrait_evolution = {
+			evolution_stages = {
+				# portrait stages
+				{
+					values = {
+						# stage 1 variant 1
+						{
+							decal = "gfx/models/portraits/synthetics_machine/synthetics_02_portrait_07_color_gold.dds"
+							mask = "gfx/models/portraits/common/empty_portrait_evolution_mask.dds"
+						}
+					}
+					values = {
+						# stage 1 variant 2
+						{
+							decal = "gfx/models/portraits/synthetics_machine/synthetics_02_portrait_07_color_grey.dds"
+							mask = "gfx/models/portraits/common/empty_portrait_evolution_mask.dds"
+						}
+					}
+					values = {
+						# stage 1 variant 3
+						{
+							decal = "gfx/models/portraits/synthetics_machine/synthetics_02_portrait_07_color_orange.dds"
+							mask = "gfx/models/portraits/common/empty_portrait_evolution_mask.dds"
+						}
+					}
+					values = {
+						# stage 1 variant 4
+						{
+							decal = "gfx/models/portraits/synthetics_machine/synthetics_02_portrait_07_color_stripe.dds"
+							mask = "gfx/models/portraits/common/empty_portrait_evolution_mask.dds"
+						}
+					}
+					values = {
+						# stage 1 variant 5
+						{
+							decal = "gfx/models/portraits/synthetics_machine/synthetics_02_portrait_07_color_white.dds"
+							mask = "gfx/models/portraits/common/empty_portrait_evolution_mask.dds"
+						}
+					}
+
+					#leader, pop or species scope (when called with species scope, from subscope can contain a country species related to)
+					# Set to always = no as we only use this for showing the portrait in the empire creator
+					# The actual portrait swap is done via set_synth_or_robot_portrait_effect to ensure the species archetype is changed as well
+					trigger = {
+						always = no
+					}
+				}
+			}
+		}
+
+		character_textures = {
+			"gfx/models/portraits/synthetics/synthetics_01_portrait_07_f_color_orange.dds"
+			"gfx/models/portraits/synthetics/synthetics_01_portrait_07_f_color_purple.dds"
+			"gfx/models/portraits/synthetics/synthetics_01_portrait_07_f_color_rainbow.dds"
+			"gfx/models/portraits/synthetics/synthetics_01_portrait_07_f_color_red.dds"
+			"gfx/models/portraits/synthetics/synthetics_01_portrait_07_f_color_redder.dds"
+		}
+
+		custom_close_up_position_offset = { x = -7 y = 427 }
+		custom_close_up_scale = 2
+	}
+
+	# Bug
+	synth08 = {
+		entity = "synthetics_01_portrait_08_entity"
+		clothes_selector = "synthetics_01_clothes_08"
+		attachment_selector = "no_texture"
+		greeting_sound = "machineage_portrait_synthetic_08"
+
+		portrait_evolution = {
+			evolution_stages = {
+				# portrait stages
+				{
+					values = {
+						# stage 1 variant 1
+						{
+							decal = "gfx/models/portraits/synthetics_machine/synthetics_02_portrait_08_color_blue.dds"
+							mask = "gfx/models/portraits/common/empty_portrait_evolution_mask.dds"
+						}
+					}
+					values = {
+						# stage 1 variant 2
+						{
+							decal = "gfx/models/portraits/synthetics_machine/synthetics_02_portrait_08_color_gold.dds"
+							mask = "gfx/models/portraits/common/empty_portrait_evolution_mask.dds"
+						}
+					}
+					values = {
+						# stage 1 variant 3
+						{
+							decal = "gfx/models/portraits/synthetics_machine/synthetics_02_portrait_08_color_grey.dds"
+							mask = "gfx/models/portraits/common/empty_portrait_evolution_mask.dds"
+						}
+					}
+					values = {
+						# stage 1 variant 4
+						{
+							decal = "gfx/models/portraits/synthetics_machine/synthetics_02_portrait_08_color_pink.dds"
+							mask = "gfx/models/portraits/common/empty_portrait_evolution_mask.dds"
+						}
+					}
+					values = {
+						# stage 1 variant 5
+						{
+							decal = "gfx/models/portraits/synthetics_machine/synthetics_02_portrait_08_color_teal.dds"
+							mask = "gfx/models/portraits/common/empty_portrait_evolution_mask.dds"
+						}
+					}
+
+					#leader, pop or species scope (when called with species scope, from subscope can contain a country species related to)
+					# Set to always = no as we only use this for showing the portrait in the empire creator
+					# The actual portrait swap is done via set_synth_or_robot_portrait_effect to ensure the species archetype is changed as well
+					trigger = {
+						always = no
+					}
+				}
+			}
+		}
+
+		character_textures = {
+			"gfx/models/portraits/synthetics/synthetics_01_portrait_08_color_teal.dds"
+			"gfx/models/portraits/synthetics/synthetics_01_portrait_08_color_tan.dds"
+			"gfx/models/portraits/synthetics/synthetics_01_portrait_08_color_orange.dds"
+			"gfx/models/portraits/synthetics/synthetics_01_portrait_08_color_grey.dds"
+			"gfx/models/portraits/synthetics/synthetics_01_portrait_08_color_green.dds"
+			"gfx/models/portraits/synthetics/synthetics_01_portrait_08_color_blue.dds"
+		}
+
+		custom_close_up_position_offset = { x = -7 y = 427 }
+		custom_close_up_scale = 2
+	}
+
+	# Mosquito
+	synth09 = {
+		entity = "synthetics_01_portrait_09_entity"
+		clothes_selector = "synthetics_01_clothes_09"
+		attachment_selector = "no_texture"
+		greeting_sound = "machineage_portrait_synthetic_09"
+
+		portrait_evolution = {
+			evolution_stages = {
+				# portrait stages
+				{
+					values = {
+						# stage 1 variant 1
+						{
+							decal = "gfx/models/portraits/synthetics_machine/synthetics_02_portrait_09_color_grey.dds"
+							mask = "gfx/models/portraits/common/empty_portrait_evolution_mask.dds"
+						}
+					}
+					values = {
+						# stage 1 variant 2
+						{
+							decal = "gfx/models/portraits/synthetics_machine/synthetics_02_portrait_09_color_lime.dds"
+							mask = "gfx/models/portraits/common/empty_portrait_evolution_mask.dds"
+						}
+					}
+					values = {
+						# stage 1 variant 3
+						{
+							decal = "gfx/models/portraits/synthetics_machine/synthetics_02_portrait_09_color_orange.dds"
+							mask = "gfx/models/portraits/common/empty_portrait_evolution_mask.dds"
+						}
+					}
+					values = {
+						# stage 1 variant 4
+						{
+							decal = "gfx/models/portraits/synthetics_machine/synthetics_02_portrait_09_color_pink.dds"
+							mask = "gfx/models/portraits/common/empty_portrait_evolution_mask.dds"
+						}
+					}
+					values = {
+						# stage 1 variant 5
+						{
+							decal = "gfx/models/portraits/synthetics_machine/synthetics_02_portrait_09_color_slate.dds"
+							mask = "gfx/models/portraits/common/empty_portrait_evolution_mask.dds"
+						}
+					}
+					values = {
+						# stage 1 variant 6
+						{
+							decal = "gfx/models/portraits/synthetics_machine/synthetics_02_portrait_09_color_teal.dds"
+							mask = "gfx/models/portraits/common/empty_portrait_evolution_mask.dds"
+						}
+					}
+
+					#leader, pop or species scope (when called with species scope, from subscope can contain a country species related to)
+					# Set to always = no as we only use this for showing the portrait in the empire creator
+					# The actual portrait swap is done via set_synth_or_robot_portrait_effect to ensure the species archetype is changed as well
+					trigger = {
+						always = no
+					}
+				}
+			}
+		}
+
+		character_textures = {
+			"gfx/models/portraits/synthetics/synthetics_01_portrait_09_color_green.dds"
+			"gfx/models/portraits/synthetics/synthetics_01_portrait_09_color_grey.dds"
+			"gfx/models/portraits/synthetics/synthetics_01_portrait_09_color_pink.dds"
+			"gfx/models/portraits/synthetics/synthetics_01_portrait_09_color_red.dds"
+			"gfx/models/portraits/synthetics/synthetics_01_portrait_09_color_stripe.dds"
+			"gfx/models/portraits/synthetics/synthetics_01_portrait_09_color_tan.dds"
+			"gfx/models/portraits/synthetics/synthetics_01_portrait_09_color_turquois.dds"
+		}
+
+		custom_close_up_position_offset = { x = 40 y = 333 }
+		custom_close_up_scale = 1.8
+	}
+}
+
+portrait_groups = {
+
+	# 06 - Snake
+	synth06 = {
+		default = synth06_m
+		game_setup = { #will run with a limited country scope. species and government is set but the country does not actually exist
+			add = {
+				trigger = {
+					ruler = {
+						OR = {
+							gender = male
+							gender = indeterminable
+						}
+					}
+				}
+				portraits = {
+					synth06_m
+				}
+			}
+			add = {
+				trigger = {
+					ruler = {
+						OR = {
+							gender = female
+							gender = indeterminable
+						}
+					}
+				}
+				portraits = {
+					synth06_f
+				}
+			}
+
+		}
+
+		#species scope
+		species = { #generic portrait for a species
+			add = {
+				trigger = {
+					exists = species
+					NOT = { species = { species_gender = female } }
+				}
+				portraits = {
+					synth06_m
+				}
+			}
+			add = {
+				trigger = {
+					exists = species
+					NOT = { species = { species_gender = male } }
+				}
+				portraits = {
+					synth06_f
+				}
+			}
+		}
+
+		#pop scope
+		pop = { #for a specific pop
+			add = {
+				trigger = {
+					NOT = { species = { species_gender = female } }
+				}
+				portraits = {
+					synth06_m
+				}
+			}
+			add = {
+				trigger = {
+					NOT = { species = { species_gender = male } }
+				}
+				portraits = {
+					synth06_f
+				}
+			}
+		}
+
+		leader = {
+			add = {
+				trigger = {
+					OR = {
+						gender = male
+						gender = indeterminable
+					}
+				}
+				portraits = {
+					synth06_m
+				}
+			}
+			add = {
+				trigger = {
+					OR = {
+						gender = female
+						gender = indeterminable
+					}
+				}
+				portraits = {
+					synth06_f
+				}
+			}
+		}
+
+		ruler = {
+			add = {
+				trigger = {
+					OR = {
+						gender = male
+						gender = indeterminable
+					}
+				}
+				portraits = {
+					synth06_m
+				}
+			}
+			add = {
+				trigger = {
+					OR = {
+						gender = female
+						gender = indeterminable
+					}
+				}
+				portraits = {
+					synth06_f
+				}
+			}
+		}
+	}
+
+	# 07 - Zombie
+	synth07 = {
+		default = synth07_m
+		game_setup = { #will run with a limited country scope. species and government is set but the country does not actually exist
+			add = {
+				trigger = {
+					ruler = {
+						OR = {
+							gender = male
+							gender = indeterminable
+						}
+					}
+				}
+				portraits = {
+					synth07_m
+				}
+			}
+			add = {
+				trigger = {
+					ruler = {
+						OR = {
+							gender = female
+							gender = indeterminable
+						}
+					}
+				}
+				portraits = {
+					synth07_f
+				}
+			}
+
+		}
+
+		#species scope
+		species = { #generic portrait for a species
+			add = {
+				trigger = {
+					exists = species
+					NOT = { species = { species_gender = female } }
+				}
+				portraits = {
+					synth07_m
+				}
+			}
+			add = {
+				trigger = {
+					exists = species
+					NOT = { species = { species_gender = male } }
+				}
+				portraits = {
+					synth07_f
+				}
+			}
+		}
+
+		#pop scope
+		pop = { #for a specific pop
+			add = {
+				trigger = {
+					NOT = { species = { species_gender = female } }
+				}
+				portraits = {
+					synth07_m
+				}
+			}
+			add = {
+				trigger = {
+					NOT = { species = { species_gender = male } }
+				}
+				portraits = {
+					synth07_f
+				}
+			}
+		}
+
+		leader = {
+			add = {
+				trigger = {
+					OR = {
+						gender = male
+						gender = indeterminable
+					}
+				}
+				portraits = {
+					synth07_m
+				}
+			}
+			add = {
+				trigger = {
+					OR = {
+						gender = female
+						gender = indeterminable
+					}
+				}
+				portraits = {
+					synth07_f
+				}
+			}
+		}
+
+		ruler = {
+			add = {
+				trigger = {
+					OR = {
+						gender = male
+						gender = indeterminable
+					}
+				}
+				portraits = {
+					synth07_m
+				}
+			}
+			add = {
+				trigger = {
+					OR = {
+						gender = female
+						gender = indeterminable
+					}
+				}
+				portraits = {
+					synth07_f
+				}
+			}
+		}
+	}
+}

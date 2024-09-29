@@ -1,0 +1,506 @@
+guiTypes = {
+	containerWindowType = {
+		name = "ok_popup_window"
+		position = { x=-267 y=-155 }	
+		size = { width = 600 height = 240 }
+		moveable = yes
+		Orientation = center
+		
+		background = {
+			name = "background"
+			quadTextureSprite ="GFX_tile_outliner_bg"
+		}
+
+		iconType = {
+			name = "hex_bg"
+			spriteType = "GFX_hex_center_bg"
+			position = { x = -367 y = 0 }
+			alwaysTransparent = yes
+			Orientation = "CENTER_UP"
+		}
+
+		iconType = {
+			name = "header_line"
+			quadTextureSprite = "GFX_line_center"
+			position = { x = -16 y = 51 }
+		}
+		
+		# This invisible button added to allow closing a popup by the ESCAPE shortcut.
+		buttonType = {
+			name = "DeclineButton"
+			spriteType = "GFX_invisible"
+			shortcut = "ESCAPE"
+			clicksound = "confirm_click"
+
+			# The button is placed underneath the main AgreeButton.
+			position = { x = 0 y = -53 }
+			size = {x = 1 y = 1 }
+			orientation = "CENTER_DOWN"
+		}
+		
+		buttonType = {
+			name = "AgreeButton"
+			quadTextureSprite = "GFX_standard_button_142_34_button"
+			position = { x= -107 y = -80 }
+			orientation = "CENTER_DOWN"
+			buttonText = "OK"
+			buttonFont = "cg_16b"
+			actionShortcut = "accept"
+			shortcut = "RETURN"
+			clicksound = "confirm_click"
+			
+		}
+		
+		instantTextBoxType = {
+			name = "title"
+			font = "malgun_goth_24"
+			text = "CONFIRMATION_TITLE"
+			position = { x = 33 y = 27 }
+			maxWidth = 333
+			maxHeight = 27
+			
+			Orientation = "UPPER_LEFT"
+			# UPPER_LEFT UPPER_RIGHT LOWER_LEFT LOWER_RIGHT CENTER_UP
+			text_color_code = "H"
+			# H = Highlight (orange) R = Red G = Green B  = Blue E = green text 
+		}
+
+		instantTextBoxType={
+			position = { x = 0 y = 67 }
+			name = "description"
+			font = "cg_16b"
+			borderSize = {x = 7 y = 7 }	
+			maxWidth = 600
+			maxHeight = 27
+			text = ""	
+			orientation = "UPPER_LEFT"
+			format = centre
+		}
+	}
+	
+	containerWindowType = {
+		name = "yes_no_popup_window"
+		position = { x=-267 y=-155 }
+		size = { width = 600 height = 240 }
+		moveable = yes
+		Orientation = center
+		
+		background = {
+			name = "background"
+			quadTextureSprite ="GFX_tile_outliner_bg"
+		}
+
+		iconType = {
+			name = "hex_bg"
+			spriteType = "GFX_hex_center_bg"
+			position = { x = -367 y = 0 }
+			alwaysTransparent = yes
+			Orientation = "CENTER_UP"
+		}
+
+		iconType = {
+			name = "empire_header_line"
+			quadTextureSprite = "GFX_line_center"
+			position = { x = -16 y = 51 }
+		}
+		
+		buttonType = {
+			name = "AgreeButton"
+			quadTextureSprite = "GFX_standard_button_142_34_button"
+			position = { x = 367 y = -80 }
+			orientation = "LOWER_LEFT"
+			buttonText = "YES"
+			buttonFont = "cg_16b"
+			actionShortcut = "accept"
+			shortcut = "RETURN"
+			clicksound = "confirm_click"
+		}
+
+		buttonType = {
+			name = "DeclineButton"
+			quadTextureSprite = "GFX_standard_button_142_34_button"
+			position = { x = 16 y = -80 }
+			orientation = "LOWER_LEFT"
+			buttonText = "NO"
+			buttonFont = "cg_16b"
+			actionShortcut = "cancel"
+			clicksound = "back_click"
+		}
+		
+		instantTextBoxType = {
+			position = { x = 33 y = 27 }
+			name = "title"
+			font = "malgun_goth_24"
+			borderSize = {x = 0 y = 0 }	
+			maxWidth = 533
+			maxHeight = 27
+			text = ""	
+			orientation = "UPPER_LEFT"
+			format = centre
+		}
+
+		instantTextBoxType = {
+			name = "description"
+			font = "cg_16b"
+			format = center
+			orientation = center_up
+			maxWidth = 507
+			maxHeight = 0
+			position = { x = -253 y = 93 }
+			alwaysTransparent = yes
+		}
+	}
+	
+	containerWindowType = {
+		name = "three_options_popup_window"
+		position = { x=-267 y=-155 }	
+		size = { width = 800 height = 243 }
+		moveable = yes
+		Orientation = center
+		
+		background = {
+			name = "background"	
+			quadTextureSprite ="GFX_tile_outliner_bg"
+		}
+		
+		buttonType = {
+			name = "OptionA"
+			quadTextureSprite = "GFX_standard_button_142_34_button"
+			position = { x = 16 y = -80 }
+			Orientation = "LOWER_LEFT"
+			buttonFont = "cg_16b"
+			actionShortcut = "cancel"
+		}
+		
+		buttonType = {
+			name = "OptionB"
+			quadTextureSprite = "GFX_standard_button_142_34_button"
+			position = { x = 289 y = -80 }
+			Orientation = "LOWER_LEFT"
+			buttonFont = "cg_16b"
+			actionShortcut = "accept"
+		}
+		
+		buttonType = {
+			name = "OptionC"
+			quadTextureSprite = "GFX_standard_button_142_34_button"
+			position = { x = -237 y = -80 }
+			Orientation = "LOWER_RIGHT"
+			buttonFont = "cg_16b"
+			actionShortcut = "cancel"
+		}
+		
+		instantTextBoxType={
+			position = { x = 0 y = 27 }
+			name = "title"
+			font = "malgun_goth_24"
+			borderSize = {x = 0 y = 0 }	
+			maxWidth = 800
+			maxHeight = 27
+			text = ""	
+			orientation = "UPPER_LEFT"
+			format = center
+		}
+
+		instantTextBoxType={
+			position = { x = 0 y = 67 }
+			name = "description"
+			font = "cg_16b"
+			borderSize = {x = 7 y = 7 }	
+			maxWidth = 800
+			maxHeight = 27
+			text = ""	
+			orientation = "UPPER_LEFT"
+			format = centre
+		}
+	}
+	
+	containerWindowType = {
+		name = "delete_cancel_popup_window"
+		position = { x=-267 y=-155 }	
+		size = { width = 640 height = 283 }
+		moveable = yes
+		Orientation = center
+
+		background = {
+			name = "background"
+			quadTextureSprite ="GFX_tile_outliner_bg"
+		}
+
+		iconType = {
+			name = "hex_bg"
+			spriteType = "GFX_hex_center_bg"
+			position = { x = -367 y = 0 }
+			alwaysTransparent = yes
+			Orientation = "CENTER_UP"
+		}
+
+		iconType = {
+			name = "empire_header_line"
+			quadTextureSprite = "GFX_line_center"
+			position = { x = -20 y = 51 }
+		}
+		
+		buttonType = {
+			name = "AgreeButton"
+			quadTextureSprite = "GFX_standard_button_142_34_button"
+			position = { x = 347 y = -80 }
+			Orientation = "LOWER_LEFT"
+			buttonText = "DELETE"
+			buttonFont = "cg_16b"
+			shortcut = "RETURN"
+			actionShortcut = "accept"
+			clicksound = confirm_click
+		}
+
+		buttonType = {
+			name = "DeclineButton"
+			quadTextureSprite = "GFX_standard_button_142_34_button"
+			position = { x = 69 y = -80 }
+			Orientation = "LOWER_LEFT"
+			buttonText = "CANCEL"
+			buttonFont = "cg_16b"
+			shortcut = "ESCAPE"
+			actionShortcut = "cancel"
+			clicksound = back_click
+		}
+		
+		instantTextBoxType={
+			position = { x = 53 y = 27 }
+			name = "title"
+			font = "malgun_goth_24"
+			borderSize = {x = 0 y = 0 }	
+			maxWidth = 533
+			maxHeight = 27
+			text = ""	
+			orientation = "UPPER_LEFT"
+			format = center
+		}
+
+		instantTextBoxType={
+			position = { x = 53 y = 84 }
+			name = "description"
+			font = "cg_16b"
+			maxWidth = 533
+			maxHeight = 107
+			text = ""	
+			orientation = "UPPER_LEFT"
+			format = center
+		}
+	}
+	
+	containerWindowType = {
+		name = "text_input_popup_window"
+		position = { x=-267 y=-155 }	
+		size = { width = 640 height = 283 }
+		moveable = yes
+		Orientation = center
+		
+		background = {
+			name = "background"
+			quadTextureSprite ="GFX_tile_outliner_bg"
+		}
+
+		iconType = {
+			name = "hex_bg"
+			spriteType = "GFX_hex_center_bg"
+			position = { x = -367 y = 0 }
+			alwaysTransparent = yes
+			Orientation = "CENTER_UP"
+		}
+
+		iconType = {
+			name = "empire_header_line"
+			quadTextureSprite = "GFX_line_center"
+			position = { x = -16 y = 51 }
+		}
+		
+		instantTextBoxType = {
+			name = "title"
+			font = "malgun_goth_24"
+			text = "CONFIRMATION_TITLE"
+			position = { x = 33 y = 27 }
+			maxWidth = 333
+			maxHeight = 27
+			
+			Orientation = "UPPER_LEFT"
+			# UPPER_LEFT UPPER_RIGHT LOWER_LEFT LOWER_RIGHT CENTER_UP
+			#text_color_code = "H"
+			# H = Highlight (orange) R = Red G = Green B  = Blue E = green text 
+		}
+		
+		editBoxType = {
+			position = { x = 23 y = 87  }
+			name = "edit"
+			instantTextBoxType = no
+			textureFile = "gfx/interface/tiles/small_tiles_dialog.dds"
+			font = "malgun_goth_24"
+			borderSize = { x=5 y=5 }	
+			size = { x=493 y=53 }
+			text = " "
+			orientation = "UPPER_LEFT"	
+		}
+		
+		
+		buttonType = {
+			name = "AgreeButton"
+			quadTextureSprite = "GFX_standard_button_142_34_button"
+			position = { x = 293 y = -80 }
+			orientation = "LOWER_LEFT"
+			buttonText = "OK"
+			buttonFont = "cg_16b"
+			actionShortcut = "accept"
+			shortcut = "RETURN"
+			clicksound = "confirm_click"
+		}
+		buttonType = {
+			name = "DeclineButton"
+			quadTextureSprite = "GFX_standard_button_142_34_button"
+			position = { x = 16 y = -80 }
+			orientation = "LOWER_LEFT"
+			buttonText = "CANCEL"
+			buttonFont = "cg_16b"
+			actionShortcut = "cancel"
+		}	
+
+		instantTextBoxType={
+			position = { x = 0 y = 67 }
+			name = "description"
+			font = "cg_16b"
+			borderSize = {x = 7 y = 7 }	
+			maxWidth = 533
+			maxHeight = 27
+			text = ""	
+			orientation = "UPPER_LEFT"
+			format = centre
+		}
+	}
+
+	containerWindowType = {
+		name = "resolution_confirmation_popup_window"
+		position = { x=-267 y=-155 }
+		size = { width = 600 height = 333 }
+		moveable = yes
+		Orientation = center
+		
+		background = {
+			name = "background"
+			quadTextureSprite ="GFX_tile_outliner_bg"
+		}
+
+		iconType = {
+			name = "hex_bg"
+			spriteType = "GFX_hex_center_bg"
+			position = { x = -233 y = -7 }
+			alwaysTransparent = yes
+			Orientation = "LEFT_UP"
+		}
+
+		iconType = {
+			name = "empire_header_line"
+			quadTextureSprite = "GFX_line_medium"
+			position = { x = 7 y = 51 }
+		}
+		
+		buttonType = {
+			name = "AgreeButton"
+			quadTextureSprite = "GFX_standard_button_142_34_button"
+			position = { x = 367 y = -80 }
+			orientation = "LOWER_LEFT"
+			buttonText = "YES"
+			buttonFont = "cg_16b"
+			actionShortcut = "accept"
+			shortcut = "RETURN"
+			clicksound = "confirm_click"
+		}
+
+		buttonType = {
+			name = "DeclineButton"
+			quadTextureSprite = "GFX_standard_button_142_34_button"
+			position = { x = 16 y = -80 }
+			orientation = "LOWER_LEFT"
+			buttonText = "NO"
+			buttonFont = "cg_16b"
+			actionShortcut = "cancel"
+			clicksound = "back_click"
+		}
+		
+		instantTextBoxType = {
+			position = { x = 33 y = 17 }
+			name = "title"
+			font = "malgun_goth_24"
+			borderSize = {x = 0 y = 0 }	
+			maxWidth = 533
+			maxHeight = 27
+			text = ""	
+			orientation = "UPPER_LEFT"
+			format = left
+		}
+
+		containerWindowType = {
+			name = "description_container"
+			position = { x = -280 y = 173 }
+			size = { width = 560 height = 87 }
+			orientation = center_up
+
+			background = {
+				name = "description_frame"
+				spriteType = "GFX_tiles_dark_area_cut_8"
+			}
+
+			instantTextBoxType = {
+				name = "description"
+				font = "cg_16b"
+				format = left
+				orientation = center_up
+				maxWidth = 533
+				maxHeight = 0
+				position = { x = -257 y = 20 }
+				alwaysTransparent = yes
+			}
+		}
+
+		containerWindowType = {
+			name = "resolution_info_container"
+			position = { x = -280 y = 80 }
+			size = { width = 560 height = 84 }
+			orientation = center_up
+
+			background = {
+				name = "info_frame"
+				spriteType = "GFX_tiles_dark_area_cut_8"
+			}
+
+			iconType = {
+				position = { x = 11 y = 1 }
+				name = "resolution_icon"
+				quadTextureSprite = "GFX_repeal_red"
+				scale = 1
+				alwaystransparent = yes
+				orientation = left_up
+			}
+
+			instantTextBoxType = {
+				name = "resolution_name"
+				position = { x = 93 y = 16 }
+				font = "cg_16b"
+				format = left
+				maxWidth = 440
+				maxHeight = 27
+				fixedSize = yes
+				alwaysTransparent = yes
+			}
+
+			instantTextBoxType = {
+				name = "support"
+				position = { x = 93 y = 40 }
+				font = "cg_16b"
+				format = left
+				maxWidth = 440
+				maxHeight = 27
+				fixedSize = yes
+				alwaysTransparent = yes
+			}
+		}
+	}
+}

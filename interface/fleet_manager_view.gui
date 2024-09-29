@@ -1,0 +1,1271 @@
+@dynamic_extra = 0.8
+@dynamic_extra_top = 0.08
+@dynamic_extra_mid = 0.5
+@dynamic_extra_top_plus_mid = 0.58
+@dynamic_extra_bottom = 0.22
+
+
+guiTypes = {
+	@FLEET_MANAGER_AVAILABLE_SHIP_DESIGN_ENTITY_WIDTH = 463
+	@FLEET_MANAGER_AVAILABLE_SHIP_DESIGN_ENTITY_ITEM_WIDTH = 447
+	
+	@FLEET_MANAGER_FLEET_COMPOSITION_ENTITY_WIDTH = 111
+	@FLEET_MANAGER_FLEET_COMPOSITION_ENTITY_HEIGHT = 33
+
+	@FLEET_MANAGER_TEMPLATE_WIDTH = 389
+	@FLEET_MANAGER_TEMPLATE_GUTTER = 400
+	@FLEET_MANAGER_TEMPLATE_NAME_WIDTH = 243
+
+	containerWindowType = {
+		name = "fleet_manager_view"
+		size = { width = 1267 height = 856 }
+		dynamic_extra_height = @dynamic_extra
+		position = { x = 47 y = 53 }
+		show_position = { x = 47 y = 53 }
+		hide_position = { x = -1696 y = 53 }
+		animation_time = 200
+		animation_type = decelerated
+		clipping = no
+		show_sound = "interface"
+
+		background = {
+			name = "bg"
+			spriteType = "GFX_tile_large_bg"
+		}
+
+		buttonType = {
+			name = "close"
+			spriteType = "GFX_close_button"
+			position = { x = -60 y = 21 }
+			orientation = "UPPER_RIGHT"
+			shortcut = "ESCAPE"
+			pdx_tooltip = "CLOSE_TITLE"
+			clicksound = "back_click"
+		}
+
+		buttonType = {
+			name = "ship_designer_tab"
+			quadTextureSprite = "GFX_tab_1_inactive"
+			position = { x = 147 y = 853 }
+			font = "cg_16b"
+			buttonText = "SHIPDESIGNER"
+			buttonFont = "cg_16b"
+			shortcut = "x"
+			clicksound = "tab_click"
+		}
+
+		buttonType = {
+			name = "fleet_manager_tab"
+			quadTextureSprite = "GFX_tab_1_active"
+			position = { x = -27 y = 853 }
+			font = "cg_16b"
+			buttonText = "FLEET_MANAGER_VIEW"
+			buttonFont = "cg_16b"
+			shortcut = "z"
+			clicksound = "tab_click"
+		}
+
+		iconType = {
+			name = "hex_bg"
+			spriteType = "GFX_hex_bg"
+			position = { x = 7 y = -16 }
+			alwaysTransparent = yes
+		}
+
+		iconType = {
+			name = "title_line"
+			quadTextureSprite = "GFX_line"
+			position = { x = 8 y = 29 }
+		}
+
+		instantTextBoxType = {
+			name = "title"
+			font = "malgun_goth_24"
+			text = "topbar_button_fleet_manager_name"
+			position = { x = 47 y = 7 }
+			maxWidth = 1333
+			maxHeight = 27
+			fixedSize = yes
+			alwaysTransparent = yes
+		}
+		
+		containerWindowType = {
+			name = "box1"
+
+			size = { width = 1267 height = -15 }
+			position = { x = 0 y = 0 }
+
+			containerWindowType = {
+				name = "templates"
+				size = { width = 413 height = 717 }
+				dynamic_extra_height = @dynamic_extra_mid
+				position = { x = 0 y = 125 }
+				dynamic_extra_y = @dynamic_extra_top
+				verticalScrollbar = "right_vertical_slider_s"
+				margin = { top = 11 bottom = 11 }
+				
+				background = {
+					name = "bg"
+					quadTextureSprite = "GFX_tiles_dark_area_cut_8"
+				}
+
+				gridBoxType = {
+					name = "templates_grid"
+					position = { x = 11 y = 0 }
+					size = { width = 413 height = 104 }
+					format = "UPPER_LEFT"
+					slotsize = {
+						width = @FLEET_MANAGER_TEMPLATE_GUTTER
+						height = 56
+					}
+					max_slots_horizontal = 1
+				}
+
+				instantTextBoxType = {
+					name = "select_template_hint"
+					font = "cg_16b"
+					position = { x = 7 y = 67 }
+					maxWidth = 400
+					maxHeight = 67
+					fixedSize = yes
+					orientation = "UPPER_LEFT"
+					format = center
+					alwaystransparent = yes
+					text = "FLEET_MANAGER_NO_TEMPLATE_SELECTED_HINT"
+				}
+			}
+
+			background = {
+				name = "planet_view_bg"
+				quadTextureSprite = "GFX_fleet_manager_fleet_bg_horizontal"
+				position = { x = 423 y = 137 }
+				alwaysTransparent = yes
+			}
+			
+			buttonType = {
+				name = "rename_button"
+				quadTextureSprite = "gfx_transparency_button"
+				position = { x = 427 y = 140 }
+				size = { x = 240 y = 35 }
+			}			
+			
+			instantTextBoxType = {
+				name = "fleet_name"
+				font = "malgun_goth_24"
+				position = { x = 440 y = 136 }
+				maxWidth = 333
+				maxHeight = 27
+				fixedsize = yes
+				text = "FLEET_MANAGER_NO_TEMPLATE_SELECTED_HINT"
+				format = left
+				alwaystransparent = yes
+			}
+		        
+			containerWindowType = {
+				name = "fleet_orders"
+				size = { width = 693 height = 327 }
+				position = { x = 427 y = 107 }
+
+				iconType = {
+					name = "header_line"
+					spriteType = "GFX_line"
+					position = { x = 3 y = 53 }
+				}	
+
+				containerWindowType = {
+					name = "header"
+					position = { x = 627 y = 47 }
+					size = { width = 160 height = 53 }
+
+					background = {
+						name = "bg"
+						quadTextureSprite = "GFX_tiled_window_transparent"
+					}
+
+					buttonType = {
+						name = "stop"
+						spriteType = "GFX_fleet_order_button_stop"
+						position = { x = 8 y = 0 }
+					}
+
+					buttonType = {
+						name = "return"
+						spriteType = "GFX_fleet_order_button_return"
+						position = { x = 53 y = 0 }
+					}
+					
+					buttonType = {
+						name = "take_point"
+						spriteType = "GFX_fleet_order_button_follow_friendlies_off"
+						position = { x = 99 y = 0 }
+					}
+				}
+
+				containerWindowType = {
+					name = "leader_portrait_container"
+					position = { x = 9 y = 100 }
+					size = { width = 381 height = 133 }
+
+					background = {
+						name = "leader_background"
+						spriteType = "GFX_dark_area_cut"
+						alwaysTransparent = yes
+					}
+				}
+
+				containerWindowType = {
+					name = "ex_gb"
+					size = { width = 336 height = 64 }
+					position = { x = 400 y = 171 }
+		
+					background = {
+						name = "frame_box"
+						spriteType = "GFX_tiles_dark_area_cut_8"
+						alwaysTransparent = yes
+					}
+				}
+								
+				containerWindowType = {
+					name = "stats"
+					position = { x = 9 y = 45 }
+					size = { width = 1067 height = 400 }
+
+					background = {
+						name = "stats_background"
+						spriteType = "GFX_tiled_window_transparent"
+						alwaysTransparent = yes
+					}
+
+					instantTextBoxType = {
+						name = "template_size"
+						position = { x = 240 y = 29 }
+						font = "cg_16b"
+						maxWidth = 187
+						maxHeight = 20
+						fixedSize = yes
+						format = right
+					}
+
+					instantTextBoxType = {
+						name = "offensive_power"
+						position = { x = 440 y = 29 }
+						font = "cg_16b"
+						maxWidth = 133
+						maxHeight = 20
+						fixedSize = yes
+						format = right
+						pdx_tooltip = "MILITARY_POWER_HEADER"
+						pdx_tooltip_delayed = "MILITARY_POWER_DESC"
+						text_color_code = "Y"
+					}
+
+					instantTextBoxType = {
+						name = "health"
+						position = { x = 0 y = 29 }
+						font = "cg_16b"
+						maxWidth = 80
+						maxHeight = 20
+						fixedSize = yes
+						format = left
+					}
+
+					instantTextBoxType = {
+						name = "armor"
+						position = { x = 80 y = 29 }
+						font = "cg_16b"
+						maxWidth = 80
+						maxHeight = 20
+						fixedSize = yes
+						format = left
+					}
+
+					instantTextBoxType = {
+						name = "shields"
+						position = { x = 160 y = 29 }
+						font = "cg_16b"
+						maxWidth = 80
+						maxHeight = 20
+						fixedSize = yes
+						format = left
+					}
+
+					buttonType = {
+						name = "change_stance"
+						spriteType = "GFX_fleet_order_button_stance_aggressive"
+						position = { x = 387 y = 56 }
+					}
+
+					buttonType = {
+						name = "home_base_button"
+						spriteType = "GFX_fleet_order_set_home_base"
+						position = { x = 453 y = 56 }
+					}
+
+					instantTextBoxType={
+						name = "current_order"
+						position = { x = 400 y = 133 }
+						font = "cg_16b"
+						maxWidth = 293
+						maxHeight = 27
+						fixedSize = yes
+						format = left
+					}
+
+					instantTextBoxType={
+						name = "current_activity"
+						position = { x = 400 y = 160 }
+						font = "cg_16b"
+						maxWidth = 293
+						maxHeight = 27
+						fixedSize = yes
+						format = left
+					}
+				}
+			}
+		}
+
+		containerWindowType = {
+			name = "box2"
+			size = { width = 773 height = -13 }
+			position = { x = 429 y = 33 }
+
+			containerWindowType = {
+				name = "reinforcement"
+				size = { width = 100% height = 100 }
+				dynamic_extra_height = @dynamic_extra_top
+				position = { x = 0 y = 0 }
+
+				background = {
+					name = "background"
+					quadTextureSprite = "GFX_tiles_dark_area_cut_8"
+				}
+
+				instantTextBoxType = {
+					name = "reinforce_fleet_text"
+					font = "cg_16b"
+					position = { x = 13 y = 33 }
+					maxWidth = 580
+					maxHeight = 60
+					dynamic_extra_height = @dynamic_extra_top
+					fixedSize = yes
+					vertical_alignment = top
+					scrollbartype = "standardtext_slider_small"
+				}
+
+				buttonType = {
+					name = "reinforce_all"
+					position = { x = -211 y = 29 }
+					size = { x = 327 y = 47 }
+					borderSize = { x = 16 y = 16 }
+					orientation = upper_right
+					spriteType = "GFX_standard_button_142_34_button"
+					buttonFont = "cg_16b"
+					text = "FLEET_MANAGER_VIEW_REINFORCE_ALL"
+					font = "cg_16b"
+					clicksound = "army_construction_done"
+					pdx_tooltip = "REINFORCE_ALL_FM"
+				}
+			}
+
+			containerWindowType = {
+				name = "naval_capacity"
+				size = { width = 100% height = 87 }
+				position = { x = 0 y = 0 }
+
+				instantTextBoxType = {
+					name = "naval_capacity_text"
+					font = "cg_16b"
+					position = { x = 39 y = -23 }
+					maxWidth = 567
+					maxHeight = 87
+					fixedSize = yes
+					vertical_alignment = center
+					alwaystransparent = no
+					pdx_tooltip = "NAVY_SIZE_DESC"
+				}
+
+				iconType = {
+					name = "fleet_size"
+					position = { x = 9 y = 7 }
+					spriteType = "GFX_fleet_size_icon"
+					alwaystransparent = yes
+				}
+			}
+
+			containerWindowType = {
+				name = "box2_3"
+				size = { width = 833 height = 809 }
+				dynamic_extra_height = @dynamic_extra_bottom
+				position = { x = 0 y = 0 }
+				dynamic_extra_y= @dynamic_extra_top_plus_mid
+
+				containerWindowType = {
+					name = "fleet_info"
+					size = { width = 100% height = 480 }
+					position = { x = -7 y = 329 }
+
+					background = {
+						name = "bg"
+						quadTextureSprite = "GFX_tiles_dark_area_cut_8"
+					}
+
+					iconType = {
+						name = "hex_bg"
+						spriteType = "GFX_hex_bg"
+						position = { x = -15 y = -15 }
+						alwaysTransparent = yes
+					}
+
+					instantTextBoxType = {
+						name = "fleet_name_header"
+						font = "malgun_goth_24"
+						position = { x = 21 y = 11 }
+						maxWidth = 240
+						maxHeight = 27
+						text = "FLEET_NAME_HEADER"
+						format = left
+						alwaystransparent = yes
+					}		
+
+					containerWindowType = {
+						name = "command_limit"
+						size = { width = 220 height = 55 }
+						position = { x = 280 y = 56 }
+
+						iconType = {
+							name = "fleet_icon"
+							position = { x = 3 y = 12 }
+							spriteType = "GFX_fleet_capacity_icon"
+							alwaystransparent = yes
+						}
+
+						instantTextBoxType = {
+							name = "command_limit_header"
+							font = "cg_16b"
+							text = "COMMAND_LIMIT"
+							position = { x = 32 y = 4 }
+							maxWidth = 267
+							maxHeight = 27
+							fixedSize = yes
+							alwaystransparent = no
+						}
+
+						iconType = {
+							name = "progress"
+							position = { x = 32 y = 27 }
+							spriteType = "GFX_queue_progressbar_150"
+							frame = 100
+						}
+					}
+
+					containerWindowType = {
+						name = "fleet_composition"
+						size = { width = 833 height = 40 }
+						position = { x = 0 y = 445 }
+
+						background = {
+							name = "bg"
+							quadTextureSprite = "GFX_tiled_window_transparent"
+						}
+						gridBoxType = {
+							name = "fleet_composition_grid"
+							position = { x = 0 y = 0 }
+							size = { width = 100% height = 100% }
+							format = "UPPER_LEFT"
+							slotsize = {
+								width = @FLEET_MANAGER_FLEET_COMPOSITION_ENTITY_WIDTH
+								height = @FLEET_MANAGER_FLEET_COMPOSITION_ENTITY_HEIGHT
+							}
+							max_slots_horizontal = 6
+							format = CENTERED_UP
+						}
+					}
+
+					containerWindowType = {
+						name = "actions"
+						size = { width = 203 height = 61 }
+						position = { x = -240 y = 7 }
+						orientation = upper_right
+
+						buttonType = {
+							name = "overwrite_design_with_current"
+							quadTextureSprite = "GFX_overwrite_fleet_template"
+							position = { x= 0 y = 0 }
+							buttonFont = "cg_16b"
+							pdx_tooltip = "FLEET_MANAGER_OVERWRITE_TEMPLATE"
+						}
+
+						buttonType = {
+							name = "reinforce"
+							quadTextureSprite = "GFX_fleet_action_button_reinforce"
+							position = { x= -45 y = 0 }
+							buttonFont = "cg_16b"
+						}
+						
+						buttonType = { 
+							name = "turn_into_mercs"
+							quadTextureSprite = "GFX_fleet_action_button_turn_into_merc"
+							position = { x= 136 y = 0 }
+							buttonFont = "cg_16b"
+						}
+
+						buttonType = {
+							name = "repair"
+							quadTextureSprite = "GFX_fleet_action_button_repair"
+							position = { x= 45 y = 0 }
+							buttonFont = "cg_16b"
+						}
+
+						buttonType = {
+							name = "upgrade"
+							quadTextureSprite = "GFX_fleet_action_button_upgrade"
+							position = { x= 91 y = 0 }
+							buttonFont = "cg_16b"
+						}
+
+						buttonType = {
+							name = "disband"
+							quadTextureSprite = "GFX_delete_template_button"
+							position = { x= 181 y = 0 }
+							buttonFont = "cg_16b"
+							shortcut = "DEL"
+						}
+
+						buttonType = {
+							name = "copy_template"
+							quadTextureSprite = "GFX_standard_button_142_34_button"
+							position = { x = 21 y = 35 }
+							buttonFont = "cg_16b"
+							pdx_tooltip = "FLEET_MANAGER_COPY_TEMPLATE"
+							buttonText = "COPY_TEMPLATE"
+						}
+					}
+				}
+
+				containerWindowType = {
+					name = "designs"
+					size = { width = 833 height = 333 }
+					dynamic_extra_height = @dynamic_extra_bottom
+					position = { x = -7 y = 437 }
+					verticalScrollbar = "right_vertical_slider"
+
+					background = {
+						name = "bg"
+						quadTextureSprite = "GFX_tiled_window_transparent"
+					}
+
+					gridBoxType = {
+						name = "designs_grid"
+						position = { x = 13 y = 0 }
+						size = { width = 773 height = 280 }
+						format = "UPPER_LEFT"
+						slotsize = {
+							width = 773
+							height = 56
+						}
+						max_slots_horizontal = 1
+					}
+				}
+
+				buttonType = {
+					name = "add_ship_design"
+					position = { x = -424 y = -443 }
+					size = { x = 267 y = 40 }
+					orientation = center_down
+					spriteType = "GFX_standard_button_142_34_button"
+					buttonFont = "cg_16b"
+					text = "FLEET_MANAGER_ADD_SHIP_DESIGN_BUTTON_TEXT"
+					font = "cg_16b"
+					pdx_tooltip = "ADD_DESIGN_FM"
+				}
+			}
+		}
+
+		buttonType = {
+			name = "create_new_fleet"
+			spriteType = "GFX_button_animated_265_80"
+			position = { x = -1 y = 33 }
+			buttonText = "CREATE_NEW"
+			buttonFont = "cg_16b"
+		}
+	}
+
+	containerWindowType = {
+		name = "fleet_manager_side_view"
+		size = { width = 476 height = 845 }
+		dynamic_extra_height = @dynamic_extra
+		show_position = { x = 1272 y = 12 }
+		hide_position = { x = 0 y = 0 }
+		animation_time = 200
+		animation_type = decelerated
+
+		background = {
+			name = "background"
+			quadTextureSprite = "GFX_plain_bg_tile"
+		}
+
+		containerWindowType = {
+			name = "available_window"
+			size = { width = 100% height = 100% }
+			#position = { x = 0 y = 0 }
+
+			instantTextBoxType = {
+				name = "title"
+				font = "malgun_goth_24"
+				text = "FLEET_MANAGER_CHOOSE_DESIGN"
+				position = { x = 60 y = 16 }
+				maxWidth = 347
+				maxHeight = 27
+				fixedSize = yes
+				orientation = "UPPER_LEFT"
+				format = CENTER
+			}
+
+			# Close Button
+			buttonType = {
+				name = "close"
+				spriteType = "GFX_close_button"
+				position = { x = -61 y = 4 }
+				orientation = "UPPER_RIGHT"
+				shortcut = "ESCAPE"
+				pdx_tooltip = "CLOSE_TITLE"
+				clicksound = "back_click"
+			}
+
+			containerWindowType = {
+				name = "available_designs"
+				position = { x = 13 y = 67 }
+				size = { width = -13 height = -13 }
+				verticalScrollbar = "right_vertical_slider"
+
+				background = {
+					name = "bg"
+					quadTextureSprite = "GFX_tiled_window_transparent"
+				}
+
+				gridBoxType = {
+					name = "available_designs_grid"
+					position = { x = 0 y = 0 }
+					size = { width = 100% height = 100% }
+					format = "UPPER_LEFT"
+					slotsize = {
+						width = @FLEET_MANAGER_AVAILABLE_SHIP_DESIGN_ENTITY_WIDTH
+						height = 67
+					}
+					max_slots_horizontal = 1
+				}
+			}
+		}
+
+		containerWindowType = {
+			name = "build_queue_window"
+			size = { width = 100% height = 100% }
+
+			instantTextBoxType = {
+				name = "title"
+				font = "malgun_goth_24"
+				text = "FLEET_MANAGER_BUILD_QUEUE"
+				position = { x = 60 y = 16 }
+				maxWidth = 347
+				maxHeight = 27
+				fixedSize = yes
+				orientation = "UPPER_LEFT"
+				format = CENTER
+			}
+
+			containerWindowType = {
+				name = "build_queue"
+				position = { x = 13 y = 67 }
+				size = { width = -13 height = -13 }
+				verticalScrollbar = "right_vertical_slider"
+
+				background = {
+					name = "background"
+					quadTextureSprite = "GFX_tiled_window_transparent"
+				}
+
+				gridBoxType = {
+					name = "build_queue_grid"
+					position = { x = 0 y = 0 }
+					size = { width = 100% height = 100% }
+					format = "UPPER_LEFT"
+					slotsize = {
+						width = @FLEET_MANAGER_AVAILABLE_SHIP_DESIGN_ENTITY_WIDTH
+						height = 69
+					}
+					max_slots_horizontal = 1
+				}
+			}
+		}
+
+		containerWindowType = {
+			name = "retrofit_window"
+			size = { width = 100% height = 100% }
+
+			instantTextBoxType = {
+				name = "title"
+				font = "malgun_goth_24"
+				text = "FLEET_MANAGER_RETROFIT"
+				position = { x = 60 y = 16 }
+				maxWidth = 347
+				maxHeight = 27
+				fixedSize = yes
+				orientation = "UPPER_LEFT"
+				format = CENTER
+			}
+
+			buttonType = {
+				name = "close"
+				spriteType = "GFX_close_button"
+				position = { x = -61 y = 4 }
+				orientation = "UPPER_RIGHT"
+				shortcut = "ESCAPE"
+				pdx_tooltip = "CLOSE_TITLE"
+				clicksound = "back_click"
+			}
+
+			containerWindowType = {
+				name = "retrofit"
+				position = { x = 13 y = 67 }
+				size = { width = -9 height = -13 }
+				verticalScrollbar = "right_vertical_slider"
+
+				background = {
+					name = "bg"
+					quadTextureSprite = "GFX_tiled_window_transparent"
+				}
+
+				gridBoxType = {
+					name = "retrofit_grid"
+					position = { x = 0 y = 0 }
+					size = { width = 100% height = 100% }
+					format = "UPPER_LEFT"
+					slotsize = {
+						width = @FLEET_MANAGER_AVAILABLE_SHIP_DESIGN_ENTITY_WIDTH
+						height = 69
+					}
+					max_slots_horizontal = 1
+				}
+			}
+		}
+	}
+
+	containerWindowType = {
+		name = "fleet_manager_fleet_template_entity"
+		size = {
+			width = @FLEET_MANAGER_TEMPLATE_WIDTH
+			height = 53
+		}
+
+		background = {
+			name = "bg"
+			quadTextureSprite = "GFX_interface_list_light"
+			clicksound = "outliner_click_tab"
+		}
+
+		background = {
+			name = "selected_overlay"
+			spriteType = "GFX_glow_tile_orange_no_padding"
+			alwaysTransparent = yes
+		}
+
+		instantTextBoxType = {
+			name = "fleet_name"
+			font = "cg_16b"
+			position = { x = 5 y = 4 }
+			maxWidth = @FLEET_MANAGER_TEMPLATE_NAME_WIDTH
+			maxHeight = 27
+			fixedSize = yes
+			alwaystransparent = yes
+		}
+
+		instantTextBoxType = {
+			name = "fleet_size"
+			font = "cg_16b"
+			position = { x = 5 y = 27 }
+			maxWidth = 160
+			maxHeight = 27
+			fixedSize = yes
+			alwaystransparent = no
+		}
+
+		instantTextBoxType = {
+			name = "offensive_power"
+			font = "cg_16b"
+			position = { x = 301 y = 27 }
+			maxWidth = 67
+			maxHeight = 27
+			fixedSize = yes
+			format = right
+			alwaystransparent = yes
+		}
+	}
+
+	containerWindowType = {
+		name = "fleet_manager_create_new_template_entity"
+		size = {
+			width = @FLEET_MANAGER_TEMPLATE_WIDTH
+			height = 53
+		}
+
+		background = {
+			name = "bg"
+			quadTextureSprite = "GFX_interface_list_light"
+			clicksound = "click_embark_all"
+		}
+
+		instantTextBoxType = {
+			name = "fleet_name"
+			font = "cg_16b"
+			text = "FLEET_MANAGER_CREATE_NEW_TEMPLATE"
+			position = { x = 0 y = 0 }
+			maxWidth = @FLEET_MANAGER_TEMPLATE_WIDTH
+			maxHeight = 53
+			fixedSize = yes
+			format = center
+			vertical_alignment = center
+			pdx_tooltip = "CREATE_NEW_FM"
+		}
+	}
+
+	containerWindowType = {
+		name = "fleet_manager_current_template_ship_design_entity"
+		size = {
+			width = 808
+			height = 53
+		}
+
+		background = {
+			name = "bg"
+			quadTextureSprite = "GFX_interface_list_light_nodown"
+			clicksound = click
+		}
+
+		background = {
+			name = "selected_overlay"
+			spriteType = "GFX_glow_tile_orange_no_padding"
+			alwaysTransparent = yes
+		}
+
+		iconType = {
+			name = "icon"
+			position = { x = 1 y = 7 }
+			spriteType = "GFX_ship_sizes"
+			frame = 1
+			alwaysTransparent = yes
+		}
+
+		instantTextBoxType={
+			name = "size"
+			position = { x = 43 y = 4 }
+			font = "cg_16b"
+			maxWidth = 173
+			maxHeight = 27
+			fixedSize = yes
+			format = left
+			text_color_code = "H"
+		}
+
+		instantTextBoxType={
+			name = "name"
+			position = { x = 43 y = 27 }
+			font = "cg_16b"
+			maxWidth = 280
+			maxHeight = 27
+			fixedSize = yes
+			format = left
+			text_color_code = "R"
+		}
+
+		instantTextBoxType={
+			name = "auto_gen"
+			position = { x = 197 y = 4 }
+			font = "cg_16b"
+			text = "AUTO_GENERATED_BEST"
+			maxWidth = 120
+			maxHeight = 27
+			fixedSize = yes
+			format = right
+			text_color_code = "G"
+		}
+
+		iconType = {
+			name = "vertical_divider_1"
+			position = { x = 333 y = 7 }
+			spriteType = "GFX_vertical_divider"
+			alwaysTransparent = yes
+		}		
+		
+		buttonType = {
+			name = "decrease_button"
+			position = { x = 343 y = 13 }
+			quadTextureSprite ="GFX_fleet_manager_minus"
+			pdx_tooltip = "DECREASE_FM"
+			clicksound = "decrement_click"
+			oversound = "no_sound"
+		}
+
+		instantTextBoxType={
+			name = "ship_count"
+			position = { x = 373 y = 0 }
+			font = "cg_16b"
+			maxWidth = 67
+			maxHeight = 53
+			fixedSize = yes
+			format = center
+			vertical_alignment = center
+			alwaysTransparent = yes
+		}
+
+		buttonType = {
+			name = "increase_button"
+			position = { x = 444 y = 13 }
+			quadTextureSprite ="GFX_fleet_manager_plus"
+			pdx_tooltip = "INCREASE_FM"
+			clicksound = "increment_click"
+			oversound = "no_sound"
+		}
+
+		iconType = {
+			name = "vertical_divider_2"
+			position = { x = 480 y = 7 }
+			spriteType = "GFX_vertical_divider"
+			alwaysTransparent = yes
+		}			
+
+		instantTextBoxType={
+			name = "offensive_power"
+			position = { x = 499 y = 0 }
+			font = "cg_16b"
+			maxWidth = 133
+			maxHeight = 53
+			fixedSize = yes
+			format = center
+			vertical_alignment = center
+			alwaysTransparent = no
+			text_color_code = "Y"
+			pdx_tooltip = "ESTIMATE_TEMPLATE_POWER"
+		}
+
+		iconType = {
+			name = "vertical_divider_3"
+			position = { x = 664 y = 7 }
+			spriteType = "GFX_vertical_divider"
+			alwaysTransparent = yes
+		}			
+
+		buttonType = {
+			name = "retrofit"
+			quadTextureSprite = "GFX_retrofit_icon"
+			position = { x= -141 y = 1 }
+			Orientation = "UPPER_RIGHT"
+			buttonFont = "cg_16b"
+			pdx_tooltip = "RETROFIT_FM"
+		}
+
+		buttonType = {
+			name = "disband"
+			quadTextureSprite = "GFX_fleetview_destroy_fleet"
+			position = { x= -51 y = 1 } #-72, 1
+			Orientation = "UPPER_RIGHT"
+			buttonFont = "cg_16b"
+		}
+
+		buttonType = {
+			name = "inspect"
+			quadTextureSprite = "GFX_fleetview_inspect_ship"
+			position = { x = -96 y = 1 } #-38, 1
+			Orientation = "UPPER_RIGHT"
+			buttonFont = "cg_16b"
+			pdx_tooltip = "INSPECT_FM"
+		}
+	}
+
+	containerWindowType = {
+		name = "fleet_manager_available_ship_design_entity"
+		size = {
+			width = @FLEET_MANAGER_AVAILABLE_SHIP_DESIGN_ENTITY_ITEM_WIDTH
+			height = 64
+		}
+		
+		background = {
+			name = "orbitals_background"
+			spriteType = "GFX_interface_list_light"
+		}
+
+		iconType = {
+			name = "icon"
+			position = { x = 7 y = 13 }
+			spriteType = "GFX_ship_sizes"
+			frame = 1
+			alwaysTransparent = yes
+		}
+
+		instantTextBoxType = {
+			name = "name"
+			font = "cg_16b"
+			position = { x = 53 y = 8 }
+			maxWidth = 144
+			maxHeight = 27
+			fixedSize = yes
+			format = left
+			orientation = upper_left
+			alwaysTransparent = yes
+			text_color_code = "H"
+		}
+
+		instantTextBoxType = {
+			name = "cost"
+			font = "cg_16b"
+			position = { x = -280 y = 8 }
+			maxWidth = 267
+			maxHeight = 27
+			fixedSize = yes
+			format = right
+			orientation = upper_right
+			text_color_code = "H"
+		}
+
+		instantTextBoxType = {
+			name = "type"
+			font = "cg_16b"
+			position = { x = 53 y = 32 }
+			maxWidth = 307
+			maxHeight = 27
+			fixedSize = yes
+			format = left
+			orientation = upper_left
+			alwaysTransparent = yes
+			text_color_code = "E"
+		}
+
+		instantTextBoxType = {
+			name = "auto_gen"
+			font = "cg_16b"
+			text = "AUTO_GENERATED_BEST"
+			position = { x = -367 y = 32 }
+			maxWidth = 267
+			maxHeight = 27
+			fixedSize = yes
+			format = right
+			orientation = upper_right
+			alwaystransparent = yes
+			text_color_code = "G"
+		}
+
+		instantTextBoxType = {
+			name = "time"
+			font = "cg_16b"
+			position = { x = -93 y = 32 }
+			maxWidth = 80
+			maxHeight = 27
+			fixedSize = yes
+			format = right
+			orientation = upper_right
+			text_color_code = "H"
+		}
+	}
+
+	containerWindowType = {
+		name = "fleet_manager_build_queue_entry"
+		size = {
+			width = @FLEET_MANAGER_AVAILABLE_SHIP_DESIGN_ENTITY_ITEM_WIDTH
+			height = 64
+		}
+
+		background = {
+			name = "background"
+			spriteType = "GFX_interface_list_light"
+		}
+
+		iconType = {
+			name = "icon"
+			position = { x = 7 y = 7 }
+			spriteType = "GFX_ship_sizes"
+			alwaysTransparent = yes
+			tooltip_mode_enabled = yes
+		}
+
+		instantTextBoxType = {
+			name = "name"
+			font = "cg_16b"
+			position = { x = 53 y = 0 }
+			maxWidth = 173
+			maxHeight = 27
+			fixedSize = yes
+			format = left
+			orientation = upper_left
+			alwaysTransparent = yes
+			#text_color_code = "W"
+		}
+
+		instantTextBoxType = {
+			name = "status"
+			font = "cg_16b"
+			position = { x = -160 y = 20 }
+			maxWidth = 120
+			maxHeight = 27
+			fixedSize = yes
+			format = right
+			orientation = upper_right
+			text_color_code = "Y"
+		}
+
+		iconType = {
+			name = "progressbar"
+			spriteType = "GFX_queue_progressbar_325"
+			position = { x = 0 y = 47 }
+			alwaysTransparent = yes
+		}
+
+		instantTextBoxType = {
+			name = "type"
+			font = "cg_16b"
+			position = { x = 53 y = 20 }
+			maxWidth = 293
+			maxHeight = 27
+			fixedSize = yes
+			format = left
+			orientation = upper_left
+			alwaysTransparent = yes
+			text_color_code = "H"
+		}
+
+		instantTextBoxType = {
+			name = "location"
+			font = "cg_16b"
+			position = { x = -240 y = 0 }
+			maxWidth = 233
+			maxHeight = 27
+			fixedSize = yes
+			format = right
+			orientation = upper_right
+			text_color_code = "E"
+		}
+	}
+
+	containerWindowType = {
+		name = "fleet_manager_retrofit_design_entity"
+		size = {
+			width = @FLEET_MANAGER_AVAILABLE_SHIP_DESIGN_ENTITY_ITEM_WIDTH
+			height = 64
+		}
+
+		background = {
+			name = "background"
+			spriteType = "GFX_interface_list_light"
+		}
+
+		background = {
+			name = "selected_overlay"
+			spriteType = "GFX_glow_tile_orange_no_padding"
+			alwaysTransparent = yes
+		}
+
+		iconType = {
+			name = "icon"
+			position = { x = 5 y = 13 }
+			spriteType = "GFX_ship_sizes"
+			alwaysTransparent = yes
+			tooltip_mode_enabled = yes
+		}
+
+		instantTextBoxType = {
+			name = "name"
+			font = "cg_16b"
+			position = { x = 53 y = 8 }
+			maxWidth = 173
+			maxHeight = 27
+			fixedSize = yes
+			format = left
+			orientation = upper_left
+			alwaysTransparent = yes
+			text_color_code = "H"
+		}
+
+		instantTextBoxType = {
+			name = "cost"
+			font = "cg_16b"
+			position = { x = -280 y = 8 }
+			maxWidth = 267
+			maxHeight = 27
+			fixedSize = yes
+			format = right
+			orientation = upper_right
+			text_color_code = "H"
+		}
+
+		instantTextBoxType = {
+			name = "type"
+			font = "cg_16b"
+			position = { x = 53 y = 32 }
+			maxWidth = 307
+			maxHeight = 27
+			fixedSize = yes
+			format = left
+			orientation = upper_left
+			alwaysTransparent = yes
+			text_color_code = "E"
+		}
+
+		instantTextBoxType = {
+			name = "auto_gen"
+			font = "cg_16b"
+			text = "AUTO_GENERATED_BEST"
+			position = { x = -367 y = 32 }
+			maxWidth = 267
+			maxHeight = 27
+			fixedSize = yes
+			format = right
+			orientation = upper_right
+			alwaystransparent = yes
+			text_color_code = "G"
+		}
+
+		instantTextBoxType = {
+			name = "time"
+			font = "cg_16b"
+			position = { x = -93 y = 32 }
+			maxWidth = 80
+			maxHeight = 27
+			fixedSize = yes
+			format = right
+			orientation = upper_right
+			text_color_code = "H"
+		}
+	}
+
+	containerWindowType = {
+		name = "fleet_manager_fleet_composition_entity"
+		size = {
+			width = @FLEET_MANAGER_FLEET_COMPOSITION_ENTITY_WIDTH
+			height = @FLEET_MANAGER_FLEET_COMPOSITION_ENTITY_HEIGHT
+		}
+
+		background = {
+			name = "background"
+			spriteType = "GFX_tiled_window_transparent"
+		}
+
+		iconType = {
+			name = "icon"
+			position = { x = 0 y = -4 }
+			spriteType = "GFX_ship_sizes"
+			alwaysTransparent = yes
+			tooltip_mode_enabled = yes
+		}
+
+		instantTextBoxType = {
+			name = "template_count"
+			font = "cg_16b"
+			position = { x = 36 y = 0 }
+			maxWidth = 75
+			maxHeight = @FLEET_MANAGER_FLEET_COMPOSITION_ENTITY_HEIGHT
+			fixedSize = yes
+			format = left
+			orientation = upper_left
+			vertical_alignment = center
+			alwaysTransparent = yes
+		}
+	}
+}

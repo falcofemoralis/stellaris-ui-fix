@@ -1,0 +1,82 @@
+guiTypes = {
+	# Controls the entire window
+	containerWindowType = {
+		name = "the_tempest_invocator_view"
+		size = { width = 680 height = 345 }
+
+		orientation = LOWER_LEFT
+		origo = LOWER_LEFT
+		show_position = { x = 7 y = -53 }
+		hide_position = { x = -633 y = -40 }
+		animation_time = 200
+		animation_type = decelerated
+
+		background = {
+			name = "bg"
+			spriteType = "GFX_the_tempest_invocator_relic_view_bg"
+		}
+
+		containerWindowType = {
+			name = "top"
+
+			position = { x = 3 y = 3 }
+
+			iconType = {
+				name = "empire_header_line"
+				quadTextureSprite = "GFX_line"
+				position = { x = 27 y = 53 }
+			}
+
+			buttonType = {
+				name = "flag"
+				quadTextureSprite = "GFX_empire_flag_64"
+				position = { x= 0 y = 0  }
+				scale = 0.8
+				oversound = no_sound
+			}
+
+			instantTextBoxType = {
+				name = "header_text"
+				font = "malgun_goth_24"
+				text = "TEMPEST_INVOCATOR_VIEW_HEADER"
+				position = { x = 73 y = 13 }
+				maxWidth = 267
+				maxHeight = 53
+				fixedSize = yes
+				format = left
+				alwaysTransparent = yes
+			}
+
+			# Close Button
+			buttonType = {
+				name = "close_button"
+				quadTextureSprite = "GFX_close"
+				position = { x = 627 y = 8 }
+				shortcut = "ESCAPE"
+				clicksound = "back_click"
+				actionShortcut = "cancel"
+				orientation = UPPER_RIGHT
+				pdx_tooltip = "CLOSE_TITLE"
+			}
+			
+		}
+
+		containerWindowType = {
+			name = "body"
+	
+			position = { x = 33 y = 87 }
+	
+			instantTextBoxType = {
+				name = "body_text"
+				font = "malgun_goth_24"
+				text = "TEMPEST_INVOCATOR_VIEW_BODY"
+				position = { x = 0 y = 0 }
+				maxWidth = 600
+				maxHeight = 267
+				fixedSize = yes
+				format = left
+				alwaysTransparent = yes
+			}
+		}
+	}
+}

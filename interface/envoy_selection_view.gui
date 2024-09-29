@@ -1,0 +1,298 @@
+@dynamic_extra = 0.0
+
+guiTypes = {
+
+	### Envoy selection dialog
+	containerWindowType = {
+		name = "envoy_selection_dialog"
+		size = { width = 727 height = 731 }
+		dynamic_extra_height = @dynamic_extra
+		orientation = center
+		origo = center
+		moveable = yes
+
+		background = {
+			name = "envoy_selection_dialog"
+			quadTextureSprite = "GFX_tile_outliner_bg"
+		}
+
+		iconType = {
+			name = "hex_bg"
+			spriteType = "GFX_hex_bg"
+			position = { x = -13 y = -11 }
+			alwaysTransparent = yes
+		}
+
+		buttonType = {
+			name = "close"
+			quadTextureSprite = "GFX_close"
+			position = { x = -60 y = 21 }
+			orientation = "UPPER_RIGHT"
+			shortCut = "ESCAPE"
+			clicksound = "back_click"
+		}
+
+		
+
+		iconType = {
+			name = "header_line"
+			spriteType = "GFX_line_medium"
+			position = { x = 8 y = 37 }
+			alwaystransparent = yes
+		}
+
+		containerWindowType = {
+				name = "start_screen_frame_bg2"
+				position = { x=15 y= 73 }
+				size = { width = 699 height = 173 }
+
+				background = {
+					name = "start_screen_frame2"
+					quadTextureSprite = "GFX_tiles_dark_area_cut_8"
+					position = { x = 0 y = 0 }
+				}
+			}
+
+		containerWindowType = {
+				name = "start_screen_frame_bg3"
+				position = { x=15 y= 253 }
+				size = { width = 699 height = 393 }
+
+				background = {
+					name = "start_screen_frame2"
+					quadTextureSprite = "GFX_tiles_dark_area_cut_8"
+					position = { x = 0 y = 0 }
+				}
+			}	
+
+		instantTextBoxType = {
+			name = "ui_title"
+			font = "malgun_goth_24"
+			text = "ENVOY_ACTION_TITLE"
+			position = { x = 32 y = 11 }
+			maxWidth = 459
+			maxHeight = 53
+			fixedSize = yes
+			orientation = upper_left
+			alwaysTransparent = yes
+		}
+
+		iconType = {
+			name = "action_icon"
+			quadTextureSprite = "GFX_government_civic"
+			position = { x = 47 y = 93 }
+			orientation = "UPPER_LEFT"
+		}
+
+		instantTextBoxType = {
+			name = "title"
+			font = "malgun_goth_24"
+			text = "ENVOY_ACTION_TITLE"
+			position = { x = 99 y = 93 }
+			maxWidth = 459
+			maxHeight = 53
+			fixedSize = yes
+			orientation = upper_left
+			alwaysTransparent = yes
+			text_color_code = "E"
+		}
+
+		instantTextBoxType = {
+			name = "desc"
+			font = "cg_16b"
+			text = ""
+			position = { x = 53 y = 147 }
+			maxWidth = 613
+			maxHeight = 200
+			fixedSize = yes
+			orientation = upper_left
+		}
+
+		smoothListBoxType = {
+			name = "envoys_list"
+			position = { x = 27 y = 260 }
+			orientation = upper_left
+			size = { x = 660 y = 381 }
+			dynamic_extra_height = @dynamic_extra
+			borderSize = { x = 0 y = 0 }
+			scrollbartype = "standardlistbox_slider"
+			autohide_scrollbar = yes
+			spacing = 7
+		}
+
+		buttonType = {
+			name = "cancel"
+			quadTextureSprite = "GFX_standard_button_142_34_button"
+			position = { x = -1 y = -76  }
+			text = "CANCEL"
+			Orientation = "LOWER_LEFT"
+			font = "cg_16b"
+			clicksound = "back_click"
+			shortCut = "ESCAPE"
+		}
+
+		buttonType = {
+			name = "accept"
+			quadTextureSprite = "GFX_standard_button_142_34_button"
+			position = { x = -219 y = -76  }
+			text = "ACCEPT"
+			Orientation = "LOWER_RIGHT"
+			font = "cg_16b"
+			clicksound = "confirm_click"
+			shortCut = "RETURN"
+		}
+	}
+
+
+	### Envoy selection entry
+	containerWindowType = {
+		name = "envoy_selection_entry"
+		position = { x = 13 y = 0 }
+		size = { width = 660 height = 107 }
+
+		background = {
+			name = "envoy_selection_entry_background"
+			quadTextureSprite = "GFX_black_box_planet_view"
+		}
+
+		buttonType = {
+			name = "envoy_button"
+			spriteType = "GFX_tiles_frame_light"
+			size = { x = 673 y = 120 }
+			position = { x = -7 y = -7 }
+			clicksound = "select_click"
+			#alwaysTransparent = yes
+		}
+
+		containerWindowType = {
+			name = "selected_overlay"
+			position = { x = 0 y = 0 }
+
+			size = { width = 100% height = 100% }
+			background = {
+				name = "selected_bg"
+				spriteType = "GFX_glow_tile_orange_no_padding"
+				alwaysTransparent = yes
+			}
+		}
+
+		containerWindowType = {
+			name = "portrait_box"
+			position = { x = 0 y = 0 }
+			size = { width = 87 height = 107 }
+
+			background = {
+				name = "envoy_selection_entry_background"
+				quadTextureSprite = "GFX_tiles_frame_light"
+				alwaysTransparent = yes
+			}
+		}
+
+		containerWindowType = {
+			name = "portrait"
+			position = { x = 8 y = 5 }
+			size = { width = 69 height = 93 }
+			clipping = yes
+
+			iconType = {
+				name = "envoy_portrait"
+				spriteType = "GFX_portrait_character"
+				position = { x = -35 y = -3 }
+				scale = 0.2
+				alwaysTransparent = yes
+			}
+		}
+
+		instantTextBoxType = {
+			name = "leader_name"
+			font = "cg_16b"
+			text = "NAME"
+			position = { x = 93 y = 7 }
+			maxWidth = 459
+			maxHeight = 53
+			fixedSize = yes
+			format = left
+			orientation = upper_left
+			text_color_code = "E"
+			alwaysTransparent = yes
+		}
+
+		#iconType = {
+		#	name = "header_line"
+		#	spriteType = "GFX_line_short"
+		#	position = { x = 85 y = 33 }
+		#	alwaystransparent = yes
+		#}
+		
+		buttonType = {
+			name = "flag"
+			quadTextureSprite = "GFX_empire_flag_32"
+			position = { x= 93 y = 33  }
+		}
+		
+		iconType = {
+			name = "action_icon"
+			quadTextureSprite = "GFX_empire_flag_32"
+			position = { x= 93 y = 32 }
+			scale = 0.85
+		}
+
+		##VM: commenting for now, need code support. When envoy is conducting 1st contact, use this icon instead:
+
+		#iconType = {
+		#	name = "first_contact_icon"
+		#	quadTextureSprite = "GFX_situation_log_radar"
+		#	position = { x= 87 y = 47 }
+		#}
+		
+		instantTextBoxType = {
+			name = "current_available_assignment"
+			font = "cg_16b"
+			text = "AVAILABLE"
+			position = { x = 93 y = 29 }
+			maxWidth = 459
+			maxHeight = 53
+			fixedSize = yes
+			format = left
+			orientation = upper_left
+			alwaysTransparent = yes
+		}
+
+		instantTextBoxType = {
+			name = "current_assignment"
+			font = "cg_16b"
+			text = "ASSIGNMENT"
+			position = { x = 147 y = 24 }
+			maxWidth = 459
+			maxHeight = 53
+			fixedSize = yes
+			format = left
+			orientation = upper_left
+			alwaysTransparent = yes
+			vertical_alignment = center
+		}
+
+		instantTextBoxType = {
+			name = "cooldown_timer"
+			font = "cg_16b"
+			position = { x = 100 y = 80 }
+			maxWidth = 459
+			maxHeight = 53
+			fixedSize = yes
+			format = left
+			orientation = upper_left
+			text_color_code = "R"
+			alwaysTransparent = yes
+		}
+
+		#overlappingElementsBoxType = {
+		#	name = "traits_list"
+		#	size = { x = 171 y = 32 }
+		#	position = { x = -175 y = 4 }
+		#	orientation = "UPPER_RIGHT"
+		#	format = right
+		#	spacing = 0
+		#}
+	}
+}
+	

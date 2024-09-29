@@ -1,0 +1,416 @@
+guiTypes = {
+	containerWindowType = {
+		name = "federation_switch_type_entry"
+		position = { x=0 y=0 }
+		size = { width = 389 height = 45 }
+		moveable = no
+
+		iconType = {
+			name = "selected_federation_type"
+			quadTextureSprite = "GFX_standard_button_200_34_button_not_animated"
+			position = { x = -4 y = -7 }
+			frame = 3
+		}
+
+		buttonType = {
+			name = "select_federation_type"
+			quadTextureSprite = "GFX_standard_button_200_34_button"
+			position = { x = -4 y = -7 }
+			clicksound = "click_outliner"
+			oversound = no_sound
+		}
+
+		instantTextBoxType = {
+			name = "federation_type_name"
+			font = "cg_16b"
+			position = { x = 0 y = 20 }
+			maxWidth = 293
+			fixedSize = yes
+			format = centre
+			alwaysTransparent = yes
+			tooltip_mode_enabled = yes
+		}
+
+		#iconType = {
+		#	name = "type_icon"
+		#	quadTextureSprite = "GFX_type_galactic_union"
+		#	position = { x = 20 y = 13 }
+		#	scale = .60
+		#}
+	}
+	
+	containerWindowType = {
+		name = "federation_switch_type_member_entry"
+		position = { x=0 y=0 }
+		size = { width = 480 height = 45 }
+				
+		background = {
+			name = "bg"
+			quadTextureSprite = "GFX_tiles_dark_area_cut_8"
+		}
+		
+		buttonType = {
+			name = "flag"
+			quadTextureSprite = "GFX_empire_flag_32"
+			position = { x= 8 y = 5  }
+		}
+
+		instantTextBoxType = {
+			name = "member_name"
+			font = "cg_16b"
+			position = { x = 67 y = 13 }
+			maxWidth = 320
+			maxHeight = 27
+			fixedSize = yes
+			format = left
+			alwaysTransparent = yes
+			tooltip_mode_enabled = yes
+		}
+
+		instantTextBoxType = {
+			name = "opinion"
+			font = "cg_16b"
+			position = { x = -113 y = 13 }
+			maxWidth = 107
+			maxHeight = 27
+			fixedSize = yes
+			text = "-500"
+			format = center
+			Orientation = "UPPER_RIGHT"
+		}
+
+		iconType = {
+			name = "ai_acceptance_icon"
+			quadTextureSprite = "GFX_ai_acceptance"
+			position = { x = -60 y = 1 }
+			tooltip_mode_enabled = yes
+			Orientation = "UPPER_RIGHT"
+		}
+	}
+
+	containerWindowType = {
+		name = "federation_switch_type_view"
+		position = { x = 520 y = 120 }
+		size = { width = 907 height = 787 }
+		orientation = upper_left
+		moveable = yes
+
+		background = {
+			name = "federation_creation_view_bg"
+			quadTextureSprite = "GFX_start_screen_bg"
+		}
+
+		containerWindowType = {
+			name = "type_selection_bg"
+			position = { x=21 y= 193 }
+			size = { width = 860 height = 507 }
+
+			background = {
+				name = "start_screen_frame2"
+				quadTextureSprite = "GFX_tiles_dark_area_cut_8"
+				position = { x = 0 y = 0 }
+				alwaysTransparent = yes
+			}
+		}
+
+		iconType = {
+			name = "hex_bg"
+			spriteType = "GFX_hex_bg"
+			position = { x = -13 y = -7 }
+			alwaysTransparent = yes
+		}
+
+		buttonType = {
+			name = "close"
+			quadTextureSprite = "GFX_close"
+			position = { x = -61 y = 11 }
+			orientation = "UPPER_RIGHT"
+			shortCut = "ESCAPE"
+			clicksound = "back_click"
+		}
+
+		iconType = {
+			name = "header_line"
+			spriteType = "GFX_line_medium"
+			position = { x = 8 y = 40 }
+			alwaystransparent = yes
+		}
+
+		containerWindowType = {
+			name = "text_area_bg"
+			position = { x=20 y= 73 }
+			size = { width = 860 height = 107 }
+
+			background = {
+				name = "start_screen_frame2"
+				quadTextureSprite = "GFX_tiles_dark_area_cut_8"
+				position = { x = 0 y = 0 }
+			}
+		}
+
+		instantTextBoxType = {
+			name = "ui_title"
+			font = "malgun_goth_24"
+			text = "CHANGE_FEDERATION_TYPE"
+			position = { x = 23 y = 19 }
+			maxWidth = 459
+			maxHeight = 53
+			fixedSize = yes
+			orientation = upper_left
+			alwaysTransparent = yes
+		}
+
+		instantTextBoxType = {
+			name = "desc"
+			font = "cg_16b"
+			text = ""
+			position = { x = 80 y = 73 }
+			maxWidth = 733
+			maxHeight = 107
+			fixedSize = yes
+			vertical_alignment = center
+			format = center
+
+		}
+		
+		iconType = {
+			name = "selected_switch_type_details"
+			quadTextureSprite = "GFX_button_164_24"
+			position = { x = 360 y = 200 }
+			frame = 3
+		}
+
+		buttonType = {
+			name = "switch_type_details"
+			quadTextureSprite = "GFX_button_164_24"
+			position = { x = 360 y = 200 }
+			clicksound = "click_outliner"
+			oversound = no_sound
+		}
+
+		instantTextBoxType = {
+			name = "switch_type_details_name"
+			font = "cg_16b"
+			position = { x = 340 y = 220 }
+			maxWidth = 293
+			fixedSize = yes
+			format = centre
+			text = "FEDERATION_TYPE"
+			alwaysTransparent = yes
+			tooltip_mode_enabled = yes
+		}
+		
+		iconType = {
+			name = "selected_switch_type_support"
+			quadTextureSprite = "GFX_button_164_24"
+			position = { x = 600 y = 200 }
+			frame = 3
+		}
+
+		buttonType = {
+			name = "switch_type_support"
+			quadTextureSprite = "GFX_button_164_24"
+			position = { x = 600 y = 200 }
+			clicksound = "click_outliner"
+			oversound = no_sound
+		}
+
+		instantTextBoxType = {
+			name = "switch_type_support_name"
+			font = "cg_16b"
+			position = { x = 573 y = 220 }
+			maxWidth = 293
+			fixedSize = yes
+			format = centre
+			text = "support"
+			alwaysTransparent = yes
+			tooltip_mode_enabled = yes
+		}
+
+		smoothListBoxType = {
+			name = "federation_types_list"
+			position = { x = 33 y = 240 }
+			orientation = upper_left
+			size = { x = 293 y = 367 }
+			borderSize = { x = 0 y = 0 }
+			scrollbartype = "standardlistbox_slider"
+			autohide_scrollbar = yes
+			spacing = 7
+		}
+		
+		containerWindowType = {
+			name = "switch_type_details_tab"
+			position = { x = 0 y = 0 }
+			size = { width = 827 height = 747 }
+
+			containerWindowType = {
+				name = "name_change_bg"
+				position = { x = 427 y= 275 }
+				size = { width = 293 height = 40 }
+
+				background = {
+					name = "start_screen_frame2"
+					quadTextureSprite = "GFX_tiles_dark_area_cut_8"
+					position = { x = 0 y = 0 }
+					alwaysTransparent = yes
+				}
+			}
+			
+			iconType = {
+				name = "type_icon"
+				quadTextureSprite = "GFX_default_federation"
+				position = { x = 347 y = 275 }
+				scale = 1
+			}
+			
+			editBoxType = {
+				name = "name"
+				position = { x = 433 y = 287 }
+				size = { x = 267 y = 32 }
+				font = "cg_16b"
+				max_characters = 100
+				text = "Name"
+			}	
+			
+			instantTextBoxType = {
+				name = "federation_type"
+				font = "cg_16b"
+				text = "Federation Type"
+				position = { x = 433 y = 320 }
+				maxWidth = 592
+				maxHeight = 200
+				fixedSize = yes
+				orientation = upper_left
+				alwaysTransparent = yes
+				text_color_code = "H"
+			}
+			
+			instantTextBoxType = {
+				name = "federation_desc"
+				font = "cg_16b"
+				text = "Description"
+				position = { x = 360 y = 353 }
+				maxWidth = 480
+				maxHeight = 200
+				fixedSize = yes
+				orientation = upper_left
+				alwaysTransparent = yes
+			}
+			
+			instantTextBoxType = {
+				name = "perks_desc"
+				font = "cg_16b"
+				text = "Description"
+				position = { x = 360 y = 453 }
+				maxWidth = 480
+				maxHeight = 333
+				fixedSize = yes
+				orientation = upper_left
+				alwaysTransparent = yes
+			}
+		}
+		
+		containerWindowType = {
+			name = "switch_type_support_tab"
+			position = { x = 0 y = 0 }
+			size = { width = 960 height = 747 }
+			
+			smoothListBoxType = {
+				name = "members_list"
+				position = { x = 360 y = 267 }
+				orientation = upper_left
+				size = { x = 667 y = 533 }
+				borderSize = { x = 0 y = 0 }
+				scrollbartype = "standardlistbox_slider"
+				autohide_scrollbar = yes
+				spacing = 7
+			}
+		}
+
+		containerWindowType = {
+			name = "opinion_container"
+			position = { x = 227 y = 713 }
+			size = { width = 453 height = 53 }
+			moveable = no
+
+			background = {
+				name = "bg"
+				quadTextureSprite = "GFX_tiles_dark_area_cut_8"
+			}
+
+			instantTextBoxType = {
+				name = "voting_type"
+				font = "cg_16b"
+				position = { x = 19 y = 13 }
+				maxWidth = 240
+				maxHeight = 53
+				fixedSize = yes
+				text = "-500"
+				format = left
+				Orientation = "UPPER_LEFT"
+			}
+
+			instantTextBoxType = {
+				name = "support"
+				font = "cg_16b"
+				position = { x = -173 y = 13 }
+				maxWidth = 107
+				maxHeight = 53
+				fixedSize = yes
+				text = "-500"
+				format = right
+				Orientation = "UPPER_RIGHT"
+			}
+
+			iconType = {
+				name = "ai_acceptance_icon"
+				quadTextureSprite = "GFX_ai_acceptance"
+				position = { x = -60 y = 1 }
+				tooltip_mode_enabled = yes
+				Orientation = "UPPER_RIGHT"
+			}
+		}
+
+		buttonType = {
+			name = "confirm_button"
+			quadTextureSprite = "GFX_standard_button_142_34_button"
+			position = { x= -233 y = 792  }
+			Orientation = "UPPER_RIGHT"
+			font = "cg_16b"
+			clicksound = confirmation
+			shortCut = "RETURN"
+		}
+
+		buttonType = {
+			name = "cancel_button"
+			quadTextureSprite = "GFX_standard_button_142_34_button"
+			position = { x = 5 y = 792  }
+			Orientation = "UPPER_LEFT"
+			font = "cg_16b"
+			clicksound = back_click
+			shortCut = "ESCAPE"
+		}
+
+		buttonType = {
+			name = "cancel"
+			quadTextureSprite = "GFX_standard_button_142_34_button"
+			position = { x = 5 y = -87  }
+			text = "CANCEL"
+			Orientation = "LOWER_LEFT"
+			font = "cg_16b"
+			clicksound = "back_click"
+			shortCut = "ESCAPE"
+		}
+
+		buttonType = {
+			name = "accept"
+			quadTextureSprite = "GFX_standard_button_142_34_button"
+			position = { x = -227 y = -87  }
+			text = "ACCEPT"
+			Orientation = "LOWER_RIGHT"
+			font = "cg_16b"
+			clicksound = "confirm_click"
+			shortCut = "RETURN"
+		}
+	}
+}

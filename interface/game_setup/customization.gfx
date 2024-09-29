@@ -1,0 +1,228 @@
+spriteTypes = {
+
+#	flagSpriteType = {
+#		name = "GFX_test_flag"
+#		textureFile = "gfx/interface/empire_flag_large_frame.dds"		#this one will determine the size of the sprite
+#		masking_texture = "gfx/interface/empire_flag_large_mask.dds"
+#		effectFile = "gfx/FX/flag_sprite.shader"
+#		noOfFrames = 1
+#		
+#		bg_position = { x = 16 y = 19 }
+#		bg_size = { width = 248 height = 248 }
+#		symbol_position = { x = 52 y = 52 }
+#		symbol_size = { width = 179 height = 179 }
+#	}
+	
+	flagSpriteType = {
+		name = "GFX_empire_flag_large"
+		textureFile = "gfx/interface/flags/empire_flag_200_frame.dds"		#this one will determine the size of the sprite
+		masking_texture = "gfx/interface/flags/empire_flag_200_mask.dds"
+		effectFile = "gfx/FX/flag_sprite.shader"
+		noOfFrames = 1
+		
+		bg_position = { x = 16 y = 19 }
+		bg_size = { width = 216 height = 244 }
+		symbol_position = { x = 35 y = 35 }
+		symbol_size = { width = 179 height = 179 }
+	}	
+		
+	flagSpriteType = {
+		name = "GFX_empire_flag_medium"
+		textureFile = "gfx/interface/flags/empire_flag_64_frame.dds"		#this one will determine the size of the sprite
+		masking_texture = "gfx/interface/flags/empire_flag_64_mask.dds"
+		effectFile = "gfx/FX/flag_sprite.shader"
+		noOfFrames = 1
+		
+		bg_position = { x = 0 y = 0 }
+		bg_size = { width = 43 height = 43}
+		symbol_position = { x = 16	y = 16 }
+		symbol_size = { width = 61 height = 61 }
+	}
+	
+	flagSpriteType = {
+		name = "GFX_empire_flag_small"
+		textureFile = "gfx/interface/flags/empire_flag_32_frame.dds"		#this one will determine the size of the sprite
+		masking_texture = "gfx/interface/flags/empire_flag_32_mask.dds"
+		effectFile = "gfx/FX/flag_sprite.shader"
+		noOfFrames = 1
+		
+		bg_position = { x = 0 y = 0 }
+		bg_size = { width = 43 height = 43}
+		symbol_position = { x = 7 y = 7 }
+		symbol_size = { width = 29 height = 29 }
+	}
+
+	flagSpriteType = {
+		name = "GFX_empire_flag_200"
+		textureFile = "gfx/interface/flags/empire_flag_200_frame.dds"		#this one will determine the size of the sprite
+		masking_texture = "gfx/interface/flags/empire_flag_200_mask.dds"
+		effectFile = "gfx/FX/flag_sprite.shader"
+		noOfFrames = 1
+		
+		bg_position = { x = 17 y = 17 }
+		bg_size = { width = 248 height = 248 }
+		symbol_position = { x = 55 y = 55 }
+		symbol_size = { width = 173 height = 173 }
+	}	
+	
+	flagSpriteType = {
+		name = "GFX_empire_flag_128"
+		textureFile = "gfx/interface/flags/empire_flag_128_frame.dds"		#this one will determine the size of the sprite
+		masking_texture = "gfx/interface/flags/empire_flag_128_mask.dds"
+		effectFile = "gfx/FX/flag_sprite.shader"
+		noOfFrames = 1
+		
+		bg_position = { x = 13 y = 13 }
+		bg_size = { width = 148 height = 148 }
+		symbol_position = { x = 32 y = 32 }
+		symbol_size = { width = 111 height = 111 }
+	}	
+	
+	flagSpriteType = {
+		name = "GFX_empire_flag_128_trader"
+		textureFile = "gfx/interface/flags/empire_flag_128_frame_trader.dds"		#this one will determine the size of the sprite
+		masking_texture = "gfx/interface/flags/empire_flag_128_mask.dds"
+		effectFile = "gfx/FX/flag_sprite.shader"
+		noOfFrames = 1
+		
+		bg_position = { x = 13 y = 13 }
+		bg_size = { width = 148 height = 148 }
+		symbol_position = { x = 32 y = 32 }
+		symbol_size = { width = 111 height = 111 }
+	}	
+	
+	flagSpriteType = {
+		name = "GFX_empire_flag_128_curator"
+		textureFile = "gfx/interface/flags/empire_flag_128_frame_curator.dds"		#this one will determine the size of the sprite
+		masking_texture = "gfx/interface/flags/empire_flag_128_mask.dds"
+		effectFile = "gfx/FX/flag_sprite.shader"
+		noOfFrames = 1
+		
+		bg_position = { x = 13 y = 13 }
+		bg_size = { width = 148 height = 148 }
+		symbol_position = { x = 32 y = 32 }
+		symbol_size = { width = 111 height = 111 }
+	}	
+	
+	flagSpriteType = {
+		name = "GFX_empire_flag_128_artist"
+		textureFile = "gfx/interface/flags/empire_flag_128_frame_artist.dds"		#this one will determine the size of the sprite
+		masking_texture = "gfx/interface/flags/empire_flag_128_mask.dds"
+		effectFile = "gfx/FX/flag_sprite.shader"
+		noOfFrames = 1
+		
+		bg_position = { x = 13 y = 13 }
+		bg_size = { width = 148 height = 148 }
+		symbol_position = { x = 32 y = 32 }
+		symbol_size = { width = 111 height = 111 }
+	}
+
+	flagSpriteType = {
+		name = "GFX_empire_flag_128_mercenary"
+		textureFile = "gfx/interface/flags/empire_flag_128_frame_mercenary.dds"		#this one will determine the size of the sprite
+		masking_texture = "gfx/interface/flags/empire_flag_128_mask.dds"
+		effectFile = "gfx/FX/flag_sprite.shader"
+		noOfFrames = 1
+		
+		bg_position = { x = 13 y = 13 }
+		bg_size = { width = 148 height = 148 }
+		symbol_position = { x = 32 y = 32 }
+		symbol_size = { width = 111 height = 111 }
+	}
+	
+	flagSpriteType = {
+		name = "GFX_empire_flag_64"
+		textureFile = "gfx/interface/flags/empire_flag_64_frame.dds"		#this one will determine the size of the sprite
+		masking_texture = "gfx/interface/flags/empire_flag_64_mask.dds"
+		effectFile = "gfx/FX/flag_sprite.shader"
+		noOfFrames = 1
+		
+		bg_position = { x = 7 y = 7 }
+		bg_size = { width = 80 height = 80}
+		symbol_position = { x = 16	y = 16 }
+		symbol_size = { width = 61 height = 61 }
+	}
+
+	flagSpriteType = {
+		name = "GFX_empire_flag_48"
+		textureFile = "gfx/interface/flags/empire_flag_48_frame.dds"		#this one will determine the size of the sprite
+		masking_texture = "gfx/interface/flags/empire_flag_48_mask.dds"
+		effectFile = "gfx/FX/flag_sprite.shader"
+		noOfFrames = 1
+		
+		bg_position = { x = 1.5 y = 1 }
+		bg_size = { width = 60 height = 60}
+		symbol_position = { x = 6.5	y = 8 }
+		symbol_size = { width = 47 height = 47 }
+	}
+
+	flagSpriteType = {
+		name = "GFX_empire_flag_48_golden_frame"
+		textureFile = "gfx/interface/flags/custodian_council_48_frame.dds"		#this one will determine the size of the sprite
+		masking_texture = "gfx/interface/flags/empire_flag_48_mask.dds"
+		effectFile = "gfx/FX/flag_sprite.shader"
+		noOfFrames = 1
+		
+		bg_position = { x = 8 y = 6.5 }
+		bg_size = { width = 60 height = 60 }
+		symbol_position = { x = 12.5 y = 17 }
+		symbol_size = { width = 43 height = 43 }
+		mask_size = { width = 60 height = 60 }
+		mask_offset = { x = 6.5 y = 6.5 }
+	}
+	
+	flagSpriteType = {
+		name = "GFX_empire_flag_32"
+		textureFile = "gfx/interface/flags/empire_flag_32_frame.dds"		#this one will determine the size of the sprite
+		masking_texture = "gfx/interface/flags/empire_flag_32_mask.dds"
+		effectFile = "gfx/FX/flag_sprite.shader"
+		noOfFrames = 1
+		
+		bg_position = { x = 1 y = 1 }
+		bg_size = { width = 40 height = 40}
+		symbol_position = { x = 5 y = 5 }
+		symbol_size = { width = 32 height = 32 }
+		
+		texture_size = small
+	}
+	
+	flagSpriteType = {
+		name = "GFX_flag_no_mask"
+		textureFile = "gfx/interface/flags/flag_no_frame.dds"		#this one will determine the size of the sprite
+		masking_texture = "gfx/interface/flags/flag_full_mask.dds"
+		effectFile = "gfx/FX/flag_sprite.shader"
+	}
+
+	spriteType = {
+		name = "GFX_flag_highlight"
+		texturefile = "gfx/interface/flags/flag_highlight.dds"
+	}
+
+	spriteType = {
+		name = "GFX_flag_64_frame"
+		textureFile = "gfx/interface/flags/empire_flag_64_frame.dds"
+		effectFile = "gfx/FX/buttonstate.shader"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_flag_64_frame_highlight"
+		textureFile = "gfx/interface/flags/empire_flag_64_frame_highlight.dds"
+		effectFile = "gfx/FX/buttonstate.shader"
+		transparencecheck = yes
+	}
+	
+	spriteType = {
+		name = "GFX_dummy_3d_home_world"
+		texturefile = "gfx/interface/masks/planet_mask.dds"
+		effectFile = "gfx/FX/buttonstate_rendertarget.shader"
+		alwaystransparent = yes
+		transparencecheck = no
+	}
+	spriteType = {
+		name = "GFX_dummy_3d_home_world_new"
+		texturefile = "gfx/interface/masks/planet_mask.dds"
+		effectFile = "gfx/FX/buttonstate_rendertarget.shader"
+		alwaystransparent = no
+		transparencecheck = no
+	}
+}

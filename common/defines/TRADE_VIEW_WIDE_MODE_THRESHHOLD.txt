@@ -1,0 +1,3 @@
+	NInterface = {
+		TRADE_VIEW_WIDE_MODE_THRESHHOLD			= 1960  # Shows Trade View in wide mode if game resolution is above this
+	}

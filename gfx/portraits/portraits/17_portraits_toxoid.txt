@@ -1,0 +1,853 @@
+##############################################################
+###	PORTRAITS SETTINGS
+###
+### Which portraits are used is set in
+### common\species_classes\00_species_classes.txt
+###
+###	This file configures how portraits and planet backgrounds are built.
+###	Default position orientation is lower left.
+##############################################################
+
+############################
+portraits = {
+	# toxoid
+	tox1 = {	entity = "toxoid_01_portrait_01_entity" clothes_selector = "no_texture" attachment_selector = "no_texture"	greeting_sound = "tox_portrait_01"
+		character_textures = {
+			"gfx/models/portraits/toxoid/toxic_portrait_01_blue.dds"
+			"gfx/models/portraits/toxoid/toxic_portrait_01_green.dds"
+			"gfx/models/portraits/toxoid/toxic_portrait_01_orange.dds"
+			"gfx/models/portraits/toxoid/toxic_portrait_01_pink.dds"
+			"gfx/models/portraits/toxoid/toxic_portrait_01_red.dds"
+			"gfx/models/portraits/toxoid/toxic_portrait_01_teal.dds"
+			"gfx/models/portraits/toxoid/toxic_portrait_01_violet.dds"
+			"gfx/models/portraits/toxoid/toxic_portrait_01_yellow.dds"
+		}
+	}
+
+# toxoid 02 - the merchant
+	tox2 = {	entity = "toxoid_01_portrait_02_entity" clothes_selector = "no_texture" attachment_selector = "toxoid_mask_01"	greeting_sound = "tox_portrait_02"
+		character_textures = {
+			"gfx/models/portraits/toxoid/toxic_portrait_02_red.dds"
+			"gfx/models/portraits/toxoid/toxic_portrait_02_blue.dds"
+			"gfx/models/portraits/toxoid/toxic_portrait_02_green.dds"
+		}
+		custom_attachment_label = "MASK"
+
+		custom_close_up_position_offset = { x = 40 y = 0 }
+		custom_close_up_scale = 1.2
+	}
+
+# toxoid 03 - Tripple Head
+	tox3 = {	entity = "toxoid_01_portrait_03_entity" clothes_selector = "toxoid_clothes_03" attachment_selector = "no_texture"	greeting_sound = "tox_portrait_03"
+		character_textures = {
+			"gfx/models/portraits/toxoid/toxic_portrait_03_blue.dds"
+			"gfx/models/portraits/toxoid/toxic_portrait_03_green.dds"
+			"gfx/models/portraits/toxoid/toxic_portrait_03_orange.dds"
+			"gfx/models/portraits/toxoid/toxic_portrait_03_yellow.dds"
+		}
+
+		custom_close_up_position_offset = { x = -40 y = 173 }
+		custom_close_up_scale = 1.5
+	}
+
+
+	# toxoid 04 - the frog
+	tox4 = {	entity = "toxoid_01_portrait_04_entity" clothes_selector = "no_texture" attachment_selector = "no_texture"	greeting_sound = "tox_portrait_04"
+		character_textures = {
+			"gfx/models/portraits/toxoid/toxic_portrait_04_brown_01.dds"
+			"gfx/models/portraits/toxoid/toxic_portrait_04_brown_02.dds"
+			"gfx/models/portraits/toxoid/toxic_portrait_04_brown_03.dds"
+			"gfx/models/portraits/toxoid/toxic_portrait_04_orange_01.dds"
+			"gfx/models/portraits/toxoid/toxic_portrait_04_orange_02.dds"
+			"gfx/models/portraits/toxoid/toxic_portrait_04_orange_03.dds"
+			"gfx/models/portraits/toxoid/toxic_portrait_04_green_01.dds"
+			"gfx/models/portraits/toxoid/toxic_portrait_04_green_02.dds"
+			"gfx/models/portraits/toxoid/toxic_portrait_04_green_03.dds"
+			"gfx/models/portraits/toxoid/toxic_portrait_04_blue_01.dds"
+			"gfx/models/portraits/toxoid/toxic_portrait_04_blue_02.dds"
+			"gfx/models/portraits/toxoid/toxic_portrait_04_blue_03.dds"
+			"gfx/models/portraits/toxoid/toxic_portrait_04_red_01.dds"
+			"gfx/models/portraits/toxoid/toxic_portrait_04_red_02.dds"
+			"gfx/models/portraits/toxoid/toxic_portrait_04_red_03.dds"
+			"gfx/models/portraits/toxoid/toxic_portrait_04_violet_01.dds"
+			"gfx/models/portraits/toxoid/toxic_portrait_04_violet_02.dds"
+			"gfx/models/portraits/toxoid/toxic_portrait_04_violet_03.dds"
+		}
+
+		custom_close_up_position_offset = { x = 13 y = 133 }
+		custom_close_up_scale = 1.3
+	}
+
+# toxoid 05 - stink bug
+	tox5_f = {	entity = "toxoid_01_portrait_05_entity" clothes_selector = "no_texture" attachment_selector = "no_texture"	greeting_sound = "tox_portrait_05"
+		character_textures = {
+            "gfx/models/portraits/toxoid/toxic_portrait_05_female_green.dds"
+			"gfx/models/portraits/toxoid/toxic_portrait_05_female_blue.dds"
+			"gfx/models/portraits/toxoid/toxic_portrait_05_female_orange.dds"
+			"gfx/models/portraits/toxoid/toxic_portrait_05_female_violet.dds"
+			"gfx/models/portraits/toxoid/toxic_portrait_05_female_yellow.dds"
+
+		}
+
+		custom_close_up_position_offset = { x = 13 y = 267 }
+		custom_close_up_scale = 1.6
+	}
+
+	# toxoid 05 - stink bug
+	tox5_m = {	entity = "toxoid_01_portrait_05_entity" clothes_selector = "no_texture" attachment_selector = "no_texture"	greeting_sound = "tox_portrait_05"
+		character_textures = {
+            "gfx/models/portraits/toxoid/toxic_portrait_05_male_gray_blue.dds"
+			"gfx/models/portraits/toxoid/toxic_portrait_05_male_gray_red.dds"
+			"gfx/models/portraits/toxoid/toxic_portrait_05_male_gray_violet.dds"
+			"gfx/models/portraits/toxoid/toxic_portrait_05_male_green.dds"
+			"gfx/models/portraits/toxoid/toxic_portrait_05_male_red.dds"
+
+		}
+
+		custom_close_up_position_offset = { x = 13 y = 267 }
+		custom_close_up_scale = 1.6
+	}
+
+	# toxoid 06 - Tall Tubes
+tox6 = {	entity = "toxoid_01_portrait_06_entity" clothes_selector = "toxoid_clothes_06" attachment_selector = "no_texture"	greeting_sound = "tox_portrait_06"
+	character_textures = {
+		"gfx/models/portraits/toxoid/toxic_portrait_06_green_red.dds"
+		"gfx/models/portraits/toxoid/toxic_portrait_06_green_violet.dds"
+		"gfx/models/portraits/toxoid/toxic_portrait_06_red_blue.dds"
+		"gfx/models/portraits/toxoid/toxic_portrait_06_violet_green.dds"
+		"gfx/models/portraits/toxoid/toxic_portrait_06_violet_yellow.dds"
+		"gfx/models/portraits/toxoid/toxic_portrait_06_yellow_blue.dds"
+		"gfx/models/portraits/toxoid/toxic_portrait_06_yellow_green.dds"
+
+	}
+
+	custom_close_up_position_offset = { x = 13 y = 267 }
+	custom_close_up_scale = 1.6
+}
+
+	# toxoid 07 - trumpet alien
+	tox7_f = {	entity = "toxoid_01_portrait_07_entity" clothes_selector = "no_texture" attachment_selector = "no_texture"	greeting_sound = "tox_portrait_07"
+		character_textures = {
+			"gfx/models/portraits/toxoid/toxic_portrait_07_gender_01_green.dds"
+            "gfx/models/portraits/toxoid/toxic_portrait_07_gender_01_blue.dds"
+            "gfx/models/portraits/toxoid/toxic_portrait_07_gender_01_red.dds"
+		}
+
+		custom_close_up_position_offset = { x = 67 y = 200 }
+		custom_close_up_scale = 1.5
+	}
+	tox7_m = {	entity = "toxoid_01_portrait_07_entity" clothes_selector = "no_texture" attachment_selector = "no_texture"	greeting_sound = "tox_portrait_07"
+		character_textures = {
+            "gfx/models/portraits/toxoid/toxic_portrait_07_gender_02_green.dds"
+			"gfx/models/portraits/toxoid/toxic_portrait_07_gender_02_orange.dds"
+			"gfx/models/portraits/toxoid/toxic_portrait_07_gender_02_violet.dds"
+
+		}
+
+		custom_close_up_position_offset = { x = 67 y = 200 }
+		custom_close_up_scale = 1.5
+	}
+	tox7_i = {	entity = "toxoid_01_portrait_07_entity" clothes_selector = "no_texture" attachment_selector = "no_texture"	greeting_sound = "tox_portrait_07"
+		character_textures = {
+			"gfx/models/portraits/toxoid/toxic_portrait_07_gender_03_green.dds"
+			"gfx/models/portraits/toxoid/toxic_portrait_07_gender_03_blue.dds"
+			"gfx/models/portraits/toxoid/toxic_portrait_07_gender_03_orange.dds"
+		}
+
+		custom_close_up_position_offset = { x = 67 y = 200 }
+		custom_close_up_scale = 1.5
+	}
+
+	# toxoid 08 - tiny diver
+	tox8 = {	entity = "toxoid_01_portrait_08_entity" clothes_selector = "toxoid_clothes_08" attachment_selector = "toxoid_mask_03"	greeting_sound = "tox_portrait_08"
+		character_textures = {
+            "gfx/models/portraits/toxoid/toxic_08_body.dds"
+
+		}
+
+		custom_close_up_position_offset = { x = 0 y = -27 }
+		custom_close_up_scale = 1
+		custom_attachment_label = "MASK"
+	}
+
+	# toxoid 09 - the conch
+	tox9_f = {	entity = "toxoid_01_portrait_09_entity" clothes_selector = "no_texture" attachment_selector = "no_texture"	greeting_sound = "tox_portrait_09"
+		character_textures = {
+			"gfx/models/portraits/toxoid/toxic_portrait_09_female_blue_violet.dds"
+			"gfx/models/portraits/toxoid/toxic_portrait_09_female_blue_yellow.dds"
+			"gfx/models/portraits/toxoid/toxic_portrait_09_female_green_blue.dds"
+			"gfx/models/portraits/toxoid/toxic_portrait_09_female_green_violet.dds"
+			"gfx/models/portraits/toxoid/toxic_portrait_09_female_green_yellow.dds"
+			"gfx/models/portraits/toxoid/toxic_portrait_09_female_red_blue.dds"
+		}
+
+		custom_close_up_position_offset = { x = 0 y = 27 }
+		custom_close_up_scale = 1.2
+	}
+	tox9_m = {	entity = "toxoid_01_portrait_09_entity" clothes_selector = "no_texture" attachment_selector = "no_texture"	greeting_sound = "tox_portrait_09"
+		character_textures = {
+			"gfx/models/portraits/toxoid/toxic_portrait_09_male_blue_violet.dds"
+			"gfx/models/portraits/toxoid/toxic_portrait_09_male_blue_yellow.dds"
+			"gfx/models/portraits/toxoid/toxic_portrait_09_male_green_blue.dds"
+			"gfx/models/portraits/toxoid/toxic_portrait_09_male_green_violet.dds"
+			"gfx/models/portraits/toxoid/toxic_portrait_09_male_green_yellow.dds"
+			"gfx/models/portraits/toxoid/toxic_portrait_09_male_red_blue.dds"
+		}
+
+		custom_close_up_position_offset = { x = 0 y = 27 }
+		custom_close_up_scale = 1.2
+	}
+	# toxoid 10 - noname
+	tox10 = {	entity = "toxoid_01_portrait_10_entity" clothes_selector = "no_texture" attachment_selector = "no_texture"	greeting_sound = "tox_portrait_10"
+		character_textures = {
+			"gfx/models/portraits/toxoid/toxic_portrait_10_blue.dds"
+			"gfx/models/portraits/toxoid/toxic_portrait_10_green.dds"
+			"gfx/models/portraits/toxoid/toxic_portrait_10_teal.dds"
+			"gfx/models/portraits/toxoid/toxic_portrait_10_yellow.dds"
+		}
+
+		custom_close_up_position_offset = { x = 53 y = 160 }
+		custom_close_up_scale = 1.4
+	}
+
+	# toxic 11 -the sad hyena
+	tox11 = {	entity = "toxoid_01_portrait_11_entity" clothes_selector = "no_texture" attachment_selector = "toxoid_mask_02"	greeting_sound = "tox_portrait_11"
+ 		character_textures = {
+            "gfx/models/portraits/toxoid/toxic_portrait_11_brown.dds"
+			"gfx/models/portraits/toxoid/toxic_portrait_11_blue.dds"
+			"gfx/models/portraits/toxoid/toxic_portrait_11_red.dds"
+			"gfx/models/portraits/toxoid/toxic_portrait_11_green.dds"
+
+
+ 		}
+
+		 custom_close_up_position_offset = { x = 53 y = 453 }
+		 custom_close_up_scale = 2
+
+ 		custom_attachment_label = "MASK"
+ 	}
+
+	# toxic 12 -Froggy
+	tox12_f = {	entity = "toxoid_01_portrait_12_entity" clothes_selector = "toxoid_clothes_12" attachment_selector = "no_texture"	greeting_sound = "tox_portrait_12"
+ 		character_textures = {
+            "gfx/models/portraits/toxoid/toxic_portrait_12_female_blue.dds"
+			"gfx/models/portraits/toxoid/toxic_portrait_12_female_green.dds"
+			"gfx/models/portraits/toxoid/toxic_portrait_12_female_orange.dds"
+			"gfx/models/portraits/toxoid/toxic_portrait_12_female_yellow.dds"
+
+ 		}
+
+		 custom_close_up_position_offset = { x = 0 y = 333 }
+		 custom_close_up_scale = 1.8
+ 	}
+	 tox12_m = {	entity = "toxoid_01_portrait_12_entity" clothes_selector = "toxoid_clothes_12" attachment_selector = "no_texture"	greeting_sound = "tox_portrait_12"
+		character_textures = {
+			"gfx/models/portraits/toxoid/toxic_portrait_12_male_beige.dds"
+			"gfx/models/portraits/toxoid/toxic_portrait_12_male_black.dds"
+			"gfx/models/portraits/toxoid/toxic_portrait_12_male_red.dds"
+			"gfx/models/portraits/toxoid/toxic_portrait_12_male_white.dds"
+
+		}
+
+		custom_close_up_position_offset = { x = 0 y = 333 }
+		custom_close_up_scale = 1.8
+ }
+
+	#Tubed Alien
+	tox13 = {	entity = "toxoid_01_portrait_13_entity" clothes_selector = "no_texture" attachment_selector = "no_texture"	greeting_sound = "tox_portrait_13"
+ 		character_textures = {
+            "gfx/models/portraits/toxoid/toxic_portrait_13_portrait_green.dds"
+			"gfx/models/portraits/toxoid/toxic_portrait_13_portrait_pink.dds"
+			"gfx/models/portraits/toxoid/toxic_portrait_13_portrait_teal.dds"
+			"gfx/models/portraits/toxoid/toxic_portrait_13_portrait_yellow.dds"
+ 		}
+
+		 custom_close_up_position_offset = { x = 7 y = -13 }
+		 custom_close_up_scale = 1
+ 	}
+
+	# Toxoid 14 - Blax
+	tox14 = {	entity = "toxoid_01_portrait_14_entity" clothes_selector = "no_texture" attachment_selector = "no_texture"	greeting_sound = "tox_portrait_14"
+ 		character_textures = {
+			"gfx/models/portraits/toxoid/toxic_portrait_14_blue.dds"
+			"gfx/models/portraits/toxoid/toxic_portrait_14_green.dds"
+			"gfx/models/portraits/toxoid/toxic_portrait_14_orange.dds"
+			"gfx/models/portraits/toxoid/toxic_portrait_14_teal.dds"
+			"gfx/models/portraits/toxoid/toxic_portrait_14_violet.dds"
+ 		}
+ 	}
+
+	 # toxoid 15 - pipe boy
+ 	tox15 = {	entity = "toxoid_01_portrait_15_entity" clothes_selector = "toxoid_clothes_15" attachment_selector = "no_texture"	greeting_sound = "tox_portrait_15"
+ 		character_textures = {
+			"gfx/models/portraits/toxoid/toxic_portrait_15_red.dds"
+			"gfx/models/portraits/toxoid/toxic_portrait_15_orange.dds"
+			"gfx/models/portraits/toxoid/toxic_portrait_15_yellow.dds"
+			"gfx/models/portraits/toxoid/toxic_portrait_15_yellow_blue.dds"
+			"gfx/models/portraits/toxoid/toxic_portrait_15_blue.dds"
+ 		}
+ 	}
+	tox_machine = { entity = "toxoid_01_portrait_machine_entity" clothes_selector = "toxoid_clothes_machine" attachment_selector = "no_texture"	greeting_sound = "tox_portrait_machine"
+		character_textures = {
+			"gfx/models/portraits/toxoid/toxic_portrait_machine_base.dds"
+		}
+	}
+}
+
+portrait_groups = {
+
+	tox9 = {
+		default = tox9_f
+		game_setup = { #will run with a limited country scope. species and government is set but the country does not actually exist
+			add = {
+				trigger = {
+					ruler = {
+						OR = {
+							gender = male
+							gender = indeterminable
+						}
+					}
+				}
+				portraits = {
+					tox9_m
+				}
+			}
+			add = {
+				trigger = {
+					ruler = {
+						OR = {
+							gender = female
+							gender = indeterminable
+						}
+					}
+				}
+				portraits = {
+					tox9_f
+				}
+			}
+			#set = {
+			#	trigger = { ... }
+			#	portraits = { ... }
+			#	#using "set =" instead of "add" will first clear any portraits already added
+			#}
+		}
+
+		#species scope
+		species = { #generic portrait for a species
+			add = {
+				trigger = {
+					NOT = { species = { species_gender = female } }
+				}
+				portraits = {
+					tox9_m
+				}
+			}
+			add = {
+				trigger = {
+					NOT = { species = { species_gender = male } }
+				}
+				portraits = {
+					tox9_f
+				}
+			}
+		}
+
+		#pop scope
+		pop = { #for a specific pop
+			add = {
+				trigger = {
+					NOT = { species = { species_gender = female } }
+				}
+				portraits = {
+					tox9_m
+				}
+			}
+			add = {
+				trigger = {
+					NOT = { species = { species_gender = male } }
+				}
+				portraits = {
+					tox9_f
+				}
+			}
+		}
+
+		leader = {
+			add = {
+				trigger = {
+					OR = {
+						gender = male
+						gender = indeterminable
+					}
+				}
+				portraits = {
+					tox9_m
+				}
+			}
+			add = {
+				trigger = {
+					OR = {
+						gender = female
+						gender = indeterminable
+					}
+				}
+				portraits = {
+					tox9_f
+				}
+			}
+		}
+
+		ruler = {
+			add = {
+				trigger = {
+					OR = {
+						gender = male
+						gender = indeterminable
+					}
+				}
+				portraits = {
+					tox9_m
+				}
+			}
+			add = {
+				trigger = {
+					OR = {
+						gender = female
+						gender = indeterminable
+					}
+				}
+				portraits = {
+					tox9_f
+				}
+			}
+		}
+	}
+
+	tox12 = {
+		default = tox12_f
+		game_setup = { #will run with a limited country scope. species and government is set but the country does not actually exist
+			add = {
+				trigger = {
+					ruler = {
+						OR = {
+							gender = male
+							gender = indeterminable
+						}
+					}
+				}
+				portraits = {
+					tox12_m
+				}
+			}
+			add = {
+				trigger = {
+					ruler = {
+						OR = {
+							gender = female
+							gender = indeterminable
+						}
+					}
+				}
+				portraits = {
+					tox12_f
+				}
+			}
+			#set = {
+			#	trigger = { ... }
+			#	portraits = { ... }
+			#	#using "set =" instead of "add" will first clear any portraits already added
+			#}
+		}
+
+		#species scope
+		species = { #generic portrait for a species
+			add = {
+				trigger = {
+					NOT = { species = { species_gender = female } }
+				}
+				portraits = {
+					tox12_m
+				}
+			}
+			add = {
+				trigger = {
+					NOT = { species = { species_gender = male } }
+				}
+				portraits = {
+					tox12_f
+				}
+			}
+		}
+
+		#pop scope
+		pop = { #for a specific pop
+			add = {
+				trigger = {
+					NOT = { species = { species_gender = female } }
+				}
+				portraits = {
+					tox12_m
+				}
+			}
+			add = {
+				trigger = {
+					NOT = { species = { species_gender = male } }
+				}
+				portraits = {
+					tox12_f
+				}
+			}
+		}
+
+		leader = {
+			add = {
+				trigger = {
+					OR = {
+						gender = male
+						gender = indeterminable
+					}
+				}
+				portraits = {
+					tox12_m
+				}
+			}
+			add = {
+				trigger = {
+					OR = {
+						gender = female
+						gender = indeterminable
+					}
+				}
+				portraits = {
+					tox12_f
+				}
+			}
+		}
+
+		ruler = {
+			add = {
+				trigger = {
+					OR = {
+						gender = male
+						gender = indeterminable
+					}
+				}
+				portraits = {
+					tox12_m
+				}
+			}
+			add = {
+				trigger = {
+					OR = {
+						gender = female
+						gender = indeterminable
+					}
+				}
+				portraits = {
+					tox12_f
+				}
+			}
+		}
+	}
+
+	tox5 = {
+		default = tox5_f
+		game_setup = { #will run with a limited country scope. species and government is set but the country does not actually exist
+			add = {
+				trigger = {
+					ruler = {
+						OR = {
+							gender = male
+							gender = indeterminable
+						}
+					}
+				}
+				portraits = {
+					tox5_m
+				}
+			}
+			add = {
+				trigger = {
+					ruler = {
+						OR = {
+							gender = female
+							gender = indeterminable
+						}
+					}
+				}
+				portraits = {
+					tox5_f
+				}
+			}
+			#set = {
+			#	trigger = { ... }
+			#	portraits = { ... }
+			#	#using "set =" instead of "add" will first clear any portraits already added
+			#}
+		}
+
+		#species scope
+		species = { #generic portrait for a species
+			add = {
+				trigger = {
+					NOT = { species = { species_gender = female } }
+				}
+				portraits = {
+					tox5_m
+				}
+			}
+			add = {
+				trigger = {
+					NOT = { species = { species_gender = male } }
+				}
+				portraits = {
+					tox5_f
+				}
+			}
+		}
+
+		#pop scope
+		pop = { #for a specific pop
+			add = {
+				trigger = {
+					NOT = { species = { species_gender = female } }
+				}
+				portraits = {
+					tox5_m
+				}
+			}
+			add = {
+				trigger = {
+					NOT = { species = { species_gender = male } }
+				}
+				portraits = {
+					tox5_f
+				}
+			}
+		}
+
+		leader = {
+			add = {
+				trigger = {
+					OR = {
+						gender = male
+						gender = indeterminable
+					}
+				}
+				portraits = {
+					tox5_m
+				}
+			}
+			add = {
+				trigger = {
+					OR = {
+						gender = female
+						gender = indeterminable
+					}
+				}
+				portraits = {
+					tox5_f
+				}
+			}
+		}
+
+		ruler = {
+			add = {
+				trigger = {
+					OR = {
+						gender = male
+						gender = indeterminable
+					}
+				}
+				portraits = {
+					tox5_m
+				}
+			}
+			add = {
+				trigger = {
+					OR = {
+						gender = female
+						gender = indeterminable
+					}
+				}
+				portraits = {
+					tox5_f
+				}
+			}
+		}
+	}
+
+	tox7 = {
+		default = tox7_f
+		game_setup = { #will run with a limited country scope. species and government is set but the country does not actually exist
+			add = {
+				trigger = {
+					ruler = {
+						OR = {
+							gender = male
+						}
+					}
+				}
+				portraits = {
+					tox7_m
+				}
+			}
+			add = {
+				trigger = {
+					ruler = {
+						OR = {
+							gender = female
+						}
+					}
+				}
+				portraits = {
+					tox7_f
+				}
+			}
+			add = {
+				trigger = {
+					ruler = {
+						gender = indeterminable
+					}
+				}
+				portraits = {
+					tox7_i
+				}
+			}
+			#set = {
+			#	trigger = { ... }
+			#	portraits = { ... }
+			#	#using "set =" instead of "add" will first clear any portraits already added
+			#}
+		}
+
+		#species scope
+		species = { #generic portrait for a species
+			add = {
+				trigger = {
+					NOT = { species = { species_gender = female } }
+				}
+				portraits = {
+					tox7_m
+				}
+			}
+			add = {
+				trigger = {
+					NOT = { species = { species_gender = male } }
+				}
+				portraits = {
+					tox7_f
+				}
+			}
+			add = {
+				trigger = {
+					exists = species
+					NOT = {
+						species = {
+							OR = {
+								species_gender = male
+								species_gender = female
+							}
+						}
+					}
+				}
+				portraits = {
+					tox7_i
+				}
+			}
+		}
+
+		#pop scope
+		pop = { #for a specific pop
+			add = {
+				trigger = {
+					NOT = { species = { species_gender = female } }
+				}
+				portraits = {
+					tox7_m
+				}
+			}
+			add = {
+				trigger = {
+					NOT = { species = { species_gender = male } }
+				}
+				portraits = {
+					tox7_f
+				}
+			}
+			add = {
+				trigger = {
+					NOT = {
+						species = { species_gender = male }
+						species = { species_gender = female }
+					}
+				}
+				portraits = {
+					tox7_i
+				}
+			}
+		}
+
+		leader = {
+			add = {
+				trigger = {
+					OR = {
+						gender = male
+					}
+				}
+				portraits = {
+					tox7_m
+				}
+			}
+			add = {
+				trigger = {
+					OR = {
+						gender = female
+					}
+				}
+				portraits = {
+					tox7_f
+				}
+			}
+			add = {
+				trigger = {
+					gender = indeterminable
+				}
+				portraits = {
+					tox7_i
+				}
+			}
+		}
+
+		ruler = {
+			add = {
+				trigger = {
+					OR = {
+						gender = male
+					}
+				}
+				portraits = {
+					tox7_m
+				}
+			}
+			add = {
+				trigger = {
+					OR = {
+						gender = female
+					}
+				}
+				portraits = {
+					tox7_f
+				}
+			}
+			add = {
+				trigger = {
+					gender = indeterminable
+				}
+				portraits = {
+					tox7_i
+				}
+			}
+		}
+	}
+}

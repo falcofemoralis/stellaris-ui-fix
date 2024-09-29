@@ -1,0 +1,94 @@
+guiTypes = {
+    containerWindowType = {
+        name = "bottombar_help_menu"
+
+        orientation = LOWER_RIGHT
+        position = { x=  -313 y = 40 }
+        hide_position = { x = -313 y = 40 }
+        show_position = { x=  -313 y = -307 }
+        animation_time = 500
+        animation_type = decelerated
+
+        containerWindowType = {
+            name = "flexible_container"
+            position = { x=  0 y = 0 } # Position is set from code (CMainGuiBottomBarToolBar) based on button count
+
+            containerWindowType = {
+                name = "help_menu_title"
+                position = { x=  0 y = 0 }
+                size = { width = 293 height = 60 }
+
+                background = {
+                    name = "bg"
+                    spriteType = "GFX_help_menu_top_panel"
+                }
+
+                instantTextBoxType = {
+                    name = "help_menu_title_text"
+                    position = { x = 0 y = 8 }
+                    format = center
+                    text = "HELP"
+                    fixedSize = yes
+                    maxWidth = 291
+                    font = "malgun_goth_24"
+                    alwaysTransparent = yes
+                }
+
+                buttonType = {
+                    name = "close"
+                    quadTextureSprite = "GFX_close"
+                    position = { x = -71 y = 5 }
+                    shortcut = "ESCAPE"
+                    clicksound = "back_click"
+                    actionShortcut = "cancel"
+                    orientation = UPPER_RIGHT
+                    pdx_tooltip = "CLOSE_TITLE"
+                }
+            }
+
+            containerWindowType = {
+                name = "help_menu_buttons"
+                position = { x = 0 y = 57 }
+                size = { width = 291 height = 197 }
+
+                background = {
+                    name = "build_queue_background"
+                    spriteType = "GFX_tile_outliner_bg"
+                }
+
+                buttonType = {
+                    name = "get_started_button"
+                    font = "cg_16b"
+                    spriteType = "GFX_standard_button_200_34_button"
+                    buttonText = TUTORIAL_MISSION_VIEW_TEXT
+                    position = { x = -5 y = 12 }
+                    orientation = UPPER_CENTER
+                    clicksound = interface
+                    pdx_tooltip = TUTORIAL_MISSION_VIEW_INFO
+                }
+
+                buttonType = {
+                    name = "hud_tutorial_button"
+                    font = "cg_16b"
+                    spriteType = "GFX_standard_button_200_34_button"
+                    buttonText = "HUD_TUTORIAL_TEXT"
+                    position = { x = -5 y = 67 }
+                    orientation = UPPER_CENTER
+                    clicksound = interface
+                    pdx_tooltip = HUD_TUTORIAL_INFO
+                }
+
+                buttonType = {
+                    name = "wiki_button"
+                    font = "cg_16b"
+                    spriteType = "GFX_standard_button_200_34_button"
+                    buttonText = WIKI_TEXT
+                    position = { x = -5 y = 121 }
+                    orientation = UPPER_CENTER
+                    clicksound = interface
+                    pdx_tooltip = WIKI_INFO
+                }
+            }
+        }
+    }
+}

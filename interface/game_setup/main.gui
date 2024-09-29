@@ -1,0 +1,293 @@
+guiTypes = {
+	containerWindowType = {
+		name ="game_setup"
+		position = { x=0 y =0}	
+		size = { width=100% height = 100% }
+
+		#background = {
+		#	name ="background"
+		#	spriteType = "GFX_frontend_bg"
+		#	Orientation = "CENTER_UP"
+		#}
+
+		#containerWindowType = {
+		#	name ="main"
+		#	position = { x=-853 y = -480 }	
+		#	size = { width=1707 height = 960 }
+		#	orientation = center
+        #
+		#	## TABS
+		#	buttonType =	{
+		#		name = "tab_game_setup"
+		#		quadTextureSprite = "GFX_tab_settings"
+		#		position = { x = 320 y = 0 }
+		#		frame = 2
+		#		orientation = "UPPER_LEFT"
+		#		clicksound = "tab_click"
+		#	}
+		#	
+		#	instantTextBoxType={
+		#		name = "tab_game_setup_label"
+		#		font = "malgun_goth_24"
+		#		position = { x = 320 y = 0 }
+		#		borderSize = {x = 0 y = 21}	
+		#		maxWidth = 355
+		#		maxHeight = 79
+		#		text =	 "GAMESETUP_TAB_SETUP"	
+		#		orientation = "UPPER_LEFT"
+		#		format = centre
+		#		alwaysTransparent = yes
+		#	}
+        #
+		#	buttonType =	{
+		#		name = "tab_species_selection"
+		#		quadTextureSprite = "GFX_tab_settings"
+		#		position = { x = 675 y = 0 }
+		#		frame = 1
+		#		orientation = "UPPER_LEFT"
+		#		clicksound = "tab_click"
+		#	}
+		#	
+		#	instantTextBoxType={
+		#		name = "tab_species_selection_label"
+		#		font = "malgun_goth_24"
+		#		position = { x = 675 y = 0 }
+		#		borderSize = {x = 0 y = 21}	
+		#		maxWidth = 355
+		#		maxHeight = 79
+		#		text =	 "GAMESETUP_TAB_SPECIES"	
+		#		orientation = "UPPER_LEFT"
+		#		format = centre
+		#		alwaysTransparent = yes
+		#	}
+        #
+		#	buttonType =	{
+		#		name = "tab_game_details"
+		#		quadTextureSprite = "GFX_tab_settings"
+		#		position = { x = 1029 y = 0 }
+		#		frame = 1
+		#		orientation = "UPPER_LEFT"
+		#		clicksound = "tab_click"
+		#	}
+		#	
+		#	instantTextBoxType={
+		#		name = "tab_game_details_label"
+		#		font = "malgun_goth_24"
+		#		position = { x = 1029 y = 0 }
+		#		borderSize = {x = 0 y = 21}	
+		#		maxWidth = 355
+		#		maxHeight = 79
+		#		text =	 "GAMESETUP_TAB_DETAILS"	
+		#		orientation = "UPPER_LEFT"
+		#		format = centre
+		#		alwaysTransparent = yes
+		#	}
+        #
+		#	buttonType =	{
+		#		name = "back_button"
+		#		quadTextureSprite = "GFX_standard_button_large_211_40"
+		#		position = { x = -1 y = -83	}
+		#		shortcut = "ESCAPE"
+		#		orientation = "LOWER_LEFT"
+		#		clicksound = back_click
+		#		oversound = mouse_over
+		#	}
+		#	
+		#	instantTextBoxType={
+		#		name = "back_button_label"
+		#		font = "malgun_goth_24"
+		#		text = "FRONT_BACK"
+		#		position = { x = -1 y = -56 }
+		#		borderSize = {x = 0 y = 0}	
+		#		maxWidth = 320
+		#		maxHeight = 80
+		#		fixedSize = yes
+		#		format = center
+		#		alwaysTransparent = yes
+		#		orientation = "LOWER_LEFT"
+		#	}
+        #
+		#	buttonType = {
+		#		name = "next_button"
+		#		quadTextureSprite = "GFX_standard_button_large_211_40"
+		#		position = { x = -312 y = -83 }
+		#		orientation = "LOWER_RIGHT"
+		#		buttonFont = "malgun_goth_24"
+		#		buttonText = "NEXT"
+		#		shortcut = "RETURN"
+		#		oversound = mouse_over
+		#	}											
+		#}
+	}
+	
+	containerWindowType = {
+		name = "dropdown_list_item"
+		size = { width = 449 height = 35 }	
+		clipping = yes
+		
+		background = {
+			name = "background"
+			spriteType = "GFX_dropdown_item_204"
+		}
+		
+		instantTextBoxType = {
+			name = "text"
+			position = { x = 13 y = 7 }
+			font = "cg_16b"
+			maxWidth = 449
+			maxHeight = 40	
+			orientation = "UPPER_LEFT"
+			alwaysTransparent = yes
+		}
+	}	
+	
+	windowType = {
+		name = "lobby_chat_text"
+		backGround=""
+		position = { x=0 y=0 }	
+		size = { x=960 y= 24 }
+		moveable = 0
+		dontRender = ""
+		horizontalBorder= ""
+		verticalBorder= ""
+		fullScreen = no
+		
+		instantTextBoxType = {
+			name = "messagelogtext"
+			position = { x = 0 y = 0 }
+			textureFile = ""
+			font = "cg_16b"
+			borderSize = {x = 1 y = 1}
+			text = ""	
+			maxWidth = 960
+			maxHeight = 24	
+		
+			orientation = "UPPER_LEFT"
+		}
+		
+	}
+	windowType = {
+		name = "connection_log_text"
+		backGround=""
+		position = { x=0 y=0 }	
+		size = { x=267 y= 24 }
+		moveable = 0
+		dontRender = ""
+		horizontalBorder= ""
+		verticalBorder= ""
+		fullScreen = no
+		
+		instantTextBoxType = {
+			name = "text"
+			position = { x = 0 y = 0 }
+			textureFile = ""
+			font = "cg_16b"
+			borderSize = {x = 1 y = 1}
+			text = ""	
+			maxWidth = 267
+			maxHeight = 24	
+		
+			orientation = "UPPER_LEFT"
+		}
+		
+	}
+	#entry for player in multiplayer list...
+	windowType = {
+		name = "multiplayer_entry_server"
+		backGround=""
+		position = { x=0 y=0 }	
+		size = { x=200 y= 43 }
+		moveable = 0
+		dontRender = ""
+		horizontalBorder= ""
+		verticalBorder= ""
+		fullScreen = no	
+				
+		iconType =
+		{
+			name ="out_of_sync_icon"
+			spriteType = "GFX_icon_out_of_sync"
+			position = { x= -11 y = 0 }
+			orientation = "UPPER_LEFT"
+		}
+
+		instantTextBoxType = {
+			name = "name"
+			position = { x = 43 y =12 }
+			format = left
+			font = "cg_16b"
+			maxWidth = 165
+			maxHeight = 43	
+			orientation = "UPPER_LEFT"
+		}
+
+		guiButtonType = {
+			name = "button_kick"	
+			quadTextureSprite = "GFX_button_kick"
+			tooltip = ""
+			tooltipText =""	
+			delayedTooltipText = ""
+			position = { x=213 y =0}
+		}
+
+		guiButtonType = {
+			name = "button_ban"	
+			quadTextureSprite = "GFX_default_fallback_texture"
+			tooltip = ""
+			tooltipText =""	
+			delayedTooltipText = ""
+			position = { x=240 y =0}
+		}
+		
+		instantTextBoxType = {
+			name = "save_progress"
+			position = { x = 43 y =53 }
+			format = left
+			font = "cg_16b"
+			maxWidth = 341
+			maxHeight = 43	
+			orientation = "UPPER_LEFT"
+		}
+	}
+	
+	windowType = {
+		name = "multiplayer_entry"
+		backGround=""
+		position = { x=0 y=0 }	
+		size = { x=200 y= 73 }
+		moveable = 0
+		dontRender = ""
+		horizontalBorder= ""
+		verticalBorder= ""
+		fullScreen = no	
+	
+		iconType =
+		{
+			name ="out_of_sync_icon"
+			spriteType = "GFX_icon_out_of_sync"
+			position = { x= -11 y = 0 }
+			orientation = "UPPER_LEFT"
+		}
+	
+		instantTextBoxType = {
+			name = "name"
+			position = { x = 43 y =0 }
+			format = left
+			font = "cg_16b"
+			maxWidth = 165
+			maxHeight = 43	
+			orientation = "UPPER_LEFT"
+		}
+		
+		instantTextBoxType = {
+			name = "save_progress"
+			position = { x = 43 y =40 }
+			format = left
+			font = "cg_16b"
+			maxWidth = 341
+			maxHeight = 43	
+			orientation = "UPPER_LEFT"
+		}
+
+	}
+}

@@ -1,0 +1,478 @@
+@dynamic_extra = 0.8
+
+guiTypes = {
+	containerWindowType = {
+		name = "edicts_and_policies_view"
+		size = { width = 1696 height = 853 }
+		position = { x = 47 y = 53 }
+		show_position = { x = 47 y = 53 }
+	    hide_position = { x = -1867 y = 53 }
+	    clipping = no
+
+		background = {
+			name = "background"
+			spriteType = "GFX_tile_outliner_bg"
+		}
+
+		buttonType = {
+			name = "close"
+			quadTextureSprite = "GFX_close"
+			position = { x = -59 y = 21 }
+			orientation = upper_right
+			shortcut = "ESCAPE"
+			clicksound = "back_click"
+			pdx_tooltip = "CLOSE_TITLE"
+		}
+
+		# TABS BEGIN #
+		buttonType = {
+			name = "tab_council"
+			quadTextureSprite = "GFX_tab_1_inactive"
+			position = { x = -27 y = 851 }
+			buttonText = "COUNCIL"
+			buttonFont = "cg_16b"
+			clicksound = "tab_click"
+			shortcut = "z"
+			oversound = no_sound
+		}
+
+		buttonType = {
+			name = "tab_factions"
+			quadTextureSprite = "GFX_tab_2_inactive"
+			position = { x = 133 y = 851 }
+			buttonText = "FACTIONS"
+			buttonFont = "cg_16b"
+			clicksound = "tab_click"
+			shortcut = "x"
+			oversound = no_sound
+		}
+
+		buttonType = {
+			name = "tab_edicts_policies"
+			quadTextureSprite = "GFX_tab_2_active"
+			position = { x = 293 y = 851 }
+			buttonText = "EDICTS_AND_POLICIES"
+			buttonFont = "cg_16b"
+			clicksound = "tab_click"
+			shortcut = "c"
+			oversound = no_sound
+		}
+
+		### EDICTS ###
+
+		containerWindowType = {
+			name = "edicts_view"
+			position = { x = 820 y = 13 }
+			size = { width = 793 height = 827 } 
+			dynamic_extra_height = @dynamic_extra
+	        animation_time = 200
+	        animation_type = decelerated
+			orientation = upper_left
+			moveable = no
+			clipping = no
+			show_sound = "interface"
+					
+			iconType = {
+				name = "hex_bg"
+				spriteType = "GFX_hex_bg"
+				position = { x = 7 y = -29 }
+				alwaysTransparent = yes
+			}
+			
+			iconType = {
+				name = "edicts_header_line"
+				quadTextureSprite = "GFX_line"
+				position = { x = -5 y = 20 }
+				alwaysTransparent = yes
+			}
+			
+			instantTextBoxType = {
+				name = "edicts_header"
+				font = "malgun_goth_24"
+				text = "EDICTS"
+				position = { x = 33 y = -7 }
+				maxWidth = 400
+				maxHeight = 27
+				fixedSize = yes
+				format = left
+			}
+
+			### EDICTS FUND ###
+
+			containerWindowType = {
+				name = "background_edict_fund"
+				position = { x = -113 y = -1 }
+				size = { width = 93 height = 57 }
+				orientation = upper_right
+
+				background = {
+					name = "background"
+					spriteType = "GFX_tiles_dark_area_cut_8"
+				}
+
+				iconType = {
+					name = "edict_fund_icon"
+					quadTextureSprite = "GFX_edict_fund"
+					position = { x = 27 y = 4 }
+					scale = 0.85
+				}
+			}
+
+			instantTextBoxType = {
+				name = "edict_fund"
+				font = "cg_16b"
+				text = "EDICT_FUND"
+				position = { x = 660 y = 32 }
+				maxWidth = 133
+				maxHeight = 27
+				fixedSize = yes
+				format = center
+			}
+
+			### EDICTS LIST ###
+				        
+			containerWindowType = {
+				name = "edict_list_window"
+				position = { x = -5 y = 60 }
+				size = { width = 803 height = 771 }
+				dynamic_extra_height = @dynamic_extra
+				dontRender = ""
+	        
+				background = {
+					name = "background"
+					spriteType = "GFX_tiles_frame_light"
+				}
+	        
+				smoothListboxType = {
+					name = "edict_list"
+					position = { x = 16 y = 13 }
+					size = { x = 757 y = 740 }
+					dynamic_extra_height = @dynamic_extra
+					backGround = ""
+					spacing = 1
+					scrollbartype = "standardlistbox_slider"
+					borderSize = { x = 0 y = 0 }
+					orientation = "UPPER_LEFT"
+					autohide_scrollbar = yes
+				}
+			}
+		}
+
+		containerWindowType = {
+			name = "policies_view"
+			position = { x = 13 y = 13 }
+			size = { width = 793 height = 827 } 
+			dynamic_extra_height = @dynamic_extra
+			moveable = no
+			clipping = no
+			show_sound = "interface"
+					
+			iconType = {
+				name = "hex_bg"
+				spriteType = "GFX_hex_bg"
+				position = { x = 7 y = -29 }
+				alwaysTransparent = yes
+			}
+			
+			iconType = {
+				name = "policies_header_line"
+				quadTextureSprite = "GFX_line"
+				position = { x = -5 y = 20 }
+				alwaystransparent = yes
+			}
+
+			instantTextBoxType = {
+				name = "policies_header"
+				font = "malgun_goth_24"
+				text = "POLICIES"
+				position = { x = 33 y = -7 }
+				maxWidth = 400
+				maxHeight = 27
+				fixedSize = yes
+				format = left
+				alwaysTransparent = yes
+			}
+
+			containerWindowType = {
+				name = "in_breach_container"
+				position = { x = 433 y = 7 }
+				size = { width = 260 height = 67 }
+				moveable = no
+				clipping = no
+
+				background = {
+					name = "background"
+					spriteType = "GFX_tiles_frame_light"
+				}
+
+				
+				iconType = {
+					name = "red_hex"
+					alwaysTransparent = yes
+					position = { x = -24 y = -11 }
+					quadTextureSprite = "GFX_in_breach_hex_bg"
+				}
+
+				instantTextBoxType = {
+					name = "in_breach_header"
+					font = "cg_16b"
+					text = "IN_BREACH"
+					text_color_code = "R"
+					position = { x = -173 y = 7 }
+					format = right
+					maxWidth = 160
+					maxHeight = 27
+					alwaysTransparent = yes
+				}
+
+				OverlappingElementsBoxType = {
+					name = "in_breach_box"	
+					position = { x = -7 y = -7 }
+					size = { x = 253 y = 60 }
+				}
+			}
+
+			### POLICIES LIST ###
+				        
+			containerWindowType = {
+				name = "policy_list_window"
+				position = { x = -5 y = 60 }
+				size = { width = 803 height = 771 }
+				dynamic_extra_height = @dynamic_extra
+				moveable = no
+				clipping = yes
+	        
+				background = {
+					name = "background"
+					spriteType = "GFX_tiles_frame_light"
+				}
+	        
+				smoothListboxType = {
+					name = "policy_list"
+					position = { x = 16 y = 13 }
+					size = { x = 757 y = 740 }
+					dynamic_extra_height = @dynamic_extra
+					backGround = ""
+					spacing = 1
+					scrollbartype = "standardlistbox_slider"
+					borderSize = { x = 0 y = 0 }
+					orientation = "UPPER_LEFT"
+				}
+			}
+		}
+	}
+
+
+	### EDICTS ENTRY ###
+
+	containerWindowType = {
+		name = "empire_edicts_entry"
+		size = { width = 747 height = 53 }
+		position = { x = 0 y = 4 }
+		moveable = no
+		
+		containerWindowType = {
+			name = "leader_frame_box"
+			size = { width = 755 height = 49 }
+			position = { x = 0 y = 4 }
+			
+			background = {
+				name = "background"
+				quadTextureSprite = "GFX_tiles_dark_area_cut_8"
+			}
+		}
+
+		buttonType = {
+			name = "select_button"
+			quadTextureSprite = "GFX_checkbox_20_20_01"
+			position = { x = 3 y = 7  }
+			oversound = "no_sound"
+			clicksound = "select_click"
+		}
+
+		instantTextBoxType = {
+			name = "edicts_name"
+			font = "cg_16b"
+			position = { x = 72 y = 17 }
+			maxWidth = 373
+			format = left
+			fixedSize = yes
+			multiline = no
+			alwaysTransparent = yes
+		}
+
+		iconType = {
+			name = "type_icon"
+			spriteType = "GFX_edict_type_time"
+			position = { x = 53 y = 27 }
+			orientation = "LEFT"
+			centerPosition = yes
+		}
+
+		instantTextBoxType = {
+			name = "active"
+			font = "cg_16b"
+			position = { x = 452 y = 17 }
+			maxWidth = 107
+			maxHeight = 24
+			fixedSize = yes
+			format = center
+			text = "ACTIVE_GREEN"
+			alwaysTransparent = yes
+		}
+
+		instantTextBoxType = {
+			name = "cost"
+			font = "cg_16b"
+			text = "O 25"
+			position = { x = 567 y = 17 }
+			maxWidth = 80
+			maxHeight = 40
+			fixedSize = no
+			format = right
+		}
+
+		instantTextBoxType = {
+			name = "upkeep"
+			font = "cg_16b"
+			position = { x = 653 y = 17 }
+			maxWidth = 80
+			maxHeight = 40
+			fixedSize = no
+			format = right
+		}
+	}
+	
+	containerWindowType = {
+		name = "edict_effect_entry"
+		size = { width = 133 height = 67 }
+		
+		iconType = {
+			name = "icon"
+			spriteType = "GFX_modifier_unknown"
+			position = { x = 20 y = 20 }
+			orientation = "LEFT"
+			centerPosition = yes
+		}
+
+		instantTextBoxType={
+			name = "value"
+			font = "cg_16b"
+			position = { x = 60 y = 17 }
+			maxWidth = 67
+			maxHeight = 27
+			fixedSize = yes
+			format = left
+			text = ""
+			fixedsize = yes
+			Orientation = "UPPER_LEFT"
+			text_color_code = "G"
+		}	
+	}
+
+	### POLICIES ENTRY ###
+
+	containerWindowType = {
+		name = "empire_policy_entry"
+		size = { width = 773 height = 40 }
+		position = { x = 13 y = 13 }
+		moveable = no
+
+		buttonType = {
+			name = "background"
+			quadTextureSprite = "GFX_tiles_dark_area_cut_8_hover"
+			size = { x = 773 y = 36 }
+			clicksound = "outliner_click_tab"
+			oversound = no_sound
+		}
+
+		iconType = {
+			name = "can_change"
+			alwaysTransparent = yes
+			position = { x = 8 y = 8 }
+			quadTextureSprite = "GFX_on_off_indicator"
+			frame = 1
+		}
+
+		instantTextBoxType = {
+			name = "policy_name"
+			font = "cg_16b"
+			position = { x = 35 y = 7 }
+			fixedSize = yes
+			format = left
+			maxWidth = 320
+			alwaysTransparent = yes
+		}
+		
+		instantTextBoxType = {
+			name = "selected_option_name"
+			font = "cg_16b"
+			position = { x = 360 y = 7 }
+			fixedSize = yes
+			maxWidth = 347
+			format = right
+			alwaysTransparent = yes
+			text_color_code = "H"
+		}
+		
+		iconType = {
+			name = "expand_icon"
+			quadTextureSprite = "GFX_entry_expand"
+			position = { x = 720 y = 4 }
+			alwaysTransparent = yes
+		}
+
+		smoothListboxType = {
+			name = "options"
+			position = { x = 20 y = 40 }
+			size = { x = 737 y = 67 }
+			alwaysTransparent = yes
+		}
+	}
+	
+	containerWindowType = {
+		name = "policy_option_entry"
+		size = { width = 107 height = 40 }
+		position = { x = 0 y = 0 }
+		moveable = no
+
+		buttonType = {
+			name = "option_button"
+			position = { x = 13 y = 0 }
+			size = { x = 737 y = 36 }
+			quadTextureSprite = "GFX_tiles_dark_area_cut_8_hover"
+			oversound = no_sound
+		}
+
+		instantTextBoxType = {
+			name = "name"
+			font = "cg_16b"
+			position = { x = 56 y = 8 }
+			fixedSize = yes
+			format = left
+			alwaysTransparent = yes
+			text = "policyname"
+			text_color_code = "E"
+		}
+
+		iconType = {
+			name = "is_selected"
+			alwaysTransparent = yes
+			position = { x = 19 y = 3 }
+			quadTextureSprite = "GFX_radio_button"
+			frame = 1
+			scale = 0.8
+		}
+	}
+
+	containerWindowType = {
+		name = "in_breach_entry"
+		position = { x = 0 y = 0 }
+		size = { width = 75 height = 80 }
+
+		background = {
+			name = "background_button"
+			quadTextureSprite = "GFX_message_event_ruler"
+		}
+	}
+}

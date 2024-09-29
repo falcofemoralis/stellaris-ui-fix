@@ -1,0 +1,563 @@
+@dynamic_extra = 0.8
+
+guiTypes = {
+	containerWindowType = {
+		name = "manual_resettlement_view"
+		size = { width = 1693 height = 880 }
+		dynamic_extra_height = @dynamic_extra
+		origo = center
+		orientation = center
+		moveable = yes
+
+		background = {
+			name = "manual_resettlement_view_background"
+			spriteType = "GFX_tile_large_bg"
+		}
+
+		### black boxes
+		containerWindowType = {
+			name = "black_background_box_00"
+			size = { width = 800 height = 67 }
+			position = { x = 13 y = 73 }
+
+			background = {
+				name = "black"
+				spriteType = "GFX_tiles_dark_area_cut_8"
+				alwaysTransparent = yes
+			}
+		}
+
+		containerWindowType = {
+			name = "black_background_box_02"
+			size = { width = 800 height = 67 }
+			position = { x = 880 y = 73 }
+
+			background = {
+				name = "black2"
+				spriteType = "GFX_tiles_dark_area_cut_8"
+				alwaysTransparent = yes
+			}
+		}
+
+		### TITLE
+		iconType = {
+			name = "hex_bg"
+			spriteType = "GFX_hex_bg"
+			position = { x = -13 y = -17 }
+			alwaysTransparent = yes
+		}
+
+		iconType = {
+			name = "header_line"
+			spriteType = "GFX_line"
+			position = { x = 8 y = 29 }
+			alwaysTransparent = yes
+		}
+
+		instantTextBoxType={
+			name = "header"
+			position = { x = 21 y = -4 }
+			font = "malgun_goth_24"
+			maxWidth = 400
+			maxHeight = 53
+			text = "RESETTLEMENT"
+			format = left
+			vertical_alignment = center
+			alwaysTransparent = yes
+		}
+
+		buttonType = {
+			name = "close"
+			quadTextureSprite = "GFX_close_square"
+			position = { x = -59 y = 17 }
+			orientation = UPPER_RIGHT
+			shortcut = "ESCAPE"
+			pdx_tooltip = "CLOSE_TITLE"
+			clicksound = "back_click"
+			actionShortcut = "cancel"
+		}
+
+		### DROPDOWN LEFT
+		dropDownBoxType = {
+			name = "left_planet"
+			position = { x = 0 y = 53 }
+			size = { width = 315 height = 77 }
+
+			instantTextBoxType = {
+				name = "current"
+				position = { x = 60 y = 12 }
+				alwaystransparent = yes
+				font = "malgun_goth_24"
+				maxWidth = 600
+				maxHeight = 77
+				format = center
+				vertical_alignment = center
+			}
+
+			expandButton = {
+				name = "expand_button"
+				position = { x = 755 y = 28 }
+				quadTextureSprite = "GFX_button_down_arrow"
+			}
+
+			expandedWindow = {
+				name = "expanded_window"
+				position = { x = 13 y = -400 }
+				show_position = { x = 13 y = 87 }
+				show_animation_type = decelerated
+				hide_animation_type = accelerated
+				animation_time = 200
+				size = { width=800 height=680 }
+				dynamic_extra_height = @dynamic_extra
+				verticalScrollbar = "right_vertical_slider"
+				margin = { top = 9 bottom = 20 right = 8 }
+
+				background = {
+					name = "bg"
+					quadTextureSprite = "GFX_subwindow_tile_plain_solid"
+					position = { x = 0 y = 0 }
+				}
+
+				gridBoxType = {
+					name = "elements"
+					position = { x = 20 y = 12 }
+					size = { width = 347 height = 640 }
+					slotsize = { width = 341 height = 75 }
+					max_slots_horizontal = 1
+					format = "UPPER_LEFT"
+				}
+			}
+		}
+
+		### DROPDOWN RIGHT
+		dropDownBoxType = {
+			name = "right_planet"
+			position = { x = 880 y = 53 }
+			size = { width = 221 height = 77 }
+
+			instantTextBoxType = {
+				name = "current"
+				position = { x = 60 y = 12 }
+				alwaystransparent = yes
+				font = "malgun_goth_24"
+				maxWidth = 600
+				maxHeight = 77
+				format = center
+				vertical_alignment = center
+			}
+
+			expandButton = {
+				name = "expand_button"
+				position = { x = 741 y = 28 }
+				quadTextureSprite = "GFX_button_down_arrow"
+			}
+
+			expandedWindow = {
+				name = "expanded_window"
+				position = { x = 13 y = -400 }
+				show_position = { x = 13 y = 87 }
+				show_animation_type = decelerated
+				hide_animation_type = accelerated
+				animation_time = 200
+				size = { width=800 height=680 }
+				dynamic_extra_height = @dynamic_extra
+				verticalScrollbar = "right_vertical_slider"
+				margin = { top = 9 bottom = 20 right = 8 }
+
+				background = {
+					name = "bg"
+					quadTextureSprite = "GFX_subwindow_tile_plain_solid"
+					position = { x = 0 y = 0 }
+				}
+
+				gridBoxType = {
+					name = "elements"
+					position = { x = 20 y = 12 }
+					size = { width = 347 height = 640 }
+					slotsize = { width = 341 height = 75 }
+					max_slots_horizontal = 1
+					format = "UPPER_LEFT"
+				}
+			}
+		}
+
+		###
+		containerWindowType = {
+			name = "manual_resettlement_view_planet_entry"
+			size = { width = 688 height = 688 }
+			position = { x = 0 y = 0 }
+
+			smoothListBoxType = {
+				name = "pops_jobs_list_left"
+				position = { x = 15 y = 144 }
+				size = { x = 781 y = 693 }
+				dynamic_extra_height = @dynamic_extra
+				borderSize = { x = 0 y = 0 }
+				# background = ""
+				orientation = "UPPER_LEFT"
+				scrollbarType = "standardlistbox_slider"
+			}
+
+			smoothListBoxType = {
+				name = "pops_jobs_list_right"
+				position = { x = 880 y = 144 }
+				size = { x = 781 y = 693 }
+				dynamic_extra_height = @dynamic_extra
+				borderSize = { x = 0 y = 0 }
+				# background = ""
+				orientation = "UPPER_LEFT"
+				scrollbarType = "standardlistbox_slider"
+			}
+		}
+	}
+
+	### dropdown entry
+	containerWindowType = {
+		name = "manual_resettlement_view_planet_dropdown_entry"
+		size = { width = 753 height = 67 }
+
+		background = {
+			name = "tile_entry_background"
+			spriteType = "GFX_button_tile"
+		}
+
+		iconType = {
+			name = "planet_class_icon"
+			quadTextureSprite = "GFX_planet_type"
+			position = { x = 36 y = 35 }
+			centerPosition = yes
+		}
+
+		iconType = {
+			name = "planet_designation_icon"
+			quadTextureSprite = "GFX_planet_type"
+			position = { x = 87 y = 35 }
+			centerPosition = yes
+		}
+
+		instantTextBoxType = {
+			name = "name_and_type"
+			position = { x = 116 y = 9 }
+#			alwaystransparent = yes
+			font = "cg_16b"
+			maxWidth = 227
+			maxHeight = 48
+			format = left
+			vertical_alignment = center
+		}
+
+		instantTextBoxType = {
+			name = "details"
+			position = { x = 373 y = 9 }
+#			alwaystransparent = yes
+			font = "cg_16b"
+			maxWidth = 360
+			maxHeight = 48
+			format = right
+			vertical_alignment = center
+		}
+	}
+
+	###
+	containerWindowType = {
+        name = "manual_resettlement_view_resource_entry"
+        size = { width = 43 height = 27 }
+
+        iconType = {
+            name = "icon"
+            spriteType = "GFX_resource"
+            position = { x = 0 y = 3 }
+        }
+
+        instantTextBoxType = {
+            name = "amount"
+            font = "cg_16b"
+            text = "0"
+            position = { x = 27 y = 4 }
+            maxWidth = 27
+            maxHeight = 27
+            fixedSize = yes
+            format = left
+            orientation = upper_left
+        }
+    }
+
+	###
+	containerWindowType = {
+		name = "resettlement_pop_entry_left"
+		position = { x=0 y=0 }
+		size = { width = 787 height = 100 }
+		clipping = yes
+
+		background = {
+			name = "background"
+			spriteType = "GFX_dark_area_cut"
+		}
+
+		containerWindowType = {
+			name = "portrait"
+			position = { x=7 y=13 }
+			size = { width = 73 height = 73 }
+			clipping = yes
+
+			buttonType = {
+				name = "pop_background"
+				spriteType = "GFX_planet_background"
+				position = { x = 1 y = 3 }
+				scale = 0.55
+				clicksound = no_sound
+				oversound = no_sound
+			}
+
+			iconType = {
+				name = "pop_background_frame"
+				spriteType = "GFX_planet_background_frame"
+				scale = 0.55
+				alwaysTransparent = yes
+			}
+
+			iconType = {
+				name = "building_icon"
+				position = { x = -13 y = -7 }
+				scale = 0.66
+				spriteType = "GFX_building_unknown"
+				alwaysTransparent = yes
+			}
+
+			iconType = {
+				name = "portrait"
+				quadTextureSprite = "GFX_portrait_character"
+				position = { x = -31 y = -9 }
+				scale = 0.17
+				alwaysTransparent = yes
+			}
+
+			iconType = {
+				name = "pop_status"
+				spriteType = "GFX_pop_status"
+				position = { x = 0 y = 44 }
+				scale = 0.71
+			}
+
+			iconType = {
+				name = "pop_mod"
+				spriteType = "GFX_pop_mod"
+				position = { x = 0 y = 0 }
+				scale = 0.71
+			}
+		}
+
+		containerWindowType = {
+			position = { x=87 y=-7 }
+			size = { width = 620 height = 100 }
+			name = "pop_job_desc"
+
+			instantTextBoxType={
+				name = "species_name"
+				position = { x = 0 y = 7 }
+				font = "malgun_goth_24"
+				maxWidth = 600
+				maxHeight = 43
+				text = "Platypi"
+				format = left
+				vertical_alignment = center
+				alwaysTransparent = yes
+			}
+
+			iconType = {
+				name = "category_icon"
+				quadTextureSprite = "GFX_pop_category_unknown"
+				position = { x=0 y=61 }
+				scale = 0.8
+			}
+
+			iconType = {
+				name = "job_icon"
+				quadTextureSprite = "GFX_job_unknown"
+				position = { x=233 y=40 }
+			}
+
+			instantTextBoxType={
+				name = "job_name"
+				position = { x = 280 y = 41 }
+				font = "malgun_goth_24"
+				maxWidth = 600
+				maxHeight = 43
+				text = "Lazy Bum"
+				format = left
+				vertical_alignment = top
+				alwaysTransparent = yes
+			}
+
+			iconType = {
+				name = "num_jobs_icon"
+				spriteType = "GFX_text_job"
+				position = { x=33 y=64 }
+			}
+
+			instantTextBoxType={
+				name = "job_number"
+				position = { x=57 y = 59 }
+				font = "malgun_goth_24"
+				maxWidth = 64
+				maxHeight = 37
+				text = "0"
+				format = left
+				vertical_alignment = top
+				alwaysTransparent = yes
+			}
+		}
+
+		buttonType = {
+			name = "resettle"
+			quadTextureSprite = "GFX_resettlement_right_arrow"
+			position = { x = 699 y = 19 }
+		}
+
+		iconType = {
+			name = "habitability_icon"
+			spriteType = "GFX_colonizability_shadow"
+			position = { x = 737 y = 11 }
+			scale = 0.8
+		}
+
+	}
+	containerWindowType = {
+		name = "resettlement_pop_entry_right"
+		position = { x=0 y=0 }
+		size = { width = 787 height = 100 }
+		clipping = yes
+
+		background = {
+			name = "background"
+			spriteType = "GFX_dark_area_cut"
+		}
+
+		containerWindowType = {
+			name = "portrait"
+			position = { x=99 y=13 }
+			size = { width = 73 height = 73 }
+			clipping = yes
+
+			buttonType = {
+				name = "pop_background"
+				spriteType = "GFX_planet_background"
+				position = { x = 1 y = 3 }
+				scale = 0.55
+				clicksound = no_sound
+				oversound = no_sound
+			}
+
+			iconType = {
+				name = "pop_background_frame"
+				spriteType = "GFX_planet_background_frame"
+				scale = 0.55
+				alwaysTransparent = yes
+			}
+
+			iconType = {
+				name = "building_icon"
+				position = { x = -13 y = -7 }
+				scale = 0.66
+				spriteType = "GFX_building_unknown"
+				alwaysTransparent = yes
+			}
+
+			iconType = {
+				name = "portrait"
+				quadTextureSprite = "GFX_portrait_character"
+				position = { x = -31 y = -9 }
+				scale = 0.17
+				alwaysTransparent = yes
+			}
+
+			iconType = {
+				name = "pop_status"
+				spriteType = "GFX_pop_status"
+				position = { x = 0 y = 44 }
+				scale = 0.71
+			}
+
+			iconType = {
+				name = "pop_mod"
+				spriteType = "GFX_pop_mod"
+				position = { x = 0 y = 0 }
+				scale = 0.71
+			}
+		}
+
+		containerWindowType = {
+			position = { x=179 y=-7 }
+			size = { width = 620 height = 100 }
+			name = "pop_job_desc"
+
+			instantTextBoxType={
+				name = "species_name"
+				position = { x = 0 y = 7 }
+				font = "malgun_goth_24"
+				maxWidth = 600
+				maxHeight = 43
+				text = "Platypi"
+				format = left
+				vertical_alignment = center
+				alwaysTransparent = yes
+			}
+
+			iconType = {
+				name = "category_icon"
+				quadTextureSprite = "GFX_pop_category_unknown"
+				position = { x=0 y=61 }
+				scale = 0.8
+			}
+
+			iconType = {
+				name = "job_icon"
+				quadTextureSprite = "GFX_job_unknown"
+				position = { x=233 y=40 }
+			}
+
+			instantTextBoxType={
+				name = "job_name"
+				position = { x = 280 y = 41 }
+				font = "malgun_goth_24"
+				maxWidth = 600
+				maxHeight = 43
+				text = "Lazy Bum"
+				format = left
+				vertical_alignment = top
+				alwaysTransparent = yes
+			}
+
+			iconType = {
+				name = "num_jobs_icon"
+				spriteType = "GFX_text_job"
+				position = { x=33 y=64 }
+			}
+
+			instantTextBoxType={
+				name = "job_number"
+				position = { x=57 y = 59 }
+				font = "malgun_goth_24"
+				maxWidth = 64
+				maxHeight = 37
+				text = "0"
+				format = left
+				vertical_alignment = top
+				alwaysTransparent = yes
+			}
+		}
+
+		buttonType = {
+			name = "resettle"
+			quadTextureSprite = "GFX_resettlement_left_arrow"
+			position = { x = 19 y = 19 }
+		}
+
+		iconType = {
+			name = "habitability_icon"
+			spriteType = "GFX_colonizability_shadow"
+			position = { x = 11 y = 11 }
+			scale = 0.8
+		}
+	}
+}

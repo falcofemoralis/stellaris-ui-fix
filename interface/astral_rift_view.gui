@@ -1,0 +1,764 @@
+guiTypes = {
+
+	# Used only as a value holder to resize the progress bar dynamically
+	positionType = {
+		name = "rift_progress_background_bar_size_controller"
+		position = { x = 91 y = 13 }
+	}
+
+	containerWindowType = {
+		name = "astral_rift_view"
+		orientation = center
+		size = { width = 1253 height = 853 }
+		position = { x = 0 y = 0 }
+		origo = center
+		moveable = yes
+		clipping = no
+
+		backGround = {
+			name = "background"
+			quadTextureSprite ="GFX_tile_large_bg"
+		}
+
+
+		# Header ----------------------------------------------------------------
+
+		iconType = {
+			name = "hex_bg"
+			spriteType = "GFX_hex_bg"
+			position = { x = -27 y = -16 }
+			alwaysTransparent = yes
+		}
+
+		iconType = {
+			name = "header_line"
+			quadTextureSprite = "GFX_line"
+			position = { x = 8 y = 36 }
+			alwaysTransparent = yes
+		}
+
+		instantTextBoxType = {
+			name = "site_name"
+			font = "malgun_goth_24"
+			text = "THIS IS A RIFT NAME"
+			position = { x = 13 y = 9 }
+			maxWidth = 387
+			maxHeight = 53
+			fixedSize = yes
+			format = left
+			#alwaysTransparent = yes
+		}
+
+		buttonType = {
+			name = "goto_site_button"
+			quadTextureSprite = "GFX_fleetview_focus"
+			position = { x = -100 y = 13 }
+			orientation = upper_right
+			pdx_tooltip = "RIFT_GO_TO"
+			shortCut = "q"
+		}
+
+		buttonType = {
+			name = "close"
+			quadTextureSprite = "GFX_close"
+			position = { x = -53 y = 13 }
+			orientation = upper_right
+			pdx_tooltip = "CLOSE_TITLE"
+			shortcut = "ESCAPE"
+		}
+		# -------------------------------------------------------------------
+
+		# Site Type ---------------------------------------------------------
+		containerWindowType = {
+			name = "site_type_window"
+			size = { width = 747 height = 233 }
+			position = { x = 80 y = 93 }
+
+			iconType = {
+				name ="event_picture"
+				spriteType = "GFX_event_frame"
+				position = { x = 0 y = 0 }
+				alwaystransparent = yes
+			}
+
+			iconType = {
+				name = "event_frame"
+				quadTextureSprite = "GFX_event_frame"
+				position = { x = -7 y = -7 }
+				alwaystransparent = yes
+			}
+		}
+		# ---------------------------------------------------------------------
+
+		# Exploration Progress ------------------------------------------------
+
+		containerWindowType = {
+			name = "chapters_window"
+			size = { width = 733 height = 171 }
+			position = { x = 57 y = 307 }
+
+			backGround = {
+				name = "chapters_window_background"
+				quadTextureSprite ="GFX_astral_rift_progressframe"
+				position = { x = -39 y = -36 }
+			}
+
+			iconType = {
+				name = "progress_background_bar"
+				quadTextureSprite = "GFX_progress_background_bar"
+				position = { x = 24 y = 35 }
+			}
+
+			OverlappingElementsBoxType = {
+				name = "chapters_box"
+				position = { x = 0 y = 13 }
+				size = { x = 672 y = 80 }
+				format = left
+				spacing = 24
+			}
+		}
+
+		instantTextBoxType = {
+			name = "chapter_subtitle"
+			font = "cg_16b"
+			text = "THIS IS A CHAPTER SUBTITLE"
+			position = { x = 28 y = 397 }
+			maxWidth = 713
+			maxHeight = 53
+			fixedSize = yes
+			format = center
+			#alwaysTransparent = yes
+		}
+
+		iconType = {
+			name = "no_report_icon"
+			quadTextureSprite = "GFX_astral_rift_icon_blocked"
+			position = { x = 348 y = 493 }
+			alwaystransparent = yes
+		}
+		instantTextBoxType = {
+			name = "no_report_text"
+			font = "cg_16b"
+			text = "STAGE_NOTHING_TO_REPORT"
+			position = { x = 28 y = 467 }
+			maxWidth = 713
+			maxHeight = 53
+			fixedSize = yes
+			format = center
+			#alwaysTransparent = yes
+		}
+
+		# ---------------------------------------------------------------------
+
+		# Exploration Text & Buttons -------------------------------------------
+
+		containerWindowType = {
+			name = "exploration_window"
+			size = { width = 733 height = 267 } # this will be dynamically resized, see RIFT_VIEW_TEXTBOX_*
+			position = { x = 19 y = 429 }
+
+			backGround = {
+				name = "background"
+				quadTextureSprite ="GFX_framed_area_tile"
+			}
+
+			smoothListBoxType = {
+				name = "text_list"
+				position = { x = 13 y = 13 }
+				orientation = upper_left
+				size = { x = 707 y = 240 } # this will be dynamically resized, see RIFT_VIEW_TEXTBOX_*
+				borderSize = { x = 0 y = 0 }
+				scrollbartype = "standardlistbox_slider"
+			}
+			
+			buttonType = {
+				name = "tts_button"
+				position = { x = 685 y = -5 }
+				spriteType = "GFX_button_tts_start"
+				buttonFont = "cg_16b"
+				shortCut = "t"
+			}
+		}
+
+		gridBoxType = {
+			name = "options_box"
+			position = { x = 24 y = 696 }
+			size = { width = 720 height = 140 }
+			format = "UPPER_LEFT"
+			slotsize = { width = 707 height = 47 }
+			max_slots_horizontal = 1
+			max_slots_vertical = 3
+		}
+
+		# ---------------------------------------------------------------------
+
+		# Exploration Chapter --------------------------------------------------
+
+
+		containerWindowType = {
+			name = "title_chapter"
+			size = { width = 240 height = 240 }
+			position = { x = 760 y = 27 }
+
+			iconType = {
+				name = "astral_rift_file_bg"
+				quadTextureSprite = "GFX_astral_rift_file_bg"
+				position = { x = 8 y = 35 }
+			}
+
+			iconType = {
+				name = "title_hex"
+				quadTextureSprite = "GFX_tradition_hex_bg_green"
+				position = { x = 7 y = 17 }
+				alwaysTransparent = yes
+			}
+
+			iconType = {
+				name = "title_line"
+				quadTextureSprite = "GFX_FC_separator"
+				position = { x = 20 y = 75 }
+			}
+
+			iconType = {
+				name = "astral_rift_icon_header"
+				position = { x = 16 y = 37 }
+				quadTextureSprite = "GFX_astral_rift_ui_icon"
+				scale = 1
+			}
+
+			instantTextBoxType = {
+				name = "title_text"
+				font = "malgun_goth_24"
+				position = { x = 64 y = 44 }
+				text = "CURRENT CHAPTER"
+				maxWidth = 224
+				maxHeight = 27
+				fixedSize = yes
+				format = left
+				orientation = upper_left
+			}
+		}
+
+		containerWindowType = {
+			name = "leader_window"
+			size = { width = 193 height = 321 }
+			position = { x = 779 y = 120 }
+
+			background = {
+				name = "leader_background"
+				spriteType = "GFX_dark_area_cut"
+			}
+
+			containerWindowType = {
+				name = "portrait_container"
+				position = { x = 13 y = 13 }
+			}
+
+			instantTextBoxType = {
+				name = "help_text"
+				font = "cg_16b"
+				position = { x = 13 y = 187 }
+				text = "ASTRAL_RIFT_ASSIGN_SCIENTIST"
+				maxWidth = 173
+				maxHeight = 40
+				format = left
+			}
+		}
+
+		containerWindowType = {
+			name = "select_leader_window"
+			position = { x = 840 y = 267 }
+			size = { width = 893 height = 560 }
+
+			background = {
+				name = "planet_bg"
+				spriteType = "GFX_tile_outliner_bg"
+				alwaysTransparent = no
+			}
+
+			iconType = {
+				name = "hex_bg"
+				spriteType = "GFX_hex_bg"
+				position = { x = -9 y = -17 }
+				alwaysTransparent = yes
+			}
+	
+			iconType = {
+				name = "header_line"
+				quadTextureSprite = "GFX_line"
+				position = { x = 8 y = 29 }
+				alwaysTransparent = yes
+			}
+
+			instantTextBoxType = {
+				name = "header"
+				font = "malgun_goth_24"
+				text = "LEADER_ASSIGNMENT"
+				position = { x = 36 y = 8 }
+				maxWidth = 267
+				maxHeight = 53
+				fixedSize = yes
+				format = left
+				alwaysTransparent = yes
+			}
+
+			buttonType = {
+				name = "close_button"
+				quadTextureSprite = "GFX_close"
+				position = { x = -56 y = 19 }
+				shortcut = "ESCAPE"
+				clicksound = "back_click"
+				actionShortcut = "cancel"
+				orientation = UPPER_RIGHT
+				pdx_tooltip = "CLOSE_TITLE"
+			}
+
+			smoothListBoxType = {
+				name = "leader_list"
+				position = { x = 16 y = 67 }
+				orientation = "UPPER_LEFT"
+				priority = 100
+				size = { x = 860 y = 480 }
+				scrollbartype = "standardlistbox_slider"
+				spacing = -1
+				defaultSelection = yes
+			}
+		}
+
+		containerWindowType = {
+			name = "chapter_progress"
+			size = { width = 237 height = 43 }
+			position = { x = 980 y = 120 }
+
+			background = {
+				name = "background"
+				spriteType = "GFX_dark_area_cut"
+			}
+
+			iconType = {
+				name = "progress_time_icon"
+				position = { x = 164 y = 9 }
+				spriteType = "GFX_resource_time"
+			}
+
+			iconType = {
+				name = "progress_bar"
+				spriteType = "GFX_queue_progressbar_100"
+				position = { x = 23 y = 13 }
+			}
+
+			instantTextBoxType = {
+				name = "progress_text"
+				font = "cg_16b"
+				position = { x = 189 y = 9 }
+				text = "DAYS LEFT: 2000"
+				maxWidth = 240
+				maxHeight = 27
+				fixedSize = yes
+				format = left
+			}
+		}
+
+		containerWindowType = {
+			name = "chapter_difficulty"
+			size = { width = 237 height = 109 }
+			position = { x = 980 y = 171 }
+
+			background = {
+				name = "background"
+				spriteType = "GFX_dark_area_cut"
+			}
+
+
+			iconType = {
+				name = "difficulty_icon"
+				position = { x = 60 y = 53 }
+				spriteType = "GFX_difficulty_range"
+				frame = 1
+			}
+
+			instantTextBoxType = {
+				name = "roll_chance_label"
+				font = "cg_16b"
+				position = { x = 0 y = 16 }
+				text = "ASTRAL_RIFT_BREAKTHROUGH"
+				maxWidth = 240
+				maxHeight = 27
+				fixedSize = yes
+				format = center
+			}
+
+			instantTextBoxType = {
+				name = "roll_chance_text"
+				font = "malgun_goth_24"
+				position = { x = 109 y = 57 }
+				text = "15%"
+				maxWidth = 107
+				maxHeight = 27
+				fixedSize = yes
+				format = left
+				Orientation = "UPPER_LEFT"
+			}
+		}
+
+		containerWindowType = {
+			name = "chapter_modifiers"
+			size = { width = 237 height = 153 }
+			position = { x = 981 y = 288 }
+
+			background = {
+				name = "background"
+				spriteType = "GFX_dark_area_cut"
+			}
+
+			instantTextBoxType = {
+				name = "difficulty_type_text"
+				font = "cg_16b"
+				position = { x = 0 y = 20 }
+				text = "RIFT_DIFFICULTY_TYPE"
+				maxWidth = 133
+				maxHeight = 27
+				fixedSize = yes
+				format = right
+			}
+			iconType = {
+				name = "difficulty_type_icon"
+				position = { x = 140 y = 11 }
+				spriteType = "GFX_archaeology_difficulty_normal"
+				frame = 1
+			}
+			instantTextBoxType = {
+				name = "difficulty_type_value"
+				font = "cg_16b"
+				position = { x = 187 y = 20 }
+				text = "-15"
+				maxWidth = 53
+				maxHeight = 27
+				fixedSize = yes
+				format = left			
+			}
+
+			instantTextBoxType = {
+				name = "leader_bonus_text"
+				font = "cg_16b"
+				position = { x = 0 y = 64 }
+				text = "ARC_LEADER_BONUS"
+				maxWidth = 133
+				maxHeight = 27
+				fixedSize = yes
+				format = right
+			}
+			iconType = {
+				name = "leader_bonus_icon"
+				position = { x = 140 y = 55 }
+				spriteType = "GFX_leader_bonus"
+			}
+			instantTextBoxType = {
+				name = "leader_bonus_value"
+				font = "cg_16b"
+				position = { x = 187 y = 64 }
+				text = "+2"
+				maxWidth = 53
+				maxHeight = 27
+				fixedSize = yes
+				format = left
+			}
+
+			instantTextBoxType = {
+				name = "clues_text"
+				font = "cg_16b"
+				position = { x = 0 y = 108 }
+				text = "RIFT_CLUES"
+				maxWidth = 133
+				maxHeight = 27
+				fixedSize = yes
+				format = right
+				pdx_tooltip = "RIFT_CLUES_TT"
+			}
+			iconType = {
+				name = "clues_icon"
+				position = { x = 140 y = 100 }
+				spriteType = "GFX_clue"
+				pdx_tooltip = "RIFT_CLUES_TT"
+			}
+			instantTextBoxType = {
+				name = "clues_value"
+				font = "cg_16b"
+				position = { x = 187 y = 108 }
+				text = "3"
+				maxWidth = 53
+				maxHeight = 27
+				fixedSize = yes
+				format = left
+				pdx_tooltip = "RIFT_CLUES_TT"
+			}
+		}
+
+		containerWindowType = {
+			name = "exploration_log"
+			size = { width = 440 height = 340 }
+			position = { x = 779 y = 451 }
+
+			backGround = {
+				name = "background"
+				quadTextureSprite ="GFX_dark_area_cut"
+			}
+
+			containerWindowType = {
+				name = "expedition_bg"
+				position = { x = 0 y = 0 }
+
+				backGround = {
+					name = "background_expedition_title"
+					quadTextureSprite ="GFX_expedition_title_bg"
+					alwaysTransparent = yes
+				}
+
+			}
+
+			instantTextBoxType = {
+				name = "header"
+				font = "cg_16b"
+				position = { x = 20 y = 13 }
+				text = "ASTRAL_RIFT_EXPLORATION_LOG"
+				maxWidth = 160
+				maxHeight = 27
+				fixedSize = yes
+				format = left
+				pdx_tooltip = "ASTRAL_RIFT_EXPLORATION_LOG_TT"
+			}
+			
+			smoothListBoxType = {
+				name = "log_list"
+				position = { x = 13 y = 60 }
+				orientation = upper_left
+				size = { x = 413 y = 267 }
+				borderSize = { x = 0 y = 0 }
+				scrollbartype = "standardlistbox_slider"
+			}
+		}
+
+		containerWindowType = {
+			name = "block_window"
+			size = { width = 467 height = 760 }
+			position = { x = 765 y = 61 }
+			clipping = yes
+
+			##Sliding Doors --------------------------------------
+			iconType = {
+				name = "doorRight"
+				spriteType = "GFX_astral_rift_expedition_file_blocked_door_right"
+				orientation = upper_right
+				position = { x = -245 y = 0}
+			}
+
+			iconType = {
+				name = "doorLeft"
+				spriteType = "GFX_astral_rift_expedition_file_blocked_door_left"
+				orientation = upper_left
+				position = { x = 0 y = 0}
+			}
+
+			instantTextBoxType = {
+				name = "text"
+				font = "cg_16b"
+				position = { x = 0 y = 373 }
+				text = "THIS IS LOCKED/FINISHED"
+				maxWidth = 467
+				maxHeight = 59
+				fixedSize = yes
+				format = center
+			}
+
+			iconType = {
+				name = "icon"
+				quadTextureSprite = "GFX_astral_rift_sign"
+				position = { x = 200 y = 307 }
+			}
+		}
+	}
+
+	# ---------------------------------------------------------------------
+
+	# Event ---------------------------------------------------------------
+	containerWindowType = {
+		name = "rift_stage_event_entry"
+		position = { x=0 y=0 }
+		size = { width = 707 height = 240 }	# might be resized in code
+
+		instantTextBoxType = {
+			name = "name"
+			font = "cg_16b"
+			position = { x = 7 y = 7 }
+			text = "NAME OF EVENT"
+			maxWidth = 693
+			maxHeight = 27
+			format = left
+		}
+
+		instantTextBoxType = {
+			name = "description"
+			font = "cg_16b"
+			position = { x = 7 y = 47 } # will be moved up in code if name is empty
+			text = "THIS HERE IS A LONG DESCRIPTION OF AN EVENT"
+			maxWidth = 693
+			format = left
+		}
+
+		instantTextBoxType = {
+			name = "effects"
+			font = "cg_16b"
+			position = { x = 7 y = 47 } # will be moved down below the desc dynamically
+			text = "THIS IS AN EFFECT"
+			maxWidth = 693
+			format = left
+		}
+	}
+
+	containerWindowType = {
+		name = "rift_stage_event_option"
+		position = { x=0 y=0 }
+		size = { width = 723 height = 40 }
+
+		background = {
+			name = "background"
+			spriteType = "GFX_button_light"
+		}
+
+		instantTextBoxType = {
+			name = "text"
+			font = "cg_16b"
+			position = { x = 0 y = 7 }
+			text = "THIS IS AN EVENT OPTION"
+			maxWidth = 723
+			maxHeight = 40
+			fixedSize = yes
+			format = center
+		}
+
+		OverlappingElementsBoxType = {
+			name = "trigger_icons"
+			position = { x = 0  y = 3 }
+			size = { x=48 y= 37 }
+		}
+		
+		iconType = {
+			name = "difficulty_icon"
+			position = { x = 651  y = 4 }
+			spriteType = "GFX_difficulty_range"
+			frame = 1
+			scale = 0.8
+		}
+
+		instantTextBoxType = {
+			name = "difficulty_index"
+			font = "malgun_goth_24"
+			position = { x = 691 y = 3 }
+			text = "4"
+			maxWidth = 69
+			maxHeight = 37
+			fixedSize = yes
+			format = left
+		}
+	}
+	# ----------------------------------------------------------------------
+
+	containerWindowType = {
+		name = "rift_stages_box_entry"
+		position = { x=0 y=0 }
+		size = { width = 67 height = 67 }
+
+		iconType = {
+			name = "stage_background"
+			quadTextureSprite = "GFX_astral_rift_chapter_button"
+			position = { x = 0 y = 0 }
+			scale = 1
+			frame = 4
+		}
+
+		buttonType = {
+			name = "stage_button"
+			quadTextureSprite = "GFX_astral_rift_stage_icon"
+			position = { x = 7 y = 8 }
+			frame = 1
+		}
+
+		buttonType = {
+			name = "next_stage_button"
+			quadTextureSprite = "GFX_astral_rift_sphere_icon"
+			position = { x = 0 y = 0 }
+			scale = 0.8
+		}
+
+		iconType = {
+			name = "stage_progress_circle"
+			quadTextureSprite = "GFX_chapter_progress_bar"
+			position = { x = 0 y = 0 }
+			frame = 1
+		}
+	}
+
+	containerWindowType = {
+		name = "exploration_log_entry"
+		position = { x=0 y=0 }
+		size = { width = 413 height = 67 }
+
+		background = {
+			name = "background"
+			spriteType = "GFX_dark_area_cut"
+		}
+
+		iconType = {
+			name = "tab_icon"
+			quadTextureSprite = "GFX_expedition_log_tab"
+			position = { x = 0 y = 11 }
+			frame = 2 # yellow by default
+		}
+
+		instantTextBoxType = {
+			name = "date"
+			font = "cg_16b"
+			position = { x = 13 y = 23 }
+			text = "1100.02.10"
+			maxWidth = 160
+			maxHeight = 40
+			fixedSize = yes
+			format = left
+		}
+
+		iconType = {
+			name = "roll_icon"
+			quadTextureSprite = "GFX_icon_archaeology_dieroll"
+			position = { x = 187 y = 16 }
+			scale = 0.9
+		}
+
+		instantTextBoxType = {
+			name = "roll_text"
+			font = "cg_16b"
+			position = { x = 240 y = 23 }
+			text = "9"
+			maxWidth = 53
+			maxHeight = 40
+			fixedSize = yes
+			format = left
+		}
+
+		iconType = {
+			name = "clue_icon"
+			quadTextureSprite = "GFX_log_clue"
+			position = { x = 313 y = 17 }
+		}
+
+		instantTextBoxType = {
+			name = "clue_text"
+			font = "cg_16b"
+			position = { x = 360 y = 23 }
+			text = "+2"
+			maxWidth = 53
+			maxHeight = 40
+			fixedSize = yes
+			format = left
+		}
+	}
+}

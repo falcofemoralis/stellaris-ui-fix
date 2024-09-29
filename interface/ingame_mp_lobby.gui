@@ -1,0 +1,610 @@
+guiTypes = {
+
+	positionType = {
+		name = "mp_chat_input_stt_off_size"
+		position = { x = 495 y = 27 }
+	}
+
+	positionType = {
+		name = "mp_chat_input_stt_on_size"
+		position = { x = 400 y = 27 }
+	}
+
+	positionType = {
+		name = "mp_chat_input_bkg_stt_off_size"
+		position = { x = 521 y = 45 }
+	}
+
+	positionType = {
+		name = "mp_chat_input_bkg_stt_on_size"
+		position = { x = 413 y = 45 }
+	}
+
+	containerWindowType = {
+
+		name = "ingame_mp_lobby"
+		size = { width = 627 height = 853 }
+		
+		show_position = { x = 47 y = -53 }
+		hide_position = { x = -747 y = -53 }
+		orientation = lower_left
+		origo = lower_left
+		
+		animation_time = 200
+		animation_type = decelerated
+		
+		containerWindowType = {
+			name = "content"
+			size = { width = 627 height = 800 }
+			
+			background = {
+				name = "customization_species_background"
+				spriteType = "GFX_tile_outliner_bg"
+			}
+			
+			# Header
+			iconType = {
+				name = "hex_bg"
+				spriteType = "GFX_hex_bg"
+				position = { x = 0 y = -20 }
+				alwaysTransparent = yes
+			}
+			
+			iconType = {
+				name = "empire_header_line"
+				quadTextureSprite = "GFX_line"
+				position = { x = 8 y = 35 }
+			}
+			
+			instantTextBoxType = {
+				name = "heading"
+				font = "malgun_goth_24"
+				text = "MULTIPLAYER_LOBBY"
+				position = { x = 29 y = 11 }
+				maxWidth = 224
+				maxHeight = 53
+				fixedSize = yes
+				format = left
+				alwaysTransparent = yes
+			}
+			
+			# Chat Tab
+			containerWindowType = {
+				name = "chat_window"
+				
+				containerWindowType = {
+					name = "chat"
+					position = { x = 0 y = 67 }
+					size = { width = 569 height = 747 }
+					
+					containerWindowType = {
+						name = "chat_background_window"
+						size = { width = 627 height = 687 }
+						
+						background = {
+							name = "chat_background"
+							spriteType = "GFX_tiles_frame_light"
+						}
+					}
+					
+					overlappingElementsBoxType = {
+						name = "channels"
+						position = { x = -31 y = -67 }
+						size = { x = 533 y = 24 }
+						spacing = 1
+					}
+			
+					listboxType = {
+						name = "chat"
+						position = { x = 9 y = 13 }
+						size = { x = 587 y = 667 }
+						spacing = 3
+						scrollbartype = "standardlistbox_slider"
+						borderSize = { x = 0 y = 0 }
+						autohide_scrollbar = no
+					}
+			
+					containerWindowType = {
+						name = "chat_input_background"
+						size = { width = 413 height = 45 }
+						orientation = lower_left
+						position = { x = 0 y = -64 }
+						
+						background = {
+							name = "mp_game_setup_chat_window_background"
+							spriteType = "GFX_tiles_frame_light"
+							alwaysTransparent = yes
+						}
+					}
+
+					editBoxType = {
+						name = "chat_input"
+						position = { x = 11 y = 693 }
+						size = { x = 407 y = 33 }
+						font = "cg_16b"
+						cursor = { x=0 y= -2}	
+					}
+
+					editBoxType = {
+						name = "largefont_chat_input"
+						position = { x = 11 y = 688 }
+						size = { x = 407 y = 33 }
+						font = "malgun_goth_24"
+						cursor = { x=0 y= -2}	
+					}
+
+
+					containerWindowType = {
+						name = "stt_toggle_container"
+						position = { x = 397 y = 673 }
+						size = { width = 100 height = 32 }
+
+						buttonType = {
+							name = "stt_toggle"
+							size = { x = 100 y = 32 }
+							position = { x = 0 y = 0 }
+							spriteType = "GFX_button_75_24"
+							buttonFont = "cg_16b"
+							text = ""
+							font = "cg_16b"
+							oversound = mouse_over
+						}
+
+						iconType = {
+							name = "stt_toggle_icon"
+							spriteType = "GFX_cvaa_mic_icon"
+							position = { x = 36 y = 19 }
+							alwaysTransparent = yes
+						}
+
+						instantTextBoxType = {
+							name = "stt_toggle_text"
+							position = { x = 60 y = 20 }
+							font = "cg_16b"
+							text = "CHAT_CVAA_MIC_NAME"
+							maxWidth = 100
+							maxHeight = 27
+							format = left
+						}		
+					}
+
+					
+					buttonType = {
+						name = "send"
+						size = { x = 397 y = 47 }
+						position = { x = 504 y = -73 }
+						spriteType = "GFX_button_75_24"
+						buttonFont = "cg_16b"
+						text = "SEND"
+						font = "cg_16b"
+						orientation = LOWER_LEFT
+					}
+				}
+			}
+			
+			# Players
+			containerWindowType = {
+				name = "players_window"
+				
+				containerWindowType = {
+					name = "players"
+					position = { x = 7 y = 67 }
+					size = { width = 613 height = 720 }
+					
+					background = {
+						name = "players_background"
+						spriteType = "GFX_tiles_dark_area_cut_8"
+					}
+				
+					smoothListboxType = {
+						name = "players"
+						position = { x = 7 y = 7 }
+						backGround = ""
+						size = { x = 587 y = 707 } 
+						scrollbarType = "standardlistbox_slider"
+						borderSize = { x = 0 y = 0 }
+						autohide_scrollbar = no
+						spacing = -7
+					}
+				}
+			}
+			
+			# Settings Tab
+			containerWindowType = {
+				name = "settings_window"
+			}
+		}
+		
+		buttonType = {
+			name = "close"
+			quadTextureSprite = "GFX_close_button_galaxy"
+			position = { x= -57 y = 17  }
+			Orientation = "UPPER_RIGHT"
+			shortcut = "ESCAPE"
+			pdx_tooltip = "CLOSE_TITLE"
+			clicksound = "back_click"
+		}
+		
+		containerWindowType = {
+			name = "tabs"
+			position = { x = -27 y = -56 }
+			orientation = lower_left
+			
+			# Chat Tab
+			buttonType = {
+				name = "chat_tab"
+				quadTextureSprite = "GFX_tab_1_inactive"
+				position = { x = 0 y = 0 }
+				font = "cg_16b"
+				buttonText = "CHAT"
+				buttonFont = "cg_16b"
+				clicksound = "tab_click"
+				shortcut = "z"
+			}
+			
+			buttonType = {
+				name = "chat_tab_active"
+				quadTextureSprite = "GFX_tab_1_active"
+				position = { x = 0 y = 0 }
+				font = "cg_16b"
+				buttonText = "CHAT"
+				buttonFont = "cg_16b"
+				clicksound = "tab_click"
+				shortcut = "z"
+			}
+			
+			# Players Tab
+			buttonType = {
+				name = "players_tab"
+				quadTextureSprite = "GFX_tab_2_inactive"
+				position = { x = 147 y = 0 }
+				font = "cg_16b"
+				buttonText = "PLAYERS"
+				buttonFont = "cg_16b"
+				clicksound = "tab_click"
+				shortcut = "x"
+			}
+			
+			buttonType = {
+				name = "players_tab_active"
+				quadTextureSprite = "GFX_tab_2_active"
+				position = { x = 147 y = 0 }
+				font = "cg_16b"
+				buttonText = "PLAYERS"
+				buttonFont = "cg_16b"
+				clicksound = "tab_click"
+				shortcut = "x"
+			}
+			
+			# Settings Tab
+			buttonType = {
+				name = "settings_tab"
+				quadTextureSprite = "GFX_tab_2_inactive"
+				position = { x = 293 y = -13332 }
+				font = "cg_16b"
+				buttonText = "GAME_SETTINGS"
+				buttonFont = "cg_16b"
+				clicksound = "tab_click"
+				# shortcut = "x"
+			}
+			
+			buttonType = {
+				name = "settings_tab_active"
+				quadTextureSprite = "GFX_tab_2_active"
+				position = { x = 293 y = -13332 }
+				font = "cg_16b"
+				buttonText = "GAME_SETTINGS"
+				buttonFont = "cg_16b"
+				clicksound = "tab_click"
+				# shortcut = "x"
+			}
+		}
+	}
+	
+	containerWindowType = {
+		name = "ingame_mp_lobby_players_item"
+		size = { width = 587 height = 147 }
+		
+		background = {
+			name = "ingame_mp_lobby_human_item_background"
+			spriteType = "GFX_tiles_frame_light"
+		}
+		
+		buttonType = {
+			name = "flag"
+			quadTextureSprite = "GFX_empire_flag_64"
+			position = { x = 8 y = 8 }
+			scale = 0.7
+		}
+		
+		instantTextBoxType = {
+			name = "name"
+			position = { x = 80 y = 16 }
+			font = "cg_16b"
+			text_color_code = "E"
+			maxWidth = 333
+			maxHeight = 24
+		}
+		
+		instantTextBoxType = {
+			name = "country"
+			position = { x = 80 y = 40 }
+			font = "cg_16b"
+			maxWidth = 333
+			maxHeight = 24
+		}
+		
+		buttonType = {
+			name = "ban"
+			spriteType = "GFX_mp_gamesetup_ban"
+			position = { x = -76 y = 7 }
+			pdx_tooltip = "INGAMELOBBY_BAN"
+			orientation = UPPER_RIGHT
+		}
+		
+		buttonType = {
+			name = "kick"
+			spriteType = "GFX_mp_gamesetup_kick"
+			position = { x = -76 y = -76 }
+			pdx_tooltip = "INGAMELOBBY_KICK"
+			orientation = LOWER_RIGHT
+		}
+	}
+
+	containerWindowType = {
+		name = "largefont_ingame_mp_lobby_players_item"
+		size = { width = 587 height = 147 }
+		
+		background = {
+			name = "ingame_mp_lobby_human_item_background"
+			spriteType = "GFX_tiles_frame_light"
+		}
+		
+		buttonType = {
+			name = "flag"
+			quadTextureSprite = "GFX_empire_flag_64"
+			position = { x = 8 y = 8 }
+			scale = 0.7
+		}
+		
+		instantTextBoxType = {
+			name = "name"
+			position = { x = 80 y = 16 }
+			font = "malgun_goth_24"
+			text_color_code = "E"
+			maxWidth = 507
+			maxHeight = 29
+		}
+		
+		instantTextBoxType = {
+			name = "country"
+			position = { x = 80 y = 48 }
+			font = "malgun_goth_24"
+			maxWidth = 507
+			maxHeight = 3
+		}
+		
+		buttonType = {
+			name = "ban"
+			spriteType = "GFX_mp_gamesetup_ban"
+			position = { x = -76 y = 7 }
+			pdx_tooltip = "INGAMELOBBY_BAN"
+			orientation = UPPER_RIGHT
+		}
+		
+		buttonType = {
+			name = "kick"
+			spriteType = "GFX_mp_gamesetup_kick"
+			position = { x = -76 y = -76 }
+			pdx_tooltip = "INGAMELOBBY_KICK"
+			orientation = LOWER_RIGHT
+		}
+	}
+
+	containerWindowType = {
+		name = "ingame_mp_lobby_chat_item_window"
+		position = { x = 0 y = 0 }
+		size = { width = 600 height = 24 }
+
+		buttonType =	{
+			name = "highlight"
+			spriteType = "GFX_cvaa_speak_message_bg"
+			position = { x = 0 y = 11 }
+			size = { x = 600 y = 29 }
+			no_clicksound = yes
+		}
+
+		buttonType =	{
+			name = "select"
+			spriteType = "GFX_invisible"
+			position = { x = 0 y = 13 }
+			size = { x = 600 y = 24 }
+			no_clicksound = yes
+		}
+		
+		instantTextBoxType = {
+			position = { x = 7 y = 13 }
+			name = "text"
+			font = "cg_16b"
+			borderSize = { x = 0 y = 0 }	
+			maxWidth = 587
+			maxHeight = 24
+		}
+	}
+
+	containerWindowType = {
+		name = "icon_ingame_mp_lobby_chat_item_window"
+		position = { x = 0 y = 0 }
+		size = { width = 600 height = 24 }
+
+		buttonType =	{
+			name = "highlight"
+			spriteType = "GFX_cvaa_speak_message_bg"
+			position = { x = 0 y = 11 }
+			size = { x = 600 y = 29 }
+			no_clicksound = yes
+		}
+
+		buttonType =	{
+			name = "select"
+			spriteType = "GFX_invisible"
+			position = { x = 0 y = 13 }
+			size = { x = 600 y = 24 }
+			no_clicksound = yes
+		}
+		
+		instantTextBoxType = {
+			position = { x = 33 y = 13 }
+			name = "text"
+			font = "cg_16b"
+			borderSize = { x = 0 y = 0 }	
+			maxWidth = 560
+			maxHeight = 24
+		}
+
+		iconType = {
+			name = "icon"
+			position = { x = 0 y = 12 }
+			spriteType = "GFX_cvaa_speak_icon"
+			scale = 0.8
+		}
+
+	}
+
+
+	containerWindowType = {
+		name = "largefont_ingame_mp_lobby_chat_item_window"
+		position = { x = 0 y = 0 }
+		size = { width = 600 height = 29 }
+
+		buttonType =	{
+			name = "highlight"
+			spriteType = "GFX_cvaa_speak_message_bg"
+			position = { x = 0 y = 13 }
+			size = { x = 600 y = 35 }
+			no_clicksound = yes
+		}
+
+		buttonType =	{
+			name = "select"
+			spriteType = "GFX_invisible"
+			position = { x = 0 y = 13 }
+			size = { x = 600 y = 29 }
+			no_clicksound = yes
+		}
+		
+		instantTextBoxType = {
+			position = { x = 7 y = 13 }
+			name = "text"
+			font = "malgun_goth_24"
+			borderSize = { x = 0 y = 0 }	
+			maxWidth = 587
+			maxHeight = 29
+		}
+	}
+
+	containerWindowType = {
+		name = "icon_largefont_ingame_mp_lobby_chat_item_window"
+		position = { x = 0 y = 0 }
+		size = { width = 600 height = 29 }
+
+		buttonType =	{
+			name = "highlight"
+			spriteType = "GFX_cvaa_speak_message_bg"
+			position = { x = 0 y = 13 }
+			size = { x = 600 y = 35 }
+			no_clicksound = yes
+		}
+
+		buttonType =	{
+			name = "select"
+			spriteType = "GFX_invisible"
+			position = { x = 0 y = 13 }
+			size = { x = 600 y = 29 }
+			no_clicksound = yes
+		}
+		
+		instantTextBoxType = {
+			position = { x = 39 y = 13 }
+			name = "text"
+			font = "malgun_goth_24"
+			borderSize = { x = 0 y = 0 }	
+			maxWidth = 560
+			maxHeight = 29
+		}
+
+		iconType = {
+			name = "icon"
+			position = { x = 0 y = 13 }
+			spriteType = "GFX_cvaa_speak_icon"
+		}
+
+	}
+
+	containerWindowType = {
+		name = "ingame_mp_lobby_chat_channel_window"
+		position = { x = 0 y = 0 }	
+		size = { width = 133 height = 24 }
+
+		buttonType = {
+			name = "select"
+			quadTextureSprite = "GFX_channel_select"
+			position = { x = 36 y = 40 }
+		}
+
+		buttonType = {
+			name = "close"
+			quadTextureSprite = "GFX_button_no_inactive"
+			position = { x = 129 y = 45 }
+			orientation = "UPPER_LEFT"
+			buttonFont = "cg_16b"
+		}
+
+		instantTextBoxType = {
+			position = { x = 49 y = 47 }
+			name = "name"
+			font = "cg_16b"
+			borderSize = { x = 0 y = 0 }	
+			maxWidth = 133
+			maxHeight = 24
+			fixedSize = yes
+			alwaysTransparent = yes
+		}
+	}
+
+	containerWindowType = {
+		name = "persistent_chat"
+		position = { x = 64 y = 1067 }
+		size = { width = 1707 height = 267 }
+	}
+
+	containerWindowType = {
+		name = "persistent_chat_entry"
+		size = { width = 1707 height = 27 } # will be resized in code to accomodate long messages
+
+		instantTextBoxType = {
+			name = "message"
+			position = { x = 0 y = 0 }
+			font = "cg_16b"
+			borderSize = { x = 0 y = 0 }	
+			maxWidth = 1707
+			alwaysTransparent = yes
+		}
+	}
+
+	containerWindowType = {
+		name = "largefont_persistent_chat_entry"
+		size = { width = 1707 height = 29 } # will be resized in code to accomodate long messages
+
+		instantTextBoxType = {
+			name = "message"
+			position = { x = 0 y = 0 }
+			font = "malgun_goth_24"
+			borderSize = { x = 0 y = 0 }	
+			maxWidth = 1707
+			alwaysTransparent = yes
+		}
+	}
+
+	
+}

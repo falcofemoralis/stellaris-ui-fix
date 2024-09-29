@@ -1,0 +1,526 @@
+guiTypes = {
+	containerWindowType = {
+		name = "LoadGameScreen"
+		position = { x= -847 y = -473 }
+		size = { width=1693 height=947 }
+		orientation = center
+		
+		background = {
+			name ="background"
+			quadTextureSprite = "GFX_tile_large_bg_solid"
+		}
+		
+		iconType = {
+			name = "hex_bg"
+			spriteType = "GFX_hex_bg"
+			position = { x = -7 y = -7 }
+			alwaysTransparent = yes
+		}
+	
+		iconType = {
+			name = "empire_header_line"
+			quadTextureSprite = "GFX_line_long"
+			position = { x = 13 y = 47 }
+		}
+		
+		instantTextBoxType = {
+			name = "load_label"
+			font = "large_title_font"
+			position = { x= 35 y= 11 }
+			maxWidth = 400
+			maxHeight = 21
+			text = "MAIN_LOAD"
+		}	
+		
+		buttonType = {
+			name = "hide"
+			font = "malgun_goth_24"
+			spriteType = "GFX_standard_button_large_211_40"
+			buttonText = "CANCEL"
+			shortCut = "ESCAPE"
+			position = { x = -4 y = -84 }
+			orientation = LOWER_LEFT
+			actionShortCut = "cancel"
+			clicksound = back_click
+		}
+
+		buttonType = {
+			name = "delete_toggle"
+			spriteType = "GFX_gamesetup_delete"
+			position = { x = 307 y = -68 }
+			orientation = LOWER_LEFT
+			pdx_tooltip = "DELETE_SAVEGAME_TOGGLE"
+		}
+		
+		instantTextBoxType={
+			name = "nosaves_label"
+			font = "malgun_goth_24"
+			position = { x= -133 y= 0 }
+			maxWidth = 267
+			maxHeight = 21
+			text = "LOAD_GAME_NO_FILES"
+			alwaysTransparent = yes
+			orientation = "CENTER"
+		}
+		
+		instantTextBoxType={
+			name = "syncing_label"
+			font = "malgun_goth_24"
+			position = { x=373 y= -60 }
+			maxWidth = 267
+			maxHeight = 21
+			text = "LOAD_GAME_SYNC_FILES"
+			alwaysTransparent = yes
+			orientation = lower_left
+		}
+		
+		smoothListBoxType = {
+			name ="list"
+			position = { x=9 y=93 }
+			orientation = "UPPER_LEFT"
+			priority = 100
+			size = { x=823 y=771 }
+			borderSize = { x=0 y=0 }
+			scrollbartype = "standardlistbox_slider"
+			spacing = -7
+		}
+
+		containerWindowType = {
+			name = "selected_window"
+			size = { width = 827 height = 853 }
+			position = { x= 867 y = 87  }
+			orientation = upper_left 
+			moveable = no
+			clipping = yes
+			
+			containerWindowType = {
+				name = "background_box"
+				size = { width = 819 height = 783 }
+				position = { x = 0 y = 0 }
+				
+					background = {
+						name = "leader_frame"
+						spriteType = "GFX_tiles_frame_light"
+						alwaysTransparent = yes
+					}
+			}	
+
+			containerWindowType = {
+				name = "portrait_window"
+				size = { width = 213 height = 253 }
+				position = { x = 16 y = 13 }
+				orientation = upper_left 
+				moveable = no
+				clipping = yes
+
+				buttonType = {
+					name = "leader_type_bg"
+					quadTextureSprite = "GFX_leader_bg_ruler"
+					position = { x = 0 y = 3 }
+					scale = 0.5
+					alwaystransparent = yes
+				}
+
+				iconType = {
+					name = "portrait"
+					position = { x = -113 y = -27 }
+					spriteType = "GFX_portrait_character"
+					scale = 0.58
+					alwaystransparent = yes
+				}			
+			}
+
+			containerWindowType = {
+				name = "leader_frame_box"
+				size = { width = 227 height = 264 }
+				position = { x = 9 y = 9 }
+				
+					background = {
+						name = "leader_frame"
+						spriteType = "GFX_clean_frame_area"
+						alwaysTransparent = yes
+					}
+			}	
+			
+			instantTextBoxType={
+				name = "name"
+				font = "large_title_font"
+				position = { x= 245 y= 13 }
+				maxWidth = 413
+				maxHeight = 21
+				text = "NAME_OF_SAVEGAME"
+				alwaysTransparent = yes
+				fixedsize = yes
+			}
+			
+			instantTextBoxType={
+				name = "date"
+				font = "cg_16b"
+				position = { x= 247 y= 60 }
+				maxWidth = 267
+				maxHeight = 21
+				text = "1337.11.11"
+				alwaysTransparent = yes
+				text_color_code = "E"
+			}
+			
+			iconType = {
+				name ="fleets_icon"
+				spriteType = "GFX_ship_class_medium"
+				position = { x= 237 y = 87 }
+				frame = 3
+			}
+			
+			instantTextBoxType={
+				name = "fleets"
+				font = "malgun_goth_24"
+				position = { x= 287 y= 93 }
+				maxWidth = 73
+				maxHeight = 27
+				text = "70"
+			}
+			
+			iconType = {
+				name ="planets_icon"
+				spriteType = "GFX_ship_class_medium"
+				position = { x= 367 y = 87 }
+				frame = 5
+			}
+
+			instantTextBoxType={
+				name = "planets"
+				font = "malgun_goth_24"
+				position = { x= 420 y= 93 }
+				maxWidth = 73
+				maxHeight = 27
+				text = "33"
+			}
+
+			iconType = {
+				name = "flag"
+				spriteType = "GFX_empire_flag_128"
+				position = { x = 643 y = -7 }
+				alwaysTransparent = yes
+				orientation = "UPPER_LEFT"
+				#scale = 0.9
+			}
+
+			instantTextBoxType={
+				name = "saves_label"
+				font = "malgun_goth_24"
+				position = { x= 23 y= 297 }
+				maxWidth = 267
+				maxHeight = 21
+				text = "LOAD_GAME_SELECTED_SAVES"
+				alwaysTransparent = yes
+			}	
+			
+			smoothListBoxType = {
+				name ="list"
+				position = { x=11 y=333 }
+				orientation = "UPPER_LEFT"
+				priority = 100
+				size = { x=773 y=437 }
+				borderSize = { x=0 y=0 }
+				scrollbartype = "standardlistbox_slider"
+				spacing = -5
+			}	
+
+			buttonType = {
+				name = "load_selected"
+				quadTextureSprite = "GFX_standard_button_large_211_40"
+				position = { x = 512 y = 776 }
+				buttonFont = "malgun_goth_24"
+				buttonText = "LOAD_SELECTED_SAVE"
+				shortcut = "RETURN"
+				clicksound = confirm_click
+			}
+		}
+	}
+
+	containerWindowType = {
+		name = "LoadGameSessionEntry"
+		position = { x = 0 y = 0 }
+		size = { width = 827 height = 136 }
+		orientation = upper_left
+		clipping = yes
+
+		buttonType = {
+			name = "select"
+			quadTextureSprite = "GFX_tiles_frame_light"
+			size = { x = 827 y = 136 }
+			position = { x = 0 y = -7 }
+			clicksound = "outliner_click_tab"
+			oversound = no_sound
+		}
+
+		containerWindowType = {
+			name = "selected_overlay"
+			size = { width = 827 height = 136 }
+			position = { x = 0 y = -7 }
+			background = {
+				name = "selected_bg"
+				spriteType = "GFX_glow_tile_orange"
+				alwaysTransparent = yes
+			}
+		}
+
+		containerWindowType = {
+			name = "portrait_window"
+			size = { width = 99 height = 117 }
+			position = { x = 9 y = 1 }
+			orientation = upper_left 
+			moveable = no
+			clipping = yes
+
+			buttonType = {
+				name = "leader_type_bg"
+				quadTextureSprite = "GFX_leader_bg_ruler"
+				position = { x = 0 y = 3 }
+				scale = 0.23
+				alwaystransparent = yes
+			}		
+			
+			iconType = {
+				name = "portrait"
+				position = { x = -53 y = -13 }
+				spriteType = "GFX_portrait_character"
+				scale = 0.27
+				alwaystransparent = yes
+			}		
+		}
+
+		containerWindowType = {
+			name = "leader_frame_box"
+			size = { width = 111 height = 128 }
+			position = { x = 4 y = -3 }
+			
+			background = {
+				name = "leader_frame"
+				spriteType = "GFX_clean_frame_area"
+				alwaysTransparent = yes
+			}
+		}		
+		
+		instantTextBoxType={
+			name = "name"
+			font = "malgun_goth_24"
+			position = { x= 180 y= 7 }
+			maxWidth = 680
+			maxHeight = 21
+			fixedSize = yes
+			text = ""
+			alwaysTransparent = yes
+		}
+		
+		instantTextBoxType={
+			name = "date"
+			font = "cg_16b"
+			position = { x= 180 y= 40 }
+			maxWidth = 133
+			maxHeight = 21
+			text = ""
+			alwaysTransparent = yes
+			text_color_code = "E"
+		}
+		
+		instantTextBoxType={
+			name = "save_name"
+			font = "cg_16b"
+			position = { x= -340 y= 40 }
+			maxWidth = 320
+			maxHeight = 21
+			text = ""
+			#alwaysTransparent = yes
+			#vertical_alignment = bottom
+			fixedsize = yes
+			Orientation = "UPPER_RIGHT"
+			format = right
+		}
+				
+		iconType = {
+			name = "flag"
+			spriteType = "GFX_empire_flag_64"
+			orientation = "UPPER_LEFT"
+			position = { x = 107 y = 1 }
+			alwaysTransparent = yes
+			scale = 0.75
+		}
+
+		iconType = {
+			name = "cloud_file"
+			spriteType = "GFX_cloud_file"
+			Orientation = "LOWER_LEFT"
+			position = { x = 776 y = -127 }
+			pdx_tooltip = "CLOUD_SAVE"
+			tooltip_mode_enabled = yes
+		}
+
+		iconType = {
+			name = "ironman_icon"
+			spriteType = "GFX_ironman_icon"
+			Orientation = "LOWER_LEFT"
+			position = { x = 127 y = -67 }
+			tooltip_mode_enabled = yes
+		}		
+
+		iconType = {
+			name = "incompatible_save"
+			spriteType = "GFX_incompatible_save_icon"
+			Orientation = "LOWER_LEFT"
+			position = { x = 736 y = -129 }
+			tooltip_mode_enabled = yes
+		}
+
+		buttonType = {
+			name = "load_latest"
+			quadTextureSprite = "GFX_button_animated_265_34"
+			position = { x= -387 y = -85 }
+			orientation = "LOWER_RIGHT"
+			buttonFont = "cg_16b"
+			buttonText = "LOAD_LAST_SAVED"
+		}
+	
+		#iconType = {
+		#	name ="preview"
+		#	spriteType = "GFX_game_preview"
+		#	position = { x= 607 y = 15 }
+		#	alwaysTransparent = yes
+		#}
+		
+		buttonType = {
+			name = "delete"
+			quadTextureSprite = "GFX_fleetview_delete"
+			position = { x = -63 y = -69 }
+			orientation = "LOWER_RIGHT"
+			pdx_tooltip = "DELETE_SAVEGAME"
+		}
+	}
+
+	containerWindowType = {
+		name = "LoadSaveGameEntry"
+		position = { x= 0 y = 0 }
+		size = { width=775 height=77 }
+		orientation = center
+		
+		buttonType = {
+			name = "select"
+			quadTextureSprite = "GFX_tiles_frame_light"
+			position = { x= 0 y = 0 }
+			size = { x=775 y=77 }
+			clicksound = "select_click"
+			oversound = no_sound
+
+		}
+
+		containerWindowType = {
+			name = "selected_overlay"
+			size = { width = 775 height = 77 }
+			position = { x = 0 y = 0 } 
+			background = {
+				name = "selected_bg"
+				spriteType = "GFX_glow_tile_orange"
+				alwaysTransparent = yes
+			}
+		}
+
+		instantTextBoxType={
+			name = "name"
+			font = "cg_16b"
+			position = { x = 16 y = 13 }
+			maxWidth = 320
+			maxHeight = 13
+			text = ""
+			text_color_code = "E"
+			fixedsize = yes
+		}
+		
+		iconType = {
+			name ="fleets_icon"
+			spriteType = "GFX_ship_class_small"
+			position = { x= 11 y = 33 }
+			frame = 3
+		}
+		
+		instantTextBoxType={
+			name = "fleets"
+			font = "cg_16b"
+			position = { x = 47 y = 40 }
+			maxWidth = 53
+			maxHeight = 27
+			text = "" # amount set in code
+		}
+		
+		iconType = {
+			name ="planets_icon"
+			spriteType = "GFX_ship_class_small"
+			position = { x = 107 y = 32 }
+			frame = 5
+		}
+
+		instantTextBoxType={
+			name = "planets"
+			font = "cg_16b"
+			position = { x = 147 y = 40 }
+			maxWidth = 53
+			maxHeight = 27
+			text = "" # amount set in code
+		}
+
+		iconType = {
+			name = "ironman_icon"
+			spriteType = "GFX_ironman_icon"
+			Orientation = "UPPER_RIGHT"
+			position = { x = -173 y = 13 }
+			tooltip_mode_enabled = yes
+		}
+
+		iconType = {
+			name = "incompatible_save"
+			spriteType = "GFX_incompatible_save_icon"
+			Orientation = "UPPER_RIGHT"
+			position = { x = -136 y = 24 }
+			tooltip_mode_enabled = yes
+		}
+
+		iconType = {
+			name = "cloud_file"
+			spriteType = "GFX_cloud_file"
+			Orientation = "UPPER_RIGHT"	
+			position = { x = -97 y = 27 }
+			tooltip_mode_enabled = yes
+		}
+
+		instantTextBoxType={
+			name = "date"
+			font = "cg_16b"
+			position = { x = -293 y = 13 }
+			maxWidth = 107
+			maxHeight = 27
+			text = "xxxx.xx.xx"
+			orientation = "UPPER_RIGHT"
+			format = right
+			text_color_code = "E"
+		}
+
+		instantTextBoxType={
+			name = "filename"
+			font = "cg_16b"
+			position = { x = -453 y = 40 }
+			maxWidth = 267
+			maxHeight = 27
+			text = "xxxx.sav"
+			orientation = "UPPER_RIGHT"
+			format = right
+			fixedsize = yes
+		}
+
+		buttonType = {
+			name = "delete"
+			quadTextureSprite = "GFX_fleetview_delete"
+			position = { x = -64 y = 13 }
+			orientation = "UPPER_RIGHT"
+			pdx_tooltip = "DELETE_SAVEGAME"
+		}
+	}
+}

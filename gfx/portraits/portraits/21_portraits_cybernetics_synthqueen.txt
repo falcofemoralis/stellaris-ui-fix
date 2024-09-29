@@ -1,0 +1,114 @@
+##############################################################
+###	PORTRAITS SETTINGS
+###
+### Which portraits are used is set in
+### common\species_classes\00_species_classes.txt
+###
+###	This file configures how portraits and planet backgrounds are built.
+###	Default position orientation is lower left.
+##############################################################
+
+############################
+
+portraits = {
+	synth_queen = {	entity = "synthqueen_portrait_entity" clothes_selector = "no_texture" attachment_selector = "no_texture"	greeting_sound = "tox_portrait_01"
+		character_textures = {
+			"gfx/models/portraits/synthqueen/synthqueen_portrait_green.dds"
+		}
+
+		custom_close_up_position_offset = { x = 0 y = 160 }
+		custom_close_up_scale = 1.5
+		custom_mid_close_up_position_offset = { x = 0 y = 0 }
+		custom_mid_close_up_scale = 0.85
+	}
+	cetana_mammalian = {	entity = "synthqueen_portrait_entity" clothes_selector = "no_texture" attachment_selector = "no_texture"	greeting_sound = "tox_portrait_01"
+		character_textures = {
+			"gfx/models/portraits/synthqueen/synthqueen_portrait_mammalian.dds"
+		}
+
+		custom_close_up_position_offset = { x = 0 y = 160 }
+		custom_close_up_scale = 1.5
+		custom_mid_close_up_position_offset = { x = 0 y = 0 }
+		custom_mid_close_up_scale = 0.85
+	}
+	cetana_reptilian = {	entity = "synthqueen_portrait_entity" clothes_selector = "no_texture" attachment_selector = "no_texture"	greeting_sound = "tox_portrait_01"
+		character_textures = {
+			"gfx/models/portraits/synthqueen/synthqueen_portrait_reptilian.dds"
+		}
+
+		custom_close_up_position_offset = { x = 0 y = 160 }
+		custom_close_up_scale = 1.5
+		custom_mid_close_up_position_offset = { x = 0 y = 0 }
+		custom_mid_close_up_scale = 0.85
+	}
+	cetana_aquatic = {	entity = "synthqueen_portrait_entity" clothes_selector = "no_texture" attachment_selector = "no_texture"	greeting_sound = "tox_portrait_01"
+		character_textures = {
+			"gfx/models/portraits/synthqueen/synthqueen_portrait_aquatic.dds"
+		}
+
+		custom_close_up_position_offset = { x = 0 y = 160 }
+		custom_close_up_scale = 1.5
+		custom_mid_close_up_position_offset = { x = 0 y = 0 }
+		custom_mid_close_up_scale = 0.85
+	}
+	cetana_lithoid = {	entity = "synthqueen_portrait_entity" clothes_selector = "no_texture" attachment_selector = "no_texture"	greeting_sound = "tox_portrait_01"
+		character_textures = {
+			"gfx/models/portraits/synthqueen/synthqueen_portrait_lithoid.dds"
+		}
+
+		custom_close_up_position_offset = { x = 0 y = 160 }
+		custom_close_up_scale = 1.5
+		custom_mid_close_up_position_offset = { x = 0 y = 0 }
+		custom_mid_close_up_scale = 0.85
+	}
+	cetana_plantoid = {	entity = "synthqueen_portrait_entity" clothes_selector = "no_texture" attachment_selector = "no_texture"	greeting_sound = "tox_portrait_01"
+		character_textures = {
+			"gfx/models/portraits/synthqueen/synthqueen_portrait_plantoid.dds"
+		}
+
+		custom_close_up_position_offset = { x = 0 y = 160 }
+		custom_close_up_scale = 1.5
+		custom_mid_close_up_position_offset = { x = 0 y = 0 }
+		custom_mid_close_up_scale = 0.85
+	}
+	cetana_molluscoid = {	entity = "synthqueen_portrait_entity" clothes_selector = "no_texture" attachment_selector = "no_texture"	greeting_sound = "tox_portrait_01"
+		character_textures = {
+			"gfx/models/portraits/synthqueen/synthqueen_portrait_molluscoid.dds"
+		}
+
+		custom_close_up_position_offset = { x = 0 y = 160 }
+		custom_close_up_scale = 1.5
+		custom_mid_close_up_position_offset = { x = 0 y = 0 }
+		custom_mid_close_up_scale = 0.85
+	}
+	cetana_avian = {	entity = "synthqueen_portrait_entity" clothes_selector = "no_texture" attachment_selector = "no_texture"	greeting_sound = "tox_portrait_01"
+		character_textures = {
+			"gfx/models/portraits/synthqueen/synthqueen_portrait_avian.dds"
+		}
+
+		custom_close_up_position_offset = { x = 0 y = 160 }
+		custom_close_up_scale = 1.5
+		custom_mid_close_up_position_offset = { x = 0 y = 0 }
+		custom_mid_close_up_scale = 0.85
+	}
+	cetana_empty = {	entity = "synthqueen_portrait_entity" clothes_selector = "no_texture" attachment_selector = "no_texture"	greeting_sound = "tox_portrait_01"
+		character_textures = {
+			"gfx/models/portraits/synthqueen/synthqueen_portrait_empty.dds"
+		}
+
+		custom_close_up_position_offset = { x = 0 y = 160 }
+		custom_close_up_scale = 1.5
+		custom_mid_close_up_position_offset = { x = 0 y = 0 }
+		custom_mid_close_up_scale = 0.85
+	}
+	cetana_robot = {	entity = "synthqueen_portrait_entity" clothes_selector = "no_texture" attachment_selector = "no_texture"	greeting_sound = "tox_portrait_01"
+		character_textures = {
+			"gfx/models/portraits/synthqueen/synthqueen_portrait_robot.dds"
+		}
+
+		custom_close_up_position_offset = { x = 0 y = 160 }
+		custom_close_up_scale = 1.5
+		custom_mid_close_up_position_offset = { x = 0 y = 0 }
+		custom_mid_close_up_scale = 0.85
+	}
+}

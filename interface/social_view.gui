@@ -1,0 +1,837 @@
+guiTypes = {
+	containerWindowType = {
+		name = "social_friends_list_item"
+		position = { x=0 y=0 }	
+		size = { width=548 height=80 }
+		orientation = upper_left
+			
+		#iconType = {
+		#	name = "icon"
+		#	position = { x = 24 y = 24 }
+		#	spriteType = "GFX_ethics_xenophile"
+		#	alwaystransparent = yes
+		#}
+		
+		instantTextBoxType = {
+			name = "name"
+			position = { x = 13 y = 7 }
+			font = "malgun_goth_24"
+			text = "player name"
+			orientation = upper_left
+			truncate = yes
+			multiline = no
+			maxWidth = 387
+		}
+		
+		instantTextBoxType = {
+			name = "detailed_status"
+			position = { x = 133 y = 40 }
+			font = "cg_16b"
+			text = "Playing Stellaris"
+			truncate = yes
+			multiline = no
+			maxWidth = 300
+			orientation = upper_left
+		}
+		
+		iconType = {
+			name = "status"
+			position = { x = 12 y = 40			}
+			spriteType = "GFX_social_friend_icon"
+		}
+		
+		instantTextBoxType = {
+			name = "status_text"
+			position = { x = 36 y = 40 }
+			font = "cg_16b"
+			text = "-"
+			orientation = upper_left
+		}
+		
+		buttonType = {
+			name = "friend_button"
+			position = { x = -13 y = -11 }
+			#spriteType = "GFX_empty_green_frame"
+			spriteType = "GFX_social_friendlist_button"
+			#size = { x = 380 y = 85 }
+			orientation = upper_left
+		}
+		
+		iconType = {
+			name = "new_message"
+			position = { x = 333 y = 27 }
+			spriteType = "GFX_new_message_icon"
+			pdx_tooltip = "SOCIAL_NEW_MESSAGE"
+		}
+	}
+	
+	containerWindowType = {
+		name = "social_friendrequest_ingoing_list_item"
+		position = { x=0 y=0 }	
+		size = { width=548 height=80 }
+		orientation = upper_left
+		
+		instantTextBoxType = {
+			name = "name"
+			position = { x = 13 y = 24 }
+			font = "malgun_goth_24"
+			text = "player name"
+			orientation = upper_left
+			truncate = yes
+			multiline = no
+			maxWidth = 300
+		}
+		
+		buttonType = {
+			name = "accept"
+			position = { x = 307 y = 29 }
+			spriteType = "GFX_social_accept_button"
+			buttonText = ""
+			buttonFont = "cg_16b"
+		}
+		
+		buttonType = {
+			name = "deny"
+			position = { x = 344 y = 29 }
+			spriteType = "GFX_social_deny_button"
+			buttonText = ""
+			buttonFont = "cg_16b"
+		}
+	}
+	
+	containerWindowType = {
+		name = "social_addfriend_list_item"
+		position = { x=0 y=0 }	
+		size = { width=548 height=80 }
+		orientation = upper_left
+			
+		instantTextBoxType = {
+			name = "name"
+			position = { x = 7 y = 7 }
+			font = "malgun_goth_24"
+			text = "player name"
+			orientation = upper_left
+			truncate = yes
+			multiline = no
+			maxWidth = 337
+			alwaysTransparent = yes
+		}
+		
+		iconType = {
+			name = "friend"
+			position = { x = -191 y = 15 }
+			spriteType = "GFX_text_pops"
+			orientation = upper_right
+			alwaysTransparent = yes
+		}
+
+		buttonType = {
+			name = "profile_button"
+			position = { x = -13 y = -11 }
+			spriteType = "GFX_social_friend_button"
+			size = { x = 380 y = 85 }
+			orientation = upper_left
+		}
+	}
+	
+	containerWindowType = {
+		name = "social_chat_window_header_self"
+		position = { x = 0 y = 0 }
+		size = { width=397 height=43 }
+		orientation = upper_left
+	
+		background = {
+			name = "background"
+			spriteType = "GFX_social_chat_self"
+		}
+		
+		instantTextBoxType = {
+			name = "name"
+			position = { x = 11 y = 3 }
+			font = "malgun_goth_24"
+			text = "name"
+			text_color_code = "E"
+			orientation = upper_left
+			truncate = yes
+			multiline = no
+			maxWidth = 387
+		}
+	}
+	
+	containerWindowType = {
+		name = "social_chat_window_header_other"
+		position = { x = 0 y = 0 }
+		size = { width=397 height=43 }
+		orientation = upper_left
+	
+		background = {
+			name = "background"
+			spriteType = "GFX_social_chat_other"
+			alwaystransparent = yes
+		}
+		
+		instantTextBoxType = {
+			name = "name"
+			position = { x = 11 y = 3 }
+			font = "malgun_goth_24"
+			text = "name"
+			text_color_code = "E"
+			orientation = upper_left
+			alwaystransparent = yes
+			truncate = yes
+			multiline = no
+			maxWidth = 387
+		}
+	}
+	
+	containerWindowType = {
+		name = "social_chat_window_text_self"
+		position = { x = 21 y = 0 }
+		size = { width=397 height=27 }
+		orientation = upper_left
+	
+		background = {
+			name = "background"
+			spriteType = "GFX_social_chat_self"
+			alwaystransparent = yes
+		}
+		
+		iconType = {
+			name = "bullet"
+			position = { x = 21 y = 8 }
+			spriteType = "GFX_social_chat_bullet"
+			alwaystransparent = yes
+		}
+		
+		instantTextBoxType = {
+			name = "text"
+			position = { x = 37 y = 0 }
+			maxWidth = 347
+			maxHeight = 43
+			font = "cg_16b"
+			text = "some chat text here"
+			orientation = upper_left
+			alwaystransparent = yes
+		}
+		
+		iconType = {
+			name = "message_status"
+			position = { x = -40 y = 8 }
+			spriteType = "GFX_message_status"
+			orientation = upper_right
+			frame = 3
+		}
+	}
+	
+	containerWindowType = {
+		name = "social_chat_window_text_other"
+		position = { x = 43 y = 0 }
+		size = { width=397 height=27 }
+		orientation = upper_left
+	
+		background = {
+			name = "background"
+			spriteType = "GFX_social_chat_other"
+			alwaystransparent = yes
+		}
+		
+		iconType = {
+			name = "bullet"
+			position = { x = 21 y = 8 }
+			spriteType = "GFX_social_chat_bullet"
+			alwaystransparent = yes
+		}
+			
+		instantTextBoxType = {
+			name = "text"
+			position = { x = 37 y = 0 }
+			maxWidth = 347
+			maxHeight = 43
+			font = "cg_16b"
+			text = "some chat text here"
+			orientation = upper_left
+			alwaystransparent = yes
+		}
+	}
+	
+	containerWindowType = {
+		name = "social_chat_window_invite"
+		position = { x = 43 y = 0 }
+		size = { width=397 height=29 }
+		orientation = upper_left
+	
+		background = {
+			name = "background"
+			spriteType = "GFX_social_chat_other"
+			alwaystransparent = yes
+		}
+		
+		iconType = {
+			name = "bullet"
+			position = { x = 21 y = 8 }
+			spriteType = "GFX_social_chat_bullet"
+			alwaystransparent = yes
+		}
+			
+		instantTextBoxType = {
+			name = "text"
+			position = { x = 37 y = 0 }
+			maxWidth = 307
+			maxHeight = 43
+			font = "cg_16b"
+			text = "some chat text here"
+			orientation = upper_left
+			alwaystransparent = yes
+		}
+		
+		buttonType = {
+			name = "accept"
+			position = { x = 307 y = 0 }
+			spriteType = "GFX_social_accept_button"
+			buttonText = ""
+			buttonFont = "cg_16b"
+		}
+		
+		buttonType = {
+			name = "decline"
+			position = { x = 344 y = 0 }
+			spriteType = "GFX_social_deny_button"
+			buttonText = ""
+			buttonFont = "cg_16b"
+		}
+	}
+			
+	containerWindowType = {
+		name = "social_chat_window"
+		position = { x=1200 y=341 }	
+		size = { width=427 height=597 }
+		moveable = yes
+		
+		background = {
+			name = "background"
+			quadTextureSprite = "GFX_tile_outliner_bg"
+		}
+		
+		instantTextBoxType = {
+			name = "title"
+			position = { x = 101 y = 11 }
+			font = "malgun_goth_24"
+			text = "player"
+			orientation = upper_left
+			alwaystransparent = yes
+			text_color_code = "H"
+			truncate = yes
+			multiline = no
+			maxWidth = 300
+		}
+	
+		buttonType = {
+			name = "close"
+			quadTextureSprite = "GFX_close"
+			position = { x = -55 y = 17 }
+			Orientation = "UPPER_RIGHT"
+			shortCut = "ESCAPE"
+			pdx_tooltip = "CLOSE_TITLE"
+			clicksound = "back_click"
+		}
+		
+		iconType = {
+			name = "social_friends_list_icon"
+			position = { x = 11 y = 11 }
+			spriteType = "GFX_combat_stat_damage_explosive"
+			alwaystransparent = yes
+		}
+		
+		containerWindowType = {
+			name = "chat_history_frame"
+			position = { x=7 y=91 }	
+			size = { width=413 height=408 }
+			orientation = upper_left
+			
+			background = {
+				name = "picture_background"
+				spriteType = "GFX_empty_green_frame"
+				alwaystransparent = yes
+			}
+			
+			smoothListBoxType = {
+				name = "list"
+				position = { x = 8 y= 8 }
+				orientation = upper_left
+				#priority = 100
+				size = { x = 413 y = 392 }
+				borderSize = { x=0 y=0 }
+				scrollbartype = "standardlistbox_slider"
+				spacing = 0
+				wraparound = no
+			}
+		}
+		
+		containerWindowType = {
+			name = "chat_text_frame"
+			size = { width = 400 height = 91 }
+			position = { x = 13 y = 499 }
+			
+			background = {
+				name = "black"
+				spriteType = "GFX_tiles_dark_area_cut_8"
+				alwaysTransparent = yes
+			}
+			
+			editBoxType = {
+				name = "chatbox"
+				position = { x = 5 y = 3 }
+				size = { x = 395 y = 88 }
+				font = "cg_16b"
+				allow_multi_line = yes
+				wrap_text = yes
+				max_characters = 512
+			}
+		}
+	}
+	
+	containerWindowType = {
+		name = "social_input_dialog"
+		position = { x=21 y=21 }	
+		#Orientation = "CENTER_MIDDLE"
+		size = { width=683 height=213 }
+		moveable = yes
+		
+		background = {
+			name = "background"
+			quadTextureSprite = "GFX_tile_outliner_bg"
+		}
+		
+		instantTextBoxType = {
+			name = "title"
+			position = { x = 21 y = 11 }
+			font = "malgun_goth_24"
+			text = ""
+			orientation = upper_left
+		}
+		
+		containerWindowType = {
+			name = "text_frame"
+			size = { width = 647 height = 43 }
+			position = { x = 19 y = 75 }
+			orientation = upper_left
+			
+			background = {
+				name = "black"
+				spriteType = "GFX_tiles_dark_area_cut_8"
+				alwaysTransparent = yes
+			}
+		}
+	
+		editBoxType = {
+			name = "editbox_input"
+			position = { x = 32 y = 85 }
+			size = { x = 633 y = 88 }
+			font = "cg_16b"
+			orientation = upper_left
+			allow_multi_line = no
+		}
+	
+		buttonType = {
+			name = "button_ok"
+			position = { x = -432 y = -80 }
+			spriteType = "GFX_standard_button_142_34_button"
+			buttonText = "SOCIAl_INPUT_WINDOW_OK"
+			orientation = lower_right
+			buttonFont = "cg_16b"
+		}
+		
+		buttonType = {
+			name = "button_cancel"
+			position = { x = -224 y = -80 }
+			spriteType = "GFX_standard_button_142_34_button"
+			buttonText = "SOCIAl_INPUT_WINDOW_CANCEL"
+			orientation = lower_right
+			buttonFont = "cg_16b"
+		}
+	}
+	
+	containerWindowType = {
+		name = "social_message_dialog"
+		position = { x=21 y=21 }	
+		#Orientation = "CENTER_MIDDLE"
+		size = { width=683 height=213 }
+		moveable = yes
+		
+		background = {
+			name = "background"
+			quadTextureSprite = "GFX_tile_outliner_bg"
+		}
+		
+		instantTextBoxType = {
+			name = "title"
+			position = { x = 21 y = 11 }
+			font = "malgun_goth_24"
+			text = ""
+			orientation = upper_left
+		}
+		
+		instantTextBoxType = {
+			name = "message"
+			position = { x = 21 y = 85 }
+			font = "cg_16b"
+			text = ""
+			orientation = upper_left
+		}
+	
+		buttonType = {
+			name = "button_ok"
+			position = { x = -432 y = -80 }
+			spriteType = "GFX_standard_button_142_34_button"
+			buttonText = "SOCIAl_INPUT_WINDOW_OK"
+			orientation = lower_right
+			buttonFont = "cg_16b"
+		}
+	}
+	
+	containerWindowType = {
+		name = "social_addfriend_window"
+		position = { x=709 y=341 }	
+		size = { width=427 height=535 }
+		moveable = yes
+		
+		background = {
+			name = "background"
+			quadTextureSprite = "GFX_tile_outliner_bg"
+		}
+	
+		buttonType = {
+			name = "close"
+			quadTextureSprite = "GFX_close"
+			position = { x = -55 y = 17 }
+			Orientation = "UPPER_RIGHT"
+			shortCut = "ESCAPE"
+			pdx_tooltip = "CLOSE_TITLE"
+			clicksound = "back_click"
+		}
+		
+		instantTextBoxType = {
+			name = "title"
+			position = { x = 21 y = 11 }
+			font = "malgun_goth_24"
+			text = "SOCIAL_ADDFRIEND_WINDOW"
+			orientation = upper_left
+			text_color_code = "E"
+		}
+		
+		containerWindowType = {
+			name = "frame_search"
+			size = { width = 400 height = 43 }
+			position = { x = 13 y = 69 }
+			
+			background = {
+				name = "black"
+				spriteType = "GFX_tiles_dark_area_cut_8"
+				alwaysTransparent = yes
+			}
+		}
+	
+		editBoxType = {
+			name = "editbox_search"
+			position = { x = 21 y = 75 }
+			size = { x = 395 y = 43 }
+			font = "cg_16b"
+			max_characters = 70
+		}
+		
+		containerWindowType = {
+			name = "list_frame"
+			position = { x=7 y=115 }	
+			size = { width=413 height=412 }
+			orientation = upper_left
+			
+			background = {
+				name = "picture_background"
+				spriteType = "GFX_empty_green_frame"
+			}
+			
+			smoothListBoxType = {
+				name = "list"
+				position = { x = 11 y= 8 }
+				orientation = upper_left
+				#priority = 100
+				size = { x = 393 y = 477 }
+				borderSize = { x=0 y=0 }
+				scrollbartype = "standardlistbox_slider"
+				spacing = 0
+			}
+		}
+		
+		buttonType = {
+			name = "button_search"
+			position = { x = 373 y = 76 }
+			spriteType = "GFX_social_search"
+			buttonText = "SOCIAL_ADDFRIEND_WINDOW_SEARCH"
+		#	buttonFont = "cg_16b"
+		}
+	}
+	
+	containerWindowType = {
+		name = "social_friends_window"
+		position = { x=43 y=341 }	
+		size = { width=427 height=683 }
+		moveable = yes
+		
+		background = {
+			name = "background"
+			quadTextureSprite = "GFX_tile_outliner_bg"
+		}
+		
+		instantTextBoxType = {
+			name = "title"
+			position = { x = 96 y = 0 }
+			font = "malgun_goth_24"
+			text = ""
+			text_color_code = "H"
+			truncate = yes
+			multiline = no
+			maxWidth = 300
+			orientation = upper_left
+		}
+		
+		instantTextBoxType = {
+			name = "detailed_status"
+			position = { x = 96 y = 32 }
+			font = "cg_16b"
+			text = "Playing Stellaris"
+			truncate = yes
+			multiline = no
+			maxWidth = 300
+			orientation = upper_left
+		}
+		
+		buttonType = {
+			name = "status_button"
+			position = { x = 80 y = 40 }
+			spriteType = "GFX_button_150_24"
+			buttonText = "SOCIAL_STATUS"
+			buttonFont = "cg_16b"
+		}
+
+		iconType = {
+			name = "status"
+			position = { x = 101 y = 61 }
+			spriteType = "GFX_social_friend_icon"
+			alwaysTransparent = yes
+		}
+	
+		buttonType = {
+			name = "close"
+			quadTextureSprite = "GFX_close"
+			position = { x = -55 y = 17 }
+			Orientation = "UPPER_RIGHT"
+			shortCut = "ESCAPE"
+			pdx_tooltip = "CLOSE_TITLE"
+			clicksound = "back_click"
+		}
+		
+		buttonType = {
+			name = "add_button"
+			position = { x = 207 y = 608 }
+			spriteType = "GFX_standard_button_142_34_button"
+			buttonText = "SOCIAL_ADDFRIEND_WINDOW_ADD"
+			buttonFont = "cg_16b"
+		}
+		
+		iconType = {
+			name = "social_friends_list_icon"
+			position = { x = 11 y = 11 }
+			spriteType = "GFX_combat_stat_damage_explosive"
+			alwaystransparent = yes
+		}
+		
+		iconType = {
+			name = "social_friends_line"
+			position = { x = 8 y = 85 }
+			spriteType = "GFX_line_short"
+		}
+		
+		containerWindowType = {
+			name = "list_frame"
+			position = { x=7 y=103 }	
+			size = { width=413 height=517 }
+			orientation = upper_left
+			
+			background = {
+				name = "picture_background"
+				spriteType = "GFX_empty_green_frame"
+				#alwaystransparent = yes
+			}
+			
+			smoothListBoxType = {
+				name = "list"
+				position = { x = 11 y= 8 }
+				orientation = upper_left
+				#priority = 100
+				size = { x = 393 y = 501 }
+				borderSize = { x=0 y=0 }
+				scrollbartype = "standardlistbox_slider"
+				spacing = -13
+			}
+		}
+	}
+	
+	containerWindowType = {
+		name = "social_message_popup_window"
+		position = { x=43 y=-152 }	
+		size = { width=427 height=75 }
+		moveable = no
+		orientation = lower_left
+		
+		background = {
+			name = "background"
+			quadTextureSprite = "GFX_social_popup_background"
+		}
+		
+		instantTextBoxType = {
+			name = "from"
+			position = { x = 11 y = 5 }
+			maxWidth = 413
+			font = "malgun_goth_24"
+			text = ""
+			orientation = upper_left
+			text_color_code = "E"
+			truncate = yes
+			multiline = no
+			maxWidth = 387
+		}
+		
+		instantTextBoxType = {
+			name = "message"
+			position = { x = 11 y = 43 }
+			maxWidth = 413
+			maxHeight = 1
+			font = "cg_16b"
+			text = ""
+			truncate = yes
+			multiline = no
+			orientation = upper_left
+		}
+		
+		buttonType = {
+			name = "close"
+			quadTextureSprite = "GFX_close"
+			position = { x = -55 y = 17 }
+			Orientation = "UPPER_RIGHT"
+		}
+	}
+		
+	containerWindowType = {
+		name = "social_view"
+		position = { x=0 y=0 }	
+		size = { width=100% height=100% }
+		
+		containerWindowType = {
+			name = "social_friends_context_menu"
+			position = { x=733 y=667 }	
+			size = { width=200 height=100 }
+			moveable = no
+			
+			background = {
+				name = "background"
+				spriteType = "GFX_social_chat_other"
+			}
+			
+			buttonType = {
+				name = "invite_friend"
+				position = { x = -11 y = -11 }
+				spriteType = "GFX_standard_button_142_34_button"
+				buttonText = "SOCIAL_SEND_INVITE"
+				buttonFont = "cg_16b"
+			}
+			
+			buttonType = {
+				name = "join_friend"
+				position = { x = -11 y = -11 }
+				spriteType = "GFX_standard_button_142_34_button"
+				buttonText = "SOCIAL_SEND_JOIN"
+				buttonFont = "cg_16b"
+			}
+			
+			buttonType = {
+				name = "send_button"
+				position = { x = -11 y = -11 }
+				spriteType = "GFX_standard_button_142_34_button"
+				buttonText = "SOCIAL_SEND_MESSAGE"
+				buttonFont = "cg_16b"
+			}
+			
+			buttonType = {
+				name = "remove_button"
+				position = { x = -11 y = 33 }
+				spriteType = "GFX_standard_button_142_34_button"
+				buttonText = "SOCIAL_REMOVE_FRIEND"
+				buttonFont = "cg_16b"
+			}
+		}
+		
+		containerWindowType = {
+			name = "social_addfriend_context_menu"
+			position = { x=733 y=667 }	
+			size = { width=200 height=56 }
+			moveable = no
+			
+			background = {
+				name = "background"
+				spriteType = "GFX_social_chat_other"
+			}
+			
+			buttonType = {
+				name = "request_button"
+				position = { x = -11 y = -11 }
+				spriteType = "GFX_standard_button_142_34_button"
+				buttonText = "SOCIAL_SEND_FRIENDREQUEST"
+				buttonFont = "cg_16b"
+			}
+		}
+		
+		containerWindowType = {
+			name = "social_status_context_menu"
+			position = { x=733 y=667 }	
+			size = { width=200 height=235 }
+			moveable = no
+			
+			background = {
+				name = "background"
+				spriteType = "GFX_social_chat_other"
+			}
+				
+			buttonType = {
+				name = "available_button"
+				position = { x = -11 y = -11 }
+				spriteType = "GFX_standard_button_142_34_button"
+				buttonText = "SOCIAL_STATUS_AVAILABLE"
+				buttonFont = "cg_16b"
+			}
+			
+			buttonType = {
+				name = "away_button"
+				position = { x = -11 y = 33 }
+				spriteType = "GFX_standard_button_142_34_button"
+				buttonText = "SOCIAL_STATUS_AWAY"
+				buttonFont = "cg_16b"
+			}
+			
+			buttonType = {
+				name = "unavailable_button"
+				position = { x = -11 y = 77 }
+				spriteType = "GFX_standard_button_142_34_button"
+				buttonText = "SOCIAL_STATUS_UNAVAILABLE"
+				buttonFont = "cg_16b"
+			}
+			
+			buttonType = {
+				name = "do_not_disturb_button"
+				position = { x = -11 y = 123 }
+				spriteType = "GFX_standard_button_142_34_button"
+				buttonText = "SOCIAL_STATUS_DO_NOT_DISTURB"
+				buttonFont = "cg_16b"
+			}
+		}
+	}
+}

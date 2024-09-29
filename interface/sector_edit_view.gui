@@ -1,0 +1,178 @@
+guiTypes = {
+
+	containerWindowType = {
+		name = "sector_edit_view_gridbox_item"
+		size = { width = 413 height = 67 }
+
+		instantTextBoxType = {
+			name = "system_name"
+			position = { x = 0 y = 20 }
+			text = "SYSTEM NAME GOES HERE"
+			font = "malgun_goth_24"
+			maxWidth = 387
+			maxHeight = 27
+			fixedSize = yes
+			format = center
+		}
+
+		buttonType = {
+			name = "system_button"
+			spriteType = "GFX_button_animated_265_34"
+			position = { x = 0 y = 0 }
+			size = { x = 353 y = 45 }
+		}
+	}
+
+	containerWindowType = {
+		name = "sector_editor_collapsable_container"
+		size = { width = 413 height = 59 }
+
+		buttonType = {
+			name = "expand_button"
+			spriteType = "GFX_expand_row_long_button"
+			position = { x = 0 y = 0 }
+			size = { x = 413 y = 59 }
+			oversound = "no_sound"
+			clicksound = "select_click"
+			format = left
+			font = "cg_16b"
+			pdx_tooltip = "CLICK_TO_EXPAND"
+		}
+
+		buttonType = {
+			name = "unexpand_button"
+			spriteType = "GFX_unexpand_row_long_button"
+			position = { x = 0 y = 0 }
+			size = { x = 413 y = 59 }
+			oversound = "no_sound"
+			clicksound = "select_click"
+			format = left
+			font = "cg_16b"
+			pdx_tooltip = "CLICK_TO_COLLAPSE"
+		}
+
+		gridBoxType = {
+			name = "item_gridbox"
+			position = { x = 0 y = 53 }
+
+			slotSize = { width = 413 height = 67 }
+			max_slots_horizontal = 1
+			format = UPPER_LEFT
+
+			background = {
+				name = "background"
+				spriteType = "GFX_tiled_window_transparent"
+				position = { x = 0 y = 0 }
+				alwaystransparent = yes
+			}
+		}
+	}
+
+	containerWindowType = {
+		name = "sector_edit_view"
+
+		size = { width = 413 height = 733 } 
+		clipping = no
+
+		position = { x = -480 y = 153 }
+		hide_position = { x = -480 y = 153 } # Changed in code to center the window vertically
+		show_position = { x = 47 y = 153 } # Changed in code to center the window vertically
+
+		animation_type = decelerated
+		animation_time = 500.5
+
+		background = {
+			name = "background"
+			spriteType = "GFX_tile_outliner_bg"
+		}
+
+		iconType = {
+			name = "hex_background"
+			spriteType = "GFX_hex_bg"
+			position = { x = -11 y = -13 }
+			alwaysTransparent = yes
+		}
+
+		iconType = {
+			name = "header_line"
+			quadTextureSprite = "GFX_line_short"
+			position = { x = 8 y = 33 }
+			alwaystransparent = no
+		}
+
+		buttonType = {
+			name = "close_button"
+			quadTextureSprite = "GFX_close"
+			position = { x = -57 y = 19 }
+			orientation = upper_right
+			pdx_tooltip = "CLOSE_TITLE"
+			clicksound = "back_click"
+			shortcut = "ESCAPE"
+		}
+
+		iconType = {
+			name = "help_icon"
+			spriteType = "GFX_help_icon_circle"
+			position = { x = -97 y = 25 }
+			orientation = upper_right
+			pdx_tooltip = "SECTOR_EDITOR_HELP"
+		}
+
+		checkboxType = {
+			name = "auto_expand_checkbox"
+			quadTextureSprite = "GFX_checkbox_20_20_01"
+			position = { x = 9 y = 93 }
+			pdx_tooltip = "SECTOR_AUTO_EXPAND"
+		}
+
+		instantTextBoxType = {
+			name = "auto_expand_title"
+			position = { x = 51 y = 101 }
+			text = "SECTOR_EDITOR_AUTO_EXPAND_TEXT"
+			font = "cg_16b"
+			maxWidth = 280
+			maxHeight = 27
+			fixedSize = yes
+			pdx_tooltip = "SECTOR_AUTO_EXPAND"
+		}
+
+		instantTextBoxType = {
+			name = "title"
+			position = { x = 35 y = 11 }
+			text = "SECTOR_EDIT_VIEW"
+			font = "malgun_goth_24"
+			maxWidth = 280
+			maxHeight = 27
+			fixedSize = yes
+		}
+
+		instantTextBoxType={
+			name = "system_name"
+			font = "cg_16b"
+			maxWidth = 287
+			maxHeight = 67
+			position = { x = 16 y = 47 }
+			text = "SYSTEM_NAME"
+			vertical_alignment = center
+			fixedSize = yes
+			alwaysTransparent = yes
+		}
+
+		containerWindowType = {
+			name = "sector_edit_list_window"
+			position = { x = 13 y = 113 }
+			size = { width = 413 height = 507 }
+			clipping = no
+		
+			smoothListboxType = {
+				name = "collapsable_container_list_box" # parent of 
+				position = { x = 0 y = 13 }
+				orientation = "UPPER_LEFT"
+				size = { x = 387 y = 603 }
+				scrollbartype = "standardlistbox_slider"
+				#autohide_scrollbar = yes
+				spacing = 0
+			}
+		}
+	}
+}

@@ -1,0 +1,192 @@
+guiTypes = {
+	containerWindowType = {
+		name = "megastructure_selection_window"
+		orientation = center
+		origo = center
+		size = { width = 533 height = 800 }
+
+		moveable = yes
+
+		background = {
+			name = "megastructure_selection_window_background"
+			spriteType = "GFX_tile_outliner_bg"
+		}
+
+		iconType = {
+			name = "hex_bg"
+			position = { x = -17 y = -11 }
+			spriteType = "GFX_hex_bg"
+			alwaysTransparent = yes
+		}
+
+		iconType = {
+			name = "header_line"
+			position = { x = 15 y = 43 }
+			spriteType = "GFX_line_short"
+		}
+
+		instantTextBoxType={
+			name = "title"
+			position = { x = 20 y = 13 }
+			font = "malgun_goth_24"
+			text = "MEGASTRUCTURE_SELECTION_PICK_TYPE"
+			format = left
+			maxWidth = 267
+			maxHeight = 53
+			fixedSize = yes
+		}
+
+		buttonType = {
+			name = "close"
+			Orientation = "UPPER_RIGHT"
+			position = { x= -56 y = 19  }
+			quadTextureSprite = "GFX_close_button_galaxy"
+			shortcut = "ESCAPE"
+			clicksound = "back_click"
+			actionShortcut = "cancel"
+			pdx_tooltip = "CLOSE_TITLE"
+		}
+
+		containerWindowType = {
+			name = "dark_area"
+			position = { x = 11 y = 73 }
+			size = { width = 512 height = 713 }
+
+			background = {
+				name = "leader_frame"
+				spriteType = "GFX_tiles_dark_area_cut_8"
+				alwaysTransparent = yes
+			}
+		}
+
+		smoothListboxType = {
+			name = "entries"
+			orientation = "UPPER_LEFT"
+			position = { x = 21 y = 85 }
+			size = { x = 480 y = 693 }
+			scrollbartype = "standardlistbox_slider"
+			spacing = 5
+		}
+	}
+
+	containerWindowType = {
+		name = "megastructure_selection_window_entry"
+		size = { width = 480 height = 179 }
+
+		background = {
+			name = "megastructure_selection_window_entry_background"
+			spriteType = "GFX_no_highlight_tile"
+		}
+
+		containerWindowType = {
+			name = "entry_bg_gradient"
+			size = { width = 100% height = 144 }
+			position = { x = 0 y = 33 }
+
+			background = {
+				name = "background"
+				spriteType = "GFX_diplomacy_textbox_positive"
+			}
+
+			background = {
+				name = "background"
+				spriteType = "GFX_dark_area_cut"
+			}
+
+			background = {
+				name = "background"
+				spriteType = "GFX_dark_area_cut"
+			}
+		}
+
+		containerWindowType = {
+			name = "selected"
+			size = { width = 100% height = 100% }
+
+			background = {
+				name = "selected_bg"
+				spriteType = "GFX_glow_tile_orange_no_padding"
+				alwaysTransparent = yes
+			}
+		}
+
+		containerWindowType = {
+			name = "name"
+			size = { width = 100% height = 32 }
+
+			background = {
+				name = "background"
+				spriteType = "GFX_tiles_frame"
+			}
+
+			instantTextBoxType = {
+				name = "name"
+				position = { x = 8 y = 3 }
+				font = "cg_16b"
+				format = left
+				maxWidth = 393
+				maxHeight = 27
+				fixedSize = yes
+				text_color_code = "H"
+				vertical_alignment = center
+				alwaysTransparent = yes
+			}
+		}
+
+		containerWindowType = {
+			name = "icon_frame_box"
+			size = { width = 72 height = 72 }
+			position = { x = 9 y = 43 }
+
+			background = {
+				name = "icon_frame"
+				spriteType = "GFX_plain_green_frame_tile"
+				alwaystransparent = no
+			}
+
+			iconType = {
+				name = "icon"
+				spriteType = "GFX_technology_unknown"
+				position = { x = 1 y = 1 }
+				orientation = "UPPER_LEFT"
+				alwaysTransparent = yes
+			}
+		}
+
+		instantTextBoxType = {
+			name = "details"
+			position = { x = 93 y = 40 }
+			font = "cg_16b"
+			format = left
+			maxWidth = 380
+			alwaysTransparent = yes
+		}
+
+		instantTextBoxType = {
+			name = "cost"
+			orientation = "LOWER_LEFT"
+			position = { x = 0 y = -33 }
+			font = "cg_16b"
+			format = right
+			maxWidth = 467
+			maxHeight = 27
+			fixedSize = yes
+			alwaysTransparent = yes
+		}
+
+		buttonType = {
+			name = "button"
+			quadTextureSprite = "GFX_button_light"
+			position = { x = -1 y = -1 }
+			clicksound = "confirmation"
+			size = { x = 483 y = 181 }
+		}
+
+		iconType = {
+			name = "upgrade_icon"
+			spriteType = "GFX_megastructure_upgrade_icon"
+			position = { x = -29 y = 4 }
+			orientation = "UPPER_RIGHT"
+		}
+	}
+}

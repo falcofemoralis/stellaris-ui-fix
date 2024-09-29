@@ -1,0 +1,1643 @@
+##############################################################
+###	PORTRAITS SETTINGS
+###
+### Which portraits are used is set in
+### common\species_classes\00_species_classes.txt
+###
+###	This file configures how portraits and planet backgrounds are built.
+###	Default position orientation is lower left.
+##############################################################
+
+############################
+portraits = {
+	# cybernetics 01 - Cat
+	cyb1 = {
+		entity = "cybernetics_01_portrait_01_entity"
+		clothes_selector = "cybernetics_clothes_01"
+		attachment_selector = "no_texture"
+		greeting_sound = "machineage_portrait_cybernized_01"
+
+		character_textures = {
+			"gfx/models/portraits/cybernetics/cybernetics_portrait_01_blue.dds"
+			"gfx/models/portraits/cybernetics/cybernetics_portrait_01_red.dds"
+			"gfx/models/portraits/cybernetics/cybernetics_portrait_01_green.dds"
+			"gfx/models/portraits/cybernetics/cybernetics_portrait_01_purple.dds"
+		}
+		custom_close_up_position_offset = { x = -13 y = 333 }
+		custom_close_up_scale = 1.80
+
+		portrait_evolution = {
+			evolution_stages = {
+				# cybernetization stages
+				{
+					values = {
+						# stage 1 variant 1
+						{
+							decal = "gfx/models/portraits/cybernetics/cybernetics_portrait_01_stage_1_decal.dds"
+							mask = "gfx/models/portraits/cybernetics/cybernetics_portrait_01_stage_1_mask.dds"
+						}
+					}
+
+					#leader, pop or species scope (when called with species scope, from subscope can contain a country species related to)
+					trigger = {
+						has_cybernetization_stage_1 = yes
+					}
+				}
+
+				{
+					values = {
+						# stage 2 variant 1
+						{
+							decal = "gfx/models/portraits/cybernetics/cybernetics_portrait_01_stage_2_decal.dds"
+							mask = "gfx/models/portraits/cybernetics/cybernetics_portrait_01_stage_2_mask.dds"
+						}
+					}
+
+					#leader, pop or species scope (when called with species scope, from subscope can contain a country species related to)
+					trigger = {
+						has_cybernetization_stage_2 = yes
+					}
+				}
+			}
+		}
+	}
+
+	# 02 - Raxxan
+	cyb2_m = {
+		entity = "cybernetics_01_portrait_02_m_entity"
+		clothes_selector = "cybernetics_clothes_02"
+		attachment_selector = "no_texture"
+		greeting_sound = "machineage_portrait_cybernized_02"
+
+		character_textures = {
+			"gfx/models/portraits/cybernetics/cybernetics_portrait_02_m_blue.dds"
+			"gfx/models/portraits/cybernetics/cybernetics_portrait_02_m_green.dds"
+			"gfx/models/portraits/cybernetics/cybernetics_portrait_02_m_purple.dds"
+		}
+
+		custom_close_up_position_offset = { x = 0 y = 400 }
+		custom_close_up_scale = 1.90
+
+		portrait_evolution = {
+			evolution_stages = {
+				# cybernetization stages
+				{
+					values = {
+						# stage 1 variant 1
+						{
+							decal = "gfx/models/portraits/cybernetics/cybernetics_portrait_02_m_stage_1_decal.dds"
+							mask = "gfx/models/portraits/cybernetics/cybernetics_portrait_02_m_stage_1_mask.dds"
+						}
+					}
+
+					#leader, pop or species scope (when called with species scope, from subscope can contain a country species related to)
+					trigger = {
+						has_cybernetization_stage_1 = yes
+					}
+				}
+
+				{
+					values = {
+						# stage 2 variant 1
+						{
+							decal = "gfx/models/portraits/cybernetics/cybernetics_portrait_02_m_stage_2_decal.dds"
+							mask = "gfx/models/portraits/cybernetics/cybernetics_portrait_02_m_stage_2_mask.dds"
+						}
+					}
+
+					#leader, pop or species scope (when called with species scope, from subscope can contain a country species related to)
+					trigger = {
+						has_cybernetization_stage_2 = yes
+					}
+				}
+			}
+		}
+	}
+
+	cyb2_f = {
+		entity = "cybernetics_01_portrait_02_f_entity"
+		clothes_selector = "cybernetics_clothes_02"
+		attachment_selector = "no_texture"
+		greeting_sound = "machineage_portrait_cybernized_02"
+
+		character_textures = {
+			"gfx/models/portraits/cybernetics/cybernetics_portrait_02_f_blue.dds"
+			"gfx/models/portraits/cybernetics/cybernetics_portrait_02_f_green.dds"
+			"gfx/models/portraits/cybernetics/cybernetics_portrait_02_f_purple.dds"
+		}
+
+		custom_close_up_position_offset = { x = -27 y = 347 }
+		custom_close_up_scale = 1.80
+
+		portrait_evolution = {
+			evolution_stages = {
+				# cybernetization stages
+				{
+					values = {
+						# stage 1 variant 1
+						{
+							decal = "gfx/models/portraits/cybernetics/cybernetics_portrait_02_f_stage_1_decal.dds"
+							mask = "gfx/models/portraits/cybernetics/cybernetics_portrait_02_f_stage_1_mask.dds"
+						}
+					}
+
+					#leader, pop or species scope (when called with species scope, from subscope can contain a country species related to)
+					trigger = {
+						has_cybernetization_stage_1 = yes
+					}
+				}
+
+				{
+					values = {
+						# stage 2 variant 1
+						{
+							decal = "gfx/models/portraits/cybernetics/cybernetics_portrait_02_f_stage_2_decal.dds"
+							mask = "gfx/models/portraits/cybernetics/cybernetics_portrait_02_f_stage_2_mask.dds"
+						}
+					}
+
+					#leader, pop or species scope (when called with species scope, from subscope can contain a country species related to)
+					trigger = {
+						has_cybernetization_stage_2 = yes
+					}
+				}
+			}
+		}
+	}
+
+	# cybernetics 03 - Moose
+	cyb3_m = {
+		entity = "cybernetics_01_portrait_03_entity"
+		clothes_selector = "cybernetics_clothes_03"
+		attachment_selector = "no_texture"
+		greeting_sound = "machineage_portrait_cybernized_03"
+
+		character_textures = {
+			"gfx/models/portraits/cybernetics/cybernetics_portrait_03_m_blue.dds"
+			"gfx/models/portraits/cybernetics/cybernetics_portrait_03_m_green.dds"
+			"gfx/models/portraits/cybernetics/cybernetics_portrait_03_m_magenta.dds"
+			"gfx/models/portraits/cybernetics/cybernetics_portrait_03_m_orange.dds"
+			"gfx/models/portraits/cybernetics/cybernetics_portrait_03_m_purple.dds"
+		}
+
+		custom_close_up_position_offset = { x = 73 y = 400 }
+		custom_close_up_scale = 1.90
+
+		portrait_evolution = {
+			evolution_stages = {
+				# cybernetization stages
+				{
+					values = {
+						# stage 1 variant 1
+						{
+							decal = "gfx/models/portraits/cybernetics/cybernetics_portrait_03_stage_1_decal.dds"
+							mask = "gfx/models/portraits/cybernetics/cybernetics_portrait_03_stage_mask.dds"
+						}
+					}
+
+					#leader, pop or species scope (when called with species scope, from subscope can contain a country species related to)
+					trigger = {
+						has_cybernetization_stage_1 = yes
+					}
+				}
+
+				{
+					values = {
+						# stage 2 variant 1
+						{
+							decal = "gfx/models/portraits/cybernetics/cybernetics_portrait_03_stage_2_decal.dds"
+							mask = "gfx/models/portraits/cybernetics/cybernetics_portrait_03_stage_mask.dds"
+						}
+					}
+
+					#leader, pop or species scope (when called with species scope, from subscope can contain a country species related to)
+					trigger = {
+						has_cybernetization_stage_2 = yes
+					}
+				}
+			}
+		}
+	}
+
+	cyb3_f = {
+		entity = "cybernetics_01_portrait_03_entity"
+		clothes_selector = "cybernetics_clothes_03"
+		attachment_selector = "no_texture"
+		greeting_sound = "machineage_portrait_cybernized_03"
+
+		character_textures = {
+			"gfx/models/portraits/cybernetics/cybernetics_portrait_03_f_blue.dds"
+			"gfx/models/portraits/cybernetics/cybernetics_portrait_03_f_green.dds"
+			"gfx/models/portraits/cybernetics/cybernetics_portrait_03_f_magenta.dds"
+			"gfx/models/portraits/cybernetics/cybernetics_portrait_03_f_orange.dds"
+			"gfx/models/portraits/cybernetics/cybernetics_portrait_03_f_purple.dds"
+		}
+
+		custom_close_up_position_offset = { x = 73 y = 400 }
+		custom_close_up_scale = 1.90
+
+		portrait_evolution = {
+			evolution_stages = {
+				# cybernetization stages
+				{
+					values = {
+						# stage 1 variant 1
+						{
+							decal = "gfx/models/portraits/cybernetics/cybernetics_portrait_03_stage_1_decal.dds"
+							mask = "gfx/models/portraits/cybernetics/cybernetics_portrait_03_stage_mask.dds"
+						}
+					}
+
+					#leader, pop or species scope (when called with species scope, from subscope can contain a country species related to)
+					trigger = {
+						has_cybernetization_stage_1 = yes
+					}
+				}
+
+				{
+					values = {
+						# stage 2 variant 1
+						{
+							decal = "gfx/models/portraits/cybernetics/cybernetics_portrait_03_stage_2_decal.dds"
+							mask = "gfx/models/portraits/cybernetics/cybernetics_portrait_03_stage_mask.dds"
+						}
+					}
+
+					#leader, pop or species scope (when called with species scope, from subscope can contain a country species related to)
+					trigger = {
+						has_cybernetization_stage_2 = yes
+					}
+				}
+			}
+		}
+	}
+
+	# cybernetics 04 - reptilian
+	cyb4 = {
+		entity = "cybernetics_01_portrait_04_entity"
+		clothes_selector = "cybernetics_clothes_04"
+		attachment_selector = "no_texture"
+		greeting_sound = "machineage_portrait_cybernized_04"
+
+		character_textures = {
+			"gfx/models/portraits/cybernetics/cybernetics_portrait_04_green.dds"
+			"gfx/models/portraits/cybernetics/cybernetics_portrait_04_blue.dds"
+			"gfx/models/portraits/cybernetics/cybernetics_portrait_04_purple.dds"
+		}
+
+		custom_close_up_position_offset = { x = 107 y = 420 }
+		custom_close_up_scale = 2.0
+
+		 portrait_evolution = {
+			evolution_stages = {
+				# cybernetization stages
+				{
+					values = {
+						# stage 1 variant 1
+						{
+							decal = "gfx/models/portraits/cybernetics/cybernetics_portrait_04_stage_1_decal.dds"
+							mask = "gfx/models/portraits/cybernetics/cybernetics_portrait_04_stage_1_mask.dds"
+						}
+					}
+
+					#leader, pop or species scope (when called with species scope, from subscope can contain a country species related to)
+					trigger = {
+						has_cybernetization_stage_1 = yes
+					}
+				}
+
+				{
+					values = {
+						# stage 2 variant 1
+						{
+							decal = "gfx/models/portraits/cybernetics/cybernetics_portrait_04_stage_2_decal.dds"
+							mask = "gfx/models/portraits/cybernetics/cybernetics_portrait_04_stage_2_mask.dds"
+						}
+					}
+
+					#leader, pop or species scope (when called with species scope, from subscope can contain a country species related to)
+					trigger = {
+						has_cybernetization_stage_2 = yes
+					}
+				}
+			}
+		}
+
+	}
+
+
+	# cybernetics 05 - Owl
+	cyb5 = {
+		entity = "cybernetics_01_portrait_05_entity"
+		clothes_selector = "cybernetics_clothes_05"
+		attachment_selector = "no_texture"
+		greeting_sound = "machineage_portrait_cybernized_05"
+
+		character_textures = {
+			"gfx/models/portraits/cybernetics/cybernetics_portrait_05_green.dds"
+			"gfx/models/portraits/cybernetics/cybernetics_portrait_05_blue.dds"
+			"gfx/models/portraits/cybernetics/cybernetics_portrait_05_red.dds"
+		}
+		custom_close_up_position_offset = { x = 0 y = 400 }
+		custom_close_up_scale = 2.0
+
+		portrait_evolution = {
+			evolution_stages = {
+				# cybernetization stages
+				{
+					values = {
+						# stage 1 variant 1
+						{
+							decal = "gfx/models/portraits/cybernetics/cybernetics_portrait_05_stage_1_decal.dds"
+							mask = "gfx/models/portraits/cybernetics/cybernetics_portrait_05_stage_1_mask.dds"
+						}
+					}
+
+					#leader, pop or species scope (when called with species scope, from subscope can contain a country species related to)
+					trigger = {
+						has_cybernetization_stage_1 = yes
+					}
+				}
+
+				{
+					values = {
+						# stage 2 variant 1
+						{
+							decal = "gfx/models/portraits/cybernetics/cybernetics_portrait_05_stage_2_decal.dds"
+							mask = "gfx/models/portraits/cybernetics/cybernetics_portrait_05_stage_2_mask.dds"
+						}
+					}
+
+					#leader, pop or species scope (when called with species scope, from subscope can contain a country species related to)
+					trigger = {
+						has_cybernetization_stage_2 = yes
+					}
+				}
+			}
+		}
+	}
+
+	# cybernetics 06 - Monkey
+	cyb6 = {
+		entity = "cybernetics_01_portrait_06_entity"
+		clothes_selector = "cybernetics_clothes_06"
+		attachment_selector = "no_texture"
+		greeting_sound = "machineage_portrait_cybernized_06"
+
+		character_textures = {
+			"gfx/models/portraits/cybernetics/cybernetics_portrait_06_blue.dds"
+			"gfx/models/portraits/cybernetics/cybernetics_portrait_06_red.dds"
+			"gfx/models/portraits/cybernetics/cybernetics_portrait_06_green.dds"
+		}
+		custom_close_up_position_offset = { x = 24 y = 433 }
+		custom_close_up_scale = 2.0
+
+		portrait_evolution = {
+			evolution_stages = {
+				# cybernetization stages
+				{
+					values = {
+						# stage 1 variant 1
+						{
+							decal = "gfx/models/portraits/cybernetics/cybernetics_portrait_06_stage_1_decal.dds"
+							mask = "gfx/models/portraits/cybernetics/cybernetics_portrait_06_stage_1_mask.dds"
+						}
+					}
+
+					#leader, pop or species scope (when called with species scope, from subscope can contain a country species related to)
+					trigger = {
+						has_cybernetization_stage_1 = yes
+					}
+				}
+
+				{
+					values = {
+						# stage 2 variant 1
+						{
+							decal = "gfx/models/portraits/cybernetics/cybernetics_portrait_06_stage_2_decal.dds"
+							mask = "gfx/models/portraits/cybernetics/cybernetics_portrait_06_stage_2_mask.dds"
+						}
+					}
+
+					#leader, pop or species scope (when called with species scope, from subscope can contain a country species related to)
+					trigger = {
+						has_cybernetization_stage_2 = yes
+					}
+				}
+			}
+		}
+	}
+
+	# cybernetics 07 - fox
+	cyb7 = {
+		entity = "cybernetics_01_portrait_07_entity"
+		clothes_selector = "cybernetics_clothes_07"
+		attachment_selector = "no_texture"
+		greeting_sound = "machineage_portrait_cybernized_07"
+
+		character_textures = {
+			"gfx/models/portraits/cybernetics/cybernetics_portrait_07_blue.dds"
+			"gfx/models/portraits/cybernetics/cybernetics_portrait_07_red.dds"
+			"gfx/models/portraits/cybernetics/cybernetics_portrait_07_green.dds"
+		}
+		custom_close_up_position_offset = { x = 0 y = 187 }
+		custom_close_up_scale = 1.55
+
+		portrait_evolution = {
+			evolution_stages = {
+				# cybernetization stages
+				{
+					values = {
+						# stage 1 variant 1
+						{
+							decal = "gfx/models/portraits/cybernetics/cybernetics_portrait_07_stage_1_decal.dds"
+							mask = "gfx/models/portraits/cybernetics/cybernetics_portrait_07_stage_1_mask.dds"
+						}
+					}
+
+					#leader, pop or species scope (when called with species scope, from subscope can contain a country species related to)
+					trigger = {
+						has_cybernetization_stage_1 = yes
+					}
+				}
+
+				{
+					values = {
+						# stage 2 variant 1
+						{
+							decal = "gfx/models/portraits/cybernetics/cybernetics_portrait_07_stage_2_decal.dds"
+							mask = "gfx/models/portraits/cybernetics/cybernetics_portrait_07_stage_2_mask.dds"
+						}
+					}
+
+					#leader, pop or species scope (when called with species scope, from subscope can contain a country species related to)
+					trigger = {
+						has_cybernetization_stage_2 = yes
+					}
+				}
+			}
+		}
+	}
+
+	# 08 - Elf
+	cyb8_m = {
+		entity = "cybernetics_01_portrait_08_m_entity"
+		clothes_selector = "cybernetics_clothes_08_m"
+		attachment_selector = "no_texture"
+		greeting_sound = "machineage_portrait_cybernized_08_m"
+
+		character_textures = {
+			"gfx/models/portraits/cybernetics/cybernetics_portrait_08_m_blue.dds"
+			"gfx/models/portraits/cybernetics/cybernetics_portrait_08_m_green.dds"
+			"gfx/models/portraits/cybernetics/cybernetics_portrait_08_m_red.dds"
+		}
+
+		custom_close_up_position_offset = { x = -27 y = 347 }
+		custom_close_up_scale = 1.80
+
+		portrait_evolution = {
+			evolution_stages = {
+				# cybernetization stages
+				{
+					values = {
+						# stage 1 variant 1
+						{
+							decal = "gfx/models/portraits/cybernetics/cybernetics_portrait_08_m_stage_1_decal.dds"
+							mask = "gfx/models/portraits/cybernetics/cybernetics_portrait_08_m_stage_1_mask.dds"
+						}
+					}
+
+					#leader, pop or species scope (when called with species scope, from subscope can contain a country species related to)
+					trigger = {
+						has_cybernetization_stage_1 = yes
+					}
+				}
+
+				{
+					values = {
+						# stage 2 variant 1
+						{
+							decal = "gfx/models/portraits/cybernetics/cybernetics_portrait_08_m_stage_2_decal.dds"
+							mask = "gfx/models/portraits/cybernetics/cybernetics_portrait_08_m_stage_2_mask.dds"
+						}
+					}
+
+					#leader, pop or species scope (when called with species scope, from subscope can contain a country species related to)
+					trigger = {
+						has_cybernetization_stage_2 = yes
+					}
+				}
+			}
+		}
+	}
+
+	cyb8_f = {
+		entity = "cybernetics_01_portrait_08_f_entity"
+		clothes_selector = "cybernetics_clothes_08_f"
+		attachment_selector = "no_texture"
+		greeting_sound = "machineage_portrait_cybernized_08_f"
+
+		character_textures = {
+			"gfx/models/portraits/cybernetics/cybernetics_portrait_08_f_blue.dds"
+			"gfx/models/portraits/cybernetics/cybernetics_portrait_08_f_green.dds"
+			"gfx/models/portraits/cybernetics/cybernetics_portrait_08_f_red.dds"
+		}
+
+		custom_close_up_position_offset = { x = -27 y = 347 }
+		custom_close_up_scale = 1.80
+
+		portrait_evolution = {
+			evolution_stages = {
+				# cybernetization stages
+				{
+					values = {
+						# stage 1 variant 1
+						{
+							decal = "gfx/models/portraits/cybernetics/cybernetics_portrait_08_f_stage_1_decal.dds"
+							mask = "gfx/models/portraits/cybernetics/cybernetics_portrait_08_f_stage_1_mask.dds"
+						}
+					}
+
+					#leader, pop or species scope (when called with species scope, from subscope can contain a country species related to)
+					trigger = {
+						has_cybernetization_stage_1 = yes
+					}
+				}
+
+				{
+					values = {
+						# stage 2 variant 1
+						{
+							decal = "gfx/models/portraits/cybernetics/cybernetics_portrait_08_f_stage_2_decal.dds"
+							mask = "gfx/models/portraits/cybernetics/cybernetics_portrait_08_f_stage_2_mask.dds"
+						}
+					}
+
+					#leader, pop or species scope (when called with species scope, from subscope can contain a country species related to)
+					trigger = {
+						has_cybernetization_stage_2 = yes
+					}
+				}
+			}
+		}
+	}
+
+	# cybernetics 09 - Kith-Maqau (Bug)
+	cyb9 = {
+		entity = "cybernetics_01_portrait_09_entity"
+		clothes_selector = "no_texture"
+		attachment_selector = "no_texture"
+		greeting_sound = "machineage_portrait_cybernized_09"
+
+		character_textures = {
+			"gfx/models/portraits/cybernetics/cybernetics_portrait_09_gold.dds"
+			"gfx/models/portraits/cybernetics/cybernetics_portrait_09_green.dds"
+			"gfx/models/portraits/cybernetics/cybernetics_portrait_09_indigo.dds"
+			"gfx/models/portraits/cybernetics/cybernetics_portrait_09_lichen.dds"
+			"gfx/models/portraits/cybernetics/cybernetics_portrait_09_purple.dds"
+			"gfx/models/portraits/cybernetics/cybernetics_portrait_09_red.dds"
+			"gfx/models/portraits/cybernetics/cybernetics_portrait_09_redgold.dds"
+			"gfx/models/portraits/cybernetics/cybernetics_portrait_09_scarab.dds"
+		}
+		custom_close_up_position_offset = { x = 47 y = 427 }
+		custom_close_up_scale = 1.95
+
+		portrait_evolution = {
+			evolution_stages = {
+				# cybernetization stages
+				{
+					values = {
+						# stage 1 variant 1
+						{
+							decal = "gfx/models/portraits/cybernetics/cybernetics_portrait_09_stage_1_decal.dds"
+							mask = "gfx/models/portraits/cybernetics/cybernetics_portrait_09_stage_1_mask.dds"
+						}
+					}
+
+					#leader, pop or species scope (when called with species scope, from subscope can contain a country species related to)
+					trigger = {
+						has_cybernetization_stage_1 = yes
+					}
+				}
+
+				{
+					values = {
+						# stage 2 variant 1
+						{
+							decal = "gfx/models/portraits/cybernetics/cybernetics_portrait_09_stage_2_decal.dds"
+							mask = "gfx/models/portraits/cybernetics/cybernetics_portrait_09_stage_2_mask.dds"
+						}
+					}
+
+					#leader, pop or species scope (when called with species scope, from subscope can contain a country species related to)
+					trigger = {
+						has_cybernetization_stage_2 = yes
+					}
+				}
+			}
+		}
+	}
+
+	# cybernetics 10 - Chameleon
+	cyb10 = {
+		entity = "cybernetics_01_portrait_10_entity"
+		clothes_selector = "cybernetics_clothes_10"
+		attachment_selector = "no_texture"
+		greeting_sound = "machineage_portrait_cybernized_10"
+
+		character_textures = {
+			"gfx/models/portraits/cybernetics/cybernetics_portrait_10_blau.dds"
+			"gfx/models/portraits/cybernetics/cybernetics_portrait_10_blue.dds"
+			"gfx/models/portraits/cybernetics/cybernetics_portrait_10_green.dds"
+			"gfx/models/portraits/cybernetics/cybernetics_portrait_10_magenta.dds"
+			"gfx/models/portraits/cybernetics/cybernetics_portrait_10_orange.dds"
+			"gfx/models/portraits/cybernetics/cybernetics_portrait_10_red.dds"
+			"gfx/models/portraits/cybernetics/cybernetics_portrait_10_rot.dds"
+			"gfx/models/portraits/cybernetics/cybernetics_portrait_10_yellow.dds"
+		}
+		custom_close_up_position_offset = { x = 73 y = 400 }
+		custom_close_up_scale = 1.9
+
+		portrait_evolution = {
+			evolution_stages = {
+				# cybernetization stages
+				{
+					values = {
+						# stage 1 variant 1
+						{
+							decal = "gfx/models/portraits/cybernetics/cybernetics_portrait_10_stage_1_decal.dds"
+							mask = "gfx/models/portraits/cybernetics/cybernetics_portrait_10_stage_1_mask.dds"
+						}
+					}
+
+					#leader, pop or species scope (when called with species scope, from subscope can contain a country species related to)
+					trigger = {
+						has_cybernetization_stage_1 = yes
+					}
+				}
+
+				{
+					values = {
+						# stage 2 variant 1
+						{
+							decal = "gfx/models/portraits/cybernetics/cybernetics_portrait_10_stage_2_decal.dds"
+							mask = "gfx/models/portraits/cybernetics/cybernetics_portrait_10_stage_2_mask.dds"
+						}
+					}
+
+					#leader, pop or species scope (when called with species scope, from subscope can contain a country species related to)
+					trigger = {
+						has_cybernetization_stage_2 = yes
+					}
+				}
+			}
+		}
+	}
+
+	# cybernetics 11 - Zrrj
+	cyb11 = {
+		entity = "cybernetics_01_portrait_11_entity"
+		clothes_selector = "no_texture"
+		attachment_selector = "no_texture"
+		greeting_sound = "machineage_portrait_cybernized_11"
+
+		character_textures = {
+			"gfx/models/portraits/cybernetics/cybernetics_portrait_11_yellow.dds"
+			"gfx/models/portraits/cybernetics/cybernetics_portrait_11_red.dds"
+			"gfx/models/portraits/cybernetics/cybernetics_portrait_11_blue.dds"
+		}
+		custom_close_up_position_offset = { x = 13 y = 453 }
+		custom_close_up_scale = 2.1
+
+		portrait_evolution = {
+			evolution_stages = {
+				# cybernetization stages
+				{
+					values = {
+						# stage 1 variant 1
+						{
+							decal = "gfx/models/portraits/cybernetics/cybernetics_portrait_11_stage_1_decal.dds"
+							mask = "gfx/models/portraits/cybernetics/cybernetics_portrait_11_stage_1_mask.dds"
+						}
+					}
+
+					#leader, pop or species scope (when called with species scope, from subscope can contain a country species related to)
+					trigger = {
+						has_cybernetization_stage_1 = yes
+					}
+				}
+
+				{
+					values = {
+						# stage 2 variant 1
+						{
+							decal = "gfx/models/portraits/cybernetics/cybernetics_portrait_11_stage_2_decal.dds"
+							mask = "gfx/models/portraits/cybernetics/cybernetics_portrait_11_stage_2_mask.dds"
+						}
+					}
+
+					#leader, pop or species scope (when called with species scope, from subscope can contain a country species related to)
+					trigger = {
+						has_cybernetization_stage_2 = yes
+					}
+				}
+			}
+		}
+	}
+
+
+	cyb12_m_01 = {
+		entity = "cybernetics_01_portrait_12_m_entity"
+		clothes_selector = "cybernetics_clothes_12_m"
+		attachment_selector = "cybernetics_hair_12_m"
+		greeting_sound = "machineage_portrait_cybernized_12_m"
+
+		character_textures = {
+			"gfx/models/portraits/cybernetics/cybernetics_portrait_12_m_blue.dds"
+		}
+
+		custom_attachment_label = "HAIR_STYLE"
+
+		custom_close_up_position_offset = { x = 0 y = 240 }
+		custom_close_up_scale = 1.60
+		#custom_mid_close_up_position_offset = { x = 0 y = -100 }
+		#custom_mid_close_up_scale = 2.0
+
+		portrait_evolution = {
+			evolution_stages = {
+				# cybernetization stages
+				{
+					values = {
+						# stage 1 variant 1
+						{
+							decal = "gfx/models/portraits/cybernetics/cybernetics_portrait_12_m_stage_1_decal.dds"
+							mask = "gfx/models/portraits/cybernetics/cybernetics_portrait_12_m_stage_1_mask.dds"
+						}
+					}
+
+					#leader, pop or species scope (when called with species scope, from subscope can contain a country species related to)
+					trigger = {
+						has_cybernetization_stage_1 = yes
+					}
+				}
+
+				{
+					values = {
+						# stage 2 variant 1
+						{
+							decal = "gfx/models/portraits/cybernetics/cybernetics_portrait_12_m_stage_2_decal.dds"
+							mask = "gfx/models/portraits/cybernetics/cybernetics_portrait_12_m_stage_2_mask.dds"
+						}
+					}
+
+					#leader, pop or species scope (when called with species scope, from subscope can contain a country species related to)
+					trigger = {
+						has_cybernetization_stage_2 = yes
+					}
+				}
+			}
+		}
+	}
+
+	cyb12_m_02 = {
+		entity = "cybernetics_01_portrait_12_m_entity"
+		clothes_selector = "cybernetics_clothes_12_m"
+		attachment_selector = "cybernetics_hair_12_m"
+		greeting_sound = "machineage_portrait_cybernized_12_m"
+
+		character_textures = {
+			"gfx/models/portraits/cybernetics/cybernetics_portrait_12_m_green.dds"
+		}
+
+		custom_attachment_label = "HAIR_STYLE"
+
+		custom_close_up_position_offset = { x = 0 y = 240 }
+		custom_close_up_scale = 1.60
+		#custom_mid_close_up_position_offset = { x = 0 y = -100 }
+		#custom_mid_close_up_scale = 2.0
+
+		portrait_evolution = {
+			evolution_stages = {
+				# cybernetization stages
+				{
+					values = {
+						# stage 1 variant 1
+						{
+							decal = "gfx/models/portraits/cybernetics/cybernetics_portrait_12_m_stage_1_decal.dds"
+							mask = "gfx/models/portraits/cybernetics/cybernetics_portrait_12_m_stage_1_mask.dds"
+						}
+					}
+
+					#leader, pop or species scope (when called with species scope, from subscope can contain a country species related to)
+					trigger = {
+						has_cybernetization_stage_1 = yes
+					}
+				}
+
+				{
+					values = {
+						# stage 2 variant 1
+						{
+							decal = "gfx/models/portraits/cybernetics/cybernetics_portrait_12_m_stage_2_decal.dds"
+							mask = "gfx/models/portraits/cybernetics/cybernetics_portrait_12_m_stage_2_mask.dds"
+						}
+					}
+
+					#leader, pop or species scope (when called with species scope, from subscope can contain a country species related to)
+					trigger = {
+						has_cybernetization_stage_2 = yes
+					}
+				}
+			}
+		}
+	}
+
+	cyb12_m_03 = {
+		entity = "cybernetics_01_portrait_12_m_entity"
+		clothes_selector = "cybernetics_clothes_12_m"
+		attachment_selector = "cybernetics_hair_12_m"
+		greeting_sound = "machineage_portrait_cybernized_12_m"
+
+		character_textures = {
+			"gfx/models/portraits/cybernetics/cybernetics_portrait_12_m_purple.dds"
+		}
+
+		custom_attachment_label = "HAIR_STYLE"
+
+		custom_close_up_position_offset = { x = 0 y = 240 }
+		custom_close_up_scale = 1.60
+		#custom_mid_close_up_position_offset = { x = 0 y = -100 }
+		#custom_mid_close_up_scale = 2.0
+
+		portrait_evolution = {
+			evolution_stages = {
+				# cybernetization stages
+				{
+					values = {
+						# stage 1 variant 1
+						{
+							decal = "gfx/models/portraits/cybernetics/cybernetics_portrait_12_m_stage_1_decal.dds"
+							mask = "gfx/models/portraits/cybernetics/cybernetics_portrait_12_m_stage_1_mask.dds"
+						}
+					}
+
+					#leader, pop or species scope (when called with species scope, from subscope can contain a country species related to)
+					trigger = {
+						has_cybernetization_stage_1 = yes
+					}
+				}
+
+				{
+					values = {
+						# stage 2 variant 1
+						{
+							decal = "gfx/models/portraits/cybernetics/cybernetics_portrait_12_m_stage_2_decal.dds"
+							mask = "gfx/models/portraits/cybernetics/cybernetics_portrait_12_m_stage_2_mask.dds"
+						}
+					}
+
+					#leader, pop or species scope (when called with species scope, from subscope can contain a country species related to)
+					trigger = {
+						has_cybernetization_stage_2 = yes
+					}
+				}
+			}
+		}
+	}
+
+	cyb12_f_01 = {
+		entity = "cybernetics_01_portrait_12_f_entity"
+		clothes_selector = "cybernetics_clothes_12_f"
+		attachment_selector = "cybernetics_hair_12_f"
+		greeting_sound = "machineage_portrait_cybernized_12_f"
+		character_textures = {
+			"gfx/models/portraits/cybernetics/cybernetics_portrait_12_f_blue.dds"
+		}
+
+		custom_attachment_label = "HAIR_STYLE"
+
+		custom_close_up_position_offset = { x = 0 y = 240 }
+		custom_close_up_scale = 1.60
+		#custom_mid_close_up_position_offset = { x = 0 y = 27 }
+		#custom_mid_close_up_scale = 2
+
+		portrait_evolution = {
+			evolution_stages = {
+				# cybernetization stages
+				{
+					values = {
+						# stage 1 variant 1
+						{
+							decal = "gfx/models/portraits/cybernetics/cybernetics_portrait_12_f_stage_1_decal.dds"
+							mask = "gfx/models/portraits/cybernetics/cybernetics_portrait_12_f_stage_1_mask.dds"
+						}
+					}
+
+					#leader, pop or species scope (when called with species scope, from subscope can contain a country species related to)
+					trigger = {
+						has_cybernetization_stage_1 = yes
+					}
+				}
+
+				{
+					values = {
+						# stage 2 variant 1
+						{
+							decal = "gfx/models/portraits/cybernetics/cybernetics_portrait_12_f_stage_2_decal.dds"
+							mask = "gfx/models/portraits/cybernetics/cybernetics_portrait_12_f_stage_2_mask.dds"
+						}
+					}
+
+					#leader, pop or species scope (when called with species scope, from subscope can contain a country species related to)
+					trigger = {
+						has_cybernetization_stage_2 = yes
+					}
+				}
+			}
+		}
+	}
+
+	cyb12_f_02 = {
+		entity = "cybernetics_01_portrait_12_f_entity"
+		clothes_selector = "cybernetics_clothes_12_f"
+		attachment_selector = "cybernetics_hair_12_f"
+		greeting_sound = "machineage_portrait_cybernized_12_f"
+		character_textures = {
+			"gfx/models/portraits/cybernetics/cybernetics_portrait_12_f_green.dds"
+		}
+
+		custom_attachment_label = "HAIR_STYLE"
+
+		custom_close_up_position_offset = { x = 0 y = 240 }
+		custom_close_up_scale = 1.60
+		#custom_mid_close_up_position_offset = { x = 0 y = 27 }
+		#custom_mid_close_up_scale = 2
+
+		portrait_evolution = {
+			evolution_stages = {
+				# cybernetization stages
+				{
+					values = {
+						# stage 1 variant 1
+						{
+							decal = "gfx/models/portraits/cybernetics/cybernetics_portrait_12_f_stage_1_decal.dds"
+							mask = "gfx/models/portraits/cybernetics/cybernetics_portrait_12_f_stage_1_mask.dds"
+						}
+					}
+
+					#leader, pop or species scope (when called with species scope, from subscope can contain a country species related to)
+					trigger = {
+						has_cybernetization_stage_1 = yes
+					}
+				}
+
+				{
+					values = {
+						# stage 2 variant 1
+						{
+							decal = "gfx/models/portraits/cybernetics/cybernetics_portrait_12_f_stage_2_decal.dds"
+							mask = "gfx/models/portraits/cybernetics/cybernetics_portrait_12_f_stage_2_mask.dds"
+						}
+					}
+
+					#leader, pop or species scope (when called with species scope, from subscope can contain a country species related to)
+					trigger = {
+						has_cybernetization_stage_2 = yes
+					}
+				}
+			}
+		}
+	}
+
+	cyb12_f_03 = {
+		entity = "cybernetics_01_portrait_12_f_entity"
+		clothes_selector = "cybernetics_clothes_12_f"
+		attachment_selector = "cybernetics_hair_12_f"
+		greeting_sound = "machineage_portrait_cybernized_12_f"
+		character_textures = {
+			"gfx/models/portraits/cybernetics/cybernetics_portrait_12_f_purple.dds"
+		}
+
+		custom_attachment_label = "HAIR_STYLE"
+
+		custom_close_up_position_offset = { x = 0 y = 240 }
+		custom_close_up_scale = 1.60
+		#custom_mid_close_up_position_offset = { x = 0 y = 27 }
+		#custom_mid_close_up_scale = 2
+
+		portrait_evolution = {
+			evolution_stages = {
+				# cybernetization stages
+				{
+					values = {
+						# stage 1 variant 1
+						{
+							decal = "gfx/models/portraits/cybernetics/cybernetics_portrait_12_f_stage_1_decal.dds"
+							mask = "gfx/models/portraits/cybernetics/cybernetics_portrait_12_f_stage_1_mask.dds"
+						}
+					}
+
+					#leader, pop or species scope (when called with species scope, from subscope can contain a country species related to)
+					trigger = {
+						has_cybernetization_stage_1 = yes
+					}
+				}
+
+				{
+					values = {
+						# stage 2 variant 1
+						{
+							decal = "gfx/models/portraits/cybernetics/cybernetics_portrait_12_f_stage_2_decal.dds"
+							mask = "gfx/models/portraits/cybernetics/cybernetics_portrait_12_f_stage_2_mask.dds"
+						}
+					}
+
+					#leader, pop or species scope (when called with species scope, from subscope can contain a country species related to)
+					trigger = {
+						has_cybernetization_stage_2 = yes
+					}
+				}
+			}
+		}
+	}
+
+
+	# cybernetics 13 - Mushroom
+	cyb13 = {
+		entity = "cybernetics_01_portrait_13_entity"
+		clothes_selector = "no_texture"
+		attachment_selector = "no_texture"
+		greeting_sound = "machineage_portrait_cybernized_13"
+
+		character_textures = {
+			"gfx/models/portraits/cybernetics/cybernetics_portrait_13_blue.dds"
+			"gfx/models/portraits/cybernetics/cybernetics_portrait_13_red.dds"
+			"gfx/models/portraits/cybernetics/cybernetics_portrait_13_green.dds"
+			"gfx/models/portraits/cybernetics/cybernetics_portrait_13_purple.dds"
+			"gfx/models/portraits/cybernetics/cybernetics_portrait_13_orange.dds"
+		}
+		custom_close_up_position_offset = { x = -40 y = 420 }
+		custom_close_up_scale = 2.0
+
+		portrait_evolution = {
+			evolution_stages = {
+				# cybernetization stages
+				{
+					values = {
+						# stage 1 variant 1
+						{
+							decal = "gfx/models/portraits/cybernetics/cybernetics_portrait_13_stage_1_decal.dds"
+							mask = "gfx/models/portraits/cybernetics/cybernetics_portrait_13_stage_1_mask.dds"
+						}
+					}
+
+					#leader, pop or species scope (when called with species scope, from subscope can contain a country species related to)
+					trigger = {
+						has_cybernetization_stage_1 = yes
+					}
+				}
+
+				{
+					values = {
+						# stage 2 variant 1
+						{
+							decal = "gfx/models/portraits/cybernetics/cybernetics_portrait_13_stage_2_decal.dds"
+							mask = "gfx/models/portraits/cybernetics/cybernetics_portrait_13_stage_2_mask.dds"
+						}
+					}
+
+					#leader, pop or species scope (when called with species scope, from subscope can contain a country species related to)
+					trigger = {
+						has_cybernetization_stage_2 = yes
+					}
+				}
+			}
+		}
+	}
+}
+
+
+portrait_groups = {
+
+	# 02 - Raxxan
+	cyb2 = {
+		default = cyb2_m
+		game_setup = { #will run with a limited country scope. species and government is set but the country does not actually exist
+			add = {
+				trigger = {
+					ruler = {
+						OR = {
+							gender = male
+							gender = indeterminable
+						}
+					}
+				}
+				portraits = {
+					cyb2_m
+				}
+			}
+			add = {
+				trigger = {
+					ruler = {
+						OR = {
+							gender = female
+							gender = indeterminable
+						}
+					}
+				}
+				portraits = {
+					cyb2_f
+				}
+			}
+
+		}
+
+		#species scope
+		species = { #generic portrait for a species
+			add = {
+				trigger = {
+					exists = species
+					NOT = { species = { species_gender = female } }
+				}
+				portraits = {
+					cyb2_m
+				}
+			}
+			add = {
+				trigger = {
+					exists = species
+					NOT = { species = { species_gender = male } }
+				}
+				portraits = {
+					cyb2_f
+				}
+			}
+		}
+
+		#pop scope
+		pop = { #for a specific pop
+			add = {
+				trigger = {
+					NOT = { species = { species_gender = female } }
+				}
+				portraits = {
+					cyb2_m
+				}
+			}
+			add = {
+				trigger = {
+					NOT = { species = { species_gender = male } }
+				}
+				portraits = {
+					cyb2_f
+				}
+			}
+		}
+
+		leader = {
+			add = {
+				trigger = {
+					OR = {
+						gender = male
+						gender = indeterminable
+					}
+				}
+				portraits = {
+					cyb2_m
+				}
+			}
+			add = {
+				trigger = {
+					OR = {
+						gender = female
+						gender = indeterminable
+					}
+				}
+				portraits = {
+					cyb2_f
+				}
+			}
+		}
+
+		ruler = {
+			add = {
+				trigger = {
+					OR = {
+						gender = male
+						gender = indeterminable
+					}
+				}
+				portraits = {
+					cyb2_m
+				}
+			}
+			add = {
+				trigger = {
+					OR = {
+						gender = female
+						gender = indeterminable
+					}
+				}
+				portraits = {
+					cyb2_f
+				}
+			}
+		}
+	}
+
+	# 03 - Moose
+	cyb3 = {
+		default = cyb3_m
+		game_setup = { #will run with a limited country scope. species and government is set but the country does not actually exist
+			add = {
+				trigger = {
+					ruler = {
+						OR = {
+							gender = male
+							gender = indeterminable
+						}
+					}
+				}
+				portraits = {
+					cyb3_m
+				}
+			}
+			add = {
+				trigger = {
+					ruler = {
+						OR = {
+							gender = female
+							gender = indeterminable
+						}
+					}
+				}
+				portraits = {
+					cyb3_f
+				}
+			}
+
+		}
+
+		#species scope
+		species = { #generic portrait for a species
+			add = {
+				trigger = {
+					exists = species
+					NOT = { species = { species_gender = female } }
+				}
+				portraits = {
+					cyb3_m
+				}
+			}
+			add = {
+				trigger = {
+					exists = species
+					NOT = { species = { species_gender = male } }
+				}
+				portraits = {
+					cyb3_f
+				}
+			}
+		}
+
+		#pop scope
+		pop = { #for a specific pop
+			add = {
+				trigger = {
+					NOT = { species = { species_gender = female } }
+				}
+				portraits = {
+					cyb3_m
+				}
+			}
+			add = {
+				trigger = {
+					NOT = { species = { species_gender = male } }
+				}
+				portraits = {
+					cyb3_f
+				}
+			}
+		}
+
+		leader = {
+			add = {
+				trigger = {
+					OR = {
+						gender = male
+						gender = indeterminable
+					}
+				}
+				portraits = {
+					cyb3_m
+				}
+			}
+			add = {
+				trigger = {
+					OR = {
+						gender = female
+						gender = indeterminable
+					}
+				}
+				portraits = {
+					cyb3_f
+				}
+			}
+		}
+
+		ruler = {
+			add = {
+				trigger = {
+					OR = {
+						gender = male
+						gender = indeterminable
+					}
+				}
+				portraits = {
+					cyb3_m
+				}
+			}
+			add = {
+				trigger = {
+					OR = {
+						gender = female
+						gender = indeterminable
+					}
+				}
+				portraits = {
+					cyb3_f
+				}
+			}
+		}
+	}
+
+	# Portrait 08 - Elf
+	cyb8 = {
+		default = cyb8_f
+		game_setup = { #will run with a limited country scope. species and government is set but the country does not actually exist
+			add = {
+				trigger = {
+					ruler = {
+						OR = {
+							gender = male
+							gender = indeterminable
+						}
+					}
+				}
+				portraits = {
+					cyb8_m
+				}
+			}
+			add = {
+				trigger = {
+					ruler = {
+						OR = {
+							gender = female
+							gender = indeterminable
+						}
+					}
+				}
+				portraits = {
+					cyb8_f
+				}
+			}
+
+		}
+
+		#species scope
+		species = { #generic portrait for a species
+			add = {
+				trigger = {
+					exists = species
+					NOT = { species = { species_gender = female } }
+				}
+				portraits = {
+					cyb8_m
+				}
+			}
+			add = {
+				trigger = {
+					exists = species
+					NOT = { species = { species_gender = male } }
+				}
+				portraits = {
+					cyb8_f
+				}
+			}
+		}
+
+		#pop scope
+		pop = { #for a specific pop
+			add = {
+				trigger = {
+					NOT = { species = { species_gender = female } }
+				}
+				portraits = {
+					cyb8_m
+				}
+			}
+			add = {
+				trigger = {
+					NOT = { species = { species_gender = male } }
+				}
+				portraits = {
+					cyb8_f
+				}
+			}
+		}
+
+		leader = {
+			add = {
+				trigger = {
+					OR = {
+						gender = male
+						gender = indeterminable
+					}
+				}
+				portraits = {
+					cyb8_m
+				}
+			}
+			add = {
+				trigger = {
+					OR = {
+						gender = female
+						gender = indeterminable
+					}
+				}
+				portraits = {
+					cyb8_f
+				}
+			}
+		}
+
+		ruler = {
+			add = {
+				trigger = {
+					OR = {
+						gender = male
+						gender = indeterminable
+					}
+				}
+				portraits = {
+					cyb8_m
+				}
+			}
+			add = {
+				trigger = {
+					OR = {
+						gender = female
+						gender = indeterminable
+					}
+				}
+				portraits = {
+					cyb8_f
+				}
+			}
+		}
+	}
+
+	# Portrait 12 - Hooman
+	cyb12 = {
+		default = cyb12_m_01
+		game_setup = { #will run with a limited country scope. species and government is set but the country does not actually exist
+			add = {
+				trigger = {
+					ruler = {
+						OR = {
+							gender = male
+							gender = indeterminable
+						}
+					}
+				}
+				portraits = {
+					cyb12_m_01
+					cyb12_m_02
+					cyb12_m_03
+				}
+			}
+			add = {
+				trigger = {
+					ruler = {
+						OR = {
+							gender = female
+							gender = indeterminable
+						}
+					}
+				}
+				portraits = {
+					cyb12_f_01
+					cyb12_f_02
+					cyb12_f_03
+				}
+			}
+
+		}
+
+		#species scope
+		species = { #generic portrait for a species
+			add = {
+				trigger = {
+					exists = species
+					NOT = { species = { species_gender = female } }
+				}
+				portraits = {
+					cyb12_m_01
+					cyb12_m_02
+					cyb12_m_03
+				}
+			}
+			add = {
+				trigger = {
+					exists = species
+					NOT = { species = { species_gender = male } }
+				}
+				portraits = {
+					cyb12_f_01
+					cyb12_f_02
+					cyb12_f_03
+				}
+			}
+		}
+
+		#pop scope
+		pop = { #for a specific pop
+			add = {
+				trigger = {
+					NOT = { species = { species_gender = female } }
+				}
+				portraits = {
+					cyb12_m_01
+					cyb12_m_02
+					cyb12_m_03
+				}
+			}
+			add = {
+				trigger = {
+					NOT = { species = { species_gender = male } }
+				}
+				portraits = {
+					cyb12_f_01
+					cyb12_f_02
+					cyb12_f_03
+				}
+			}
+		}
+
+		leader = {
+			add = {
+				trigger = {
+					OR = {
+						gender = male
+						gender = indeterminable
+					}
+				}
+				portraits = {
+					cyb12_m_01
+					cyb12_m_02
+					cyb12_m_03
+				}
+			}
+			add = {
+				trigger = {
+					OR = {
+						gender = female
+						gender = indeterminable
+					}
+				}
+				portraits = {
+					cyb12_f_01
+					cyb12_f_02
+					cyb12_f_03
+				}
+			}
+		}
+
+		ruler = {
+			add = {
+				trigger = {
+					OR = {
+						gender = male
+						gender = indeterminable
+					}
+				}
+				portraits = {
+					cyb12_m
+				}
+			}
+			add = {
+				trigger = {
+					OR = {
+						gender = female
+						gender = indeterminable
+					}
+				}
+				portraits = {
+					cyb12_f_01
+					cyb12_f_02
+					cyb12_f_03
+				}
+			}
+		}
+	}
+}

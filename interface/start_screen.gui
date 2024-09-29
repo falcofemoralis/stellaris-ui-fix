@@ -1,0 +1,282 @@
+guiTypes = {
+	containerWindowType = {
+		name = "start_screen_window"
+		size = { width = 787 height = 880 }
+		orientation = center
+		origo = center
+		moveable = yes
+		clipping = no
+
+		background = {
+			name = "start_screen_background"
+			quadTextureSprite = "GFX_start_screen_bg"
+		}
+
+		containerWindowType = {
+			name = "start_screen_frame_bg"
+			size = { width = 747 height = 433 }
+			position = { x = 0 y = 380 }
+			orientation = center_up
+			origo = center_up
+			
+			background = {
+				name = "start_screen_frame"
+				quadTextureSprite = "GFX_tiles_dark_area_cut_8"
+				position = { x = 0 y = 0 }
+				alwaysTransparent = yes
+			}
+		}
+		
+		containerWindowType = {
+			name = "banner"
+			size = { width = 747 height = 347 }
+			position = { x = 0 y = 27 }
+			orientation = center_up
+			origo = center_up
+			
+			background = {
+				name = "banner"
+				spriteType = "GFX_tiles_dark_area_cut_8"
+			}
+		}
+
+		# LEFT SIDE
+		containerWindowType = {
+			name = "leader_window"
+			position = { x = 27 y = 27 }
+			size = { width = 400 height = 333 }
+			orientation = upper_left
+			clipping = yes
+			
+			iconType = {
+				name = "leader_portrait"
+				position = { x = -93 y = -13 }
+				spriteType = "GFX_portrait_character"
+				scale = 0.75
+			}
+		}
+
+		iconType = {
+			name = "ruler_icon"
+			position = { x = 45 y = 49 }
+			spriteType = "GFX_icon_councilor_ruler"
+			scale = 0.7
+		}
+
+		instantTextBoxType={
+			name = "ruler_name_label"
+			font = "cg_16b"
+			text = "LEADER_LABEL"
+			appendtext = ":"
+			position = { x = 80 y = 52 }
+			maxWidth = 267
+			maxHeight = 27
+			fixedSize = yes
+			format = left
+			tooltip_mode_enabled = yes
+		}
+		
+		instantTextBoxType={
+			name = "ruler_name"
+			font = "cg_16b"
+			text = "Emperor Gnorkius"
+			position = { x = 48 y = 80 }
+			maxWidth = 267
+			maxHeight = 27
+			fixedSize = yes
+			format = left
+			text_color_code = "Y"
+		}
+		
+		# RIGHT SIDE
+		instantTextBoxType={
+			name = "empire_name"
+			font = "malgun_goth_24"
+			text = "GNORKALL EMPIRE"
+			position = { x = 360 y = 47 }
+			maxWidth = 387
+			maxHeight = 27
+			fixedSize = yes
+			format = left
+			text_color_code = E
+		}
+		
+		iconType = {
+			name = "government_icon"
+			quadTextureSprite = "GFX_government_authority"
+			position = { x = 360 y = 85 }
+			scale = 0.8
+			orientation = "UPPER_LEFT"
+		}
+
+		instantTextBoxType={
+			name = "government_type"
+			font = "cg_16b"
+			text = "government type"
+			position = { x = 421 y = 91 }
+			maxWidth = 267
+			maxHeight = 53
+			fixedSize = yes
+			format = left
+		}
+		
+		instantTextBoxType={
+			name = "ethics_label"
+			font = "cg_16b"
+			text = "ETHICS"
+			appendtext = ":"
+			position = { x = 360 y = 160 }
+			maxWidth = 133
+			maxHeight = 53
+			fixedSize = yes
+			format = left
+		}
+		
+		overlappingElementsBoxType = {
+			name = "ethics"	
+			position = { x = 360 y = 187 }
+			size = { x = 200 y = 24 }
+			spacing = 2.0
+		}
+		
+		instantTextBoxType={
+			name = "civics_label"
+			font = "cg_16b"
+			text = "GOVERNMENT_CIVICS"
+			appendtext = ":"
+			position = { x = 533 y = 160 }
+			maxWidth = 360
+			maxHeight = 53
+			fixedSize = yes
+			format = left
+		}
+		
+		overlappingElementsBoxType = {
+			name = "civics"
+			position = { x = 533 y = 187 }
+			size = { x = 200 y = 24 }
+			spacing = 2.0
+		}	
+
+		iconType = {
+			name = "planet_class"
+			spriteType = "GFX_planet_type"
+			position = { x = 360 y = 293 }
+		}		
+		
+		instantTextBoxType={
+			name = "species_name"
+			font = "cg_16b"
+			position = { x = 513 y = 280 }
+			maxWidth = 200
+			maxHeight = 53
+			fixedSize = yes
+			format = left
+		}
+
+		containerWindowType = {
+			name = "species_window"
+			position = { x = 407 y = 260 }
+			size = { width = 200 height = 160 }
+			orientation = upper_left
+			clipping = yes
+			
+			iconType = {
+				name = "species_portrait"
+				position = { x = 0 y = 0 }
+				spriteType = "GFX_portrait_character"
+				scale = 0.17
+			}
+		}
+		
+		overlappingElementsBoxType = {
+			name = "traits"
+			position = { x = 513 y = 307 }
+			size = { x = 200 y = 24 }
+			spacing = 2.0
+		}	
+		
+		# BOTTOM
+
+		instantTextBoxType={
+			name = "origin_header"
+			font = "malgun_goth_24"
+			text = "ORIGIN"
+			position = { x = 53 y = 395 }
+			maxWidth = 387
+			maxHeight = 27
+			fixedSize = yes
+			format = left
+			text_color_code = L
+		}
+
+		iconType = {
+			name = "origin_icon"
+			position = { x = 53 y = 433 }
+			spriteType = "GFX_government_civic"
+		}
+
+		instantTextBoxType={
+			name = "origin_name"
+			font = "cg_16b"
+			text = "ORIGIN"
+			position = { x = 107 y = 440 }
+			maxWidth = 387
+			maxHeight = 27
+			fixedSize = yes
+			format = left
+		}
+
+		containerWindowType = {
+			name = "starting_description_container"
+			size = { width = 691 height = 327 }
+			position = { x = 8 y = 480 }
+			orientation = center_up
+			origo = center_up
+			verticalScrollBar = "right_vertical_slider"
+			
+			background = {
+				name = "scroll_input_hitbox"
+				spriteType = "GFX_invisible"
+			}
+
+			instantTextBoxType={
+				name = "starting_description"
+				font = "cg_16b"
+				text = "desc"
+				maxWidth = 667
+				text_color_code = "E"
+				alwaysTransparent = yes
+			}
+		}
+
+		buttonType = {
+			name = "tts_button"
+			position = { x = 727 y = 773 }
+			spriteType = "GFX_button_tts_start"
+			buttonFont = "cg_16b"
+			shortCut = "t"
+		}
+
+		iconType = {
+			name = "flag"
+			quadTextureSprite = "GFX_empire_flag_128"
+			position = { x = 13 y = 220 }
+			orientation = "UPPER_LEFT"
+			alwaysTransparent = yes
+			scale = 1.0
+		}
+
+		buttonType = {
+			name = "close"
+			quadTextureSprite = "GFX_start_screen_button"
+			position = { x = -363 y = -69 }
+			orientation = center_down
+			text = "START_SCREEN_BEGIN"
+			font = "cg_16b"
+			shortCut = "RETURN"
+			clicksound = "back_click"
+			defaultSelection = yes
+		}
+	}
+}

@@ -1,0 +1,304 @@
+@view_w = 800
+@view_h = 800
+@col2_y = 87
+@col1_w = 773
+@component_w = 77
+@component_h = 104
+
+guiTypes = {
+	containerWindowType = {
+		name = "ship_design_view"
+		orientation = center
+		origo = center
+		moveable = yes
+		clipping = yes
+		size = { width = @view_w height = @view_h }
+
+		background = {
+			name = "fleet_view_ship_details_view_background"
+			spriteType = "GFX_tile_outliner_bg"
+		}
+
+		buttonType = {
+			name = "close"
+			quadTextureSprite = "GFX_close_square"
+			orientation = UPPER_RIGHT
+			position = { x = -53 y = 15 }
+			pdx_tooltip = "CLOSE_TITLE"
+			shortcut = "ESCAPE"
+			clicksound = "back_click"
+			actionShortcut = "cancel"
+			oversound = mouse_over
+		}
+
+		# view title and ship name
+
+		iconType = {
+			name = "hex_bg"
+			alwaystransparent = yes
+			spriteType = "GFX_hex_bg"
+			position = { x = -20 y = -20 }
+		}
+
+		iconType = {
+			name = "empire_header_line"
+			quadTextureSprite = "GFX_line_long"
+			position = { x = 8 y = 29 }
+			alwaysTransparent = yes
+		}
+
+		instantTextBoxType = {
+			name = "name"
+			alwaystransparent = yes
+			position = { x = 25 y = 7 }
+			font = "malgun_goth_24"
+			text = "SHIP_DESIGN"
+			maxWidth = 360
+			maxHeight = 53
+			fixedSize = yes
+			format = left
+		}
+
+		instantTextBoxType = {
+			name = "type"
+			alwaystransparent = yes
+			position = { x = 27 y = 60 }
+			font = "cg_16b"
+			text = "TYPE"
+			maxWidth = 400
+			maxHeight = 27
+			fixedSize = yes
+			format = left
+			text_color_code = "E" 
+		}
+
+		# ship model
+
+		containerWindowType = {
+			name = "ship_model"
+			size = { width = 397 height = 160 }
+			position = { x = 20 y = @col2_y }
+
+			#background = {
+			#	name = "fleet_view_ship_details_view_ship_bg"
+			#	quadTextureSprite = "GFX_tiles_dark_area_cut_8"
+			#}
+
+			buttonType = {
+				name = "3d_icon"
+				quadTextureSprite = "GFX_dummy_3d_ship_details"
+				size = { x = 397 y = 160 }
+				position = { x = 0 y = 0 }
+			}
+		}
+
+		# ship stats
+
+		containerWindowType = {
+			name = "stats"
+			size = { width = 347 height = 293 }
+			position = { x = -20 y = @col2_y }
+			orientation = upper_right
+			origo = upper_right
+
+			background = {
+				name = "fleet_view_ship_details_view_bg"
+				quadTextureSprite = "GFX_tiles_dark_area_cut_8"
+			}
+
+			instantTextBoxType={
+				name = "hitpoints"
+				text = "SHIP_STAT_HITPOINTS_INLINE"
+				font = "cg_16b"
+				maxWidth = 347
+				maxHeight = 27
+				fixedsize = yes
+				position = { x = 8 y = 7 }
+				format = left
+			}
+
+			instantTextBoxType={
+				name = "hitpoints_value"
+				text = ""
+				font = "cg_16b"
+				maxWidth = 347
+				maxHeight = 27
+				fixedsize = yes
+				position = { x = -13 y = 7 }
+				format = right
+			}
+
+			instantTextBoxType={
+				name = "shields"
+				text = "SHIP_STAT_SHIELDS_INLINE"
+				font = "cg_16b"
+				maxWidth = 347
+				maxHeight = 27
+				fixedsize = yes
+				position = { x = 8 y = 73 }
+				format = left
+			}
+
+			instantTextBoxType={
+				name = "shields_value"
+				text = ""
+				font = "cg_16b"
+				maxWidth = 347
+				maxHeight = 27
+				fixedsize = yes
+				position = { x = -13 y = 73 }
+				format = right
+			}
+
+			instantTextBoxType={
+				name = "armor"
+				text = "SHIP_STAT_ARMOR_INLINE"
+				font = "cg_16b"
+				maxWidth = 347
+				maxHeight = 27
+				fixedsize = yes
+				position = { x = 8 y = 40 }
+				format = left
+			}
+
+			instantTextBoxType={
+				name = "armor_value"
+				text = ""
+				font = "cg_16b"
+				maxWidth = 347
+				maxHeight = 27
+				fixedsize = yes
+				position = { x = -13 y = 40 }
+				format = right
+			}
+
+			instantTextBoxType={
+				name = "speed"
+				text = "SHIP_STAT_SPEED_INLINE"
+				font = "cg_16b"
+				maxWidth = 347
+				maxHeight = 27
+				fixedsize = yes
+				position = { x = 8 y = 107 }
+				format = left
+			}
+
+			instantTextBoxType={
+				name = "speed_value"
+				text = ""
+				font = "cg_16b"
+				maxWidth = 347
+				maxHeight = 27
+				fixedsize = yes
+				position = { x = -13 y = 107 }
+				format = right
+			}
+
+			instantTextBoxType={
+				name = "evasion"
+				text = "SHIP_STAT_EVASION_INLINE"
+				font = "cg_16b"
+				maxWidth = 347
+				maxHeight = 27
+				fixedsize = yes
+				position = { x = 8 y = 140 }
+				format = left
+			}
+
+			instantTextBoxType={
+				name = "evasion_value"
+				text = ""
+				font = "cg_16b"
+				maxWidth = 347
+				maxHeight = 27
+				fixedsize = yes
+				position = { x = -13 y = 140 }
+				format = right
+			}
+
+			instantTextBoxType={
+				name = "damage"
+				text = "SHIP_STAT_DAMAGE_INLINE"
+				font = "cg_16b"
+				maxWidth = 347
+				maxHeight = 27
+				fixedsize = yes
+				position = { x = 8 y = 173 }
+				format = left
+			}
+
+			instantTextBoxType={
+				name = "damage_value"
+				text = ""
+				font = "cg_16b"
+				maxWidth = 347
+				maxHeight = 27
+				fixedsize = yes
+				position = { x = -13 y = 173 }
+				format = right
+			}
+
+			instantTextBoxType={
+				name = "cloaking"
+				text = "SHIP_STAT_CLOAKING_STRENGTH_INLINE"
+				font = "cg_16b"
+				maxWidth = 347
+				maxHeight = 27
+				fixedsize = yes
+				position = { x = 8 y = 207 }
+				format = left
+			}
+			
+			iconType = {
+				name = "cloaking_level"
+				spriteType = "GFX_cloaking_level_0"
+				position = { x = 267 y = 207 }
+			}
+		}
+
+		# core components
+
+		containerWindowType = {
+			name = "components"
+			size = { width = 411 height = @component_h }
+			position = { x = 13 y = 260 }
+
+			instantTextBoxType = {
+				name = "label"
+				alwaysTransparent = yes
+				position = { x = 13 y = 0 }
+				font = "cg_16b"
+				text = "FLEET_VIEW_COMPONENTS_LABEL"
+				maxWidth = 667
+				maxHeight = 27
+				fixedSize = yes
+				format = left
+			}
+
+			buttonType = {
+				name = "bg"
+				alwaysTransparent = yes
+				spriteType = "GFX_tiles_frame_light"
+				position = { x = 0 y = 20 }
+				size = { x = 411 y = @component_h }
+			}
+
+			gridBoxType = {
+				name = "components"
+				slotSize = { width = @component_w height = @component_h }
+				max_slots_horizontal = 5
+				format = "UPPER_LEFT"
+				position = { x = 12 y = 20 }
+				size = { width = 397 height = @component_h }
+			}
+		}
+
+		# armaments and utilities
+
+		smoothListboxType = {
+			name = "component_sets"
+			size = { x = @col1_w y = 427 }
+			position = { x = 13 y = 389 }
+		}
+	}
+}

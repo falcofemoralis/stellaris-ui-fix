@@ -1,0 +1,300 @@
+@dynamic_extra = 0.8
+@slim_row_h = 124
+
+guiTypes = {
+
+	containerWindowType = {
+		name = "topbar_leaders_view"
+		size = { width = 1404 height = 853 }
+		dynamic_extra_height = @dynamic_extra
+		position = { x = -1404 y = 53 }
+		show_position = { x = 47 y = 53 }
+        hide_position = { x = -1693 y = 53 }
+        animation_time = 200
+        animation_type = decelerated
+		
+		orientation = upper_left
+		moveable = no
+		clipping = no
+		show_sound = "interface"
+		
+		background = {
+			name = "background"
+			spriteType = "GFX_tile_outliner_bg"
+		}
+		
+		iconType = {
+			name = "hex_bg"
+			spriteType = "GFX_hex_bg"
+			position = { x = 7 y = -16 }
+			alwaysTransparent = yes
+		}
+		
+		iconType = {
+			name = "leaders_header_line"
+			quadTextureSprite = "GFX_line"
+			position = { x = 8 y = 28 }
+			alwaystransparent = yes
+		}
+
+		instantTextBoxType={
+			name = "leaders_header"
+			font = "malgun_goth_24"
+			text = "topbar_button_leaders_name"
+			position = { x = 47 y = 7 }
+			maxWidth = 400
+			maxHeight = 27
+			fixedSize = yes
+			format = left
+		}
+		
+		buttonType = {
+			name = "close"
+			quadTextureSprite = "GFX_close"
+			position = { x = -60 y = 21 }
+			orientation = upper_right
+			shortcut = "ESCAPE"
+			clicksound = "back_click"
+			pdx_tooltip = "CLOSE_TITLE"
+		}
+
+		@class_label_x = 21
+		@class_label_y = 0
+		@class_tab_button_y = 53
+
+		@recruit_button_y = 93
+        
+		containerWindowType = {
+			name = "leader_list_container"
+			position = { x = 20 y = 120 }
+			size = { width = 853 height = 653 }
+			clipping = no
+
+			smoothListBoxType = {
+				name = "leader_container_list"
+				orientation = "UPPER_LEFT"
+				priority = 100
+				size = { x = 860 y = 693 }
+				scrollbartype = "standardlistbox_slider"
+				spacing = 0
+				defaultSelection = yes
+			}
+		}
+
+		containerWindowType = {
+			name = "leader_portrait_container"
+			size = { width = 453 height = 680 }
+			position = { x = 907 y = 127 }
+			clipping = no
+
+			background = {
+				name = "leader_details_bg"
+				spriteType = "GFX_invisible"
+			}
+		}
+
+		containerWindowType = {
+			name = "no_available_leader_container"
+			size = { width = 453 height = 680 }
+			position = { x = 920 y = 127 }
+			clipping = no
+
+			background = {
+				name = "no_available_leader_container_bg"
+				spriteType = "GFX_invisible"
+			}
+
+			instantTextBoxType = {
+				name = "no_available_leader_text"
+				font = "cg_16b"
+				position = { x = 0 y = 320 }
+				maxWidth = 453
+				maxHeight = 67
+				format = center
+			}
+		}
+
+		@leader_action_button_pos_y = -115
+
+		buttonType = {
+			name = "hire_leader_button"
+			quadTextureSprite = "GFX_standard_button_180_34_button"
+			position = { x = -304 y = @leader_action_button_pos_y }
+			orientation = "LOWER_RIGHT"
+			buttonText = "HIRE_LEADER"
+			font = "cg_16b"
+		}
+
+		buttonType = {
+			name = "dismiss_leader_button"
+			quadTextureSprite = "GFX_standard_button_180_34_button"
+			position = { x = -500 y = @leader_action_button_pos_y }
+			orientation = "LOWER_RIGHT"
+			buttonText = "DISMISS_LEADER"
+			font = "cg_16b"
+			shortcut = "DEL" 
+		}
+
+
+		checkboxType = {
+			position = { x = 12 y = 812 }
+			name = "autoselect_traits_checkbox"
+			spriteType = "GFX_checkbox_20_20_01"
+		}
+
+		instantTextBoxType = {
+			name = "autoselect_traits_title"
+			font = "cg_16b"
+			text = "autoselect_traits"
+			position = { x = 56 y = 820 }
+			maxWidth = 267
+			maxHeight = 53
+			fixedSize = yes
+			format = left
+		}
+	}
+
+	containerWindowType = {
+		name = "leaders_view_gridbox_entry"
+		size = { width = 853 height = @slim_row_h }
+
+		containerWindowType = {
+			name = "selected_overlay"
+			position = { x = 4 y = 0 }
+			size = { width = 853 height = 117 }
+
+			background = {
+				name = "selected_bg"
+				spriteType = "GFX_glow_tile_orange_no_padding"
+				alwaysTransparent = yes
+			}
+		}
+
+		buttonType = {
+			name = "expand_leader_button"
+			spriteType = "GFX_leader_assign_entry_bg"
+			position = { x = -12 y = -16 }
+			size = { x = 853 y = 133 }
+			oversound = "no_sound"
+			clicksound = "select_click"
+		}
+	}
+
+	containerWindowType = {
+		name = "collapsable_leader_container"
+		size = { width = 853 height = 56 }
+		clipping = no
+
+		buttonType = {
+			name = "expand_button"
+			spriteType = "GFX_expand_row_long_button"
+			position = { x = 4 y = 0 }
+			size = { x = 853 y = 56 }
+			oversound = "no_sound"
+			clicksound = "select_click"
+			format = left
+			font = "cg_16b"
+			borderSize = { x = 3 y = 0 }
+			pdx_tooltip = "CLICK_TO_EXPAND"
+		}
+
+		buttonType = {
+			name = "unexpand_button"
+			spriteType = "GFX_unexpand_row_long_button"
+			position = { x = 4 y = 0 }
+			size = { x = 853 y = 56 }
+			oversound = "no_sound"
+			clicksound = "select_click"
+			format = left
+			font = "cg_16b"
+			borderSize = { x = 3 y = 0 }
+			pdx_tooltip = "CLICK_TO_COLLAPSE"
+		}
+
+		instantTextBoxType={
+			name = "rhs_header_button_custom_text"
+			position = { x = 325 y = 17 }
+			font = "cg_16b"
+			maxWidth = 533
+			maxHeight = 27
+			fixedSize = yes
+			format = right
+		}
+
+		gridBoxType = {
+			name = "item_gridbox"
+			position = { x = 0 y = 56 }
+
+			slotSize = { width = 853 height = @slim_row_h }
+			max_slots_horizontal = 1
+			format = UPPER_LEFT
+
+			background = {
+				name = "background"
+				spriteType = "GFX_tiled_window_transparent"
+				position = { x = 0 y = 0 }
+				alwaystransparent = yes
+			}
+		}
+	}
+
+	containerWindowType = {
+		name = "all_tab_container"
+		position = { x = 8 y = @class_tab_button_y } 	# this position is used to start placing the buttons
+		size = { width = 133 height = 53 }				# this is used to know how to space class buttons
+
+		buttonType = {
+			name = "show_class_tab_button"
+			spriteType = "GFX_button_filter_tab"
+			size = { x = 160 y = 67 }
+		}
+		buttonType = {
+			name = "selected"
+			spriteType = "GFX_button_filter_tab_selected"
+			size = { x = 160 y = 67 }
+			alwaystransparent = yes
+		}
+
+		instantTextBoxType = {
+			name = "class_title_label"
+			font = "cg_16b"
+			position = { x = @class_label_x y = @class_label_y }
+			maxWidth = 133
+			maxHeight = 53
+			multiline = yes
+			format = center
+			vertical_alignment = center
+			alwaystransparent = yes
+		}
+	}
+	
+	containerWindowType = {
+		name = "leader_class_tab_container"
+		position = { x = 8 y = @class_tab_button_y } 	# this position is used to start placing the buttons
+		size = { width = 243 height = 53 }				# this is used to know how to space class buttons
+
+		buttonType = {
+			name = "show_class_tab_button"
+			spriteType = "GFX_button_filter_tab"
+			size = { x = 276 y = 67 }
+		}
+		buttonType = {
+			name = "selected"
+			spriteType = "GFX_button_filter_tab_selected"
+			size = { x = 276 y = 67 }
+			alwaystransparent = yes
+		}
+
+		instantTextBoxType = {
+			name = "class_title_label"
+			font = "cg_16b"
+			position = { x = @class_label_x y = @class_label_y }
+			maxWidth = 243
+			maxHeight = 53
+			multiline = yes
+			format = center
+			vertical_alignment = center
+			alwaystransparent = yes
+		}
+	}
+}

@@ -1,0 +1,227 @@
+guiTypes = {
+	containerWindowType = {
+		name = "LeaderStoryEventWindow"
+		orientation = center
+		origo = center
+		moveable = yes
+		clipping = no
+		size = { width = 987 height = 0 } #height set in code
+
+		background = {
+			name = "background"
+			quadTextureSprite = "GFX_tile_outliner_bg"
+		}
+
+		### BACKGROUND IMAGE ###
+
+		iconType = {
+			name = "event_background_image"
+			spriteType = "GFX_leader_recruitment_bg_renowned"
+			position = { x = 0 y = 1 }
+			alwaysTransparent = yes
+		}
+
+		### LEADER NAME ###
+
+		iconType = {
+			name = "hex_bg"
+			position = { x = 320 y = -11 }
+			alwaysTransparent = yes
+			spriteType = "GFX_hex_bg"
+		}
+
+		iconType = {
+			name = "header_line"
+			orientation = upper_right
+			position = { x = -637 y = 39 }
+			alwaysTransparent = yes
+			spriteType = "GFX_line_medium"
+		}
+
+		instantTextBoxType = {
+			name = "event_window_heading"
+			orientation = upper_right
+			position = { x = -629 y = 13 }
+			font = "malgun_goth_24"
+			text = "DIPLOMACY"
+			maxWidth = 724
+			maxHeight = 29
+			fixedSize = yes
+			alwaysTransparent = yes
+			#text_color_code = "Y"
+		}
+
+		### LEADER PORTRAIT ###
+
+		containerWindowType = {
+			name = "portrait_locator"
+			position = { x = 0 y = -67 }
+			size = { width = 640 height = 667 }
+			clipping = yes
+		}
+
+		### EVENT PICTURE ###
+		@event_picture_pos_x = -327
+		@event_picture_pos_y = 173
+
+		iconType = {
+			name = "event_picture"
+			orientation = upper_right
+			position = { x = @event_picture_pos_x y = @event_picture_pos_y }
+			spriteType = "GFX_event_frame"
+			centerPosition = yes
+			alwaystransparent = yes
+		}
+
+		iconType = {
+			name = "picture_frame"
+			orientation = upper_right
+			position = { x = @event_picture_pos_x y = @event_picture_pos_y }
+			spriteType = "GFX_event_frame"
+			centerPosition = yes
+			alwaystransparent = yes
+		}
+
+		iconType = {
+			name = "stripes_1"
+			orientation = upper_right
+			spriteType = "GFX_event_stripes_1"
+			centerPosition = yes
+			position = { x = @event_picture_pos_x y = @event_picture_pos_y }
+			alwaystransparent = yes
+		}
+
+		### EVENT TITLE ###
+
+		containerWindowType = {
+			name = "event_title_container"
+			position = { x = 348 y = 269 }
+			size = { width = 616 height = 40 }
+
+			iconType = {
+				name = "hex_bg"
+				position = { x = -13 y = -13 }
+				alwaysTransparent = yes
+				spriteType = "GFX_hex_bg"
+			}
+
+			instantTextBoxType = {
+				name = "event_title"
+				position = { x = 13 y = 7 }
+				font = "malgun_goth_24"
+				maxWidth = 573
+				format = left
+			}
+		}
+
+		### DISMISS BUTTON
+		buttonType = {
+			name = "close"
+			quadTextureSprite = "GFX_close"
+			position = { x = 933 y = 13 }
+			pdx_tooltip = "CLOSE_TITLE"
+		}
+
+		### DESCRIPTION ###
+
+		containerWindowType = {
+			name = "description_container"
+			orientation = upper_right
+			position = { x = -633 y = 309 }
+			size = { width = 616 height = 0 } #height set in code
+
+			background = {
+				name = "description_frame"
+				spriteType = "GFX_tiles_frame_light"
+				alwaystransparent = yes
+			}
+
+			instantTextBoxType = {
+				name = "description"
+				position = { x = 20 y = 20 }
+				font = "cg_16b"
+				text_color_code = "E"
+				maxWidth = 573
+				format = left
+			}
+		}
+
+		### OPTIONS LIST ###
+
+		listboxType = {
+			name = "option_list"
+			position = { x = 0 y = 0 }
+			size = { x = 867 y = 293 }
+			spacing = 1
+			Orientation = "UPPER_LEFT"
+			alwaysTransparent = yes
+		}
+
+		### TTS BUTTON ###
+		buttonType = {
+			name = "tts_button"
+			position = { x = 920 y = 389}
+			spriteType = "GFX_button_tts_start"
+			buttonFont = "cg_16b"
+			shortCut = "t"
+		}
+	}
+
+	### OPTION POS.X CORRECTION ###
+
+	# These paddings and offsets are required because description 
+	# and option list positions and sizes are adjusted in code
+
+	positionType = {
+		name = "leader_story_description_padding_y"
+		# vertical padding between heading and description section
+		position = { x = 0 y = 43 }
+	}
+
+	positionType = {
+		name = "leader_story_event_option_offset_x"
+		position = { x = 344 y = 0 }
+	}
+
+	positionType = {
+		name = "leader_story_option_list_padding_y"
+		# vertical padding between descri`ption section and option list
+		position = { x = 0 y = 7 }
+	}
+
+	positionType = {
+		name = "leader_story_bottom_padding_y"
+		# vertical padding between option list and the bottom edge of the window
+		position = { x = 0 y = 43 }
+	}
+
+	### OPTION BUTTON ENTRY ###
+
+	containerWindowType = {
+		name = "leader_story_event_option_entry"
+		position = { x = 0 y = 0 }
+		size = { width = 517 height = 40 }
+		moveable = no
+
+		buttonType = {
+			name = "option_button"
+			spriteType = "GFX_event_button_452"
+			position = { x=0 y=11 }
+			font = "cg_16b"
+			text = "OPTION_TEXT"
+		}
+
+		OverlappingElementsBoxType = {
+			name = "trigger_icons"
+			position = { x = 0  y = 13 }
+			size = { x=87 y= 37 }
+		}
+
+		iconType = {
+			name = "selector_gui_presence_icon"
+			position = { x = 587 y = 17 }
+			spriteType = "GFX_coop_presence_indicator"
+			scale = 0.55
+		}
+	}
+}

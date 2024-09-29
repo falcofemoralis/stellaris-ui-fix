@@ -1,0 +1,218 @@
+guiTypes = {
+	containerWindowType = {
+		@claims_view_width = 507
+
+		name = "claims_view"
+
+		size = { width = @claims_view_width height = 800 } 
+		hide_position = { x = -480 y = 153 } # Changed in code to center the window vertically
+		show_position = { x = 47 y = 153 } # Changed in code to center the window vertically
+		animation_type = decelerated
+		animation_time = 500.5
+
+		background = {
+			name = "background"
+			spriteType = "GFX_tile_outliner_bg"
+		}
+
+		iconType = {
+			name = "hex_background"
+			spriteType = "GFX_hex_bg"
+			position = { x = -7 y = -16 }
+			alwaysTransparent = yes
+		}
+
+		iconType = {
+			name = "header_line"
+			quadTextureSprite = "GFX_line"
+			position = { x = 8 y = 28 }
+			alwaystransparent = yes
+		}
+
+		buttonType = {
+			name = "close"
+			quadTextureSprite = "GFX_close"
+			position = { x = -60 y = 21 }
+			orientation = upper_right
+			pdx_tooltip = "CLOSE_TITLE"
+			clicksound = "back_click"
+			shortcut = "ESCAPE"
+		}
+
+		buttonType = {
+			name = "make_claims"
+			quadTextureSprite = "GFX_standard_button_200_34_button"
+			position = { x = -149 y = -76 }
+			orientation = center_down
+			buttonFont = "cg_16b"
+			buttonText = "MAKE_CLAIMS"
+			pdx_tooltip = "TOOLTIP_MAKE_CLAIMS"
+			clicksound = "make_claims"
+		}
+
+		instantTextBoxType = {
+			name = "title"
+			position = { x = 35 y = 7 }
+			text = "CLAIMS_VIEW"
+			font = "malgun_goth_24"
+			maxWidth = 387
+			maxHeight = 27
+			fixedSize = yes
+		}
+
+		containerWindowType = {
+			name = "list_background"
+			position = { x = 8 y = 75 }
+			size = { width = 491 height = 660 }
+
+			background = {
+				name = "background"
+				spriteType = "GFX_tiles_frame_light"
+			}
+		}
+
+		smoothListBoxType = {
+			name = "claims_list"
+			size = { x = 492 y = 641 }
+			position = { x = 16 y = 84 }
+			offset = { x = -15 y = 0 }
+			borderSize = { x = 0 y = 0 }
+			scrollbartype = "standardlistbox_slider"
+		}
+	}
+
+	@item_width = 475
+	@item_height = 61
+
+	containerWindowType = {
+		name = "claim_system_item"
+		position = { x = 0 y = 0 }
+		size = { width = @item_width height = @item_height }
+
+		@item_text_y = 20
+		@item_text_max_width = 29
+		@item_text_max_height = 21
+		@item_button_y = -5
+		@item_button_icon_y = 12
+		@item_flag_y = 9
+
+		buttonType = {
+			name = "background"
+			spriteType = "GFX_interface_list_light"
+			position = { x = 0 y = 0 }
+			size = { x = @item_width y = @item_height }
+		}
+
+		buttonType = {
+			name = "system_owner_flag"
+			quadTextureSprite = "GFX_empire_flag_32"
+			position = { x = 7 y = @item_flag_y }
+		}
+
+		buttonType = {
+			name = "leader_flag"
+			quadTextureSprite = "GFX_empire_flag_32"
+			position = { x = -243 y = @item_flag_y }
+			orientation = upper_right
+		}
+
+		instantTextBoxType={
+			name = "system_name"
+			font = "cg_16b"
+			maxWidth = 153
+			maxHeight = @item_height
+			position = { x = 53 y = 0 }
+			vertical_alignment = center
+			fixedSize = yes
+			alwaysTransparent = yes
+		}
+
+		instantTextBoxType={
+			name = "leader_claims"
+			font = "cg_16b"
+			fixedSize = yes
+			maxWidth = @item_text_max_width
+			maxHeight = @item_text_max_height
+			position = { x = -235 y = @item_text_y }
+			text = "2"
+			orientation = upper_right
+			format = center
+			alwaysTransparent = yes
+		}
+
+		instantTextBoxType={
+			name = "our_claims"
+			font = "cg_16b"
+			fixedSize = yes
+			maxWidth = @item_text_max_width
+			maxHeight = @item_text_max_height
+			position = { x = -149 y = @item_text_y }
+			text = "1"
+			orientation = upper_right
+			format = center
+			alwaysTransparent = yes
+		}
+
+		instantTextBoxType={
+			name = "claim_cost"
+			font = "cg_16b"
+			maxWidth = 67
+			maxHeight = @item_text_max_height
+			position = { x = -69 y = @item_text_y }
+			text = "10"
+			orientation = upper_right
+			format = center
+		}
+
+		iconType = {
+			name = "remove_claim_icon"
+			spriteType = "GFX_minus_29"
+			position = { x = -191 y = @item_button_icon_y }
+			orientation = upper_right
+			alwaysTransparent = yes
+		}
+
+		buttonType = {
+			name = "remove_claim"
+			quadTextureSprite = "GFX_button_29_animated"
+			buttonFont = "cg_16b"
+			position = { x = -207 y = @item_button_y }
+			orientation = upper_right
+		}
+
+		iconType = {
+			name = "add_claim_icon"
+			spriteType = "GFX_plus_29"
+			position = { x = -113 y = @item_button_icon_y }
+			orientation = upper_right
+			alwaysTransparent = yes
+		}
+
+		buttonType = {
+			name = "add_claim"
+			quadTextureSprite = "GFX_button_29_animated"
+			buttonFont = "cg_16b"
+			position = { x = -129 y = @item_button_y }
+			orientation = upper_right
+		}
+	}
+
+	containerWindowType = {
+		@item_header_height = 39
+
+		name = "claim_system_item_header"
+		position = { x = 0 y = 0 }
+		size = { width = @item_width height = @item_header_height }
+
+		instantTextBoxType={
+			name = "header_text"
+			position = { x = 0 y = 0 }
+			maxWidth = @item_width
+			maxHeight = @item_header_height
+			font = "cg_16b"
+			format = center
+			vertical_alignment = center
+			fixedSize = yes
+		}
+	}
+}

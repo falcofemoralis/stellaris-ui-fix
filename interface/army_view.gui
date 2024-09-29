@@ -1,0 +1,343 @@
+guiTypes = {
+	containerWindowType = {
+		name = "army_view"
+		size = { width = 400 height = 293 }
+		orientation = center
+		origo = center
+		moveable = yes
+		clipping = no
+		
+		background = {
+			name = "army_view_background"
+			quadTextureSprite = "GFX_tile_outliner_bg"
+		}
+				
+		iconType = {
+			name = "hex_bg"
+			spriteType = "GFX_hex_bg"
+			position = { x = -7 y = -13 }
+			alwaysTransparent = yes
+		}
+
+		buttonType = {
+			name = "close"
+			quadTextureSprite = "GFX_close"
+			position = { x = -53 y = 11 }
+			Orientation = "UPPER_RIGHT"
+			shortCut = "ESCAPE"
+			clicksound = "back_click"
+			pdx_tooltip = "CLOSE_TITLE"
+		}
+
+		buttonType = {
+			name = "disband"
+			quadTextureSprite = "GFX_fleet_disband"
+			position = { x= -84 y = 27 }
+			Orientation = "UPPER_RIGHT"
+			buttonFont = "cg_16b"
+		}
+
+		buttonType = {
+			name = "army_rename_button"
+			quadTextureSprite = "gfx_transparency_button"
+			position = { x = 40 y = 7 }
+			size = { x = 267 y = 33 }
+		}		
+		
+		iconType = {
+			name = "army_icon"
+			spriteType = "GFX_army_icons"
+			position = { x = 0 y = 0 }
+			frame = 2
+		}
+
+		instantTextBoxType = {
+			name = "name"
+			font = "malgun_goth_24"
+			text = "-"
+			position = { x = 47 y = 7 }
+			maxWidth = 400
+			maxHeight = 27
+			fixedSize = yes
+			format = left
+			orientation = "UPPER_LEFT"
+			alwaysTransparent = yes
+		}
+
+		containerWindowType = {
+			name = "army_info_box"
+			size = { width = 347 height = 220 }
+			position = { x = 13 y = 60 }
+			
+				background = {
+					name = "army_info"
+					spriteType = "GFX_tiles_dark_area_cut_8"
+					alwaysTransparent = yes
+				}
+		}
+		
+		
+		###
+		
+		@army_view_lables = 27 
+		@army_view_value = 53
+		@army_view_value_width = 293
+		
+		instantTextBoxType = {
+			name = "leader_name_label"
+			font = "cg_16b"
+			text = "ARMY_VIEW_LEADER"
+			appendtext = ":"
+			position = { x = @army_view_lables y = 67 }
+			maxWidth = 133
+			maxHeight = 27
+			fixedSize = yes
+			format = left
+			orientation = "UPPER_LEFT"
+			text_color_code = "H"
+		}
+
+		instantTextBoxType = {
+			name = "leader_name"
+			font = "cg_16b"
+			text = "-"
+			position = { x = @army_view_value y = 67 }
+			maxWidth = @army_view_value_width
+			maxHeight = 27
+			fixedSize = yes
+			format = right
+			orientation = "UPPER_LEFT"
+		}
+
+		instantTextBoxType = {
+			name = "type_label"
+			font = "cg_16b"
+			text = "ARMY_VIEW_TYPE"
+			appendtext = ":"
+			position = { x = @army_view_lables y = 93 }
+			maxWidth = 133
+			maxHeight = 27
+			fixedSize = yes
+			format = left
+			orientation = "UPPER_LEFT"
+		}
+
+		instantTextBoxType = {
+			name = "type"
+			font = "cg_16b"
+			text = "-"
+			position = { x = @army_view_value y = 93 }
+			maxWidth = @army_view_value_width
+			maxHeight = 27
+			fixedSize = yes
+			format = right
+			orientation = "UPPER_LEFT"
+		}
+		
+		instantTextBoxType = {
+			name = "rank_label"
+			font = "cg_16b"
+			text = "ARMY_VIEW_RANK"
+			appendtext = ":"
+			position = { x = @army_view_lables y = 113 }
+			maxWidth = 112
+			maxHeight = 27
+			fixedSize = yes
+			format = left
+			orientation = "UPPER_LEFT"
+		}
+		
+		instantTextBoxType = {
+			name = "rank"
+			font = "cg_16b"
+			text = "-"
+			position = { x = @army_view_value y = 113 }
+			maxWidth = @army_view_value_width
+			maxHeight = 27
+			fixedSize = yes
+			format = right
+			orientation = "UPPER_LEFT"
+		}
+
+		instantTextBoxType = {
+			name = "species_label"
+			font = "cg_16b"
+			text = "SPECIES"
+			appendtext = ":"
+			position = { x = @army_view_lables y = 133 }
+			maxWidth = 112
+			maxHeight = 27
+			fixedSize = yes
+			format = left
+			orientation = "UPPER_LEFT"
+		}
+
+		instantTextBoxType = {
+			name = "species"
+			font = "cg_16b"
+			text = "-"
+			position = { x = @army_view_value y = 133 }
+			maxWidth = @army_view_value_width
+			maxHeight = 27
+			fixedSize = yes
+			format = right
+			orientation = "UPPER_LEFT"
+		}
+
+		instantTextBoxType = {
+			name = "damage_label"
+			font = "cg_16b"
+			text = "ARMY_VIEW_DMG"
+			appendtext = ":"
+			position = { x = @army_view_lables y = 153 }
+			maxWidth = 200
+			maxHeight = 27
+			fixedSize = yes
+			format = left
+			orientation = "UPPER_LEFT"
+		}
+
+		instantTextBoxType = {
+			name = "damage"
+			font = "cg_16b"
+			text = "-"
+			position = { x = @army_view_value y = 153 }
+			maxWidth = @army_view_value_width
+			maxHeight = 27
+			fixedSize = yes
+			format = right
+			orientation = "UPPER_LEFT"
+			text_color_code = "Y"
+		}
+		
+		instantTextBoxType = {
+			name = "morale_damage_label"
+			font = "cg_16b"
+			text = "ARMY_VIEW_MORALE_DMG"
+			appendtext = ":"
+			position = { x = @army_view_lables y = 173 }
+			maxWidth = 200
+			maxHeight = 27
+			fixedSize = yes
+			format = left
+			orientation = "UPPER_LEFT"
+		}
+		
+		instantTextBoxType = {
+			name = "morale_damage"
+			font = "cg_16b"
+			text = "-"
+			position = { x = @army_view_value y = 173 }
+			maxWidth = @army_view_value_width
+			maxHeight = 27
+			fixedSize = yes
+			format = right
+			orientation = "UPPER_LEFT"
+			text_color_code = "Y"
+		}		
+
+		instantTextBoxType = {
+			name = "collateral_damage_label"
+			font = "cg_16b"
+			text = "ARMY_VIEW_COLLATERAL_DMG"
+			appendtext = ":"
+			position = { x = @army_view_lables y = 193 }
+			maxWidth = 200
+			maxHeight = 27
+			fixedSize = yes
+			format = left
+			orientation = "UPPER_LEFT"
+		}
+		
+		instantTextBoxType = {
+			name = "collateral_damage"
+			font = "cg_16b"
+			text = "-"
+			position = { x = @army_view_value y = 193 }
+			maxWidth = @army_view_value_width
+			maxHeight = 27
+			fixedSize = yes
+			format = right
+			orientation = "UPPER_LEFT"
+			text_color_code = "Y"
+		}				
+		
+		instantTextBoxType = {
+			name = "health_label"
+			font = "cg_16b"
+			text = "ARMY_VIEW_HEALTH"
+			appendtext = ":"
+			position = { x = @army_view_lables y = 213 }
+			maxWidth = 133
+			maxHeight = 27
+			fixedSize = yes
+			format = left
+			orientation = "UPPER_LEFT"
+		}
+
+		instantTextBoxType = {
+			name = "health"
+			font = "cg_16b"
+			text = "-"
+			position = { x = @army_view_value y = 213 }
+			maxWidth = @army_view_value_width
+			maxHeight = 27
+			fixedSize = yes
+			format = right
+			orientation = "UPPER_LEFT"
+			text_color_code = "Y"
+		}
+
+		instantTextBoxType = {
+			name = "morale_label"
+			font = "cg_16b"
+			text = "ARMY_VIEW_MORALE"
+			appendtext = ":"
+			position = { x = @army_view_lables y = 233 }
+			maxWidth = 200
+			maxHeight = 27
+			fixedSize = yes
+			format = left
+			orientation = "UPPER_LEFT"
+		}
+
+		instantTextBoxType = {
+			name = "morale"
+			font = "cg_16b"
+			text = "-"
+			position = { x = @army_view_value y = 233 }
+			maxWidth = @army_view_value_width
+			maxHeight = 27
+			fixedSize = yes
+			format = right
+			orientation = "UPPER_LEFT"
+			text_color_code = "Y"
+		}
+
+		instantTextBoxType = {
+			name = "maintenance_label"
+			font = "cg_16b"
+			text = "ARMY_VIEW_MAINTENANCE"
+			appendtext = ":"
+			position = { x = @army_view_lables y = 253 }
+			maxWidth = 133
+			maxHeight = 27
+			fixedSize = yes
+			format = left
+			orientation = "UPPER_LEFT"
+		}
+
+		instantTextBoxType = {
+			name = "maintenance"
+			font = "cg_16b"
+			text = "-"
+			position = { x = @army_view_value y = 253 }
+			maxWidth = @army_view_value_width
+			maxHeight = 27
+			fixedSize = yes
+			format = right
+			orientation = "UPPER_LEFT"
+			text_color_code = "Y"
+		}	
+	}
+}

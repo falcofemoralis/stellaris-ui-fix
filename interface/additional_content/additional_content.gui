@@ -1,0 +1,1484 @@
+guiTypes = {
+	positionType = {
+		name = "additional_content_grid_spacing"
+		position = { x = 13 y = 13 }
+	}
+
+	# Adds some spacing between the DLC icon and the "Owned" label text
+	positionType = {
+		name = "additional_content_owned_label_spacing"
+		position = { x = 7 y = 0 }
+	}
+
+	# Small window
+
+	positionType = {
+		name = "additional_content_window_small_size"
+		position = { x = 1693 y = 947 }
+	}
+
+	positionType = {
+		name = "additional_content_header_small_size"
+		position = { x = 1613 y = 413 }
+	}
+
+	positionType = {
+		name = "additional_content_small_view_small_grid_max_slots"
+		position = { x = 4 y = 0 }
+	}
+
+	positionType = {
+		name = "additional_content_small_view_small_grid_slot_size"
+		position = { x = 533 y = 300 }
+	}
+
+	positionType = {
+		name = "additional_content_small_view_large_grid_max_slots"
+		position = { x = 3 y = 0 }
+	}
+
+	positionType = {
+		name = "additional_content_small_view_large_grid_slot_size"
+		position = { x = 800 y = 400 }
+	}
+
+	positionType = {
+		name = "additional_content_screenshot_preview_small"
+		position = { x = 733 y = 367 }
+	}
+
+	positionType = {
+		name = "additional_content_portrait_preview_position_small"
+		position = { x = 63 y = -307 }
+	}
+
+	positionType = {
+		name = "additional_content_portrait_grid_position_small"
+		position = { x = -7 y = 27 }
+	}
+
+	positionType = {
+		name = "additional_content_portrait_grid_size_small"
+		position = { x = 940 y = 324 }
+	}
+
+	positionType = {
+		name = "additional_content_portrait_grid_slot_size_small"
+		position = { x = 100 y = 140 }
+	}
+
+	# Large window
+
+	positionType = {
+		name = "additional_content_window_large_size"
+		position = { x = 2533 y = 1413 }
+	}
+
+	positionType = {
+		name = "additional_content_header_large_size"
+		position = { x = 2461 y = 480 }
+	}
+
+	positionType = {
+		name = "additional_content_large_view_small_grid_max_slots"
+		position = { x = 5 y = 0 }
+	}
+
+	positionType = {
+		name = "additional_content_large_view_small_grid_slot_size"
+		position = { x = 612 y = 300 }
+	}
+
+	positionType = {
+		name = "additional_content_large_view_large_grid_max_slots"
+		position = { x = 4 y = 0 }
+	}
+
+	positionType = {
+		name = "additional_content_large_view_large_grid_slot_size"
+		position = { x = 816 y = 400 }
+	}
+
+	positionType = {
+		name = "additional_content_screenshot_preview_large"
+		position = { x = 1467 y = 733 }
+	}
+
+	# Subscription
+
+	positionType = {
+		name = "additional_content_subscription_header_small_size"
+		position = { x = 797 y = 213 }
+	}
+
+	positionType = {
+		name = "additional_content_subscription_header_large_size"
+		position = { x = 1613 y = 413 }
+	}
+
+	positionType = {
+		name = "additional_content_subscription_grid_slot_size"
+		position = { x = 256 y = 144 }
+	}
+
+	positionType = {
+		name = "additional_content_subscription_grid_max_slots"
+		position = { x = 4 y = 0 }
+	}
+
+	positionType = {
+		name = "additional_content_subscription_small_view_dlc_max_slots"
+		position = { x = 19 y = 0 }
+	}
+
+	positionType = {
+		name = "additional_content_subscription_large_view_dlc_max_slots"
+		position = { x = 35 y = 0 }
+	}
+
+	containerWindowType = {
+		name = "additional_content_view"
+		size = { width = 100% height = 100% }
+
+		containerWindowType = {
+			name = "additional_content_view_root"
+			size = {} # Use the positionTypes at the top of the file to change the size
+			orientation = center
+			origo = center
+
+			background = {
+				name = "background"
+				quadTextureSprite = "GFX_window_background"
+			}
+
+			iconType = {
+				name = "hex_bg"
+				spriteType = "GFX_hex_bg"
+				position = { x = -7 y = -7 }
+				alwaysTransparent = yes
+			}
+
+			iconType = {
+				name = "empire_header_line"
+				quadTextureSprite = "GFX_line_long"
+				position = { x = 13 y = 47 }
+			}
+
+			instantTextBoxType = {
+				name = "window_title"
+				font = "large_title_font"
+				position = { x = 35 y = 11 }
+				maxWidth = 400
+				maxHeight = 43
+				fixedSize = yes
+				text = "ADDITIONAL_CONTENT_TITLE"
+			}
+
+			buttonType = {
+				name = "debug_resize"
+				quadTextureSprite = "GFX_PINK_standard_button_200_34_button"
+				position = { x = -600 y = 13 }
+				orientation = upper_right
+				buttonFont = "cg_16b"
+			}
+
+			containerWindowType = {
+				name = "hide_owned_items_window"
+				position = { x = -293 y = 27 }
+				orientation = upper_right
+
+				checkboxType = {
+					name = "hide_owned_items_checkbox"
+					spriteType = "GFX_checkbox_20_20_01"
+				}
+
+				instantTextBoxType = {
+					name = "hide_owned_items_text"
+					font = "cg_16b"
+					text = "ADDITIONAL_CONTENT_HIDE_ALL_OWNED"
+					position = { x = 40 y = 0 }
+					maxWidth = 200
+					maxHeight = 43
+					format = left
+					vertical_alignment = center
+				}
+			}
+
+			buttonType = {
+				name = "close"
+				quadTextureSprite = "GFX_close_square"
+				position = { x = -67 y = 27 }
+				pdx_tooltip = "CLOSE"
+				shortcut = "ESCAPE"
+				orientation = upper_right
+			}
+
+			containerWindowType = {
+				name = "loading"
+				position = { x = 0 y = 73 }
+				size = { width = 100% height = 100%% }
+
+				instantTextBoxType = {
+					name = "loading_text"
+					font = "large_title_font"
+					position = { x = -533 y = -53 }
+					orientation = center
+					maxWidth = 1067
+					maxHeight = 107
+					text = "ADDITIONAL_CONTENT_LOADING"
+					format = center
+					vertical_alignment = center
+				}
+
+				iconType = {
+					name = "loading_spinny_thing"
+					quadTextureSprite = "GFX_additional_content_loading"
+					orientation = center
+					position = { x = 0 y = 133 }
+					centerPosition = yes
+				}
+			}
+
+			containerWindowType = {
+				name = "error"
+				position = { x = 0 y = 73 }
+				size = { width = 100% height = 100%% }
+
+				instantTextBoxType = {
+					name = "error_text"
+					font = "large_title_font"
+					position = { x = -533 y = -53 }
+					orientation = center
+					maxWidth = 1067
+					maxHeight = 107
+					format = center
+					vertical_alignment = center
+				}
+			}
+
+			containerWindowType = {
+				name = "content"
+				position = { x = 0 y = 73 }
+				size = { width = 100% height = 100%% }
+
+				gridBoxType = {
+					name = "category_tabs"
+					position = { x = -7 y = 0 }
+					size = { width = 100%% height = 53}
+					slotSize = { width = 235 height = 53 }
+					max_slots_vertical = 1
+					format = "UPPER_LEFT"
+				}
+
+				containerWindowType = {
+					name = "tab_content"
+					position = { x = 21 y = 56 }
+					size = { width = -21 height = -21 }
+					verticalScrollBar = "right_vertical_slider"
+					smooth_scrolling = yes
+
+					background = {
+						name = "background"
+						quadTextureSprite = "GFX_dark_area_window_bg"
+					}
+
+					containerWindowType = {
+						name = "promotion_header"
+						size = { width = 100% height = 460 }
+						margin = { top = 40 bottom = 20 left = 20 right = 47}
+
+						containerWindowType = {
+							name = "content"
+							size = { } # Resized in code.
+
+							instantTextBoxType = {
+								name = "title"
+								position = { x = 20 y = -53 }
+								orientation = lower_left
+								maxWidth = 573
+								multiline = no
+								font = "malgun_goth_24"
+							}
+
+							instantTextBoxType = {
+								name = "description"
+								position = { x = -473 y = 20 }
+								orientation = upper_right
+								maxWidth = 440
+								maxHeight = 360
+								format = right
+								vertical_alignment = center
+								font = "malgun_goth_24"
+							}
+
+							buttonType = {
+								name = "button"
+								spriteType = "GFX_top_frame_small" # Changed in code to select a sprite fitting Window Size.
+							}
+
+							background = {
+								name = "background"
+								spriteType = "GFX_invisible" # Changed in code to select a sprite fitting Window Size.
+							}
+						}
+					}
+
+					containerWindowType = {
+						name = "single_category"
+						size = { width = 100% } # Height will be changed in code
+						margin = { top = 20 bottom = 20 left = 20 right = 20 }
+
+						gridBoxType = {
+							name = "items_small"
+							size = { width = 100% height = 100%% }
+							slotSize = {} # Use the positionTypes at the top of the file to change the slot size
+							max_slots_horizontal = 0 # Use the positionTypes at the top of the file to change the max slots
+							format = "UPPER_LEFT"
+						}
+
+						gridBoxType = {
+							name = "items_large"
+							size = { width = 100% height = 100%% }
+							slotSize = {} # Use the positionTypes at the top of the file to change the slot size
+							max_slots_horizontal = 0 # Use the positionTypes at the top of the file to change the max slots
+							format = "UPPER_LEFT"
+						}
+					}
+
+					containerWindowType = {
+						name = "subscription_category"
+						size = { width = 100% height = 100% }
+						margin = { top = 20 bottom = 20 left = 20 right = 20 }
+
+						containerWindowType = {
+							name = "left_window"
+							margin = { top = 20 bottom = 20 left = 20 right = 20 }
+							size = { width = -811 height = 100% }
+							origo = upper_left
+							orientation = upper_left
+							verticalScrollBar = "right_vertical_slider"
+							smooth_scrolling = yes
+
+							background = {
+								name = "background"
+								quadTextureSprite = "GFX_dark_area_window_bg"
+							}
+
+							containerWindowType = {
+								name = "header"
+								size = { } # Resized in code.
+
+								instantTextBoxType = {
+									name = "title"
+									position = { x = -667 y = -85 }
+									orientation = center_down
+									maxWidth = 1333
+									multiline = no
+									font = "large_title_font"
+									format = center
+								}
+
+								buttonType = {
+									name = "button"
+									spriteType = "GFX_top_frame_small" # Changed in code to select a sprite fitting Window Size.
+								}
+
+								background = {
+									name = "background"
+									spriteType = "GFX_invisible" # Changed in code to select a sprite fitting Window Size.
+								}
+							}
+
+							containerWindowType = {
+								name = "description_window"
+								size = { width = 100% }
+
+								instantTextBoxType = {
+									name = "description"
+									position = { x = 0 y = 13 }
+									orientation = upper_left
+									maxWidth = 1605
+									maxHeight = 0
+									format = left
+									font = "cg_16b"
+								}
+							}
+
+							containerWindowType = {
+								name = "dlc_window"
+								size = { width = 100% }
+								margin = { top = 40 right = 0 bottom = 53 left = 0 }
+
+								instantTextBoxType = {
+									name = "description"
+									orientation = upper_left
+									maxWidth = 683
+									maxHeight = 56
+									format = left
+									font = "cg_16b"
+									text = "ACB_SUBSCRIPTION_DLC_LIST_TITLE"
+									scrollbartype = "standardtext_slider_small"
+								}
+
+								gridBoxType = {
+									name = "box"
+									position = { x = 0 y = 27 }
+									size = { width = 100% height = 133 }
+									format = UPPER_LEFT
+									slotSize = {
+										width = 53
+										height = 61
+									}
+								}
+							}
+
+							containerWindowType = {
+								name = "subscribed_window"
+								size = { width = 100% }
+								margin = { top = 20 bottom = 40 left = 0 right = 0 }
+								clipping = no
+
+								background = {
+									name = "background"
+									quadTextureSprite = "GFX_dark_area_window_bg"
+								}
+
+								instantTextBoxType = {
+									name = "subscribed_text"
+									maxWidth = 683
+									font = "large_title_font"
+									format = center
+								}
+							}
+
+							buttonType = { # for debug, no loc needed
+								name = "fake_get_button"
+								quadTextureSprite = "GFX_standard_button_large_211_40"
+								position = { x = -140 y = -93 }
+								orientation = center_down
+								buttonText = "Fake Get"
+								buttonFont = "cg_16b"
+							}
+						}
+
+						containerWindowType = {
+							name = "right_window"
+							size = { width = 800 height = 100% }
+							origo = upper_right
+							orientation = upper_right
+
+							background = {
+								name = "background"
+								quadTextureSprite = "GFX_dark_area_window_bg"
+							}
+
+							instantTextBoxType = {
+								name = "included_content_title"
+								position = { x = 35 y = 11 }
+								maxWidth = 747
+								text = "ACB_SUBSCRIPTION_INCLUDED_CONTENT_TITLE"
+								font = "large_title_font"
+							}
+
+							iconType = {
+								name = "included_content_line"
+								quadTextureSprite = "GFX_line_long"
+								position = { x = 13 y = 47 }
+							}
+
+							containerWindowType = {
+								name = "content_window"
+								position = { x = 0 y = 61 }
+								size = { width = 100% height = -213 }
+								verticalScrollBar = "right_vertical_slider"
+								smooth_scrolling = yes
+
+								background = {
+									name = "background"
+									quadTextureSprite = "GFX_invisible"
+								}
+							}
+
+							containerWindowType = {
+								name = "plans_window"
+								size = { width = 100% height = 213 }
+								origo = lower_right
+								orientation = lower_right
+
+								instantTextBoxType = {
+									name = "plans_title"
+									position = { x = 35 y = 11 }
+									maxWidth = 747
+									text = "ACB_SUBSCRIPTION_INCLUDED_SUBSCRIPTION_PLANS_TITLE"
+									font = "large_title_font"
+								}
+
+								iconType = {
+									name = "plans_line"
+									quadTextureSprite = "GFX_line_long"
+									position = { x = 13 y = 47 }
+								}
+
+								instantTextBoxType = {
+									name = "short_desc"
+									position = { x = 35 y = 80 }
+									orientation = upper_left
+									maxWidth = 440
+									maxHeight = 360
+									format = left
+									font = "malgun_goth_24"
+								}
+
+								buttonType = {
+									name = "go_to_store_button"
+									quadTextureSprite = "GFX_standard_button_large_211_40"
+									position = { x = -333 y = -104 }
+									orientation = lower_right
+									text = "ACB_SUBSCRIPTION_CLICK_DESC"
+									buttonFont = "cg_16b"
+								}
+							}
+						}
+					}
+				}
+			}
+
+			containerWindowType = {
+				name = "product_info_view"
+				position = { x = 0 y = 75 }
+				size = { width = 100% height = 100%% }
+
+				background = {
+					name = "background"
+					spriteType = "GFX_tile_large_bg_plain_solid"
+				}
+
+				containerWindowType = {
+					name = "loading_info_view"
+					size = { width = 100%% height = 100%% }
+
+					instantTextBoxType = {
+						name = "loading_text"
+						font = "large_title_font"
+						position = { x = -533 y = -53 }
+						orientation = center
+						maxWidth = 1067
+						maxHeight = 107
+						text = "ADDITIONAL_CONTENT_LOADING"
+						format = center
+						vertical_alignment = center
+					}
+
+					iconType = {
+						name = "loading_spinny_thing"
+						quadTextureSprite = "GFX_additional_content_loading"
+						orientation = center
+						position = { x = 0 y = 133 }
+						centerPosition = yes
+					}
+				}
+
+				containerWindowType = {
+					name = "error_info_view"
+					position = { x = 0 y = 73 }
+					size = { width = 100% height = 100%% }
+
+					instantTextBoxType = {
+						name = "error_text"
+						font = "large_title_font"
+						position = { x = -533 y = -53 }
+						orientation = center
+						maxWidth = 1067
+						maxHeight = 107
+						format = center
+						vertical_alignment = center
+					}
+				}
+
+				containerWindowType = {
+					name = "main_info_view"
+					size = { width = 100%% height = 100%% }
+
+					# Text panel with description and stuff
+					containerWindowType = {
+						name = "info_panel"
+						size = { width = 667 height = 100% }
+						origo = upper_right
+						orientation = upper_right
+
+						background = {
+							name = "background"
+							quadTextureSprite = "GFX_dark_area_window_bg"
+						}
+
+						containerWindowType = {
+							name = "scroll_view"
+							size = { width = 100% height = -140 }
+							verticalScrollBar = "right_vertical_slider"
+							smooth_scrolling = yes
+
+							background = {
+								name = "background"
+								quadTextureSprite = "GFX_invisible"
+							}
+
+							containerWindowType = {
+								name = "main_info"
+								size = { width = 100% }
+								margin = { top = 40 right = 40 bottom = 80 left = 40 }
+
+								instantTextBoxType = {
+									name = "title"
+									maxWidth = 587
+									format = center
+									font = "large_title_font"
+								}
+
+								instantTextBoxType = {
+									name = "category"
+									position = { x = 0 y = 47 }
+									maxWidth = 587
+									format = center
+									font = "malgun_goth_24"
+								}
+
+								instantTextBoxType = {
+									name = "description"
+									position = { x = 0 y = 100 }
+									maxWidth = 587
+									font = "cg_16b"
+								}
+							}
+						}
+
+						iconType = {
+							name = "divider_line"
+							quadTextureSprite = "GFX_line_center"
+							position = { x = 0 y = -133 }
+							centerPosition = yes
+							orientation = center_down
+						}
+
+						containerWindowType = {
+							name = "sale_container"
+							position = { x = 40 y = -111 }
+							orientation = lower_left
+
+							instantTextBoxType = {
+								name = "base_price"
+								maxWidth = 133
+								font = "cg_16b"
+								text_color_code = "g"
+							}
+
+							instantTextBoxType = {
+								name = "discount"
+								position = { x = 53 y = 0 }
+								maxWidth = 133
+								format = right
+								font = "cg_16b"
+								text_color_code = "g"
+							}
+						}
+
+						instantTextBoxType = {
+							name = "price"
+							position = { x = 40 y = -107 }
+							orientation = lower_left
+							font = "large_title_font_28"
+							vertical_alignment = center
+							maxWidth = 387
+							maxHeight = 93
+						}
+
+						buttonType = {
+							name = "go_to_store_button"
+							quadTextureSprite = "GFX_standard_button_large_211_40"
+							position = { x = -333 y = -104 }
+							orientation = lower_right
+							buttonFont = "cg_16b"
+						}
+					}
+
+					# Content panel with screenshots and ship preview
+					containerWindowType = {
+						name = "content_panel"
+						size = { width = -667 height = 100% }
+						margin = {
+							top = 65
+							right = 20
+							bottom = 20
+							left = 20
+						}
+
+						containerWindowType = {
+							name = "content_modes_container"
+							position = { x = -28 y = 0 }
+
+							gridBoxType = {
+								name = "content_modes"
+								size = { width = 533 height = 53 }
+								slotSize = { width = 235 height = 53 }
+								max_slots_vertical = 1
+								format = "UPPER_LEFT"
+							}
+						}
+
+						containerWindowType = {
+							name = "content"
+							size = { width = 100% height = -28 }
+							origo = center_down
+							orientation = center_down
+
+							background = {
+								name = "background"
+								quadTextureSprite = "GFX_no_highlight_tile"
+							}
+
+							containerWindowType = {
+								name = "3d_ship_view"
+								size = { } # Use the positionTypes at the top of the file to change the content sizes
+								origo = center
+								orientation = center
+								margin = {
+									top = 50
+									right = 50
+									bottom = 50
+									left = 50
+								}
+
+								containerWindowType = {
+									name = "3d_ship_view_container"
+									size = { } # Use the positionTypes at the top of the file to change the content sizes
+
+									buttonType = {
+										name = "3d_view"
+										quadTextureSprite = "GFX_dummy_ingame_3d_ship_view"
+										size = { x = 267 y = 267 } # Use the positionTypes at the top of the file to change the content sizes
+										oversound = no_sound
+									}
+
+									containerWindowType = {
+										name = "3d_ship_view_frame"
+										size = { width = 100% height = 100% }
+
+										background = {
+											name = "background"
+											quadTextureSprite = "GFX_ship_preview_window_blue"
+											alwaysTransparent = yes
+										}
+									}
+
+									containerWindowType = {
+										name = "ship_type_name"
+										size = { width = 307 height = 41 }
+										position = { x = 0 y = 1 }
+										origo = center_down
+										orientation = center_down
+
+										background = {
+											name = "background"
+											quadTextureSprite = "GFX_additional_content_shipset_name_bg"
+										}
+
+										instantTextBoxType = {
+											name = "ship_type_name"
+											font = "cg_16b"
+											maxWidth = 307
+											maxHeight = 41
+											fixedSize = yes
+											text = "MISSING_TEXT"
+											format = center
+											vertical_alignment = center
+										}
+									}
+								}
+
+								containerWindowType = {
+									name = "spinner_container"
+									size = { width = 815 height = 133 }
+									origo = center_down
+									orientation = center_down
+
+									containerWindowType = {
+										name = "thumbnails_container"
+										size = { width = 689 height = 133 }
+										position = { x = 67 y = 20 }
+										horizontalScrollbar = "invisible_horizontal_slider"
+										smooth_scrolling = yes
+
+										background = {
+											name = "background"
+											quadTextureSprite = "GFX_tiled_window_transparent"
+										}
+
+										gridBoxType = {
+											name = "thumbnails"
+											size = { width = 100%% height = 67 }
+											slotSize = { width = 251 height = 133 }
+											max_slots_vertical = 1
+											format = "UPPER_LEFT"
+										}
+									}
+
+									spinnerType = {
+										id = "spinner"
+										name = "spinner"
+										leftbutton = "spinner_upButton"
+										rightbutton = "spinner_downButton"
+										size = { x = 815 y = 0 }
+										position = { x = 7 y = 67 }
+
+										priority = 100
+										borderSize = { x = 21 y = 21 }
+										horizontal = 1
+										maxValue = 3
+										startValue = 3
+
+										guiButtonType = {
+											name = "spinner_upButton"
+											quadTextureSprite = "GFX_arrow_left"
+										}
+										guiButtonType = {
+											name = "spinner_downButton"
+											quadTextureSprite = "GFX_arrow_right"
+										}
+									}
+								}
+							}
+
+							containerWindowType = {
+								name = "portraits_container"
+								origo = center
+								orientation = center
+
+								containerWindowType = {
+									name = "portrait_preview_container"
+									position = { x = 0 y = -400 }
+									size = { width = 1028 height = 380 }
+									origo = center_up
+									clipping = yes
+
+									iconType = {
+										name = "portrait_preview"
+										spriteType = "GFX_portrait_gamesetup_mask"
+										position = { x = 5 y = 5 }
+										scale = 0.8
+										alwaysTransparent = yes
+									}
+
+									iconType = {
+										name = "black_frame"
+										spriteType = "GFX_diplomacy_portrait_shadow_frame"
+										position = { x = 3 y = 0 }
+										scale = 0.8
+										alwaysTransparent = yes
+									}
+
+									iconType = {
+										name = "stripes"
+										spriteType = "GFX_diplomacy_stripes_2"
+										position = { x = 7 y = 7 }
+										orientation = upper_left
+										scale = 0.8
+										alwaysTransparent = yes
+									}
+
+									iconType = {
+										name = "frame"
+										spriteType = "GFX_diplomacy_portrait_frame"
+										scale = 0.8
+										alwaysTransparent = yes
+									}
+								}
+
+								containerWindowType = {
+									name = "portraits_container"
+									size = { width = 1160 height = 584 }
+									origo = center_up
+									verticalScrollBar = "right_vertical_slider"
+									smooth_scrolling = yes
+
+									background = {
+										name = "background"
+										spriteType = "GFX_invisible"
+										clicksound = select_click
+									}
+
+									gridBoxType = {
+										name = "portraits"
+										padding = { bottom = 10 }
+										slotSize = { width = 124 height = 173 }
+										max_slots_horizontal = 9
+										orientation = center_up
+										format = CENTERED_UP
+									}
+								}
+							}
+
+							containerWindowType = {
+								name = "screenshots_container"
+								size = { } # Use the positionTypes at the top of the file to change the content sizes
+								origo = center
+								orientation = center
+								margin = {
+									top = 50
+									right = 50
+									bottom = 50
+									left = 50
+								}
+
+								containerWindowType = {
+									name = "main_screenshot_container"
+									size = { } # Use the positionTypes at the top of the file to change the content sizes
+
+									containerWindowType = {
+										name = "main_screenshot_cropper"
+										size = { width = 100% height = 100% }
+										clipping = yes
+
+										iconType = {
+											name = "main_screenshot"
+											centerPosition = yes
+											orientation = center
+											spriteType = "GFX_invisible"
+											alwaysTransparent = yes
+										}
+
+										containerWindowType = {
+											name = "main_screenshot_frame"
+											size = { width = 100% height = 100% }
+
+											background = {
+												name = "background"
+												quadTextureSprite = "GFX_ship_preview_window_blue"
+											}
+										}
+									}
+
+									buttonType = {
+										name = "main_screenshot_hover_button"
+										spriteType = "GFX_invisible"
+										size = { x = 1469 y = 736 } # Use the positionTypes at the top of the file to change the content sizes
+									}
+
+									containerWindowType = {
+										name = "hover_overlay"
+										size = { width = 100% height = 100% }
+
+										fade_time = 1000
+
+										instantTextBoxType = {
+											name = "screenshot_title"
+											position = { x = -480 y = 67 }
+											orientation = upper_right
+											maxWidth = 480
+											maxHeight = 133
+											format = right
+											font = "malgun_goth_24"
+											alwaysTransparent = yes
+										}
+
+										instantTextBoxType = {
+											name = "screenshot_description"
+											position = { x = -480 y = 133 }
+											orientation = upper_right
+											maxWidth = 480
+											maxHeight = 400
+											format = right
+											font = "cg_16b"
+											alwaysTransparent = yes
+										}
+									}
+								}
+
+								containerWindowType = {
+									name = "spinner_container"
+									size = { width = 815 height = 133 }
+									origo = center_down
+									orientation = center_down
+
+									containerWindowType = {
+										name = "thumbnails_container"
+										size = { width = 689 height = 133}
+										position = { x = 67 y = 20 }
+										horizontalScrollbar = "invisible_horizontal_slider"
+										smooth_scrolling = yes
+
+										background = {
+											name = "background"
+											quadTextureSprite = "GFX_tiled_window_transparent"
+										}
+
+										gridBoxType = {
+											name = "thumbnails"
+											size = { width = 100%% height = 67 }
+											slotSize = { width = 251 height = 133 }
+											max_slots_vertical = 1
+											format = "UPPER_LEFT"
+										}
+									}
+
+									spinnerType = {
+										id = "spinner"
+										name = "spinner"
+										leftbutton = "spinner_upButton"
+										rightbutton = "spinner_downButton"
+										size = { x = 815 y = 0 }
+										position = { x = 7 y = 67 }
+
+										priority = 100
+										borderSize = { x = 21 y = 21 }
+										horizontal = 1
+										maxValue = 3
+										startValue = 3
+
+										guiButtonType = {
+											name = "spinner_upButton"
+											quadTextureSprite = "GFX_arrow_left"
+										}
+										guiButtonType = {
+											name = "spinner_downButton"
+											quadTextureSprite = "GFX_arrow_right"
+										}
+									}
+								}
+							}
+						}
+					}
+
+					buttonType = { # for debug, no loc needed
+						name = "fake_get_button"
+						quadTextureSprite = "GFX_standard_button_large_211_40"
+						position = { x = -140 y = -93 }
+						orientation = center_down
+						buttonText = "Fake Get"
+						buttonFont = "cg_16b"
+					}
+				}
+
+				buttonType = {
+					name = "prev"
+					quadTextureSprite = "GFX_button_back"
+					position = { x = 20 y = 20 }
+					orientation = UPPER_LEFT
+					clicksound = interface
+					shortcut = "ESCAPE"
+				}
+
+				# The currently shown screenshot
+				containerWindowType = {
+					name = "focused_screenshot_container"
+					size = { width = 100%% height = 100%% }
+
+					background = {
+						name = "background"
+						spriteType = "GFX_tiles_dark_area_cut_8"
+					}
+
+					containerWindowType = {
+						name = "contents_container"
+						origo = center
+						orientation = center
+						size = {} # Resized to take the size of the screenshot
+
+						iconType = {
+							name = "focused_screenshot"
+							spriteType = "GFX_invisible"
+						}
+
+						containerWindowType = {
+							name = "focused_screenshot_frame"
+							size = { width = 100%% height = 100%% }
+
+							background = {
+								name = "background"
+								quadTextureSprite = "GFX_plain_green_frame_tile"
+							}
+						}
+
+						instantTextBoxType = {
+							name = "screenshot_title"
+							position = { x = -480 y = 67 }
+							orientation = upper_right
+							maxWidth = 480
+							maxHeight = 133
+							format = right
+							font = "malgun_goth_24"
+							alwaysTransparent = yes
+						}
+
+						instantTextBoxType = {
+							name = "screenshot_description"
+							position = { x = -480 y = 133 }
+							orientation = upper_right
+							maxWidth = 480
+							maxHeight = 400
+							format = right
+							font = "cg_16b"
+							alwaysTransparent = yes
+						}
+
+						buttonType = {
+							name = "close_focused_screenshot"
+							quadTextureSprite = "GFX_close_square"
+							position = { x = -67 y = 0 }
+							pdx_tooltip = "CLOSE"
+							shortcut = "ESCAPE"
+							orientation = upper_right
+						}
+					}
+				}
+			}
+		}
+
+		containerWindowType = {
+			name = "blocker"
+			size = { width = 100% height = 100% }
+
+			background = {
+				name = "blocker_background"
+				spriteType = "GFX_ship_designer_blocker"
+			}
+		}
+	}
+
+	containerWindowType = {
+		name = "additional_content_category_tab"
+		size = { width = 235 height = 53 }
+		clipping = no
+
+		buttonType = {
+			name = "button"
+			quadTextureSprite = "GFX_tab_2_long_inactive_acb" # Changed in code to sprites set in 00_defines_additional_content.txt
+			buttonFont = "cg_16b"
+			text_offset = { x = 10 y = 0 }
+			clicksound = "tab_click"
+			oversound = no_sound
+		}
+	}
+
+	containerWindowType = {
+		name = "additional_content_category_grid"
+		size = { width = 100% } # Height will be changed in code
+		margin = { top = 40 bottom = 80 left = 20 right = 20 }
+
+		instantTextBoxType = {
+			name = "title"
+			maxWidth = 1067
+			font = "large_title_font"
+		}
+
+		gridBoxType = {
+			name = "items_small"
+			position = { x = 0 y = 60 }
+			size = { width = 100% height = 100%% }
+			slotSize = {} # Use the positionTypes at the top of the file to change the slot size
+			max_slots_horizontal = 0 # Use the positionTypes at the top of the file to change the max slots
+			format = "UPPER_LEFT"
+		}
+
+		gridBoxType = {
+			name = "items_large"
+			position = { x = 0 y = 60 }
+			size = { width = 100% height = 100%% }
+			slotSize = {} # Use the positionTypes at the top of the file to change the slot size
+			max_slots_horizontal = 0 # Use the positionTypes at the top of the file to change the max slots
+			format = "UPPER_LEFT"
+		}
+	}
+
+	containerWindowType = {
+		name = "additional_content_subscription_category_grid"
+		size = { width = 100% } # Height will be changed in code
+		margin = { top = 20 bottom = 20 left = 20 right = 20 }
+
+		instantTextBoxType = {
+			name = "title"
+			maxWidth = 533
+			font = "malgun_goth_24"
+		}
+
+		gridBoxType = {
+			name = "items_subscription"
+			position = { x = 0 y = 60 }
+			size = { width = 100% height = 100% }
+			slotSize = {} # Use the positionTypes at the top of the file to change the slot size
+			max_slots_horizontal = 0 # Use the positionTypes at the top of the file to change the max slots
+			format = "UPPER_LEFT"
+		}
+	}
+
+	containerWindowType = {
+		name = "additional_content_grid_item"
+		size = {} # Use the positionTypes at the top of the file to change the size
+
+		background = {
+			name = "background"
+			spriteType = "GFX_tiles_light_area_cut_8"
+		}
+
+		iconType = {
+			name = "icon"
+			centerPosition = yes
+			orientation = center
+			spriteType = "GFX_clean_frame_area"
+		}
+
+		containerWindowType = {
+			name = "additional_content_gradient"
+			size = { width = 100% height = 100% }
+
+			background = {
+				name = "additional_content_gradient_bg"
+				quadTextureSprite = "GFX_faded_gradient_tile_acb"
+				alwaysTransparent = yes
+			}
+		}
+
+		# Visible only for owned items.
+		containerWindowType = {
+			name = "owned_overlay"
+			size = { width = 100% height = 100% }
+
+			background = {
+				name = "background"
+				spriteType = "GFX_dark_area_window_bg"
+				alwaysTransparent = yes
+			}
+		}
+
+		# Appears when we hover the mouse cursor over the item.
+		containerWindowType = {
+			name = "hover_overlay"
+			size = { width = 100% height = 100% }
+
+			fade_time = 1000
+
+			# Visible only for unowned items.
+			containerWindowType = {
+				name = "unowned_background"
+				size = { width = 100% height = 100% }
+
+				background = {
+					name = "background"
+					spriteType = "GFX_dark_area_window_bg"
+					alwaysTransparent = yes
+				}
+			}
+
+			instantTextBoxType = {
+				name = "description"
+				position = { x = -240 y = -133 }
+				orientation = center
+				maxWidth = 480
+				maxHeight = 267
+				format = center
+				vertical_alignment = center
+				font = "malgun_goth_24"
+				alwaysTransparent = yes
+			}
+		}
+
+		instantTextBoxType = {
+			name = "title"
+			position = { x = 20 y = -53 }
+			orientation = lower_left
+			maxWidth = 307
+			multiline = no
+			font = "malgun_goth_24"
+		}
+
+		instantTextBoxType = {
+			name = "title_subscription"
+			position = { x = 11 y = -32 }
+			orientation = lower_left
+			maxWidth = 160
+			multiline = no
+			font = "cg_16b"
+		}
+
+		instantTextBoxType = {
+			name = "base_price"
+			position = { x = -153 y = -73 }
+			orientation = lower_right
+			maxWidth = 133
+			format = right
+			font = "cg_16b"
+			text_color_code = "g"
+		}
+
+		instantTextBoxType = {
+			name = "price"
+			position = { x = -193 y = -53 }
+			orientation = lower_right
+			maxWidth = 173
+			format = right
+			font = "malgun_goth_24"
+		}
+
+		buttonType = {
+			name = "button"
+			size = { x = 0 y = 0 } # Changed by code to have the same size as the grid item
+			spriteType = "GFX_invisible"
+		}
+
+		containerWindowType = {
+			name = "frame"
+			size = { width = 100% height = 100% }
+			background = {
+				name = "background"
+				spriteType = "GFX_image_frame"
+				alwaysTransparent = yes
+			}
+		}
+
+		containerWindowType = {
+			name = "label"
+			size = { width = 267 height = 56 }
+			orientation = upper_right
+			origo = upper_right
+			margin = { left = 63 right = 20 }
+
+			background = {
+				name = "background"
+				spriteType = "GFX_invisible" # Changed in code to sprites set in 00_defines_additional_content.txt
+				alwaysTransparent = yes
+			}
+
+			iconType = {
+				name = "checkmark"
+				spriteType = "GFX_additional_content_checkmark_dlc"
+				position = { x = 0 y = 28 } # X position is set by the code
+				alwaysTransparent = yes
+				centerPosition = yes
+			}
+
+			instantTextBoxType = {
+				name = "text"
+				position = { x = 107 y = -7 }
+				text = "ADDITIONAL_CONTENT_LABEL_OWNED"
+				maxWidth = 267
+				maxHeight = 67
+				multiline = no
+				vertical_alignment = center
+				font = "malgun_goth_24"
+				alwaysTransparent = yes
+			}
+		}
+	}
+
+	@thumbnail_width = 188
+	@thumbnail_height = 133
+
+	containerWindowType = {
+		name = "additional_content_thumbnail_item"
+		size = { width = @thumbnail_width height = @thumbnail_height }
+		clipping = yes
+
+		iconType = {
+			name = "thumbnail_icon"
+			spriteType = "GFX_invisible"
+			centerPosition = yes
+			orientation = center
+		}
+
+		buttonType = {
+			name = "thumbnail_button"
+			size = { x = @thumbnail_width y = @thumbnail_height }
+			spriteType = "GFX_invisible"
+		}
+
+		containerWindowType = {
+			name = "selected_overlay"
+			size = { width = @thumbnail_width height = @thumbnail_height }
+
+			background = {
+				name = "background"
+				quadTextureSprite = "GFX_ship_preview_window_blue"
+			}
+		}
+	}
+
+	containerWindowType = {
+		name = "additional_content_mode_item"
+		size = { width = 235 height = 53 }
+		clipping = no
+
+		buttonType = {
+			name = "button"
+			quadTextureSprite = "GFX_tab_2_long_inactive_acb" # Changed in code to sprites set in 00_defines_additional_content.txt
+			buttonFont = "cg_16b"
+			clicksound = "tab_click"
+			oversound = no_sound
+		}
+	}
+
+	containerWindowType = {
+		name = "additional_content_product_info_text_section"
+		size = { width = 100% }
+		margin = { top = 20 right = 40 bottom = 40 left = 40 }
+
+		instantTextBoxType = {
+			name = "title"
+			maxWidth = 587
+			format = center
+			font = "malgun_goth_24"
+			alwaysTransparent = yes
+		}
+
+		instantTextBoxType = {
+			name = "pre_origin_description"
+			position = { x = 0 y = 53 }
+			maxWidth = 587
+			font = "cg_16b"
+			concepts_show_missing_dlc = yes
+		}
+
+		gridBoxType = {
+			name = "origins"
+			size = { width = 587 }
+			padding = { top = 5 bottom = 20 }
+			slotSize = { width = 293 height = 200 }
+			max_slots_horizontal = 2
+			format = UPPER_LEFT
+		}
+
+		instantTextBoxType = {
+			name = "post_origin_description"
+			maxWidth = 587
+			font = "cg_16b"
+			concepts_show_missing_dlc = yes
+		}
+	}
+
+	containerWindowType = {
+		name = "acb_subscription_dlc_list_entry"
+		position = { x = 11 y = 0 }
+		size = { width = 73 height = 53 }
+
+		buttonType = {
+			name = "dlc_underlay"
+			position = { x = -13 y = -1 }
+			quadTextureSprite = "GFX_invisible" # Set by code
+		}
+
+		buttonType = {
+			name = "dlc_button"
+			position = { x = -1 y = 1 }
+			quadTextureSprite = "GFX_trigger_icon"
+			format = center
+			pdx_tooltip = "DLC_START"
+			alwaysTransparent = yes
+		}
+
+		iconType = {
+			name = "dlc_frame"
+			position = { x = -1 y = 1 }
+			quadTextureSprite = "GFX_invisible"
+			pdx_tooltip = "DLC_START"
+			scale = 1
+			alwaysTransparent = yes
+		}
+	}
+}

@@ -1,0 +1,543 @@
+guiTypes = {	
+	### Generic Rename Window
+	containerWindowType = {
+		name = "rename_dialog"
+		orientation = center
+		origo = center
+		moveable = yes
+		size = { width=533 height=243 }
+		position = { x=0 y=-13 }
+
+		background = {
+			name = "background"
+			quadTextureSprite = "GFX_tile_outliner_bg"
+			position = { x = 0 y = 0  }
+			size = { x = 533 y = 267 }
+		}
+		
+		iconType = {
+			name = "hex_bg"
+			spriteType = "GFX_hex_bg"
+			position = { x = -13 y = -19 }
+			alwaysTransparent = yes
+		}
+
+		iconType = {
+			name = "empire_header_line"
+			quadTextureSprite = "GFX_line"
+			position = { x = 8 y = 29 }
+			alwaysTransparent = yes
+		}
+		
+		instantTextBoxType = {
+			name = "title"
+			font = "malgun_goth_24"
+			text = "RENAME_COLONY_TITLE"
+			position = { x = 16 y = 9 }
+			maxWidth = 400
+			maxHeight = 53
+			fixedSize = yes
+			alwaysTransparent = yes
+		}
+		
+		editBoxType = {
+			position = { x = 23 y = 87  }
+			name = "editbox"
+			instantTextBoxType = no
+			textureFile = "gfx/interface/tiles/small_tiles_dialog.dds"
+			font = "malgun_goth_24"
+			borderSize = { x=5 y=5 }	
+			size = { x=493 y=53 }
+			text = " "
+			orientation = "UPPER_LEFT"
+			cursor = { x=0 y= 3}	
+		}
+		
+		buttonType = {
+			name = "RandomizeButton"
+			quadTextureSprite = "GFX_button_randomize"
+			position = { x = 453 y = 27 }
+			Orientation = "UPPER_LEFT"
+			no_clicksound = yes
+			clicksound = randomizer_click
+		}
+		
+		buttonType = {
+			name = "DeclineButton"
+			quadTextureSprite = "GFX_standard_button_142_34_button"
+			position = { x= 7 y = 160  }
+			Orientation = "UPPER_LEFT"
+			buttonText = "CANCEL"
+			buttonFont = "cg_16b"
+			clicksound = "back_click"
+			shortcut = "ESCAPE"
+			actionShortCut = "cancel"
+		}
+		
+		buttonType = {
+			name = "AgreeButton"
+			quadTextureSprite = "GFX_standard_button_142_34_button"
+			position = { x= 300 y = 160  }
+			Orientation = "UPPER_LEFT"
+			buttonText = "OK"
+			buttonFont = "cg_16b"
+			clicksound = "confirm_click"
+			shortcut = "RETURN"
+			actionShortCut = "accept"
+		}
+	}
+	
+	### Rename Species Window
+	containerWindowType = {
+		name = "rename_species_dialog"
+		orientation = center
+		origo = center
+		moveable = yes
+		size = { width=667 height=400 }
+		position = { x=0 y=-13 }
+
+		background = {
+			name = "background"
+			quadTextureSprite = "GFX_tile_outliner_bg"
+			position = { x = 0 y = 0  }
+			size = { x = 533 y = 267 }
+		}
+		
+		iconType = {
+			name = "hex_bg"
+			spriteType = "GFX_hex_bg"
+			position = { x = -13 y = -19 }
+			alwaysTransparent = yes
+		}
+
+		iconType = {
+			name = "empire_header_line"
+			quadTextureSprite = "GFX_line"
+			position = { x = 8 y = 29 }
+			alwaysTransparent = yes
+		}
+		
+		instantTextBoxType = {
+			name = "title"
+			font = "malgun_goth_24"
+			text = "RENAME_SPECIES"
+			position = { x = 16 y = 9 }
+			maxWidth = 400
+			maxHeight = 53
+			fixedSize = yes
+			alwaysTransparent = yes
+		}
+		instantTextBoxType = {
+			name = "description"
+			font = "malgun_goth_24"
+			maxWidth = 1
+			maxHeight = 1
+			text = ""
+			position = { x = 16 y = 1 }
+		}
+
+		containerWindowType = {
+			name = "portrait_window_background"
+			position = { x = 15 y = 69 }
+			size = { width = 203 height = 249 }
+			
+			background = {
+				name = "leader_frame"
+				spriteType = "GFX_tiles_frame"
+				alwaysTransparent = yes
+			}
+		}
+		
+		containerWindowType = {
+			name = "portrait_window"
+			position = { x = 16 y = 71 }
+			size = { width = 200 height = 247 }
+			moveable = no
+			clipping = yes
+			orientation = upper_left
+
+			iconType = {
+				name = "portrait"
+				spriteType = "GFX_portrait_character"
+				position = { x = -80 y = -21 }
+				scale = 0.53
+				alwaystransparent = yes
+			}
+		}
+		@label_x = 229
+		@label_w = 333
+		@label_format = left
+		@edit_box_x = 229
+		@edit_box_w = 373
+		@button_x = 605
+		
+		instantTextBoxType = {
+			name = "name_label"
+			font = "malgun_goth_24"
+			text = "NAME"
+			position = { x = @label_x y = 63 }
+			maxWidth = @label_w
+			maxHeight = 53
+			fixedSize = yes
+			format = @label_format
+			#alwaysTransparent = yes
+		}
+
+		editBoxType = {
+			position = { x = @edit_box_x y = 96  }
+			name = "name"
+			instantTextBoxType = no
+			textureFile = "gfx/interface/tiles/small_tiles_dialog.dds"
+			font = "malgun_goth_24"
+			borderSize = { x=5 y=5 }	
+			size = { x=@edit_box_w y=53 }
+			#text = " "
+			orientation = "UPPER_LEFT"
+			cursor = { x=0 y= 3}	
+		}
+		
+		buttonType = {
+			name = "randomize"
+			position = { x = @button_x y = 95 }
+			spriteType = "GFX_button_randomize"
+			pdx_tooltip = "EDIT_SPECIES_NAME_RANDOMIZE_TOOLTIP"
+			Orientation = "UPPER_LEFT"
+			clicksound = randomizer_click
+		}
+		
+		instantTextBoxType = {
+			name = "plural_label"
+			font = "malgun_goth_24"
+			text = "PLURAL"
+			position = { x = @label_x y = 149 }
+			maxWidth = @label_w
+			maxHeight = 53
+			fixedSize = yes
+			#alwaysTransparent = yes
+			format = @label_format
+		}
+		
+		editBoxType = {
+			position = { x = @edit_box_x y = 183  }
+			name = "plural"
+			instantTextBoxType = no
+			textureFile = "gfx/interface/tiles/small_tiles_dialog.dds"
+			font = "malgun_goth_24"
+			borderSize = { x=5 y=5 }	
+			size = { x=@edit_box_w y=53 }
+			#text = " "
+			orientation = "UPPER_LEFT"
+			cursor = { x=0 y= 3}	
+		}
+		instantTextBoxType = {
+			name = "adjective_label"
+			font = "malgun_goth_24"
+			text = "ADJECTIVE"
+			position = { x = @label_x y = 236 }
+			maxWidth = @label_w
+			maxHeight = 53
+			fixedSize = yes
+			#alwaysTransparent = yes
+			format = @label_format
+		}
+		editBoxType = {
+			position = { x = @edit_box_x y = 269  }
+			name = "adjective"
+			instantTextBoxType = no
+			textureFile = "gfx/interface/tiles/small_tiles_dialog.dds"
+			font = "malgun_goth_24"
+			borderSize = { x=5 y=5 }	
+			size = { x=@edit_box_w y=53 }
+			#text = " "
+			orientation = "UPPER_LEFT"
+			cursor = { x=0 y= 3}	
+		}
+		buttonType = {
+			name = "generate_adjective"
+			spriteType = "GFX_button_update"
+			pdx_tooltip = "EDIT_SPECIES_NAME_GENERATE_ADJECTIVE"
+			position = { x = @button_x y = 268 }
+			Orientation = "UPPER_LEFT"
+			#no_clicksound = yes
+		}
+		
+		buttonType = {
+			name = "DeclineButton"
+			quadTextureSprite = "GFX_standard_button_142_34_button"
+			position = { x= -1 y = -76  }
+			Orientation = "LOWER_LEFT"
+			buttonText = "CANCEL"
+			buttonFont = "cg_16b"
+			clicksound = "back_click"
+			shortcut = "ESCAPE"
+			actionShortCut = "cancel"
+		}
+		
+		buttonType = {
+			name = "AgreeButton"
+			quadTextureSprite = "GFX_standard_button_142_34_button"
+			position = { x= -221 y = -76  }
+			Orientation = "LOWER_RIGHT"
+			buttonText = "OK"
+			buttonFont = "cg_16b"
+			clicksound = "confirmation"
+			shortcut = "RETURN"
+			actionShortCut = "accept"
+		}
+	}
+	
+	### Rename for Ruler & Heir
+	containerWindowType = {
+		name = "rename_ruler_dialog"
+		orientation = center
+		origo = center
+		moveable = yes
+		size = { width=533 height=296 }
+		position = { x=0 y=-13 }
+
+		background = {
+			name = "background"
+			quadTextureSprite = "GFX_tile_outliner_bg"
+			position = { x = 0 y = 0  }
+			size = { x = 533 y = 267 }
+		}
+		
+		iconType = {
+			name = "hex_bg"
+			spriteType = "GFX_hex_bg"
+			position = { x = -13 y = -19 }
+			alwaysTransparent = yes
+		}
+
+		iconType = {
+			name = "empire_header_line"
+			quadTextureSprite = "GFX_line"
+			position = { x = 8 y = 29 }
+			alwaysTransparent = yes
+		}
+		
+		instantTextBoxType = {
+			name = "title"
+			font = "malgun_goth_24"
+			text = "RENAME_RULER_TITLE"
+			position = { x = 16 y = 9 }
+			maxWidth = 400
+			maxHeight = 53
+			fixedSize = yes
+			alwaysTransparent = yes
+		}
+		
+		editBoxType = {
+			position = { x = 23 y = 60 }
+			name = "editbox"
+			instantTextBoxType = no
+			textureFile = "gfx/interface/tiles/small_tiles_dialog.dds"
+			font = "malgun_goth_24"
+			borderSize = { x=5 y=5 }	
+			size = { x=493 y=53 }
+			text = " "
+			orientation = "UPPER_LEFT"
+			cursor = { x=0 y= 3}	
+		}
+		
+		instantTextBoxType = {
+			name = "title_male_label"
+			font = "malgun_goth_24"
+			text = "RULER_TITLE_MALE"
+			position = { x = 296 y = 120 }
+			maxWidth = 200
+			maxHeight = 27
+			fixedSize = yes
+			alwaysTransparent = yes
+		}		
+		
+		editBoxType = {
+			position = { x = 23 y = 113 }
+			name = "editbox_title_male"
+			instantTextBoxType = no
+			textureFile = "gfx/interface/tiles/small_tiles_dialog.dds"
+			font = "malgun_goth_24"
+			borderSize = { x=5 y=5 }	
+			size = { x=267 y=53 }
+			text = ""
+			orientation = "UPPER_LEFT"
+			cursor = { x=0 y= 3}	
+		}
+		
+		instantTextBoxType = {
+			name = "title_female_label"
+			font = "malgun_goth_24"
+			text = "RULER_TITLE_FEMALE"
+			position = { x = 296 y = 173 }
+			maxWidth = 200
+			maxHeight = 27
+			fixedSize = yes
+			alwaysTransparent = yes
+		}	
+		
+		editBoxType = {
+			position = { x = 23 y = 167 }
+			name = "editbox_title_female"
+			instantTextBoxType = no
+			textureFile = "gfx/interface/tiles/small_tiles_dialog.dds"
+			font = "malgun_goth_24"
+			borderSize = { x=5 y=5 }	
+			size = { x=267 y=53 }
+			text = " "
+			orientation = "UPPER_LEFT"
+			cursor = { x=0 y= 3}	
+		}
+		
+		buttonType = {
+			name = "RandomizeButton"
+			quadTextureSprite = "GFX_button_randomize"
+			position = { x = 453 y = 27 }
+			Orientation = "UPPER_LEFT"
+			no_clicksound = yes
+		}
+		
+		buttonType = {
+			name = "DeclineButton"
+			quadTextureSprite = "GFX_standard_button_142_34_button"
+			position = { x= 7 y = 213  }
+			Orientation = "UPPER_LEFT"
+			buttonText = "CANCEL"
+			buttonFont = "cg_16b"
+			clicksound = "back_click"
+			shortcut = "ESCAPE"
+			actionShortCut = "cancel"
+		}
+		
+		buttonType = {
+			name = "AgreeButton"
+			quadTextureSprite = "GFX_standard_button_142_34_button"
+			position = { x= 300 y = 213  }
+			Orientation = "UPPER_LEFT"
+			buttonText = "OK"
+			buttonFont = "cg_16b"
+			clicksound = "confirmation"
+			shortcut = "RETURN"
+			actionShortCut = "accept"
+		}
+	}
+	
+	### Rename for Council Positions
+	containerWindowType = {
+		name = "rename_council_position_dialog"
+		orientation = center
+		origo = center
+		moveable = yes
+		size = { width = 533 height = 296 }
+		position = { x = 0 y = -13 }
+
+		background = {
+			name = "background"
+			quadTextureSprite = "GFX_tile_outliner_bg"
+			position = { x = 0 y = 0 }
+			size = { x = 533 y = 267 }
+		}
+		
+		iconType = {
+			name = "hex_bg"
+			spriteType = "GFX_hex_bg"
+			position = { x = -13 y = -19 }
+			alwaysTransparent = yes
+		}
+
+		iconType = {
+			name = "empire_header_line"
+			quadTextureSprite = "GFX_line"
+			position = { x = 8 y = 29 }
+			alwaysTransparent = yes
+		}
+		
+		instantTextBoxType = {
+			name = "title"
+			font = "malgun_goth_24"
+			text = "RENAME_COUNCILOR_TITLE"
+			position = { x = 16 y = 9 }
+			maxWidth = 400
+			maxHeight = 53
+			fixedSize = yes
+			alwaysTransparent = yes
+		}
+		
+		editBoxType = {
+			name = "editbox"
+			position = { x = 23 y = 60 }
+			instantTextBoxType = no
+			textureFile = "gfx/interface/tiles/small_tiles_dialog.dds"
+			font = "malgun_goth_24"
+			borderSize = { x = 5 y = 5 }
+			size = { x = 493 y = 53 }
+			text = " "
+			cursor = { x = 0 y = 3 }
+		}
+		
+		instantTextBoxType = {
+			name = "title_male_label"
+			font = "malgun_goth_24"
+			text = "RENAME_COUNCILOR_TITLE_MALE"
+			position = { x = 349 y = 120 }
+			maxWidth = 200
+			maxHeight = 27
+			fixedSize = yes
+			alwaysTransparent = yes
+		}		
+		
+		editBoxType = {
+			name = "editbox_title_male"
+			position = { x = 23 y = 113 }
+			instantTextBoxType = no
+			textureFile = "gfx/interface/tiles/small_tiles_dialog.dds"
+			font = "malgun_goth_24"
+			borderSize = { x = 5 y = 5 }
+			size = { x = 320 y = 53 }
+			text = ""
+			cursor = { x = 0 y = 3}	
+		}
+		
+		instantTextBoxType = {
+			name = "title_female_label"
+			font = "malgun_goth_24"
+			text = "RENAME_COUNCILOR_TITLE_FEMALE"
+			position = { x = 349 y = 173 }
+			maxWidth = 200
+			maxHeight = 27
+			fixedSize = yes
+			alwaysTransparent = yes
+		}	
+		
+		editBoxType = {
+			name = "editbox_title_female"
+			position = { x = 23 y = 167 }
+			instantTextBoxType = no
+			textureFile = "gfx/interface/tiles/small_tiles_dialog.dds"
+			font = "malgun_goth_24"
+			borderSize = { x = 5 y = 5 }
+			size = { x = 320 y = 53 }
+			text = " "
+			cursor = { x = 0 y = 3}	
+		}
+		
+		buttonType = {
+			name = "DeclineButton"
+			quadTextureSprite = "GFX_standard_button_142_34_button"
+			position = { x = 7 y = 213 }
+			buttonText = "CANCEL"
+			buttonFont = "cg_16b"
+			clicksound = "back_click"
+			shortcut = "ESCAPE"
+		}
+		
+		buttonType = {
+			name = "AgreeButton"
+			quadTextureSprite = "GFX_standard_button_142_34_button"
+			position = { x = 300 y = 213 }
+			buttonText = "OK"
+			buttonFont = "cg_16b"
+			clicksound = "confirmation"
+			shortcut = "RETURN"
+		}
+	}
+}

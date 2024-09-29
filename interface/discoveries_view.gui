@@ -1,0 +1,720 @@
+guiTypes = {
+	@view_pos_x = 47
+	@view_pos_y = 53
+	
+	@view_w = 1696
+	@view_w_negative = -1696
+	@view_h = 800
+
+	containerWindowType = {
+		name = "discoveries_view"
+		size = { width = @view_w height = @view_h } 
+		position = { x = @view_pos_x y = @view_pos_y }
+		show_position = { x = @view_pos_x y = @view_pos_y }
+        hide_position = { x = @view_w_negative y = @view_pos_y }
+        animation_time = 200
+        animation_type = decelerated
+
+		orientation = upper_left
+		moveable = no
+		clipping = no	
+
+		background = {
+			name = "discoveries_view_background"
+			spriteType = "GFX_tile_outliner_bg"
+			position = { x = 0 y = 0 }
+		}
+
+		iconType = {
+			name = "hex_bg"
+			spriteType = "GFX_hex_bg"
+			position = { x = 7 y = -16 }
+			alwaysTransparent = yes
+		}
+
+		iconType = {
+			name = "header_line"
+			spriteType = "GFX_line_medium"
+			position = { x = 8 y = 28 }
+			alwaystransparent = yes
+		}
+
+		instantTextBoxType = {
+			name = "header"
+			font = "malgun_goth_24"
+			position = { x = 47 y = 7 }
+			maxWidth = 400
+			maxHeight = 27
+			fixedSize = yes
+			format = left
+		}
+
+		buttonType = {
+			name = "close"
+			spriteType = "GFX_close"
+			position = { x = -60 y = 21 }
+			orientation = upper_right
+			shortcut = "ESCAPE"
+			clicksound = "back_click"
+			pdx_tooltip = "CLOSE_TITLE"
+		}
+
+		###########################################################################################
+		# TABS
+		###########################################################################################
+
+		@relicsTabOffset = -27
+		@astralActionsTabOffset = 145
+		@tabOffsetHeight = 797
+
+		buttonType = {
+			name = "tab_relics"
+			quadTextureSprite = "GFX_tab_1_inactive"
+			position = { x = @relicsTabOffset y = @tabOffsetHeight }
+			font = "cg_16b"
+			buttonText = "RELICS"
+			buttonFont = "cg_16b"
+			shortcut = "z"
+			clicksound = "tab_click"
+		}
+
+		buttonType = {
+			name = "tab_relics_active"
+			quadTextureSprite = "GFX_tab_1_active"
+			position = { x = @relicsTabOffset y = @tabOffsetHeight }
+			font = "cg_16b"
+			buttonText = "RELICS"
+			buttonFont = "cg_16b"
+			shortcut = "z"
+			clicksound = "tab_click"
+		}
+
+		buttonType = {
+			name = "tab_astral_actions"
+			quadTextureSprite = "GFX_tab_2_inactive"
+			position = { x = @astralActionsTabOffset y = @tabOffsetHeight }
+			font = "cg_16b"
+			buttonText = "ASTRAL_ACTIONS"
+			buttonFont = "cg_16b"
+			shortcut = "x"
+			clicksound = "tab_click"
+		}
+
+		buttonType = {
+			name = "tab_astral_actions_active"
+			quadTextureSprite = "GFX_tab_2_active"
+			position = { x = @astralActionsTabOffset y = @tabOffsetHeight }
+			font = "cg_16b"
+			buttonText = "ASTRAL_ACTIONS"
+			buttonFont = "cg_16b"
+			shortcut = "x"
+			clicksound = "tab_click"
+		}
+
+		###########################################################################################
+		# RELICS TAB
+		###########################################################################################
+
+		containerWindowType = {
+			name = "relics_window"
+			size = { width = @view_w height = @view_h }
+			moveable = no
+			orientation = upper_left
+			position = { x = 0 y = 0 }
+
+			###############################
+			# RELICS
+			###############################
+
+			@relicsWidth = 984
+			@relicsWidthWide = 1664
+
+			###############################
+			# RELICS BOX
+			###############################
+
+			containerWindowType = {
+				name = "relics_box"
+				size = { width = @relicsWidth height = 715 }
+				position = { x = 13 y = 67 }
+
+				background = {
+					name = "bg"
+					quadTextureSprite = "GFX_relics_panel_bg"
+				}
+
+				# TOP BAR
+				containerWindowType = {
+					name = "relics_topbar"
+					size = { width = @relicsWidth height = 87 }
+					position = { x = 0 y = 0 }
+
+					# LEFT SIDE
+					containerWindowType = {
+						name = "relics_topbar_left"
+						size = { width = 227 height = 87 }
+						position = { x = 0 y = 0 }
+
+						instantTextBoxType = {
+							name = "relics_found_text"
+							font = "cg_16b"
+							position = { x = 13 y = 20 }
+							text = "RELICS_FOUND"
+							maxWidth = 200
+							maxHeight = 29
+							fixedSize = yes
+							format = centre
+							text_color_code = "H"
+						}
+
+						instantTextBoxType = {
+							name = "relics_found_value"
+							font = "cg_16b"
+							position = { x = 13 y = 47 }
+							maxWidth = 200
+							maxHeight = 40
+							fixedSize = yes
+							format = centre
+						}
+					}
+
+					# RIGHT SIDE
+					containerWindowType = {
+						name = "relics_topbar_right"
+						size = { width = 767 height = 87 }
+						position = { x = 233 y = 0 }
+
+						instantTextBoxType = {
+							name = "no_triumph_text"
+							font = "cg_16b"
+							position = { x = 133 y = 27 }
+							text = "ACTIVATE_RELIC_FOR_TRIUMPH"
+							maxWidth = 333
+							maxHeight = 29
+							fixedSize = yes
+							text_color_code = "Y"
+						}
+
+						instantTextBoxType = {
+							name = "active_triumph_text"
+							font = "cg_16b"
+							position = { x = 67 y = 13 }
+							text = "ACTIVE_TRIUMPH_TEXT"
+							maxWidth = 200
+							maxHeight = 29
+							fixedSize = yes
+							text_color_code = "H"
+						}
+
+						instantTextBoxType = {
+							name = "active_triumph_value"
+							font = "cg_16b"
+							position = { x = 267 y = 13 }
+							maxWidth = 80
+							maxHeight = 40
+							fixedSize = yes
+							format = centre
+						}
+
+						iconType = {
+							name = "progressbar"
+							spriteType = "GFX_queue_progressbar"
+							position = { x = 67 y = 40 }
+						}
+					}
+				}
+
+				# RELICS CONTENT
+				containerWindowType = {
+					name = "relics_content"
+					size = { width = @relicsWidth height = 627 }
+					position = { x = 0 y = 80 }
+					verticalScrollbar = "right_vertical_slider"
+					margin = { top = 13 bottom = 0 }
+
+					background = {
+						name = "bg"
+						quadTextureSprite = "GFX_tiled_window_transparent"
+					}
+
+					gridBoxType = {
+						name = "relics_grid"
+						position = { x = 127 y = 40 }
+						size = { width = 267 height = 533 }
+						slotsize = {
+							width = 245
+							height = 259
+						}
+						max_slots_horizontal = 3
+					}
+				}
+			}
+
+			###############################
+			# RELICS BOX WIDE
+			###############################
+
+			containerWindowType = {
+				name = "relics_box_wide"
+				size = { width = @relicsWidthWide height = 715 }
+				position = { x = 13 y = 67 }
+
+				background = {
+					name = "bg"
+					quadTextureSprite = "GFX_relics_panel_bg_wide"
+				}
+
+				# TOP BAR
+				containerWindowType = {
+					name = "relics_topbar"
+					size = { width = @relicsWidthWide height = 87 }
+					position = { x = 0 y = 0 }
+
+					# LEFT SIDE
+					containerWindowType = {
+						name = "relics_topbar_left"
+						size = { width = 227 height = 87 }
+						position = { x = 0 y = 0 }
+
+						instantTextBoxType = {
+							name = "relics_found_text"
+							font = "cg_16b"
+							position = { x = 13 y = 20 }
+							text = "RELICS_FOUND"
+							maxWidth = 200
+							maxHeight = 29
+							fixedSize = yes
+							format = centre
+							text_color_code = "H"
+						}
+
+						instantTextBoxType = {
+							name = "relics_found_value"
+							font = "cg_16b"
+							position = { x = 13 y = 47 }
+							maxWidth = 200
+							maxHeight = 40
+							fixedSize = yes
+							format = centre
+						}
+					}
+
+					# RIGHT SIDE
+					containerWindowType = {
+						name = "relics_topbar_right"
+						size = { width = 767 height = 87 }
+						position = { x = 620 y = 0 }
+
+						instantTextBoxType = {
+							name = "no_triumph_text"
+							font = "cg_16b"
+							position = { x = 133 y = 27 }
+							text = "ACTIVATE_RELIC_FOR_TRIUMPH"
+							maxWidth = 333
+							maxHeight = 29
+							fixedSize = yes
+							text_color_code = "Y"
+						}
+
+						instantTextBoxType = {
+							name = "active_triumph_text"
+							font = "cg_16b"
+							position = { x = 67 y = 13 }
+							text = "ACTIVE_TRIUMPH_TEXT"
+							maxWidth = 200
+							maxHeight = 29
+							fixedSize = yes
+							text_color_code = "H"
+						}
+
+						instantTextBoxType = {
+							name = "active_triumph_value"
+							font = "cg_16b"
+							position = { x = 267 y = 13 }
+							maxWidth = 80
+							maxHeight = 40
+							fixedSize = yes
+							format = centre
+						}
+
+						iconType = {
+							name = "progressbar"
+							spriteType = "GFX_queue_progressbar"
+							position = { x = 67 y = 40 }
+						}
+					}
+				}
+
+				# RELICS CONTENT
+				containerWindowType = {
+					name = "relics_content"
+					size = { width = @relicsWidthWide height = 627 }
+					position = { x = 0 y = 80 }
+					verticalScrollbar = "right_vertical_slider"
+					margin = { top = 13 bottom = 0 }
+
+					background = {
+						name = "bg"
+						quadTextureSprite = "GFX_tiled_window_transparent"
+					}
+
+					gridBoxType = {
+						name = "relics_grid"
+						position = { x = 340 y = 40 }
+						size = { width = 267 height = 533 }
+						slotsize = {
+							width = 245
+							height = 259
+						}
+						max_slots_horizontal = 4
+					}
+				}
+			}
+
+			###############################
+			# ARTIFACTS
+			###############################
+
+			@artifactsWidth = 669
+
+			containerWindowType = {
+				name = "artifacts_box"
+				size = { width = @artifactsWidth height = 688 }
+				position = { x = 1009 y = 93 }
+
+				background = {
+					name = "bg"
+					quadTextureSprite = "GFX_artifacts_panel_bg"
+				}
+
+				# TOP BAR
+				containerWindowType = {
+					name = "artifacts_topbar"
+					size = { width = @artifactsWidth height = 87 }
+					position = { x = 0 y = 0 }
+
+					background = {
+						name = "background"
+						spriteType = "GFX_invisible"
+					}
+
+					instantTextBoxType = {
+						name = "artifacts_header"
+						font = "cg_16b"
+						position = { x = 27 y = 19 }
+						text = "MINOR_ARTIFACTS"
+						maxWidth = 200
+						maxHeight = 29
+						fixedSize = yes
+						format = left
+						text_color_code = "H"
+						alwaysTransparent = yes
+					}
+
+					instantTextBoxType = {
+						name = "amount"
+						font = "cg_16b"
+						position = { x = 443 y = 19 }
+						maxWidth = 200
+						maxHeight = 29
+						format = right
+						alwaysTransparent = yes
+					}
+
+				}
+
+				# CONTENT
+				containerWindowType = {
+					name = "artifacts_content"
+					size = { width = 657 height = 632 }
+					position = { x = 13 y = 67 }
+					verticalScrollbar = "right_vertical_slider"
+					margin = { top = 0 bottom = 20 }
+
+					background = {
+						name = "bg"
+						quadTextureSprite = "GFX_tiled_window_transparent"
+					}
+
+					gridBoxType = {
+						name = "artifact_actions_grid"
+						position = { x = 0 y = 0 }
+						size = { width = 640 height = 600 }
+						slotsize = {
+							width = 640
+							height = 57
+						}
+						max_slots_horizontal = 1
+					}
+				}
+			}
+		}
+
+		###########################################################################################
+		# ASTRAL ACTIONS TAB
+		###########################################################################################
+
+		containerWindowType = {
+			name = "astral_actions_window"
+			size = { width = @view_w height = @view_h }
+			moveable = no
+			orientation = upper_left
+			position = { x = 0 y = 0 }
+
+			###############################
+			# ASTRAL ACTIONS
+			###############################
+			
+			@astralActionsWidth = 1668
+			@astralActionsHeight = 701
+
+			@astralActionsRowWidth = 1603
+			@astralActionsRowHeight = 333
+
+			@astralActionSlotWidth = 232
+			@astralActionSlotHeight = 245
+
+			containerWindowType = {
+				name = "astral_actions_content"
+				size = { width = @astralActionsWidth height = @astralActionsHeight }
+				position = { x = 13 y = 80 }
+
+				background = {
+					name = "astral_actions_box_background"
+					quadTextureSprite = "GFX_astral_actions_view_background"
+				}
+
+				# Astral Threads
+				containerWindowType = {
+					name = "astral_threads_topbar"
+					size = { width = 267 height = 53 }
+					position = { x = 1420 y = 7 }
+
+					background = {
+						name = "astral_threads_background"
+						spriteType = "GFX_invisible"
+					}
+
+					instantTextBoxType = {
+						name = "amount"
+						font = "cg_16b"
+						position = { x = -13 y = 19 }
+						maxWidth = 240
+						maxHeight = 29
+						format = right
+						alwaysTransparent = yes
+					}
+				}
+				
+				containerWindowType = {
+					name = "unlimited_use_actions_row"
+					size = { width = @astralActionsRowWidth height = @astralActionsRowHeight }
+					position = { x = 141 y = 113 }
+
+					background = {
+						name = "unlimited_use_actions_row_background"
+						spriteType = "GFX_invisible"
+					}
+
+					gridBoxType = {
+						name = "unlimited_use_actions_grid"
+						size = { width = @astralActionsRowWidth height = 267 }
+						slotsize = {
+							width = @astralActionSlotWidth
+							height = @astralActionSlotHeight
+						}
+						format = UPPER_LEFT
+						max_slots_vertical = 1
+					}
+				}
+
+				containerWindowType = {
+					name = "limited_use_actions_row"
+					size = { width = @astralActionsRowWidth height = @astralActionsRowHeight }
+					position = { x = 25 y = 303 }
+
+					background = {
+						name = "limited_use_actions_row_background"
+						spriteType = "GFX_invisible"
+					}
+
+					gridBoxType = {
+						name = "limited_use_actions_grid"
+						size = { width = @astralActionsRowWidth height = @astralActionsRowHeight }
+						slotsize = {
+							width = @astralActionSlotWidth
+							height = @astralActionSlotHeight
+						}
+						format = UPPER_LEFT
+						max_slots_vertical = 1
+					}
+				}
+
+				# Astral Rifts completed
+				containerWindowType = {
+					name = "astral_rifts_window"
+					size = { width = 295 height = 88 }
+					position = { x = 683 y = 580 }
+
+					background = {
+						name = "astral_rifts_background"
+						spriteType = "GFX_astral_actions_astral_rifts_completed_background"
+					}
+
+					instantTextBoxType = {
+						name = "rifts_completed"
+						font = "cg_16b"
+						position = { x = 0 y = 36 }
+						maxWidth = 295
+						maxHeight = 37
+						format = center
+						fixedsize = yes
+					}
+				}
+			}
+		}
+	}
+
+	#############################################
+	# RELIC GRID BOX ENTRY
+	#############################################
+	containerWindowType = {
+		name = "relic_grid_entry"
+		size = {
+			width = 243
+			height = 259
+		}
+
+		background = {
+			name = "bg"
+			quadTextureSprite = "GFX_tiled_window_transparent"
+			no_clicksound = yes # this will be manually set by the relic type and played in the UI via code
+		}
+
+		iconType = {
+			name = "frame"
+			position = { x = 0 y = 0 }
+			quadTextureSprite = "GFX_relics_frame"
+			alwaysTransparent = yes
+		}
+
+		iconType = {
+			name = "frame_unused"
+			position = { x = 0 y = 0 }
+			quadTextureSprite = "GFX_relics_frame_unused"
+			alwaysTransparent = yes
+		}
+
+		iconType = {
+			name = "relic_portrait"
+			position = { x = 13 y = 20 }
+			quadTextureSprite = "GFX_tiled_window_transparent"
+			alwaysTransparent = yes
+		}
+	}
+
+	#############################################
+	# ARTIFACT ACTION GRID BOX ENTRY
+	#############################################
+	containerWindowType = {
+		name = "artifact_action_grid_entry"
+		size = {
+			width =  643
+			height = 53
+		}
+
+		background = {
+			name = "bg"
+			quadTextureSprite = "GFX_tiles_dark_area_cut_8"
+		}
+
+		instantTextBoxType = {
+			name = "title"
+			font = "cg_16b"
+			position = { x = 13 y = 19 }
+			text = "MINOR_ARTIFACTS"
+			maxWidth = 400
+			maxHeight = 29
+			fixedSize = yes
+			format = left
+			alwaysTransparent = yes
+		}
+
+		instantTextBoxType = {
+			name = "cost"
+			font = "cg_16b"
+			position = { x = 427 y = 19 }
+			maxWidth = 200
+			maxHeight = 29
+			fixedSize = yes
+			format = right
+			text = "45"
+			alwaysTransparent = yes
+		}
+
+		buttonType = {
+			name = "button"
+			quadTextureSprite = "GFX_button_light"
+			position = { x = -1 y = -1 }
+			clicksound = "queuing_building"
+			size = { x = 645 y = 56 }
+		}
+	}
+
+	#############################################
+	# ASTRAL ACTION GRID BOX ENTRY
+	#############################################
+	containerWindowType = {
+		name = "astral_action_grid_entry"
+		size = {
+			width = @astralActionSlotWidth
+			height = @astralActionSlotHeight
+		}
+
+		background = {
+			name = "astral_action_grid_entry_background"
+			quadTextureSprite = "GFX_tiled_window_transparent"
+		}
+
+		iconType = {
+			name = "astral_action_frame"
+			quadTextureSprite = "GFX_astral_actions_frame"
+			alwaysTransparent = yes
+		}
+
+		iconType = {
+			name = "astral_action_locked"
+			quadTextureSprite = "GFX_astral_action_locked"
+			alwaysTransparent = yes
+		}
+
+		iconType = {
+			name = "astral_action_unlocked"
+			quadTextureSprite = "GFX_tiled_window_transparent" # Should be overriden by the Astral Action's picture field
+			alwaysTransparent = yes
+		}
+
+		iconType = {
+			name = "astral_action_frame_recently_available_overlay"
+			quadTextureSprite = "GFX_astral_action_frame_recently_available_overlay"
+			alwaysTransparent = yes
+		}
+
+		iconType = {
+			name = "astral_actions_cost_background"
+			quadTextureSprite = "GFX_astral_actions_unlock_cost_background"
+			alwaysTransparent = yes
+		}
+
+		instantTextBoxType = {
+			name = "astral_actions_cost"
+			position = { x = 0 y = 144 }
+			font = "cg_16b"
+			format = center
+			vertical_alignment = center
+			maxWidth = 225
+			maxHeight = 80
+			fixedsize = yes
+		}
+	}
+}

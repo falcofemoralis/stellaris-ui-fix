@@ -1,0 +1,380 @@
+guiTypes = {
+	containerWindowType = {
+		name = "species_mod_apply_window"
+		position = { x = 0 y = -13 }
+		size = { width = 867 height = 795 }
+		orientation = center
+		origo = center
+		moveable = yes
+
+		background = {
+			name = "window_background"
+			quadTextureSprite = "GFX_tile_outliner_bg"
+		}
+
+		## Header
+
+		iconType = {
+			name = "hex_bg"
+			spriteType = "GFX_hex_bg"
+			position = { x = -13 y = -17 }
+			alwaysTransparent = yes
+		}
+
+		iconType = {
+			name = "header_line"
+			spriteType = "GFX_line_long"
+			position = { x = 8 y = 28 }
+			alwaysTransparent = yes
+		}
+
+		instantTextBoxType = {
+			name = "title"
+			font = "malgun_goth_24"
+			position = { x = 27 y = 7 }
+			maxWidth = 459
+			maxHeight = 29
+			fixedSize = yes
+			format = left
+			alwaysTransparent = yes
+			text = "APPLY_GENE_MODIFICATION"
+		}
+
+
+		buttonType = {
+			name = "close"
+			quadTextureSprite = "GFX_close"
+			position = { x = -59 y = 21 }
+			orientation = upper_right
+			shortcut = "ESCAPE"
+			clicksound = "back_click"
+			pdx_tooltip = "CLOSE_TITLE"
+		}
+
+		## Selected template
+
+		instantTextBoxType = {
+			name = "template_label"
+			font = "cg_16b"
+			position = { x = 20 y = 67 }
+			maxWidth = 459
+			maxHeight = 29
+			fixedSize = yes
+			format = left
+			alwaysTransparent = yes
+			text_color_code = "E"
+			text = "SPECIES_MODIFICATION_SELECTED_TEMPLATE"
+		}
+
+		containerWindowType = {
+			name = "template"
+			size = { width = 733 height = 80 }
+			position = { x = 20 y = 93 }
+
+			background = {
+				name = "background"
+				spriteType = "GFX_tiles_frame_light"
+			}
+
+			iconType = {
+				name = "species"
+				quadTextureSprite = "GFX_portrait_character"
+				position = { x = -4 y = 0 }
+				scale = 0.12
+			}
+
+			instantTextBoxType = {
+				name = "name"
+				font = "cg_16b"
+				maxWidth = 223
+				maxHeight = 40
+				fixedSize = yes
+				position = { x = 77 y = 15 }
+				orientation = left
+				text_color_code = "E"
+			}
+
+			instantTextBoxType = {
+				name = "class"
+				font = "cg_16b"
+				maxWidth = 223
+				maxHeight = 40
+				fixedSize = yes
+				position = { x = 77 y = 40 }
+			}
+
+			overlappingElementsBoxType = {
+				name = "traits"
+				position = { x = 333 y = 21 }
+				size = { x = 283 y = 53 }
+				format = left
+				spacing = 5
+			}
+
+			instantTextBoxType = {
+				name = "population"
+				font = "cg_16b"
+				orientation = lower_right
+				position = { x = -73 y = -36 }
+				maxWidth = 53
+				maxHeight = 40
+				format = right
+				text_color_code = "H"
+			}
+		}
+
+		## List
+
+		containerWindowType = {
+			name = "list_headers"
+			position = { x = 13 y = 187 }
+			size = { width = 833 height = 32 }
+
+			checkboxType = {
+				name = "all_selected"
+				quadTextureSprite = "GFX_checkbox_20_20_01"
+				position = { x = 20 y = 3 }
+				clicksound = "select_click"
+			}
+
+			buttonType = {
+				name = "species_header_button"
+				font = "cg_16b"
+				spriteType = "GFX_standard_button_200_24"
+				buttonText = "SPECIES_VIEW_SPECIES"
+				position = { x = 47 y = 0 }
+				clicksound = "tab_click"
+			}
+
+			buttonType = {
+				name = "traits_header_button"
+				font = "cg_16b"
+				spriteType = "GFX_standard_button_208_24"
+				buttonText = "SPECIES_VIEW_TRAITS"
+				position = { x = 320 y = -9 }
+				clicksound = "tab_click"
+			}
+
+			buttonType = {
+				name = "planets_header_button"
+				font = "cg_16b"
+				spriteType = "GFX_button_75_24"
+				position = { x = 604 y = -9 }
+				pdx_tooltip = "SPECIES_MODIFICATION_PLANETS_TOOLTIP"
+			}
+			iconType = {
+				name = "planets_header_button_icon"
+				spriteType = "GFX_planets_header"
+				position = { x = 653 y = 7 }
+				alwaystransparent = yes
+			}
+
+			buttonType = {
+				name = "pops_header_button"
+				font = "cg_16b"
+				spriteType = "GFX_button_75_24"
+				position = { x = 711 y = -9 }
+				pdx_tooltip = "SPECIES_MODIFICATION_POPS_TOOLTIP"
+			}
+			iconType = {
+				name = "pops_header_button_icon"
+				spriteType = "GFX_pop_green"
+				position = { x = 759 y = 7 }
+				alwaystransparent = yes
+			}
+		}
+
+		containerWindowType = {
+			name = "list_container"
+			position = { x = 20 y = 233 }
+			size = { width = 827 height = 489 }
+
+			background = {
+				name = "background"
+				spriteType = "GFX_tiles_dark_area_cut_8"
+			}
+
+			smoothListboxType = {
+				name = "list"
+				size = { x = 820 y = 489 }
+				scrollbartype = "standardlistbox_slider"
+				spacing = 0
+			}
+		}
+
+		## Bottom row (affected pops, research cost, buttons)
+
+		instantTextBoxType = {
+			name = "affected_pops"
+			font = "cg_16b"
+			orientation = "LOWER_LEFT"
+			position = { x = 0 y = -63 }
+			maxHeight = 40
+			maxWidth = 640
+			format = right
+		}
+
+		instantTextBoxType = {
+			name = "cost"
+			font = "cg_16b"
+			orientation = "LOWER_LEFT"
+			position = { x = 0 y = -36 }
+			maxHeight = 40
+			maxWidth = 640
+			format = right
+		}
+
+		buttonType = {
+			name = "apply_template"
+			quadTextureSprite = "GFX_standard_button_142_34_button"
+			position = { x = -225 y = -80  }
+			orientation = "LOWER_RIGHT"
+			shortCut = "RETURN"
+			text = "SPECIES_MODIFICATION_APPLY_TEMPLATE"
+			font = "cg_16b"
+			clicksound = "confirm_click"
+		}
+	}
+
+	containerWindowType = {
+		name = "species_mod_apply_species_item"
+		size = { width = 827 height = 69 }
+
+		buttonType = {
+			name = "background"
+			spriteType = "GFX_tiles_frame_light"
+			size = { x = 827 y = 69 }
+		}
+
+		containerWindowType = {
+			name = "species_container"
+			position = { x = 55 y = 8 }
+			size = { width = 63 height = 53 }
+			clipping = yes
+
+			iconType = {
+				name = "species"
+				quadTextureSprite = "GFX_portrait_character"
+				position = { x = -19 y = -4 }
+				scale = 0.12
+			}
+		}
+
+		checkboxType = {
+			name = "selected"
+			quadTextureSprite = "GFX_checkbox_20_20_01"
+			position = { x = 13 y = 13 }
+		}
+
+		instantTextBoxType = {
+			name = "name"
+			font = "cg_16b"
+			maxWidth = 213
+			maxHeight = 40
+			fixedSize = yes
+			position = { x = 111 y = 12 }
+			orientation = left
+			text_color_code = "E"
+		}
+
+		instantTextBoxType = {
+			name = "type"
+			font = "cg_16b"
+			maxWidth = 213
+			maxHeight = 40
+			position = { x = 111 y = 35 }
+		}
+
+		overlappingElementsBoxType = {
+			name = "traits_icons"
+			position = { x = 333 y = 16 }
+			size = { x = 283 y = 53 }
+			format = left
+			spacing = 5
+		}
+
+		instantTextBoxType = {
+			name = "planets"
+			font = "cg_16b"
+			position = { x = 629 y = 15 }
+			maxWidth = 67
+			maxHeight = 40
+			format = center
+			vertical_alignment = center
+			text_color_code = "H"
+		}
+
+		instantTextBoxType = {
+			name = "population"
+			font = "cg_16b"
+			position = { x = 733 y = 15 }
+			maxWidth = 67
+			maxHeight = 40
+			format = center
+			vertical_alignment = center
+			text_color_code = "H"
+		}
+	}
+
+	containerWindowType = {
+		name = "species_mod_apply_species_planet_item"
+		size = { width = 827 height = 69 }
+
+		buttonType = {
+			name = "background"
+			spriteType = "GFX_tiles_frame_light"
+			size = { x = 783 y = 69 }
+			position = { x = 44 y = 0 }
+		}
+
+		checkboxType = {
+			name = "selected"
+			quadTextureSprite = "GFX_checkbox_20_20_01"
+			position = { x = 57 y = 13 }
+		}
+
+		iconType = {
+			name = "planet_class_icon"
+			quadTextureSprite = "GFX_planet_type"
+			position = { x = 127 y = 35 }
+			centerPosition = yes
+		}
+
+		iconType = {
+			name = "planet_designation_icon"
+			quadTextureSprite = "GFX_planet_type"
+			position = { x = 177 y = 35 }
+			centerPosition = yes
+		}
+
+		instantTextBoxType = {
+			name = "name"
+			font = "cg_16b"
+			maxWidth = 267
+			maxHeight = 40
+			fixedSize = yes
+			position = { x = 207 y = 12 }
+			orientation = left
+			text_color_code = "E"
+		}
+
+		instantTextBoxType = {
+			name = "type"
+			font = "cg_16b"
+			maxWidth = 267
+			maxHeight = 40
+			position = { x = 207 y = 35 }
+		}
+
+		instantTextBoxType = {
+			name = "population"
+			font = "cg_16b"
+			position = { x = 733 y = 15 }
+			maxWidth = 67
+			maxHeight = 40
+			format = center
+			vertical_alignment = center
+			text_color_code = "H"
+		}
+	}
+}

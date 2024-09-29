@@ -1,0 +1,500 @@
+guiTypes = {
+	containerWindowType = {
+		name = "multiplayer_view"
+		position = { x= 0 y = 0 }
+		size = { width = 100% height = 100% }
+
+		containerWindowType = {
+			name = "multiplayer_menu"
+			position = { x = -800 y = -433 }
+			size = { width = 100% height = 100% }
+			orientation = center
+
+			instantTextBoxType = {
+				name = "player_name_label"
+				font = "malgun_goth_24"
+				text = "SET_PLAYER_NAME"
+				position = { x = 3 y = 60 }
+				maxWidth = 333
+				maxHeight = 27
+				text_color_code = "H"
+				format = left
+			}
+
+			editBoxType = {
+				position = { x = 0 y = 100 }
+				name = "playername"
+				instantTextBoxType = no
+				textureFile = "gfx/interface/tiles/small_tiles_dialog.dds"
+				font = "malgun_goth_24"
+				borderSize = { x = 8 y = 5 }
+				size = { x = 387 y = 40 }
+				text = "FE_PLAYER"
+			}
+
+			instantTextBoxType = {
+				name = "version"
+				font = "cg_16b"
+				text = "1337"
+				position = { x = 0 y = 807 }
+				maxWidth = 400
+				maxHeight = 27
+				fixedSize = yes
+				format = left
+			}
+			buttonType = {
+				name = "version_button"
+				spriteType = "GFX_invisible"
+				size = { x = 400 y = 27 }
+				position = { x = 0 y = 807 }
+			}
+		}
+
+		containerWindowType = {
+			name = "multiplayer_connect_menu"
+			position = { x = -233 y = -300 }
+			size = { width = 467 height = 600 }
+			orientation = center
+			moveable = yes
+
+			background = {
+				name = "connect_bg"
+				spriteType = "GFX_tile_outliner_bg"
+			}
+
+			# containerWindowType = {
+			# 	name = "connect_bg_box"
+			# 	size = { width = 467 height =600 }
+			# 	position = { x = 0 y = 0 }
+			#
+			# 		background = {
+			# 			name = "connect_bg"
+			# 			spriteType = "GFX_tile_outliner_bg"
+			# 		}
+			# }
+
+			iconType = {
+				name = "hex_bg"
+				spriteType = "GFX_hex_bg"
+				position = { x = -13 y = -11 }
+				alwaysTransparent = yes
+			}
+
+			iconType = {
+				name = "header_line"
+				spriteType = "GFX_line"
+				position = { x = 8 y = 28 }
+			}
+
+			instantTextBoxType = {
+				name = "hot_join_label"
+				font = "malgun_goth_24"
+				text = "CONNECTING"
+				position = { x = 21 y = 7 }
+				maxWidth = 360
+				maxHeight = 27
+				Orientation = "UPPER_LEFT"
+				format = left
+			}
+
+		#	containerWindowType = {
+		#		name = "leader_frame_box"
+		#		size = { width = 439 height = 449 }
+		#		position = { x = 15 y = 63 }
+		#
+		#		background = {
+		#			name = "leader_frame"
+		#			spriteType = "GFX_tiles_dark_area_cut_8"
+		#			alwaysTransparent = yes
+		#		}
+		#	}
+
+			listboxType = {
+				name = "info_list"
+				position = { x = 100 y = 107 }
+				#backGround="SandboxFloaterBackground"
+				size = { x = 293 y = 347 }
+				horizontal = 0
+				spacing = 3
+				scrollbartype = "standardlistbox_slider"
+				borderSize = { x = 0 y = 27 }
+				Orientation = "UPPER_LEFT"
+				#moveable = yes
+			}
+
+			buttonType = {
+				name = "back"
+				position = { x = 123 y = 515 }
+				quadTextureSprite = "GFX_standard_button_142_34_button"
+				tooltip = ""
+				tooltipText = ""
+				delayedTooltipText = ""
+				buttonText = "FRONT_BACK"
+				buttonFont = "cg_16b"
+			}
+
+			buttonType = {
+				name = "connectivity_help"
+				position = { x = 123 y = 461 }
+				quadTextureSprite = "GFX_standard_button_142_34_button"
+				buttonText = "HELP"
+				buttonFont = "cg_16b"
+				web_link = "https://support.paradoxplaza.com/hc/en-us/articles/115007925347-Firewall-Connectivity-Issues"
+			}
+		}
+	}
+
+	positionType = {
+		name = "mp_view_crossplay_checkbox_pos_1"
+		position = { x = 133 y = 496 }
+	}
+
+	positionType = {
+		name = "mp_view_crossplay_checkbox_pos_2"
+		position = { x = 333 y = 496 }
+	}
+
+	containerWindowType = {
+		name = "host_window"
+		position = { x = -328 y = -219 }
+		size = { width = 667 height = 653 }
+		orientation = center
+
+		background = {
+			name = "Background"
+			quadTextureSprite = "GFX_multiplayer_background"
+		}
+
+		instantTextBoxType = {
+			name = "Title"
+			position = { x = 0 y = 36 }
+			textureFile = ""
+			font = "malgun_goth_24"
+			borderSize = { x = 5 y = 5 }
+			text = "MATCHMAKING_SERVER_HOST_TITLE"
+			maxWidth = 667
+			maxHeight = 427
+
+			format = centre
+		}
+
+		instantTextBoxType = {
+			name = "edit_title"
+			position = { x = 133 y = 91 }
+			textureFile = ""
+			font = "cg_16b"
+			borderSize = { x = 5 y = 5 }
+			text = "MATCHMAKING_SERVER_NAME"
+			maxWidth = 667
+			maxHeight = 427
+		}
+
+		editBoxType = {
+			position = { x = 133 y = 131 }
+			name = "edit"
+			instantTextBoxType = no
+			textureFile = "gfx/interface/tiles/small_tiles_dialog.dds"
+			font = "cg_16b"
+			borderSize = { x = 11 y = 5 }
+			size = { x = 400 y = 43 }
+			text = "FE_MY_GAME"
+			orientation = "UPPER_LEFT"
+		}
+
+		instantTextBoxType = {
+			name = "password_title"
+			position = { x = 133 y = 184 }
+			textureFile = ""
+			font = "cg_16b"
+			borderSize = { x = 5 y = 5 }
+			text = "MATCHMAKING_SERVER_PASSWORD"
+			maxWidth = 667
+			maxHeight = 427
+		}
+
+		editBoxType = {
+			position = { x = 133 y = 224 }
+			name = "password"
+			instantTextBoxType = no
+			textureFile = "gfx/interface/tiles/small_tiles_dialog.dds"
+			font = "cg_16b"
+			borderSize = { x = 11 y = 5 }
+			size = { x = 400 y = 43 }
+			text = ""
+			orientation = "UPPER_LEFT"
+		}
+
+		instantTextBoxType = {
+			name = "tags_title"
+			position = { x = 133 y = 280 }
+			textureFile = ""
+			font = "cg_16b"
+			borderSize = { x = 5 y = 5 }
+			text = "MATCHMAKING_SERVER_HOST_TAGS"
+			maxWidth = 667
+			maxHeight = 427
+		}
+
+		editBoxType = {
+			position = { x = 133 y = 320 }
+			name = "tags"
+			instantTextBoxType = no
+			textureFile = "gfx/interface/tiles/small_tiles_dialog.dds"
+			font = "cg_16b"
+			borderSize = { x = 11 y = 5 }
+			size = { x = 400 y = 43 }
+			text = ""
+			orientation = "UPPER_LEFT"
+		}
+
+		instantTextBoxType = {
+			name = "desc_title"
+			position = { x = 133 y = 373 }
+			textureFile = ""
+			font = "cg_16b"
+			borderSize = { x = 5 y = 5 }
+			text = "MATCHMAKING_SERVER_DESC"
+			maxWidth = 667
+			maxHeight = 427
+		}
+
+		editBoxType = {
+			position = { x = 133 y = 413 }
+			name = "desc"
+			instantTextBoxType = no
+			textureFile = "gfx/interface/tiles/small_tiles_dialog.dds"
+			font = "cg_16b"
+			borderSize = { x = 11 y = 5 }
+			size = { x = 400 y = 43 }
+			text = ""
+			orientation = "UPPER_LEFT"
+		}
+
+		containerWindowType = {
+			name = "visibility"
+			position = { x = 0 y = 453 }
+
+			instantTextBoxType = {
+				name = "value"
+				font = "cg_16b"
+				text = "Test"
+				position = { x = 160 y = 9 }
+				maxWidth = 333
+				maxHeight = 27
+				fixedSize = yes
+				format = center
+				pdx_tooltip = "MATCHMAKING_VISIBILITY_DESC"
+			}
+
+			buttonType = {
+				position = { x = 133 y = 0 }
+				name = "visibility_prev_button"
+				quadTextureSprite = "GFX_button_left"
+				scale = 0.75
+				pdx_tooltip = "MATCHMAKING_VISIBILITY_DESC"
+			}
+
+			buttonType = {
+				position = { x = 488 y = 0 }
+				name = "visibility_next_button"
+				quadTextureSprite = "GFX_button_right"
+				scale = 0.75
+				pdx_tooltip = "MATCHMAKING_VISIBILITY_DESC"
+			}
+		}
+
+		containerWindowType = {
+			name = "allow_coop"
+			position = { x = 133 y = 496 }
+
+			checkboxType = {
+				name = "allow_coop_checkbox"
+				position = { x = 0 y = 0 }
+				quadTextureSprite = "GFX_checkbox_20_20_01"
+			}
+
+			instantTextBoxType = {
+				name = "allow_coop_title"
+				position = { x = 45 y = 11 }
+				maxWidth = 160
+				maxHeight = 32
+				font = "cg_16b"
+				text = "MATCHMAKING_FILTER_HOST_ALLOW_COOP"
+			}
+		}
+
+		containerWindowType = {
+			name = "filter_crossplay"
+			position = { x = 333 y = 496 }
+
+			checkboxType = {
+				name = "filter_crossplay_checkbox"
+				position = { x = 0 y = 0 }
+				quadTextureSprite = "GFX_checkbox_20_20_01"
+			}
+
+			instantTextBoxType = {
+				name = "filter_crossplay_title"
+				position = { x = 45 y = 11 }
+				maxWidth = 200
+				maxHeight = 32
+				font = "cg_16b"
+				text = "MATCHMAKING_FILTER_CROSSPLAY"
+			}
+		}
+
+		instantTextBoxType = {
+			name = "connection_status"
+			position = { x = 53 y = 427 }
+			font = "cg_16b"
+			text = "CONNECTION STATUS"
+			maxWidth = 560
+			maxHeight = 107
+			format = centre
+		}
+
+		buttonType = {
+			name = "connection_restricted_link"
+			position = { x = 53 y = 453 }
+			spriteType = "GFX_invisible"
+			size = { x = 560 y = 107 }
+			web_link = "https://support.paradoxplaza.com/hc/en-us/articles/115007925347-Firewall-Connectivity-Issues"
+		}
+
+		buttonType = {
+			name = "ok_host_button"
+			position = { x = 333 y = 547 }
+			quadTextureSprite = "GFX_standard_button_142_34_button"
+			tooltip = ""
+			tooltipText = ""
+			delayedTooltipText = ""
+			buttonText = "HOST_BUTTON"
+			buttonFont = "cg_16b"
+			shortCut = "RETURN"
+			oversound = mouse_over
+		}
+
+		buttonType = {
+			name = "back_button"
+			position = { x = 107 y = 547}
+			quadTextureSprite = "GFX_standard_button_142_34_button"
+			tooltip = ""
+			tooltipText = ""
+			delayedTooltipText = ""
+			buttonText = "FE_CANCEL"
+			buttonFont = "cg_16b"
+			shortCut = "ESCAPE"
+			clicksound = "back_click"
+			oversound = mouse_over
+		}
+	}
+
+	containerWindowType = {
+		name = "connect_window"
+		position = { x = -328 y = -192 }
+		size = { width = 667 height = 373 }
+		orientation = center
+
+		background = {
+			name = "Background"
+			quadTextureSprite = "gfx_message_bg"
+		}
+
+		instantTextBoxType = {
+			name = "info_text"
+			position = { x = 0 y = 80 }
+			textureFile = ""
+			font = "cg_16b"
+			borderSize = { x = 5 y = 5 }
+			text = ""
+			maxWidth = 667
+			maxHeight = 427
+
+			format = centre
+		}
+
+		instantTextBoxType = {
+			name = "Title"
+			position = { x = 0 y = 40 }
+			textureFile = ""
+			font = "malgun_goth_24"
+			borderSize = { x = 5 y = 5 }
+			text = "MATCHMAKING_SERVER_CONNECT_TITLE"
+			maxWidth = 667
+			maxHeight = 427
+
+			format = centre
+		}
+
+		instantTextBoxType = {
+			name = "edit_title"
+			position = { x = 131 y = 104 }
+			textureFile = ""
+			font = "cg_16b"
+			borderSize = { x = 5 y = 5 }
+			text = "MATCHMAKING_SERVER_CONNECT_ADDRESS"
+			maxWidth = 667
+			maxHeight = 427
+		}
+
+		editBoxType = {
+			position = { x = 133 y = 133 }
+			name = "edit"
+			instantTextBoxType = no
+			textureFile = "gfx/interface/tiles/small_tiles_dialog.dds"
+			font = "cg_16b"
+			borderSize = { x = 11 y = 5 }
+			size = { x = 400 y = 43 }
+			text = ""
+			orientation = "UPPER_LEFT"
+		}
+
+		instantTextBoxType = {
+			name = "password_title"
+			position = { x = 131 y = 171 }
+			textureFile = ""
+			font = "cg_16b"
+			borderSize = { x = 5 y = 5 }
+			text = "MATCHMAKING_SERVER_PASSWORD"
+			maxWidth = 667
+			maxHeight = 427
+		}
+
+		editBoxType = {
+			position = { x = 133 y = 200 }
+			name = "password"
+			instantTextBoxType = no
+			textureFile = "gfx/interface/tiles/small_tiles_dialog.dds"
+			font = "cg_16b"
+			borderSize = { x = 11 y = 5 }
+			size = { x = 400 y = 43 }
+			text = ""
+			orientation = "UPPER_LEFT"
+		}
+
+		buttonType = {
+			name = "ok_join_button"
+			position = { x = 333 y = 267 }
+			quadTextureSprite = "GFX_standard_button_142_34_button"
+			tooltip = ""
+			tooltipText = ""
+			delayedTooltipText = ""
+			buttonText = "JOIN_BUTTON"
+			buttonFont = "cg_16b"
+			clicksound = "confirmation"
+		}
+
+		buttonType = {
+			name = "back_button"
+			position = { x = 107 y = 267 }
+			quadTextureSprite = "GFX_standard_button_142_34_button"
+			tooltip = ""
+			tooltipText = ""
+			delayedTooltipText = ""
+			buttonText = "FE_CANCEL"
+			buttonFont = "cg_16b"
+			shortCut = "ESCAPE"
+			clicksound = "back_click"
+		}
+	}
+}

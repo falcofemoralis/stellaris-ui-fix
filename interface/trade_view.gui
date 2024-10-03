@@ -13,13 +13,19 @@ guiTypes = {
 		dynamic_extra_height = @dynamic_extra
 		orientation = center
 		origo = center
+		moveable = yes
+		clipping = no
+
+		backGround = {
+			name = "background"
+			quadTextureSprite ="GFX_tiled_window_transparent" # makes window moveable
+		}
 
 		containerWindowType = {
 			name = "diplo_trade_view_background_window"
 			size = { width = 1643 height = 853 }
 			dynamic_extra_height = @dynamic_extra
 			position = { x = 0 y = -13 }
-			#moveable = yes
 
 			background = {
 				name = "background"

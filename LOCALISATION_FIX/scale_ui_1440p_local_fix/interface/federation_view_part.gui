@@ -1,0 +1,45 @@
+# Исправляю налезание названий членов федерации на значения их дип. веса в главном окне федерации
+guiTypes = {
+	containerWindowType = {
+		name = "small_member_item"
+		position = { x = 20 y = 60}
+		size = { width= 387 height= 51 }
+
+		background = {
+			name = "background"
+			spriteType = "GFX_dark_area_cut"
+		}
+
+		buttonType = {
+			name = "flag"
+			quadTextureSprite = "GFX_empire_flag_32"
+			position = { x= 8 y = 5  }
+		}
+		
+		iconType = {
+			name = "federation_leader_border"
+			quadTextureSprite = "GFX_federation_leader_border"
+			position = { x= 4 y = 3  }
+			alwaysTransparent = yes
+		}
+
+		instantTextBoxType={
+			name = "name"
+			font = "cg_16b"
+			maxWidth = 280
+			maxHeight = 47
+			position = { x = 53 y = 3}
+			alwaysTransparent = yes
+			vertical_alignment = center
+			fixedSize = yes
+		}
+
+		instantTextBoxType={
+			name = "power_amount"
+			font = "cg_16b"
+			maxWidth = 67
+			position = { x = 320 y = 13}
+			format = center
+		}
+	}
+}

@@ -1,0 +1,105 @@
+# Делаю название подкласса лидера в две строки
+
+guiTypes = {
+	###	PORTRAIT COMPONENT RECRUITMENT EVENT ###
+
+	containerWindowType = {
+		name = "paragon_portrait_container_recruit_event"
+		size = { width = 493 height = 667 }
+		clipping = no
+
+		### PORTRAIT ###
+
+		containerWindowType = {
+			name = "character_expanded_portrait_container_clipping_mask"
+			position = { x = 0 y = 0 }
+			size = { width = 100% height = 667 }
+			clipping = no
+
+			iconType = {
+				name = "character_portrait"
+				quadTextureSprite = "GFX_portrait_character_large"
+				position = { x = -93 y = -207 }
+			}
+		}
+
+		### LEADER RARITY ###
+
+		instantTextBoxType = {
+			name = "leader_rarity_text" 
+			font = "cg_16b"
+			position = { x = 604 y = 107 }
+			maxWidth = 724
+			maxHeight = 29
+			fixedSize = yes
+			format = left
+			alwaysTransparent = yes
+		}
+
+		### CLASS ###
+
+		iconType = {
+			name = "leader_type"
+			quadTextureSprite = "GFX_leader_icons_medium"
+			position = { x = 883 y = 503 }
+			scale = 0.86
+		}
+
+		containerWindowType = {
+			name = "leader_subclass_layered_icon_locator_1"
+			position = { x = 884 y = 540 }
+		}
+
+		instantTextBoxType={
+			name = "leader_class_text_noprefix"
+			font = "cg_16b"
+			position = { x = 941 y = 511 }
+			maxWidth = 200
+			maxHeight = 27
+			fixedSize = yes
+			format = left
+			alwaystransparent = yes
+			text_color_code = "H"
+			vertical_alignment = center
+		}
+
+		instantTextBoxType={
+			name = "leader_subclass_text"
+			font = "cg_16b"
+			position = { x = 941 y = 533 }
+			maxWidth = 133
+			maxHeight = 53
+			fixedSize = yes
+			format = left
+			text_color_code = "v"
+			vertical_alignment = center
+		}
+
+		### ETHIC ###
+
+		iconType = {
+			name = "ethic_icon"
+			spriteType = "GFX_leader_skill"
+			position = { x = 1153 y = 520 }
+		}
+
+		### TRAITS ###
+
+		OverlappingElementsBoxType = {
+			name = "traits_overlapping_box"
+			position = { x = 887 y = 653 }
+			size = { x = 333 y = 53 }
+			first_on_top = yes
+		}
+
+		### UPKEEP ###
+
+		instantTextBoxType = {
+			name = "upkeep_text"
+			position = { x = 964 y = 745 }
+			font = "cg_16b"
+			maxWidth = 267
+			maxHeight = 33
+			format = right
+		}
+	}

@@ -1,0 +1,105 @@
+# Меняю заголовок в приветственном сообщении и ставлю ссылку на ВК вместо форума
+
+guiTypes = {
+
+	containerWindowType = {
+		name = "startup_info_view"
+		orientation = center
+		origo = center
+		size = { width = 1240 height = 800 }
+		moveable = yes
+
+		background = {
+			name ="background"
+			quadTextureSprite = "GFX_tile_large_bg"
+			position = { x = 0 y = 0 }
+		}
+
+		iconType = {
+			name = "header_line"
+			quadTextureSprite = "GFX_line"
+			position = { x = 13 y = 67 }
+		}
+
+		instantTextBoxType = {
+			name = "header"
+			font = "large_title_font"
+			position = { x = 35 y = 13 }
+			maxWidth = 800
+			maxHeight = 21
+			text = "RINFIX_STARTUP_VERSION"
+			Orientation = "UPPER_LEFT"
+			format = left
+		}
+
+		buttonType = {
+			name = "close"
+			quadTextureSprite = "GFX_button_animated_142"
+			position = { x = 1013 y = 713 }
+			orientation = "RIGHT_DOWN"
+			shortCut = "ESCAPE"
+			clicksound = "back_click"
+			buttontext = "CLOSE"
+			font = "malgun_goth_24"
+			actionShortCut = "cancel"
+		}
+
+		smoothListBoxType = {
+			name = "list"
+			position = { x = 60 y = 120 }
+			priority = 100
+			size = { x = 1200 y = 613 }
+			borderSize = { x = 0 y = 0 }
+			scrollbartype = "standardlistbox_slider"
+			spacing = 5
+		}
+
+		containerWindowType = {
+			name = "dont_show_again"
+			position = { x = 53 y = 733 }
+
+			checkboxType = {
+				name = "checked"
+				spriteType = "GFX_checkbox_20_20_01"
+				pdx_tooltip = "RINFIX_CLOSE_DONT_SHOW_AGAIN"
+			}
+
+			instantTextBoxType = {
+				name = "checkbox_text"
+				format = left
+				position = { x = 40 y = 9 }
+				maxWidth = 267
+				maxHeight = 27
+				font = "cg_16b"
+				text = "CLOSE_DONT_SHOW_AGAIN"
+			}
+		}
+
+		containerWindowType = {
+			name = "forum_link"
+			size = { width = 1133 height = 667 }
+			position = { x = -1180 y = 660 }
+			orientation = upper_right
+			moveable = no
+
+			instantTextBoxType = {
+				name = "forum_link_text"
+				font = "cg_16b"
+				text = "PATCHNOTES"
+				position = { x = 0 y = 31 }
+				maxWidth = 933
+				maxHeight = 53
+				fixedSize = yes
+				alwaysTransparent = no
+			}
+
+			buttonType = {
+				name = "forum"
+				quadTextureSprite = "GFX_invisible"
+				position = { x = 0 y = 20  }
+				pdx_tooltip = "RINFIX_WIKI"
+				web_link = "https://vk.com/@pdxint-stellaris-050924"
+			}
+		}
+	}
+}

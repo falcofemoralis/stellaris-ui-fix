@@ -1,0 +1,17 @@
+# Замена шрифта на экране загрузки
+
+bitmapfonts = {
+	bitmapfont = {
+		name = "load_screen"
+		path = "gfx/fonts/orbitron_28"
+		color = 0xffffffff
+	}
+
+	bitmapfont_override = {
+		name = "load_screen"
+		ttf_font = "OrbitronCYR"
+        ttf_size = "32"
+		languages = { "l_russian" } 
+		vertical_offset  = "-4"
+	}
+}

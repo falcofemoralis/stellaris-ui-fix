@@ -1,0 +1,92 @@
+# Название резолюции в две строчки
+guiTypes = {
+	containerWindowType = {
+		name = "proposed_entry"
+		position = { x = 0 y = 0 }
+		size = { width = 400 height = 101 }
+
+		background = {
+			name = "entry_bg"
+			spriteType = "GFX_button_light"
+			clicksound = "click"
+			oversound = "mouse_over"
+		}
+
+		instantTextBoxType = {
+			name = "name"
+			font = "cg_16b"
+			position = { x = 13 y = 47 }
+			maxWidth = 373
+			maxHeight = 53
+			text = "RESOLUTION NAME!"
+			format = center
+			vertical_alignment = center
+			fixedSize = yes
+		}
+
+		iconType = {
+			name ="group_button_background"
+			quadTextureSprite = "GFX_resolution_button_group"
+			alwaysTransparent = yes
+			position = { x = 0 y = 0 }
+		}
+
+		instantTextBoxType = {
+			name = "support"
+			font = "cg_16b"
+			position = { x = -147 y = 11 }
+			text = "SUPPORT"
+			maxWidth = 93
+			maxHeight = 27
+			format = right
+			orientation = upper_right
+		}
+
+		buttonType = {
+			name = "flag"
+			quadTextureSprite = "GFX_empire_flag_32"
+			position = { x = 7 y = 7  }
+		}
+
+		iconType = {
+			name ="icon"
+			quadTextureSprite = "GFX_tile_production_error" # TODO!
+			position = { x = 167 y = -5 }
+			scale = .85
+			alwaystransparent = yes
+		}
+
+
+		iconType = {
+			name ="supporting_icon_bg"
+			quadTextureSprite = "GFX_resolution_proposed_bg"
+			position = { x = 356 y = 8 }
+			scale = .7
+		}
+
+		iconType = {
+			name ="supporting_icon"
+			quadTextureSprite = "GFX_resolution_proposed_status"
+			position = { x = 352 y = 3 }
+			scale = .95
+		}
+
+		iconType = {
+			name ="frozen_overlay"
+			quadTextureSprite = "GFX_pause_resolution_overlay"
+			position = { x = 0 y = 0 }
+			alwaystransparent = yes
+		}				
+
+		instantTextBoxType={
+			name = "up_next"
+			font = "cg_16b"
+			position = { x = 60 y = 11 }
+			text = "UP_NEXT"
+			maxWidth = 133
+			maxHeight = 27
+			format = left
+			text_color_code = "H"
+		}
+	}
+}

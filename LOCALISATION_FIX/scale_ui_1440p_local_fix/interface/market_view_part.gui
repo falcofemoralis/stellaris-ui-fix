@@ -1,0 +1,63 @@
+# Расширяем место в ежемесячных сделках, чтобы влезло слово "Продать", и соответственно смещаем значок и количество
+
+guiTypes = {
+
+	containerWindowType = {
+		name = "market_monthly_trade_grid_entry"
+		size = { width = 373 height = 123 }
+
+		buttonType = {
+			name = "trade_entry"
+			font = "cg_16b"
+			spriteType = "GFX_galactic_object_button"
+			orientation = UPPER_LEFT
+		}
+		instantTextBoxType = {
+			name = "trade_type"
+			font = "cg_16b"
+			position = { x = 27 y = 12 }
+			maxWidth = 80
+			maxHeight = 40
+			text = "SELL"
+			fixedSize = yes
+			alwaysTransparent = yes
+		}
+
+		iconType = {
+			name = "resource_icon"
+			spriteType = "GFX_resource_minerals"
+			position = { x = 107 y = 11 }
+			alwaysTransparent = yes
+		}
+
+		instantTextBoxType = {
+			name = "amount"
+			font = "cg_16b"
+			position = { x = 133 y = 12 }
+			maxWidth = 93
+			maxHeight = 40
+			fixedSize = yes
+			alwaysTransparent = yes
+		}
+
+		instantTextBoxType = {
+			name = "price_text"
+			font = "cg_16b"
+			position = { x = 240 y = 12 }
+			maxWidth = 93
+			maxHeight = 40
+			fixedSize = yes
+			alwaysTransparent = yes
+		}
+
+		instantTextBoxType = {
+			name = "price_value"
+			font = "cg_16b"
+			position = { x = 293 y = 12 }
+			maxWidth = 93
+			maxHeight = 40
+			fixedSize = yes
+			alwaysTransparent = yes
+		}
+	}
+}

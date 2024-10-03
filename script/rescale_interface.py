@@ -122,7 +122,7 @@ def scale(string_data):
 def scale_gui_file(infile, outfile):
 	output = str()
 	changed = False
-	with open(infile, "r", encoding="utf8") as fr:
+	with open(infile, "r") as fr:
 		for data in fr:
 			if ((data.find('position') != -1) or \
 					(data.find('slotSize') != -1) or \
@@ -146,7 +146,7 @@ def scale_gui_file(infile, outfile):
 			output += data
 		fr.close()
 		if changed:
-			with open(outfile, "w", encoding="utf8") as ff:
+			with open(outfile, "w") as ff:
 				ff.write(output)
 				ff.close()
 

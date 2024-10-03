@@ -1,4 +1,0 @@
-	NInterface = {
-		NOTIFICATION_MESSAGE_XPOS 				= 173	# X-position where notification message starts
-		NOTIFICATION_MESSAGE_YPOS 				= 59	# Y-position where notification message stops
-	}

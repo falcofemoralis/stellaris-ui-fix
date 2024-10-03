@@ -22,7 +22,7 @@ guiTypes = {
 
 	positionType = {
 		name = "alerticon_startposition"
-		position = { x = 267 y = 40 }
+		position = { x = 267 y = 25 }
 	}
 
 	positionType = {

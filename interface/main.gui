@@ -960,7 +960,7 @@ guiTypes = {
 		buttonType = {
 			name = "message_icon_button"
 			quadTextureSprite = "GFX_test_message_icon"
-			position = { x= -3 y = 16  }
+			position = { x= 30 y = 16  }
 			clicksound = "confirmation"
 			oversound = no_sound
 		}
@@ -968,7 +968,7 @@ guiTypes = {
 		iconType = {
 			name ="message_frame"
 			spriteType = "GFX_message_frame"
-			position = { x= -24 y = -15 }
+			position = { x= 9 y = -15 }
 			alwaysTransparent = yes
 			frame = 1
 		}
@@ -976,13 +976,13 @@ guiTypes = {
 		iconType = {
 			name ="message_circle"
 			spriteType = "GFX_message_circle"
-			position = { x= -4 y = 15 }
+			position = { x= 29 y = 15 }
 			alwaysTransparent = yes
 		}
 
 		iconType = {
 			name = "message_response"
-			position = { x = 8 y = 52 }
+			position = { x = 41 y = 52 }
 			spriteType = "GFX_alliance_vote_status"
 			scale = 0.7
 			alwaysTransparent = yes
@@ -1186,7 +1186,7 @@ guiTypes = {
 
 		containerWindowType = {
 			name = "background"
-			size = { width = 427 height = 813 }
+			size = { width = 410 height = 813 }
 			position = { x = 7 y = 7 }
 
 			background = {

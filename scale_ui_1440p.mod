@@ -3,4 +3,4 @@ path="mod/scale_ui_1440p"
 tags={
 	"Graphics"
 }
-supported_version="3.13.2"
+supported_version="v3.13.*"
